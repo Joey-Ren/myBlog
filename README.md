@@ -42,11 +42,11 @@ jsliang 的文档库
 
 > 目前每天一道 LeetCode 题，欢迎关注，一起成长
 
-![微信公众号](@/components/public-repertory/img/z-index-small.png)
+![微信公众号](src/components/public-repertory/img/z-index-small.png)
 
 * **个人微信**：
 
-![个人微信](@/components/public-repertory/img/z-small-wechat.jpeg)
+![个人微信](src/components/public-repertory/img/z-small-wechat.jpeg)
 
 * **微信群**：（已满 100 人，需要先加 **jsliang** 微信，再拉你入群）
 * **QQ 群**：`798961601`
@@ -55,11 +55,11 @@ jsliang 的文档库
 
 本文档库始建于 `2018-08-20`。  
 
-如想知道 **jsliang** 最新学习进度，请前往 **[撰文思路](@/components/other-library/Monologue/logs/README.md)** 进行查看。  
+如想知道 **jsliang** 最新学习进度，请前往 **[撰文思路](src/components/other-library/Monologue/logs/README.md)** 进行查看。  
 
-如想知道 **jsliang** 各种新奇玩意，请前往 **[网站清单](@/components/other-library/Website/README.md)** 进行查看。
+如想知道 **jsliang** 各种新奇玩意，请前往 **[网站清单](src/components/other-library/Website/README.md)** 进行查看。
 
-如想参与 **jsliang** 组织的小竞赛，请前往 **[个人竞赛](@/components/other-library/Monologue/GitHub-competition.md)** 进行查看。
+如想参与 **jsliang** 组织的小竞赛，请前往 **[个人竞赛](src/components/other-library/Monologue/GitHub-competition.md)** 进行查看。
 
 建文档库的初始目的：**记录一下 `jsliang` 在折腾学习某个黑科技的时候的操作笔记。**
 
@@ -109,11 +109,11 @@ jsliang 的文档库
 
 > 办公场景
 
-![图](@/components/public-repertory/img/index-learning-method-1.jpg)
+![图](src/components/public-repertory/img/index-learning-method-1.jpg)
 
 > 学习场景
 
-![图](@/components/public-repertory/img/index-learning-method-2.png)
+![图](src/components/public-repertory/img/index-learning-method-2.png)
 
 ## 六 文档协议 
 
