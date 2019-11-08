@@ -1,7 +1,7 @@
 面试知识点 - JS 防抖与节流
 ===
 
-> Create by **jsliang** on **2019-2-23 20:55:34**  
+> Create by **jsLe** on **2019-2-23 20:55:34**  
 > Recently revised in **2019-05-24 11:08:58**
 
 **Hello 小伙伴们，如果觉得本文还不错，记得给个 **star** ， 你们的 **star** 是我学习的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
@@ -15,10 +15,10 @@
 * **TCP 三次握手与四次挥手**
 * **浏览器渲染页面**
 
-**在本文中，jsliang 会讲解通过自我探索后关于上述知识点的个人理解，如有纰漏、疏忽或者误解，欢迎各位小伙伴留言指出。**
+**在本文中，jsLe 会讲解通过自我探索后关于上述知识点的个人理解，如有纰漏、疏忽或者误解，欢迎各位小伙伴留言指出。**
 
 > 如果小伙伴对文章存有疑问，想快速得到回复。  
-> 或者小伙伴对 jsliang 个人的前端文档库感兴趣，也想将自己的前端知识整理出来。  
+> 或者小伙伴对 jsLe 个人的前端文档库感兴趣，也想将自己的前端知识整理出来。  
 > 欢迎加 QQ 群一起探讨：`798961601`。
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
@@ -53,7 +53,7 @@
 
 那么，讲到 **防抖与节流**，我们可以顺带探秘下 **重绘与回流**。
 
-说起 **重绘与回流**，我们就顺带把 **浏览器输入 URL 后发生的事情** 也关注一下，从而引出 **DNS**、**TCP** 等知识点，最终串起来构成本文的轮廓，方便 **jsliang** 和小伙伴们对这块知识的整理与记忆。
+说起 **重绘与回流**，我们就顺带把 **浏览器输入 URL 后发生的事情** 也关注一下，从而引出 **DNS**、**TCP** 等知识点，最终串起来构成本文的轮廓，方便 **jsLe** 和小伙伴们对这块知识的整理与记忆。
 
 ## <a name="chapter-three" id="chapter-three">三 防抖与节流</a>
 
@@ -135,7 +135,7 @@
 
 > 知识点补充：何为 `arguments`？  
 > **首先**，后端转前端的同学，可以将 `arguments` 理解为能实现重载函数功能的工具。  
-> **然后**，我们举个例子：在 `function test()` 这个方法中，由于我们不确定变量有多少，比如 `test("jsliang", 24)`，又或者 `test("LiangJunrong", "jsliang", "24")`，这时候只需要在函数 `test` 中用 `arguments` 接收就行了。  
+> **然后**，我们举个例子：在 `function test()` 这个方法中，由于我们不确定变量有多少，比如 `test("jsLe", 24)`，又或者 `test("LiangJunrong", "jsLe", "24")`，这时候只需要在函数 `test` 中用 `arguments` 接收就行了。  
 > **最后**，在 `function test() { let arr1 = argument[0] }` 中，`arr1` 就可以获取到传进来的第一个变量。  
 > **所以**，`fn.call(this, arguments)` 其实是将不确定变量替换到函数中了。  
 
@@ -296,13 +296,13 @@ OK，兴致来了，我们就先从 **浏览器解析 URL** 看起，先来看�
 
 **老师**：“全都是重点！”
 
-enm...老师会不会被打我不知道，但是 **jsliang** 这样写会被怼我就清楚，所以，咱还是结合上面的图，进一步勾勒我们的结构：
+enm...老师会不会被打我不知道，但是 **jsLe** 这样写会被怼我就清楚，所以，咱还是结合上面的图，进一步勾勒我们的结构：
 
 ![图](../../../public-repertory/img/other-interview-debounce&throttle-4.png)
 
-很好，**jsliang** 感觉自己的画图技术又进了一步~
+很好，**jsLe** 感觉自己的画图技术又进了一步~
 
-> ①：虽然很感激网上有那么多的文章可以参考，但是在我查了二十来篇文章后，**jsliang** 觉得这部分十有八九有问题撒，问了些小伙伴，它们有的说对，有的说错。不过，不妨碍小伙伴们继续往下看哈。  
+> ①：虽然很感激网上有那么多的文章可以参考，但是在我查了二十来篇文章后，**jsLe** 觉得这部分十有八九有问题撒，问了些小伙伴，它们有的说对，有的说错。不过，不妨碍小伙伴们继续往下看哈。  
 > ②：为了避免出篓子，下面贴出另外一个版本，小伙伴们可以在评论区说出你支持哪个版本哈：  
 > * **版本 B**
 > 1. 用户输入 URL 地址。  
@@ -334,11 +334,11 @@ Let's go~ 逐步完成下面三个知识点！
 
 DNS（Domain Name System）是 **域名系统** 的英文缩写，提供的服务是用于将主机名和域名转换为 IP 地址的工作：
 
-域名：`http://jsliang.top` <---> DNS <---> IPV4：`119.147.15.13`
+域名：`http://jsLe.top` <---> DNS <---> IPV4：`119.147.15.13`
 
 > IPV4 是造假的，仅用来说明 DNS 解析后能返回 IP 地址
 
-所以，当用户在浏览器输入 `http://jsliang.top` 时，DNS 经历了以下步骤：
+所以，当用户在浏览器输入 `http://jsLe.top` 时，DNS 经历了以下步骤：
 
 1. 浏览器根据地址，在自身缓存中查找 DNS（域名服务器） 中的解析记录。如果存在，则直接返回 IP 地址；如果不存在，则查找操作系统中的 hosts 文件是否有该域名的 DNS 解析记录，如果有就返回。
 2. 在条件 1 中的浏览器缓存或者操作系统的 hosts 文件中都没有这个域名的 DNS 解析记录，或者已经过期，则向域名服务器发起请求解析这个域名。
@@ -350,7 +350,7 @@ DNS（Domain Name System）是 **域名系统** 的英文缩写，提供的服�
 8. 本地域名服务器接收到 IP 和 TTL 值，进行缓存，缓存的时间由 TTL 值控制。
 9. 将解析的结果返回给用户，用户根据 TTL 值缓存在本地系统缓存中，域名解析过程结束。
 
-看文字总是难以理解的，跟着 **jsliang** 画张图过一遍，就感觉清晰了：
+看文字总是难以理解的，跟着 **jsLe** 画张图过一遍，就感觉清晰了：
 
 ![图](../../../public-repertory/img/other-interview-debounce&throttle-5.png)
 
@@ -393,24 +393,24 @@ DNS（Domain Name System）是 **域名系统** 的英文缩写，提供的服�
 
 ![图](../../../public-repertory/img/other-interview-debounce&throttle-7.png)
 
-OK，至此我们就理解了 **TCP 及其三次握手和四次挥手过程**，为了方便小伙伴们形象记忆，**jsliang** 搞了个小故事，希望小伙伴们能加深印象：
+OK，至此我们就理解了 **TCP 及其三次握手和四次挥手过程**，为了方便小伙伴们形象记忆，**jsLe** 搞了个小故事，希望小伙伴们能加深印象：
 
 * **三次握手 + 四次挥手形象记忆**：
 
-1. **jsliang**：（对妹子发起微信好友申请）“你好，我可以加你好友吗？” —— **第一次握手**
+1. **jsLe**：（对妹子发起微信好友申请）“你好，我可以加你好友吗？” —— **第一次握手**
 2. **妹子**：（通过审核）“你好，很高兴认识你~” —— **第二次握手**
-3. **jsliang**：“你好，我叫梁峻荣，前端折腾小能手……” —— **第三次握手**
+3. **jsLe**：“你好，我叫梁峻荣，前端折腾小能手……” —— **第三次握手**
 4. ……（聊天内容）
 5. …………（聊天内容）
 6. ………………（聊天内容）
 7. …………（聊天内容）
 8. ……（聊天内容）
-9. **jsliang**：（感冒拍了张纸篓都是纸巾的图）“啊，好难受今天。” —— **第一次挥手**
+9. **jsLe**：（感冒拍了张纸篓都是纸巾的图）“啊，好难受今天。” —— **第一次挥手**
 10. **妹子**：“卧槽，你好恶心！” —— **第二次挥手**
 11. **妹子**：“咱还是当不认识吧，互删了，谢谢！” —— **第三次挥手**
-12. **jsliang**：（呆）“不是，你听我说！” —— **第四次挥手**
+12. **jsLe**：（呆）“不是，你听我说！” —— **第四次挥手**
 13. **妹子**：（果断删除好友） —— **CLOSED**
-14. **jsliang**：（！“我今天感冒了。” 妹子开启了好友验证，你还不是她好友。请先发送好友验证请求，对方验证通过后，才能聊天。） ——— **CLOSED**
+14. **jsLe**：（！“我今天感冒了。” 妹子开启了好友验证，你还不是她好友。请先发送好友验证请求，对方验证通过后，才能聊天。） ——— **CLOSED**
 
 OK，成功出糗，相信小伙伴们有了个很好的了解了。
 
@@ -437,7 +437,7 @@ OK，成功出糗，相信小伙伴们有了个很好的了解了。
 6. repaint：重绘，当 render tree 中任一元素样式属性（几何尺寸没改变）发生改变时，render tree 都会重新画，比如字体颜色，背景等变化。
 7. paint：遍历 render tree，并调动硬件图形 API 来绘制每个节点。
 
-文字讲解肯定还是不够清晰的，但是 **jsliang** 画了几张图也累了，所以咱们 **盗** 来了一张图：
+文字讲解肯定还是不够清晰的，但是 **jsLe** 画了几张图也累了，所以咱们 **盗** 来了一张图：
 
 ![图](../../../public-repertory/img/other-InterviewPreparation-01.png)
 
@@ -483,8 +483,8 @@ OK，成功出糗，相信小伙伴们有了个很好的了解了。
 
 ![图](../../../public-repertory/img/z-small-wechat-public-address.jpg)
 
-**jsliang** 会每天在公众号发表一篇文章，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构等等。
+**jsLe** 会每天在公众号发表一篇文章，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构等等。
 
-扫描上方二维码，关注 **jsliang** 的公众号，让我们一起折腾！
+扫描上方二维码，关注 **jsLe** 的公众号，让我们一起折腾！
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

@@ -1,7 +1,7 @@
 jQuery 工作常用解决方案
 ===
 
-> Create by **jsliang** on **2018-11-4 10:37:33**  
+> Create by **jsLe** on **2018-11-4 10:37:33**  
 > Recently revised in **2019-05-31 00:06:05**
 
 **Hello 小伙伴们，如果觉得本文还不错，记得给个 **star** ， 你们的 **star** 是我学习的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
@@ -247,7 +247,7 @@ img { border: 0; display: inline-block; width: 100%; max-width: 100%; height: au
 /* 
   * reset 的目的不是让默认样式在所有浏览器下一致，而是减少默认样式有可能带来的问题。
   * The purpose of reset is not to allow default styles to be consistent across all browsers, but to reduce the potential problems of default styles.
-  * create by jsliang
+  * create by jsLe
 */
 
 /** 清除内外边距 - clearance of inner and outer margins **/
@@ -293,13 +293,13 @@ img { border: 0; display: inline-block; width: 100%; max-width: 100%; height: au
 div, input { box-sizing: border-box; }
 
 /** 清除浮动 - clear float **/
-.jsliang-clear:after, .clear:after {
+.jsLe-clear:after, .clear:after {
     content: '\20';
     display: block;
     height: 0;
     clear: both;
 }
-.jsliang-clear, .clear {
+.jsLe-clear, .clear {
     *zoom: 1;
 }
 
@@ -367,20 +367,20 @@ ul{
 
 left 值计算：width - button宽度一半
 
-### 3.10 jsliang的弹窗
+### 3.10 jsLe的弹窗
 
 如果希望弹窗不固定大小，在手机端或者 PC 端都能使用，推荐使用百分比配置。
 
 > *.html
 
 ```html
-<div class="jsliang-prompt">
-  <div class="jsliang-mask"></div>
-  <div class="jsliang-alert">
+<div class="jsLe-prompt">
+  <div class="jsLe-mask"></div>
+  <div class="jsLe-alert">
     <img src="./images/error.png" alt="error">
-    <p class="jsliang-tips">该板块暂未开放~</p>
+    <p class="jsLe-tips">该板块暂未开放~</p>
     <p>
-      <a href="javascript:void(0)" class="jsliang-get-it" id="jsliang-get-it">好的，我知道了</a>
+      <a href="javascript:void(0)" class="jsLe-get-it" id="jsLe-get-it">好的，我知道了</a>
     </p>
   </div>
 </div>
@@ -390,10 +390,10 @@ left 值计算：width - button宽度一半
 
 ```css
 /** 弹窗 - alert **/
-.jsliang-prompt {
+.jsLe-prompt {
   display: none;
 }
-.jsliang-mask {
+.jsLe-mask {
   z-index: 998;
   position: fixed;
   top: 0;
@@ -405,7 +405,7 @@ left 值计算：width - button宽度一半
   -ms-filter: "alpha(opacity=30)";
   opacity: .3;
 }
-.jsliang-alert {
+.jsLe-alert {
   z-index: 999;
   position: fixed;
   top: 30%;
@@ -418,14 +418,14 @@ left 值计算：width - button宽度一半
   border-radius: 15px;
   text-align: center;
 }
-.jsliang-alert img {
+.jsLe-alert img {
   width: 120px;
   height: 83.8px;
 }
-.jsliang-alert p {
+.jsLe-alert p {
   margin-top: 10px;
 }
-.jsliang-get-it {
+.jsLe-get-it {
   color: #fff;
   background: #5bc0de;
   display: inline-block;
@@ -443,7 +443,7 @@ left 值计算：width - button宽度一半
   vertical-align: middle;
   text-decoration: none;
 }
-.jsliang-get-it:hover {
+.jsLe-get-it:hover {
   background: #31b0d5;
 }
 /* end */
@@ -702,7 +702,7 @@ table thead, tbody tr {
 
 ---
 
-> **jsliang** 广告推送：  
+> **jsLe** 广告推送：  
 > 也许小伙伴想了解下云服务器  
 > 或者小伙伴想买一台云服务器  
 > 或者小伙伴需要续费云服务器  
@@ -711,4 +711,4 @@ table thead, tbody tr {
 [![图](../../public-repertory/img/z-small-seek-ali-3.jpg)](https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=w7hismrh)
 [![图](../../public-repertory/img/z-small-seek-tencent-2.jpg)](https://cloud.tencent.com/redirect.php?redirect=1014&cps_key=49f647c99fce1a9f0b4e1eeb1be484c9&from=console)
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

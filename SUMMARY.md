@@ -73,7 +73,7 @@
     * [面试 - 道听途说](src/components/other-library/interview/hearsay/README.md)
       * [第一篇 - 阿里系公司第一轮电面题 ✔](src/components/other-library/interview/hearsay/interview-one.md)
     * [面试 - 亲身经历](src/components/other-library/interview/personal-experience/README.md)
-      * [jsliang 的 2019 面试准备 ✔](src/components/other-library/interview/personal-experience/2019-interview-preparation.md)
+      * [jsLe 的 2019 面试准备 ✔](src/components/other-library/interview/personal-experience/2019-interview-preparation.md)
       * [2019 面试实战 - Round One ✔](src/components/other-library/interview/personal-experience/2019-practical-round-one.md)
       * [2019 面试实战 - Round Two ✔](src/components/other-library/interview/personal-experience/2019-practical-round-two.md)
       * [2019 面试实战 - Round Three ✔](src/components/other-library/interview/personal-experience/2019-practical-round-three.md)

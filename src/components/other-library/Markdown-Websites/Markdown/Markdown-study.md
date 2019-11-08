@@ -1,16 +1,16 @@
 Markdown 学习
 ===
 
-> create by **jsliang** on **2018-08-22 17:58:56**  
+> create by **jsLe** on **2018-08-22 17:58:56**  
 > Recently revised in **2019-05-30 16:16:12**
 
-**小伙伴们如果觉得不错可以到 [jsliang 的文档库](https://github.com/LiangJunrong/document-library) 为 jsliang 点个 star，谢谢~**
+**小伙伴们如果觉得不错可以到 [jsLe 的文档库](https://github.com/LiangJunrong/document-library) 为 jsLe 点个 star，谢谢~**
 
 什么是 Markdown？
 
 Markdown 是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本具有一定的格式。Markdown 文件的后缀为 `.md`。
 
-在 **jsliang** 看来，Markdown 就是 HTML 的简化版、TXT 文本的格式版。
+在 **jsLe** 看来，Markdown 就是 HTML 的简化版、TXT 文本的格式版。
 
 如果你在编写中存在难点，你可以直接在 Markdown 中使用 HTML 标记语言、CSS 样式以及 JS 脚本，对自己编写的文章等进行扩展。 
 
@@ -43,9 +43,9 @@ Markdown 是一种可以使用普通文本编辑器编写的标记语言，通�
 
 > [返回目录](#chapter-one)
 
-**jsliang** 在一开始的时候，使用过 Word 或者自己搭建的富文本博客来编写自己的文章，说实话，那太痛苦了，代码无法做很好的处理，文章写起来不利索，处理样式的时候浪费大量时间……
+**jsLe** 在一开始的时候，使用过 Word 或者自己搭建的富文本博客来编写自己的文章，说实话，那太痛苦了，代码无法做很好的处理，文章写起来不利索，处理样式的时候浪费大量时间……
 
-然后，在大佬的推荐下，**jsliang** 接触了 Markdown，并感受到世界深深的鼓励。
+然后，在大佬的推荐下，**jsLe** 接触了 Markdown，并感受到世界深深的鼓励。
 
 是的，谁用谁知道！
 
@@ -174,12 +174,12 @@ ___
 * **写法**：
 
 ```
-[jsliang 的网站](http://www.jsliang.top)
+[jsLe 的网站](http://www.jsLe.top)
 ```
 
 * **演示**：
 
-[jsliang 的网站](http://www.jsliang.top)
+[jsLe 的网站](http://www.jsLe.top)
 
 #### <a name="chapter-three-six-two" id="chapter-three-six-two">3.6.2 参数式</a>
 
@@ -188,16 +188,16 @@ ___
 * **写法**：  
 
 ```
-[site]:http://www.jsliang.top "网站"
-[网站]:http://www.jsliang.top "网站"
+[site]:http://www.jsLe.top "网站"
+[网站]:http://www.jsLe.top "网站"
 
 这里是 [site]，这里是 [网站]
 ```
 
 * **演示**：
 
-[site]:http://www.jsliang.top "网站"
-[网站]:http://www.jsliang.top "网站"
+[site]:http://www.jsLe.top "网站"
+[网站]:http://www.jsLe.top "网站"
 
 这里是 [site]，这里是 [网站]
 
@@ -238,12 +238,12 @@ ___
 * **写法**：
 
 ```
-`<p>你好使用者，要看看 jsliang 的网站吗？<a href="http://www.jsliang.top">点我跳转</a></p>`
+`<p>你好使用者，要看看 jsLe 的网站吗？<a href="http://www.jsLe.top">点我跳转</a></p>`
 ```
 
 * **演示**：
 
-`<p>你好使用者，要看看 jsliang 的网站吗？<a href="http://www.jsliang.top">点我跳转</a></p>`
+`<p>你好使用者，要看看 jsLe 的网站吗？<a href="http://www.jsLe.top">点我跳转</a></p>`
 
 #### <a name="chapter-three-eight-two" id="chapter-three-eight-two">3.8.2 多行用</a>
 
@@ -262,7 +262,7 @@ ___
 \`\`\`
 
 \`\`\`js  
-console.log('hello jsliang');  
+console.log('hello jsLe');  
 \`\`\`
 
 * **演示**：
@@ -286,14 +286,14 @@ console.log('hello jsliang');
 
 \| name    \| age  \| sex  \|  
 \| :-----: \| :--- \| ---: \|  
-\| jsliang \| 23   \| 男   \|  
+\| jsLe \| 23   \| 男   \|  
 \| 小梁    \| 23   \| 男   \|  
 
 * **演示**：
 
 | name    | age  | sex  |  
 | :-----: | :--- | ---: |  
-| jsliang | 23   | 男   |  
+| jsLe | 23   | 男   |  
 | 小梁    | 23   | 男   |  
 
 #### <a name="chapter-three-night-two" id="chapter-three-night-two">3.9.2 第二类表格</a>
@@ -304,14 +304,14 @@ console.log('hello jsliang');
 
 \| name    \| age  \| sex  \|  
 \| ----- \| ----- \| -----  \|  
-\| jsliang \| 23   \| 男   \|  
+\| jsLe \| 23   \| 男   \|  
 \| 小梁    \| 23   \| 男   \|  
 
 * **演示**：
 
 | name | age | sex |
 | ----- | ----- | --- |
-| jsliang | 23   | 男   |  
+| jsLe | 23   | 男   |  
 | 小梁    | 23   | 男   |  
 
 #### <a name="chapter-three-night-three" id="chapter-three-night-three">3.9.3 第三类表格</a>
@@ -500,7 +500,7 @@ __字体加粗__
 
 ---
 
-> **jsliang** 广告推送：  
+> **jsLe** 广告推送：  
 > 也许小伙伴想了解下云服务器  
 > 或者小伙伴想买一台云服务器  
 > 或者小伙伴需要续费云服务器  
@@ -509,4 +509,4 @@ __字体加粗__
 [![图](../../../public-repertory/img/z-small-seek-ali-3.jpg)](https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=w7hismrh)
 [![图](../../../public-repertory/img/z-small-seek-tencent-2.jpg)](https://cloud.tencent.com/redirect.php?redirect=1014&cps_key=49f647c99fce1a9f0b4e1eeb1be484c9&from=console)
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

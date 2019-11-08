@@ -1,7 +1,7 @@
 面试知识点 - 图片
 ===
 
-> Create by **jsliang** on **2019-3-1 13:27:47**  
+> Create by **jsLe** on **2019-3-1 13:27:47**  
 > Recently revised in **2019-05-24 11:09:19**
 
 **Hello 小伙伴们，如果觉得本文还不错，记得给个 **star** ， 你们的 **star** 是我学习的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
@@ -10,7 +10,7 @@
 
 但是，你真的懂图片吗？不同格式图片的区分，它们的优劣势以及使用场景等……
 
-下面，**jsliang** 将根据搜集的资料，进行关于图片的科普。
+下面，**jsLe** 将根据搜集的资料，进行关于图片的科普。
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
 
@@ -36,9 +36,9 @@
 
 > [返回目录](#chapter-one)
 
-在 **jsliang** 2 月 27 日进行面试的时候，突然被一个系列的问题问倒了：你熟悉图片吗？能讲讲 JPG、PNG、GIF 的适用场景吗？然后 PNG 为什么会有 PNG-8 和 PNG-24？知道 SVG 吗？能讲讲它们与 JPG、PNG、GIF 的差别吗？……
+在 **jsLe** 2 月 27 日进行面试的时候，突然被一个系列的问题问倒了：你熟悉图片吗？能讲讲 JPG、PNG、GIF 的适用场景吗？然后 PNG 为什么会有 PNG-8 和 PNG-24？知道 SVG 吗？能讲讲它们与 JPG、PNG、GIF 的差别吗？……
 
-刚开始 **jsliang** 还能回答下，后来就感觉招架不住了！
+刚开始 **jsLe** 还能回答下，后来就感觉招架不住了！
 
 于是，**爱折腾** 的我回头就是一个查资料，写下了这篇文章。
 
@@ -213,7 +213,7 @@ WebP 像 JPEG 一样对图片细节丰富，像 PNG 一样支持透明，像 GIF
 
 > [返回目录](#chapter-one)
 
-雪碧图，CSS Sprites，听起来就很清爽的一种图片，刚开始的时候 **jsliang** 以为是大街小巷上卖的 3 块钱瓶装雪碧饮料上的图片，后来知道压根不是同一码事。
+雪碧图，CSS Sprites，听起来就很清爽的一种图片，刚开始的时候 **jsLe** 以为是大街小巷上卖的 3 块钱瓶装雪碧饮料上的图片，后来知道压根不是同一码事。
 
 > 雪碧图不属于图片格式，而是一种图片应用形式。但是因为它在前端赫赫有名，经常使用，故此将其记载下来。
 
@@ -256,7 +256,7 @@ WebP 像 JPEG 一样对图片细节丰富，像 PNG 一样支持透明，像 GIF
 
 > 雪碧图不属于格式，但属于一种应用形式
 
-最后，在开发中会常用到一些资料，下面是 **jsliang** 在图片方面的个人资源，如果小伙伴有其他的好用资源推荐，可以 QQ 或者评论留言：
+最后，在开发中会常用到一些资料，下面是 **jsLe** 在图片方面的个人资源，如果小伙伴有其他的好用资源推荐，可以 QQ 或者评论留言：
 
 * **常用优秀资源**：
 
@@ -298,8 +298,8 @@ WebP 像 JPEG 一样对图片细节丰富，像 PNG 一样支持透明，像 GIF
 
 ![图](../../../public-repertory/img/z-small-wechat-public-address.jpg)
 
-**jsliang** 会每天在公众号发表一篇文章，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构等等。
+**jsLe** 会每天在公众号发表一篇文章，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构等等。
 
-扫描上方二维码，关注 **jsliang** 的公众号，让我们一起折腾！
+扫描上方二维码，关注 **jsLe** 的公众号，让我们一起折腾！
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

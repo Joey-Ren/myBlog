@@ -1,7 +1,7 @@
 021 - 合并两个有序链表（merge-two-sorted-lists）
 ===
 
-> Create by **jsliang** on **2019-06-05 08:37:00**  
+> Create by **jsLe** on **2019-06-05 08:37:00**  
 > Recently revised in **2019-06-05 17:31:37**
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
@@ -52,7 +52,7 @@ https://leetcode-cn.com/problems/merge-two-sorted-lists/solution/he-bing-liang-g
 
 解题千千万，官方独一家，上面是官方使用 Java 进行的题解。
 
-小伙伴可以先自己在本地尝试解题，再看看官方解题，最后再回来看看 **jsliang** 讲解下使用 JavaScript 的解题思路。
+小伙伴可以先自己在本地尝试解题，再看看官方解题，最后再回来看看 **jsLe** 讲解下使用 JavaScript 的解题思路。
 
 ### <a name="chapter-three-two" id="chapter-three-two">3.2 解题代码</a>
 
@@ -156,13 +156,13 @@ l2 = {
 
 在这道题的解题知识中，存在一个知识点：链表。
 
-然后因为 **jsliang** 跟小伙伴们一样，也是 **算法与数据结构** 的菜鸟，所以网上找了篇文章：
+然后因为 **jsLe** 跟小伙伴们一样，也是 **算法与数据结构** 的菜鸟，所以网上找了篇文章：
 
 js实现链表： https://www.cnblogs.com/EganZhang/p/6594830.html
 
-**jsliang** 碰到这种结构的时候，也是挠头抓耳，然后百度找到这篇文章，基本的结构看懂了，所以在这推荐给小伙伴们。
+**jsLe** 碰到这种结构的时候，也是挠头抓耳，然后百度找到这篇文章，基本的结构看懂了，所以在这推荐给小伙伴们。
 
-当然，**jsliang** 立马下单了一本书 《学习 JavaScript 数据结构与算法》，有没用不知道，先买了再说，后面 **jsliang** 会补上相关的知识点，小伙伴们先看下上面大佬写的文章咯~
+当然，**jsLe** 立马下单了一本书 《学习 JavaScript 数据结构与算法》，有没用不知道，先买了再说，后面 **jsLe** 会补上相关的知识点，小伙伴们先看下上面大佬写的文章咯~
 
 ### <a name="chapter-three-six" id="chapter-three-six">3.6 解题思路</a>
 
@@ -184,8 +184,8 @@ js实现链表： https://www.cnblogs.com/EganZhang/p/6594830.html
 
 ![图](../../../public-repertory/img/z-small-wechat-public-address.jpg)
 
-**jsliang** 会每天更新一道 LeetCode 题解，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构。
+**jsLe** 会每天更新一道 LeetCode 题解，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构。
 
-扫描上方二维码，关注 **jsliang** 的公众号，让我们一起折腾！
+扫描上方二维码，关注 **jsLe** 的公众号，让我们一起折腾！
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

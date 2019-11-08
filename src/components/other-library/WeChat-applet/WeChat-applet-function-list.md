@@ -1,7 +1,7 @@
 微信小程序之奇技淫巧
 ===
 
-> Create by **jsliang** on **2018-11-21 20:46:36**  
+> Create by **jsLe** on **2018-11-21 20:46:36**  
 > Recently revised in **2019-05-30 20:09:52**
 
 **Hello 小伙伴们，如果觉得本文还不错，记得给个 **star** ， 你们的 **star** 是我学习的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
@@ -59,7 +59,7 @@
 
 * 如果没有 `Ctrl + F` ，以及我的 **目录** 写得还不错，我真心不想再翻这篇文章。  
 
-为此，**jsliang** 单独开了一篇文章：**微信小程序功能清单**。用来记录小程序各种功能的实现，例如布局、通讯录、底部导航栏……  
+为此，**jsLe** 单独开了一篇文章：**微信小程序功能清单**。用来记录小程序各种功能的实现，例如布局、通讯录、底部导航栏……  
 
 然后嘛，为了能吸引小伙伴点进来瞅瞅，起个标新立异的标题吧：**微信小程序之奇技淫巧**。
 
@@ -305,7 +305,7 @@ align-content: flex-start | flex-end | center | space-between | space-around | s
   <view class="mixed-layout-floor-two">
     <view class="mixed-layout-floor-two-left">
       <text class="mixed-layout-floor-two-left-title">微信小程序之奇技淫巧</text>
-      <text class="mixed-layout-floor-two-left-author" url="https://github.com/LiangJunrong/document-library/blob/master/other-library/WeChatApplet/WeChatAppletFunctionList.md">作者：jsliang</text>
+      <text class="mixed-layout-floor-two-left-author" url="https://github.com/LiangJunrong/document-library/blob/master/other-library/WeChatApplet/WeChatAppletFunctionList.md">作者：jsLe</text>
     </view>
     <view class="mixed-layout-floor-two-right">
       <navigator>查看详情</navigator>
@@ -950,7 +950,7 @@ Page({
 
 到此，我们就实现了搜索功能。尽管它还有点小 `bug`，就是不停上拉的时候，它会重复地加载一条数据。  
 
-在实际项目中，**jsliang** 会定义一个 `searchNoData` 来判断接口是否还在返回数据，如果它不再返回数据，那么通过判断 `searchNoData == true` 来禁止继续加载。  
+在实际项目中，**jsLe** 会定义一个 `searchNoData` 来判断接口是否还在返回数据，如果它不再返回数据，那么通过判断 `searchNoData == true` 来禁止继续加载。  
 
 这样，我们就完美搞定了搜索功能的实现。
 
@@ -1181,7 +1181,7 @@ Page({
 
 然而，逐一尝试，你会发现，上面辣么多弹窗，没有一种符合你的需求的！所以，咱要画一个属于自己的弹窗：
 
-**首先**，咱在 `part6` 中新增两个层：遮罩层 `jsliang-mask` 和弹窗内容 `jsliang-alert`。  
+**首先**，咱在 `part6` 中新增两个层：遮罩层 `jsLe-mask` 和弹窗内容 `jsLe-alert`。  
 
 **然后**，往弹窗内容中编写我们需要的标题、 `input` 输入框以及 `text` 按钮。  
 
@@ -1195,21 +1195,21 @@ Page({
 <!-- part6 - 新增弹窗 -->
 <view wx:if="{{addModel}}" class="add-prompt">
   <!-- 遮罩层 -->
-  <view class="jsliang-mask" bindtap='showAdd'></view>
+  <view class="jsLe-mask" bindtap='showAdd'></view>
   <!-- 弹窗内容 -->
-  <view class="jsliang-alert">
+  <view class="jsLe-alert">
     <!-- 标题 -->
-    <view class="jsliang-alert-title">
+    <view class="jsLe-alert-title">
       <text>添加成员</text>
-      <text class="jsliang-alert-title-close" bindtap='showAdd'>×</text>
+      <text class="jsLe-alert-title-close" bindtap='showAdd'>×</text>
     </view>
     <!-- 输入内容 -->
-    <view class="jsliang-alert-content">
-      <input type="text" placeholder='请输入姓名' placeholder-class='jsliang-alert-content-user-name-placeholder'></input>
-      <input type="text" placeholder='请输入电话号码' placeholder-class='jsliang-alert-content-user-phone-placeholder'></input>
+    <view class="jsLe-alert-content">
+      <input type="text" placeholder='请输入姓名' placeholder-class='jsLe-alert-content-user-name-placeholder'></input>
+      <input type="text" placeholder='请输入电话号码' placeholder-class='jsLe-alert-content-user-phone-placeholder'></input>
     </view>
     <!-- 确定 -->
-    <view class="jsliang-alert-submit">
+    <view class="jsLe-alert-submit">
       <text bindtap='addConfirm'>添加</text>
     </view>
   </view>
@@ -1222,7 +1222,7 @@ Page({
 
 ```css
 /* 弹窗-添加成员 */
-.jsliang-mask {
+.jsLe-mask {
   z-index: 998;
   position: fixed;
   top: 0;
@@ -1234,7 +1234,7 @@ Page({
   -ms-filter: "alpha(opacity=90)";
   opacity: 0.9;
 }
-.jsliang-alert {
+.jsLe-alert {
   z-index: 999;
   position: fixed;
   top: 15%;
@@ -1247,7 +1247,7 @@ Page({
 }
 
 /* 弹窗标题 */
-.jsliang-alert-title {
+.jsLe-alert-title {
   height: 120rpx;
   line-height: 120rpx;
   color: #333333;
@@ -1258,7 +1258,7 @@ Page({
   position: relative;
   border-radius: 15rpx;
 }
-.jsliang-alert-title-close {
+.jsLe-alert-title-close {
   display: inline-block;
   color: #999999;
   position: absolute;
@@ -1266,23 +1266,23 @@ Page({
   right: 40rpx;
 }
 /* 弹窗内容 */
-.jsliang-alert-content {
+.jsLe-alert-content {
   padding: 0 70rpx;
 }
-.jsliang-alert-content input {
+.jsLe-alert-content input {
   height: 120rpx;
   line-height: 120rpx;
   font-size: 30rpx;
   border-bottom: 1rpx solid #e6e6e6;
 }
-.jsliang-alert-content-user-name-placeholder, .jsliang-alert-content-user-phone-placeholder {
+.jsLe-alert-content-user-name-placeholder, .jsLe-alert-content-user-phone-placeholder {
   font-size: 30rpx;
   color: #b6b6b6;
 }
-.jsliang-alert-content-user-phone {
+.jsLe-alert-content-user-phone {
   color: rgb(238, 227, 227);
 }
-.jsliang-alert-submit {
+.jsLe-alert-submit {
   font-size: 30rpx;
   margin: 60rpx auto;
   text-align: center;
@@ -1594,21 +1594,21 @@ showAdd(e) {
 <!-- part6 - 新增弹窗 -->
 <view wx:if="{{addModel}}" class="add-prompt">
   <!-- 遮罩层 -->
-  <view class="jsliang-mask" bindtap='showAdd'></view>
+  <view class="jsLe-mask" bindtap='showAdd'></view>
   <!-- 弹窗内容 -->
-  <view class="jsliang-alert">
+  <view class="jsLe-alert">
     <!-- 标题 -->
-    <view class="jsliang-alert-title">
+    <view class="jsLe-alert-title">
       <text>添加成员</text>
-      <text class="jsliang-alert-title-close" bindtap='showAdd'>×</text>
+      <text class="jsLe-alert-title-close" bindtap='showAdd'>×</text>
     </view>
     <!-- 输入内容 -->
-    <view class="jsliang-alert-content">
-      <input type="text" placeholder='请输入姓名' placeholder-class='jsliang-alert-content-user-name-placeholder' name="addUserName" bindinput='getAddUserName' maxlength='11' value="{{addUserName}}"></input>
-      <input type="text" placeholder='请输入电话号码' placeholder-class='jsliang-alert-content-user-phone-placeholder' name="addUserPhone" bindinput='getAddUserPhone' maxlength='11' value="{{addUserPhone}}"></input>
+    <view class="jsLe-alert-content">
+      <input type="text" placeholder='请输入姓名' placeholder-class='jsLe-alert-content-user-name-placeholder' name="addUserName" bindinput='getAddUserName' maxlength='11' value="{{addUserName}}"></input>
+      <input type="text" placeholder='请输入电话号码' placeholder-class='jsLe-alert-content-user-phone-placeholder' name="addUserPhone" bindinput='getAddUserPhone' maxlength='11' value="{{addUserPhone}}"></input>
     </view>
     <!-- 确定 -->
-    <view class="jsliang-alert-submit" bindtap='addConfirm'>
+    <view class="jsLe-alert-submit" bindtap='addConfirm'>
       <text>添加</text>
     </view>
   </view>
@@ -1621,7 +1621,7 @@ showAdd(e) {
 
 ```css
 /* 弹窗-添加成员 */
-.jsliang-mask {
+.jsLe-mask {
   z-index: 998;
   position: fixed;
   top: 0;
@@ -1633,7 +1633,7 @@ showAdd(e) {
   -ms-filter: "alpha(opacity=90)";
   opacity: 0.9;
 }
-.jsliang-alert {
+.jsLe-alert {
   z-index: 999;
   position: fixed;
   top: 15%;
@@ -1646,7 +1646,7 @@ showAdd(e) {
 }
 
 /* 弹窗标题 */
-.jsliang-alert-title {
+.jsLe-alert-title {
   height: 120rpx;
   line-height: 120rpx;
   color: #333333;
@@ -1657,7 +1657,7 @@ showAdd(e) {
   position: relative;
   border-radius: 15rpx;
 }
-.jsliang-alert-title-close {
+.jsLe-alert-title-close {
   display: inline-block;
   color: #999999;
   position: absolute;
@@ -1665,23 +1665,23 @@ showAdd(e) {
   right: 40rpx;
 }
 /* 弹窗内容 */
-.jsliang-alert-content {
+.jsLe-alert-content {
   padding: 0 70rpx;
 }
-.jsliang-alert-content input {
+.jsLe-alert-content input {
   height: 120rpx;
   line-height: 120rpx;
   font-size: 30rpx;
   border-bottom: 1rpx solid #e6e6e6;
 }
-.jsliang-alert-content-user-name-placeholder, .jsliang-alert-content-user-phone-placeholder {
+.jsLe-alert-content-user-name-placeholder, .jsLe-alert-content-user-phone-placeholder {
   font-size: 30rpx;
   color: #b6b6b6;
 }
-.jsliang-alert-content-user-phone {
+.jsLe-alert-content-user-phone {
   color: rgb(238, 227, 227);
 }
-.jsliang-alert-submit {
+.jsLe-alert-submit {
   font-size: 30rpx;
   margin: 60rpx auto;
   text-align: center;
@@ -1863,21 +1863,21 @@ Page({
 <!-- part7 - 修改弹窗 -->
 <view wx:if="{{editModel}}" class="edit-prompt">
   <!-- 遮罩层 -->
-  <view class="jsliang-mask" bindtap='showEdit'></view>
+  <view class="jsLe-mask" bindtap='showEdit'></view>
   <!-- 弹窗内容 -->
-  <view class="jsliang-alert">
+  <view class="jsLe-alert">
     <!-- 标题 -->
-    <view class="jsliang-alert-title">
+    <view class="jsLe-alert-title">
       <text>修改成员</text>
-      <text class="jsliang-alert-title-close" bindtap='showEdit'>×</text>
+      <text class="jsLe-alert-title-close" bindtap='showEdit'>×</text>
     </view>
     <!-- 输入内容 -->
-    <view class="jsliang-alert-content">
-      <input type="text" placeholder='请输入姓名' placeholder-class='jsliang-alert-content-user-name-placeholder' name="editUserName" bindinput='getEditUserName' maxlength='11' value="{{editNewUserName}}"></input>
-      <input type="text" class="input-forbid" placeholder='请输入电话号码' placeholder-class='jsliang-alert-content-user-phone-placeholder' name="editUserPhone" bindinput='getEditUserPhone' maxlength='11' value="{{editUserPhone}}" disabled="disabled"></input>
+    <view class="jsLe-alert-content">
+      <input type="text" placeholder='请输入姓名' placeholder-class='jsLe-alert-content-user-name-placeholder' name="editUserName" bindinput='getEditUserName' maxlength='11' value="{{editNewUserName}}"></input>
+      <input type="text" class="input-forbid" placeholder='请输入电话号码' placeholder-class='jsLe-alert-content-user-phone-placeholder' name="editUserPhone" bindinput='getEditUserPhone' maxlength='11' value="{{editUserPhone}}" disabled="disabled"></input>
     </view>
     <!-- 确定 -->
-    <view class="jsliang-alert-submit" bindtap='editConfirm'>
+    <view class="jsLe-alert-submit" bindtap='editConfirm'>
       <text>修改</text>
     </view>
   </view>
@@ -1890,7 +1890,7 @@ Page({
 
 ```css
 /* 弹窗-添加成员 */
-.jsliang-mask {
+.jsLe-mask {
   z-index: 998;
   position: fixed;
   top: 0;
@@ -1902,7 +1902,7 @@ Page({
   -ms-filter: "alpha(opacity=90)";
   opacity: 0.9;
 }
-.jsliang-alert {
+.jsLe-alert {
   z-index: 999;
   position: fixed;
   top: 15%;
@@ -1915,7 +1915,7 @@ Page({
 }
 
 /* 弹窗标题 */
-.jsliang-alert-title {
+.jsLe-alert-title {
   height: 120rpx;
   line-height: 120rpx;
   color: #333333;
@@ -1926,7 +1926,7 @@ Page({
   position: relative;
   border-radius: 15rpx;
 }
-.jsliang-alert-title-close {
+.jsLe-alert-title-close {
   display: inline-block;
   color: #999999;
   position: absolute;
@@ -1934,23 +1934,23 @@ Page({
   right: 40rpx;
 }
 /* 弹窗内容 */
-.jsliang-alert-content {
+.jsLe-alert-content {
   padding: 0 70rpx;
 }
-.jsliang-alert-content input {
+.jsLe-alert-content input {
   height: 120rpx;
   line-height: 120rpx;
   font-size: 30rpx;
   border-bottom: 1rpx solid #e6e6e6;
 }
-.jsliang-alert-content-user-name-placeholder, .jsliang-alert-content-user-phone-placeholder {
+.jsLe-alert-content-user-name-placeholder, .jsLe-alert-content-user-phone-placeholder {
   font-size: 30rpx;
   color: #b6b6b6;
 }
-.jsliang-alert-content-user-phone {
+.jsLe-alert-content-user-phone {
   color: rgb(238, 227, 227);
 }
-.jsliang-alert-submit {
+.jsLe-alert-submit {
   font-size: 30rpx;
   margin: 60rpx auto;
   text-align: center;
@@ -2232,7 +2232,7 @@ Page({
 
 ![图](../../public-repertory/img/other-WechatAppletFunctionList-21.gif)
 
-写到这里，**jsliang** 终于可以松一口气了，咱离胜利不远了~  
+写到这里，**jsLe** 终于可以松一口气了，咱离胜利不远了~  
 
 现在，我们实现正常情况下的不断下拉加载：
 
@@ -3126,13 +3126,13 @@ onReachBottom: function () {
 
 天下大势，分久必合，合久必分。  
 
-写到这里，我们的通讯录已然完结，在此附上 **jsliang** 的代码地址：[项目地址](https://github.com/LiangJunrong/WeChatApplet)  
+写到这里，我们的通讯录已然完结，在此附上 **jsLe** 的代码地址：[项目地址](https://github.com/LiangJunrong/WeChatApplet)  
 
 然而，这是结束吗？并不是，我们的通讯录，还有个功能未实现：
 
 **如何在新增、删除的时候，对新增的字母进行排序，并导航到具体位置？**
 
-在工作项目的开发中，**jsliang** 曾想到将新增的中文昵称转换为拼音，然后通过二分查找法，找到对应的位置并进行插入……  
+在工作项目的开发中，**jsLe** 曾想到将新增的中文昵称转换为拼音，然后通过二分查找法，找到对应的位置并进行插入……  
 
 但是，正印了那句话：**我的能力，可以造火箭，我却只有敲钉子的时间！**  
 
@@ -3142,17 +3142,17 @@ onReachBottom: function () {
 
 > [返回目录](#catalog-chapter-four)
 
-不定期更新，详情可关注 **jsliang** 的 [GitHub 地址](https://github.com/LiangJunrong/document-library/blob/master/other-library/WeChatApplet/WeChatAppletFunctionList.md)  
+不定期更新，详情可关注 **jsLe** 的 [GitHub 地址](https://github.com/LiangJunrong/document-library/blob/master/other-library/WeChatApplet/WeChatAppletFunctionList.md)  
 
 最后的最后，奉上上面实例中的地址：  
 
 [项目地址](https://github.com/LiangJunrong/WeChatApplet)
 
-撰文不易，如果文章对小伙伴有帮助，希望小伙伴们给勤劳敲代码、辛苦撰文的 **jsliang** 点点 star / 赞 / 广告推送
+撰文不易，如果文章对小伙伴有帮助，希望小伙伴们给勤劳敲代码、辛苦撰文的 **jsLe** 点点 star / 赞 / 广告推送
 
 ---
 
-> **jsliang** 广告推送：  
+> **jsLe** 广告推送：  
 > 也许小伙伴想了解下云服务器  
 > 或者小伙伴想买一台云服务器  
 > 或者小伙伴需要续费云服务器  
@@ -3161,4 +3161,4 @@ onReachBottom: function () {
 [![图](../../public-repertory/img/z-small-seek-ali-3.jpg)](https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=w7hismrh)
 [![图](../../public-repertory/img/z-small-seek-tencent-2.jpg)](https://cloud.tencent.com/redirect.php?redirect=1014&cps_key=49f647c99fce1a9f0b4e1eeb1be484c9&from=console)
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

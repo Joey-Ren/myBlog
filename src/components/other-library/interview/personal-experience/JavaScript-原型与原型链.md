@@ -1,7 +1,7 @@
 面试知识点 - JS 原型与原型链
 ===
  
-> Create by **jsliang** on **2019-2-21 08:42:02**  
+> Create by **jsLe** on **2019-2-21 08:42:02**  
 > Recently revised in **2019-05-24 11:08:37**
  
 **Hello 小伙伴们，如果觉得本文还不错，记得给个 **star** ， 你们的 **star** 是我学习的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
@@ -14,10 +14,10 @@
 * `call()`/`apply()`/`bind()`
 * `this`
 
-**在本文中，jsliang 会讲解通过自我探索后关于上述知识点的个人理解，如有纰漏、疏忽或者误解，欢迎各位小伙伴留言指出。**
+**在本文中，jsLe 会讲解通过自我探索后关于上述知识点的个人理解，如有纰漏、疏忽或者误解，欢迎各位小伙伴留言指出。**
 
 > 如果小伙伴对文章存有疑问，想快速得到回复。  
-> 或者小伙伴对 jsliang 个人的前端文档库感兴趣，也想将自己的前端知识整理出来。  
+> 或者小伙伴对 jsLe 个人的前端文档库感兴趣，也想将自己的前端知识整理出来。  
 > 欢迎加 QQ 群一起探讨：`798961601`。
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
@@ -183,7 +183,7 @@ F.b => value b
 
 > [返回目录](#chapter-one)
 
-原型和原型链估计是老生常谈的话题了，但是还是有很多小白（例如 **jsliang** 自己）就时常懵逼在这里。
+原型和原型链估计是老生常谈的话题了，但是还是有很多小白（例如 **jsLe** 自己）就时常懵逼在这里。
 
 ![图](../../../public-repertory/img/other-interview-1-prototype.png)
 
@@ -193,9 +193,9 @@ F.b => value b
 
 > [返回目录](#chapter-one)
 
-因为爱（了解来龙去脉），所以 **jsliang** 开始学习（百度）之旅，了解原型和原型链。
+因为爱（了解来龙去脉），所以 **jsLe** 开始学习（百度）之旅，了解原型和原型链。
 
-**首先**，**jsliang** 去了解查看原型链 `prototype`。
+**首先**，**jsLe** 去了解查看原型链 `prototype`。
 
 **然后**，在了解途中看到了 `new`，于是百度查看 JS 的 `new` 理念。
 
@@ -220,8 +220,8 @@ function Person(name, age) {
   }
 }
 
-let p1 = new Person("jsliang", 24);
-let p2 = new Person("jsliang", 24);
+let p1 = new Person("jsLe", 24);
+let p2 = new Person("jsLe", 24);
 
 console.log(p1.eat === p2.eat); // false
 ```
@@ -244,7 +244,7 @@ Person.prototype.eat = function() {
   console.log("吃饭");
 }
 
-let p1 = new Person("jsliang", 24);
+let p1 = new Person("jsLe", 24);
 let p2 = new Person("梁峻荣", 24);
 
 console.log(p1.eat === p2.eat); // true
@@ -288,7 +288,7 @@ Person.prototype.eat = function() {
   console.log("吃饭");
 }
 
-let p1 = new Person("jsliang", 24);
+let p1 = new Person("jsLe", 24);
 let p2 = new Person("梁峻荣", 24);
 
 console.log(p1.eat === p2.eat); // true
@@ -449,7 +449,7 @@ fn2.sayHey(); //say hey.
 
 > 记住：在这里，`call()` 改变了 this 的指向。
 
-**然后**，我们应该顺势看下它源码，搞懂它究竟怎么实现的，但是 **jsliang** 太菜，看不懂网上关于它源码流程的文章，所以咱们还是多上几个例子，搞懂 `call()` 能做啥吧~
+**然后**，我们应该顺势看下它源码，搞懂它究竟怎么实现的，但是 **jsLe** 太菜，看不懂网上关于它源码流程的文章，所以咱们还是多上几个例子，搞懂 `call()` 能做啥吧~
 
 * 例子 1：
 
@@ -769,8 +769,8 @@ thingOne.action();
 
 ![图](../../../public-repertory/img/z-small-wechat-public-address.jpg)
 
-**jsliang** 会每天在公众号发表一篇文章，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构等等。
+**jsLe** 会每天在公众号发表一篇文章，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构等等。
 
-扫描上方二维码，关注 **jsliang** 的公众号，让我们一起折腾！
+扫描上方二维码，关注 **jsLe** 的公众号，让我们一起折腾！
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

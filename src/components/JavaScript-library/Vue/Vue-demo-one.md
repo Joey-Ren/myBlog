@@ -1,7 +1,7 @@
 Vue Demo - 功成千骨
 ===
 
-> Create by **jsliang** on **2019-1-2 08:46:46**  
+> Create by **jsLe** on **2019-1-2 08:46:46**  
 > Recently revised in **2019-05-31 13:54:39**
 
 **Hello 小伙伴们，如果觉得本文还不错，记得给个 **star** ， 你们的 **star** 是我学习折腾的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
@@ -19,7 +19,7 @@ Vue Demo - 功成千骨
 
 * **代码地址**：[功成千骨 - 代码地址](https://github.com/LiangJunrong/achievement-of-thousands-of-bones)
 
-* **项目地址**：[功成千骨 - 线上地址](http://vuetodo.jsliang.top/)
+* **项目地址**：[功成千骨 - 线上地址](http://vuetodo.jsLe.top/)
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
 
@@ -189,7 +189,7 @@ Vue Demo - 功成千骨
     <div class="footer">
       <p>不折腾的前端</p>
       <p>和咸鱼有什么区别</p>
-      <p>@2019 <a href="" target="_blank">jsliang 文档库</a></p>
+      <p>@2019 <a href="" target="_blank">jsLe 文档库</a></p>
     </div>
   </div>
 
@@ -753,7 +753,7 @@ enm......因为不同浏览器对于一些 DOM 元素的渲染不同，所以我
 /* 
   * reset 的目的不是让默认样式在所有浏览器下一致，而是减少默认样式有可能带来的问题。
   * The purpose of reset is not to allow default styles to be consistent across all browsers, but to reduce the potential problems of default styles.
-  * create by jsliang
+  * create by jsLe
 */
 
 /** 清除内外边距 - clearance of inner and outer margins **/
@@ -795,13 +795,13 @@ img { border: 0; display: inline-block; width: 100%; max-width: 100%; height: au
 div, input { box-sizing: border-box; }
 
 /** 清除浮动 - clear float **/
-.jsliang-clear:after, .clear:after {
+.jsLe-clear:after, .clear:after {
   content: '\20';
   display: block;
   height: 0;
   clear: both;
 }
-.jsliang-clear, .clear {
+.jsLe-clear, .clear {
   *zoom: 1;
 }
 
@@ -991,7 +991,7 @@ input[type="checkbox"]:checked {
 
 * **代码地址**：[功成千骨 - 代码地址](https://github.com/LiangJunrong/achievement-of-thousands-of-bones)
 
-* **项目地址**：[功成千骨 - 线上地址](http://vuetodo.jsliang.top/)
+* **项目地址**：[功成千骨 - 线上地址](http://vuetodo.jsLe.top/)
 
 当然，还没完！
 
@@ -1010,13 +1010,13 @@ input[type="checkbox"]:checked {
 
 > 后记
 
-如果小伙伴需要存放 [jsliang.top](http://jsliang.top/) 这样的纯静态页面或者 [company.jsliang.top](http://company.jsliang.top/) 这样的具有 Node 后端支持的页面，推荐购买云服务器来存放。
+如果小伙伴需要存放 [jsLe.top](http://jsLe.top/) 这样的纯静态页面或者 [company.jsLe.top](http://company.jsLe.top/) 这样的具有 Node 后端支持的页面，推荐购买云服务器来存放。
 
-如果小伙伴们不知道该怎么选择云服务器，可以查看 [详细介绍](https://github.com/LiangJunrong/document-library/blob/master/other-library/Monologue/%E7%A8%B3%E9%A3%9F%E8%89%B0%E9%9A%BE.md) 或者加 **jsliang** QQ：`1741020489` 咨询。
+如果小伙伴们不知道该怎么选择云服务器，可以查看 [详细介绍](https://github.com/LiangJunrong/document-library/blob/master/other-library/Monologue/%E7%A8%B3%E9%A3%9F%E8%89%B0%E9%9A%BE.md) 或者加 **jsLe** QQ：`1741020489` 咨询。
 
 ---
 
-> **jsliang** 广告推送：  
+> **jsLe** 广告推送：  
 > 也许小伙伴想了解下云服务器  
 > 或者小伙伴想买一台云服务器  
 > 或者小伙伴需要续费云服务器  
@@ -1025,4 +1025,4 @@ input[type="checkbox"]:checked {
 [![图](../../public-repertory/img/z-small-seek-ali-3.jpg)](https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=w7hismrh)
 [![图](../../public-repertory/img/z-small-seek-tencent-2.jpg)](https://cloud.tencent.com/redirect.php?redirect=1014&cps_key=49f647c99fce1a9f0b4e1eeb1be484c9&from=console)
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

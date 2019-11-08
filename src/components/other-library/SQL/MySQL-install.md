@@ -1,7 +1,7 @@
 MySQL 安装
 ===
 
-> Create by **jsliang** on **2018-12-13 08:49:41**  
+> Create by **jsLe** on **2018-12-13 08:49:41**  
 > Recently revised in **2019-05-30 20:31:52**
 
 **一切的折腾，均要有个度。并且，明白自己折腾的目的。**  
@@ -24,7 +24,7 @@ MySQL 安装
 
 MySQL 是什么呢？MySQL 是最流行的关系数据库管理系统之一，体积小、速度快、总体成本低的缘故导致中小型网站的开发都乐意选用 MySQL。  
 
-Long long ago，**jsliang** 曾跟随大学老师，学习过 SQLserver，那时候的 SQL，纯粹是用 SQL 语句建表，各种秀……后来，为了应付毕设，囫囵吞枣，学习了 MongoDB，用 Express 连接它进行各种操作。当然，关系型数据库和非关系型数据库的区别将我折腾地体无完肤。  
+Long long ago，**jsLe** 曾跟随大学老师，学习过 SQLserver，那时候的 SQL，纯粹是用 SQL 语句建表，各种秀……后来，为了应付毕设，囫囵吞枣，学习了 MongoDB，用 Express 连接它进行各种操作。当然，关系型数据库和非关系型数据库的区别将我折腾地体无完肤。  
 
 最近要学习 Node 基础，思来想去考虑一番，还是打算连接 MySQL，无他，因为正经学过关系型数据库而已。  
 
@@ -53,7 +53,7 @@ Long long ago，**jsliang** 曾跟随大学老师，学习过 SQLserver，那时
 
 ![图](../../public-repertory/img/other-sql-MySQL-3.png)
 
-**jsliang** 没有自己的账号，所以需要注册，但是点开注册页面，发现自己又不想注册了（太多账号了！不想再搞事情了），所以咱直接下载比较旧的版本吧：
+**jsLe** 没有自己的账号，所以需要注册，但是点开注册页面，发现自己又不想注册了（太多账号了！不想再搞事情了），所以咱直接下载比较旧的版本吧：
 
 * [MySQL 版本5.7 MSI 安装包](http://cdn.mysql.com//Downloads/MySQLInstaller/mysql-installer-community-5.7.16.0.msi)
 
@@ -101,7 +101,7 @@ Long long ago，**jsliang** 曾跟随大学老师，学习过 SQLserver，那时
 
 ![图](../../public-repertory/img/other-sql-MySQL-11.png)
 
-**步骤 8**. MySQL 的小黑框虽然有些装逼，但是现在是什么年代，操作个数据库还要敲大量 SQL 语句，对 **jsliang** 这前端人员来说，这太难以接受了，还是安装个 **图形化工具** 吧：
+**步骤 8**. MySQL 的小黑框虽然有些装逼，但是现在是什么年代，操作个数据库还要敲大量 SQL 语句，对 **jsLe** 这前端人员来说，这太难以接受了，还是安装个 **图形化工具** 吧：
 
 * [navicat premium 64位 v12 特别版](https://www.cr173.com/soft/126934.html)
 
@@ -143,7 +143,7 @@ Long long ago，**jsliang** 曾跟随大学老师，学习过 SQLserver，那时
 
 ---
 
-> **jsliang** 广告推送：  
+> **jsLe** 广告推送：  
 > 也许小伙伴想了解下云服务器  
 > 或者小伙伴想买一台云服务器  
 > 或者小伙伴需要续费云服务器  
@@ -152,4 +152,4 @@ Long long ago，**jsliang** 曾跟随大学老师，学习过 SQLserver，那时
 [![图](../../public-repertory/img/z-small-seek-ali-3.jpg)](https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=w7hismrh)
 [![图](../../public-repertory/img/z-small-seek-tencent-2.jpg)](https://cloud.tencent.com/redirect.php?redirect=1014&cps_key=49f647c99fce1a9f0b4e1eeb1be484c9&from=console)
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

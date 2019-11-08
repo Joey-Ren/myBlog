@@ -1,7 +1,7 @@
 微信小程序 bug 集中营
 ===
 
-> Create by **jsliang** on **2018-9-17 17:58:56**  
+> Create by **jsLe** on **2018-9-17 17:58:56**  
 > Recently revised in **2019-05-28 19:59:36**
 
 **Hello 小伙伴们，如果觉得本文还不错，记得给个 **star** ， 你们的 **star** 是我学习的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
@@ -22,7 +22,7 @@
 2. 接口数据不够正式真实，跟前面的假数据相差太大； 
 3. 接口可能没法正常调用 等原因。故因根据小程序业务逻辑进行工作时长的报备。  
 
-**这里有 jsliang 微信小程序开发中遇到的所有坑，以及在填坑过程中的一些个人经验。jsliang 利用这篇教程存储一些常用的微信小程序开发技巧，方便查找。它可能教不了你什么，但至少能省下你百度的功夫。**  
+**这里有 jsLe 微信小程序开发中遇到的所有坑，以及在填坑过程中的一些个人经验。jsLe 利用这篇教程存储一些常用的微信小程序开发技巧，方便查找。它可能教不了你什么，但至少能省下你百度的功夫。**  
 
 **请结合 《目录》 和 《返回目录》 来进行跳转，获得更好的阅读体验。**  
 
@@ -121,15 +121,15 @@
 但是：
 
 * 第一，微信小程序是国内的，有[中文文档](https://developers.weixin.qq.com/miniprogram/dev/index.html)，虽然它的文档说明有点坑，但好歹有文档，阅读理解对小伙伴们来说不是问题。
-* 第二， **jsliang** 的文笔并没有想象中的那么好，想想如果我带你们走了一遍小程序开发，然后你们以为是一条平坦路，结果碰到一堆坑坑洼洼，咋办？最后的锅，会不会到我背啊，可怕！  
+* 第二， **jsLe** 的文笔并没有想象中的那么好，想想如果我带你们走了一遍小程序开发，然后你们以为是一条平坦路，结果碰到一堆坑坑洼洼，咋办？最后的锅，会不会到我背啊，可怕！  
 
-所以，在这里， **jsliang** 结合 **“日常躺坑”** ，先为你解决小程序的 100 个坑！虽然现在可能还不够，但是第一天我就碰到 4/5 个了，我想我可以帮你们躺完 100 个的！！！  
+所以，在这里， **jsLe** 结合 **“日常躺坑”** ，先为你解决小程序的 100 个坑！虽然现在可能还不够，但是第一天我就碰到 4/5 个了，我想我可以帮你们躺完 100 个的！！！  
 
 现在的微信开发者工具显示的开发版本是：`"libVersion": "2.0.4"`  
 
 如果你开发的版本已经解决了这个 bug ，或者你觉得这个 bug 还有其他解决方法，或者你觉得这个玩意还有其他 bug ，请告诉我，我会补充到这篇文档上，顺带记上您的大名，谢谢！  
 
-**jsliang QQ： 1741020489**  
+**jsLe QQ： 1741020489**  
 
 ## <a name="chatper-three" id="chatper-three">三 填坑实战</a>
 
@@ -235,13 +235,13 @@ Page({
 
 > [返回目录](#catalog-chapter-three-one)
 
-关于轮播图的地址跳转，在微信小程序的官网是没用提及的，也是 **jsliang** 去百度查看了下，才知道怎么设置（可能是我一开始就挑战的难度太高了么 -_-|| ），在下面 **jsliang** 贴出来代码~想知道怎么解决的可以去看看：首先，在 `data` 中设置 `link` ；然后，设置 `navigator` 导航遍历 `item.link` 。
+关于轮播图的地址跳转，在微信小程序的官网是没用提及的，也是 **jsLe** 去百度查看了下，才知道怎么设置（可能是我一开始就挑战的难度太高了么 -_-|| ），在下面 **jsLe** 贴出来代码~想知道怎么解决的可以去看看：首先，在 `data` 中设置 `link` ；然后，设置 `navigator` 导航遍历 `item.link` 。
 
 #### <a name="chapter-three-one-five" id="chapter-three-one-five">3.1.5 wx:key</a>
 
 > [返回目录](#catalog-chapter-three-one)
 
-关于 `wx:key` ， `wx:key` 的作用是：当数据改变触发渲染层重新渲染的时候，会校正带有 key 的组件，框架会确保他们被重新排序，而不是重新创建，以确保使组件保持自身的状态，并且提高列表渲染时的效率。但是，在其 `swiper` 中，小程序本身是没有写的，所以它会带有 `warning` ，这里也是个小坑， **jsliang** 也是百度了下也知道这件事：[点我了解](https://www.sohu.com/a/207728111_99897596)。
+关于 `wx:key` ， `wx:key` 的作用是：当数据改变触发渲染层重新渲染的时候，会校正带有 key 的组件，框架会确保他们被重新排序，而不是重新创建，以确保使组件保持自身的状态，并且提高列表渲染时的效率。但是，在其 `swiper` 中，小程序本身是没有写的，所以它会带有 `warning` ，这里也是个小坑， **jsLe** 也是百度了下也知道这件事：[点我了解](https://www.sohu.com/a/207728111_99897596)。
 
 #### <a name="chapter-three-one-six" id="chapter-three-one-six">3.1.6 实战代码</a>
 
@@ -717,7 +717,7 @@ data: {
 
 > 本节目前已有 3 个坑，有兴趣的小伙伴可以详看。
 
-Flex布局又称弹性布局，在小程序开发中比较适用。但是由于 **jsliang** 之前没怎么用过 Flex 布局，所以在这里咱们特意去踩下坑，充实下自己。[【小程序开发之页面布局】](https://blog.csdn.net/anda0109/article/details/72867449)[【阮一峰-Flex 布局教程】](http://www.techug.com/post/flex-examples.html)  
+Flex布局又称弹性布局，在小程序开发中比较适用。但是由于 **jsLe** 之前没怎么用过 Flex 布局，所以在这里咱们特意去踩下坑，充实下自己。[【小程序开发之页面布局】](https://blog.csdn.net/anda0109/article/details/72867449)[【阮一峰-Flex 布局教程】](http://www.techug.com/post/flex-examples.html)  
 
 在我们布局页面的时候，最好看看 **阮一峰** 的教程，平时遇到布局的问题的时候，我都习惯去上面 **阮一峰** 的文章看看：
 
@@ -973,7 +973,7 @@ tabs3Content: [
 
 ![图](../../public-repertory/img/other-WechatApplet-bug-2.png)
 
-**然后**，**jsliang** 的想法是：
+**然后**，**jsLe** 的想法是：
 
 > *.wxml
 
@@ -1022,7 +1022,7 @@ tabs3Content: [
 }
 ```
 
-你注意到了吗？在 `*.wxml` 中， **jsliang** 设置了个空的 `<view>` ，如果你把这个 `<view>` 去掉，你会惊奇地发现，它……下来了……
+你注意到了吗？在 `*.wxml` 中， **jsLe** 设置了个空的 `<view>` ，如果你把这个 `<view>` 去掉，你会惊奇地发现，它……下来了……
 
 ![图](../../public-repertory/img/other-WechatApplet-bug-3.png)
 
@@ -1170,7 +1170,7 @@ onShareAppMessage: function (res) {
 
 所以，如果你在前面定义了，它会在最下面偷偷帮你清空，然后你就觉得无法自定义分享事件……  
 
-是的，**jsliang** 打死都不承认这是我自己的锅，新手注意！新手注意！！新手注意！！！
+是的，**jsLe** 打死都不承认这是我自己的锅，新手注意！新手注意！！新手注意！！！
 
 ### <a name="chapter-three-eleven" id="chapter-three-eleven">3.11 border-box 设置</a>
 
@@ -1721,7 +1721,7 @@ text {
 
 前三个自不必说，我们直接讲事情经过：我们项目的负责人需要一个留言弹窗，然后里面有个文本框可以填信息，最后点击【留言】按钮将数据传到后端，点击【取消】按钮关闭弹窗。  
 
-需求是不是很简单~既然微信小程序有自己的官方文档。那么，怎么方便怎么来吧，于是 **jsliang** 在微信小程序中搜索关键字 `弹窗`：
+需求是不是很简单~既然微信小程序有自己的官方文档。那么，怎么方便怎么来吧，于是 **jsLe** 在微信小程序中搜索关键字 `弹窗`：
 
 ![图](../../public-repertory/img/other-WechatApplet-bug-10.png)
 
@@ -1739,7 +1739,7 @@ text {
 
 ![图](../../public-repertory/img/other-WechatApplet-bug-12.png)
 
-Duang~~~这不就是我要的效果么，挖槽，黑科技？于是 **jsliang** 去小程序那里搜了下 `modal` ……enm...蜜汁尴尬，好像只有上面的 `wx.showModal()` 方法……于是 **jsliang** 满头黑线……好嘛，黑科技黑科技！！！  
+Duang~~~这不就是我要的效果么，挖槽，黑科技？于是 **jsLe** 去小程序那里搜了下 `modal` ……enm...蜜汁尴尬，好像只有上面的 `wx.showModal()` 方法……于是 **jsLe** 满头黑线……好嘛，黑科技黑科技！！！  
 
 下面贴出实现代码：
 
@@ -1824,7 +1824,7 @@ Page({
 
 > [返回目录](#catalog-chapter-three-fourteen)
 
-在百度大法的渲染下，**jsliang** 采用了 wxParse。
+在百度大法的渲染下，**jsLe** 采用了 wxParse。
 
 Github 的 wxParse 地址：[链接](https://github.com/icindy/wxParse)
 
@@ -1870,19 +1870,19 @@ console.log(JSON.stringify(transData, ' ', ' '));
 console.log(JSON.stringify(transData, ' ', ' '));
 ```
 
-综上，**jsliang** 气得差口吐白沫了……换换换！有空要换成其他两种方式才行！！！
+综上，**jsLe** 气得差口吐白沫了……换换换！有空要换成其他两种方式才行！！！
 
 #### <a name="chapter-three-fourteen-three" id="chapter-three-fourteen-three">3.14.3 rich-text</a>
 
 > [返回目录](#catalog-chapter-three-fourteen)
 
-**jsliang** 还未使用过 rich-text，这里先预留个坑。如果小伙伴们在开发 rich-text 过程中碰到过各种坑，可以跟 **jsliang** 提一下，我会写进这章节，顺带在章节尾写上你的大名，辛苦了~
+**jsLe** 还未使用过 rich-text，这里先预留个坑。如果小伙伴们在开发 rich-text 过程中碰到过各种坑，可以跟 **jsLe** 提一下，我会写进这章节，顺带在章节尾写上你的大名，辛苦了~
 
 #### <a name="chapter-three-fourteen-four" id="chapter-three-fourteen-four">3.14.4 web-view</a>
 
 > [返回目录](#catalog-chapter-three-fourteen)
 
-**jsliang** 还未使用过 web-view，这里先预留个坑。如果小伙伴们在开发 web-view 过程中碰到过各种坑，可以跟 **jsliang** 提一下，我会写进这章节，顺带在章节尾写上你的大名，辛苦了~
+**jsLe** 还未使用过 web-view，这里先预留个坑。如果小伙伴们在开发 web-view 过程中碰到过各种坑，可以跟 **jsLe** 提一下，我会写进这章节，顺带在章节尾写上你的大名，辛苦了~
 
 ### <a name="chapter-three-fifteen" id="chapter-three-fifteen">3.15 诡异的 open-type</a>
 
@@ -2035,7 +2035,7 @@ Page({
 
 看到这里，如果有习惯 `jQuery` ，习惯操作 `dom` 节点的小伙伴可能会抱有很大疑惑：“它就不能像 `jQuery` 一样直接获取 `dom` 的内容么？”  
 
-答案是，有的：[地址](https://developers.weixin.qq.com/miniprogram/dev/api/wxml/NodesRef.html)。但是，在这里， **jsliang** 并不推荐小伙伴这么做，想要学好一门新的技术，就不能因为旧的技术而限制了自己的观念。时代在进步，科技在发展，我们不学更多的知识，只能被淘汰在前端的潮流中。
+答案是，有的：[地址](https://developers.weixin.qq.com/miniprogram/dev/api/wxml/NodesRef.html)。但是，在这里， **jsLe** 并不推荐小伙伴这么做，想要学好一门新的技术，就不能因为旧的技术而限制了自己的观念。时代在进步，科技在发展，我们不学更多的知识，只能被淘汰在前端的潮流中。
 
 ### <a name="chapter-three-nighteen" id="chapter-three-nighteen">3.19 onLaunch 加载问题与路由守卫</a>
 
@@ -2049,17 +2049,17 @@ Page({
 
 这次的需求是：判断用户是否登录，如果登录了就跳转到首页，如果没登录就跳转到登录页。  
 
-我们都知道，在微信小程序中，有个 `onLaunch` 方法，微信小程序官方文档对其描述就是：每个页面进来需要先加载 `onLaunch` 方法，再去执行其他方法。然后，在 **jsliang** 尝试设置在 `onLaunch` 中调用 `wx.login()`，却发现，`index.js` 的 `onLoad` 方法是先于 `onLaunch` 执行的，这导致我们没法预先获取到需要的信息：    
+我们都知道，在微信小程序中，有个 `onLaunch` 方法，微信小程序官方文档对其描述就是：每个页面进来需要先加载 `onLaunch` 方法，再去执行其他方法。然后，在 **jsLe** 尝试设置在 `onLaunch` 中调用 `wx.login()`，却发现，`index.js` 的 `onLoad` 方法是先于 `onLaunch` 执行的，这导致我们没法预先获取到需要的信息：    
 
 1. 先执行 `index.js` 的 `onload`
 2. 再才执行 `app.js` 中的 `onLaunch`
 
-迫于无奈，**jsliang** 对其进行了百度：[地址](https://blog.csdn.net/qq_35860064/article/details/82590573) 。通过百度这篇文章发现，有两个解决方案：
+迫于无奈，**jsLe** 对其进行了百度：[地址](https://blog.csdn.net/qq_35860064/article/details/82590573) 。通过百度这篇文章发现，有两个解决方案：
 
 1. 设置启动页，成功再返回首页
 2. 使用 `Promise` 来进行进程管理
 
-但是，由于 **jsliang** 对于 `Promise` 的做法，觉得其太过复杂，故新增了一个 `page/login`。
+但是，由于 **jsLe** 对于 `Promise` 的做法，觉得其太过复杂，故新增了一个 `page/login`。
 
 #### <a name="chapter-three-nighteen-two" id="chapter-three-nighteen-two">3.19.2 路由守卫</a>
 
@@ -2105,9 +2105,9 @@ loginSubmit: function(e) {
 
 ```js
 /*
- * @Author: jsliang
+ * @Author: jsLe
  * @Date: 2018-10-11 09:11:26
- * @LastEditors: jsliang
+ * @LastEditors: jsLe
  * @LastEditTime: 2018-10-11 09:11:29
  * @Description: 接口文件
  */
@@ -2400,7 +2400,7 @@ Page({
 
 > 本节目前已有 1 个坑，有兴趣的小伙伴可以详看。
 
-由于 **jsliang** 平时都是使用 ES5 ，一直口嚷嚷说要步入 ES6 大堂，但是一直就是没入门，所以乘着有功夫，尽量使用 ES6 ，用熟了才能进步。
+由于 **jsLe** 平时都是使用 ES5 ，一直口嚷嚷说要步入 ES6 大堂，但是一直就是没入门，所以乘着有功夫，尽量使用 ES6 ，用熟了才能进步。
 
 **绑定方法写法修改**：
 
@@ -2597,7 +2597,7 @@ contactsData: [
 ]
 ```
 
-于是，**jsliang** 脑抽，直接：
+于是，**jsLe** 脑抽，直接：
 
 ```
 <view v-for="contactsData">
@@ -2675,7 +2675,7 @@ contactsData: [
 
 > 本节目前已有 1 个坑，有兴趣的小伙伴可以详看。
 
-在项目的开发中，**jsliang** 碰到了联系人列表的开发需求。话不多说，直接上手：
+在项目的开发中，**jsLe** 碰到了联系人列表的开发需求。话不多说，直接上手：
 
 > *.wxml
 
@@ -2729,7 +2729,7 @@ Page({
 })
 ```
 
-在上面的代码中，**jsliang** 做了三件事：
+在上面的代码中，**jsLe** 做了三件事：
 
 **步骤 1**. 编写 `Wxml` 结构，由于只有一层 `view` 在循环的时候，在控制台看到的 `Wxml` 结构并不好看，所以循环的是第二层 `view`，这样就形成下面的效果：
 
@@ -2741,7 +2741,7 @@ Page({
 </view>
 ```
 
-**步骤 2**. 编写 `Wxss` 定位，**jsliang** 对 `Wxml` 进行了 `position: fixed` 的绝对定位，这样就可以将它固定在右侧。
+**步骤 2**. 编写 `Wxss` 定位，**jsLe** 对 `Wxml` 进行了 `position: fixed` 的绝对定位，这样就可以将它固定在右侧。
 
 **步骤 3**. 最后，在 `js` 中定义了遍历的数据（字母 `A-Z`）及点击字母的时候，将该字母传递过来并打印。
 
@@ -2809,7 +2809,7 @@ onLoad: function (options) {
 
 ---
 
-> **jsliang** 广告推送：  
+> **jsLe** 广告推送：  
 > 也许小伙伴想了解下云服务器  
 > 或者小伙伴想买一台云服务器  
 > 或者小伙伴需要续费云服务器  
@@ -2818,4 +2818,4 @@ onLoad: function (options) {
 [![图](../../public-repertory/img/z-small-seek-ali-3.jpg)](https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=w7hismrh)
 [![图](../../public-repertory/img/z-small-seek-tencent-2.jpg)](https://cloud.tencent.com/redirect.php?redirect=1014&cps_key=49f647c99fce1a9f0b4e1eeb1be484c9&from=console)
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

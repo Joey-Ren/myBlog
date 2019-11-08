@@ -1,7 +1,7 @@
 面试知识点 - 简历
 ===
 
-> Create by **jsliang** on **2019-6-15 07:23:40**  
+> Create by **jsLe** on **2019-6-15 07:23:40**  
 > Recently revised in **2019-6-16 12:29:03**
 
 **Hello 小伙伴们，如果觉得本文还不错，记得给个 **star**，或者关注一波公众号，每天进行折腾，保持自己的最高价值！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
@@ -10,7 +10,7 @@
 
 六月飞霜，对于现在毕业等于失业的广大应届生，或者各种原因出来了想找份 “好” 工作的大佬来说，这无疑是个尴尬的季节，大部分公司的坑位已经被占满，奈何身有丈八法威而跨不过小小门槛……
 
-> 本文记录于 **jsliang** - [2019 面试专栏](http://document.jsliang.top/other-library/interview/personal-experience/)
+> 本文记录于 **jsLe** - [2019 面试专栏](http://document.jsLe.top/other-library/interview/personal-experience/)
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
 
@@ -48,17 +48,17 @@ OK，话不多说，本篇文章内容主题为：
 * 简历的投递。在智联、拉勾、Boss 直聘这些 App 上，我们如何鉴别一家公司，如何进行海投，如何明确心目所属。
 * 沟通的技巧。通过沟通 HR 以及面试官，最终目标：获得 offer。
 
-本文由 **jsliang** 结合身边前端、HR 以及个人经历编写而成，希望能帮助到在这季节毕业面临失业，或者淡季难以找到合适公司的小伙伴。
+本文由 **jsLe** 结合身边前端、HR 以及个人经历编写而成，希望能帮助到在这季节毕业面临失业，或者淡季难以找到合适公司的小伙伴。
 
 ## <a name="chapter-three" id="chapter-three">三 简历的编写</a>
 
 > [返回目录](#chapter-one)
 
-**首先**，简历的编写，是由 **jsliang** 日常帮小伙伴改简历的过程中，从 30 多份小伙伴的简历总结出来的一套经验。
+**首先**，简历的编写，是由 **jsLe** 日常帮小伙伴改简历的过程中，从 30 多份小伙伴的简历总结出来的一套经验。
 
-> 小伙伴需要改简历的可以在 [jsliang 文档库](https://github.com/LiangJunrong/document-library) 首页查看 **jsliang** 的最新联系方式。
+> 小伙伴需要改简历的可以在 [jsLe 文档库](https://github.com/LiangJunrong/document-library) 首页查看 **jsLe** 的最新联系方式。
 
-**然后**，关于简历，**jsliang** 个人建议简历的内容应分为：
+**然后**，关于简历，**jsLe** 个人建议简历的内容应分为：
 
 * 基本资料
 * 专业技能
@@ -68,7 +68,7 @@ OK，话不多说，本篇文章内容主题为：
 * 技能证书
 * 自我评价
 
-**最后**，限于个人眼界，毕竟 **jsliang** 仅仅阅读浏览并帮忙修改了 30 来篇前端小伙伴的简历，肯定比不上 HR 小姐姐每日浏览近千份的情况，所以小伙伴们可以在 **jsliang** 的建议上进行增删改，从而做到最适合自身的简历。
+**最后**，限于个人眼界，毕竟 **jsLe** 仅仅阅读浏览并帮忙修改了 30 来篇前端小伙伴的简历，肯定比不上 HR 小姐姐每日浏览近千份的情况，所以小伙伴们可以在 **jsLe** 的建议上进行增删改，从而做到最适合自身的简历。
 
 ### <a name="chapter-three-one" id="chapter-three-one">3.1 基本资料</a>
 
@@ -80,7 +80,7 @@ OK，话不多说，本篇文章内容主题为：
 * **电话**。基本信息。
 * **电子邮箱**。基本信息。
 * **求职意向**。填 **Web 前端** 或者 **Web 前端工程师** 均可。
-* **工作年限**`（选填）`：非应届/实习的小伙伴，如实填写自身的工作年限即可，例如 **jsliang** 的填写即是 **工作年限：1 年**。
+* **工作年限**`（选填）`：非应届/实习的小伙伴，如实填写自身的工作年限即可，例如 **jsLe** 的填写即是 **工作年限：1 年**。
 * **年龄**`（选填）`。如果你足够年轻，并且足够牛 B，那么请填上这栏。例如，20 岁的高级前端工程师怎么也会让人眼前一亮！PS：25 以前的年龄都可以填写，如果你要显示你的年龄优势的话。
 * **学校**`（选填）`。很多实习或者应届毕业的小伙伴喜欢填个学校。但是，如果你的学校不是特别出名，那么还是不建议你填写这个。
 * **教育层次**`（选填）`。这是个非常让人纠结的事情，如果你是 **本科** 及以上，那么你可以安心填写，有些岗位还是挺看重这个的；如果你是 **专科** 及以下，建议你还是放在下面的 【教育背景】 模块中略微提及，虽然这样很对不起 HR 小姐姐，但是唯有这样才能让你的简历不是死在第一行中。
@@ -155,7 +155,7 @@ OK，话不多说，本篇文章内容主题为：
 
 > [返回目录](#chapter-one)
 
-关于 **实习经历** 或者 **项目经历**，**jsliang** 给的唯一值得注意的是，尽量把你项目的 **重难点** 以及你的解决方式写出来。
+关于 **实习经历** 或者 **项目经历**，**jsLe** 给的唯一值得注意的是，尽量把你项目的 **重难点** 以及你的解决方式写出来。
 
 **首先**，怎么说呢，好比我曾经开发过一个微信小程序：
 
@@ -170,7 +170,7 @@ OK，话不多说，本篇文章内容主题为：
 
 ![图](../../../public-repertory/img/other-interview-resume-3.png)
 
-当然，这里是小伙伴在 **jsliang** 的建议下，先放了个 **难点** 填坑，还没有具体写 **难点** 在哪。
+当然，这里是小伙伴在 **jsLe** 的建议下，先放了个 **难点** 填坑，还没有具体写 **难点** 在哪。
 
 **最后**，小伙伴需要注意的是，如果这个项目是 **著名公司** 领导的，那么你可以开头写一下这个公司，例如 **腾讯 XX 项目**、**阿里 ZZ 项目**……
 
@@ -180,11 +180,11 @@ OK，话不多说，本篇文章内容主题为：
 
 非重点。
 
-教育背景对于 **jsliang** 这种情况来说，一般不想编写，毕竟真不是很出名，虽然自身是 **本科**，但是觉得写出来就是个耻辱，可又不得不写出来。
+教育背景对于 **jsLe** 这种情况来说，一般不想编写，毕竟真不是很出名，虽然自身是 **本科**，但是觉得写出来就是个耻辱，可又不得不写出来。
 
 所以还是仅推荐名牌大学，或者有考研、考博之类的情况，进行详备填写。
 
-如果是 **jsliang** 这种情况，请一句话概括：
+如果是 **jsLe** 这种情况，请一句话概括：
 
 ```
 2014.09-2018.06 广州大学华软软件学院 信息管理与信息系统 本科
@@ -194,7 +194,7 @@ OK，话不多说，本篇文章内容主题为：
 
 > [返回目录](#chapter-one)
 
-**jsliang** 自认为是比较渣的一个人，连四级都没过，所以只要有证书的，都填写上去，尽管不显眼，但是看起来多：
+**jsLe** 自认为是比较渣的一个人，连四级都没过，所以只要有证书的，都填写上去，尽管不显眼，但是看起来多：
 
 ![图](../../../public-repertory/img/other-interview-resume-4.png)
 
@@ -230,7 +230,7 @@ OK，话不多说，本篇文章内容主题为：
 
 1. **内推优先**。如果你觉得自己还是 OK 的，并且有小伙伴愿意给你内推，那么，请尝试通过内推渠道把自己推上去，毕竟内部渠道还是较有优势的。
 2. **专科不怂**。专科的小伙伴不要限制自己。虽然某公司标明招聘本科，但是小伙伴如果对自己有自信，并且非常想进这家公司，那么请尝试勾搭下 HR 小姐姐：“你好，刚才查看了下贵司的招聘条件，跟本人的履历非常符合，请问能不能发一份简历给你看看。”虽然，迎来的可能是 “抱歉，我司硬性要求本科学历”，但是，尝试了尽力了，才能说自己努力了，而不是抱怨社会不欢迎你。
-3. **选中平台**。目前 **jsliang** 推荐的是 **Boss 直聘**，但是 **智联**、**拉勾** 等也是可以的，看个人情况。
+3. **选中平台**。目前 **jsLe** 推荐的是 **Boss 直聘**，但是 **智联**、**拉勾** 等也是可以的，看个人情况。
 4. **投递时间**。投递简历还有较好的时机，就是早上 8 点或者 9 点的时候，HR 小姐姐们上班了，会打开对应的网址进行查看，这时候投递会得到第一时间的回复，建立联系的机会较大。
 5. **避免海投**。如果没工作经验的，建议一星期最多投 10 家；如果对技术有要求的，想找对应心仪的公司，最好去了解后，在进行简历投递。
 6. **公司选取**。如果有心仪的公司，最好从 **公司规模**、**行业前景**、**技术比较**、**公司口碑**、**公司福利**，以及 **通勤距离** 等进行比较查看。
@@ -239,7 +239,7 @@ OK，话不多说，本篇文章内容主题为：
 
 > [返回目录](#chapter-one)
 
-**jsliang** 结合自己以及小伙伴们的经验，总结了一些面试小技巧，看看对其他小伙伴有没有帮助：
+**jsLe** 结合自己以及小伙伴们的经验，总结了一些面试小技巧，看看对其他小伙伴有没有帮助：
 
 1. **HR 交流**。如果你在跟 HR 交流沟通，请尽量放松心态，就好比跟一个朋友聊天一样就行了，毕竟小姐姐不会吃了你。然后你们之间会聊一些关于 “为什么辞职” 之类的话题，最好不要贬低上家公司，或者说工资低之类的，回复 “职业生涯遇到瓶颈” 之类的是 OK 的。
 2. **面试官交流**。尽可能地往自身熟悉的领域引导，询问你关于 A 知识点，你没尝试过，那么你可以想想跟 A 相似的知识点 B，然后跟面试官说 B 知识点。尽管网传有些大公司会反向提问，例如你说熟悉 ES5，人家会问你 CSS。
@@ -256,13 +256,13 @@ OK，话不多说，本篇文章内容主题为：
 * 丰富的面试经验
 * ……
 
-如果小伙伴们想知道更多，可以查看 **jsliang** 的 [2019 面试专栏](http://document.jsliang.top/other-library/interview/personal-experience/)
+如果小伙伴们想知道更多，可以查看 **jsLe** 的 [2019 面试专栏](http://document.jsLe.top/other-library/interview/personal-experience/)
 
 那么，我们关于简历的经验介绍就到这里了，如果小伙伴们有其他好的建议，欢迎留言评论。
 
 祝小伙伴们通过自己的努力获得对应的很 nice 的 offer~
 
-记得翻到下面扫码关注 **jsliang** 的公众号，每天都能获得他的最新动态噢~
+记得翻到下面扫码关注 **jsLe** 的公众号，每天都能获得他的最新动态噢~
 
 ---
 
@@ -270,8 +270,8 @@ OK，话不多说，本篇文章内容主题为：
 
 ![图](../../../public-repertory/img/z-small-wechat-public-address.jpg)
 
-**jsliang** 会每天在公众号发表一篇文章，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构等等。
+**jsLe** 会每天在公众号发表一篇文章，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构等等。
 
-扫描上方二维码，关注 **jsliang** 的公众号，让我们一起折腾！
+扫描上方二维码，关注 **jsLe** 的公众号，让我们一起折腾！
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

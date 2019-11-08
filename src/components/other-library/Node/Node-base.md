@@ -1,7 +1,7 @@
 Node 基础
 ===
 
-> Create by **jsliang** on **2018-11-8 13:42:42**  
+> Create by **jsLe** on **2018-11-8 13:42:42**  
 > Recently revised in **2019-05-24 15:08:02**
 
 **Hello 小伙伴们，如果觉得本文还不错，记得点个赞或者给个 star，你们的赞和 star 是我编写更多更精彩文章的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
@@ -22,7 +22,7 @@ Node 基础
 
 **本文成品演示**：
 
-* Node 项目演示：[jsliang 前端有限公司](http://company.jsliang.top/)
+* Node 项目演示：[jsLe 前端有限公司](http://company.jsLe.top/)
 
 ![图](../../public-repertory/img/other-node-NodeBase-0.png)
 
@@ -65,7 +65,7 @@ Node 基础
 
 本文主要目的：
 
-1. 整合 Node 基础，加深 **jsliang** 对 Node 的学习了解，并且方便日后复习。  
+1. 整合 Node 基础，加深 **jsLe** 对 Node 的学习了解，并且方便日后复习。  
 2. 整合 Node 工具，方便查找在 Node 开发中，有哪些工具比较有利于开发。
 3. 给初学 Node 的小伙伴做一个参考，如有疑问还请在 QQ 群：`798961601` 中咨询。
 
@@ -192,9 +192,9 @@ http.createServer(function (req, res) {
 
   // 4. 获取服务器请求
   /**
-   * 访问地址是：http://localhost:3000/?userName=jsliang&userAge=23
+   * 访问地址是：http://localhost:3000/?userName=jsLe&userAge=23
    * 如果你执行 console.log(req.url)，它将执行两次，分别返回下面的信息：
-   * /  ?userName=jsliang&userAge=23
+   * /  ?userName=jsLe&userAge=23
    * /  /favicon.ico
    * 这里为了防止重复执行，所以排除 req.url == /favicon.ico 的情况
    */
@@ -217,14 +217,14 @@ http.createServer(function (req, res) {
      *   port: null,
      *   hostname: null,
      *   hash: null,
-     *   search: '?userName=jsliang&userAge=23',
-     *   query: { userName: 'jsliang', userAge: '23' },
+     *   search: '?userName=jsLe&userAge=23',
+     *   query: { userName: 'jsLe', userAge: '23' },
      *   pathname: '/',
-     *   path: '/?userName=jsliang&userAge=23',
-     *   href: '/?userName=jsliang&userAge=23' }
+     *   path: '/?userName=jsLe&userAge=23',
+     *   href: '/?userName=jsLe&userAge=23' }
      */
 
-    console.log(result.query.userName); // jsliang
+    console.log(result.query.userName); // jsLe
 
     console.log(result.query.userAge); // 23
   }
@@ -283,14 +283,14 @@ http.createServer(function (req, res) {
 }).listen(3000);
 ```
 
-**最后**，我们访问我们给出的地址：`http://localhost:3000/?userName=jsliang&userAge=23`，并通过它查看 `url` 的 `parse` 模块怎么用，输出啥：
+**最后**，我们访问我们给出的地址：`http://localhost:3000/?userName=jsLe&userAge=23`，并通过它查看 `url` 的 `parse` 模块怎么用，输出啥：
 
 ```js
 // 4. 获取服务器请求
 /**
-  * 访问地址是：http://localhost:3000/?userName=jsliang&userAge=23
+  * 访问地址是：http://localhost:3000/?userName=jsLe&userAge=23
   * 如果你执行 console.log(req.url)，它将执行两次，分别返回下面的信息：
-  * /  ?userName=jsliang&userAge=23
+  * /  ?userName=jsLe&userAge=23
   * /  /favicon.ico
   * 这里为了防止重复执行，所以排除 req.url == /favicon.ico 的情况
   */
@@ -313,14 +313,14 @@ if(req.url != "/favicon.ico") {
     *   port: null,
     *   hostname: null,
     *   hash: null,
-    *   search: '?userName=jsliang&userAge=23',
-    *   query: { userName: 'jsliang', userAge: '23' },
+    *   search: '?userName=jsLe&userAge=23',
+    *   query: { userName: 'jsLe', userAge: '23' },
     *   pathname: '/',
-    *   path: '/?userName=jsliang&userAge=23',
-    *   href: '/?userName=jsliang&userAge=23' }
+    *   path: '/?userName=jsLe&userAge=23',
+    *   href: '/?userName=jsLe&userAge=23' }
     */
 
-  console.log(result.query.userName); // jsliang
+  console.log(result.query.userName); // jsLe
 
   console.log(result.query.userAge); // 23
 }
@@ -423,7 +423,7 @@ console.log(url.format({
 * **内容5：`resolve` 的使用**
 
 ```js
-console.log(url.resolve("http://www.baidu.com/jsliang", "梁峻荣"));
+console.log(url.resolve("http://www.baidu.com/jsLe", "梁峻荣"));
 
 // Console：
 // http://www.baidu.com/梁峻荣
@@ -462,7 +462,7 @@ CommonJS 就是模块化的标准，Node.js 就是 CommonJS（模块化）的实
 
 * **方法一**：
 
-首先，我们新建 `03_CommonJS.js`、`03_tool-add.js`、`node_modules/03_tool-multiply.js`、`node_modules/jsliang-module/tools.js` 这 4 个文件/文件夹。  
+首先，我们新建 `03_CommonJS.js`、`03_tool-add.js`、`node_modules/03_tool-multiply.js`、`node_modules/jsLe-module/tools.js` 这 4 个文件/文件夹。  
 
 其中 `package.json` 我们暂且不理会，稍后会讲解它如何自动生成。
 
@@ -494,8 +494,8 @@ var tools = {
  */
 
 // exports 使用方法
-// var str = "jsliang is very good!";
-// exports.str = str; // { str: 'jsliang is very good!' }
+// var str = "jsLe is very good!";
+// exports.str = str; // { str: 'jsLe is very good!' }
 
 // module.exports 使用方法
 module.exports = tools;
@@ -574,9 +574,9 @@ console.log(tools2.multiply(1, 2, 3, 4));
 
 * **方法三**：
 
-如果全部单个文件丢在 `node_modules` 上，它会显得杂乱无章，所以我们应该定义个自己的模块：`jsliang-module`，然后将我们的 `tools.js` 存放在该目录中：
+如果全部单个文件丢在 `node_modules` 上，它会显得杂乱无章，所以我们应该定义个自己的模块：`jsLe-module`，然后将我们的 `tools.js` 存放在该目录中：
 
-> jsliang-module/tools.js
+> jsLe-module/tools.js
 
 ```js
 var tools = {
@@ -601,11 +601,11 @@ module.exports = tools;
 
 这样，我们就定义好了自己的工具库。  
 
-但是，如果我们通过 `var tools3 = require('jsliang-module');` 去导入，会发现它报 `error` 了，所以，我们应该在 `jsliang-module` 目录下，通过下面命令行生成一个 `package.json`
+但是，如果我们通过 `var tools3 = require('jsLe-module');` 去导入，会发现它报 `error` 了，所以，我们应该在 `jsLe-module` 目录下，通过下面命令行生成一个 `package.json`
 
-> PS E:\MyWeb\node_modules\jsliang-module> npm init --yes
+> PS E:\MyWeb\node_modules\jsLe-module> npm init --yes
 
-这样，在 `jsliang-module` 中就有了 `package.json`。  
+这样，在 `jsLe-module` 中就有了 `package.json`。  
 
 而我们在 `03_CommonJS.js` 就可以引用它了：
 
@@ -621,12 +621,12 @@ var tools2 = require('03_tool-multiply');
 
 /**
  * 通过 package.json 来引用文件
- * 1. 通过在 jsliang-module 中 npm init --yes 来生成 package.json 文件
+ * 1. 通过在 jsLe-module 中 npm init --yes 来生成 package.json 文件
  * 2. package.json 文件中告诉了程序入口文件为 ："main": "tools.js",
- * 3. Node 通过 require 查找 jsliang-module，发现它有个 package.json
+ * 3. Node 通过 require 查找 jsLe-module，发现它有个 package.json
  * 4. Node 执行 tools.js 文件
  */
-var tools3 = require('jsliang-module');
+var tools3 = require('jsLe-module');
 
 http.createServer(function (req, res) {
 
@@ -858,7 +858,7 @@ let fs = require('fs');
  * · flag (String) 默认值 'w'。
  * callback { Function } 回调，传递一个异常参数 err。
  */
-fs.writeFile('index.js', 'Hello jsliang', (err) => {
+fs.writeFile('index.js', 'Hello jsLe', (err) => {
   if(err) {
     console.log(err);
     return false;
@@ -868,7 +868,7 @@ fs.writeFile('index.js', 'Hello jsliang', (err) => {
 })
 ```
 
-值得注意的是，这样的写入，是清空原文件中的所有数据，然后添加 `Hello jsliang` 这句话。即：存在即覆盖，不存在即创建。  
+值得注意的是，这样的写入，是清空原文件中的所有数据，然后添加 `Hello jsLe` 这句话。即：存在即覆盖，不存在即创建。  
 
 有创建就有删除，感兴趣的可以使用 `fs.unlink` 进行文件的删除，再次不做过多讲解。
 
@@ -895,7 +895,7 @@ fs.appendFile('index.js', '这段文本是要追加的内容', (err) => {
 > index.js
 
 ```js
-Hello jsliang这段文本是要追加的内容
+Hello jsLe这段文本是要追加的内容
 ```
 
 **在上面**，我们已经做了：新增、修改、删除操作。那么小伙伴一定很熟悉下一步骤是做什么了：  
@@ -932,7 +932,7 @@ fs.readdir('node_modules', (err, data) => {
     console.log(data);
     // Console：
     // 读取目录成功！
-    // [ '03_tool-multiply.js', 'jsliang-module' ]
+    // [ '03_tool-multiply.js', 'jsLe-module' ]
   }
 })
 ```
@@ -961,7 +961,7 @@ fs.readdir('node_modules', (err, data) => {
 let fs = require('fs');
 
 // 7. fs.rename 重命名
-fs.rename('index.js', 'jsliang.js', (err) => {
+fs.rename('index.js', 'jsLe.js', (err) => {
   if(err) {
     console.log(err);
     return false;
@@ -979,7 +979,7 @@ fs.rename('index.js', 'jsliang.js', (err) => {
 let fs = require('fs');
 
 // 7. fs.rename 重命名
-fs.rename('jsliang.js', 'node_modules/jsliang.js', (err) => {
+fs.rename('jsLe.js', 'node_modules/jsLe.js', (err) => {
   if(err) {
     console.log(err);
     return false;
@@ -1702,7 +1702,7 @@ console.log('http server is start...');
 
 > [返回目录](#catalog-chapter-three-eleven)
 
-> 关于 MySQL 的安装，可以查看 **jsliang** 写的：[MySQL 安装及图形化工具](https://github.com/LiangJunrong/document-library/blob/master/other-library/SQL/MySQL.md)
+> 关于 MySQL 的安装，可以查看 **jsLe** 写的：[MySQL 安装及图形化工具](https://github.com/LiangJunrong/document-library/blob/master/other-library/SQL/MySQL.md)
 
 **首先**，我们通过可视化工具进行表的设计：
 
@@ -1751,7 +1751,7 @@ connection.end();
 **最后**，我们通过 `node index.js`，打开该服务：
 
 ```
-[ RowDataPacket { id: 1, name: 'jsliang', age: '23' },
+[ RowDataPacket { id: 1, name: 'jsLe', age: '23' },
   RowDataPacket { id: 2, name: '梁峻荣', age: '23' } ]
 ```
 
@@ -1781,7 +1781,7 @@ var connection = mysql.createConnection({
 connection.connect();
 
 let addSql = "INSERT INTO user(id,name,age) VALUES(0,?,?)";
-let addSqlParams = ["jsliang", "23"];
+let addSqlParams = ["jsLe", "23"];
 
 connection.query(addSql, addSqlParams, function (err, res) {
   if (err) {
@@ -1913,13 +1913,13 @@ connection.end();
 
 在进行代码实战的时候，我们很多时候会遇到一些小事儿，例如：logo 制作、ico 制作、icon 挑选等……  
 
-下面这些都是 **jsliang** 平时碰到的，小伙伴有需要的可以 mark 啦~
+下面这些都是 **jsLe** 平时碰到的，小伙伴有需要的可以 mark 啦~
 
 * [logo 制作](http://www.uugai.com/logoa/wenzi.php)
 * [ico 制作](http://www.bitbug.net/)
 * [icon 挑选](https://www.iconfont.cn/home/index)
 
-另外，由于 HTML 与 CSS 没什么好讲的，所以本章节的前提静态页面 **jsliang** 已经写好了，小伙伴们在学习前可以预先下载：
+另外，由于 HTML 与 CSS 没什么好讲的，所以本章节的前提静态页面 **jsLe** 已经写好了，小伙伴们在学习前可以预先下载：
 
 * [本文静态页面代码地址](https://github.com/LiangJunrong/Node/tree/FrontEndCodeBase)
 
@@ -2101,7 +2101,7 @@ http.createServer(function (req, res) {
         "Content-Type": "text/html;charset=UTF-8"
       });
 
-      res.write('<h1 style="text-align:center">jsliang 前端有限公司服务已开启！</h1><h2 style="text-align:center">详情可见：<a href="https://github.com/LiangJunrong/document-library/blob/master/other-library/Node/Node-base.md" target="_blank">Node 基础</a></h2>');
+      res.write('<h1 style="text-align:center">jsLe 前端有限公司服务已开启！</h1><h2 style="text-align:center">详情可见：<a href="https://github.com/LiangJunrong/document-library/blob/master/other-library/Node/Node-base.md" target="_blank">Node 基础</a></h2>');
 
       res.end();
     }
@@ -2172,7 +2172,7 @@ function getNowFormatDate() {
         url: "http://localhost:8888/getMessage",
         type: "POST",
         data: {
-          username: "jsliang"
+          username: "jsLe"
         },
         success: function (res) {
           console.log(res);
@@ -2248,12 +2248,12 @@ function getNowFormatDate() {
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="keywords" content="前端,jsliang,bootstrap,企业建站">
-  <meta http-equiv="description" content="jsliang 为你打造最好的企业服务">
+  <meta http-equiv="keywords" content="前端,jsLe,bootstrap,企业建站">
+  <meta http-equiv="description" content="jsLe 为你打造最好的企业服务">
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>注册-jsliang 前端有限公司</title>
+  <title>注册-jsLe 前端有限公司</title>
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/bootstrap.min.css">
 </head>
@@ -2467,12 +2467,12 @@ if (pathName == "/sendMessage") { // 提交留言信息
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="keywords" content="前端,jsliang,bootstrap,企业建站">
-  <meta http-equiv="description" content="jsliang 为你打造最好的企业服务">
+  <meta http-equiv="keywords" content="前端,jsLe,bootstrap,企业建站">
+  <meta http-equiv="description" content="jsLe 为你打造最好的企业服务">
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>登录-jsliang 前端有限公司</title>
+  <title>登录-jsLe 前端有限公司</title>
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/bootstrap.min.css">
 </head>
@@ -2657,12 +2657,12 @@ if (pathName == "/sendMessage") { // 提交留言信息
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="keywords" content="前端,jsliang,bootstrap,企业建站">
-  <meta http-equiv="description" content="jsliang 为你打造最好的企业服务">
+  <meta http-equiv="keywords" content="前端,jsLe,bootstrap,企业建站">
+  <meta http-equiv="description" content="jsLe 为你打造最好的企业服务">
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>留言板-jsliang 前端有限公司</title>
+  <title>留言板-jsLe 前端有限公司</title>
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/bootstrap.min.css">
 </head>
@@ -2860,7 +2860,7 @@ if (pathName == "/getMessage") { // 获取留言信息
     "Content-Type": "text/html;charset=UTF-8"
   });
 
-  res.write('<h1 style="text-align:center">jsliang 前端有限公司服务已开启！</h1><h2 style="text-align:center">详情可见：<a href="https://github.com/LiangJunrong/document-library/blob/master/other-library/Node/Node-base.md" target="_blank">Node 基础</a></h2>');
+  res.write('<h1 style="text-align:center">jsLe 前端有限公司服务已开启！</h1><h2 style="text-align:center">详情可见：<a href="https://github.com/LiangJunrong/document-library/blob/master/other-library/Node/Node-base.md" target="_blank">Node 基础</a></h2>');
 
   res.end();
 }
@@ -2983,11 +2983,11 @@ PM2 是 Node 进程管理工具，可以利用它来简化很多 Node 应用管�
 
 > [返回目录](#catalog-chapter-seven)
 
-关于线上部署及域名、服务器相关的配置，**jsliang** 在另外一篇文章有所交代：[云服务器建站](https://github.com/LiangJunrong/document-library/blob/master/other-library/Node/build-web-station.md)。
+关于线上部署及域名、服务器相关的配置，**jsLe** 在另外一篇文章有所交代：[云服务器建站](https://github.com/LiangJunrong/document-library/blob/master/other-library/Node/build-web-station.md)。
 
-如果小伙伴需要订购云服务器来存放像 jsliang 个人网站类的静态或者有 Node 后端的网页，但却不知道怎么选择，可以加 **jsliang** QQ：`1741020489` 咨询，下面是一些优惠推广：  
+如果小伙伴需要订购云服务器来存放像 jsLe 个人网站类的静态或者有 Node 后端的网页，但却不知道怎么选择，可以加 **jsLe** QQ：`1741020489` 咨询，下面是一些优惠推广：  
 
-> **jsliang** 广告推送：  
+> **jsLe** 广告推送：  
 > 也许小伙伴想了解下云服务器  
 > 或者小伙伴想买一台云服务器  
 > 或者小伙伴需要续费云服务器  
@@ -3006,17 +3006,17 @@ PM2 是 Node 进程管理工具，可以利用它来简化很多 Node 应用管�
 
 所以，如果小伙伴看完真觉得不错，那就点个赞或者给个 star 吧！你们的赞和 star 是我编写更多更精彩文章的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)  
 
-如果小伙伴看完这里要评论的话，可以加个暗语：`Node 基础，***`，这样 **jsliang** 看到必回，哈哈~
+如果小伙伴看完这里要评论的话，可以加个暗语：`Node 基础，***`，这样 **jsLe** 看到必回，哈哈~
 
 * Node 基础，我完成了！
-* Node 基础，我想说 jsliang 肯定还偷懒了，没写成最完美的，我不管我打赏了你赶紧给我完善下！
+* Node 基础，我想说 jsLe 肯定还偷懒了，没写成最完美的，我不管我打赏了你赶紧给我完善下！
 * ……
 
 **so, that's all, thanks~**
 
 ---
 
-> **jsliang** 广告推送：  
+> **jsLe** 广告推送：  
 > 也许小伙伴想了解下云服务器  
 > 或者小伙伴想买一台云服务器  
 > 或者小伙伴需要续费云服务器  
@@ -3025,4 +3025,4 @@ PM2 是 Node 进程管理工具，可以利用它来简化很多 Node 应用管�
 [![图](../../public-repertory/img/z-small-seek-ali-3.jpg)](https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=w7hismrh)
 [![图](../../public-repertory/img/z-small-seek-tencent-2.jpg)](https://cloud.tencent.com/redirect.php?redirect=1014&cps_key=49f647c99fce1a9f0b4e1eeb1be484c9&from=console)
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

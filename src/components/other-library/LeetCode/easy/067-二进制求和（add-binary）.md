@@ -1,7 +1,7 @@
 067 - 二进制求和（add-binary）
 ===
 
-> Create by **jsliang** on **2019-06-11 10:07:17**  
+> Create by **jsLe** on **2019-06-11 10:07:17**  
 > Recently revised in **2019-09-18 10:20:02**
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
@@ -43,7 +43,7 @@
 
 > [返回目录](#chapter-one)
 
-小伙伴可以先自己在本地尝试解题，再回来看看 **jsliang** 讲解下使用 JavaScript 的解题思路。
+小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 讲解下使用 JavaScript 的解题思路。
 
 ### <a name="chapter-three-one" id="chapter-three-one">3.1 解法 - 转数组</a>
 
@@ -130,9 +130,9 @@ var addBinary = function (a, b) {
 
 **首先**，看到本次解题，小伙伴们应该被震惊到了。
 
-的确，**jsliang** 一开始本来打算按照正常思路写的，后面写着写着，提交成功后，发现它居然有那么多代码，也是愣了！
+的确，**jsLe** 一开始本来打算按照正常思路写的，后面写着写着，提交成功后，发现它居然有那么多代码，也是愣了！
 
-不过不要紧，**jsliang** 感觉自己的思路应该按照了正常人的思路，所以会尝试给小伙伴们讲解下这个解法的思路，如果小伙伴们听不懂不要紧，可以看下面的解法。（推荐还是看下正常思路，有利于思维的提升）
+不过不要紧，**jsLe** 感觉自己的思路应该按照了正常人的思路，所以会尝试给小伙伴们讲解下这个解法的思路，如果小伙伴们听不懂不要紧，可以看下面的解法。（推荐还是看下正常思路，有利于思维的提升）
 
 **然后**，我们分两组情况进行讲解：
 
@@ -199,7 +199,7 @@ var addBinary = function (a, b) {
 
 * **解题思路**：
 
-**首先**，毋庸置疑，这个方法比 **jsliang** 写的方法好多了。
+**首先**，毋庸置疑，这个方法比 **jsLe** 写的方法好多了。
 
 **然后**，通过进位标志 `carry` 和结果值 `res`，它将每一步的值都存储起来。
 
@@ -213,8 +213,8 @@ var addBinary = function (a, b) {
 
 ![图](../../../public-repertory/img/z-small-wechat-public-address.jpg)
 
-**jsliang** 会每天更新一道 LeetCode 题解，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构。
+**jsLe** 会每天更新一道 LeetCode 题解，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构。
 
-扫描上方二维码，关注 **jsliang** 的公众号，让我们一起折腾！
+扫描上方二维码，关注 **jsLe** 的公众号，让我们一起折腾！
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

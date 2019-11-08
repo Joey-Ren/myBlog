@@ -1,7 +1,7 @@
 Git 学习
 ===
 
-> Create by **jsliang** on **2018-10-25 15:14:00**  
+> Create by **jsLe** on **2018-10-25 15:14:00**  
 > Recently revised in **2019-05-24 13:43:15**
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
@@ -18,7 +18,7 @@ Git 学习
 
 > [返回目录](#chapter-one)
 
-一直以来，**jsliang** 对 Git 的操作，仅限于：`git add .`、`git commit -m "更新信息"`、`git push` 这三个，偶尔还会创建操作个分支。
+一直以来，**jsLe** 对 Git 的操作，仅限于：`git add .`、`git commit -m "更新信息"`、`git push` 这三个，偶尔还会创建操作个分支。
 
 但是，仅仅是这些是不够的。所以，跟随 **廖雪峰** 等大神的 Git 教程进行一波自我更新：
 
@@ -78,7 +78,7 @@ OK，这时候我们会发觉，我们要找到被删减的内容，只需要去
 
 ## Git 安装
 
-对于 Git 安装，2018 年 **jsliang** 入职公司的时候已经安装过，又因为 **廖雪峰** 大佬已经安排的明明白白了，故不多此一举，贴上安装步骤文章：
+对于 Git 安装，2018 年 **jsLe** 入职公司的时候已经安装过，又因为 **廖雪峰** 大佬已经安排的明明白白了，故不多此一举，贴上安装步骤文章：
 
 * [《安装 Git》](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137396287703354d8c6c01c904c7d9ff056ae23da865a000)
 
@@ -118,7 +118,7 @@ Git 学习
 Git 学习
 ===
 
-> Create by **jsliang** on **2019-3-29 09:08:48**  
+> Create by **jsLe** on **2019-3-29 09:08:48**  
 > Recently revised in **2019-3-29 09:08:53**
 ```
 
@@ -149,7 +149,7 @@ index b379f95..78fb1fe 100644
 \ No newline at end of file
 +===
 +
-+> Create by **jsliang** on **2019-3-29 09:09:03**
++> Create by **jsLe** on **2019-3-29 09:09:03**
 +> Recently revised in **2019-3-29 09:09:07**
 \ No newline at end of file
 ```
@@ -167,10 +167,10 @@ index b379f95..78fb1fe 100644
 Git 学习
 ===
 
-> Create by **jsliang** on **2019-3-29 09:09:03**  
+> Create by **jsLe** on **2019-3-29 09:09:03**  
 > Recently revised in **2019-3-29 09:09:07**
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
 ```
 
 * `git add .`
@@ -180,19 +180,19 @@ Git 学习
 
 ```bash
 commit 7b88d86f3e079e048c3e5444f91616b826f553a0 (HEAD -> master)
-Author: jsliang <1741020489@qq.com>
+Author: jsLe <1741020489@qq.com>
 Date:   Fri Mar 29 09:21:35 2019 +0800
 
     添加协议
 
 commit 05abb578724b7d8cef860aa4280b0e19241c02a8
-Author: jsliang <1741020489@qq.com>
+Author: jsLe <1741020489@qq.com>
 Date:   Fri Mar 29 09:14:16 2019 +0800
 
     添加时间
 
 commit 655433cc64356a8f9dc12e9a94808a25e844c0eb
-Author: jsliang <1741020489@qq.com>
+Author: jsLe <1741020489@qq.com>
 Date:   Fri Mar 29 09:03:59 2019 +0800
 ```
 
@@ -391,7 +391,7 @@ node_modules
 
 ---
 
-> **jsliang** 广告推送：  
+> **jsLe** 广告推送：  
 > 也许小伙伴想了解下云服务器  
 > 或者小伙伴想买一台云服务器  
 > 或者小伙伴需要续费云服务器  
@@ -400,4 +400,4 @@ node_modules
 [![图](../../public-repertory/img/z-small-seek-ali-3.jpg)](https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=w7hismrh)
 [![图](../../public-repertory/img/z-small-seek-tencent-2.jpg)](https://cloud.tencent.com/redirect.php?redirect=1014&cps_key=49f647c99fce1a9f0b4e1eeb1be484c9&from=console)
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

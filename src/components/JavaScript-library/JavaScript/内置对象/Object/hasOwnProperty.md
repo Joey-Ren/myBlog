@@ -1,7 +1,7 @@
 方法 - hasOwnProperty
 ===
 
-> Create by **jsliang** on **2019-10-14 16:00:23**  
+> Create by **jsLe** on **2019-10-14 16:00:23**  
 > Recently revised in **2019-10-14 16:25:45**
 
 * **原文**：[MDN - hasOwnProperty](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math)
@@ -55,7 +55,7 @@ console.log(obj1.hasOwnProperty('prop')); // false
  * @description 区分 hasOwnProperty 判断自身属性和继承属性
  */
 const obj2 = new Object();
-obj2.name = 'jsliang';
+obj2.name = 'jsLe';
 console.log(obj2.toString()); // [object Object]
 console.log(obj2.hasOwnProperty('name')); // true
 console.log(obj2.hasOwnProperty('toString')); // false
@@ -64,21 +64,21 @@ console.log(obj2.hasOwnProperty('toString')); // false
  * @name 示例3
  * @description 遍历一个对象的所有自身属性
  */
-const jsliang = new Object();
+const jsLe = new Object();
 Object.prototype.showSkill = () => {
   console.log('渣渣一个！');
 };
-jsliang.name = 'jsliang';
-jsliang.age = '25';
-jsliang.canPlay = () => {
+jsLe.name = 'jsLe';
+jsLe.age = '25';
+jsLe.canPlay = () => {
   console.log('play');
 };
-console.log(jsliang);
-// { name: 'jsliang', age: '25', canPlay: [Function] }
-console.log(jsliang.__proto__);
+console.log(jsLe);
+// { name: 'jsLe', age: '25', canPlay: [Function] }
+console.log(jsLe.__proto__);
 // { showSkill: () => { console.log('渣渣一个！'); }, constructor: ...省略 }
-for (const prop in jsliang) {
-  if (jsliang.hasOwnProperty(prop)) {
+for (const prop in jsLe) {
+  if (jsLe.hasOwnProperty(prop)) {
     console.log(prop);
     // name
     // age
@@ -92,7 +92,7 @@ for (const prop in jsliang) {
 
 ---
 
-> **jsliang** 广告推送：  
+> **jsLe** 广告推送：  
 > 也许小伙伴想了解下云服务器  
 > 或者小伙伴想买一台云服务器  
 > 或者小伙伴需要续费云服务器  
@@ -101,4 +101,4 @@ for (const prop in jsliang) {
 [![图](../../../../public-repertory/img/z-small-seek-ali-3.jpg)](https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=w7hismrh)
 [![图](../../../../public-repertory/img/z-small-seek-tencent-2.jpg)](https://cloud.tencent.com/redirect.php?redirect=1014&cps_key=49f647c99fce1a9f0b4e1eeb1be484c9&from=console)
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

@@ -1,7 +1,7 @@
 ECharts + Vue 折腾记
 ===
 
-> Create by **jsliang** on **2018-11-28 11:01:39**  
+> Create by **jsLe** on **2018-11-28 11:01:39**  
 > Recently revised in **2019-05-31 16:30:08**
 
 **Hello 小伙伴们，如果觉得本文还不错，记得点个赞或者给个 star，你们的赞和 star 是我编写更多更精彩文章的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
@@ -37,7 +37,7 @@ ECharts + Vue 折腾记
 
 而 ECharts 对于制作的图表可以满足小伙伴们的创造力，它具备华丽的外衣，且实用。  
 
-在这里，**jsliang** 将通过 ECharts + Vue 进行折腾。
+在这里，**jsLe** 将通过 ECharts + Vue 进行折腾。
 
 > 如果小伙伴们对 Vue 还不太熟，这里可能没法带你飞喔~  
 > 前置条件：[Vue](https://github.com/LiangJunrong/document-library/tree/master/JavaScript-library/Vue)、Npm、Webpack
@@ -244,7 +244,7 @@ export default {
 
 考虑到项目没有 UI 设计稿。那么，就需要引用一款 Vue 的 UI 框架了，偷懒用 ElementUI 吧。  
 
-然后，为了使项目尽可能小巧，**jsliang** 打算按需引入 ElementUI：
+然后，为了使项目尽可能小巧，**jsLe** 打算按需引入 ElementUI：
 
 **步骤 1**. 安装 ElementUI：`npm i element-ui -S`
 
@@ -414,7 +414,7 @@ export default {
 
 有时候，一些小细节总会困惑你。  
 
-在这里，**jsliang** 将贴出自己解决的小细节。  
+在这里，**jsLe** 将贴出自己解决的小细节。  
 
 结合 `Ctrl + F` 搜索关键字喔~
 
@@ -478,7 +478,7 @@ http://api.map.baidu.com/getscript?
 /* 
   * reset 的目的不是让默认样式在所有浏览器下一致，而是减少默认样式有可能带来的问题。
   * The purpose of reset is not to allow default styles to be consistent across all browsers, but to reduce the potential problems of default styles.
-  * create by jsliang
+  * create by jsLe
 */
 
 /** 清除内外边距 - clearance of inner and outer margins **/
@@ -520,13 +520,13 @@ img { border: 0; display: inline-block; width: 100%; max-width: 100%; height: au
 div, input { box-sizing: border-box; }
 
 /** 清除浮动 - clear float **/
-.jsliang-clear:after, .clear:after {
+.jsLe-clear:after, .clear:after {
   content: '\20';
   display: block;
   height: 0;
   clear: both;
 }
-.jsliang-clear, .clear {
+.jsLe-clear, .clear {
   *zoom: 1;
 }
 
@@ -548,7 +548,7 @@ import '../static/css/reset.css' /**引入样式重置 */
 
 ---
 
-> **jsliang** 广告推送：  
+> **jsLe** 广告推送：  
 > 也许小伙伴想了解下云服务器  
 > 或者小伙伴想买一台云服务器  
 > 或者小伙伴需要续费云服务器  
@@ -557,4 +557,4 @@ import '../static/css/reset.css' /**引入样式重置 */
 [![图](../../public-repertory/img/z-small-seek-ali-3.jpg)](https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=w7hismrh)
 [![图](../../public-repertory/img/z-small-seek-tencent-2.jpg)](https://cloud.tencent.com/redirect.php?redirect=1014&cps_key=49f647c99fce1a9f0b4e1eeb1be484c9&from=console)
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

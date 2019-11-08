@@ -1,7 +1,7 @@
 云服务器建站
 ===
 
-> Create by **jsliang** on **2018-12-21 13:34:13**  
+> Create by **jsLe** on **2018-12-21 13:34:13**  
 > Recently revised in **2019-05-24 15:01:11**
 
 **Hello 小伙伴们，如果觉得本文还不错，记得点个赞或者给个 star，你们的赞和 star 是我编写更多更精彩文章的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library/)**
@@ -17,15 +17,15 @@
 
 | 目录                                                   | 介绍                                       |
 | ------------------------------------------------------ | ------------------------------------------ |
-| [jsliang.top](http://jsliang.top/)                     | jsliang 的网站列表                         |
-| [cv.jsliang.top](http://cv.jsliang.top/#/)             | 通过 ECharts + Vue 打造个人线上简历        |
-| [playregex.jsliang.top](http://playregex.jsliang.top/) | 通过游戏来了解正则表达式                   |
-| [lucky.jsliang.top](http://lucky.jsliang.top/)         | 悠闲刮刮乐，仅供娱乐                       |
-| [deadline.jsliang.top](http://deadline.jsliang.top/)   | jsliang 的工作时间轴                       |
-| [webpack.jsliang.top](http://webpack.jsliang.top/)     | Webpack 学习成果，Webpack 多页面配置       |
-| [game.jsliang.top](http://game.jsliang.top/)           | 一个小游戏，只兼容 PC，适配移动端失败      |
-| [company.jsliang.top](http://company.jsliang.top/)     | Node 打造企业网站，支持注册、登录及留言    |
-| [work.jsliang.top](http://work.jsliang.top/)           | jsliang 工作成果，给领导或者工作小伙伴查看 |
+| [jsLe.top](http://jsLe.top/)                     | jsLe 的网站列表                         |
+| [cv.jsLe.top](http://cv.jsLe.top/#/)             | 通过 ECharts + Vue 打造个人线上简历        |
+| [playregex.jsLe.top](http://playregex.jsLe.top/) | 通过游戏来了解正则表达式                   |
+| [lucky.jsLe.top](http://lucky.jsLe.top/)         | 悠闲刮刮乐，仅供娱乐                       |
+| [deadline.jsLe.top](http://deadline.jsLe.top/)   | jsLe 的工作时间轴                       |
+| [webpack.jsLe.top](http://webpack.jsLe.top/)     | Webpack 学习成果，Webpack 多页面配置       |
+| [game.jsLe.top](http://game.jsLe.top/)           | 一个小游戏，只兼容 PC，适配移动端失败      |
+| [company.jsLe.top](http://company.jsLe.top/)     | Node 打造企业网站，支持注册、登录及留言    |
+| [work.jsLe.top](http://work.jsLe.top/)           | jsLe 工作成果，给领导或者工作小伙伴查看 |
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
 
@@ -57,14 +57,14 @@
 
 **关于云服务器**：  
 
-作为一枚能 “折腾” (能作死) 的人，**jsliang** 玩过腾讯云服务器和阿里云服务器。  
+作为一枚能 “折腾” (能作死) 的人，**jsLe** 玩过腾讯云服务器和阿里云服务器。  
 
-* 腾讯云服务器。如果你是大学生，那么腾讯云不可错过，[\[云+校园\]学生云服务器体验套餐 10 元/月](https://cloud.tencent.com/act/campus?fromSource=gwzcw.596698.596698.596698)。这个活动，其实一开始的价格是 1元/月，1 年也就 12 元，一餐饭的价格都不到，**jsliang** 用了两年，直至 **jsliang** 毕业。后来，enm... 你知道的，变成了 10 元/月，腾讯云的意图我就不猜了，一年就是 120 元，云服务器配置是 1 核 2 G + 1 M带宽，对于初学者来说，完全够用了。
-* 阿里云服务器。**jsliang** 目前正在使用的服务器就是云服务器。也许有的小伙伴们应该了解过云服务器，也知道在双 11 双 12 的时候，不仅有疯狂的淘宝购物，还有阿里云服务器的推送，说不定小伙伴已经买了一台给自己了，但是一直没用上。  
+* 腾讯云服务器。如果你是大学生，那么腾讯云不可错过，[\[云+校园\]学生云服务器体验套餐 10 元/月](https://cloud.tencent.com/act/campus?fromSource=gwzcw.596698.596698.596698)。这个活动，其实一开始的价格是 1元/月，1 年也就 12 元，一餐饭的价格都不到，**jsLe** 用了两年，直至 **jsLe** 毕业。后来，enm... 你知道的，变成了 10 元/月，腾讯云的意图我就不猜了，一年就是 120 元，云服务器配置是 1 核 2 G + 1 M带宽，对于初学者来说，完全够用了。
+* 阿里云服务器。**jsLe** 目前正在使用的服务器就是云服务器。也许有的小伙伴们应该了解过云服务器，也知道在双 11 双 12 的时候，不仅有疯狂的淘宝购物，还有阿里云服务器的推送，说不定小伙伴已经买了一台给自己了，但是一直没用上。  
 
-如果小伙伴需要订购云服务器来存放像 **jsliang** 个人网站类的静态或者有 Node 后端的网页，但却不知道怎么选择，可以加 **jsliang** QQ：`1741020489` 咨询，下面是一些优惠推广：  
+如果小伙伴需要订购云服务器来存放像 **jsLe** 个人网站类的静态或者有 Node 后端的网页，但却不知道怎么选择，可以加 **jsLe** QQ：`1741020489` 咨询，下面是一些优惠推广：  
 
-> **jsliang** 广告推送：  
+> **jsLe** 广告推送：  
 > 也许小伙伴想了解下云服务器  
 > 或者小伙伴想买一台云服务器  
 > 或者小伙伴需要续费云服务器  
@@ -85,7 +85,7 @@
 
 > [返回目录](#catalog-chapter-three)
 
-如果你已经通过上面推送购买了云服务器，或者你本身就有云服务器，那么我们开始讲解下 **jsliang** 对云服务器的使用：
+如果你已经通过上面推送购买了云服务器，或者你本身就有云服务器，那么我们开始讲解下 **jsLe** 对云服务器的使用：
 
 我们了解下在哪里可以看到自己的云服务器：
 
@@ -131,9 +131,9 @@
 
 ![图](../../public-repertory/img/other-build-station-5.png)
 
-上面的图片中显示的，都是 **jsliang** 在 **jsliang.top** 进行的解析记录。其中：
+上面的图片中显示的，都是 **jsLe** 在 **jsLe.top** 进行的解析记录。其中：
 
-* **主机记录**：二级域名开头，例如 `company` 对应的就是 `http://company.jsliang.top` 这个二级域名。
+* **主机记录**：二级域名开头，例如 `company` 对应的就是 `http://company.jsLe.top` 这个二级域名。
 * **记录值**：就是小伙伴云服务器的公网地址，在上面章节中提到过云服务器的 IP 地址。这是个很重要的玩意，请勿泄露。
 
 很好，现在我们点击 **添加记录**：
@@ -148,7 +148,7 @@
 
 > [返回目录](#catalog-chapter-four)
 
-> 为了保证小伙伴们尽可能地实施顺利，**jsliang** 对自己的云服务器进行了 **重新磁盘化磁盘** 的操作，从而减少中间出篓子的可能。
+> 为了保证小伙伴们尽可能地实施顺利，**jsLe** 对自己的云服务器进行了 **重新磁盘化磁盘** 的操作，从而减少中间出篓子的可能。
 
 现在我们开始配置 Nginx。  
 
@@ -186,7 +186,7 @@
 
 ![图](../../public-repertory/img/other-build-station-10.png)
 
-在这里，我们要先了解到：Nginx/conf/nginx.conf 是我们要修改的配置，而 vhost 是我们要新建的目录，目录下就是我们二级域名配置文件，例如 `compony.jsliang.top` 对应的就是 `company_jsliang.conf` 文件。
+在这里，我们要先了解到：Nginx/conf/nginx.conf 是我们要修改的配置，而 vhost 是我们要新建的目录，目录下就是我们二级域名配置文件，例如 `compony.jsLe.top` 对应的就是 `company_jsLe.conf` 文件。
 
 **然后**，我们打开文件 Nginx/conf/nginx.conf 进行配置，配置的文件已有注释，故这里不再哆嗦：
 
@@ -259,7 +259,7 @@ http {
 * [include：（mime.types）](https://my.oschina.net/plutonji/blog/527797)
 * [proxy_pass：要转发的地址（http://www.a.com:3000）](https://blog.csdn.net/zhongzh86/article/details/70173174)
 
-**再接着**，我们在 Nginx 目录下新建 vhost 目录，然后新增 `company_jsliang.conf`、`work_jsliang.conf` ……等目录，命名不重要，好记且它是 `*.conf` 就行。
+**再接着**，我们在 Nginx 目录下新建 vhost 目录，然后新增 `company_jsLe.conf`、`work_jsLe.conf` ……等目录，命名不重要，好记且它是 `*.conf` 就行。
 
 > *.conf
 
@@ -268,8 +268,8 @@ server {
   # 监听的端口，80 即可
   listen 80;
   
-  # 监听的网址，这里填写你的网址，我的就有 company.jsliang.top 等……请确保该域名已经在阿里云、腾讯云、百度云等进行了域名解析。
-  server_name company.jsliang.top;
+  # 监听的网址，这里填写你的网址，我的就有 company.jsLe.top 等……请确保该域名已经在阿里云、腾讯云、百度云等进行了域名解析。
+  server_name company.jsLe.top;
   
   # 监听的目录
   root C:\WebFrontEnd\company;
@@ -281,7 +281,7 @@ server {
 }
 ```
 
-看到这个，小伙伴们可能就明白了：当我们访问 `company.jsliang.top` 时，Nginx 就会监听我们在 C 盘下 `C:\WebFrontEnd\company` 目录下的 `index` 或者 `index.html` 或者 `index.htm`。  
+看到这个，小伙伴们可能就明白了：当我们访问 `company.jsLe.top` 时，Nginx 就会监听我们在 C 盘下 `C:\WebFrontEnd\company` 目录下的 `index` 或者 `index.html` 或者 `index.htm`。  
 
 当小伙伴们回想起我们在域名解析时的操作时，会更加清晰：
 
@@ -320,15 +320,15 @@ server {
 #	127.0.0.1       localhost
 #	::1             localhost
 
-127.0.0.1  jsliang.top
-127.0.0.1  company.jsliang.top
-127.0.0.1  cv.jsliang.top
-127.0.0.1  deadline.jsliang.top
-127.0.0.1  game.jsliang.top
-127.0.0.1  lucky.jsliang.top
+127.0.0.1  jsLe.top
+127.0.0.1  company.jsLe.top
+127.0.0.1  cv.jsLe.top
+127.0.0.1  deadline.jsLe.top
+127.0.0.1  game.jsLe.top
+127.0.0.1  lucky.jsLe.top
 127.0.0.1  playregex.top
-127.0.0.1  webpack.jsliang.top
-127.0.0.1  work.jsliang.top
+127.0.0.1  webpack.jsLe.top
+127.0.0.1  work.jsLe.top
 ```
 
 最后，我们再双击 Nginx 目录中的 nginx.exe，运行 Nginx。  
@@ -341,7 +341,7 @@ server {
 
 ![图](../../public-repertory/img/other-build-station-13.png)
 
-这时候，我们打开 `company.jsliang.top` 进行查看，发现它已成功部署啦：
+这时候，我们打开 `company.jsLe.top` 进行查看，发现它已成功部署啦：
 
 ![图](../../public-repertory/img/other-build-station-14.png)
 
@@ -375,7 +375,7 @@ server {
 
 ![图](../../public-repertory/img/other-build-station-16.png)
 
-**然后**，我们通过 `win + r -> cmd -> cd C:\WebBackEnd -> node -v` 查看我们的 Node 版本，**jsliang** 这里显示的是 `v10.14.2`，表明我们安装成功了。。
+**然后**，我们通过 `win + r -> cmd -> cd C:\WebBackEnd -> node -v` 查看我们的 Node 版本，**jsLe** 这里显示的是 `v10.14.2`，表明我们安装成功了。。
 
 **接着**，我们将我们的 Node 代码复制到 WebBackEnd/NodeBase 目录中，同时控制台 cd 到这个目录：`cd NodeBase`，然后 `npm i` 安装依赖包，并 `node index.js` 从而开启项目。  
 
@@ -397,7 +397,7 @@ server {
 
 ---
 
-> **jsliang** 广告推送：  
+> **jsLe** 广告推送：  
 > 也许小伙伴想了解下云服务器  
 > 或者小伙伴想买一台云服务器  
 > 或者小伙伴需要续费云服务器  
@@ -406,4 +406,4 @@ server {
 [![图](../../public-repertory/img/z-small-seek-ali-3.jpg)](https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=w7hismrh)
 [![图](../../public-repertory/img/z-small-seek-tencent-2.jpg)](https://cloud.tencent.com/redirect.php?redirect=1014&cps_key=49f647c99fce1a9f0b4e1eeb1be484c9&from=console)
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

@@ -1,14 +1,14 @@
 2019 面试实战 - Round Two
 ===
 
-> Create by **jsliang** on **2019-3-7 22:26:08**  
+> Create by **jsLe** on **2019-3-7 22:26:08**  
 > Recently revised in **2019-05-24 11:08:15**
  
-**Hello 小伙伴们，如果觉得本文还不错，记得给 jsliang 的文档库点个 **star** ， 你们的 **star** 是我学习折腾的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
+**Hello 小伙伴们，如果觉得本文还不错，记得给 jsLe 的文档库点个 **star** ， 你们的 **star** 是我学习折腾的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
 
 并不是只有特定的季节才能跑路，只因为人跑得多了，这条路就定下来了。
 
-金三银四跑路季，**jsliang** 进行了第二回合的面试，并写下这篇文章。
+金三银四跑路季，**jsLe** 进行了第二回合的面试，并写下这篇文章。
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
 
@@ -50,7 +50,7 @@
 
 1. **公司规模**：员工 3000 +
 2. **行业**：计算机软件
-3. **面试前**：人生最可怕的噩梦，就是面对广州死亡三号线 + 中途会被要求下站的六号线！**jsliang** 于 7:15 分出发，在漫长的等地铁之后，终于在 8:15 分抵达目的地。出地铁一瞅，好家伙：山清水秀鸟语花香（黑云压城城欲摧）。撑开伞，雨中漫步一会，走了一个地铁站左右，去大门登记，进入并等待面试。
+3. **面试前**：人生最可怕的噩梦，就是面对广州死亡三号线 + 中途会被要求下站的六号线！**jsLe** 于 7:15 分出发，在漫长的等地铁之后，终于在 8:15 分抵达目的地。出地铁一瞅，好家伙：山清水秀鸟语花香（黑云压城城欲摧）。撑开伞，雨中漫步一会，走了一个地铁站左右，去大门登记，进入并等待面试。
 
 ### <a name="chapter-three-one" id="chapter-three-one">3.1 Job Description</a>
 
@@ -142,7 +142,7 @@ D. <div><p><form><ul><li>
 
 **选择题就到此结束了。**
 
-因为 **jsliang** 就坐在一个毫无屏障的大厅上答题。人来人往的，并且试题标明需要关闭电子设备，为了不被赶出去，为了能进入之后的环节，所以俺怂了~只在答完题假装拿手机找人事小姐姐的时候，乘机拍了前五题的，哈哈。不过下面的问答题还好我记得，下面咱一起瞅瞅！
+因为 **jsLe** 就坐在一个毫无屏障的大厅上答题。人来人往的，并且试题标明需要关闭电子设备，为了不被赶出去，为了能进入之后的环节，所以俺怂了~只在答完题假装拿手机找人事小姐姐的时候，乘机拍了前五题的，哈哈。不过下面的问答题还好我记得，下面咱一起瞅瞅！
 
 二、问答题
 
@@ -173,7 +173,7 @@ b();
 
 请按照上面代码的格式，实现该图片的近似垂直居中和完全垂直居中。
 
-> 一开始表示 **jsliang** 是懵逼的，不按套路出牌啊，不都是水平垂直居中么？不管了，我直接用 less 格式写下了 position 和 flex 的垂直居中方式，然后备注下如果要加上水平居中要怎么搞。
+> 一开始表示 **jsLe** 是懵逼的，不按套路出牌啊，不都是水平垂直居中么？不管了，我直接用 less 格式写下了 position 和 flex 的垂直居中方式，然后备注下如果要加上水平居中要怎么搞。
 
 3. 下面有个页面，左边块宽 100px，高 120px，中间 10px 缝隙，右边宽度占剩余页面的 100%，高度占整个页面高度的 100%，请写出相关代码（HTML + CSS）。
 
@@ -185,11 +185,11 @@ b();
 
 **总结**：
 
-面试题要求 45 分钟写完，**jsliang** 30 分钟左右搞定了。总体来说在 **jsliang** 的面经文章上（即将发布）都有出现，个人觉得难度 5 颗星是最高难度的话，那这份题卷顶多 2 颗半星，当然后面知道 15 道选择题我还是错了 2 道。
+面试题要求 45 分钟写完，**jsLe** 30 分钟左右搞定了。总体来说在 **jsLe** 的面经文章上（即将发布）都有出现，个人觉得难度 5 颗星是最高难度的话，那这份题卷顶多 2 颗半星，当然后面知道 15 道选择题我还是错了 2 道。
 
 不过，看到我的字，enm...我是觉得……**程序猿写的字不好看就不好看了吧！I dont care!**……安慰一波受伤的心灵。
 
-这里不会给答案的哈，毕竟 **jsliang** 觉得，如果给了答案，小伙伴们的思维就被我的思路限制住了，或者我给出的是错误答案，就更引导错误了，然后评论区“大神”一堆分析，我体无完肤~所以还不如让小伙伴们自己敲一遍体验更深刻！
+这里不会给答案的哈，毕竟 **jsLe** 觉得，如果给了答案，小伙伴们的思维就被我的思路限制住了，或者我给出的是错误答案，就更引导错误了，然后评论区“大神”一堆分析，我体无完肤~所以还不如让小伙伴们自己敲一遍体验更深刻！
 
 ### <a name="chapter-three-three" id="chapter-three-three">3.3 技术二面 - 男女混合双打</a>
 
@@ -207,7 +207,7 @@ b();
 * **前端小姐姐**：“你先自我介绍一下。”
 * **我**：噼里啪啦介绍一通……**①**
 
-> **①**：如果小伙伴对我的经历感兴趣，请关注下一篇文章：《jsliang 的 2019 面试准备》(尚未发布)
+> **①**：如果小伙伴对我的经历感兴趣，请关注下一篇文章：《jsLe 的 2019 面试准备》(尚未发布)
 
 * **前端小姐姐**：“介绍了下对三大框架的理解，并让我对比了下 Vue 和 微信小程序 以及 Vue 和 jQuery。”**②**
 
@@ -268,9 +268,9 @@ var tree = [
 
 请问我要如何快速找到某 Id 对应的节点。**⑤**
 
-> **⑤**：由于记忆不太清晰，这里 **jsliang** 尽力模仿了小姐姐的代码。
+> **⑤**：由于记忆不太清晰，这里 **jsLe** 尽力模仿了小姐姐的代码。
 
-> **jsliang** 使用了 for in + 递归 的形式进行了查找，不过因为 **jsliang** 也不确定，所以感兴趣的小伙伴，赶紧行动起来，查找一番吧~
+> **jsLe** 使用了 for in + 递归 的形式进行了查找，不过因为 **jsLe** 也不确定，所以感兴趣的小伙伴，赶紧行动起来，查找一番吧~
 
 * （经过一段时间的写代码以及和前端小姐姐的讨论……）
 * **前端小姐姐**：“好的，树节点问题咱就讨论到这，下面我再问一个问题，有关定位的。”
@@ -289,7 +289,7 @@ var tree = [
 
 当我点击这张图片中的某个位置（不仅是人身体，其他空白地方也可以），就会显示一个 input 框，输入一些信息后，点击其他地方会关闭，然后当你鼠标移动过去后，就会显示刚才输入的信息，请问这你会怎么实现？
 
-> **jsliang** 觉得这是个有趣的问题，小伙伴们可以自己试试哈~
+> **jsLe** 觉得这是个有趣的问题，小伙伴们可以自己试试哈~
 
 > tips：获取设备宽高，获取相对于图片的点击位置，定位新 input 的位置，定义 input 的 hover……
 
@@ -298,7 +298,7 @@ var tree = [
 
 3. 题目：现在，我有四个接口：A、B、C、D，首先我要查询 A 接口，查询 A 接口之后才能根据 A 接口返回的数据查询 B、C、D 三个接口，请问有没有比较好点的做法？
 
-> **jsliang** 的思路是链式调用 + 异步调用，回答问题的时候用了 Promise，小伙伴们可以想想自己会怎么解决吧~
+> **jsLe** 的思路是链式调用 + 异步调用，回答问题的时候用了 Promise，小伙伴们可以想想自己会怎么解决吧~
 
 * （又又经过一段时间的写代码以及和前端小姐姐的讨论……）
 * **前端小姐姐**：“好的，大致清楚了，那么你能讲讲你离职的原因和对下一家公司的期望么？”
@@ -310,7 +310,7 @@ var tree = [
 * **我**：“我想知道如果我进来这公司，大概是做什么？”
 * **前端小姐姐**：“如果你进来的话，大概是做 ……**⑦**。然后，平时开发的话，是采用组件化开发形式，分工合作的。接着，我们需要进行兼容到 IE8，以及我们使用的技术是 Angular 1，团队是 30 多个人，前端 10 多个。最后，我们可能会涉及的有 ECharts 报表以及地图之类的开发。”
 
-> **⑦**：这部分就不能讲了，因为跟某些地方牵扯上关系的，**jsliang** 还是有所顾忌的。
+> **⑦**：这部分就不能讲了，因为跟某些地方牵扯上关系的，**jsLe** 还是有所顾忌的。
 
 * **我**：“好的，谢谢，我大致了解了。”
 * （前端小姐姐询问特短发大哥还有啥需要询问的。）
@@ -476,7 +476,7 @@ var tree = [
 
 > [返回目录](#chapter-one)
 
-在介绍这份工作的面试之前，咱们还是讲讲区块链吧，毕竟一开始 **jsliang** 也不是很懂区块链这块，面试的时候没跟面试官勾搭到一块，面试完回去后，特地咨询了下在区块链公司工作的大佬 **[邵威儒](https://juejin.im/user/5a84f871f265da4e82634f2d)**，并查了下相关资料，同样不懂的小伙伴可以跟着一起了解了解。
+在介绍这份工作的面试之前，咱们还是讲讲区块链吧，毕竟一开始 **jsLe** 也不是很懂区块链这块，面试的时候没跟面试官勾搭到一块，面试完回去后，特地咨询了下在区块链公司工作的大佬 **[邵威儒](https://juejin.im/user/5a84f871f265da4e82634f2d)**，并查了下相关资料，同样不懂的小伙伴可以跟着一起了解了解。
 
 * 什么是区块链？
 
@@ -556,13 +556,13 @@ var tree = [
 
 > [返回目录](#chapter-one)
 
-至此，**jsliang** 的第二轮面试就结束啦~
+至此，**jsLe** 的第二轮面试就结束啦~
 
 **首先**，还是那句话，面试不一定造火箭，有可能是人家项目中真实存在这个情况，就好比上午二面的小姐姐的问题，你说她是自己想出来的，我看不尽然，说不定就是真实上线的案例中抽取出来的。
 
 **然后**，面试可以给你更多的 idea，从而根据面试过程中出现的一些点，去扩宽自己知识面。面试第一目的肯定是拿到 offer，但是每次面试请尝试记住面试过程及面试题目，面试后总结出来，针对自己的不足进行知识拓展。
 
-**最后**，**jsliang** 在这里祝小伙伴们面试成功，在金三银四的季节找到更适合自己的职位！
+**最后**，**jsLe** 在这里祝小伙伴们面试成功，在金三银四的季节找到更适合自己的职位！
 
 ---
 
@@ -570,8 +570,8 @@ var tree = [
 
 ![图](../../../public-repertory/img/z-small-wechat-public-address.jpg)
 
-**jsliang** 会每天在公众号发表一篇文章，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构等等。
+**jsLe** 会每天在公众号发表一篇文章，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构等等。
 
-扫描上方二维码，关注 **jsliang** 的公众号，让我们一起折腾！
+扫描上方二维码，关注 **jsLe** 的公众号，让我们一起折腾！
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

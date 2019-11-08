@@ -1,14 +1,14 @@
 2019 面试实战 - Round One
 ===
 
-> Create by **jsliang** on **2019-2-27 18:51:26**  
+> Create by **jsLe** on **2019-2-27 18:51:26**  
 > Recently revised in **2019-05-24 11:07:19**
  
-**Hello 小伙伴们，如果觉得本文还不错，记得给 jsliang 的文档库点个 **star** ， 你们的 **star** 是我学习折腾的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
+**Hello 小伙伴们，如果觉得本文还不错，记得给 jsLe 的文档库点个 **star** ， 你们的 **star** 是我学习折腾的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
 
 并不是只有特定的季节才能跑路，只因为人跑得多了，这条路就定下来了。
 
-金三银四跑路季，**jsliang** 也去尝试了一波，然后写下这篇文章。
+金三银四跑路季，**jsLe** 也去尝试了一波，然后写下这篇文章。
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
 
@@ -109,7 +109,7 @@
 
 > **②**：关于微信通讯录的做法，可参考文章 [【微信小程序之奇技淫巧】](https://github.com/LiangJunrong/document-library/blob/master/other-library/WeChatApplet/WeChatAppletFunctionList.md)，里面全程分析了简单做法和优化观点。
 
-* **……该部分中 jsliang 和面试官还有一些探讨，太长了这里忽略不提……**
+* **……该部分中 jsLe 和面试官还有一些探讨，太长了这里忽略不提……**
 * **面试官**：“能介绍下这个侧边栏实现吗？”
 * **我**：“假设我需要跳转到 D 桶（前面**面试官**讲了下分桶），那么，我首先需要知道 A 桶、B 桶、C 桶各有多少条，然后将条数 * 每条高度，以及字母 A、B、C 的高度，最后想加起来获得需要滚动到的位置。并且我做了兼容，在 IPhone 6、IPhone X 上都能确却滚动到具体位置。**③**”
 
@@ -145,7 +145,7 @@
 * **面试官**：（翻简历）（打开手机）
 * **面试官**：“能介绍你这个刮刮奖么？我觉得挺有意思的。**⑤**”
 
-> **⑤**：[【幸运刮刮乐】](http://lucky.jsliang.top/) —— **jsliang** 屏蔽敏感部分，发来玩玩的手机页面。
+> **⑤**：[【幸运刮刮乐】](http://lucky.jsLe.top/) —— **jsLe** 屏蔽敏感部分，发来玩玩的手机页面。
 
 * **我**：“刮刮奖的话，是一次活动制作，然后我找了一个 Canvas 画图的插件做的。”
 * **面试官**：“那现在有个问题：我是如何知道它什么时候展开。”
@@ -186,7 +186,7 @@
 
 **然后**，听到其中一些点，现在也感觉到尴尬，同时感觉那时候应该可以做到更好发挥。
 
-**最后**，就是这个面试官给人的感觉还是挺好的，至少当某些问题 **jsliang** 不会的时候，他还会给你讲讲他的观点，而不是直接跳过，让你感到心堵，从而给你更多的压力。
+**最后**，就是这个面试官给人的感觉还是挺好的，至少当某些问题 **jsLe** 不会的时候，他还会给你讲讲他的观点，而不是直接跳过，让你感到心堵，从而给你更多的压力。
 
 ### <a name="chapter-three-three" id="chapter-three-three">3.3 二面技术 - 技术负责人</a>
 
@@ -347,7 +347,7 @@
 
 **首先**，到这里感觉整个人都很放松了，毕竟在人事面的时候知道这是最后一面了，也很累，毕竟坐了好久。
 
-**然后**，如果能接触到项目负责人，最好多接触下，多聊聊，毕竟不出意外，这就是你的直系领导了。换工作的话，虽然平台也很重要，但是领导也是个非常重要的部分，像 **jsliang** 公司的领导层就比较乱，所以感觉还是希望有个好领导的。
+**然后**，如果能接触到项目负责人，最好多接触下，多聊聊，毕竟不出意外，这就是你的直系领导了。换工作的话，虽然平台也很重要，但是领导也是个非常重要的部分，像 **jsLe** 公司的领导层就比较乱，所以感觉还是希望有个好领导的。
 
 **最后**，希望小伙伴们最好都能走到面试最后咯~上午的面试就到此了，当场允诺发 offer 还是很少见的。
 
@@ -357,7 +357,7 @@
 
 1. **公司规模**：20 - 99人
 2. **行业**：游戏
-3. **面试前**：地处科大科技园那边，提前了一个钟到，不想提前上去（**jsliang** 觉得有时候提前上去，万一前面面试的还没搞完，会尴尬，一般都是提前半个钟到），无聊，就坐马路前看看车水马龙。
+3. **面试前**：地处科大科技园那边，提前了一个钟到，不想提前上去（**jsLe** 觉得有时候提前上去，万一前面面试的还没搞完，会尴尬，一般都是提前半个钟到），无聊，就坐马路前看看车水马龙。
 
 ### <a name="chapter-four-one" id="chapter-four-one">4.1 Job Description</a>
 
@@ -394,7 +394,7 @@
 9. 哪些常见操作会造成内存泄漏？
 10. 主流前端框架如 Angular/React/Vue 等之间有哪些差异及特点，选取一个描述其组件生命周期。
 
-> 这里 **jsliang** 还是冒着被寄刀片的危险，不给答案了！毕竟给了答案，小伙伴可能不会更深层次地了解这个问题。
+> 这里 **jsLe** 还是冒着被寄刀片的危险，不给答案了！毕竟给了答案，小伙伴可能不会更深层次地了解这个问题。
 
 ### <a name="chapter-four-three" id="chapter-four-three">4.3 技术二面 - 前端小姐姐</a>
 
@@ -405,7 +405,7 @@
 ---
 
 * **前端小姐姐**：“你好，你先来个自我介绍吧~”
-* **我**：“你好，我叫梁峻荣，前端网名 **jsliang**，日常活跃于 GitHub 和掘金。然后个人比较喜欢折腾，在去年 8 月的时候开始写自己文档库，在 9 月和 10 月做过小程序，11 月的时候做了 ECharts 报表，12 月的时候做了个原生 Node 仿企业网站，然后就到了现在。”
+* **我**：“你好，我叫梁峻荣，前端网名 **jsLe**，日常活跃于 GitHub 和掘金。然后个人比较喜欢折腾，在去年 8 月的时候开始写自己文档库，在 9 月和 10 月做过小程序，11 月的时候做了 ECharts 报表，12 月的时候做了个原生 Node 仿企业网站，然后就到了现在。”
 * **前端小姐姐**：“你挑一个你的工作项目来讲讲。”
 * **我**：“那我讲讲微信小程序吧**①**，当时大概 20 来张 PSD，就说了下小程序是做什么的，然后我就边看官方文档边写小程序了。大概一个半月后，期间修修改改，就把小程序搞出来了。其中最有挑战的就是联系人模块，就像我们手机的联系人，在新增和修改的时候，用到了二分法。”
 
@@ -456,7 +456,7 @@
 * **前端小姐姐**：“然后，enm...能讲下什么是闭包吗？”
 * **我**：“简单来说，假如有两个函数 A 和 B，然后 B 函数在 A 函数内，同时 B 能使用函数 A 的变量，那么我们称函数 B 为闭包。**④**举个简单的，网上常用的例子：`for` 循环中定义了定时器 `setTimeout`，里面就涉及闭包了。”
 
-> **④**：关于对话中的一些知识点，最终将会整理成一篇文章，最近还没完成，但是大致有了 1400 多行的文章了：[【jsliang 的 2019 面试准备】](https://github.com/LiangJunrong/document-library/blob/master/other-library/Interview/InterviewPreparation.md)，刚兴趣的小伙伴可以关注我 GitHub 或者掘金账号，会持续更新哈~
+> **④**：关于对话中的一些知识点，最终将会整理成一篇文章，最近还没完成，但是大致有了 1400 多行的文章了：[【jsLe 的 2019 面试准备】](https://github.com/LiangJunrong/document-library/blob/master/other-library/Interview/InterviewPreparation.md)，刚兴趣的小伙伴可以关注我 GitHub 或者掘金账号，会持续更新哈~
 
 * **前端小姐姐**：“那为什么使用闭包呢？”
 * **我**：“其实，工作中我个人不太喜欢闭包，也不推荐闭包，因为它能把人整懵逼了。同时，现在 ES6 的块级定义也有利于减少闭包产生。所以，能不写闭包，就不写闭包。”
@@ -493,7 +493,7 @@
 * **我**：“浏览器兼容的话，IE 10 以下不考虑，其他就是微信和 IPhone 的兼容，让人难受了。”
 * **前端小姐姐**：“然后，我看你简历有说到正则小游戏**⑤**，能聊聊这个么？”
 
-> **⑤**：**jsliang** 写的 [正则小游戏](http://playregex.jsliang.top/)。
+> **⑤**：**jsLe** 写的 [正则小游戏](http://playregex.jsLe.top/)。
 
 * **我**：“一般来说，登录注册这些使用正则比较多，如果你让我写一个，我肯定要回去看看，毕竟很少用就忘了；但是如果你让我看看某个正则啥意思，还是能看出来的。”
 * **前端小姐姐**：“`token` 失效问题遇到过么？”
@@ -501,7 +501,7 @@
 * **前端小姐姐**：“能讲下原型链么？”
 * **我**：“原型链涉及到面向对象，如果在一些比较赶的项目中，可能不会使用，因为一般直接用面向过程的方法来写，一般原型链都是涉及到继承方面的东东。**⑥**”
 
-> **⑥**：这是个大块，前端必考题，具体的可以查看我的文章 [【jsliang 的 2019 面试准备】](https://github.com/LiangJunrong/document-library/blob/master/other-library/Interview/InterviewPreparation.md)，当然现在还没写完，**jsliang** 介绍起来也结巴，所以感觉那时候回答的也不是非常好。
+> **⑥**：这是个大块，前端必考题，具体的可以查看我的文章 [【jsLe 的 2019 面试准备】](https://github.com/LiangJunrong/document-library/blob/master/other-library/Interview/InterviewPreparation.md)，当然现在还没写完，**jsLe** 介绍起来也结巴，所以感觉那时候回答的也不是非常好。
 
 * **前端小姐姐**：“好的。能聊聊 Ajax 的原理，以及你的使用方法吗？”
 * **我**：“不好意思，不太清楚，一般都是用 jQuery 封装好的，或者 Axios。”
@@ -533,7 +533,7 @@
 * **我**：“因为我觉得平台太小，个人提升有限，就好比现在一些简历上的，很多都是我自己折腾的。”
 * **项目负责人**：“好的，咱说说薪酬方面……”
 * **我**：“……噼里啪啦……”
-* **……省略中间部分，聊聊 jsliang 的技术栈，聊聊技术使用，聊聊个人技术提升……**
+* **……省略中间部分，聊聊 jsLe 的技术栈，聊聊技术使用，聊聊个人技术提升……**
 * **项目负责人**：“好的，大致清楚了。那今天面试就到这里了，你回去等通知吧。”
 * **我**：“好的，谢谢。”
 ---
@@ -550,13 +550,13 @@
 
 > [返回目录](#chapter-one)
 
-写到这里，**jsliang** 的第一轮面试就完毕啦，特意抽取了一天来面试，收获多多，感慨几许：
+写到这里，**jsLe** 的第一轮面试就完毕啦，特意抽取了一天来面试，收获多多，感慨几许：
 
 **首先**，面试不一定造火箭，有可能是人家项目中真实存在这个情况，就好比上午二面的图片，好比下午前端小姐姐的 CSS3 和动画之类的。
 
 **然后**，面试可以给你更多的 idea，从而根据面试过程中出现的一些点，去扩宽自己知识面。面试第一目的肯定是拿到 offer，但是每次面试请尝试记住面试过程及面试题目，面试后总结出来，针对自己的不足进行知识拓展。
 
-**最后**，**jsliang** 在这里祝小伙伴们面试成功，在金三银四的季节找到更适合自己的职位！
+**最后**，**jsLe** 在这里祝小伙伴们面试成功，在金三银四的季节找到更适合自己的职位！
 
 ---
 
@@ -564,8 +564,8 @@
 
 ![图](../../../public-repertory/img/z-small-wechat-public-address.jpg)
 
-**jsliang** 会每天在公众号发表一篇文章，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构等等。
+**jsLe** 会每天在公众号发表一篇文章，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构等等。
 
-扫描上方二维码，关注 **jsliang** 的公众号，让我们一起折腾！
+扫描上方二维码，关注 **jsLe** 的公众号，让我们一起折腾！
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

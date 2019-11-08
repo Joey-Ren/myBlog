@@ -1,10 +1,10 @@
 提问的艺术
 ===
 
-> create by **jsliang** on **2019-3-26 15:28:38**   
+> create by **jsLe** on **2019-3-26 15:28:38**   
 > Recently revised in **2019-3-27 22:48:38**
 
-**提问是一门学问，更是种艺术，不懂得提问的人，终归让人难受。** —— **~~鲁迅~~ jsliang**
+**提问是一门学问，更是种艺术，不懂得提问的人，终归让人难受。** —— **~~鲁迅~~ jsLe**
 
 ![图](../../public-repertory/img/other-monologue-TheArtOfQuestioning-1.png)
 
@@ -12,16 +12,16 @@
 
 ## 一 引子
 
-作为一枚编程界的渣，又喜欢去四处折腾，折腾又 hold 不住各种妖娆千奇百怪的问题缠身。所以 **jsliang** 就成了问题少年，QQ/微信群加了一堆，大佬加了一堆，就想着解决不了的时候拖有经验的 **大佬** 下水，一起解决下这些 “有趣” 的问题。
+作为一枚编程界的渣，又喜欢去四处折腾，折腾又 hold 不住各种妖娆千奇百怪的问题缠身。所以 **jsLe** 就成了问题少年，QQ/微信群加了一堆，大佬加了一堆，就想着解决不了的时候拖有经验的 **大佬** 下水，一起解决下这些 “有趣” 的问题。
 
-因为继承了大学师兄的优良传统：**“不要什劳子问题都直接丢给大佬，会被拉黑的哦~”**。所以询问问题之前和询问问题的时候，**jsliang** 有自己的一套：
+因为继承了大学师兄的优良传统：**“不要什劳子问题都直接丢给大佬，会被拉黑的哦~”**。所以询问问题之前和询问问题的时候，**jsLe** 有自己的一套：
 
 1. **先自己折腾**，尝试一番。如果能搞定，那感情好的；如果搞不定，这时候对问题来龙去脉有点思路了。
 2. **百度**、**bing**、**Google**（好吧，**Google** 在国内被墙了，还真没咋用过梯子，所以 **Google** 不常用）。根据折腾时候给出的思路，尝试找到比较相似的解决方案，再次进行折腾，如果还搞不定，那就询问下群里大佬。
 3. **向群友求助**：“小伙伴们，有使用过框架 A 的吗？我编译的时候它报 B 的错误，然后我尝试用 C 方法进行解决了，但是没成功，于是百度了关键字 D，再尝试了 E 方法，现在想知道是哪里出问题了，可以帮忙看看嘛？谢谢~”
 4. **向大佬提问**：“大佬，在不，问你个问题！在框架 A 中，我编译的时候它报 B 的错误，然后我尝试用 C 方法进行解决了，但是没成功，于是百度了关键字 D，再尝试了 E 方法，不知道是我的思路错了，还是解决中疏漏了哪个步骤，你有空帮忙看看不？谢谢~”
 
-即便最终在大佬的帮助下，**jsliang** 解决了问题，但是 **jsliang** 感觉还是很慌的：**我是不是偷懒没百度？我提问的时候语气有没有很恭敬？如果下次大佬不回我咋办？**……
+即便最终在大佬的帮助下，**jsLe** 解决了问题，但是 **jsLe** 感觉还是很慌的：**我是不是偷懒没百度？我提问的时候语气有没有很恭敬？如果下次大佬不回我咋办？**……
 
 好吧，不管怎样，心虚啊，有时候总感觉自己提问姿势还是不太对，然后刚好看到文章 [《别像弱智一样提问》](https://github.com/tangx/Stop-Ask-Questions-The-Stupid-Ways/blob/master/README.md) 和 [《提问的智慧》](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md)。
 
@@ -52,9 +52,9 @@ enm......陷入深思，我是不是就是里面的那个弱智......
 
 虽然，现实中应该很少几率会出现最后破口大骂的情形。
 
-但是，至少 **jsliang** 还是曾见过几次的，为那几个大佬默哀几秒。
+但是，至少 **jsLe** 还是曾见过几次的，为那几个大佬默哀几秒。
 
-当然，今天不是来讲这个的，此处略去不表，**jsliang** 谈谈自己关于这则故事的观点：
+当然，今天不是来讲这个的，此处略去不表，**jsLe** 谈谈自己关于这则故事的观点：
 
 1. **在不？** 这句话有没有让在座大多数小伙伴一阵心肌梗塞的感觉？你是回呢还是不回呢？
 2. **直接提问**。有问题先 **百度**、**bing**、**Google** 撒，毕竟大佬很忙的撒，好不容易处理完自己事情，看到你这问题，结果一百度发现感觉又回到了工作状态，这是另类为你打工啊~
@@ -65,7 +65,7 @@ enm......陷入深思，我是不是就是里面的那个弱智......
 
 ## 三 提问常识
 
-除了上面 **jsliang** 提到的自己的观点，[《别像弱智一样提问》](https://github.com/tangx/Stop-Ask-Questions-The-Stupid-Ways/blob/master/README.md) 中还有更多强烈呼喊：
+除了上面 **jsLe** 提到的自己的观点，[《别像弱智一样提问》](https://github.com/tangx/Stop-Ask-Questions-The-Stupid-Ways/blob/master/README.md) 中还有更多强烈呼喊：
 
 1. 要知道，**Free** 的正确翻译是 **自由**，而非 **免费**。即便回答你的人由时间。
 2. 要知道，愿意回答问题的人，都是 **可爱** 的人。
@@ -113,6 +113,6 @@ OK，如果得到解答，最好就再回复句 **谢谢**！没得到解答也�
 
 ## 五 总结
 
-到此，**jsliang** 就讲述完自己关于 **提问** 的观点，如果小伙伴还有其他经历，或者对 **提问的艺术** 有自己独到的见解，可以到评论区给出你的吐槽，或者到 **jsliang 的文档库** QQ 群：`798961601` 跟其他小伙伴一起分享~ 
+到此，**jsLe** 就讲述完自己关于 **提问** 的观点，如果小伙伴还有其他经历，或者对 **提问的艺术** 有自己独到的见解，可以到评论区给出你的吐槽，或者到 **jsLe 的文档库** QQ 群：`798961601` 跟其他小伙伴一起分享~ 
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

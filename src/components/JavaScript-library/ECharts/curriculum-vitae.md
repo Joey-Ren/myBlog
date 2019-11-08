@@ -1,7 +1,7 @@
 ECharts 打造在线个人简历
 ===
 
-> Create by **jsliang** on **2018-12-5 11:48:56**  
+> Create by **jsLe** on **2018-12-5 11:48:56**  
 > Recently revised in **2019-05-31 19:16:24**
 
 **Hello 小伙伴们，如果觉得本文还不错，记得点个赞或者给个 star，你们的赞和 star 是我编写更多更精彩文章的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
@@ -12,7 +12,7 @@ ECharts 打造在线个人简历
 
 **咱使用 Vue + ECharts + ElementUI 来打造份在线个人简历，并将它部署到免费的服务器上去吧！**  
 
-最终成品线上地址：[点击查看](http://cv.jsliang.top/#/)
+最终成品线上地址：[点击查看](http://cv.jsLe.top/#/)
 
 ![图](../../public-repertory/img/js-ECharts-CurriculumVitae-18.png)
 
@@ -59,7 +59,7 @@ ECharts 打造在线个人简历
 
 文章中的见解仅代表个人观点，不代表 “最优想法”，请文明评论、科学参考。  
 
-如有更好建议，可加 **jsliang** 的文档库 QQ 群讨论：`798961601`。  
+如有更好建议，可加 **jsLe** 的文档库 QQ 群讨论：`798961601`。  
 
 谢谢~
 
@@ -160,7 +160,7 @@ new Vue({
 /* 
   * reset 的目的不是让默认样式在所有浏览器下一致，而是减少默认样式有可能带来的问题。
   * The purpose of reset is not to allow default styles to be consistent across all browsers, but to reduce the potential problems of default styles.
-  * create by jsliang
+  * create by jsLe
 */
 
 /** 清除内外边距 - clearance of inner and outer margins **/
@@ -202,13 +202,13 @@ img { border: 0; display: inline-block; width: 100%; max-width: 100%; height: au
 div, input { box-sizing: border-box; }
 
 /** 清除浮动 - clear float **/
-.jsliang-clear:after, .clear:after {
+.jsLe-clear:after, .clear:after {
   content: '\20';
   display: block;
   height: 0;
   clear: both;
 }
-.jsliang-clear, .clear {
+.jsLe-clear, .clear {
   *zoom: 1;
 }
 
@@ -220,7 +220,7 @@ input::-ms-input-placeholder { color: #919191; font-size: .26rem } /* Internet E
 
 当然，怕小伙伴们嫌麻烦，不想敲代码。  
 
-所以 **jsliang** 直接上传了基础代码，需要的小伙伴直接下载即可：
+所以 **jsLe** 直接上传了基础代码，需要的小伙伴直接下载即可：
 
 * [ECharts 打造在线个人简历分支 - 基础配置](https://github.com/LiangJunrong/CurriculumVitae/tree/basic-configuration)
 
@@ -378,7 +378,7 @@ export default {
 
 当然，仅仅带进门，可能小伙伴们还可能会感觉懵逼：下一步我要怎么做？
 
-所以，**jsliang** 顺带讲讲 ECharts 如何上手：
+所以，**jsLe** 顺带讲讲 ECharts 如何上手：
 
 1. 照着上面案例敲一遍
 2. 过一遍它的上手文档：[5 分钟上手 ECharts](http://www.echartsjs.com/tutorial.html#5%20%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8B%20ECharts)
@@ -395,7 +395,7 @@ export default {
 
 那么，尽情使用 UI 框架吧！这里偷懒用 ElementUI 咯。  
 
-然后，为了使项目尽可能小巧，**jsliang** 打算按需引入 ElementUI：
+然后，为了使项目尽可能小巧，**jsLe** 打算按需引入 ElementUI：
 
 **步骤 1**. 安装 ElementUI：`npm i element-ui -S`
 
@@ -487,7 +487,7 @@ new Vue({
 
 ![图](../../public-repertory/img/js-ECharts-CurriculumVitae-5.png)
 
-如图，**jsliang** 觉得这图的布局不错，所以下载下来了它的 png 版本和 psd 版本。  
+如图，**jsLe** 觉得这图的布局不错，所以下载下来了它的 png 版本和 psd 版本。  
 
 然后，怕小伙伴们难以想象要怎么操作，我用 PS 修改下它的 psd 吧：
 
@@ -501,7 +501,7 @@ new Vue({
 
 ![图](../../public-repertory/img/js-ECharts-CurriculumVitae-7.png)
 
-**jsliang** 太懒，名字就懒得想了，从左到右，从上到下，依次命名 7 个框的名字为 `PartOne` 到 `PartSeven` 吧。
+**jsLe** 太懒，名字就懒得想了，从左到右，从上到下，依次命名 7 个框的名字为 `PartOne` 到 `PartSeven` 吧。
 
 > PartOne.vue 代码示例
 
@@ -783,7 +783,7 @@ export default {
 
 ![图](../../public-repertory/img/js-ECharts-CurriculumVitae-10.png)
 
-为了防止小伙伴们晕乎，保险起见 **jsliang** 将总体配置的代码提交到了分支，需要的小伙伴直接下载即可：
+为了防止小伙伴们晕乎，保险起见 **jsLe** 将总体配置的代码提交到了分支，需要的小伙伴直接下载即可：
 
 * [ECharts 打造在线个人简历分支 - 完整配置](https://github.com/LiangJunrong/CurriculumVitae/tree/overall-configuration)
 
@@ -799,7 +799,7 @@ export default {
 2. 求职意向：职位、城市、薪资、准备入职时间……
 3. 工作经验：……
 4. 个人技能：熟悉 HTML5、CSS3、JavaScript……
-5. 教育背景/荣誉证书（这两样没有很出彩的地方的话，**jsliang** 建议就忽略不写了）
+5. 教育背景/荣誉证书（这两样没有很出彩的地方的话，**jsLe** 建议就忽略不写了）
 
 所以，我们就着这几方面来编写我们的简历吧~
 
@@ -821,8 +821,8 @@ export default {
     <p>年&emsp;&emsp;龄：23</p>
     <p>联系电话：18818881888</p>
     <p>电子邮箱：1741020489@qq.com</p>
-    <p>博&emsp;&emsp;客：<a href="http://jsliang.top">jsliang.top</a></p>
-    <p>掘&emsp;&emsp;金：<a href="https://juejin.im/user/584613ba128fe10058b3cf68">jsliang</a></p>
+    <p>博&emsp;&emsp;客：<a href="http://jsLe.top">jsLe.top</a></p>
+    <p>掘&emsp;&emsp;金：<a href="https://juejin.im/user/584613ba128fe10058b3cf68">jsLe</a></p>
     <p>GitHub：<a href="https://github.com/LiangJunrong">LiangJunrong</a></p>
   </div>
 </template>
@@ -1552,7 +1552,7 @@ OK，到这里，这篇文章就结束啦！
 
 > 番外：
 
-哈哈，**jsliang** 已经 **预** **感** **到** **了**：  
+哈哈，**jsLe** 已经 **预** **感** **到** **了**：  
 
 **你的好友喷子小哥上线啦！**
 
@@ -1568,7 +1568,7 @@ enm......所以我不管怎么说，都说不过这些大佬的，所以有的�
   
 ---
 
-> **jsliang** 广告推送：  
+> **jsLe** 广告推送：  
 > 也许小伙伴想了解下云服务器  
 > 或者小伙伴想买一台云服务器  
 > 或者小伙伴需要续费云服务器  
@@ -1577,4 +1577,4 @@ enm......所以我不管怎么说，都说不过这些大佬的，所以有的�
 [![图](../../public-repertory/img/z-small-seek-ali-3.jpg)](https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=w7hismrh)
 [![图](../../public-repertory/img/z-small-seek-tencent-2.jpg)](https://cloud.tencent.com/redirect.php?redirect=1014&cps_key=49f647c99fce1a9f0b4e1eeb1be484c9&from=console)
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

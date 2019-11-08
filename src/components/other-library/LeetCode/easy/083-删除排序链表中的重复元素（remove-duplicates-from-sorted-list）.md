@@ -1,7 +1,7 @@
 083 - 删除排序链表中的重复元素（remove-duplicates-from-sorted-list）
 ===
 
-> Create by **jsliang** on **2019-6-12 08:50:11**  
+> Create by **jsLe** on **2019-6-12 08:50:11**  
 > Recently revised in **2019-6-12 09:26:06**
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
@@ -44,7 +44,7 @@
 
 > [返回目录](#chapter-one)
 
-小伙伴可以先自己在本地尝试解题，再回来看看 **jsliang** 的解题思路。
+小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
 ```js
 var deleteDuplicates = function(head) {
@@ -176,7 +176,7 @@ deleteDuplicates(head);
 * **步骤 2**：执行代码，得到打印信息，顺序 `head` -> `removal` -> `follower`。
 
 ```js
-jsliang 注释：
+jsLe 注释：
   第一次遍历，
   我们的 head、removal、follower 都处于初始状态
 ------
@@ -184,7 +184,7 @@ jsliang 注释：
 { val: -99, next: null }
 { val: -99, next: null }
 
-jsliang 注释：
+jsLe 注释：
   第二次遍历，
   我们的 head = head.next，follower = head.next，
   这样 removal 就获得了 1，以及之后的整个 next。
@@ -193,7 +193,7 @@ jsliang 注释：
 { val: -99, next: { val: 1, next: { val: 1, next: { val: 2, next: { val: 3, next: { val: 3, next: null } } } } } }
 { val: 1, next: { val: 1, next: { val: 2, next: { val: 3, next: { val: 3, next: null } } } } }
 
-jsliang 注释：
+jsLe 注释：
   第三次遍历，
   我们的 head 继续前进一步：head = head.next，
   但是因为 head.val == follower.val，
@@ -204,7 +204,7 @@ jsliang 注释：
 { val: -99, next: { val: 1, next: { val: 1, next: { val: 2, next: { val: 3, next: { val: 3, next: null } } } } } }
 { val: 1, next: { val: 1, next: { val: 2, next: { val: 3, next: { val: 3, next: null } } } } }
 
-jsliang 注释：
+jsLe 注释：
   第四次遍历，
   我们的 head 继续前进一步：head = head.next，
   然后 follower 和 removal 获得了 head.next。
@@ -213,7 +213,7 @@ jsliang 注释：
 { val: -99, next: { val: 1, next: { val: 2, next: { val: 3, next: { val: 3, next: null } } } } }
 { val: 2, next: { val: 3, next: { val: 3, next: null } } }
 
-jsliang 注释：
+jsLe 注释：
   第五次遍历，
   我们的 head 继续前进一步：head = head.next，
   此时 head.val == follower.val，
@@ -225,7 +225,7 @@ jsliang 注释：
 { val: -99, next: { val: 1, next: { val: 2, next: { val: 3, next: { val: 3, next: null } } } } }
 { val: 3, next: { val: 3, next: null } }
 
-jsliang 注释：
+jsLe 注释：
   最终 return 的值如下所示：
 ------
 { val: 1, next: { val: 2, next: { val: 3, next: null } } }
@@ -245,8 +245,8 @@ jsliang 注释：
 
 ![图](../../../public-repertory/img/z-small-wechat-public-address.jpg)
 
-**jsliang** 会每天更新一道 LeetCode 题解，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构。
+**jsLe** 会每天更新一道 LeetCode 题解，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构。
 
-扫描上方二维码，关注 **jsliang** 的公众号，让我们一起折腾！
+扫描上方二维码，关注 **jsLe** 的公众号，让我们一起折腾！
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

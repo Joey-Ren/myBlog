@@ -1,7 +1,7 @@
 算法与数据结构
 ===
 
-> Create by **jsliang** on **2019-06-13 09:00:29**  
+> Create by **jsLe** on **2019-06-13 09:00:29**  
 > Recently revised in **2019-09-05 14:56:31**
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
@@ -21,9 +21,9 @@
 
 > [返回目录](#chapter-one)
 
-Hello 小伙伴们上午好、中午好、下午好、晚上好，我是 **jsliang**，因为目前主要搞前端，所以全称 **JavaScriptLiang**，本系列文章讲解的是【算法与数据结构】，阅读当中如发现有出错，请留言/评论指出。
+Hello 小伙伴们上午好、中午好、下午好、晚上好，我是 **jsLe**，因为目前主要搞前端，所以全称 **JavaScriptLiang**，本系列文章讲解的是【算法与数据结构】，阅读当中如发现有出错，请留言/评论指出。
 
-如果你是前端新人，**jsliang** 并不建议你过早接触算法与数据结构，而是先自己从 产品、UI、前端、后端、数据库、运营 的角度写一个网站/小程序/App（尽量将这些职位体验一下）。
+如果你是前端新人，**jsLe** 并不建议你过早接触算法与数据结构，而是先自己从 产品、UI、前端、后端、数据库、运营 的角度写一个网站/小程序/App（尽量将这些职位体验一下）。
 
 如果你是前端老人，那么建议你先过一遍 LeetCode，将【简单】难度的前面 100 题刷一下，期间记得做笔记，将碰到的知识点记录下来，然后再看本系列文章，你会恍然大悟：原来是这么回事。
 
@@ -45,7 +45,7 @@ Hello 小伙伴们上午好、中午好、下午好、晚上好，我是 **jslia
 
 当然，如果面试的时候你这么对面试官说，面试官第一句回复可能就是让你回去等通知了。
 
-那么，怎么简单描述呢？**jsliang** 认为：
+那么，怎么简单描述呢？**jsLe** 认为：
 
 * 针对某一个问题，实现的一种便捷有效的解法，就是算法。
 
@@ -63,7 +63,7 @@ Hello 小伙伴们上午好、中午好、下午好、晚上好，我是 **jslia
 
 数据结构是计算机存储、组织数据的方式。数据结构是指相互之间存在一种或多种特定关系的数据元素的集合。通常情况下，精心选择的数据结构可以带来更高的运行或者存储效率。数据结构往往同高效的检索算法和索引技术有关。【百度百科】
 
-当然，这里还是不建议强行背下这段定义，可以看看我的观点。**jsliang** 认为：
+当然，这里还是不建议强行背下这段定义，可以看看我的观点。**jsLe** 认为：
 
 * 为适应某种情形，在计算机中使用不同的结构来表示某个数据，就是数据结构。
 
@@ -88,7 +88,7 @@ Hello 小伙伴们上午好、中午好、下午好、晚上好，我是 **jslia
 
 下面是推荐学习顺序表：
 
-> **jsliang** 没有明确规定不能先看第 09 篇再看第 01 篇，所以请随意探索，以下仅为建议。
+> **jsLe** 没有明确规定不能先看第 09 篇再看第 01 篇，所以请随意探索，以下仅为建议。
 
 | 数据结构 |
 | --- |
@@ -124,8 +124,8 @@ Hello 小伙伴们上午好、中午好、下午好、晚上好，我是 **jslia
 
 ![图](../../../public-repertory/img/z-small-wechat-public-address.jpg)
 
-**jsliang** 会每天更新一道 LeetCode 题解，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构。
+**jsLe** 会每天更新一道 LeetCode 题解，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构。
 
-扫描上方二维码，关注 **jsliang** 的公众号，让我们一起折腾！
+扫描上方二维码，关注 **jsLe** 的公众号，让我们一起折腾！
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

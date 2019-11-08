@@ -1,16 +1,16 @@
-jsliang 的 2019 面试准备
+jsLe 的 2019 面试准备
 ===
 
-> Create by **jsliang** on **2019-2-11 15:30:34**  
+> Create by **jsLe** on **2019-2-11 15:30:34**  
 > Recently revised in **2019-05-24 11:06:18**
 
 **Hello 小伙伴们，如果觉得本文还不错，记得给个 **star** ， 小伙伴们的 **star** 是我持续更新的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
 
 并不是只有特定的季节才能跑路，只因为人跑得多了，这条路就定下来了。
 
-金三银四跳槽季，**jsliang** 于 **2019年2月11日** 写下了这篇文章，开始准备自己的面试之旅。
+金三银四跳槽季，**jsLe** 于 **2019年2月11日** 写下了这篇文章，开始准备自己的面试之旅。
 
-至 **2019年3月17日** 为止，**jsliang** 搭建出个人的面试知识体系，海量地翻阅了一些前辈留下的资料，结合个人需求进行了几场面试，从而进一步完善该文章并进行了发表，希望对准备跳槽或者正在跳槽中的小伙伴有所帮助。
+至 **2019年3月17日** 为止，**jsLe** 搭建出个人的面试知识体系，海量地翻阅了一些前辈留下的资料，结合个人需求进行了几场面试，从而进一步完善该文章并进行了发表，希望对准备跳槽或者正在跳槽中的小伙伴有所帮助。
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
 
@@ -106,11 +106,11 @@ jsliang 的 2019 面试准备
 
 > [返回目录](#catalog-chapter-two)
 
-Hello 小伙伴们好，我叫梁峻荣，网名叫 **jsliang**，由于崇拜前端大佬 **[技术胖](https://jspang.com/)**（*jspang*）的原因，又因为自己学的是前端（JavaScript），所以给自己取了个 **jsliang**（*JavaScriptLiang*） 的网名，希望自己能通过建立自己的前端知识体系，从而在前端路上走得更远。并将自己的经验分享给小伙伴，携手小伙伴们一起前行。
+Hello 小伙伴们好，我叫梁峻荣，网名叫 **jsLe**，由于崇拜前端大佬 **[技术胖](https://jspang.com/)**（*jspang*）的原因，又因为自己学的是前端（JavaScript），所以给自己取了个 **jsLe**（*JavaScriptLiang*） 的网名，希望自己能通过建立自己的前端知识体系，从而在前端路上走得更远。并将自己的经验分享给小伙伴，携手小伙伴们一起前行。
 
 下面是讲讲个人故事：
 
-**首先**，**jsliang** 高考后的暑期就听大学师兄的建议，开始学习编程，那时候学习了 C 语言，觉得世界上最神奇的事情不过如此，敲两下键盘，按下回车，电脑就会一闪一闪地响应我们！于是在大学的时候，陆陆续续学过 C、C#、.Net 等……。
+**首先**，**jsLe** 高考后的暑期就听大学师兄的建议，开始学习编程，那时候学习了 C 语言，觉得世界上最神奇的事情不过如此，敲两下键盘，按下回车，电脑就会一闪一闪地响应我们！于是在大学的时候，陆陆续续学过 C、C#、.Net 等……。
 
 > **-_-|| 由于学得都是基础，又都还给老师了，在这里就不多累述了。**
 
@@ -120,23 +120,23 @@ Hello 小伙伴们好，我叫梁峻荣，网名叫 **jsliang**，由于崇拜�
 
 **最后**，我在自己的毕业设计中使用 Node.js + Vue + ElementUI + MongoDB 打造了个校园外卖、快递代拿等功能的社区单页应用。
 
-在 2018 年 5 月的时候，家里催促，于是直接出来面试。不像其他大佬的毕业等于失业，很幸运地 **jsliang** 面试第一家就给了 offer，于是就进了这家公司，那时候感觉自己前面的大学生活白过了，只懂 ES5、jQuery、HTML/HTML5、CSS/CSS3 的皮毛。
+在 2018 年 5 月的时候，家里催促，于是直接出来面试。不像其他大佬的毕业等于失业，很幸运地 **jsLe** 面试第一家就给了 offer，于是就进了这家公司，那时候感觉自己前面的大学生活白过了，只懂 ES5、jQuery、HTML/HTML5、CSS/CSS3 的皮毛。
 
 在熟悉了三个月的业务，公司给的任务能顺利完成后，我觉得自己不够努力：外面的前端翻天覆地，我的技术却只是梭哈 jQuery！
 
-于是 2018 年 8 月，**jsliang** 开始写 Markdown，将 5 月份到 8 月份记录到 Word 文档上的笔记整理成了 [jsliang 的文档库](https://github.com/LiangJunrong/document-library)，并在 [jsliang 的掘金](https://juejin.im/user/584613ba128fe10058b3cf68) 上发表了第一篇文章。
+于是 2018 年 8 月，**jsLe** 开始写 Markdown，将 5 月份到 8 月份记录到 Word 文档上的笔记整理成了 [jsLe 的文档库](https://github.com/LiangJunrong/document-library)，并在 [jsLe 的掘金](https://juejin.im/user/584613ba128fe10058b3cf68) 上发表了第一篇文章。
 
-18 年 8 月至今，**jsliang** 大致经历了以下这些：
+18 年 8 月至今，**jsLe** 大致经历了以下这些：
 
 1. 学 Webpack，并用 Webpack 构建一个多页面配置。然后幸运的是，刚好碰到公司的一个仿站任务，于是整个前端小组直接用了我的 Webpack + jQuery + VS Code 的 Live Share 套路进行协同开发！
 2. 学 微信小程序，并将它应用到电信开发的微信小程序项目翼小微中。
 3. 学 ECharts 报表，并用它做了个 Vue + ECharts 的报表，来展示爱音乐公司的运营数据。
-4. 学 Node，然后搭了个企业网站（http://company.jsliang.top），并写了篇小文章（目前最高成就，获得了 1100 多赞）。
+4. 学 Node，然后搭了个企业网站（http://company.jsLe.top），并写了篇小文章（目前最高成就，获得了 1100 多赞）。
 5. 学 Vue，由于之前学的 Vue，在工作上有好多没有，逐渐淡忘了，所以从基础开始，准备写一套《Vue 从 0 到 1》。
 
-以上，就是 **jsliang** 的编程生涯。
+以上，就是 **jsLe** 的编程生涯。
 
-今儿，在这里写写 **jsliang** 为了跳槽，根据个人想法进行的一些前端面试资料整理，小伙伴们觉得不错的点个赞或者去 GitHub 点个 star，觉得有误请指出，谢谢~
+今儿，在这里写写 **jsLe** 为了跳槽，根据个人想法进行的一些前端面试资料整理，小伙伴们觉得不错的点个赞或者去 GitHub 点个 star，觉得有误请指出，谢谢~
 
 ### <a name="chapter-two-two" id="chapter-two-two">2.2 跳槽原委</a>
 
@@ -147,7 +147,7 @@ Hello 小伙伴们好，我叫梁峻荣，网名叫 **jsliang**，由于崇拜�
 1. 钱没给到位。
 2. 心被委屈了。
 
-**首先**，如果非要给 **jsliang** 我自己的跳槽定个位，那肯定是钱没给到位，劳动与产出不成正比。在我 2018 年 5 月入职前，与人事的交谈中了解到每年的 8 月和 2 月可以提薪，当初的技术栈是：HTML、CSS、ES5。
+**首先**，如果非要给 **jsLe** 我自己的跳槽定个位，那肯定是钱没给到位，劳动与产出不成正比。在我 2018 年 5 月入职前，与人事的交谈中了解到每年的 8 月和 2 月可以提薪，当初的技术栈是：HTML、CSS、ES5。
 
 **然后**，2018 年 6 月到 2019 年 1 月，学习并应用到工作中的技术有：
 
@@ -165,7 +165,7 @@ Hello 小伙伴们好，我叫梁峻荣，网名叫 **jsliang**，由于崇拜�
 > 你没看错，提薪全靠 PPT。PPT 里提高了不给，没提就是没有。  
 > 当初想法很简单，你随便加个 5/600 我也满足了。
 
-**最后**，**jsliang** 曾跟项目总监私下谈话，建议可以发展一些新产品，这样公司或许能获取一些新收入，我也可以进一步挑战我的技术。但是，由于我司是个老牌子公司，并且大部分依赖于接手电信项目进行扩张……
+**最后**，**jsLe** 曾跟项目总监私下谈话，建议可以发展一些新产品，这样公司或许能获取一些新收入，我也可以进一步挑战我的技术。但是，由于我司是个老牌子公司，并且大部分依赖于接手电信项目进行扩张……
 
 enm...所以心也委屈了。
 
@@ -234,7 +234,7 @@ way 2：面试成功，跟自己公司递辞呈，询问能不能快速离职，
 
 way 3：先递辞呈，同时面试，面试成功的，一律申请走完原公司一个月的流程之后的日子入职。
 
-> **jsliang** 于 2 月底拿到 offer 并递交辞呈，3 月 - 4 月进入一个月倒计时，4 月第一周才能拿到离职证明。
+> **jsLe** 于 2 月底拿到 offer 并递交辞呈，3 月 - 4 月进入一个月倒计时，4 月第一周才能拿到离职证明。
 
 最后在这里祝各位小伙伴能找到称心如意的工作~
 
@@ -330,7 +330,7 @@ HTML5 中新增标签大致有：`<header>`、`<footer>`、`<aside>`、`<nav>`�
 
 ```js
 localStorage.getItem('name'); // 获取 name 的值
-localStorage.setItem('name', 'jsliang'); // 设置 name 的值为 jsliang
+localStorage.setItem('name', 'jsLe'); // 设置 name 的值为 jsLe
 localStorage.removeItem('name'); // 删除 name 的值
 ```
 
@@ -364,9 +364,9 @@ JavaScript 属于行为层，负责内容应如何对事件做出反应。
 
 但是在前端开发中，如果不采用统一标准，那么会产生千奇百怪的 bug。所以为了减少后期 bug 的出现，前端开发人员会重置一遍 CSS 样式，尽可能地使开发的网页在各个浏览器相差不大。
 
-下面是 **jsliang** 在使用的样式重置，当然如果小伙伴有不同的想法，可以去 **百度/必应/google** 搜索并使用其他版本的样式重置：
+下面是 **jsLe** 在使用的样式重置，当然如果小伙伴有不同的想法，可以去 **百度/必应/google** 搜索并使用其他版本的样式重置：
 
-* [jsliang 的 CSS 样式重置](https://github.com/LiangJunrong/document-library/blob/master/CSS-library/CSSBase/CSSReset.md)
+* [jsLe 的 CSS 样式重置](https://github.com/LiangJunrong/document-library/blob/master/CSS-library/CSSBase/CSSReset.md)
 
 ### <a name="chapter-four-three" id="chapter-four-three">4.3 CSS 盒模型</a>
 
@@ -468,7 +468,7 @@ Render Tree 中的元素与 DOM 元素相对应，但非一一对应：一个 DO
 
 > [返回目录](#catalog-chapter-four)
 
-1. 水平垂直居中。这种布局老生常谈，**jsliang** 在本文也有提到，详解请 [点击链接](#chapter-four-eleven)
+1. 水平垂直居中。这种布局老生常谈，**jsLe** 在本文也有提到，详解请 [点击链接](#chapter-four-eleven)
 2. 两列布局。一侧固定，另一侧自适应。
 
 ```html
@@ -504,7 +504,7 @@ Render Tree 中的元素与 DOM 元素相对应，但非一一对应：一个 DO
 </html>
 ```
 
-3. 三列布局。类似于两列布局，新增多一个固定宽的 `<div>` 块而已。当然，小伙伴们可能会说：**jsliang** 你要考虑 `flex` 的兼容性啊！enm...**支持所有最新版本的浏览器！请更新你的浏览器哦亲~**
+3. 三列布局。类似于两列布局，新增多一个固定宽的 `<div>` 块而已。当然，小伙伴们可能会说：**jsLe** 你要考虑 `flex` 的兼容性啊！enm...**支持所有最新版本的浏览器！请更新你的浏览器哦亲~**
 
 > 避免被寄刀片，附上 `float` 布局：[《css常见布局》](https://blog.csdn.net/liwei26/article/details/78976444)
 
@@ -837,7 +837,7 @@ JavaScript 属于行为层，负责内容应如何对事件做出反应。
 
 > [返回目录](#catalog-chapter-five)
 
-关于 `prototype`、`__proto__`、`new`、`call()`、`apply()`、`bind()`、`this` 这些的知识点，由于篇幅太长，**jsliang** 已经抽离了出来，并做了简洁详细讲解，详见：
+关于 `prototype`、`__proto__`、`new`、`call()`、`apply()`、`bind()`、`this` 这些的知识点，由于篇幅太长，**jsLe** 已经抽离了出来，并做了简洁详细讲解，详见：
 
 * [面试知识点 - JS 原型与原型链](https://github.com/LiangJunrong/document-library/blob/master/other-library/Interview/PersonalExperience/JS-%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE.md)
 
@@ -1050,7 +1050,7 @@ console.log(a, b);
 
 > [返回目录](#catalog-chapter-five)
 
-在前端发展中，随着前后端分离，前端社区的不断壮大，前端能做的事情越来越多，承受的任务越来越重，代码也就越来越长了。就好比 **jsliang** 个人使用 jQuery 开发的时候，动不动就上千行代码，这在一个编辑器上看起来就有点乱了。如果碰上没有代码折叠的编辑器，你就更加难受了。
+在前端发展中，随着前后端分离，前端社区的不断壮大，前端能做的事情越来越多，承受的任务越来越重，代码也就越来越长了。就好比 **jsLe** 个人使用 jQuery 开发的时候，动不动就上千行代码，这在一个编辑器上看起来就有点乱了。如果碰上没有代码折叠的编辑器，你就更加难受了。
 
 > 有的小伙伴的编辑器不是 VS Code，也不能进行代码折叠
 
@@ -1064,9 +1064,9 @@ console.log(a, b);
 
 **最后**，ECMA 国际推出了 ES6 的 modules。在 ES6 中，通过 export 关键字导出模块，通过 import 关键字引用代码。当然，由于浏览器厂商诸多，ES6 在浏览器的尚不支持，目前主流做法是先将 ES6 通过 babel 编译成 require。
 
-当然，JS 都进行模块化了，**jsliang** 想起自己项目中的那一坨 CSS，真心没有回顾的想法！所以我们还需要知道为了方便管理 CSS，大佬们还是有做事儿的：Less 以及 Sass，这两者使 CSS 的编写更有组织性和目的性了。
+当然，JS 都进行模块化了，**jsLe** 想起自己项目中的那一坨 CSS，真心没有回顾的想法！所以我们还需要知道为了方便管理 CSS，大佬们还是有做事儿的：Less 以及 Sass，这两者使 CSS 的编写更有组织性和目的性了。
 
-说起模块化，我们又可以顺带提及组件化了，一开始为了区分这两者，**jsliang** 也是百度了大量文章，最后成功把自己整蒙了，还是说说感觉可以的解释：
+说起模块化，我们又可以顺带提及组件化了，一开始为了区分这两者，**jsLe** 也是百度了大量文章，最后成功把自己整蒙了，还是说说感觉可以的解释：
 
 **组件化更关注的是 UI 部分：弹出框、头部，内容区、按钮等，都可以编写成组件，然后在适用的地方进行引用。而模块化更侧重于功能或者数据的封装，比如全局的 JSON 配置文件，比如通用的验证方法，比如规范时间戳等。**
 
@@ -1112,12 +1112,12 @@ function Person(name, phone) {
   return this;
 }
 
-let p1 = new Person("jsliang", "18818881888");
-console.log(p1.name); // jsliang
-p1.eat(); // jsliang 吃饭
+let p1 = new Person("jsLe", "18818881888");
+console.log(p1.name); // jsLe
+p1.eat(); // jsLe 吃饭
 ```
 
-当然，**jsliang** 只能写到这里了，再写下去就是设计模式等知识点了。
+当然，**jsLe** 只能写到这里了，再写下去就是设计模式等知识点了。
 
 所以希望小伙伴们还是了解下面向对象思想，有助于进一步提升自己。
 
@@ -1125,7 +1125,7 @@ p1.eat(); // jsliang 吃饭
 
 > [返回目录](#catalog-chapter-five)
 
-关于 **防抖与节流**，**jsliang** 特意将资料结合起来：
+关于 **防抖与节流**，**jsLe** 特意将资料结合起来：
 
 * **防抖与节流**
 * **重绘与回流**
@@ -1145,7 +1145,7 @@ ES6 是个大知识点，如果你面试的公司不是 “饱经沧桑” 的�
 * 说说 let、var、const 区别
 * 讲讲 Promise 及其使用
 
-因为 **jsliang** 感觉自己连 ES6 的门还没进，所以在这里就不 **自作聪明**，推荐下阮一峰大佬的教程：
+因为 **jsLe** 感觉自己连 ES6 的门还没进，所以在这里就不 **自作聪明**，推荐下阮一峰大佬的教程：
 
 * [《ECMAScript 6 入门 - 阮一峰》](http://es6.ruanyifeng.com/)
 
@@ -1172,7 +1172,7 @@ ES6 是个大知识点，如果你面试的公司不是 “饱经沧桑” 的�
 * `indexOf / lastIndexOf(value, fromIndex)`: 查找数组项，返回对应的下标
 * `reduce / reduceRight(fn(prev, cur)， defaultPrev)`: 两两执行，prev 为上次化简函数的return值，cur 为当前值(从第二项开始)
 
-相信小伙伴在工作中耍的已经是一套一套的了，或者像 **jsliang** 一样只会简单的使用 `push`、`map` 这几个，感兴趣的小伙伴可以 百度/bing/google 找找一些 **奇技淫巧**，说不定对工作效率有很大提升~
+相信小伙伴在工作中耍的已经是一套一套的了，或者像 **jsLe** 一样只会简单的使用 `push`、`map` 这几个，感兴趣的小伙伴可以 百度/bing/google 找找一些 **奇技淫巧**，说不定对工作效率有很大提升~
 
 ## <a name="chapter-six" id="chapter-six">六 Vue</a>
 
@@ -1340,7 +1340,7 @@ Vue.nextTick().then(function () {
 })
 ```
 
-关于 nextTick 的更多理解，**jsliang** 就不献丑了，需要学习的小伙伴可以查看：
+关于 nextTick 的更多理解，**jsLe** 就不献丑了，需要学习的小伙伴可以查看：
 
 * [《Vue.nextTick 的原理和用途》](https://segmentfault.com/a/1190000012861862)
 
@@ -1350,7 +1350,7 @@ Vue.nextTick().then(function () {
 
 > [返回目录](#catalog-chapter-six)
 
-关于 Vue 中的父子组件通讯，相信经常开发 Vue 的小伙伴比 **jsliang** 知道的多很多。
+关于 Vue 中的父子组件通讯，相信经常开发 Vue 的小伙伴比 **jsLe** 知道的多很多。
 
 没怎么使用 Vue 的小伙伴可以看下下面的文章，并尝试自己写一写：
 
@@ -1594,7 +1594,7 @@ onLoad: function(options) {
 2. 通过 Storage 来传递参数：
 
 ```js
-wx.setStorageSync('userId', 'jsliang');
+wx.setStorageSync('userId', 'jsLe');
 wx.getStorageSync('userId');
 ```
 
@@ -1707,7 +1707,7 @@ Component({
 
 > [返回目录](#catalog-chapter-eight)
 
-关于 **浏览器解析 URL**，**jsliang** 特意将资料结合起来：
+关于 **浏览器解析 URL**，**jsLe** 特意将资料结合起来：
 
 * **防抖与节流**
 * **重绘与回流**
@@ -1722,7 +1722,7 @@ Component({
 
 > [返回目录](#catalog-chapter-eight)
 
-关于 **重绘与回流**，**jsliang** 特意将资料结合起来：
+关于 **重绘与回流**，**jsLe** 特意将资料结合起来：
 
 * **防抖与节流**
 * **重绘与回流**
@@ -1830,7 +1830,7 @@ V8 将内存分为两类：新生代内存空间和老生代内存空间。
 
 > [返回目录](#catalog-chapter-night)
 
-关于 **TCP 三次握手与四次挥手**，**jsliang** 特意将资料结合起来：
+关于 **TCP 三次握手与四次挥手**，**jsLe** 特意将资料结合起来：
 
 * **防抖与节流**
 * **重绘与回流**
@@ -1886,7 +1886,7 @@ V8 将内存分为两类：新生代内存空间和老生代内存空间。
 
 > [返回目录](#catalog-chapter-eleven)
 
-在算法这块，**jsliang** 觉得自己还是比较薄弱的，如果小伙伴们跟 **jsliang** 一样，也想丰富下这方面知识，欢迎一起刷 LeetCode 共同进步：
+在算法这块，**jsLe** 觉得自己还是比较薄弱的，如果小伙伴们跟 **jsLe** 一样，也想丰富下这方面知识，欢迎一起刷 LeetCode 共同进步：
 
 * [LeetCode](https://leetcode-cn.com/)
 
@@ -1894,12 +1894,12 @@ V8 将内存分为两类：新生代内存空间和老生代内存空间。
 
 > [返回目录](#catalog-chapter-twelve)
 
-在 【其他】 这章，原本 **jsliang** 想谈谈面试中的一些小技巧，例如谈薪；或者讲讲 HR 面需要询问的问题，例如工作时长、加班机制、调薪机制等……
+在 【其他】 这章，原本 **jsLe** 想谈谈面试中的一些小技巧，例如谈薪；或者讲讲 HR 面需要询问的问题，例如工作时长、加班机制、调薪机制等……
 
-但是，最终看来，**jsliang** 的经历还是有所欠缺，所经历的面试不够 “盛大”，所以说出的话可能就是 “胡言乱语”、“误导观众”，故在此就不献丑了，如果小伙伴们想知道更多，可以通过 QQ 群：`798961601` 找到我。
+但是，最终看来，**jsLe** 的经历还是有所欠缺，所经历的面试不够 “盛大”，所以说出的话可能就是 “胡言乱语”、“误导观众”，故在此就不献丑了，如果小伙伴们想知道更多，可以通过 QQ 群：`798961601` 找到我。
 
-> ☆ 目前 **jsliang** 通过 3 天的请假，去了 5 场面试，收获了 3 份 offer。  
-> ☆ 如果小伙伴不知道简历该怎么写、面试总是镇静不下来、总感觉面试没谱，可以先找 **jsliang** 聊聊，我会讲讲个人的面试经历，以及听到的其他小伙伴的经历~
+> ☆ 目前 **jsLe** 通过 3 天的请假，去了 5 场面试，收获了 3 份 offer。  
+> ☆ 如果小伙伴不知道简历该怎么写、面试总是镇静不下来、总感觉面试没谱，可以先找 **jsLe** 聊聊，我会讲讲个人的面试经历，以及听到的其他小伙伴的经历~
 
 ## <a name="chapter-thirteen" id="chapter-thirteen">十三 总结</a>
 
@@ -1926,7 +1926,7 @@ V8 将内存分为两类：新生代内存空间和老生代内存空间。
 
 每个人的学习经历是不同的，所拥有的技术、知识点以及工作经验等都是不同的。
 
-所以 **jsliang** 的目的是通过这篇文章充实自己的同时，顺带挖掘自己的不足，例如面向对象造轮子、算法问题等让 **jsliang** 想进一步折腾，并应用到工作中。
+所以 **jsLe** 的目的是通过这篇文章充实自己的同时，顺带挖掘自己的不足，例如面向对象造轮子、算法问题等让 **jsLe** 想进一步折腾，并应用到工作中。
 
 因此，小伙伴应该根据自己实际去扩展补充属于自己的知识点。
 
@@ -1936,12 +1936,12 @@ V8 将内存分为两类：新生代内存空间和老生代内存空间。
 
 **回答**：
 
-每个人的目的都是不同的，不可能一篇文章写完所有知识点，同时有些知识点可能 **jsliang** 也不感兴趣、或者 **jsliang** 的层次不够，接触不到。
+每个人的目的都是不同的，不可能一篇文章写完所有知识点，同时有些知识点可能 **jsLe** 也不感兴趣、或者 **jsLe** 的层次不够，接触不到。
 
-并且每个面试官都可能有自己的一套面试题，如果 **jsliang** 能将所有的面试题都写出来，那还需要面试官做啥，大家都像考国家证书一样直接电脑考试吧~（我也期待！！！）
+并且每个面试官都可能有自己的一套面试题，如果 **jsLe** 能将所有的面试题都写出来，那还需要面试官做啥，大家都像考国家证书一样直接电脑考试吧~（我也期待！！！）
 
 > 如果小伙伴对文章存有疑问，想快速得到回复。  
-> 或者小伙伴对 jsliang 个人的前端文档库感兴趣，也想将自己的前端知识整理出来。  
+> 或者小伙伴对 jsLe 个人的前端文档库感兴趣，也想将自己的前端知识整理出来。  
 > 或者小伙伴对文章后续的更新感兴趣，掌握更多的面试技巧。  
 > 欢迎加 QQ 群一起探讨：`798961601`。
 
@@ -1949,7 +1949,7 @@ V8 将内存分为两类：新生代内存空间和老生代内存空间。
 
 > [返回目录](#catalog-chapter-fourteen)
 
-本文中的许多内容，也许小伙伴看了会觉得眼熟，因为它们大部分是 **jsliang** 参考大量文献，再经过刷选整理，最后根据自己理解后的一些阐述。
+本文中的许多内容，也许小伙伴看了会觉得眼熟，因为它们大部分是 **jsLe** 参考大量文献，再经过刷选整理，最后根据自己理解后的一些阐述。
 
 下面是个人觉得非常优秀的文章。
 
@@ -2034,7 +2034,7 @@ V8 将内存分为两类：新生代内存空间和老生代内存空间。
 
 查看了下掘金评论区，感谢各位大大的反馈，由于本人将于 **2019年4月1日** 入职，故将一些个人觉得不错的自己没有察觉的知识点记录下来，区分于原文，更为了猴年马月后的下一次跳槽进一步完善。
 
-> 意思就是，**jsliang** 这货懒得改原文了，小伙伴们看着这里进行知识点补充
+> 意思就是，**jsLe** 这货懒得改原文了，小伙伴们看着这里进行知识点补充
 
 * **闭包定义**：
 
@@ -2108,8 +2108,8 @@ Side Project 对应的中文就是副业、业余项目或者小项目。
 
 ![图](../../../public-repertory/img/z-small-wechat-public-address.jpg)
 
-**jsliang** 会每天在公众号发表一篇文章，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构等等。
+**jsLe** 会每天在公众号发表一篇文章，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构等等。
 
-扫描上方二维码，关注 **jsliang** 的公众号，让我们一起折腾！
+扫描上方二维码，关注 **jsLe** 的公众号，让我们一起折腾！
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

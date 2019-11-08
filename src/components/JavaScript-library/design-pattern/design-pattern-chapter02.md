@@ -1,7 +1,7 @@
 设计模式手册 - 2 - 面向对象
 ===
 
-> create by **jsliang** on **2018年8月24日08:00:00**  
+> create by **jsLe** on **2018年8月24日08:00:00**  
 > Recently revised in **2019-05-20 17:31:39**
 
 > 未完善版，待完善。
@@ -9,7 +9,7 @@
 ## 第二章 面向对象
 
 ### 2.1 概念
-&emsp;什么是面向对象？大概1000个人有1001个解释。在这里，jsliang也不去做着1001种解释了，你看着烦我写着累，所以咱用大俗话强行解释一通，懂的就过了，不懂的还不查百度/Chrome就是你的过了。  
+&emsp;什么是面向对象？大概1000个人有1001个解释。在这里，jsLe也不去做着1001种解释了，你看着烦我写着累，所以咱用大俗话强行解释一通，懂的就过了，不懂的还不查百度/Chrome就是你的过了。  
 &emsp;说起面向对象，我们就要结合面向过程来说了。下面我们有一个游戏场景：  
 
 &emsp;**游戏过程：**
@@ -59,15 +59,15 @@ class Person {
     }
 }
 
-let jsliang = new Person("jsliang");
-jsliang.eat();
+let jsLe = new Person("jsLe");
+jsLe.eat();
 
 let JavaScriptLiang = new Person("JavaScriptLiang");
 JavaScriptLiang.speak();
 ```
 
-&emsp;在这段代码中，我们使用了封装了个Person的类（如果小伙伴你仅知道ES5，没见过ES6的语法，建议先去看下ES6），然后，jsliang调用了eat这个吃饭的动作，JavaScriptLiang调用了speak这个说话的动作，下次run()、sleep()这些我们也可以放进去，从而实现每个人都可以有属于自己的一套动作。这就是面向对象写法。  
-&emsp;很好，经这么一说，jsliang算是勉强过了一遍什么是面向过程和面向对象了。如果小伙伴还是不懂，嗯，如果你没看到开篇那句话的话，那你还是不懂吧~先跟着jsliang撸一遍面向对象再说！
+&emsp;在这段代码中，我们使用了封装了个Person的类（如果小伙伴你仅知道ES5，没见过ES6的语法，建议先去看下ES6），然后，jsLe调用了eat这个吃饭的动作，JavaScriptLiang调用了speak这个说话的动作，下次run()、sleep()这些我们也可以放进去，从而实现每个人都可以有属于自己的一套动作。这就是面向对象写法。  
+&emsp;很好，经这么一说，jsLe算是勉强过了一遍什么是面向过程和面向对象了。如果小伙伴还是不懂，嗯，如果你没看到开篇那句话的话，那你还是不懂吧~先跟着jsLe撸一遍面向对象再说！
 
 <br>
 
@@ -100,12 +100,12 @@ class Student extends People {
     }
 }
 
-let jsliang = new People("jsliang", 23);
-jsliang.speak();
+let jsLe = new People("jsLe", 23);
+jsLe.speak();
 
 // 在这里，子类学生继承了父类人类，学生既可以调用study()类
 // 也可以调用父类中的eat()和speak()
-let studentLiang = new Student("jsliang", 18, "003");
+let studentLiang = new Student("jsLe", 18, "003");
 studentLiang.study();
 studentLiang.eat();
 ```
@@ -541,4 +541,4 @@ park.out(car3);
  
 <br>
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

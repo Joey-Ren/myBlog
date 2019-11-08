@@ -1,7 +1,7 @@
 日志
 ===
 
-> Create by **jsliang** on **2018-12-21 11:29:02**  
+> Create by **jsLe** on **2018-12-21 11:29:02**  
 > Recently revised in **2019-08-02 16:32:29**
 
 **没有什么是一篇文章理不清的。** 
@@ -49,12 +49,12 @@
 **接着**，然后因为 Node 讲了基础，那么肯定还需要部署，所以折腾写了篇关于 [Nginx 以及服务器部署](https://github.com/LiangJunrong/document-library/blob/master/other-library/Website/BuildStation/README.md) 的文章。
 * 【2018-10-20】临近 1024，碰巧看到微信群某位小伙伴搭了个静态文章页，于是来了心思，去折腾了下 [GitHub Pages](https://pages.github.com/) 和 [VuePress](http://caibaojian.com/vuepress/)，也没想那么多，搞定了自己的后直接将自己搭建过程写成了文章：[1024，快速打造你的文档库/静态博客](https://juejin.im/post/5bd0094e51882576be2d7e79)。于是，又火了一遍。
 * 【2018-9-17】以此同时，写了篇 [微信小程序 bug 集中营](https://github.com/LiangJunrong/document-library/blob/master/other-library/WeChatApplet/WeChatAppletBug.md)，一开始并没人看到，阅读量也不多，后来写得 bug 数量越来越多了，于是某天删了重新发表过，突然就破了个 200 点赞，写文章的兴趣就这么上来了。
-* 【2018-9-17】 **jsliang** 在掘金上发表了人生的第一篇文章：[pug模板引擎](https://juejin.im/post/5ba395f06fb9a05d035bd636)，然而因为没什么人用这个引擎，所以阅读量只有可怜的 90，点赞数只有 1。当然，你知道的，点赞数为 1 是因为我自己点的。
+* 【2018-9-17】 **jsLe** 在掘金上发表了人生的第一篇文章：[pug模板引擎](https://juejin.im/post/5ba395f06fb9a05d035bd636)，然而因为没什么人用这个引擎，所以阅读量只有可怜的 90，点赞数只有 1。当然，你知道的，点赞数为 1 是因为我自己点的。
 * 【2018-8-21】文档库没成立以前，**jslaing** 是写在 `doc` 上的，例如 Webpack 的学习，Nginx 的折腾……
 
 ---
 
-> **jsliang** 广告推送：  
+> **jsLe** 广告推送：  
 > 也许小伙伴想了解下云服务器  
 > 或者小伙伴想买一台云服务器  
 > 或者小伙伴需要续费云服务器  
@@ -63,4 +63,4 @@
 [![图](../../../public-repertory/img/z-small-seek-ali-3.jpg)](https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=w7hismrh)
 [![图](../../../public-repertory/img/z-small-seek-tencent-2.jpg)](https://cloud.tencent.com/redirect.php?redirect=1014&cps_key=49f647c99fce1a9f0b4e1eeb1be484c9&from=console)
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

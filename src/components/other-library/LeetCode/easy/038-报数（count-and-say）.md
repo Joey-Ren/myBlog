@@ -1,7 +1,7 @@
 038 - 报数（count-and-say）
 ===
 
-> Create by **jsliang** on **2019-06-10 13:58:42**  
+> Create by **jsLe** on **2019-06-10 13:58:42**  
 > Recently revised in **2019-06-10 15:06:56**
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
@@ -67,7 +67,7 @@
 
 > [返回目录](#chapter-one)
 
-小伙伴可以先自己在本地尝试解题，再回来看看 **jsliang** 讲解下使用 JavaScript 的解题思路。
+小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 讲解下使用 JavaScript 的解题思路。
 
 ### <a name="chapter-three-one" id="chapter-three-one">3.1 解法 - 暴力破解</a>
 
@@ -162,7 +162,7 @@ var countAndSay = function(n) {
 
 * **解题思路**：
 
-这是 **jsliang** 看到最炫的解题方法了，帅得嘛就不谈了，总共 30 种情况，直接上暴力破解，省时省力。
+这是 **jsLe** 看到最炫的解题方法了，帅得嘛就不谈了，总共 30 种情况，直接上暴力破解，省时省力。
 
 ### <a name="chapter-three-two" id="chapter-three-two">3.2 解法 - 递归调用</a>
 
@@ -213,7 +213,7 @@ var countAndSay = function(n) {
 
 * **解题思路**：
 
-**首先**，如果你看懂了 **jsliang** 在前言中写的 **题意解读**，并且有点递归的知识，那么这道题的解法你基本就懂了，看了一眼上面的代码就通了。
+**首先**，如果你看懂了 **jsLe** 在前言中写的 **题意解读**，并且有点递归的知识，那么这道题的解法你基本就懂了，看了一眼上面的代码就通了。
 
 **然后**，如果你不懂，OK，咱们讲讲：
 
@@ -227,8 +227,8 @@ var countAndSay = function(n) {
 
 ![图](../../../public-repertory/img/z-small-wechat-public-address.jpg)
 
-**jsliang** 会每天更新一道 LeetCode 题解，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构。
+**jsLe** 会每天更新一道 LeetCode 题解，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构。
 
-扫描上方二维码，关注 **jsliang** 的公众号，让我们一起折腾！
+扫描上方二维码，关注 **jsLe** 的公众号，让我们一起折腾！
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

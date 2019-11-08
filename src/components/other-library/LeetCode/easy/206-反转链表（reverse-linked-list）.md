@@ -1,7 +1,7 @@
 206 - 反转链表（reverse-linked-list）
 ===
 
-> Create by **jsliang** on **2019-7-13 07:54:49**  
+> Create by **jsLe** on **2019-7-13 07:54:49**  
 > Recently revised in **2019-7-13 08:42:07**
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
@@ -43,7 +43,7 @@
 
 > [返回目录](#chapter-one)
 
-小伙伴可以先自己在本地尝试解题，再回来看看 **jsliang** 的解题思路。
+小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
 * **解题代码**：
 
@@ -112,7 +112,7 @@ let head = {
 
 **智商是硬伤，知识点也可能是**。
 
-经过这次解题，**jsliang** 将链表给标记上了，等到系统学习算法与数据结构的时候，链表是必须搞懂的点之一。
+经过这次解题，**jsLe** 将链表给标记上了，等到系统学习算法与数据结构的时候，链表是必须搞懂的点之一。
 
 **首先**，上面题解不是我写出来的，看的是评论区的题解，原代码是：
 
@@ -122,7 +122,7 @@ const reverseList = (head, q = null) => head !== null ? reverseList(head.next, {
 
 传说中的一行题解。
 
-**然后**，怕小伙伴们跟我一样懵逼，**jsliang** 进行了改编：
+**然后**，怕小伙伴们跟我一样懵逼，**jsLe** 进行了改编：
 
 ```js
 var reverseList = (head, q = null) => {
@@ -137,7 +137,7 @@ var reverseList = (head, q = null) => {
 }
 ```
 
-**最后**，为了方便小伙伴们理解，**jsliang** 将 `q` 的过程打印了出来：
+**最后**，为了方便小伙伴们理解，**jsLe** 将 `q` 的过程打印了出来：
 
 ```js
 null
@@ -183,7 +183,7 @@ var reverseList = function(head) {
   √ Your memory usage beats 70.6 % of javascript submissions (34.8 MB)
 ```
 
-感兴趣的小伙伴可以推演下迭代的思路，在此 **jsliang** 就不多滴滴啦~
+感兴趣的小伙伴可以推演下迭代的思路，在此 **jsLe** 就不多滴滴啦~
 
 ---
 
@@ -191,8 +191,8 @@ var reverseList = function(head) {
 
 ![图](../../../public-repertory/img/z-small-wechat-public-address.jpg)
 
-**jsliang** 会每天更新一道 LeetCode 题解，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构。
+**jsLe** 会每天更新一道 LeetCode 题解，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构。
 
-扫描上方二维码，关注 **jsliang** 的公众号，让我们一起折腾！
+扫描上方二维码，关注 **jsLe** 的公众号，让我们一起折腾！
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

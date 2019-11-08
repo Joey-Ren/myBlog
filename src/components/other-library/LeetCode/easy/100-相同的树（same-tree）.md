@@ -1,7 +1,7 @@
 100 - 相同的树（same-tree）
 ===
 
-> Create by **jsliang** on **2019-6-13 07:36:52**  
+> Create by **jsLe** on **2019-6-13 07:36:52**  
 > Recently revised in **2019-6-13 08:56:03**
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
@@ -65,7 +65,7 @@
 
 > [返回目录](#chapter-one)
 
-小伙伴可以先自己在本地尝试解题，再回来看看 **jsliang** 的解题思路。
+小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
 ```js
 var isSameTree = function(p, q) {
@@ -136,11 +136,11 @@ false
 
 > [返回目录](#chapter-one)
 
-**首先**，**jsliang** 和小伙伴们一样，都是首次接触二叉树，未免有点懵逼。
+**首先**，**jsLe** 和小伙伴们一样，都是首次接触二叉树，未免有点懵逼。
 
 > 前端大佬除外，懂二叉树的除外~
 
-**然后**，**jsliang** 进行了下打印，查看下为何如此解题：
+**然后**，**jsLe** 进行了下打印，查看下为何如此解题：
 
 ```js
 var isSameTree = function(p, q) {
@@ -176,7 +176,7 @@ var isSameTree = function(p, q) {
 false
 ```
 
-**最后**，看到这里，**jsliang** 感觉自己思路打开了大门，好像，二叉树的比较并不复杂嘛！（当然，仅限于比较，哈哈）
+**最后**，看到这里，**jsLe** 感觉自己思路打开了大门，好像，二叉树的比较并不复杂嘛！（当然，仅限于比较，哈哈）
 
 可以看到的是，我们通过递归，让树节点不断前行，就好比递归到 `p` 的最后一个节点 `right: { val: 1, left: null, right: null }`，这时候，我们通过 
 
@@ -199,13 +199,13 @@ let serialize = function(root) {
 
 **不折腾的前端，和咸鱼有什么区别**
 
-**jsliang** 每次解 LeetCode，都会先自己尝试破解，Submit 通过后，会查看下 LeetCode 社区其他小伙伴的破解思路，最后再看别人的代码，以此作为比较，吸取大神们的经验。
+**jsLe** 每次解 LeetCode，都会先自己尝试破解，Submit 通过后，会查看下 LeetCode 社区其他小伙伴的破解思路，最后再看别人的代码，以此作为比较，吸取大神们的经验。
 
 这次，由于第一次解树的题目，所以抱着虚心的心态，前往观摩，还真碰到了个不错的讲解：
 
 * [写树算法的套路框架](https://leetcode-cn.com/problems/same-tree/solution/xie-shu-suan-fa-de-tao-lu-kuang-jia-by-wei-lai-bu-/)
 
-> 由于原文采用 C++ 的编程风格，**jsliang** 引入的时候自动转换成 JavaScript。
+> 由于原文采用 C++ 的编程风格，**jsLe** 引入的时候自动转换成 JavaScript。
 
 以下是其内容：
 
@@ -262,7 +262,7 @@ let isSameTree = function(root1, root2) {
 
 ---
 
-大佬的解题套路如上，**jsliang** 觉得貌似有点道理，于是给记录下来，如果下次再碰到树，还能引用套路，无疑是件可喜的事！
+大佬的解题套路如上，**jsLe** 觉得貌似有点道理，于是给记录下来，如果下次再碰到树，还能引用套路，无疑是件可喜的事！
 
 ---
 
@@ -270,8 +270,8 @@ let isSameTree = function(root1, root2) {
 
 ![图](../../../public-repertory/img/z-small-wechat-public-address.jpg)
 
-**jsliang** 会每天更新一道 LeetCode 题解，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构。
+**jsLe** 会每天更新一道 LeetCode 题解，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构。
 
-扫描上方二维码，关注 **jsliang** 的公众号，让我们一起折腾！
+扫描上方二维码，关注 **jsLe** 的公众号，让我们一起折腾！
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

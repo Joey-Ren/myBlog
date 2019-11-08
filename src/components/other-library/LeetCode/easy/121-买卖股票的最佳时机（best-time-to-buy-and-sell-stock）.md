@@ -1,7 +1,7 @@
 121 - 买卖股票的最佳时机（best-time-to-buy-and-sell-stock）
 ===
 
-> Create by **jsliang** on **2019-7-1 08:37:50**  
+> Create by **jsLe** on **2019-7-1 08:37:50**  
 > Recently revised in **2019-7-1 09:15:08**
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
@@ -49,7 +49,7 @@
 
 > [返回目录](#chapter-one)
 
-小伙伴可以先自己在本地尝试解题，再回来看看 **jsliang** 的解题思路。
+小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
 ### <a name="chapter-three-one" id="chapter-three-one">3.1 解法 - 暴力破解</a>
 
@@ -90,7 +90,7 @@ var maxProfit = function(prices) {
 
 **暴力一时爽，一直暴力一直爽**
 
-在一开始看到这道题的时候，**jsliang** 还小楞了一会，这题目有何意义？
+在一开始看到这道题的时候，**jsLe** 还小楞了一会，这题目有何意义？
 
 股市是跌宕起伏的，谁都不知道买入的那一刻是不是最低时刻，卖出的那一刻是最高时刻。
 
@@ -208,7 +208,7 @@ var maxProfit = function(prices) {
 
 **唯有菜鸡，才会正视别人的强大**
 
-**jsliang** 作为个菜鸡，就很喜欢膜拜大佬题解：https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/solution/yi-ge-fang-fa-tuan-mie-6-dao-gu-piao-wen-ti-by-l-3/
+**jsLe** 作为个菜鸡，就很喜欢膜拜大佬题解：https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/solution/yi-ge-fang-fa-tuan-mie-6-dao-gu-piao-wen-ti-by-l-3/
 
 学习别人的思想，是件非常有意义的事情，毕竟智商就摆在那里，唯有从别人思想中获取到最大价值，你才能升华自己。
 
@@ -218,8 +218,8 @@ var maxProfit = function(prices) {
 
 ![图](../../../public-repertory/img/z-small-wechat-public-address.jpg)
 
-**jsliang** 会每天更新一道 LeetCode 题解，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构。
+**jsLe** 会每天更新一道 LeetCode 题解，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构。
 
-扫描上方二维码，关注 **jsliang** 的公众号，让我们一起折腾！
+扫描上方二维码，关注 **jsLe** 的公众号，让我们一起折腾！
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

@@ -1,7 +1,7 @@
 React Demo Two - TodoList 升级
 ===
 
-> create by **jsliang** on **2019-3-26 09:26:53**   
+> create by **jsLe** on **2019-3-26 09:26:53**   
 > Recently revised in **2019-05-31 15:18:52**
 
 **Hello 小伙伴们，如果觉得本文还不错，记得给个 **star** ， 小伙伴们的 **star** 是我持续更新的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
@@ -2222,7 +2222,7 @@ export default todoSaga;
 
 > 将 Simplify 改造成 TodoList 的方法可参考 [第三章 初始化项目](#chapter-three)、[第四章 使用 Ant Design](#chapter-four) 以及 [第五章 使用 Redux](#chapter-five)。
 
-下面 **jsliang** 贴出自己的初始化后的代码：
+下面 **jsLe** 贴出自己的初始化后的代码：
 
 > src/index.js
 
@@ -2541,7 +2541,7 @@ export default (state = defaultState, action) => {
 6. 将 `action` 派发到 reducer.js
 7. 判断传递过来的 `action.type` 是哪个，进行深拷贝，获取 `action.value` 的值，并返回 `newState`
 
-至此，我们就简单过了一遍 React-Redux 的使用，下面我们的 Button 按钮点击提交，以及点击 Item 项进行 TodoList 的 `list` 项删除功能，我们就不一一讲解了，感兴趣的小伙伴可以自行实现下，并通过下载 **jsliang** 的代码进行参照：
+至此，我们就简单过了一遍 React-Redux 的使用，下面我们的 Button 按钮点击提交，以及点击 Item 项进行 TodoList 的 `list` 项删除功能，我们就不一一讲解了，感兴趣的小伙伴可以自行实现下，并通过下载 **jsLe** 的代码进行参照：
 
 * [React 系列文章代码地址](https://github.com/LiangJunrong/React)
 
@@ -2560,11 +2560,11 @@ export default (state = defaultState, action) => {
 
 至此，我们就成功完结这篇文章，进入到 React 下个环节的升级进阶了。
 
-如果小伙伴们感觉 **jsliang** 写得不错，记得给个 【赞】 或者给 **jsliang** 的文档库点个 【star】，你们的 【赞】 或者 【star】 是我满满的动力，哈哈，React 系列下篇再见！
+如果小伙伴们感觉 **jsLe** 写得不错，记得给个 【赞】 或者给 **jsLe** 的文档库点个 【star】，你们的 【赞】 或者 【star】 是我满满的动力，哈哈，React 系列下篇再见！
 
 ---
 
-> **jsliang** 广告推送：  
+> **jsLe** 广告推送：  
 > 也许小伙伴想了解下云服务器  
 > 或者小伙伴想买一台云服务器  
 > 或者小伙伴需要续费云服务器  
@@ -2573,4 +2573,4 @@ export default (state = defaultState, action) => {
 [![图](../../public-repertory/img/z-small-seek-ali-3.jpg)](https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=w7hismrh)
 [![图](../../public-repertory/img/z-small-seek-tencent-2.jpg)](https://cloud.tencent.com/redirect.php?redirect=1014&cps_key=49f647c99fce1a9f0b4e1eeb1be484c9&from=console)
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

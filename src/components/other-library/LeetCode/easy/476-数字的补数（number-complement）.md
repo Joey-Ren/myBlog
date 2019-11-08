@@ -1,7 +1,7 @@
 476 - 数字的补数（number-complement）
 ===
 
-> Create by **jsliang** on **2019-10-25 09:17:22**  
+> Create by **jsLe** on **2019-10-25 09:17:22**  
 > Recently revised in **2019-10-25 17:20:04**
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
@@ -48,7 +48,7 @@
 
 > [返回目录](#chapter-one)
 
-小伙伴可以先自己在本地尝试解题，再回来看看 **jsliang** 的解题思路。
+小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
 * **LeetCode 给定函数体**：
 
@@ -164,10 +164,10 @@ const findComplement = (num) => {
 console.log(findComplement(5)); // 2
 ```
 
-兴许看到这么一大串代码，小伙伴是懵逼的，我是谁，我在哪，**jsliang** 写了啥垃圾玩意。
+兴许看到这么一大串代码，小伙伴是懵逼的，我是谁，我在哪，**jsLe** 写了啥垃圾玩意。
 
 1. 刚好在昨天（2019-10-25）看了数据结构的栈，然后了解了下十进制转二进制，然后就顺带用上去了。
-2. 在这步骤中，十进制转二进制，以及补位，**jsliang** 都写出来了，但是二进制转回十进制的时候，卡住了，一时间不知道怎么转回去。
+2. 在这步骤中，十进制转二进制，以及补位，**jsLe** 都写出来了，但是二进制转回十进制的时候，卡住了，一时间不知道怎么转回去。
 3. 最后用了网上的快速方法：`parseInt(str, 2)`。
 
 提交发现：
@@ -214,7 +214,7 @@ Accepted
 * Your memory usage beats 54.32 % of javascript submissions (33.6 MB)
 ```
 
-当然，**jsliang** 相信肯定有更好的解题答案，交由评论区的你们啦~
+当然，**jsLe** 相信肯定有更好的解题答案，交由评论区的你们啦~
 
 ---
 
@@ -236,10 +236,10 @@ console.log(findComplement(5)); // 2
 
 ![图](../../../public-repertory/img/z-index-small.png)
 
-**jsliang** 会每天更新一道 LeetCode 题解，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构。
+**jsLe** 会每天更新一道 LeetCode 题解，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构。
 
 **浪子神剑** 会每天更新面试题，以面试题为驱动来带动大家学习，坚持每天学习与思考，每天进步一点！
 
-扫描上方二维码，关注 **jsliang** 的公众号（左）和 **浪子神剑** 的公众号（右），让我们一起折腾！
+扫描上方二维码，关注 **jsLe** 的公众号（左）和 **浪子神剑** 的公众号（右），让我们一起折腾！
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

@@ -1,7 +1,7 @@
 401 - 二进制手表（binary-watch）
 ===
 
-> Create by **jsliang** on **2019-7-24 08:26:47**  
+> Create by **jsLe** on **2019-7-24 08:26:47**  
 > Recently revised in **2019-09-18 14:01:08**
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
@@ -57,7 +57,7 @@
 
 > [返回目录](#chapter-one)
 
-小伙伴可以先自己在本地尝试解题，再回来看看 **jsliang** 的解题思路。
+小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
 * **解题代码**：
 
@@ -242,7 +242,7 @@ Submit 尝试看看：
 
 最终将这三部分组合起来，就是我们的最终结果。
 
-**最后**，这里贴下 **jsliang** 不完善的思路，下次有空或者哪个小伙伴提到，我们再继续挑战吧~
+**最后**，这里贴下 **jsLe** 不完善的思路，下次有空或者哪个小伙伴提到，我们再继续挑战吧~
 
 ```js
 // 求和
@@ -373,7 +373,7 @@ var readBinaryWatch = function(num) {
   √ Your memory usage beats 38.89 % of javascript submissions (34.7 MB)
 ```
 
-至于详细题解，**jsliang** 就不多说啦，小伙伴们可以自行解析，毕竟 **jsliang** 折腾完前面也累了，感觉这道题跟 **困难** 难度一样~
+至于详细题解，**jsLe** 就不多说啦，小伙伴们可以自行解析，毕竟 **jsLe** 折腾完前面也累了，感觉这道题跟 **困难** 难度一样~
 
 ---
 
@@ -381,8 +381,8 @@ var readBinaryWatch = function(num) {
 
 ![图](../../../public-repertory/img/z-small-wechat-public-address.jpg)
 
-**jsliang** 会每天更新一道 LeetCode 题解，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构。
+**jsLe** 会每天更新一道 LeetCode 题解，从而帮助小伙伴们夯实原生 JS 基础，了解与学习算法与数据结构。
 
-扫描上方二维码，关注 **jsliang** 的公众号，让我们一起折腾！
+扫描上方二维码，关注 **jsLe** 的公众号，让我们一起折腾！
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

@@ -1,7 +1,7 @@
 Vue Router
 ===
 
-> Create by **jsliang** on **2018-11-8 13:39:39**  
+> Create by **jsLe** on **2018-11-8 13:39:39**  
 > Recently revised in **2019-05-31 14:13:54**
 
 **饮水思源：[Vue Router 官方文档](https://router.vuejs.org/zh/)**
@@ -132,7 +132,7 @@ Vue Router 是 Vue.js 官方的路由管理器。它和 Vue.js 的核心深度�
 
 那么，他们是怎么显示的呢？  
 
-我们在展示的页面后面敲上 `/login`，页面就会加载 `Login` 子组件。例如 **jsliang** 的就是 `http://127.0.0.1:8080/#/login`。  
+我们在展示的页面后面敲上 `/login`，页面就会加载 `Login` 子组件。例如 **jsLe** 的就是 `http://127.0.0.1:8080/#/login`。  
 
 此刻页面显示为：
 
@@ -424,7 +424,7 @@ Vue Router 是 Vue.js 官方的路由管理器。它和 Vue.js 的核心深度�
       template: `
         <div>
           <router-link :to="{ name: 'login', query: { id: 1 } }">登录</router-link>
-          <router-link :to="{ name: 'register', params:{ name: 'jsliang' } }">注册</router-link>
+          <router-link :to="{ name: 'register', params:{ name: 'jsLe' } }">注册</router-link>
           <router-view></router-view>
         </div>
       `
@@ -469,26 +469,26 @@ Vue Router 是 Vue.js 官方的路由管理器。它和 Vue.js 的核心深度�
 
 * params 传参：
 
-**首先**，在第 6 步的 `:to` 中，我们通过 `<router-link :to="{ name: 'register', params:{ name: 'jsliang' } }">注册</router-link>`，设置传参的值为 `name=jsliang`。  
+**首先**，在第 6 步的 `:to` 中，我们通过 `<router-link :to="{ name: 'register', params:{ name: 'jsLe' } }">注册</router-link>`，设置传参的值为 `name=jsLe`。  
 
 **接着**，在第 5 步中，给它的 `path` 预留个 `name` 的插槽：` path: '/myRegister/:name'`  
 
 **然后**，在第 3 步的 `Login` 组件中定义 `created`，打印出它的对象及其参数：
 
 ```
-{name: "register", meta: {…}, path: "/myRegister/jsliang", hash: "", query: {…}, …}
+{name: "register", meta: {…}, path: "/myRegister/jsLe", hash: "", query: {…}, …}
 
-{name: "jsliang"}
+{name: "jsLe"}
 ```
 
-**最后**，在页面中路径显示为：`http://127.0.0.1:8080/#/myRegister/jsliang`
+**最后**，在页面中路径显示为：`http://127.0.0.1:8080/#/myRegister/jsLe`
 
 当然，小伙伴可能会考虑到传多个参数：
 
-> query 传多个参数代码片段：`http://127.0.0.1:8080/#/myLogin?id=1&name=jsliang`
+> query 传多个参数代码片段：`http://127.0.0.1:8080/#/myLogin?id=1&name=jsLe`
 
 ```
-<router-link :to="{ name: 'login', query: { id: 1, name: 'jsliang' } }">登录</router-link>
+<router-link :to="{ name: 'login', query: { id: 1, name: 'jsLe' } }">登录</router-link>
 ```
 
 > params 传多个参数代码片段：`http://127.0.0.1:8080/#/myRegister/2/梁峻荣`
@@ -815,7 +815,7 @@ template: `
 
 ---
 
-> **jsliang** 广告推送：  
+> **jsLe** 广告推送：  
 > 也许小伙伴想了解下云服务器  
 > 或者小伙伴想买一台云服务器  
 > 或者小伙伴需要续费云服务器  
@@ -824,4 +824,4 @@ template: `
 [![图](../../public-repertory/img/z-small-seek-ali-3.jpg)](https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=w7hismrh)
 [![图](../../public-repertory/img/z-small-seek-tencent-2.jpg)](https://cloud.tencent.com/redirect.php?redirect=1014&cps_key=49f647c99fce1a9f0b4e1eeb1be484c9&from=console)
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsliang 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
