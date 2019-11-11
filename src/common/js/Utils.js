@@ -4,20 +4,20 @@ let nativeMax = Math.max // 原生最大值方法
 let nativeMin = Math.min // 原生最小值方法
 
 function debounce (func, wait, options) {
-  let lastArgs, // 上次调用参数
+  let lastArgs, // debounced 被调用后被赋值,表示至少调用 debounced一次
     lastThis, // 上次调用this
     maxWait, // 最大等待时间
-    result, // 返回结果
+    result, // return 的结果，可能一直为 undefined，没看到特别的作用
     timerId, // timerId
     lastCallTime // 上次调用debounced时间,即触发时间，不一定会调用func
 
   // 参数初始化
   let lastInvokeTime = 0 // 上次调用func时间，即成功执行时间
-  let leading = false // 超时之前
-  let maxing = false // 是否传入最大超时时间
-  let trailing = true // 超时之后
+  let leading = false // 是否第一次触发时立即执行
+  let maxing = false // 最大的等待时间，因为如果 debounce 的函数调用时间不满足条件，可能永远都无法触发，因此增加了这个配置，保证大于一段时间后一定能执行一次函数
+  let trailing = true // 函数在每个等待时延的结束被调用
 
-  // 基本的类型判断和处理
+  // 基本的类型判断和处理 如果传入的 func 不是函数，抛出一段优雅的报错提示语
   if (typeof func !== 'function') {
     throw new TypeError(FUNC_ERROR_TEXT)
   }
@@ -31,6 +31,9 @@ function debounce (func, wait, options) {
     trailing = 'trailing' in options ? !!options.trailing : trailing // 指定在超时的后沿调用。
   }
 
+  // 执行 用户传入的 func
+  // 重置 lastArgs，lastThis
+  // lastInvokeTime 在此时被赋值，记录上一次调用 func的时间
   function invokeFunc (time) {
     // 调用func，参数为当前时间
     const args = lastArgs // 调用参数
@@ -52,6 +55,9 @@ function debounce (func, wait, options) {
     return leading ? invokeFunc(time) : result // 如果leading为true，调用func,否则返回result
   }
 
+  // 计算还需要等待多久
+  // 没设置最大等待时间，结果为 wait - (当前时间 - 上一次触发(scroll) )  时间，也就是  wait - 已经等候时间
+  // 设置了最长等待时间，结果为 最长等待时间 和 按照wait 计算还需要等待时间 的最小值
   function remainingWait (time) {
     // 设置还需要等待的时间
     const timeSinceLastCall = time - lastCallTime // 距离上次debounced函数被调用的时间 距离上次触发的时间
@@ -80,6 +86,9 @@ function debounce (func, wait, options) {
     ) // 超过最大等待时间
   }
 
+  // 执行函数呢 还是继续设置定时器呢？ 防抖的核心
+  // 时间满足条件，执行
+  // 否则 重新设置定时器
   function timerExpired () {
     // 刷新timer
     const time = Date.now()
@@ -91,6 +100,10 @@ function debounce (func, wait, options) {
     timerId = setTimeout(timerExpired, remainingWait(time)) // 不调用则重置timerId
   }
 
+  // 执行用户传入的 func 之前的最后一道屏障  func os: 执行我一次能咋地，这么多屏障？
+  // 重置 定时器
+  // 执行 func
+  // 重置 lastArgs = lastThis 为 undefined
   function trailingEdge (time) {
     // 超时之后调用
     timerId = undefined
@@ -105,6 +118,8 @@ function debounce (func, wait, options) {
     return result
   }
 
+  // 取消防抖
+  //  重置所有变量  清除定时器
   function cancel () {
     // 取消执行
     if (timerId !== undefined) {
@@ -114,13 +129,18 @@ function debounce (func, wait, options) {
     lastArgs = lastCallTime = lastThis = timerId = undefined
   }
 
+  // 定时器已存在，去执行
   function flush () {
     // 直接执行
     return timerId === undefined ? result : trailingEdge(Date.now())
   }
 
-  function pending () {}
+  //  是否正在 等待中
+  function pending () {
+    return timerId !== undefined
+  }
 
+  // 正房来了！这是入口函数，在这里运筹帷幄，根据敌情调配各个函数，势必骗过用户那个傻子，我没有一直在执行但你以为我一直在响应你哦
   function debounced (...args) {
     const time = Date.now()
     const isInvoking = shouldInvoke(time) // 是否满足时间条件
