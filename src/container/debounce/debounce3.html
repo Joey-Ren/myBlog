@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>先处理函数，再去判断</title>
+</head>
+<body>
+  <button id="debounce">点我防抖！</button>
+  <!---
+    1、接收是否优先执行函数的参数
+    2、接收防抖时间动态配置
+  --->
+  <script>
+    // 定义变量
+    let FUNC_ERROR_TEXT = 'Expected a function' // 优雅的报错提醒
+    let leading = false // 是否第一次触发时立即执行
+
+    window.onload = function() {
+      var myDebounce = document.getElementById("debounce");
+      myDebounce.addEventListener("click", debounce(sayDebounce, 1500, {'leading': true}));
+    }
+
+    function debounce(func, time, options) {
+      // 判断当前传输函数的准确性
+      if (typeof func !== 'function') {
+        throw new TypeError(FUNC_ERROR_TEXT)
+      }
+      // 判断当前接收的的参数是否为object对象
+      if (typeof options === 'object') {
+        // 对配置的一些初始化
+        leading = !!options.leading // 指定在超时的前沿调用。
+      }
+      let timeout = null;
+      return function() {
+        timeout && clearTimeout(timeout);
+        (leading && !timeout) && func.apply(this, arguments)
+        timeout = setTimeout(() => {
+          leading && (timeout = null)
+          !leading && func.apply(this, arguments)
+        }, time)
+      }
+    }
+
+    function sayDebounce() {
+      console.log("防抖成功！");
+    }
+  </script>
+</body>
+</html>

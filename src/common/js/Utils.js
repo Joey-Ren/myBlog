@@ -45,6 +45,9 @@ function debounce (func, wait, options) {
     return result
   }
 
+  //  防抖开始时执行的操作
+  //  lastInvokeTime 在此时被赋值，记录上一次调用 func的时间
+  //  设置了立即执行func，则执行func， 否则设置定时器
   function leadingEdge (time) {
     // 超时之前调用
     // Reset any `maxWait` timer.
