@@ -30,7 +30,7 @@
       // 判断当前接收的的参数是否为object对象
       if (typeof options === 'object') {
         // 对配置的一些初始化
-        leading = !!options.leading // 指定在超时的前沿调用。
+        leading = !!options.leading // 指定当前函数是否立即执行
       }
       let timeout = null;
       return function() {

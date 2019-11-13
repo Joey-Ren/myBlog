@@ -176,6 +176,31 @@ function debounce (func, wait, options) {
   debounced.pending = pending
   return debounced
 }
+
+// 简易版防抖函数
+
+function simpleDebounce (func, time, options) {
+  let leading = false // 是否第一次触发时立即执行
+  // 判断当前传输函数的准确性
+  if (typeof func !== 'function') {
+    throw new TypeError(FUNC_ERROR_TEXT)
+  }
+  // 判断当前接收的的参数是否为object对象
+  if (typeof options === 'object') {
+    // 对配置的一些初始化
+    leading = !!options.leading // 指定当前函数是否立即执行
+  }
+  let timeout = null
+  return function () {
+    timeout && clearTimeout(timeout);
+    (leading && !timeout) && func.apply(this, arguments)
+    timeout = setTimeout(() => {
+      leading && (timeout = null)
+      !leading && func.apply(this, arguments)
+    }, time)
+  }
+}
 export default {
-  debounce
+  debounce,
+  simpleDebounce
 }

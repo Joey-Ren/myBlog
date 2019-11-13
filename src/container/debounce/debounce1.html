@@ -15,7 +15,7 @@
     window.onload = function() {
       // 1、获取这个按钮，并绑定事件
       var myDebounce = document.getElementById("debounce");
-      myDebounce.addEventListener("click", debounce(sayDebounce, 5000));
+      myDebounce.addEventListener("click", debounce(sayDebounce, 1000));
     }
 
     // 2、防抖功能函数，接受传参
