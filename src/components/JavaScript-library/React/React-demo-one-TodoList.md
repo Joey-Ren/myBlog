@@ -616,7 +616,6 @@ import React, { Component, Fragment } from 'react'
 import './style.css'
 
 // ... 省略中间代码
-
 ;<ul>
   {this.state.list.map((item, index) => {
     return (

@@ -197,7 +197,6 @@ import {
 
 ```js
 import { BrowserRouter } from 'react-router-dom'
-
 ;<BrowserRouter
   basename={optionalString}
   forceRefresh={optionalBool}
@@ -278,7 +277,6 @@ const supportsHistory = 'pushState' in window.history
 
 ```js
 import { HashRouter } from 'react-router-dom'
-
 ;<HashRouter>
   <App />
 </HashRouter>

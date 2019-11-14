@@ -3812,8 +3812,7 @@ class LeftList extends Component {
             </li>
             ·<li>
               <Link to="benyuezuire">本月最热</Link>
-            </li>·
-            <li>
+            </li>·<li>
               <Link to="lishizuire">历史最热</Link>
             </li>
           </ul>
