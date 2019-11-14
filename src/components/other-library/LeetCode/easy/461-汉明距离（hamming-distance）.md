@@ -1,5 +1,4 @@
-461 - 汉明距离（hamming-distance）
-===
+# 461 - 汉明距离（hamming-distance）
 
 > Create by **jsLe** on **2019-10-23 09:47:04**  
 > Recently revised in **2019-10-23 11:44:45**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题即测试](#chapter-three) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题即测试](#chapter-three)   |
 | <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 LeetCode Submit](#chapter-four) |
-| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 解题思路](#chapter-five) |
+| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 解题思路](#chapter-five)        |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：位运算
-* **题目地址**：https://leetcode-cn.com/problems/hamming-distance/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：位运算
+- **题目地址**：https://leetcode-cn.com/problems/hamming-distance/
+- **题目内容**：
 
 ```
 两个整数之间的汉明距离指的是这两个数字对应二进制位不同的位置的数目。
@@ -62,18 +61,18 @@
  * @return {number}
  */
 const hammingDistance = (x, y) => {
-  let cnt = 0;
+  let cnt = 0
   while (x != 0 || y != 0) {
     if ((x & 1) != (y & 1)) {
-      cnt++;
+      cnt++
     }
-    x >>= 1;
-    y >>= 1;
+    x >>= 1
+    y >>= 1
   }
-  return cnt;
-};
+  return cnt
+}
 
-console.log(hammingDistance(1, 4));
+console.log(hammingDistance(1, 4))
 ```
 
 `node index.js` 返回：
@@ -96,7 +95,7 @@ Your memory usage beats 53.01 % of javascript submissions (33.7 MB)
 
 > [返回目录](#chapter-one)
 
-无法解释，因为 **jsLe** 也不太了解位运算！/(ㄒoㄒ)/~~
+无法解释，因为 **jsLe** 也不太了解位运算！/(ㄒ o ㄒ)/~~
 
 ---
 

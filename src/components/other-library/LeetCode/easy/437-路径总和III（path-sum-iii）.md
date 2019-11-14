@@ -1,5 +1,4 @@
-437 - 路径总和III（path-sum-iii）
-===
+# 437 - 路径总和 III（path-sum-iii）
 
 > Create by **jsLe** on **2019-07-29 11:25:06**  
 > Recently revised in **2019-09-18 14:06:27**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - 双重递归](#chapter-three-one) |
-| &emsp;[3.2 解法 - 单次递归](#chapter-three-two) |
+| &emsp;[3.1 解法 - 双重递归](#chapter-three-one)                                          |
+| &emsp;[3.2 解法 - 单次递归](#chapter-three-two)                                          |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：树
-* **题目地址**：https://leetcode-cn.com/problems/path-sum-iii/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：树
+- **题目地址**：https://leetcode-cn.com/problems/path-sum-iii/
+- **题目内容**：
 
 ```
 给定一个二叉树，它的每个结点都存放着一个整数值。
@@ -63,36 +62,36 @@ root = [10,5,-3,3,2,null,11,3,-2,null,1], sum = 8
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 const pathSum = (root, sum) => {
-  let count = 0;
+  let count = 0
   const ergodic = (root, num) => {
     if (!root) {
-      return;
+      return
     }
-    num -= root.val;
+    num -= root.val
     if (num === 0) {
-      count++;
+      count++
     }
-    ergodic(root.left, num);
-    ergodic(root.right, num);
+    ergodic(root.left, num)
+    ergodic(root.right, num)
   }
   const dfs = (root, num) => {
     if (!root) {
-      return;
+      return
     }
-    ergodic(root, num);
-    dfs(root.left, num);
-    dfs(root.right, num);
+    ergodic(root, num)
+    dfs(root.left, num)
+    dfs(root.right, num)
   }
-  dfs(root, sum);
-  return count;
-};
+  dfs(root, sum)
+  return count
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 > `root`：
 
@@ -104,18 +103,18 @@ const root = {
     left: {
       val: 3,
       left: { val: 3, left: null, right: null },
-      right: { val: -2, left: null, right: null },
+      right: { val: -2, left: null, right: null }
     },
     right: {
       val: 2,
       left: null,
-      right: { val: 1, left: null, right: null },
-    },
+      right: { val: 1, left: null, right: null }
+    }
   },
   right: {
     val: -3,
     left: null,
-    right: { val: 11, left: null, right: null },
+    right: { val: 11, left: null, right: null }
   }
 }
 ```
@@ -123,7 +122,7 @@ const root = {
 > `sum`：
 
 ```js
-const sum = 8;
+const sum = 8
 ```
 
 > `return`：
@@ -132,7 +131,7 @@ const sum = 8;
 3
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -141,18 +140,18 @@ const sum = 8;
   ✔ Your memory usage beats 12.5 % of javascript submissions (37.3 MB)
 ```
 
-* **解题思路**：
+- **解题思路**：
 
 **首先**，这道题可以理解为较接近中等难度的题，如果没做出来不要焦虑。
 
 **然后**，咱回顾下树的广度遍历原则：
 
 ```js
-const ergodic = (root) => {
+const ergodic = root => {
   if (!root) {
-    return '!#';
+    return '!#'
   }
-  return '!' + root.val + ergodic(root.left) + ergodic(root.right);
+  return '!' + root.val + ergodic(root.left) + ergodic(root.right)
 }
 ```
 
@@ -168,18 +167,18 @@ const root = {
     left: {
       val: 3,
       left: { val: 3, left: null, right: null },
-      right: { val: -2, left: null, right: null },
+      right: { val: -2, left: null, right: null }
     },
     right: {
       val: 2,
       left: null,
-      right: { val: 1, left: null, right: null },
-    },
+      right: { val: 1, left: null, right: null }
+    }
   },
   right: {
     val: -3,
     left: null,
-    right: { val: 11, left: null, right: null },
+    right: { val: 11, left: null, right: null }
   }
 }
 ```
@@ -202,102 +201,88 @@ const root = {
 
 ```js
 const pathSum = (root, sum) => {
-  let count = 0;
+  let count = 0
   const ergodic = (root, num) => {
     if (!root) {
-      return;
+      return
     }
-    num -= root.val;
-    console.log(num);
+    num -= root.val
+    console.log(num)
     if (num === 0) {
-      count++;
+      count++
     }
-    ergodic(root.left, num);
-    ergodic(root.right, num);
+    ergodic(root.left, num)
+    ergodic(root.right, num)
   }
   const dfs = (root, num) => {
     if (!root) {
-      return;
+      return
     }
-    console.log(root);
-    ergodic(root, num);
-    dfs(root.left, num);
-    dfs(root.right, num);
+    console.log(root)
+    ergodic(root, num)
+    dfs(root.left, num)
+    dfs(root.right, num)
   }
-  dfs(root, sum);
-  return count;
-};
+  dfs(root, sum)
+  return count
+}
 ```
 
 看好 `console.log()` 的位置了，因为我们会打印出来证明下我们的结论：
 
 ```js
-------
-{ val: 10,
-  left:
-   { val: 5,
-     left: { val: 3, left: [Object], right: [Object] },
-     right: { val: 2, left: null, right: [Object] } },
-  right:
-   { val: -3,
-     left: null,
-     right: { val: 11, left: null, right: null } } }
--2
--7
--10
--13
--8
--9
--10
-1
--10
-------
-{ val: 5,
-  left:
-   { val: 3,
-     left: { val: 3, left: null, right: null },
-     right: { val: -2, left: null, right: null } },
-  right:
-   { val: 2,
-     left: null,
-     right: { val: 1, left: null, right: null } } }
+------{
+  val: 10,
+  left: {
+    val: 5,
+    left: { val: 3, left: [Object], right: [Object] },
+    right: { val: 2, left: null, right: [Object] }
+  },
+  right: { val: -3, left: null, right: { val: 11, left: null, right: null } }
+} -
+  2 -
+  7 -
+  10 -
+  13 -
+  8 -
+  9 -
+  10
+1 - 10
+------{
+  val: 5,
+  left: {
+    val: 3,
+    left: { val: 3, left: null, right: null },
+    right: { val: -2, left: null, right: null }
+  },
+  right: { val: 2, left: null, right: { val: 1, left: null, right: null } }
+}
 3
-0
--3
+0 - 3
 2
 1
 0
-------
-{ val: 3,
+------{
+  val: 3,
   left: { val: 3, left: null, right: null },
-  right: { val: -2, left: null, right: null } }
+  right: { val: -2, left: null, right: null }
+}
 5
 2
 7
-------
-{ val: 3, left: null, right: null }
+------{ val: 3, left: null, right: null }
 5
-------
-{ val: -2, left: null, right: null }
+------{ val: -2, left: null, right: null }
 10
-------
-{ val: 2,
-  left: null,
-  right: { val: 1, left: null, right: null } }
+------{ val: 2, left: null, right: { val: 1, left: null, right: null } }
 6
 5
-------
-{ val: 1, left: null, right: null }
+------{ val: 1, left: null, right: null }
 7
-------
-{ val: -3,
-  left: null,
-  right: { val: 11, left: null, right: null } }
+------{ val: -3, left: null, right: { val: 11, left: null, right: null } }
 11
 0
-------
-{ val: 11, left: null, right: null }
--3
+------{ val: 11, left: null, right: null } - 3
 3
 ```
 
@@ -311,44 +296,43 @@ const pathSum = (root, sum) => {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
-var pathSum = function (root, sum) {
+var pathSum = function(root, sum) {
   if (!root) {
-    return 0;
+    return 0
   }
-  let count = 0;
-  let stack = [];
-  let dfs = function (root, cur) {
+  let count = 0
+  let stack = []
+  let dfs = function(root, cur) {
     // 当前路径和等于从根节点到此节点的 val 和
-    let curSum = cur + root.val;
+    let curSum = cur + root.val
     // 遍历栈，子路径和 = 根到此节点的路径和 - 根到父节点的路径和
     if (curSum === sum) {
-      count++;
+      count++
     }
     for (let i = 0; i < stack.length; i++) {
-      if (curSum - stack[i] === sum)
-        count++;
+      if (curSum - stack[i] === sum) count++
     }
     // 当前路径和入栈备用
-    stack.push(curSum);
+    stack.push(curSum)
     // 用完了就弹出
     if (root.left) {
-      dfs(root.left, cur + root.val);
-      stack.pop();
+      dfs(root.left, cur + root.val)
+      stack.pop()
     }
     if (root.right) {
-      dfs(root.right, cur + root.val);
-      stack.pop();
+      dfs(root.right, cur + root.val)
+      stack.pop()
     }
   }
-  dfs(root, 0);
-  return count;
-};
+  dfs(root, 0)
+  return count
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 > `root`：
 
@@ -360,18 +344,18 @@ const root = {
     left: {
       val: 3,
       left: { val: 3, left: null, right: null },
-      right: { val: -2, left: null, right: null },
+      right: { val: -2, left: null, right: null }
     },
     right: {
       val: 2,
       left: null,
-      right: { val: 1, left: null, right: null },
-    },
+      right: { val: 1, left: null, right: null }
+    }
   },
   right: {
     val: -3,
     left: null,
-    right: { val: 11, left: null, right: null },
+    right: { val: 11, left: null, right: null }
   }
 }
 ```
@@ -379,7 +363,7 @@ const root = {
 > `sum`：
 
 ```js
-const sum = 8;
+const sum = 8
 ```
 
 > `return`：
@@ -388,7 +372,7 @@ const sum = 8;
 3
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -397,12 +381,12 @@ const sum = 8;
   ✔ Your memory usage beats 6.25 % of javascript submissions (38 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `push()`：`push()` 方法将一个或多个元素添加到数组的末尾，并返回该数组的新长度。[`push()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/push.md)
 2. `pop()`：`pop()` 方法从数组中删除最后一个元素，并返回该元素的值。此方法更改数组的长度。[`pop()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/pop.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **更好的帮助形式是授之以渔**。
 

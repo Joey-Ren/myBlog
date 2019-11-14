@@ -1,5 +1,4 @@
-136 - 只出现一次的数字（single-number）
-===
+# 136 - 只出现一次的数字（single-number）
 
 > Create by **jsLe** on **2019-07-02 18:54:59**  
 > Recently revised in **2019-09-18 10:40:45**
@@ -8,23 +7,23 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - 最菜解法](#chapter-three-one) |
-| &emsp;[3.2 解法 - 双指针](#chapter-three-two) |
-| &emsp;[3.3 解法 - 玄学异或](#chapter-three-three) |
+| &emsp;[3.1 解法 - 最菜解法](#chapter-three-one)                                          |
+| &emsp;[3.2 解法 - 双指针](#chapter-three-two)                                            |
+| &emsp;[3.3 解法 - 玄学异或](#chapter-three-three)                                        |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：位运算、哈希表
-* **题目地址**：https://leetcode-cn.com/problems/single-number/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：位运算、哈希表
+- **题目地址**：https://leetcode-cn.com/problems/single-number/
+- **题目内容**：
 
 ```
 给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。
@@ -52,31 +51,31 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var singleNumber = function(nums) {
-  while(nums.length > 1) {
+  while (nums.length > 1) {
     for (let i = 1; i < nums.length; i++) {
       if (nums[i] === nums[0]) {
-        nums.splice(i, 1);
-        nums.splice(0, 1);
-        break;
+        nums.splice(i, 1)
+        nums.splice(0, 1)
+        break
       } else if (i === nums.length - 1 && nums[i] !== nums[0]) {
-        return nums[0];
+        return nums[0]
       }
     }
   }
-  return nums[0];
-};
+  return nums[0]
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums`：`[4,1,2,1,2]`
 2. `return`：`4`
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -85,11 +84,11 @@ var singleNumber = function(nums) {
   ✔ Your memory usage beats 15.97 % of javascript submissions (37.7 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `splice()`：`splice()` 方法通过删除或替换现有元素或者原地添加新的元素来修改数组,并以数组形式返回被修改的内容。此方法会改变原数组。[`splice()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/splice.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **最菜思路，LeetCode 第 34 题破新低！**
 
@@ -101,11 +100,11 @@ var singleNumber = function(nums) {
 
 ```js
 if (nums[i] === nums[0]) {
-  nums.splice(i, 1);
-  nums.splice(0, 1);
-  break;
+  nums.splice(i, 1)
+  nums.splice(0, 1)
+  break
 } else if (i === nums.length - 1 && nums[i] !== nums[0]) {
-  return nums[0];
+  return nums[0]
 }
 ```
 
@@ -117,27 +116,27 @@ if (nums[i] === nums[0]) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var singleNumber = function(nums) {
-  nums.sort();
+  nums.sort()
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] === nums[i + 1]) {
-      i++;
+      i++
     } else {
-      return nums[i];
+      return nums[i]
     }
   }
-};
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums`：`[4,1,2,1,2]`
 2. `return`：`4`
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -146,11 +145,11 @@ var singleNumber = function(nums) {
   ✔ Your memory usage beats 37.98 % of javascript submissions (36.3 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `sort()`：排序，保持返回数组的数字为顺序排列。[`sort()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/sort.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **百尺竿头，更进一步！**
 
@@ -164,24 +163,24 @@ var singleNumber = function(nums) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var singleNumber = function(nums) {
-  let res = 0;
+  let res = 0
   for (let i = 0; i < nums.length; i++) {
-    res ^= nums[i];
+    res ^= nums[i]
   }
-  return res;
-};
+  return res
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums`：`[4,1,2,1,2]`
 2. `return`：`4`
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 √ Accepted
@@ -190,7 +189,7 @@ var singleNumber = function(nums) {
   √ Your memory usage beats 73.15 % of javascript submissions (35.3 MB)
 ```
 
-* **解题思路**：
+- **解题思路**：
 
 **最后这个题解不做讲解，请小伙伴们自行思考。**
 

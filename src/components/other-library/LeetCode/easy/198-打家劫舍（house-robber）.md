@@ -1,5 +1,4 @@
-198 - 打家劫舍（house-robber）
-===
+# 198 - 打家劫舍（house-robber）
 
 > Create by **jsLe** on **2019-07-08 19:12:26**  
 > Recently revised in **2019-7-8 22:06:01**
@@ -8,24 +7,24 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 进一步思考](#chapter-seven) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six)           |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 进一步思考](#chapter-seven)   |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：动态规划
-* **题目地址**：https://leetcode-cn.com/problems/house-robber/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：动态规划
+- **题目地址**：https://leetcode-cn.com/problems/house-robber/
+- **题目内容**：
 
 ```
 你是一个专业的小偷，计划偷窃沿街的房屋。每间房内都藏有一定的现金，影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统，如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警。
@@ -51,21 +50,20 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
-var rob = function (nums) {
-  let len = nums.length;
-  if (len == 0)
-    return 0;
-  let dp = [];
-  dp[0] = 0;
-  dp[1] = nums[0];
+var rob = function(nums) {
+  let len = nums.length
+  if (len == 0) return 0
+  let dp = []
+  dp[0] = 0
+  dp[1] = nums[0]
   for (let i = 2; i <= len; i++) {
-    dp[i] = Math.max(dp[i - 1], dp[i - 2] + nums[i - 1]);
+    dp[i] = Math.max(dp[i - 1], dp[i - 2] + nums[i - 1])
   }
-  return dp[len];
-};
+  return dp[len]
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
@@ -94,8 +92,8 @@ var rob = function (nums) {
 
 **然后**，**jsLe** 复述下动态规划的知识点：
 
-* 动态规划方程：`dp[n] = MAX(dp[n-1], dp[n-2] + num)`
-* 本体变形：`Math.max(dp[i - 1], dp[i - 2] + nums[i - 1])`
+- 动态规划方程：`dp[n] = MAX(dp[n-1], dp[n-2] + num)`
+- 本体变形：`Math.max(dp[i - 1], dp[i - 2] + nums[i - 1])`
 
 很好，结合题意来讲解下这个什么意思：
 
@@ -112,10 +110,7 @@ var rob = function (nums) {
 > [2,12,9,1,3]
 
 ```js
-[ 0, 2, 12 ]
-[ 0, 2, 12, 12 ]
-[ 0, 2, 12, 12, 13 ]
-[ 0, 2, 12, 12, 13, 15 ]
+;[0, 2, 12][(0, 2, 12, 12)][(0, 2, 12, 12, 13)][(0, 2, 12, 12, 13, 15)]
 ```
 
 **最后**，我们将动态规划得出的结果返回出去即可。

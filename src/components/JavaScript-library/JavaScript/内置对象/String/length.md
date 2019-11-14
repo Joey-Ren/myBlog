@@ -1,23 +1,22 @@
-属性 - length
-===
+# 属性 - length
 
 > Create by **jsLe** on **2019-09-11 10:18:07**  
 > Recently revised in **2019-09-11 10:18:11**
 
-* **原文**：[MDN - length](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length)
+- **原文**：[MDN - length](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length)
 
-* **功能**：`length` 属性表示一个字符串的长度。
+- **功能**：`length` 属性表示一个字符串的长度。
 
-* **语法**：`str.length`
+- **语法**：`str.length`
 
-* **返回值**：字符串的长度
+- **返回值**：字符串的长度
 
-* **代码**：
+- **代码**：
 
 ```js
-let str = 'jsLe';
-str.length; // 7
-str[str.length - 1]; // 'g'
+let str = 'jsLe'
+str.length // 7
+str[str.length - 1] // 'g'
 ```
 
 ---

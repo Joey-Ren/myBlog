@@ -1,5 +1,4 @@
-404 - 左叶子之和（sum-of-left-leaves）
-===
+# 404 - 左叶子之和（sum-of-left-leaves）
 
 > Create by **jsLe** on **2019-7-25 08:17:01**  
 > Recently revised in **2019-7-25 08:53:31**
@@ -8,24 +7,24 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 进一步思考](#chapter-seven) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six)           |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 进一步思考](#chapter-seven)   |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：树
-* **题目地址**：https://leetcode-cn.com/problems/sum-of-left-leaves/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：树
+- **题目地址**：https://leetcode-cn.com/problems/sum-of-left-leaves/
+- **题目内容**：
 
 ```
 计算给定二叉树的所有左叶子之和。
@@ -47,30 +46,30 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
-const sumOfLeftLeaves = (root) => {
-  let sum = 0;
-  const ergodic = (root) => {
+const sumOfLeftLeaves = root => {
+  let sum = 0
+  const ergodic = root => {
     if (!root) {
-      return;
+      return
     }
     if (root.left && !root.left.left && !root.left.right) {
-      sum += root.left.val;
+      sum += root.left.val
     }
-    return ergodic(root.right) + ergodic(root.left);
+    return ergodic(root.right) + ergodic(root.left)
   }
-  ergodic(root);
-  return sum;
-};
+  ergodic(root)
+  return sum
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
 
 > [返回目录](#chapter-one)
 
-* `root`：
+- `root`：
 
 ```js
 const root = {
@@ -79,12 +78,12 @@ const root = {
   right: {
     val: 20,
     left: { val: 15, left: null, right: null },
-    right: { val: 7, left: null, right: null },
-  },
-};
+    right: { val: 7, left: null, right: null }
+  }
+}
 ```
 
-* `return`：
+- `return`：
 
 ```js
 24
@@ -110,29 +109,29 @@ const root = {
 ```js
 const ergodic = function(root) {
   if (!root) {
-    return '!#';
+    return '!#'
   }
-  return '!' + root.val + ergodic(root.left) + ergodic(root.right);
+  return '!' + root.val + ergodic(root.left) + ergodic(root.right)
 }
 ```
 
 **然后**，咱尝试一下破解：
 
 ```js
-const sumOfLeftLeaves = (root) => {
-  let sum = 0;
-  const ergodic = (root) => {
+const sumOfLeftLeaves = root => {
+  let sum = 0
+  const ergodic = root => {
     if (!root) {
-      return;
+      return
     }
     if (root.left) {
-      sum += root.left.val;
+      sum += root.left.val
     }
-    return ergodic(root.right) + ergodic(root.left);
+    return ergodic(root.right) + ergodic(root.left)
   }
-  ergodic(root);
-  return sum;
-};
+  ergodic(root)
+  return sum
+}
 ```
 
 Submit 提交后提示：
@@ -156,29 +155,29 @@ const root = {
   left: {
     val: 2,
     left: { val: 4, left: null, right: null },
-    right: { val: 5, left: null, right: null },
+    right: { val: 5, left: null, right: null }
   },
-  right: { val: 3, left: null, right: null },
-};
+  right: { val: 3, left: null, right: null }
+}
 ```
 
 OK，那么我们优化下代码再提交尝试：
 
 ```js
-const sumOfLeftLeaves = (root) => {
-  let sum = 0;
-  const ergodic = (root) => {
+const sumOfLeftLeaves = root => {
+  let sum = 0
+  const ergodic = root => {
     if (!root) {
-      return;
+      return
     }
     if (root.left && !root.left.left && !root.left.right) {
-      sum += root.left.val;
+      sum += root.left.val
     }
-    return ergodic(root.right) + ergodic(root.left);
+    return ergodic(root.right) + ergodic(root.left)
   }
-  ergodic(root);
-  return sum;
-};
+  ergodic(root)
+  return sum
+}
 ```
 
 Submit 提交结果：
@@ -195,13 +194,13 @@ Submit 提交结果：
 ```js
 const sumOfLeftLeaves = (root, left) => {
   if (!root) {
-    return 0;
+    return 0
   }
   if (!root.left && !root.right && left) {
-    return root.val;
+    return root.val
   }
-  return sumOfLeftLeaves(root.left, true) + sumOfLeftLeaves(root.right);
-};
+  return sumOfLeftLeaves(root.left, true) + sumOfLeftLeaves(root.right)
+}
 ```
 
 ## <a name="chapter-seven" id="chapter-seven">七 进一步思考</a>

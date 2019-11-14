@@ -1,5 +1,4 @@
-107 - 二叉树的层次遍历II（binary-tree-level-order-traversal-ii）
-===
+# 107 - 二叉树的层次遍历 II（binary-tree-level-order-traversal-ii）
 
 > Create by **jsLe** on **2019-06-14 17:56:48**  
 > Recently revised in **2019-6-14 22:19:59**
@@ -8,23 +7,23 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six)           |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：树、广度优先搜索
-* **题目地址**：https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：树、广度优先搜索
+- **题目地址**：https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/
+- **题目内容**：
 
 ```
 给定一个二叉树，返回其节点值自底向上的层次遍历。 （即按从叶子节点所在层到根节点所在的层，逐层从左向右遍历）
@@ -52,55 +51,55 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var levelOrderBottom = function(root) {
   if (!root) {
-    return [];
+    return []
   }
-  let result = [];
+  let result = []
   let ergodic = function(root, depth) {
     if (!root) {
-      return;
+      return
     }
     if (root.val != null) {
       if (!result[depth]) {
-        result[depth] = [];
+        result[depth] = []
       }
-      result[depth] = [root.val, ...result[depth]];
-      depth += 1;
-      ergodic(root.right, depth);
-      ergodic(root.left, depth);
+      result[depth] = [root.val, ...result[depth]]
+      depth += 1
+      ergodic(root.right, depth)
+      ergodic(root.left, depth)
     }
-  };
-  ergodic(root, 0);
-  return result.reverse();
-};
+  }
+  ergodic(root, 0)
+  return result.reverse()
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
 
 > [返回目录](#chapter-one)
 
-* 参数 `root`：
+- 参数 `root`：
 
 ```js
 let root = {
   val: 3,
-  left: { val: 9, left: null, right: null, },
+  left: { val: 9, left: null, right: null },
   right: {
     val: 20,
     left: { val: 15, left: null, right: null },
-    right: { val: 7, left: null, right: null },
-  },
-};
+    right: { val: 7, left: null, right: null }
+  }
+}
 ```
 
-* 返回值 `return`：
+- 返回值 `return`：
 
 ```js
-[ [ 15, 7 ], [ 9, 20 ], [ 3 ] ]
+;[[15, 7], [9, 20], [3]]
 ```
 
 ## <a name="chapter-five" id="chapter-five">五 LeetCode Submit</a>
@@ -124,33 +123,33 @@ let root = {
 
 ```js
 if (!root) {
-  return [];
+  return []
 }
 ```
 
 **然后**，我们设置 `result` 来返回结果。
 
 ```js
-let result = [];
+let result = []
 ```
 
 **接着**，我们开始递归之旅：
 
-* 步骤 1：如果节点没有下一个了，那么我们终止递归。
+- 步骤 1：如果节点没有下一个了，那么我们终止递归。
 
 ```js
 if (!root) {
-  return;
+  return
 }
 ```
 
-* 步骤 2：如果 `root.val` 存在值，那么我们设置 `result`：
+- 步骤 2：如果 `root.val` 存在值，那么我们设置 `result`：
 
 ```js
 if (!result[depth]) {
-  result[depth] = [];
+  result[depth] = []
 }
-result[depth] = [root.val, ...result[depth]];
+result[depth] = [root.val, ...result[depth]]
 ```
 
 小伙伴们可能比较在意这两段 JS 的作用，那么我们讲解下，先看树结构：
@@ -168,17 +167,13 @@ result[depth] = [root.val, ...result[depth]];
 当我们递归第二遍的时候，我们先遍历的是右节点，故 `result:[[3], [20]]`……以此递归：
 
 ```js
-[]
-[ [ 3 ] ]
-[ [ 3 ], [ 20 ] ]
-[ [ 3 ], [ 20 ], [ 7 ] ]
-[ [ 3 ], [ 20 ], [ 15, 7 ] ]
+;[][[3]][([3], [20])][([3], [20], [7])][([3], [20], [15, 7])]
 ```
 
 **最后**，我们通过 `return result.reverse()`，将数组反转并返回出去，从而得到倒序结果：
 
 ```js
-[ [ 15, 7 ], [ 9, 20 ], [ 3 ] ]
+;[[15, 7], [9, 20], [3]]
 ```
 
 我们就完成了对应的攻略。

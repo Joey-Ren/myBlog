@@ -1,29 +1,29 @@
-方法 - unshift()
-===
+# 方法 - unshift()
 
 > Create by **jsLe** on **2019-09-17 09:30:51**  
 > Recently revised in **2019-09-17 09:30:54**
 
-* **原文**：[MDN - unshift()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
+- **原文**：[MDN - unshift()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
 
-* **功能**：`unshift()` 方法将一个或多个元素添加到数组的开头，并返回该数组的新长度。
+- **功能**：`unshift()` 方法将一个或多个元素添加到数组的开头，并返回该数组的新长度。
 
-* **语法**：`arr.unshift(element1, ..., elementN)`
-  * `element1`：要插入的第一个元素
-  * `elementN`：要插入的第 N 个元素
+- **语法**：`arr.unshift(element1, ..., elementN)`
 
-* **返回值**：当一个对象调用该方法时，返回其 `length` 属性值。（ `unshift` 会改变原本数组）
+  - `element1`：要插入的第一个元素
+  - `elementN`：要插入的第 N 个元素
 
-* **代码**：
+- **返回值**：当一个对象调用该方法时，返回其 `length` 属性值。（ `unshift` 会改变原本数组）
+
+- **代码**：
 
 ```js
-let arrA = ['1'];
-arrA.unshift('0');
-console.log(arrA); // ['0', '1']
+let arrA = ['1']
+arrA.unshift('0')
+console.log(arrA) // ['0', '1']
 
-let arrB = [4, 5, 6];
-arrB.unshift(1, 2, 3);
-console.log(arrB); // [1, 2, 3, 4, 5, 6]
+let arrB = [4, 5, 6]
+arrB.unshift(1, 2, 3)
+console.log(arrB) // [1, 2, 3, 4, 5, 6]
 ```
 
 ---

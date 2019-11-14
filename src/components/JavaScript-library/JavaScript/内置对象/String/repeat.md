@@ -1,25 +1,25 @@
-方法 - repeat()
-===
+# 方法 - repeat()
 
 > Create by **jsLe** on **2019-09-16 11:41:51**  
 > Recently revised in **2019-09-16 11:44:07**
 
-* **原文**：[MDN - repeat()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/repeat)
+- **原文**：[MDN - repeat()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/repeat)
 
-* **功能**：`repeat()` 构造并返回一个新字符串，该字符串包含被连接在一起的指定数量的字符串的副本。
+- **功能**：`repeat()` 构造并返回一个新字符串，该字符串包含被连接在一起的指定数量的字符串的副本。
 
-* **语法**：`str.repeat(count)`
-  * `count`：表示在新构造的字符串中重复了多少遍原字符串。
+- **语法**：`str.repeat(count)`
 
-* **返回值**：包含指定字符串的指定数量副本的新字符串。
+  - `count`：表示在新构造的字符串中重复了多少遍原字符串。
 
-* **代码**：
+- **返回值**：包含指定字符串的指定数量副本的新字符串。
+
+- **代码**：
 
 ```js
-'jsLe'.repeat(0); // ''
-'jsLe'.repeat(1); // 'jsLe'
-'jsLe'.repeat(2.5); // 'jsLejsLe'
-'jsLe'.repeat(3); // jsLejsLejsLe
+'jsLe'.repeat(0) // ''
+'jsLe'.repeat(1) // 'jsLe'
+'jsLe'.repeat(2.5) // 'jsLejsLe'
+'jsLe'.repeat(3) // jsLejsLejsLe
 ```
 
 ---

@@ -1,5 +1,4 @@
-101 - 对称二叉树（symmetric-tree）
-===
+# 101 - 对称二叉树（symmetric-tree）
 
 > Create by **jsLe** on **2019-6-14 08:21:33**  
 > Recently revised in **2019-6-14 08:56:26**
@@ -8,23 +7,23 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six)           |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：树、深度优先搜索、广度优先搜索
-* **题目地址**：https://leetcode-cn.com/problems/symmetric-tree/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：树、深度优先搜索、广度优先搜索
+- **题目地址**：https://leetcode-cn.com/problems/symmetric-tree/
+- **题目内容**：
 
 ```
 给定一个二叉树，检查它是否是镜像对称的。
@@ -55,55 +54,55 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var isSymmetric = function(root) {
   if (!root) {
-    return true;
+    return true
   }
-  const leftTree = root.left;
-  const rightTree = root.right;
+  const leftTree = root.left
+  const rightTree = root.right
   // 思路，将左侧树或者右侧数反过来遍历
   let leftErgodic = function(root) {
     if (!root) {
       return '!#'
     }
-    return `${root.val}!${leftErgodic(root.left)}${leftErgodic(root.right)}`;
+    return `${root.val}!${leftErgodic(root.left)}${leftErgodic(root.right)}`
   }
   let rightErgodic = function(root) {
     if (!root) {
       return '!#'
     }
-    return `${root.val}!${rightErgodic(root.right)}${rightErgodic(root.left)}`;
+    return `${root.val}!${rightErgodic(root.right)}${rightErgodic(root.left)}`
   }
-  return leftErgodic(leftTree) === rightErgodic(rightTree);
-};
+  return leftErgodic(leftTree) === rightErgodic(rightTree)
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
 
 > [返回目录](#chapter-one)
 
-* 变量 `root`：
+- 变量 `root`：
 
 ```js
 let root = {
   val: 1,
   left: {
     val: 2,
-    left: { val: 3, left: null, right: null, },
-    right: { val: 4, left: null, right: null, },
+    left: { val: 3, left: null, right: null },
+    right: { val: 4, left: null, right: null }
   },
   right: {
     val: 2,
-    left: { val: 4, left: null, right: null, },
-    right: { val: 3, left: null, right: null, }
-  },
+    left: { val: 4, left: null, right: null },
+    right: { val: 3, left: null, right: null }
+  }
 }
 ```
 
-* 返回值 `return`：
+- 返回值 `return`：
 
 ```js
 true
@@ -130,8 +129,8 @@ true
 let traverse = function(root) {
   // root 需要做什么？在这做。
   // 其他的不用 root 操心，抛给框架
-  traverse(root.left);
-  traverse(root.right);
+  traverse(root.left)
+  traverse(root.right)
 }
 ```
 
@@ -140,19 +139,19 @@ let traverse = function(root) {
 **然后**，因为我们需要的是这个数是否是镜像二叉树（对称二叉树），那么我们就应该将左侧树从左到右遍历，将右侧数从右到左遍历，这样它们的顺序就会一致：
 
 ```js
-const leftTree = root.left;
-const rightTree = root.right;
+const leftTree = root.left
+const rightTree = root.right
 let leftErgodic = function(root) {
   if (!root) {
     return '!#'
   }
-  return `${root.val}!${leftErgodic(root.left)}${leftErgodic(root.right)}`;
+  return `${root.val}!${leftErgodic(root.left)}${leftErgodic(root.right)}`
 }
 let rightErgodic = function(root) {
   if (!root) {
     return '!#'
   }
-  return `${root.val}!${rightErgodic(root.right)}${rightErgodic(root.left)}`;
+  return `${root.val}!${rightErgodic(root.right)}${rightErgodic(root.left)}`
 }
 ```
 

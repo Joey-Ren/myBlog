@@ -1,5 +1,4 @@
-Vue Demo - 功成千骨
-===
+# Vue Demo - 功成千骨
 
 > Create by **jsLe** on **2019-1-2 08:46:46**  
 > Recently revised in **2019-05-31 13:54:39**
@@ -17,9 +16,9 @@ Vue Demo - 功成千骨
 
 ![图](../../public-repertory/img/js-vue-demo-one-1.gif)
 
-* **代码地址**：[功成千骨 - 代码地址](https://github.com/LiangJunrong/achievement-of-thousands-of-bones)
+- **代码地址**：[功成千骨 - 代码地址](https://github.com/LiangJunrong/achievement-of-thousands-of-bones)
 
-* **项目地址**：[功成千骨 - 线上地址](http://vuetodo.jsLe.top/)
+- **项目地址**：[功成千骨 - 线上地址](http://vuetodo.jsLe.top/)
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
 
@@ -62,7 +61,7 @@ Vue Demo - 功成千骨
 
 额(⊙o⊙)…
 
-好吧-_-||
+好吧-\_-||
 
 惨不忍睹，我们还是按照这形式，将 HTML 搭建出来，并用 JS 实现功能先吧，后期再填充 CSS 了。
 
@@ -83,121 +82,122 @@ Vue Demo - 功成千骨
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-  <title>功成千骨</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <title>功成千骨</title>
 
-  <!-- css 区 -->
-  <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/index.css">
-  <style>
-    .content-list {
-      display: flex;
-    }
-  </style>
-
-</head>
-<body>
-  <!-- html 区 -->
-  <div class="main-container" id="app">
-    <!-- 头部标题 -->
-    <div class="header">
-      <h3>功成千骨</h3>
-    </div>
-    <!-- 内容区 -->
-    <div class="content">
-      <!-- 输入区 -->
-      <div class="content-input-todo">
-        <input type="text" placeholder="第 n 个敌人" v-model="todo">
-        <button>进击</button>
+    <!-- css 区 -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <style>
+      .content-list {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- html 区 -->
+    <div class="main-container" id="app">
+      <!-- 头部标题 -->
+      <div class="header">
+        <h3>功成千骨</h3>
       </div>
-      <!-- 列表区 -->
-      <div class="content-list">
-        <!-- 未完成 -->
-        <div class="content-list-todo">
-          <h4>千军万马取敌首</h4>
-          <p>（待完成）</p>
-          <ul>
-            <li>
-              <input type="checkbox">
-              <span class="todo-title">敌军 1</span>
-              <span class="icon-recycle">×</span>
-            </li>
-            <li>
-              <input type="checkbox">
-              <span class="todo-title">敌军 2</span>
-              <span class="icon-recycle">>×</span>
-            </li>
-            <li>
-              <input type="checkbox">
-              <span class="todo-title">敌军 3</span>
-              <span class="icon-recycle">×</span>
-            </li>
-          </ul>
+      <!-- 内容区 -->
+      <div class="content">
+        <!-- 输入区 -->
+        <div class="content-input-todo">
+          <input type="text" placeholder="第 n 个敌人" v-model="todo" />
+          <button>进击</button>
         </div>
-        <!-- 已完成 -->
-        <div class="content-list-finish">
-          <h4>敌羞吾去脱他衣</h4>
-          <p>（已完成）</p>
-          <ul>
-            <li>
-              <input type="checkbox">
-              <span class="todo-title">亡军 1</span>
-              <span class="icon-recycle">×</span>
-            </li>
-            <li>
-              <input type="checkbox">
-              <span class="todo-title">亡军 2</span>
-              <span class="icon-recycle">×</span>
-            </li>
-            <li>
-              <input type="checkbox">
-              <span class="todo-title">亡军 3</span>
-              <span class="icon-recycle">×</span>
-            </li>
-          </ul>
+        <!-- 列表区 -->
+        <div class="content-list">
+          <!-- 未完成 -->
+          <div class="content-list-todo">
+            <h4>千军万马取敌首</h4>
+            <p>（待完成）</p>
+            <ul>
+              <li>
+                <input type="checkbox" />
+                <span class="todo-title">敌军 1</span>
+                <span class="icon-recycle">×</span>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <span class="todo-title">敌军 2</span>
+                <span class="icon-recycle">>×</span>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <span class="todo-title">敌军 3</span>
+                <span class="icon-recycle">×</span>
+              </li>
+            </ul>
+          </div>
+          <!-- 已完成 -->
+          <div class="content-list-finish">
+            <h4>敌羞吾去脱他衣</h4>
+            <p>（已完成）</p>
+            <ul>
+              <li>
+                <input type="checkbox" />
+                <span class="todo-title">亡军 1</span>
+                <span class="icon-recycle">×</span>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <span class="todo-title">亡军 2</span>
+                <span class="icon-recycle">×</span>
+              </li>
+              <li>
+                <input type="checkbox" />
+                <span class="todo-title">亡军 3</span>
+                <span class="icon-recycle">×</span>
+              </li>
+            </ul>
+          </div>
+          <!-- 回收站 -->
+          <div class="content-list-recycle">
+            <h4>溃不成军鸟兽散</h4>
+            <p>（回收站）</p>
+            <ul>
+              <li>
+                <span class="content-list-recycle-back">返回</span>
+                <span class="todo-title">逃军 1</span>
+                <span class="icon-delete">×</span>
+              </li>
+              <li>
+                <span class="content-list-recycle-back">返回</span>
+                <span class="todo-title">逃军 2</span>
+                <span class="icon-delete">×</span>
+              </li>
+              <li>
+                <span class="content-list-recycle-back">返回</span>
+                <span class="todo-title">逃军 3</span>
+                <span class="icon-delete">×</span>
+              </li>
+            </ul>
+          </div>
         </div>
-        <!-- 回收站 -->
-        <div class="content-list-recycle">
-          <h4>溃不成军鸟兽散</h4>
-          <p>（回收站）</p>
-          <ul>
-            <li>
-              <span class="content-list-recycle-back">返回</span>
-              <span class="todo-title">逃军 1</span>
-              <span class="icon-delete">×</span>
-            </li>
-            <li>
-              <span class="content-list-recycle-back">返回</span>
-              <span class="todo-title">逃军 2</span>
-              <span class="icon-delete">×</span>
-            </li>
-            <li>
-              <span class="content-list-recycle-back">返回</span>
-              <span class="todo-title">逃军 3</span>
-              <span class="icon-delete">×</span>
-            </li>
-          </ul>
-        </div>
+        <!--  -->
       </div>
-      <!--  -->
+      <!-- 底部信息 -->
+      <div class="footer">
+        <p>不折腾的前端</p>
+        <p>和咸鱼有什么区别</p>
+        <p>@2019 <a href="" target="_blank">jsLe 文档库</a></p>
+      </div>
     </div>
-    <!-- 底部信息 -->
-    <div class="footer">
-      <p>不折腾的前端</p>
-      <p>和咸鱼有什么区别</p>
-      <p>@2019 <a href="" target="_blank">jsLe 文档库</a></p>
-    </div>
-  </div>
 
-  <!-- js 区 -->
-  <script src="https://cdn.bootcss.com/vue/2.5.21/vue.js"></script>
-  <script src="./js/index.js"></script>
-
-</body>
+    <!-- js 区 -->
+    <script src="https://cdn.bootcss.com/vue/2.5.21/vue.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
 </html>
 ```
 
@@ -230,7 +230,7 @@ Vue Demo - 功成千骨
 <div class="content">
   <!-- 输入区 -->
   <div class="content-input-todo">
-    <input type="text" placeholder="第 n 个敌人" v-model="todo">
+    <input type="text" placeholder="第 n 个敌人" v-model="todo" />
     <button>进击</button>
   </div>
   <!-- 列表区 -->
@@ -241,7 +241,7 @@ Vue Demo - 功成千骨
       <p>（待完成）</p>
       <ul>
         <li v-for="todoItem in todoInfos" :key="todoItem.id">
-          <input type="checkbox" v-model="todoItem.isChecked">
+          <input type="checkbox" v-model="todoItem.isChecked" />
           <span class="todo-title" v-text="todoItem.todoTitle"></span>
           <span class="icon-recycle">x</span>
         </li>
@@ -253,7 +253,7 @@ Vue Demo - 功成千骨
       <p>（已完成）</p>
       <ul>
         <li v-for="finishItem in finishInfos" :key="finishItem.id">
-          <input type="checkbox" v-model="finishItem.isChecked">
+          <input type="checkbox" v-model="finishItem.isChecked" />
           <span class="todo-title" v-text="finishItem.todoTitle"></span>
           <span class="icon-recycle">x</span>
         </li>
@@ -281,60 +281,60 @@ Vue Demo - 功成千骨
 
 ```js
 var app = new Vue({
-  el: "#app",
+  el: '#app',
   data: {
     id: 1,
-    todo: "",
+    todo: '',
     todoInfos: [
       {
         id: 7,
         isChecked: false,
-        todoTitle: "敌军 1",
+        todoTitle: '敌军 1'
       },
       {
         id: 8,
         isChecked: false,
-        todoTitle: "敌军 2",
+        todoTitle: '敌军 2'
       },
       {
         id: 9,
         isChecked: false,
-        todoTitle: "敌军 3",
-      },
+        todoTitle: '敌军 3'
+      }
     ],
     finishInfos: [
       {
         id: 1,
         isChecked: true,
-        todoTitle: "亡军 1",
+        todoTitle: '亡军 1'
       },
       {
         id: 2,
         isChecked: true,
-        todoTitle: "亡军 2",
+        todoTitle: '亡军 2'
       },
       {
         id: 3,
         isChecked: true,
-        todoTitle: "亡军 3",
-      },
+        todoTitle: '亡军 3'
+      }
     ],
     recycleInfos: [
       {
         id: 4,
         isChecked: false,
-        todoTitle: "逃军 1",
+        todoTitle: '逃军 1'
       },
       {
         id: 5,
         isChecked: false,
-        todoTitle: "逃军 2",
+        todoTitle: '逃军 2'
       },
       {
         id: 6,
         isChecked: false,
-        todoTitle: "逃军 3",
-      },
+        todoTitle: '逃军 3'
+      }
     ]
   }
 })
@@ -354,32 +354,32 @@ var app = new Vue({
 
 ```js
 var app = new Vue({
-  el: "#app",
+  el: '#app',
   data: {
     id: 1,
-    todo: "",
+    todo: '',
     todoInfos: [
       {
         id: 7, // id 唯一且自增
-        isChecked: false,  // 未完成和放弃为 false，完成为 true
+        isChecked: false, // 未完成和放弃为 false，完成为 true
         isEdit: false, // 是否在编辑
-        todoTitle: "敌军 1",
-        state: 0, // 0 - 未完成，1 - 完成，2 - 放弃完成
+        todoTitle: '敌军 1',
+        state: 0 // 0 - 未完成，1 - 完成，2 - 放弃完成
       },
       {
         id: 8, // id 唯一且自增
         isChecked: false, // 未完成和放弃为 false，完成为 true
         isEdit: false, // 是否在编辑
-        todoTitle: "敌军 2", // todo 标题
-        state: 1, // 0 - 未完成，1 - 完成，2 - 放弃完成
+        todoTitle: '敌军 2', // todo 标题
+        state: 1 // 0 - 未完成，1 - 完成，2 - 放弃完成
       },
       {
         id: 9, // id 唯一且自增
         isChecked: false, // 未完成和放弃为 false，完成为 true
         isEdit: false, // 是否在编辑
-        todoTitle: "敌军 3", // todo 标题
-        state: 2, // 0 - 未完成，1 - 完成，2 - 放弃完成
-      },
+        todoTitle: '敌军 3', // todo 标题
+        state: 2 // 0 - 未完成，1 - 完成，2 - 放弃完成
+      }
     ]
   }
 })
@@ -394,7 +394,7 @@ var app = new Vue({
 <div class="content">
   <!-- 输入区 -->
   <div class="content-input-todo">
-    <input type="text" placeholder="第 n 个敌人" v-model="todo">
+    <input type="text" placeholder="第 n 个敌人" v-model="todo" />
     <button>进击</button>
   </div>
   <!-- 列表区 -->
@@ -404,9 +404,17 @@ var app = new Vue({
       <h4>千军万马取敌首</h4>
       <p>（待完成）</p>
       <ul>
-        <li v-for="todoItem in todoInfos" :key="todoItem.id" v-if="todoItem.state == 0">
-          <input type="checkbox" v-model="todoItem.isChecked">
-          <span class="todo-title" v-if="!todoItem.isEdit" v-text="todoItem.todoTitle"></span>
+        <li
+          v-for="todoItem in todoInfos"
+          :key="todoItem.id"
+          v-if="todoItem.state == 0"
+        >
+          <input type="checkbox" v-model="todoItem.isChecked" />
+          <span
+            class="todo-title"
+            v-if="!todoItem.isEdit"
+            v-text="todoItem.todoTitle"
+          ></span>
           <span class="icon-recycle">x</span>
         </li>
       </ul>
@@ -416,9 +424,17 @@ var app = new Vue({
       <h4>敌羞吾去脱他衣</h4>
       <p>（已完成）</p>
       <ul>
-        <li v-for="finishItem in todoInfos" :key="finishItem.id" v-if="finishItem.state == 1">
-          <input type="checkbox" v-model="finishItem.isChecked">
-          <span class="todo-title" v-if="!finishItem.isEdit" v-text="finishItem.todoTitle"></span>
+        <li
+          v-for="finishItem in todoInfos"
+          :key="finishItem.id"
+          v-if="finishItem.state == 1"
+        >
+          <input type="checkbox" v-model="finishItem.isChecked" />
+          <span
+            class="todo-title"
+            v-if="!finishItem.isEdit"
+            v-text="finishItem.todoTitle"
+          ></span>
           <span class="icon-recycle">x</span>
         </li>
       </ul>
@@ -428,9 +444,17 @@ var app = new Vue({
       <h4>溃不成军鸟兽散</h4>
       <p>（回收站）</p>
       <ul>
-        <li v-for="recycleItem in todoInfos" :key="recycleItem.id" v-if="recycleItem.state == 2">
+        <li
+          v-for="recycleItem in todoInfos"
+          :key="recycleItem.id"
+          v-if="recycleItem.state == 2"
+        >
           <span class="content-list-recycle-back">返回</span>
-          <span class="todo-title" v-if="!recycleItem.isEdit" v-text="recycleItem.todoTitle"></span>
+          <span
+            class="todo-title"
+            v-if="!recycleItem.isEdit"
+            v-text="recycleItem.todoTitle"
+          ></span>
           <span class="icon-delete">x</span>
         </li>
       </ul>
@@ -456,7 +480,12 @@ var app = new Vue({
 ```html
 <!-- 输入区 -->
 <div class="content-input-todo">
-  <input type="text" placeholder="第 n 个敌人" v-model="todo" @keyup.enter="addTodoItem">
+  <input
+    type="text"
+    placeholder="第 n 个敌人"
+    v-model="todo"
+    @keyup.enter="addTodoItem"
+  />
   <button @click="addTodoItem">进击</button>
 </div>
 ```
@@ -467,10 +496,10 @@ var app = new Vue({
 
 ```js
 var app = new Vue({
-  el: "#app",
+  el: '#app',
   data: {
     id: 1,
-    todo: "",
+    todo: '',
     todoInfos: [
       // 已不需要，注释掉
       // {
@@ -489,14 +518,14 @@ var app = new Vue({
         id: this.id, // id 唯一且自增
         isChecked: false, // 未完成和放弃为 false，完成为 true
         isEdit: false, // 是否在编辑
-        todoTitle: this.todo,  // todo 标题
-        state: 0, // 0 - 未完成，1 - 完成，2 - 放弃完成
+        todoTitle: this.todo, // todo 标题
+        state: 0 // 0 - 未完成，1 - 完成，2 - 放弃完成
       })
       // id 自增
-      this.id++;
+      this.id++
       // 清空输入框
-      this.todo = "";
-    },
+      this.todo = ''
+    }
   }
 })
 ```
@@ -515,7 +544,7 @@ var app = new Vue({
 | ------ | ------------------------------ |
 | 未完成 | `isChecked: false`、`state: 0` |
 | 已完成 | `isChecked: true`、`state: 1`  |
-| 回收站 | `state: 2` |
+| 回收站 | `state: 2`                     |
 
 在本章节，我们实现 **未完成** -> **已完成** 的转变，这里只需要修改下 HTML 代码即可：
 
@@ -527,9 +556,21 @@ var app = new Vue({
   <h4>千军万马取敌首</h4>
   <p>（待完成）</p>
   <ul>
-    <li v-for="todoItem in todoInfos" :key="todoItem.id" v-if="todoItem.state == 0">
-      <input type="checkbox" v-model="todoItem.isChecked" @change="todoItem.state = 1">
-      <span class="todo-title" v-if="!todoItem.isEdit" v-text="todoItem.todoTitle"></span>
+    <li
+      v-for="todoItem in todoInfos"
+      :key="todoItem.id"
+      v-if="todoItem.state == 0"
+    >
+      <input
+        type="checkbox"
+        v-model="todoItem.isChecked"
+        @change="todoItem.state = 1"
+      />
+      <span
+        class="todo-title"
+        v-if="!todoItem.isEdit"
+        v-text="todoItem.todoTitle"
+      ></span>
       <span class="icon-recycle">x</span>
     </li>
   </ul>
@@ -539,9 +580,21 @@ var app = new Vue({
   <h4>敌羞吾去脱他衣</h4>
   <p>（已完成）</p>
   <ul>
-    <li v-for="finishItem in todoInfos" :key="finishItem.id" v-if="finishItem.state == 1">
-      <input type="checkbox" v-model="finishItem.isChecked" @change="finishItem.state = 0">
-      <span class="todo-title" v-if="!finishItem.isEdit" v-text="finishItem.todoTitle"></span>
+    <li
+      v-for="finishItem in todoInfos"
+      :key="finishItem.id"
+      v-if="finishItem.state == 1"
+    >
+      <input
+        type="checkbox"
+        v-model="finishItem.isChecked"
+        @change="finishItem.state = 0"
+      />
+      <span
+        class="todo-title"
+        v-if="!finishItem.isEdit"
+        v-text="finishItem.todoTitle"
+      ></span>
       <span class="icon-recycle">x</span>
     </li>
   </ul>
@@ -570,10 +623,29 @@ OK，成功完成 **待完成** -> **已完成** 的转变。
     <h4>千军万马取敌首</h4>
     <p>（待完成）</p>
     <ul>
-      <li v-for="todoItem in todoInfos" :key="todoItem.id" v-if="todoItem.state == 0">
-        <input type="checkbox" v-model="todoItem.isChecked" @change="todoItem.state = 1">
-        <span class="todo-title" v-text="todoItem.todoTitle" v-if="!todoItem.isEdit" @click="todoItem.isEdit = true"></span>
-        <input v-if="todoItem.isEdit" @blur="todoItem.isEdit = false" @keyup.enter="todoItem.isEdit = false" type="text" v-model="todoItem.todoTitle">
+      <li
+        v-for="todoItem in todoInfos"
+        :key="todoItem.id"
+        v-if="todoItem.state == 0"
+      >
+        <input
+          type="checkbox"
+          v-model="todoItem.isChecked"
+          @change="todoItem.state = 1"
+        />
+        <span
+          class="todo-title"
+          v-text="todoItem.todoTitle"
+          v-if="!todoItem.isEdit"
+          @click="todoItem.isEdit = true"
+        ></span>
+        <input
+          v-if="todoItem.isEdit"
+          @blur="todoItem.isEdit = false"
+          @keyup.enter="todoItem.isEdit = false"
+          type="text"
+          v-model="todoItem.todoTitle"
+        />
         <span class="icon-recycle">x</span>
       </li>
     </ul>
@@ -583,10 +655,29 @@ OK，成功完成 **待完成** -> **已完成** 的转变。
     <h4>敌羞吾去脱他衣</h4>
     <p>（已完成）</p>
     <ul>
-      <li v-for="finishItem in todoInfos" :key="finishItem.id" v-if="finishItem.state == 1">
-        <input type="checkbox" v-model="finishItem.isChecked" @change="finishItem.state = 0">
-        <span class="todo-title" v-text="finishItem.todoTitle" v-if="!finishItem.isEdit" @click="finishItem.isEdit = true"></span>
-        <input v-if="finishItem.isEdit" @blur="finishItem.isEdit = false"  @keyup.enter="finishItem.isEdit = false" v-model="finishItem.todoTitle" type="text">
+      <li
+        v-for="finishItem in todoInfos"
+        :key="finishItem.id"
+        v-if="finishItem.state == 1"
+      >
+        <input
+          type="checkbox"
+          v-model="finishItem.isChecked"
+          @change="finishItem.state = 0"
+        />
+        <span
+          class="todo-title"
+          v-text="finishItem.todoTitle"
+          v-if="!finishItem.isEdit"
+          @click="finishItem.isEdit = true"
+        ></span>
+        <input
+          v-if="finishItem.isEdit"
+          @blur="finishItem.isEdit = false"
+          @keyup.enter="finishItem.isEdit = false"
+          v-model="finishItem.todoTitle"
+          type="text"
+        />
         <span class="icon-recycle">x</span>
       </li>
     </ul>
@@ -596,10 +687,25 @@ OK，成功完成 **待完成** -> **已完成** 的转变。
     <h4>溃不成军鸟兽散</h4>
     <p>（回收站）</p>
     <ul>
-      <li v-for="recycleItem in todoInfos" :key="recycleItem.id" v-if="recycleItem.state == 2">
+      <li
+        v-for="recycleItem in todoInfos"
+        :key="recycleItem.id"
+        v-if="recycleItem.state == 2"
+      >
         <span class="content-list-recycle-back">返回</span>
-        <span class="todo-title" v-text="recycleItem.todoTitle" v-if="!recycleItem.isEdit" @click="recycleItem.isEdit = true"></span>
-        <input v-if="recycleItem.isEdit" type="text" @blur="recycleItem.isEdit = false" @keyup.enter="recycleItem.isEdit = false" v-model="recycleItem.todoTitle">
+        <span
+          class="todo-title"
+          v-text="recycleItem.todoTitle"
+          v-if="!recycleItem.isEdit"
+          @click="recycleItem.isEdit = true"
+        ></span>
+        <input
+          v-if="recycleItem.isEdit"
+          type="text"
+          @blur="recycleItem.isEdit = false"
+          @keyup.enter="recycleItem.isEdit = false"
+          v-model="recycleItem.todoTitle"
+        />
         <span class="icon-delete">x</span>
       </li>
     </ul>
@@ -629,10 +735,29 @@ OK，成功完成 **待完成** -> **已完成** 的转变。
   <h4>千军万马取敌首</h4>
   <p>（待完成）</p>
   <ul>
-    <li v-for="todoItem in todoInfos" :key="todoItem.id" v-if="todoItem.state == 0">
-      <input type="checkbox" v-model="todoItem.isChecked" @change="todoItem.state = 1">
-      <span class="todo-title" v-text="todoItem.todoTitle" v-if="!todoItem.isEdit" @click="todoItem.isEdit = true"></span>
-      <input v-if="todoItem.isEdit" @blur="todoItem.isEdit = false" @keyup.enter="todoItem.isEdit = false" type="text" v-model="todoItem.todoTitle">
+    <li
+      v-for="todoItem in todoInfos"
+      :key="todoItem.id"
+      v-if="todoItem.state == 0"
+    >
+      <input
+        type="checkbox"
+        v-model="todoItem.isChecked"
+        @change="todoItem.state = 1"
+      />
+      <span
+        class="todo-title"
+        v-text="todoItem.todoTitle"
+        v-if="!todoItem.isEdit"
+        @click="todoItem.isEdit = true"
+      ></span>
+      <input
+        v-if="todoItem.isEdit"
+        @blur="todoItem.isEdit = false"
+        @keyup.enter="todoItem.isEdit = false"
+        type="text"
+        v-model="todoItem.todoTitle"
+      />
       <span class="icon-recycle" @click="todoItem.state = 2">x</span>
     </li>
   </ul>
@@ -642,10 +767,29 @@ OK，成功完成 **待完成** -> **已完成** 的转变。
   <h4>敌羞吾去脱他衣</h4>
   <p>（已完成）</p>
   <ul>
-    <li v-for="finishItem in todoInfos" :key="finishItem.id" v-if="finishItem.state == 1">
-      <input type="checkbox" v-model="finishItem.isChecked" @change="finishItem.state = 0">
-      <span class="todo-title" v-text="finishItem.todoTitle" v-if="!finishItem.isEdit" @click="finishItem.isEdit = true"></span>
-      <input v-if="finishItem.isEdit" @blur="finishItem.isEdit = false" @keyup.enter="finishItem.isEdit = false" v-model="finishItem.todoTitle" type="text">
+    <li
+      v-for="finishItem in todoInfos"
+      :key="finishItem.id"
+      v-if="finishItem.state == 1"
+    >
+      <input
+        type="checkbox"
+        v-model="finishItem.isChecked"
+        @change="finishItem.state = 0"
+      />
+      <span
+        class="todo-title"
+        v-text="finishItem.todoTitle"
+        v-if="!finishItem.isEdit"
+        @click="finishItem.isEdit = true"
+      ></span>
+      <input
+        v-if="finishItem.isEdit"
+        @blur="finishItem.isEdit = false"
+        @keyup.enter="finishItem.isEdit = false"
+        v-model="finishItem.todoTitle"
+        type="text"
+      />
       <span class="icon-recycle" @click="finishItem.state = 2">x</span>
     </li>
   </ul>
@@ -670,10 +814,29 @@ OK，成功完成 **待完成** -> **已完成** 的转变。
   <h4>溃不成军鸟兽散</h4>
   <p>（回收站）</p>
   <ul>
-    <li v-for="recycleItem in todoInfos" :key="recycleItem.id" v-if="recycleItem.state == 2">
-      <span class="content-list-recycle-back" @click="recycleItem.state = 0; recycleItem.isChecked = false">返回</span>
-      <span class="todo-title" v-text="recycleItem.todoTitle" v-if="!recycleItem.isEdit" @click="recycleItem.isEdit = true"></span>
-      <input v-if="recycleItem.isEdit" type="text" @blur="recycleItem.isEdit = false" @keyup.enter="recycleItem.isEdit = false" v-model="recycleItem.todoTitle">
+    <li
+      v-for="recycleItem in todoInfos"
+      :key="recycleItem.id"
+      v-if="recycleItem.state == 2"
+    >
+      <span
+        class="content-list-recycle-back"
+        @click="recycleItem.state = 0; recycleItem.isChecked = false"
+        >返回</span
+      >
+      <span
+        class="todo-title"
+        v-text="recycleItem.todoTitle"
+        v-if="!recycleItem.isEdit"
+        @click="recycleItem.isEdit = true"
+      ></span>
+      <input
+        v-if="recycleItem.isEdit"
+        type="text"
+        @blur="recycleItem.isEdit = false"
+        @keyup.enter="recycleItem.isEdit = false"
+        v-model="recycleItem.todoTitle"
+      />
       <span class="icon-delete" @click="deleteInfo(recycleItem)">x</span>
     </li>
   </ul>
@@ -767,48 +930,98 @@ th, td /* 表格元素 - table elements */ {
 }
 
 /** 设置默认字体 - setting the default font **/
-body, button, input, select, textarea {
+body,
+button,
+input,
+select,
+textarea {
   font: 18px/1.5 '黑体', Helvetica, sans-serif;
 }
-h1, h2, h3, h4, h5, h6, button, input, select, textarea { font-size: 100%; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
 
 /** 重置列表元素 - reset the list element **/
-ul, ol { list-style: none; }
+ul,
+ol {
+  list-style: none;
+}
 
 /** 重置文本格式元素 - reset the text format element **/
-a, a:hover { text-decoration: none; }
+a,
+a:hover {
+  text-decoration: none;
+}
 
 /** 重置表单元素 - reset the form element **/
-button { cursor: pointer; }
-input { font-size: 18px; outline: none; }
+button {
+  cursor: pointer;
+}
+input {
+  font-size: 18px;
+  outline: none;
+}
 
 /** 重置表格元素 - reset the table element **/
-table { border-collapse: collapse; border-spacing: 0; }
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
 /** 图片自适应 - image responsize **/
-img { border: 0; display: inline-block; width: 100%; max-width: 100%; height: auto; vertical-align: middle; }
+img {
+  border: 0;
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
 
 /* 
     * 默认box-sizing是content-box，该属性导致padding会撑大div，使用border-box可以解决该问题
     * set border-box for box-sizing when you use div, it solve the problem when you add padding and don't want to make the div width bigger
 */
-div, input { box-sizing: border-box; }
+div,
+input {
+  box-sizing: border-box;
+}
 
 /** 清除浮动 - clear float **/
-.jsLe-clear:after, .clear:after {
+.jsLe-clear:after,
+.clear:after {
   content: '\20';
   display: block;
   height: 0;
   clear: both;
 }
-.jsLe-clear, .clear {
+.jsLe-clear,
+.clear {
   *zoom: 1;
 }
 
 /** 设置input的placeholder - set input placeholder **/
-input::-webkit-input-placeholder { color: #919191; font-size: 16px } /* Webkit browsers */
-input::-moz-placeholder { color: #919191; font-size: 16px } /* Mozilla Firefox */
-input::-ms-input-placeholder { color: #919191; font-size: 16px } /* Internet Explorer */
+input::-webkit-input-placeholder {
+  color: #919191;
+  font-size: 16px;
+} /* Webkit browsers */
+input::-moz-placeholder {
+  color: #919191;
+  font-size: 16px;
+} /* Mozilla Firefox */
+input::-ms-input-placeholder {
+  color: #919191;
+  font-size: 16px;
+} /* Internet Explorer */
 ```
 
 ### <a name="chapter-six-two" id="chapter-six-two">6.2 偷天换日</a>
@@ -827,16 +1040,17 @@ input::-ms-input-placeholder { color: #919191; font-size: 16px } /* Internet Exp
 
 ```css
 /* 共用 */
-html, body {
+html,
+body {
   height: 100%;
 }
 body {
-  background: url("../img/background.jpg") no-repeat center;
+  background: url('../img/background.jpg') no-repeat center;
   background-size: 100% 100%;
 }
 
 /* 多项选项框 */
-input[type="checkbox"] {
+input[type='checkbox'] {
   width: 25px;
   height: 25px;
   background-color: #fff;
@@ -845,43 +1059,43 @@ input[type="checkbox"] {
   border-radius: 2px;
   outline: none;
 }
-input[type="checkbox"]:hover {
+input[type='checkbox']:hover {
   cursor: pointer;
 }
-input[type="checkbox"]:checked {
-  background: url("../img/icon-checked.png") no-repeat center;
+input[type='checkbox']:checked {
+  background: url('../img/icon-checked.png') no-repeat center;
   background-size: 100%;
 }
 
 /* 共用标题样式 */
 .todo-title {
   margin-top: 10px;
-  word-break: normal; 
-  width: 75%; 
-  display: block; 
+  word-break: normal;
+  width: 75%;
+  display: block;
   white-space: pre-wrap;
-  word-wrap: break-word ;
-  overflow: hidden ;
+  word-wrap: break-word;
+  overflow: hidden;
 }
 
 /* 图标样式 */
 .icon-recycle {
   width: 25px;
   height: 25px;
-  background: url("../img/icon-recycle.png") no-repeat center;
+  background: url('../img/icon-recycle.png') no-repeat center;
   background-size: 100%;
 }
 .icon-delete {
   width: 25px;
   height: 25px;
-  background: url("../img/icon-delete.png") no-repeat center;
+  background: url('../img/icon-delete.png') no-repeat center;
   background-size: 100%;
 }
 .content-list-recycle-back {
   display: block;
   width: 20px;
   height: 20px;
-  background: url("../img/icon-back.png") no-repeat center;
+  background: url('../img/icon-back.png') no-repeat center;
   background-size: 100%;
 }
 
@@ -897,7 +1111,7 @@ input[type="checkbox"]:checked {
 .header {
   width: 100%;
   height: 150px;
-  background: url("../img/title.png") no-repeat center;
+  background: url('../img/title.png') no-repeat center;
 }
 
 /* 内容区 */
@@ -920,7 +1134,7 @@ input[type="checkbox"]:checked {
   width: 100px;
   padding: 5px;
   border-radius: 20px;
-  background: #36AF9E;
+  background: #36af9e;
   color: #fff;
   outline: none;
 }
@@ -936,7 +1150,7 @@ input[type="checkbox"]:checked {
   border: 1px solid #ccc;
   padding: 30px;
   border: 15px solid transparent;
-  border-image: url("../img/border.png") 60 60 stretch;
+  border-image: url('../img/border.png') 60 60 stretch;
 }
 .content-list div ul {
   text-align: left;
@@ -951,10 +1165,10 @@ input[type="checkbox"]:checked {
 .content-list div ul li:hover {
   cursor: pointer;
 }
-.content-list div ul li input[type="checkbox"] {
+.content-list div ul li input[type='checkbox'] {
   margin-right: 10px;
 }
-.content-list div ul li input[type="text"] {
+.content-list div ul li input[type='text'] {
   outline: none;
   border: none;
   background: rgba(255, 255, 255, 0);
@@ -989,20 +1203,20 @@ input[type="checkbox"]:checked {
 
 下面将代码地址和项目地址贴出来，需要 **参考** 的小伙伴自行下载或者观看。
 
-* **代码地址**：[功成千骨 - 代码地址](https://github.com/LiangJunrong/achievement-of-thousands-of-bones)
+- **代码地址**：[功成千骨 - 代码地址](https://github.com/LiangJunrong/achievement-of-thousands-of-bones)
 
-* **项目地址**：[功成千骨 - 线上地址](http://vuetodo.jsLe.top/)
+- **项目地址**：[功成千骨 - 线上地址](http://vuetodo.jsLe.top/)
 
 当然，还没完！
 
 我们还可以折腾更多：
 
-* 使用 `ElementUI` 或者 `Bootstrap` 进行多端适配
-* 使用 `localStorage` 来进行本地版开发
-* 使用 `Node` 来进行数据多端使用
-* 使用 **可视化配置**，将 DOM 元素的 CSS 抽取成数据，让用户可以配置自己的 Todolist
-* 使用 `HTML5` 的 `manifest` 来开发 **离线存储**
-* ……
+- 使用 `ElementUI` 或者 `Bootstrap` 进行多端适配
+- 使用 `localStorage` 来进行本地版开发
+- 使用 `Node` 来进行数据多端使用
+- 使用 **可视化配置**，将 DOM 元素的 CSS 抽取成数据，让用户可以配置自己的 Todolist
+- 使用 `HTML5` 的 `manifest` 来开发 **离线存储**
+- ……
 
 那么，后面有机会折腾，咱再相会 Todolist ，打造升级版本的啦~
 

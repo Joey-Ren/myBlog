@@ -1,25 +1,25 @@
-方法 - padEnd()
-===
+# 方法 - padEnd()
 
 > Create by **jsLe** on **2019-09-16 11:37:07**  
 > Recently revised in **2019-09-16 11:38:07**
 
-* **原文**：[MDN - padEnd()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd)
+- **原文**：[MDN - padEnd()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd)
 
-* **功能**：`padEnd()` 方法会用一个字符串填充当前字符串（如果需要的话则重复填充），返回填充后达到指定长度的字符串。从当前字符串的末尾（右侧）开始填充。
+- **功能**：`padEnd()` 方法会用一个字符串填充当前字符串（如果需要的话则重复填充），返回填充后达到指定长度的字符串。从当前字符串的末尾（右侧）开始填充。
 
-* **语法**：`str.padEnd(targetLength, padString)`
-  * `targetLength`：当前字符串需要填充到的目标长度。如果这个数值小于当前字符串的长度，则返回当前字符串本身。
-  * `padString`：填充字符串。如果字符串太长，使填充后的字符串长度超过了目标长度，则只保留最左侧的部分，其他部分会被截断。
+- **语法**：`str.padEnd(targetLength, padString)`
 
-* **返回值**：在原字符串开头填充指定的填充字符串直到目标长度所形成的新字符串。
+  - `targetLength`：当前字符串需要填充到的目标长度。如果这个数值小于当前字符串的长度，则返回当前字符串本身。
+  - `padString`：填充字符串。如果字符串太长，使填充后的字符串长度超过了目标长度，则只保留最左侧的部分，其他部分会被截断。
 
-* **代码**：
+- **返回值**：在原字符串开头填充指定的填充字符串直到目标长度所形成的新字符串。
+
+- **代码**：
 
 ```js
-'jsLe'.padEnd(10); // 'jsLe   ' 共 10 长度
-'jsLe'.padEnd(10, 'a'); // 'jsLeaaa'
-'jsLe'.padEnd(20, 'JavaScriptLiang'); // jsLeJavaScriptLia
+'jsLe'.padEnd(10) // 'jsLe   ' 共 10 长度
+'jsLe'.padEnd(10, 'a') // 'jsLeaaa'
+'jsLe'.padEnd(20, 'JavaScriptLiang') // jsLeJavaScriptLia
 ```
 
 ---

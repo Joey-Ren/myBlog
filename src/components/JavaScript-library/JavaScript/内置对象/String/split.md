@@ -1,24 +1,24 @@
-方法 - split()
-===
+# 方法 - split()
 
 > Create by **jsLe** on **2019-09-16 14:28:16**  
 > Recently revised in **2019-09-16 14:31:05**
 
-* **原文**：[MDN - split()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split)
+- **原文**：[MDN - split()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split)
 
-* **功能**：`split()` 方法使用指定的分隔符字符串将一个 `String` 对象分割成字符串数组，以将字符串分隔为子字符串，以确定每个拆分的位置。 
+- **功能**：`split()` 方法使用指定的分隔符字符串将一个 `String` 对象分割成字符串数组，以将字符串分隔为子字符串，以确定每个拆分的位置。
 
-* **语法**：`str.split(separator, limit)`
-  * `separator`：指定表示每个拆分应发生的点的字符串。separator 可以是一个字符串或正则表达式。
-  * `limit`：一个整数，限定返回的分割片段数量。
+- **语法**：`str.split(separator, limit)`
 
-* **返回值**：返回源字符串以分隔符出现位置分隔而成的一个 `Array`。
+  - `separator`：指定表示每个拆分应发生的点的字符串。separator 可以是一个字符串或正则表达式。
+  - `limit`：一个整数，限定返回的分割片段数量。
 
-* **代码**：
+- **返回值**：返回源字符串以分隔符出现位置分隔而成的一个 `Array`。
+
+- **代码**：
 
 ```js
-'jsLe'.split(''); // ['j', 's', 'l', 'i', 'a', 'n', 'g']
-'jsLe'.split('', 2); // ['j', 's']
+'jsLe'.split('') // ['j', 's', 'l', 'i', 'a', 'n', 'g']
+'jsLe'.split('', 2) // ['j', 's']
 ```
 
 ---

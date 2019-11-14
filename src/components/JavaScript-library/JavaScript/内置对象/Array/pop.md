@@ -1,26 +1,26 @@
-方法 - pop()
-===
+# 方法 - pop()
 
 > Create by **jsLe** on **2019-09-17 09:31:29**  
 > Recently revised in **2019-09-17 09:31:32**
 
-* **原文**：[MDN - pop()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
+- **原文**：[MDN - pop()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
 
-* **功能**：`pop()` 方法从数组中删除最后一个元素，并返回该元素的值。此方法更改数组的长度。
+- **功能**：`pop()` 方法从数组中删除最后一个元素，并返回该元素的值。此方法更改数组的长度。
 
-* **语法**：
-  * `arr.pop()`：返回从数组中删除的元素
+- **语法**：
 
-* **返回值**：一个新数组，每个元素都是回调函数的结果。
+  - `arr.pop()`：返回从数组中删除的元素
 
-* **代码**：
+- **返回值**：一个新数组，每个元素都是回调函数的结果。
+
+- **代码**：
 
 ```js
-let arr = [1, 2, 3, 4];
-for(let i = 0, time = 1; i < arr.length; time++) {
-  console.log(`------\n第 ${time} 次遍历：`);
-  console.log(arr.pop());
-  console.log(arr);
+let arr = [1, 2, 3, 4]
+for (let i = 0, time = 1; i < arr.length; time++) {
+  console.log(`------\n第 ${time} 次遍历：`)
+  console.log(arr.pop())
+  console.log(arr)
 }
 
 /* Console：

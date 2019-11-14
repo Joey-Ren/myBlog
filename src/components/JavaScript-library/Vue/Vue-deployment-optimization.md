@@ -1,5 +1,4 @@
-Vue 部署优化
-===
+# Vue 部署优化
 
 > Create by **jsLe** on **2018-12-7 14:53:566**  
 > Recently revised in **2019-05-31 14:25:00**
@@ -8,7 +7,7 @@ Vue 部署优化
 
 ## 一 进行路由懒加载
 
-* [路由懒加载 - VueRouter 官网](https://router.vuejs.org/zh/guide/advanced/lazy-loading.html)
+- [路由懒加载 - VueRouter 官网](https://router.vuejs.org/zh/guide/advanced/lazy-loading.html)
 
 大致意思就是，将 `import PartOne from '@/components/PartOne'`
 
@@ -25,28 +24,28 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 // 路由懒加载
-const PartOne = () => import('@/components/PartOne');
+const PartOne = () => import('@/components/PartOne')
 
 export default new Router({
   routes: [
     {
       path: '/',
       components: {
-        PartOne: PartOne,
+        PartOne: PartOne
       }
     },
     {
       path: '/PartOne',
       name: 'PartOne',
       component: PartOne
-    },
+    }
   ]
 })
 ```
 
 ## 二 开启 Gzip
 
-* [Nginx 配置 Gzip](https://blog.csdn.net/liupeifeng3514/article/details/79018334)  
+- [Nginx 配置 Gzip](https://blog.csdn.net/liupeifeng3514/article/details/79018334)
 
 > PS：Nginx 需要在 conf/nginx.conf 文件中的 `http` 中设置。
 
@@ -96,7 +95,7 @@ http {
     #error_page  404              /404.html;
 
     # redirect server error pages to the static page /50x.html
-    # 
+    #
     error_page   500 502 503 504  /50x.html;
     location = /50x.html {
       root   html;
@@ -106,11 +105,11 @@ http {
 }
 ```
 
-* [Vue 开启 Gzip](https://www.jianshu.com/p/44ce0f66e800)
+- [Vue 开启 Gzip](https://www.jianshu.com/p/44ce0f66e800)
 
 **首先**，安装 `compression-webpack-plugin`：
 
-* `npm i compression-webpack-plugin -D`
+- `npm i compression-webpack-plugin -D`
 
 **然后**，修改配置代码：
 
@@ -137,7 +136,7 @@ productionGzipExtensions: ['js', 'css'],
 productionSourceMap: false,
 ```
 
-这个 `productionSourceMap` 有什么作用呢？其实就是项目打包后，我们的代码都是经过压缩加密的，如果运行时报错，输出的错误信息无法准确知道是哪里的代码出错了，而开启了 `productionSourceMap`，就会自动生成一些 `map` 文件，准确地告诉我们哪一行那一列出错。  
+这个 `productionSourceMap` 有什么作用呢？其实就是项目打包后，我们的代码都是经过压缩加密的，如果运行时报错，输出的错误信息无法准确知道是哪里的代码出错了，而开启了 `productionSourceMap`，就会自动生成一些 `map` 文件，准确地告诉我们哪一行那一列出错。
 
 关闭了 `productionSourceMap` 后，一方面可以减少上线代码包的大小，另一方面提高系统的安全性。
 
@@ -164,13 +163,13 @@ new UglifyJsPlugin({
 
 平时我们切图、下载图的 png、jpg 图片，都异常的大，所以我们需要对图片进行压缩：
 
-* [TinyPNG | 图片压缩](https://tinypng.com/)
+- [TinyPNG | 图片压缩](https://tinypng.com/)
 
 上面的网站就能很不错地压缩图片，从而减少图片的体积。
 
 ## 六 参考文献：
 
-* [vuejs项目性能优化总结 | 简书 - Evtion](https://www.jianshu.com/p/41075f1f5297)
+- [vuejs 项目性能优化总结 | 简书 - Evtion](https://www.jianshu.com/p/41075f1f5297)
 
 ---
 

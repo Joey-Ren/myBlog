@@ -1,5 +1,4 @@
-278 - 第一个错误的版本（first-bad-version）
-===
+# 278 - 第一个错误的版本（first-bad-version）
 
 > Create by **jsLe** on **2019-07-19 10:08:17**  
 > Recently revised in **2019-09-18 13:50:07**
@@ -8,25 +7,25 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven) |
-| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 进一步思考](#chapter-eight) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six)             |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven)     |
+| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 进一步思考](#chapter-eight)   |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：二分查找
-* **题目地址**：https://leetcode-cn.com/problems/first-bad-version/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：二分查找
+- **题目地址**：https://leetcode-cn.com/problems/first-bad-version/
+- **题目内容**：
 
 ```
 你是产品经理，目前正在带领一个团队开发新的产品。不幸的是，你的产品的最新版本没有通过质量检测。由于每个版本都是基于之前的版本开发的，所以错误的版本之后的所有版本都是错的。
@@ -52,24 +51,24 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
-var solution = function (isBadVersion) {
-  return function (n) {
+var solution = function(isBadVersion) {
+  return function(n) {
     let i = 1,
-        j = n;
+      j = n
     while (i <= j) {
-      let mid = parseInt((j - i) / 2) + i;
+      let mid = parseInt((j - i) / 2) + i
       if (isBadVersion(mid)) {
-        j = mid - 1;
+        j = mid - 1
       } else {
-        i = mid + 1;
+        i = mid + 1
       }
     }
-    return i;
-  };
-};
+    return i
+  }
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">五 LeetCode Submit</a>
@@ -115,21 +114,21 @@ var solution = function (isBadVersion) {
 **然后**，咱们根据题意，结合二分法进行解析：
 
 ```js
-var solution = function (isBadVersion) {
-  return function (n) {
+var solution = function(isBadVersion) {
+  return function(n) {
     let i = 1,
-        j = n;
+      j = n
     while (i <= j) {
-      let mid = parseInt((j - i) / 2) + i;
+      let mid = parseInt((j - i) / 2) + i
       if (isBadVersion(mid)) {
-        j = mid - 1;
+        j = mid - 1
       } else {
-        i = mid + 1;
+        i = mid + 1
       }
     }
-    return i;
-  };
-};
+    return i
+  }
+}
 ```
 
 假设有 `[1, 2, 3, 4, 5]` 共 5 个版本，然后我们先取中，通过 `isBadVersion(3)` 判断，返回 `false`，即这个版本是没有错误的版本，所以数组缩短到 `[4, 5]`。
@@ -147,16 +146,16 @@ var solution = function (isBadVersion) {
 小伙伴可能还抱有幻想，我们直接遍历也是可行的啊：
 
 ```js
-var solution = function (isBadVersion) {
-	return function (n) {
-		for (let i = 1; i < n; i++) {
-			if (isBadVersion(i)) {
-				return i;
-			}
-		}
-		return n;
-	};
-};
+var solution = function(isBadVersion) {
+  return function(n) {
+    for (let i = 1; i < n; i++) {
+      if (isBadVersion(i)) {
+        return i
+      }
+    }
+    return n
+  }
+}
 ```
 
 抱歉，LeetCode 就是来打击你的，人家的版本提交了 `2126753390` 次，错误的在 `1702766719` 版本，然后毫不客气地告诉你：
@@ -165,8 +164,8 @@ var solution = function (isBadVersion) {
 ✘ Time Limit Exceeded
   ✘ 11/22 cases passed (N/A)
   ✘ testcase: '2126753390\n1702766719'
-  ✘ answer: 
-  ✘ expected_answer: 
+  ✘ answer:
+  ✘ expected_answer:
   ✘ stdout:
 ```
 

@@ -1,16 +1,15 @@
-ECharts 打造在线个人简历
-===
+# ECharts 打造在线个人简历
 
 > Create by **jsLe** on **2018-12-5 11:48:56**  
 > Recently revised in **2019-05-31 19:16:24**
 
 **Hello 小伙伴们，如果觉得本文还不错，记得点个赞或者给个 star，你们的赞和 star 是我编写更多更精彩文章的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
 
-互联网冬天？裁员？跳槽？  
+互联网冬天？裁员？跳槽？
 
-最近频繁听身边朋友说公司裁员、员工跳槽的事情，然后帮几个还没毕业的小师弟修改了几份简历，结果嘛，enmmm......  
+最近频繁听身边朋友说公司裁员、员工跳槽的事情，然后帮几个还没毕业的小师弟修改了几份简历，结果嘛，enmmm......
 
-**咱使用 Vue + ECharts + ElementUI 来打造份在线个人简历，并将它部署到免费的服务器上去吧！**  
+**咱使用 Vue + ECharts + ElementUI 来打造份在线个人简历，并将它部署到免费的服务器上去吧！**
 
 最终成品线上地址：[点击查看](http://cv.jsLe.top/#/)
 
@@ -18,48 +17,48 @@ ECharts 打造在线个人简历
 
 涉及技术：
 
-* Vue
-* Vue-Router
-* ECharts
-* ElementUI
-* HTML/HTML5
-* CSS/CSS3
-* JavaScript/ES6
+- Vue
+- Vue-Router
+- ECharts
+- ElementUI
+- HTML/HTML5
+- CSS/CSS3
+- JavaScript/ES6
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |                                                                             
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 整体搭建](#chapter-three) |
-| &emsp;<a name="catalog-chapter-three-one" id="catalog-chapter-three-one"></a>[3.1 基础配置](#chapter-three-one) |
-| &emsp;<a name="catalog-chapter-three-two" id="catalog-chapter-three-two"></a>[3.2 安装 ECharts](#chapter-three-two) |
+| 目录                                                                                                                        |
+| --------------------------------------------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                                                     |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)                                          |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 整体搭建](#chapter-three)                                |
+| &emsp;<a name="catalog-chapter-three-one" id="catalog-chapter-three-one"></a>[3.1 基础配置](#chapter-three-one)             |
+| &emsp;<a name="catalog-chapter-three-two" id="catalog-chapter-three-two"></a>[3.2 安装 ECharts](#chapter-three-two)         |
 | &emsp;<a name="catalog-chapter-three-three" id="catalog-chapter-three-three"></a>[3.3 安装 ElementUI](#chapter-three-three) |
-| &emsp;<a name="catalog-chapter-three-four" id="catalog-chapter-three-four"></a>[3.4 总体配置](#chapter-three-four) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 分步实现](#chapter-four) |
-| &emsp;<a name="catalog-chapter-four-one" id="catalog-chapter-four-one"></a>[4.1 part1 - 基本信息](#chapter-four-one) |
-| &emsp;<a name="catalog-chapter-four-two" id="catalog-chapter-four-two"></a>[4.2 part2 - 好友分布](#chapter-four-two) |
-| &emsp;<a name="catalog-chapter-four-three" id="catalog-chapter-four-three"></a>[4.3 part3 - 技能特长](#chapter-four-three) |
-| &emsp;<a name="catalog-chapter-four-four" id="catalog-chapter-four-four"></a>[4.4 part4 - 文章成就](#chapter-four-four) |
-| &emsp;<a name="catalog-chapter-four-five" id="catalog-chapter-four-five"></a>[4.5 part5 - 工作经验](#chapter-four-five) |
-| &emsp;<a name="catalog-chapter-four-six" id="catalog-chapter-four-six"></a>[4.6 part6 - 编程技能](#chapter-four-six) |
-| &emsp;<a name="catalog-chapter-four-seven" id="catalog-chapter-four-seven"></a>[4.7 part7 - 求职意向](#chapter-four-seven) |
-| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 总结](#chapter-five) |
+| &emsp;<a name="catalog-chapter-three-four" id="catalog-chapter-three-four"></a>[3.4 总体配置](#chapter-three-four)          |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 分步实现](#chapter-four)                                   |
+| &emsp;<a name="catalog-chapter-four-one" id="catalog-chapter-four-one"></a>[4.1 part1 - 基本信息](#chapter-four-one)        |
+| &emsp;<a name="catalog-chapter-four-two" id="catalog-chapter-four-two"></a>[4.2 part2 - 好友分布](#chapter-four-two)        |
+| &emsp;<a name="catalog-chapter-four-three" id="catalog-chapter-four-three"></a>[4.3 part3 - 技能特长](#chapter-four-three)  |
+| &emsp;<a name="catalog-chapter-four-four" id="catalog-chapter-four-four"></a>[4.4 part4 - 文章成就](#chapter-four-four)     |
+| &emsp;<a name="catalog-chapter-four-five" id="catalog-chapter-four-five"></a>[4.5 part5 - 工作经验](#chapter-four-five)     |
+| &emsp;<a name="catalog-chapter-four-six" id="catalog-chapter-four-six"></a>[4.6 part6 - 编程技能](#chapter-four-six)        |
+| &emsp;<a name="catalog-chapter-four-seven" id="catalog-chapter-four-seven"></a>[4.7 part7 - 求职意向](#chapter-four-seven)  |
+| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 总结](#chapter-five)                                       |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#catalog-chapter-two)
 
-在使用 Vue + ECharts 编写公司报表项目的时候，突如其来有个 idea，想到好像可以写个在线简历。  
+在使用 Vue + ECharts 编写公司报表项目的时候，突如其来有个 idea，想到好像可以写个在线简历。
 
-**于是，就去做了。**  
+**于是，就去做了。**
 
-文章中的见解仅代表个人观点，不代表 “最优想法”，请文明评论、科学参考。  
+文章中的见解仅代表个人观点，不代表 “最优想法”，请文明评论、科学参考。
 
-如有更好建议，可加 **jsLe** 的文档库 QQ 群讨论：`798961601`。  
+如有更好建议，可加 **jsLe** 的文档库 QQ 群讨论：`798961601`。
 
 谢谢~
 
@@ -67,7 +66,7 @@ ECharts 打造在线个人简历
 
 > [返回目录](#catalog-chapter-three)
 
-工欲善其事，必先利其器。  
+工欲善其事，必先利其器。
 
 在我们进行愉快折腾之前，我们需要将代码的环境搭建好，才能如鱼得水，更好地开发。
 
@@ -77,11 +76,11 @@ ECharts 打造在线个人简历
 
 **首先**，我们在指定目录下，通过控制台（终端）新建一个 `Vue-Cli` 项目：
 
-* `vue init webpack`
+- `vue init webpack`
 
 ![图](../../public-repertory/img/js-ECharts-CurriculumVitae-1.png)
 
-**然后**，我们使用 `npm i` 安装 `Vue-Cli` 的依赖，生成 `node_modules` 文件夹。  
+**然后**，我们使用 `npm i` 安装 `Vue-Cli` 的依赖，生成 `node_modules` 文件夹。
 
 **最后**，我们引入 `CSS reset`，并清理下红框内文件，之后项目变为如下所示：
 
@@ -94,7 +93,7 @@ ECharts 打造在线个人简历
 ```
 <template>
   <div class="hello">
-    
+
   </div>
 </template>
 
@@ -103,7 +102,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      
+
     }
   }
 }
@@ -174,55 +173,105 @@ th, td /* 表格元素 - table elements */ {
 }
 
 /** 设置默认字体 - setting the default font **/
-body, button, input, select, textarea {
+body,
+button,
+input,
+select,
+textarea {
   font: 18px/1.5 '黑体', Helvetica, sans-serif;
 }
-h1, h2, h3, h4, h5, h6, button, input, select, textarea { font-size: 100%; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
 
 /** 重置列表元素 - reset the list element **/
-ul, ol { list-style: none; }
+ul,
+ol {
+  list-style: none;
+}
 
 /** 重置文本格式元素 - reset the text format element **/
-a, a:hover { text-decoration: none; }
+a,
+a:hover {
+  text-decoration: none;
+}
 
 /** 重置表单元素 - reset the form element **/
-button { cursor: pointer; }
-input { font-size: 18px; outline: none; }
+button {
+  cursor: pointer;
+}
+input {
+  font-size: 18px;
+  outline: none;
+}
 
 /** 重置表格元素 - reset the table element **/
-table { border-collapse: collapse; border-spacing: 0; }
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
 /** 图片自适应 - image responsize **/
-img { border: 0; display: inline-block; width: 100%; max-width: 100%; height: auto; vertical-align: middle; }
+img {
+  border: 0;
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
 
 /* 
     * 默认box-sizing是content-box，该属性导致padding会撑大div，使用border-box可以解决该问题
     * set border-box for box-sizing when you use div, it solve the problem when you add padding and don't want to make the div width bigger
 */
-div, input { box-sizing: border-box; }
+div,
+input {
+  box-sizing: border-box;
+}
 
 /** 清除浮动 - clear float **/
-.jsLe-clear:after, .clear:after {
+.jsLe-clear:after,
+.clear:after {
   content: '\20';
   display: block;
   height: 0;
   clear: both;
 }
-.jsLe-clear, .clear {
+.jsLe-clear,
+.clear {
   *zoom: 1;
 }
 
 /** 设置input的placeholder - set input placeholder **/
-input::-webkit-input-placeholder { color: #919191; font-size: .26rem } /* Webkit browsers */
-input::-moz-placeholder { color: #919191; font-size: .26rem } /* Mozilla Firefox */
-input::-ms-input-placeholder { color: #919191; font-size: .26rem } /* Internet Explorer */
+input::-webkit-input-placeholder {
+  color: #919191;
+  font-size: 0.26rem;
+} /* Webkit browsers */
+input::-moz-placeholder {
+  color: #919191;
+  font-size: 0.26rem;
+} /* Mozilla Firefox */
+input::-ms-input-placeholder {
+  color: #919191;
+  font-size: 0.26rem;
+} /* Internet Explorer */
 ```
 
-当然，怕小伙伴们嫌麻烦，不想敲代码。  
+当然，怕小伙伴们嫌麻烦，不想敲代码。
 
 所以 **jsLe** 直接上传了基础代码，需要的小伙伴直接下载即可：
 
-* [ECharts 打造在线个人简历分支 - 基础配置](https://github.com/LiangJunrong/CurriculumVitae/tree/basic-configuration)
+- [ECharts 打造在线个人简历分支 - 基础配置](https://github.com/LiangJunrong/CurriculumVitae/tree/basic-configuration)
 
 ### <a name="chapter-three-two" id="chapter-three-two">3.2 安装 ECharts</a>
 
@@ -238,7 +287,7 @@ npm i echarts -S
 
 **然后**，你可以选择按需引用还是全局引用（个人建议使用按需引用）：
 
-* **全局引用**
+- **全局引用**
 
 ECharts 初始化应在钩子函数 `mounted()` 中，这个钩子函数是在 `el` 被新创建的 `vm.$el` 替换，并挂载到实例上去之后调用。
 
@@ -311,9 +360,9 @@ export default {
 </style>
 ```
 
-* **按需引用**
+- **按需引用**
 
-如果我们使用全局引用。将 ECharts 图表打包，会导致体积过大，所以项目中最好按需引入。  
+如果我们使用全局引用。将 ECharts 图表打包，会导致体积过大，所以项目中最好按需引入。
 
 在这里我们使用 `requrie` 引用而不是 `import`，是因为 `import` 必须写全路径，比较麻烦。
 
@@ -391,9 +440,9 @@ export default {
 
 > [返回目录](#catalog-chapter-three-three)
 
-考虑到 UI 是我，开发还是我。  
+考虑到 UI 是我，开发还是我。
 
-那么，尽情使用 UI 框架吧！这里偷懒用 ElementUI 咯。  
+那么，尽情使用 UI 框架吧！这里偷懒用 ElementUI 咯。
 
 然后，为了使项目尽可能小巧，**jsLe** 打算按需引入 ElementUI：
 
@@ -417,7 +466,7 @@ export default {
     "stage-2"
   ],
   "plugins": [
-    "transform-vue-jsx", 
+    "transform-vue-jsx",
     "transform-runtime",
     [
       "component",
@@ -445,8 +494,8 @@ Vue.config.productionTip = false
 import '../static/css/reset.css'
 
 // 引入及使用 ElementUI
-import {Row, Col} from 'element-ui';
-Vue.use(Row).use(Col);
+import { Row, Col } from 'element-ui'
+Vue.use(Row).use(Col)
 
 new Vue({
   el: '#app',
@@ -479,21 +528,21 @@ new Vue({
 
 > [返回目录](#catalog-chapter-three-four)
 
-该需要的东东，都差不多准备好了。  
+该需要的东东，都差不多准备好了。
 
-那么，我们的简历，长啥样呢？  
+那么，我们的简历，长啥样呢？
 
 由于手里木有成品 “参考” 和 “借鉴”，所以去网上看看别人的 ECharts 都长啥样吧：
 
 ![图](../../public-repertory/img/js-ECharts-CurriculumVitae-5.png)
 
-如图，**jsLe** 觉得这图的布局不错，所以下载下来了它的 png 版本和 psd 版本。  
+如图，**jsLe** 觉得这图的布局不错，所以下载下来了它的 png 版本和 psd 版本。
 
 然后，怕小伙伴们难以想象要怎么操作，我用 PS 修改下它的 psd 吧：
 
 ![图](../../public-repertory/img/js-ECharts-CurriculumVitae-6.png)
 
-很好，这个在线个人简历要怎么做就一目了然了。  
+很好，这个在线个人简历要怎么做就一目了然了。
 
 下面我们开始切图仔工作：
 
@@ -514,7 +563,7 @@ new Vue({
 
 <script>
   export default {
-    
+
   }
 </script>
 
@@ -535,13 +584,13 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const PartOne = () => import('@/components/PartOne');
-const PartTwo = () => import('@/components/PartTwo');
-const PartThree = () => import('@/components/PartThree');
-const PartFour = () => import('@/components/PartFour');
-const PartFive = () => import('@/components/PartFive');
-const PartSix = () => import('@/components/PartSix');
-const PartSeven = () => import('@/components/PartSeven');
+const PartOne = () => import('@/components/PartOne')
+const PartTwo = () => import('@/components/PartTwo')
+const PartThree = () => import('@/components/PartThree')
+const PartFour = () => import('@/components/PartFour')
+const PartFive = () => import('@/components/PartFive')
+const PartSix = () => import('@/components/PartSix')
+const PartSeven = () => import('@/components/PartSeven')
 
 export default new Router({
   routes: [
@@ -591,7 +640,7 @@ export default new Router({
       path: '/PartSeven',
       name: 'PartSeven',
       component: PartSeven
-    },
+    }
   ]
 })
 ```
@@ -739,11 +788,11 @@ Vue.config.productionTip = false
 import '../static/css/reset.css'
 
 // 引入 ElementUI 响应式断点
-import 'element-ui/lib/theme-chalk/display.css';
+import 'element-ui/lib/theme-chalk/display.css'
 
 // 引入及使用 ElementUI
-import {Row, Col} from 'element-ui';
-Vue.use(Row).use(Col);
+import { Row, Col } from 'element-ui'
+Vue.use(Row).use(Col)
 
 new Vue({
   el: '#app',
@@ -785,13 +834,13 @@ export default {
 
 为了防止小伙伴们晕乎，保险起见 **jsLe** 将总体配置的代码提交到了分支，需要的小伙伴直接下载即可：
 
-* [ECharts 打造在线个人简历分支 - 完整配置](https://github.com/LiangJunrong/CurriculumVitae/tree/overall-configuration)
+- [ECharts 打造在线个人简历分支 - 完整配置](https://github.com/LiangJunrong/CurriculumVitae/tree/overall-configuration)
 
 ## <a name="chapter-four" id="chapter-four">四 分步实现</a>
 
 > [返回目录](#catalog-chapter-four)
 
-**提问**：简历一般有什么内容？  
+**提问**：简历一般有什么内容？
 
 **回答**：
 
@@ -1517,7 +1566,7 @@ export default {
   width: 100%;
   border: 40px solid transparent;
   border-image: url("~@/./assets/img/border_image.png") 30 30 stretch;
-  background: #18202d; 
+  background: #18202d;
 }
 .text-center {
   text-align: center;
@@ -1538,7 +1587,7 @@ export default {
 
 至此，所有代码编写完毕，偷懒的小伙伴可以去下面地址下载所有代码：
 
-* [ECharts 打造在线个人简历](https://github.com/LiangJunrong/CurriculumVitae)
+- [ECharts 打造在线个人简历](https://github.com/LiangJunrong/CurriculumVitae)
 
 ## <a name="chapter-five" id="chapter-five">五 总结</a>
 
@@ -1548,24 +1597,24 @@ export default {
 
 ![图](../../public-repertory/img/js-ECharts-CurriculumVitae-18.png)
 
-OK，到这里，这篇文章就结束啦！  
+OK，到这里，这篇文章就结束啦！
 
 > 番外：
 
-哈哈，**jsLe** 已经 **预** **感** **到** **了**：  
+哈哈，**jsLe** 已经 **预** **感** **到** **了**：
 
 **你的好友喷子小哥上线啦！**
 
-* “哇，这样用 ECharts 的吗？还能不能更 low 点？！”
-* “哇，Vue 这样写的吗？你懂不懂 Vue？”
-* “哇，……”
+- “哇，这样用 ECharts 的吗？还能不能更 low 点？！”
+- “哇，Vue 这样写的吗？你懂不懂 Vue？”
+- “哇，……”
 
 enm......所以我不管怎么说，都说不过这些大佬的，所以有的评论就不回复啦，哈哈~
 
 **最后，在此祝小伙伴们找到更好的工作~**
 
-* **小伙伴们如果觉得本文还不错，记得点个赞或者给个 star，你们的赞和 star 是我编写更多更精彩文章的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
-  
+- **小伙伴们如果觉得本文还不错，记得点个赞或者给个 star，你们的赞和 star 是我编写更多更精彩文章的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
+
 ---
 
 > **jsLe** 广告推送：  

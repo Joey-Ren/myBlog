@@ -1,5 +1,4 @@
-345 - 反转字符串中的元音字母（reverse-vowels-of-a-string）
-===
+# 345 - 反转字符串中的元音字母（reverse-vowels-of-a-string）
 
 > Create by **jsLe** on **2019-7-23 08:08:54**  
 > Recently revised in **2019-09-18 13:54:16**
@@ -8,24 +7,24 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six)             |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven)     |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：双指针、字符串
-* **题目地址**：https://leetcode-cn.com/problems/reverse-vowels-of-a-string/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：双指针、字符串
+- **题目地址**：https://leetcode-cn.com/problems/reverse-vowels-of-a-string/
+- **题目内容**：
 
 ```
 编写一个函数，以字符串作为输入，反转该字符串中的元音字母。
@@ -48,29 +47,29 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var reverseVowels = function(s) {
-  s = s.split('');
-  let i = 0;
-  let j = s.length - 1;
-  let vowers = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+  s = s.split('')
+  let i = 0
+  let j = s.length - 1
+  let vowers = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
   while (i < j) {
     if (!vowers.includes(s[i])) {
-      i++;
-      continue;
+      i++
+      continue
     }
     if (!vowers.includes(s[j])) {
-      j--;
-      continue;
+      j--
+      continue
     }
-    [s[i], s[j]] = [s[j], s[i]];
-    i++;
-    j--;
+    ;[s[i], s[j]] = [s[j], s[i]]
+    i++
+    j--
   }
-  return s.join('');
-};
+  return s.join('')
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
@@ -115,31 +114,33 @@ OK，然后再看看题目，应该是 **双指针** 了，立马写出第一印
 ```js
 // vowel - 元音字母
 // letter - 字母
-const vowel = (letter) => {
-  if (letter === 'a'
-  || letter === 'e'
-  || letter === 'i'
-  || letter === 'o'
-  || letter === 'u') {
-    return true;
+const vowel = letter => {
+  if (
+    letter === 'a' ||
+    letter === 'e' ||
+    letter === 'i' ||
+    letter === 'o' ||
+    letter === 'u'
+  ) {
+    return true
   }
-  return false;
+  return false
 }
 
 var reverseVowels = function(s) {
-  s = s.split('');
+  s = s.split('')
   for (let i = 0; i < (s.length - 1) / 2; i++) {
     for (let j = s.length - 1; j > (s.length - 1) / 2; j--) {
       if (vowel(s[i]) && vowel(s[j])) {
-        let temp = s[j];
-        s[j] = s[i];
-        s[i] = temp;
-        i++;
+        let temp = s[j]
+        s[j] = s[i]
+        s[i] = temp
+        i++
       }
     }
   }
-  return s.join('');
-};
+  return s.join('')
+}
 ```
 
 所以它就报错了，告诉我 `aA` 应该变成 `Aa`：
@@ -156,20 +157,22 @@ var reverseVowels = function(s) {
 想想后面还有近 400 个测试用例，赶紧改回来：
 
 ```js
-const vowel = (letter) => {
-  if (letter === 'a'
-  || letter === 'A'
-  || letter === 'e'
-  || letter === 'E'
-  || letter === 'i'
-  || letter === 'I'
-  || letter === 'o'
-  || letter === 'O'
-  || letter === 'u'
-  || letter === 'U') {
-    return true;
+const vowel = letter => {
+  if (
+    letter === 'a' ||
+    letter === 'A' ||
+    letter === 'e' ||
+    letter === 'E' ||
+    letter === 'i' ||
+    letter === 'I' ||
+    letter === 'o' ||
+    letter === 'O' ||
+    letter === 'u' ||
+    letter === 'U'
+  ) {
+    return true
   }
-  return false;
+  return false
 }
 ```
 
@@ -187,41 +190,43 @@ const vowel = (letter) => {
 那么我想是不是 `for` 循环不太理想？该 `while` 试试：
 
 ```js
-const vowel = (letter) => {
-  if (letter === 'a'
-  || letter === 'A'
-  || letter === 'e'
-  || letter === 'E'
-  || letter === 'i'
-  || letter === 'I'
-  || letter === 'o'
-  || letter === 'O'
-  || letter === 'u'
-  || letter === 'U') {
-    return true;
+const vowel = letter => {
+  if (
+    letter === 'a' ||
+    letter === 'A' ||
+    letter === 'e' ||
+    letter === 'E' ||
+    letter === 'i' ||
+    letter === 'I' ||
+    letter === 'o' ||
+    letter === 'O' ||
+    letter === 'u' ||
+    letter === 'U'
+  ) {
+    return true
   }
-  return false;
+  return false
 }
 
 var reverseVowels = function(s) {
-  s = s.split('');
-  let i = 0;
-  let j = s.length - 1;
+  s = s.split('')
+  let i = 0
+  let j = s.length - 1
   while (i < j) {
     if (!vowel(s[i])) {
-      i++;
-      continue;
+      i++
+      continue
     }
     if (!vowel(s[j])) {
-      j--;
-      continue;
+      j--
+      continue
     }
-    [s[i], s[j]] = [s[j], s[i]];
-    i++;
-    j--;
+    ;[s[i], s[j]] = [s[j], s[i]]
+    i++
+    j--
   }
-  return s.join('');
-};
+  return s.join('')
+}
 ```
 
 Submit 提交看看：
@@ -237,25 +242,25 @@ nice~顺带看看大佬的题解，优化下自己的代码：
 
 ```js
 var reverseVowels = function(s) {
-  s = s.split('');
-  let i = 0;
-  let j = s.length - 1;
-  let vowers = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+  s = s.split('')
+  let i = 0
+  let j = s.length - 1
+  let vowers = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
   while (i < j) {
     if (!vowers.includes(s[i])) {
-      i++;
-      continue;
+      i++
+      continue
     }
     if (!vowers.includes(s[j])) {
-      j--;
-      continue;
+      j--
+      continue
     }
-    [s[i], s[j]] = [s[j], s[i]];
-    i++;
-    j--;
+    ;[s[i], s[j]] = [s[j], s[i]]
+    i++
+    j--
   }
-  return s.join('');
-};
+  return s.join('')
+}
 ```
 
 很好，这样我们就完成了这道题的题解啦~

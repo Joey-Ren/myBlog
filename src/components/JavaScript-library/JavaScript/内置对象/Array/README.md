@@ -1,5 +1,4 @@
-Array
-===
+# Array
 
 > Create by **jsLe** on **2019-09-17 09:21:48**  
 > Recently revised in **2019-09-18 09:50:40**
@@ -10,45 +9,45 @@ Array
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| &emsp;[2.1 为什么用数组？](#chapter-two-one) |
-| &emsp;[2.2 如何创建和初始化数组？](#chapter-two-two) |
-| &emsp;[2.3 如何访问数组？](#chapter-two-three) |
-| &emsp;[2.4 二维、三维乃至多维数组以及如何访问？](#chapter-two-four) |
-| &emsp;[2.5 来份案例热热身？](#chapter-two-five) |
-| &emsp;[2.6 悬难疑惑？](#chapter-two-six) |
+| 目录                                                                                                           |
+| -------------------------------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                                        |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)                             |
+| &emsp;[2.1 为什么用数组？](#chapter-two-one)                                                                   |
+| &emsp;[2.2 如何创建和初始化数组？](#chapter-two-two)                                                           |
+| &emsp;[2.3 如何访问数组？](#chapter-two-three)                                                                 |
+| &emsp;[2.4 二维、三维乃至多维数组以及如何访问？](#chapter-two-four)                                            |
+| &emsp;[2.5 来份案例热热身？](#chapter-two-five)                                                                |
+| &emsp;[2.6 悬难疑惑？](#chapter-two-six)                                                                       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 数组的增删改查及其工作应用](#chapter-three) |
-| &emsp;[3.1 数组的新增操作](#chapter-three-one) |
-| &emsp;[3.2 数组的删除和修改操作](#chapter-three-two) |
-| &emsp;&emsp;[3.2.1 删除和修改之 splice()](#chapter-three-two-one) |
-| &emsp;&emsp;[3.2.2 删除和修改之 slice()](#chapter-three-two-two) |
-| &emsp;&emsp;[3.2.3 删除和修改之 filter()](#chapter-three-two-three) |
-| &emsp;[3.3 数组的查询操作](#chapter-three-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 数组的常用知识点](#chapter-four) |
-| &emsp;[4.1 push() - 末尾添加元素](#chapter-four-one) |
-| &emsp;[4.2 unshift() - 开头添加元素](#chapter-four-two) |
-| &emsp;[4.3 pop() - 末尾删除元素](#chapter-four-three) |
-| &emsp;[4.4 shift() - 开头删除元素](#chapter-four-four) |
-| &emsp;[4.5 splice() - 增删改元素](#chapter-four-five) |
-| &emsp;[4.6 concat() - 拼合两个数组](#chapter-four-six) |
-| &emsp;[4.7 filter() - 过滤数组元素](#chapter-four-seven) |
-| &emsp;[4.8 forEach() - 遍历操作原数组](#chapter-four-eight) |
-| &emsp;[4.9 join() - 数组转字符串](#chapter-four-night) |
-| &emsp;[4.10 indexOf() - 顺序查找第一个](#chapter-four-ten) |
-| &emsp;[4.11 lastIndexOf() - 倒序查找第一个](#chapter-four-eleven) |
-| &emsp;[4.12 map() - 遍历返回新数组](#chapter-four-twelve) |
-| &emsp;[4.13 reverse() - 反转数组元素](#chapter-four-thirteen) |
-| &emsp;[4.14 sort() - 数组排序](#chapter-four-fourteen) |
-| &emsp;[4.15 toString() - 数组转字符串](#chapter-four-fifteen) |
-| &emsp;[4.16 includes() - 数组包含某元素](#chapter-four-sixteen) |
-| &emsp;[4.17 fill() - 填充数组](#chapter-four-seventeen) |
-| &emsp;[4.18 reduce() - 数组累计](#chapter-four-eighteen) |
-| &emsp;[4.19 find() - 查找数组元素](#chapter-four-nighteen) |
-| &emsp;[4.20 findIndex() - 查找元素索引](#chapter-four-twenty) |
-| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 总结](#chapter-five) |
+| &emsp;[3.1 数组的新增操作](#chapter-three-one)                                                                 |
+| &emsp;[3.2 数组的删除和修改操作](#chapter-three-two)                                                           |
+| &emsp;&emsp;[3.2.1 删除和修改之 splice()](#chapter-three-two-one)                                              |
+| &emsp;&emsp;[3.2.2 删除和修改之 slice()](#chapter-three-two-two)                                               |
+| &emsp;&emsp;[3.2.3 删除和修改之 filter()](#chapter-three-two-three)                                            |
+| &emsp;[3.3 数组的查询操作](#chapter-three-three)                                                               |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 数组的常用知识点](#chapter-four)              |
+| &emsp;[4.1 push() - 末尾添加元素](#chapter-four-one)                                                           |
+| &emsp;[4.2 unshift() - 开头添加元素](#chapter-four-two)                                                        |
+| &emsp;[4.3 pop() - 末尾删除元素](#chapter-four-three)                                                          |
+| &emsp;[4.4 shift() - 开头删除元素](#chapter-four-four)                                                         |
+| &emsp;[4.5 splice() - 增删改元素](#chapter-four-five)                                                          |
+| &emsp;[4.6 concat() - 拼合两个数组](#chapter-four-six)                                                         |
+| &emsp;[4.7 filter() - 过滤数组元素](#chapter-four-seven)                                                       |
+| &emsp;[4.8 forEach() - 遍历操作原数组](#chapter-four-eight)                                                    |
+| &emsp;[4.9 join() - 数组转字符串](#chapter-four-night)                                                         |
+| &emsp;[4.10 indexOf() - 顺序查找第一个](#chapter-four-ten)                                                     |
+| &emsp;[4.11 lastIndexOf() - 倒序查找第一个](#chapter-four-eleven)                                              |
+| &emsp;[4.12 map() - 遍历返回新数组](#chapter-four-twelve)                                                      |
+| &emsp;[4.13 reverse() - 反转数组元素](#chapter-four-thirteen)                                                  |
+| &emsp;[4.14 sort() - 数组排序](#chapter-four-fourteen)                                                         |
+| &emsp;[4.15 toString() - 数组转字符串](#chapter-four-fifteen)                                                  |
+| &emsp;[4.16 includes() - 数组包含某元素](#chapter-four-sixteen)                                                |
+| &emsp;[4.17 fill() - 填充数组](#chapter-four-seventeen)                                                        |
+| &emsp;[4.18 reduce() - 数组累计](#chapter-four-eighteen)                                                       |
+| &emsp;[4.19 find() - 查找数组元素](#chapter-four-nighteen)                                                     |
+| &emsp;[4.20 findIndex() - 查找元素索引](#chapter-four-twenty)                                                  |
+| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 总结](#chapter-five)                          |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
@@ -90,7 +89,7 @@ let Monday = 1,
   Thursday = 4,
   Friday = 5,
   Saturday = 6,
-  Sunday = 7;
+  Sunday = 7
 ```
 
 这仅仅是一周的数据。
@@ -100,7 +99,7 @@ let Monday = 1,
 于是有了数组：
 
 ```js
-let exercise = [1, 2, 3, 4, 5, 6, 7];
+let exercise = [1, 2, 3, 4, 5, 6, 7]
 ```
 
 这不就变得简便了么。
@@ -110,9 +109,9 @@ let exercise = [1, 2, 3, 4, 5, 6, 7];
 > [返回目录](#chapter-one)
 
 ```js
-let a = [];
+let a = []
 
-let b = new Array();
+let b = new Array()
 ```
 
 这样都是可行的。
@@ -120,15 +119,15 @@ let b = new Array();
 如果你想初始化有长度的数组，或者数组一开始就有值：
 
 ```js
-let a = [1, 2, 3]; // [1, 2, 3]
+let a = [1, 2, 3] // [1, 2, 3]
 
-let b = new Array(3); // [undefined, undefined, undefined]
+let b = new Array(3) // [undefined, undefined, undefined]
 
-let c = new Array([1, 2, 3]); // [1, 2, 3]
+let c = new Array([1, 2, 3]) // [1, 2, 3]
 
-let d = new Array(3).fill(1); // [1, 1, 1]
+let d = new Array(3).fill(1) // [1, 1, 1]
 
-let e = new Array(3).fill([]); // [[], [], []]
+let e = new Array(3).fill([]) // [[], [], []]
 ```
 
 当然，后面两个通过 `fill()` 创建的数组，推荐碰到 `fill()` 方法的时候再进一步了解。
@@ -140,13 +139,13 @@ let e = new Array(3).fill([]); // [[], [], []]
 > [返回目录](#chapter-one)
 
 ```js
-let a = [1, 2, 3];
-console.log(arr[0]); // 1
-console.log(arr[1]); // 2
-console.log(arr[2]); // 3
+let a = [1, 2, 3]
+console.log(arr[0]) // 1
+console.log(arr[1]) // 2
+console.log(arr[2]) // 3
 ```
 
-记住数组的下标是从 0 开始的。  
+记住数组的下标是从 0 开始的。
 
 > 如果某个程序猿跟你表白说你是它心中第 0 位的人……你还是拒绝 “他” 吧，已经走火入魔没救了。
 
@@ -161,12 +160,15 @@ console.log(arr[2]); // 3
 > 二维数组
 
 ```js
-let a = [[1, 2, 3], [4, 5]]; // 二维数组
+let a = [
+  [1, 2, 3],
+  [4, 5]
+] // 二维数组
 
 // 访问二维数组
 for (let i = 0; i < a.length; i++) {
   for (let j = 0; j < a[i].length; j++) {
-    console.log(a[i][j]);
+    console.log(a[i][j])
   }
 }
 // 1
@@ -179,13 +181,16 @@ for (let i = 0; i < a.length; i++) {
 > 三维数组
 
 ```js
-let b = [[1, 2, [3, 4]], [5, 6]]; // 三维数组
+let b = [
+  [1, 2, [3, 4]],
+  [5, 6]
+] // 三维数组
 
 // 访问三维数组
 for (let i = 0; i < b.length; i++) {
   for (let j = 0; j < b[i].length; j++) {
     for (let k = 0; k < b[i][j].length; k++) {
-      console.log(b[i][j][k]);
+      console.log(b[i][j][k])
     }
   }
 }
@@ -204,10 +209,10 @@ for (let i = 0; i < b.length; i++) {
 > 遍历斐波那契数列
 
 ```js
-const fibonacciSequence = [1, 1, 2, 3, 5, 8, 13];
+const fibonacciSequence = [1, 1, 2, 3, 5, 8, 13]
 
 for (let i = 0; i < fibonacciSequence.length; i++) {
-  console.log(fibonacciSequence[i]);
+  console.log(fibonacciSequence[i])
 }
 
 // 1 1 2 3 5 8 13
@@ -216,13 +221,13 @@ for (let i = 0; i < fibonacciSequence.length; i++) {
 > 实现斐波那契数列
 
 ```js
-const fibonacciSequence = [1, 1];
+const fibonacciSequence = [1, 1]
 
 for (let i = 2; i < 20; i++) {
-  fibonacciSequence[i] = fibonacciSequence[i - 1] + fibonacciSequence[i - 2];
+  fibonacciSequence[i] = fibonacciSequence[i - 1] + fibonacciSequence[i - 2]
 }
 
-console.log(fibonacciSequence);
+console.log(fibonacciSequence)
 
 // [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765]
 ```
@@ -235,18 +240,18 @@ console.log(fibonacciSequence);
 
 ```js
 // 传值
-let str1 = '1';
-str2 = str1;
-str2 = '2';
-console.log(str1); // 1
-console.log(str2); // 2
+let str1 = '1'
+str2 = str1
+str2 = '2'
+console.log(str1) // 1
+console.log(str2) // 2
 
 // 传址
-let arr1 = [1, 2, 3];
-arr2 = arr1;
-arr2[0] = 4;
-console.log(arr1); // [4, 2, 3]
-console.log(arr2); // [4, 2, 3]
+let arr1 = [1, 2, 3]
+arr2 = arr1
+arr2[0] = 4
+console.log(arr1) // [4, 2, 3]
+console.log(arr2) // [4, 2, 3]
 ```
 
 问：**jsLe** 你怎么看传值和传址，能不能详细介绍下？
@@ -274,35 +279,35 @@ enm...还真有用。
 话不多说，关门，放、放代码：
 
 ```js
-let arr = [1, 2, 3];
+let arr = [1, 2, 3]
 
 // 通过 push() 方法
-arr.push(4); // [1, 2, 3, 4]
+arr.push(4) // [1, 2, 3, 4]
 
 // 通过 length 属性
-arr[arr.length] = 5; // [1, 2, 3, 4, 5]
+arr[arr.length] = 5 // [1, 2, 3, 4, 5]
 ```
 
 数组新增元素的两种方式：
 
-* 一种是通过 `push()` 方法，直接将元素添加到数组最后一位。
-* 另一种是通过利用数组的 `length` 属性，该属性可以显示数组的长度，而 `arr[arr.length]` 即给其最大长度后面再加一个长度。
+- 一种是通过 `push()` 方法，直接将元素添加到数组最后一位。
+- 另一种是通过利用数组的 `length` 属性，该属性可以显示数组的长度，而 `arr[arr.length]` 即给其最大长度后面再加一个长度。
 
 既然上面我们通过两种方式，往数组后面插入了新元素，那么有没有方法，往数组前面插入新元素呢？
 
 有！
 
 ```js
-let arr = [3, 4, 5];
+let arr = [3, 4, 5]
 
 // 通过 unshift 方法
-arr.unshift(2); // [2, 3, 4, 5]
+arr.unshift(2) // [2, 3, 4, 5]
 
 // 通过遍历数组
 for (let i = arr.length; i >= 0; i--) {
-  arr[i] = arr[i - 1];
+  arr[i] = arr[i - 1]
 }
-arr[0] = 1;
+arr[0] = 1
 // [1, 2, 3, 4, 5]
 ```
 
@@ -314,9 +319,9 @@ arr[0] = 1;
 
 举例常见的场景：给 Table 新增一行数据。
 
-|  | 数据内容 |
-| --- | --- |
-| 新增 | 第一行数据 - jsLe |
+|      | 数据内容            |
+| ---- | ------------------- |
+| 新增 | 第一行数据 - jsLe   |
 | 新增 | 第二行数据 - 梁渣渣 |
 
 > **jsLe** 尝试自己画了个表格，太小了不好贴图，就使用 Markdown 演示下好了。
@@ -331,9 +336,9 @@ arr[0] = 1;
 
 **首先**，**jsLe** 觉得删除和修改操作在一定程度上利用的数组 API 非常一致，所以贴在一起写了：
 
-* splice()
-* slice()
-* filter()
+- splice()
+- slice()
+- filter()
 
 在这里，我们介绍三种方法进行操作。
 
@@ -348,18 +353,18 @@ arr[0] = 1;
 我们先了解下 `splice()` 特性：
 
 ```js
-var months = ['Jan', 'March', 'April', 'June'];
+var months = ['Jan', 'March', 'April', 'June']
 
 // 新增操作
-months.splice(1, 0, 'Feb');
+months.splice(1, 0, 'Feb')
 // ['Jan', 'Feb', 'March', 'April', 'June']
 
 // 修改操作
-months.splice(4, 1, 'May');
+months.splice(4, 1, 'May')
 // ['Jan', 'Feb', 'March', 'April', 'May']
 
 // 删除操作
-months.splice(4, 1);
+months.splice(4, 1)
 // ['Jan', 'Feb', 'March', 'April']
 ```
 
@@ -379,19 +384,19 @@ months.splice(4, 1);
 let list = [
   { id: '1', name: 'jsLe' },
   { id: '2', name: '梁峻荣' },
-  { id: '3', name: 'JavaScriptLiang' },
-];
+  { id: '3', name: 'JavaScriptLiang' }
+]
 
 function addData(rowIndex) {
   list.splice(rowIndex, 0, {
     id: '4',
-    name: '梁渣渣',
-  });
+    name: '梁渣渣'
+  })
 }
 
-addData(1);
+addData(1)
 
-console.log(list);
+console.log(list)
 // [
 //   { id: '1', name: 'jsLe' },
 //   { id: '4', name: '梁渣渣' },
@@ -410,8 +415,8 @@ console.log(list);
 
 **首先**，咱们科普下：
 
-* splice()：所进行的操作会影响到原数组
-* slice()：所进行的操作不会影响到原数组
+- splice()：所进行的操作会影响到原数组
+- slice()：所进行的操作不会影响到原数组
 
 什么意思呢？相信很多小伙伴在网上看数组相关攻略的时候，都会看到一堆的区分：**这个方法会影响到原数组，这个方法不会影响到原数组……等等**。
 
@@ -420,15 +425,15 @@ console.log(list);
 当然，这里都说是修改咯，`slice()` 还是有丢丢影响到数组的：
 
 ```js
-const str = ['j','s','l','i','a','n','g'];
-str.slice(0, 2); // 'js'
-str.slice(2); // 'liang'
+const str = ['j', 's', 'l', 'i', 'a', 'n', 'g']
+str.slice(0, 2) // 'js'
+str.slice(2) // 'liang'
 ```
 
 对于 `slice()` 来说，它的参数为：`str.slice(beginSlice, endSlice)`。其中：
 
-* `beginSlice`：从该索引（以 0 为基数）处开始提取原字符串中的字符。
-* `endSlice`：结束位置（以 0 为基数），如果不传，默认到数组末尾。
+- `beginSlice`：从该索引（以 0 为基数）处开始提取原字符串中的字符。
+- `endSlice`：结束位置（以 0 为基数），如果不传，默认到数组末尾。
 
 > 注意，`splice()` 的第二个参数是影响到数组的个数，而 `slice()` 的第二个参数是结束的位置，所以 `slice()` 一般写法是：`slice(index, index + length)`，即需要修改的位置（index），及其影响的长度（length）。
 
@@ -437,23 +442,23 @@ str.slice(2); // 'liang'
 ```js
 let list = [
   { id: '1', name: 'jsLe' },
-  { id: '2', name: '梁峻荣' },
-];
+  { id: '2', name: '梁峻荣' }
+]
 
 function insertData(rowId) {
   list = [
     ...list.slice(0, list.findIndex(item => item.id === rowId) + 1),
     {
       id: '3',
-      name: '',
+      name: ''
     },
-    ...list.slice(list.findIndex(item => item.id === rowId) + 1),
+    ...list.slice(list.findIndex(item => item.id === rowId) + 1)
   ]
 }
 
-insertData('1');
+insertData('1')
 
-console.log(list);
+console.log(list)
 // [
 //   { id: '1', name: 'jsLe' },
 //   { id: '3', name: '' },
@@ -461,7 +466,7 @@ console.log(list);
 // ]
 ```
 
-还记得在上面我们说过用 `slice()` 做修改操作，*也会影响到原数组* 吗？是的，在这份代码我们可以看出，我们根据之前的数组，组合成一个新的数组，让这个元素指向了新的数组地址。
+还记得在上面我们说过用 `slice()` 做修改操作，_也会影响到原数组_ 吗？是的，在这份代码我们可以看出，我们根据之前的数组，组合成一个新的数组，让这个元素指向了新的数组地址。
 
 当然，这个并不重要，我们讲讲它的使用场景：在需要修改 Table 某行的时候，我们将其唯一值（id）传递了过去，然后方法 `insertData` 根据传递的 id 找到那一行，对其进行了修改。
 
@@ -479,34 +484,34 @@ console.log(list);
 
 ```js
 function isBigEnough(element) {
-  return element >= 10;
+  return element >= 10
 }
-var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
+var filtered = [12, 5, 8, 130, 44].filter(isBigEnough)
 // [12, 130, 44]
 
 // 如果你喜欢用 ES6 的箭头函数
-const number = [12, 5, 8, 130, 44];
-const filterNumber = number.filter(item => item >= 10);
+const number = [12, 5, 8, 130, 44]
+const filterNumber = number.filter(item => item >= 10)
 // [12, 130, 44]
 ```
 
 很好，讲到这里，我们就顺带科普下 `filter()` 这个方法了：
 
-* **语法**：`arr.filter(callback)`
+- **语法**：`arr.filter(callback)`
 
-* `callback`：用来测试数组的每个元素的函数。返回 `true` 表示该元素通过测试，保留该元素，`false` 则不保留。它会返回由通过元素组成的数组，或者是一个空数组 []。它接受以下三个参数：
-  * `element`：数组中当前正在处理的元素
-  * `index`：正在处理的元素在数组中的索引。
-  * `array`：调用了 `filter` 的数组本身。
+- `callback`：用来测试数组的每个元素的函数。返回 `true` 表示该元素通过测试，保留该元素，`false` 则不保留。它会返回由通过元素组成的数组，或者是一个空数组 []。它接受以下三个参数：
+  - `element`：数组中当前正在处理的元素
+  - `index`：正在处理的元素在数组中的索引。
+  - `array`：调用了 `filter` 的数组本身。
 
 所以一个比较完整的 `filter()` 可以这么写：
 
 ```js
-const number = [12, 5, 8, 130, 44];
+const number = [12, 5, 8, 130, 44]
 const filterNumber = number.filter((item, index, array) => {
-  console.log(array);
-  return item >= 10 && index > 3;
-});
+  console.log(array)
+  return item >= 10 && index > 3
+})
 // 输出 5 次 [12, 5, 8, 130, 44]
 // 最终 filterNumber 的值为 [44]
 ```
@@ -517,21 +522,21 @@ OK，介绍完毕，咱们看下应用场景：
 let list = [
   { id: '1', name: 'jsLe' },
   { id: '2', name: '梁峻荣' },
-  { id: '3', name: 'JavaScriptLiang' },
-];
+  { id: '3', name: 'JavaScriptLiang' }
+]
 
 function changeData(id, newObj) {
-  list = [...list.filter(item => item.id !== id), newObj];
+  list = [...list.filter(item => item.id !== id), newObj]
 }
 
 changeData('2', {
   id: '4',
-  name: '梁渣渣',
-});
-[
-  {id: "1", name: "jsLe"},
-  {id: "3", name: "JavaScriptLiang"},
-  {id: "4", name: "梁渣渣"},
+  name: '梁渣渣'
+})
+;[
+  { id: '1', name: 'jsLe' },
+  { id: '3', name: 'JavaScriptLiang' },
+  { id: '4', name: '梁渣渣' }
 ]
 ```
 
@@ -551,10 +556,10 @@ changeData('2', {
 let list = [
   { id: '1', name: 'jsLe' },
   { id: '2', name: '梁峻荣' },
-  { id: '3', name: 'JavaScriptLiang' },
-];
+  { id: '3', name: 'JavaScriptLiang' }
+]
 
-const ids = list.map(item => item.id);
+const ids = list.map(item => item.id)
 // ["1", "2", "3"]
 ```
 
@@ -566,14 +571,14 @@ const ids = list.map(item => item.id);
 let list = [
   { id: '1', name: 'jsLe' },
   { id: '2', name: '梁峻荣' },
-  { id: '3', name: 'JavaScriptLiang' },
-];
+  { id: '3', name: 'JavaScriptLiang' }
+]
 
-const id1 = list[list.findIndex(item => item.name === 'JavaScriptLiang')].id;
+const id1 = list[list.findIndex(item => item.name === 'JavaScriptLiang')].id
 // '3'
 
 // 当然有更快速的
-const id2 = list.find(item => item.name === 'JavaScriptLiang').id;
+const id2 = list.find(item => item.name === 'JavaScriptLiang').id
 // '3'
 ```
 
@@ -591,64 +596,64 @@ const id2 = list.find(item => item.name === 'JavaScriptLiang').id;
 
 > [返回目录](#chapter-one)
 
-* [push() 详细了解](./push.md)
+- [push() 详细了解](./push.md)
 
 `push()` 方法将一个或多个元素添加到数组的末尾，并返回该数组的新长度。
 
 ```js
-let arr = [1, 2, 3];
+let arr = [1, 2, 3]
 
 // 通过 push() 方法
-arr.push(4); // [1, 2, 3, 4]
+arr.push(4) // [1, 2, 3, 4]
 ```
 
 **实战 LeetCode**：
 
-* [000 - 字谜分组（puzzle-grouping）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/000-%E5%AD%97%E8%B0%9C%E5%88%86%E7%BB%84%EF%BC%88puzzle-grouping%EF%BC%89.md)
-* [020 - 有效的括号（valid-parentheses）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/020-%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7%EF%BC%88valid-parentheses%EF%BC%89.md)
-* [067 - 二进制求和（add-binary）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/067-%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%B1%82%E5%92%8C%EF%BC%88add-binary%EF%BC%89.md)
-* [088 - 合并两个有序数组（merge-sorted-array）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/088-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%EF%BC%88merge-sorted-array%EF%BC%89.md)
-* [118 - 杨辉三角（pascals-triangle）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/118-%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92%EF%BC%88pascals-triangle%EF%BC%89.md)
+- [000 - 字谜分组（puzzle-grouping）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/000-%E5%AD%97%E8%B0%9C%E5%88%86%E7%BB%84%EF%BC%88puzzle-grouping%EF%BC%89.md)
+- [020 - 有效的括号（valid-parentheses）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/020-%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7%EF%BC%88valid-parentheses%EF%BC%89.md)
+- [067 - 二进制求和（add-binary）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/067-%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%B1%82%E5%92%8C%EF%BC%88add-binary%EF%BC%89.md)
+- [088 - 合并两个有序数组（merge-sorted-array）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/088-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%EF%BC%88merge-sorted-array%EF%BC%89.md)
+- [118 - 杨辉三角（pascals-triangle）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/118-%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92%EF%BC%88pascals-triangle%EF%BC%89.md)
 
 ### <a name="chapter-four-two" id="chapter-four-two">4.2 unshift() - 开头添加元素</a>
 
 > [返回目录](#chapter-one)
 
-* [unshift() 详细了解](./unshift.md)
+- [unshift() 详细了解](./unshift.md)
 
 `unshift()` 方法将一个或多个元素添加到数组的开头，并返回该数组的新长度。
 
 ```js
-let arrA = ['1'];
-arrA.unshift('0');
-console.log(arrA); // ['0', '1']
+let arrA = ['1']
+arrA.unshift('0')
+console.log(arrA) // ['0', '1']
 
-let arrB = [4, 5, 6];
-arrB.unshift(1, 2, 3);
-console.log(arrB); // [1, 2, 3, 4, 5, 6]
+let arrB = [4, 5, 6]
+arrB.unshift(1, 2, 3)
+console.log(arrB) // [1, 2, 3, 4, 5, 6]
 ```
 
 **实战 LeetCode**：
 
-* [066 - 加一（plus-one）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/066-%E5%8A%A0%E4%B8%80%EF%BC%88plus-one%EF%BC%89.md)
-* [067 - 二进制求和（add-binary）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/067-%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%B1%82%E5%92%8C%EF%BC%88add-binary%EF%BC%89.md)
-* [189 - 旋转数组（rotate-array）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/189-%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%EF%BC%88rotate-array%EF%BC%89.md)
-* [202 - 快乐数（happy-number）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/202-%E5%BF%AB%E4%B9%90%E6%95%B0%EF%BC%88happy-number%EF%BC%89.md)
+- [066 - 加一（plus-one）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/066-%E5%8A%A0%E4%B8%80%EF%BC%88plus-one%EF%BC%89.md)
+- [067 - 二进制求和（add-binary）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/067-%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%B1%82%E5%92%8C%EF%BC%88add-binary%EF%BC%89.md)
+- [189 - 旋转数组（rotate-array）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/189-%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%EF%BC%88rotate-array%EF%BC%89.md)
+- [202 - 快乐数（happy-number）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/202-%E5%BF%AB%E4%B9%90%E6%95%B0%EF%BC%88happy-number%EF%BC%89.md)
 
 ### <a name="chapter-four-three" id="chapter-four-three">4.3 pop() - 末尾删除元素</a>
 
 > [返回目录](#chapter-one)
 
-* [pop() 详细了解](./pop.md)
+- [pop() 详细了解](./pop.md)
 
 `pop()` 方法从数组中删除最后一个元素，并返回该元素的值。此方法更改数组的长度。
 
 ```js
-let arr = [1, 2, 3, 4];
-for(let i = 0, time = 1; i < arr.length; time++) {
-  console.log(`------\n第 ${time} 次遍历：`);
-  console.log(arr.pop());
-  console.log(arr);
+let arr = [1, 2, 3, 4]
+for (let i = 0, time = 1; i < arr.length; time++) {
+  console.log(`------\n第 ${time} 次遍历：`)
+  console.log(arr.pop())
+  console.log(arr)
 }
 
 /* Console：
@@ -673,189 +678,189 @@ for(let i = 0, time = 1; i < arr.length; time++) {
 
 **实战 LeetCode**：
 
-* [007 - 整数反转（reverse-integer）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/007-%E6%95%B4%E6%95%B0%E5%8F%8D%E8%BD%AC%EF%BC%88reverse-integer%EF%BC%89.md)
-* [020 - 有效的括号（valid-parentheses）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/020-%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7%EF%BC%88valid-parentheses%EF%BC%89.md)
-* [189 - 旋转数组（rotate-array）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/189-%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%EF%BC%88rotate-array%EF%BC%89.md)
-* [202 - 快乐数（happy-number）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/202-%E5%BF%AB%E4%B9%90%E6%95%B0%EF%BC%88happy-number%EF%BC%89.md)
-* [225 - 用队列实现栈（implement-stack-using-queues）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/225-%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88%EF%BC%88implement-stack-using-queues%EF%BC%89.md)
+- [007 - 整数反转（reverse-integer）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/007-%E6%95%B4%E6%95%B0%E5%8F%8D%E8%BD%AC%EF%BC%88reverse-integer%EF%BC%89.md)
+- [020 - 有效的括号（valid-parentheses）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/020-%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7%EF%BC%88valid-parentheses%EF%BC%89.md)
+- [189 - 旋转数组（rotate-array）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/189-%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%EF%BC%88rotate-array%EF%BC%89.md)
+- [202 - 快乐数（happy-number）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/202-%E5%BF%AB%E4%B9%90%E6%95%B0%EF%BC%88happy-number%EF%BC%89.md)
+- [225 - 用队列实现栈（implement-stack-using-queues）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/225-%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88%EF%BC%88implement-stack-using-queues%EF%BC%89.md)
 
 ### <a name="chapter-four-four" id="chapter-four-four">4.4 shift() - 开头删除元素</a>
 
 > [返回目录](#chapter-one)
 
-* [shift() 详细了解](./shift.md)
+- [shift() 详细了解](./shift.md)
 
 `shift()` 方法从数组中删除第一个元素，并返回该元素的值。此方法更改数组的长度。
 
 ```js
-let str = [1, 2, 3];
-console.log(str.shift()); // 1
-console.log(str.shift()); // 2
-console.log(str.shift()); // 3
-console.log(str.shift()); // undefined
+let str = [1, 2, 3]
+console.log(str.shift()) // 1
+console.log(str.shift()) // 2
+console.log(str.shift()) // 3
+console.log(str.shift()) // undefined
 ```
 
 **实战 LeetCode**：
 
-* [014 - 最长公共前缀（longest-common-prefix）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/014-%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80%EF%BC%88longest-common-prefix%EF%BC%89.md)
-* [171 - Excel表列序号（excel-sheet-column-number）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/171-Excel%E8%A1%A8%E5%88%97%E5%BA%8F%E5%8F%B7%EF%BC%88excel-sheet-column-number%EF%BC%89.md)
-* [225 - 用队列实现栈（implement-stack-using-queues）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/225-%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88%EF%BC%88implement-stack-using-queues%EF%BC%89.md)
-* [232 - 用栈实现队列（implement-queue-using-stacks）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/232-%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97%EF%BC%88implement-queue-using-stacks%EF%BC%89.md)
+- [014 - 最长公共前缀（longest-common-prefix）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/014-%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80%EF%BC%88longest-common-prefix%EF%BC%89.md)
+- [171 - Excel 表列序号（excel-sheet-column-number）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/171-Excel%E8%A1%A8%E5%88%97%E5%BA%8F%E5%8F%B7%EF%BC%88excel-sheet-column-number%EF%BC%89.md)
+- [225 - 用队列实现栈（implement-stack-using-queues）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/225-%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88%EF%BC%88implement-stack-using-queues%EF%BC%89.md)
+- [232 - 用栈实现队列（implement-queue-using-stacks）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/232-%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97%EF%BC%88implement-queue-using-stacks%EF%BC%89.md)
 
 ### <a name="chapter-four-five" id="chapter-four-five">4.5 splice() - 增删改元素</a>
 
 > [返回目录](#chapter-one)
 
-* [splice() 详细了解](./splice.md)
+- [splice() 详细了解](./splice.md)
 
 `splice()` 方法通过删除或替换现有元素或者原地添加新的元素来修改数组,并以数组形式返回被修改的内容。此方法会改变原数组。
 
 ```js
-var months = ['Jan', 'March', 'April', 'June'];
-months.splice(1, 0, 'Feb');
+var months = ['Jan', 'March', 'April', 'June']
+months.splice(1, 0, 'Feb')
 
-console.log(months);
+console.log(months)
 // ['Jan', 'Feb', 'March', 'April', 'June']
 
-months.splice(4, 1, 'May');
+months.splice(4, 1, 'May')
 
-console.log(months);
+console.log(months)
 // ['Jan', 'Feb', 'March', 'April', 'May']
 ```
 
 **实战 LeetCode**：
 
-* [026 - 删除排序数组中的重复项（remove-duplicates-from-sorted-array）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/026-%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9%EF%BC%88remove-duplicates-from-sorted-array%EF%BC%89.md)
-* [027 - 移除元素（remove-element）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/027-%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0%EF%BC%88remove-element%EF%BC%89.md)
-* [088 - 合并两个有序数组（merge-sorted-array）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/088-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%EF%BC%88merge-sorted-array%EF%BC%89.md)
-* [136 - 只出现一次的数字（single-number）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/136-%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97%EF%BC%88single-number%EF%BC%89.md)
-* [189 - 旋转数组（rotate-array）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/189-%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%EF%BC%88rotate-array%EF%BC%89.md)
+- [026 - 删除排序数组中的重复项（remove-duplicates-from-sorted-array）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/026-%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9%EF%BC%88remove-duplicates-from-sorted-array%EF%BC%89.md)
+- [027 - 移除元素（remove-element）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/027-%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0%EF%BC%88remove-element%EF%BC%89.md)
+- [088 - 合并两个有序数组（merge-sorted-array）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/088-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%EF%BC%88merge-sorted-array%EF%BC%89.md)
+- [136 - 只出现一次的数字（single-number）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/136-%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97%EF%BC%88single-number%EF%BC%89.md)
+- [189 - 旋转数组（rotate-array）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/189-%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%EF%BC%88rotate-array%EF%BC%89.md)
 
 ### <a name="chapter-four-six" id="chapter-four-six">4.6 concat() - 拼合两个数组</a>
 
 > [返回目录](#chapter-one)
 
-* [concat() 详细了解](./concat.md)
+- [concat() 详细了解](./concat.md)
 
 `concat()` 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组。
 
 ```js
-const newArr = [1, 2, 3].concat(['a', 'b', 'c']);
+const newArr = [1, 2, 3].concat(['a', 'b', 'c'])
 
 // [1, 2, 3, 'a', 'b', 'c']
 ```
 
 **实战 LeetCode**：
 
-* [004 - 寻找两个数组的中位数（median-of-two-sorted-arrays）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/hard/004-%E5%AF%BB%E6%89%BE%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0%EF%BC%88median-of-two-sorted-arrays%EF%BC%89.md)
+- [004 - 寻找两个数组的中位数（median-of-two-sorted-arrays）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/hard/004-%E5%AF%BB%E6%89%BE%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0%EF%BC%88median-of-two-sorted-arrays%EF%BC%89.md)
 
 ### <a name="chapter-four-seven" id="chapter-four-seven">4.7 filter() - 过滤数组元素</a>
 
 > [返回目录](#chapter-one)
 
-* [filter() 详细了解](./filter.md)
+- [filter() 详细了解](./filter.md)
 
 `filter()` 方法创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。
 
 ```js
 function isBigEnough(element) {
-  return element >= 10;
+  return element >= 10
 }
-var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
+var filtered = [12, 5, 8, 130, 44].filter(isBigEnough)
 // [12, 130, 44]
 ```
 
 **实战 LeetCode**：
 
-* [349 - 两个数组的交集（intersection-of-two-arrays）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/349-%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86%EF%BC%88intersection-of-two-arrays%EF%BC%89.md)
+- [349 - 两个数组的交集（intersection-of-two-arrays）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/349-%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86%EF%BC%88intersection-of-two-arrays%EF%BC%89.md)
 
 ### <a name="chapter-four-eight" id="chapter-four-eight">4.8 forEach() - 遍历操作原数组</a>
 
 > [返回目录](#chapter-one)
 
-* [forEach() 详细了解](./forEach.md)
+- [forEach() 详细了解](./forEach.md)
 
 `forEach()` 方法对数组的每个元素执行一次提供的函数。
 
 ```js
-const items = ['item1', 'item2', 'item3'];
-const copy = [];
+const items = ['item1', 'item2', 'item3']
+const copy = []
 
 // 使用 for 遍历
 for (let i = 0; i < items.length; i++) {
-  copy.push(items[i]);
+  copy.push(items[i])
 }
 
 // 使用 forEach 遍历
-items.forEach(function(item){
-  copy.push(item);
-});
+items.forEach(function(item) {
+  copy.push(item)
+})
 ```
 
 **实战 LeetCode**：
 
-* [073 - 矩阵置零（set-matrix-zeroes）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/medium/073-%E7%9F%A9%E9%98%B5%E7%BD%AE%E9%9B%B6%EF%BC%88set-matrix-zeroes%EF%BC%89.md)
-* [350 - 两个数组的交集II（intersection-of-two-arrays-ii）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/350-%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86II%EF%BC%88intersection-of-two-arrays-ii%EF%BC%89.md)
-* [383 - 赎金信（ransom-note）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/383-%E8%B5%8E%E9%87%91%E4%BF%A1%EF%BC%88ransom-note%EF%BC%89.md)
-* [434 - 字符串中的单词数（number-of-segments-in-a-string）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/434-%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%8D%95%E8%AF%8D%E6%95%B0%EF%BC%88number-of-segments-in-a-string%EF%BC%89.md)
+- [073 - 矩阵置零（set-matrix-zeroes）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/medium/073-%E7%9F%A9%E9%98%B5%E7%BD%AE%E9%9B%B6%EF%BC%88set-matrix-zeroes%EF%BC%89.md)
+- [350 - 两个数组的交集 II（intersection-of-two-arrays-ii）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/350-%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86II%EF%BC%88intersection-of-two-arrays-ii%EF%BC%89.md)
+- [383 - 赎金信（ransom-note）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/383-%E8%B5%8E%E9%87%91%E4%BF%A1%EF%BC%88ransom-note%EF%BC%89.md)
+- [434 - 字符串中的单词数（number-of-segments-in-a-string）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/434-%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%8D%95%E8%AF%8D%E6%95%B0%EF%BC%88number-of-segments-in-a-string%EF%BC%89.md)
 
 ### <a name="chapter-four-night" id="chapter-four-night">4.9 join() - 数组转字符串</a>
 
 > [返回目录](#chapter-one)
 
-* [join() 详细了解](./join.md)
+- [join() 详细了解](./join.md)
 
 `join()` 方法将一个数组（或一个类数组对象）的所有元素连接成一个字符串并返回这个字符串。
 
 ```js
-var a = ['Wind', 'Rain', 'Fire'];
-var myVar1 = a.join();      // myVar1 的值变为 "Wind,Rain,Fire"
-var myVar2 = a.join(', ');  // myVar2的值变为"Wind, Rain, Fire"
-var myVar3 = a.join(' + '); // myVar3的值变为"Wind + Rain + Fire"
-var myVar4 = a.join('');    // myVar4的值变为"WindRainFire"
+var a = ['Wind', 'Rain', 'Fire']
+var myVar1 = a.join() // myVar1 的值变为 "Wind,Rain,Fire"
+var myVar2 = a.join(', ') // myVar2的值变为"Wind, Rain, Fire"
+var myVar3 = a.join(' + ') // myVar3的值变为"Wind + Rain + Fire"
+var myVar4 = a.join('') // myVar4的值变为"WindRainFire"
 ```
 
 **实战 LeetCode**：
 
-* [000 - 字谜分组（puzzle-grouping）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/000-%E5%AD%97%E8%B0%9C%E5%88%86%E7%BB%84%EF%BC%88puzzle-grouping%EF%BC%89.md)
-* [067 - 二进制求和（add-binary）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/067-%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%B1%82%E5%92%8C%EF%BC%88add-binary%EF%BC%89.md)
-* [125 - 验证回文串（valid-palindrome）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/125-%E9%AA%8C%E8%AF%81%E5%9B%9E%E6%96%87%E4%B8%B2%EF%BC%88valid-palindrome%EF%BC%89.md)
-* [190 - 颠倒二进制位（reverse-bit）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/190-%E9%A2%A0%E5%80%92%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BD%8D%EF%BC%88reverse-bit%EF%BC%89.md)
-* [242 - 有效的字母异位词（valid-anagram）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/242-%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D%EF%BC%88valid-anagram%EF%BC%89.md)
+- [000 - 字谜分组（puzzle-grouping）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/000-%E5%AD%97%E8%B0%9C%E5%88%86%E7%BB%84%EF%BC%88puzzle-grouping%EF%BC%89.md)
+- [067 - 二进制求和（add-binary）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/067-%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%B1%82%E5%92%8C%EF%BC%88add-binary%EF%BC%89.md)
+- [125 - 验证回文串（valid-palindrome）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/125-%E9%AA%8C%E8%AF%81%E5%9B%9E%E6%96%87%E4%B8%B2%EF%BC%88valid-palindrome%EF%BC%89.md)
+- [190 - 颠倒二进制位（reverse-bit）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/190-%E9%A2%A0%E5%80%92%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BD%8D%EF%BC%88reverse-bit%EF%BC%89.md)
+- [242 - 有效的字母异位词（valid-anagram）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/242-%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D%EF%BC%88valid-anagram%EF%BC%89.md)
 
 ### <a name="chapter-four-ten" id="chapter-four-ten">4.10 indexOf() - 顺序查找第一个</a>
 
 > [返回目录](#chapter-one)
 
-* [indexOf() 详细了解](./indexOf.md)
+- [indexOf() 详细了解](./indexOf.md)
 
 `indexOf()` 方法返回调用 String 对象中第一次出现的指定值的索引。
 
 ```js
-'I am jsLe'.indexOf('a', 4); // 9
-[1, 3, 1, 4].indexOf(1, 1); // 2
-'怪盗 jsLe'.indexOf('我'); // -1
+'I am jsLe'.indexOf('a', 4) // 9
+;[1, 3, 1, 4].indexOf(1, 1) // 2
+'怪盗 jsLe'.indexOf('我') // -1
 ```
 
 **实战 LeetCode**：
 
-* [001 - 两数之和（two-sum）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/001-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%EF%BC%88two-sum%EF%BC%89.md)
-* [027 - 移除元素（remove-element）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/027-%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0%EF%BC%88remove-element%EF%BC%89.md)
-* [028 - 实现strStr（implement-strstr）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/028-%E5%AE%9E%E7%8E%B0strStr%EF%BC%88implement-strstr%EF%BC%89.md)
-* [205 - 同构字符串（isomorphic-strings）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/205-%E5%90%8C%E6%9E%84%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%88isomorphic-strings%EF%BC%89.md)
-* [217 - 存在重复元素（contains-duplicate）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/217-%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0%EF%BC%88contains-duplicate%EF%BC%89.md)
+- [001 - 两数之和（two-sum）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/001-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%EF%BC%88two-sum%EF%BC%89.md)
+- [027 - 移除元素（remove-element）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/027-%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0%EF%BC%88remove-element%EF%BC%89.md)
+- [028 - 实现 strStr（implement-strstr）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/028-%E5%AE%9E%E7%8E%B0strStr%EF%BC%88implement-strstr%EF%BC%89.md)
+- [205 - 同构字符串（isomorphic-strings）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/205-%E5%90%8C%E6%9E%84%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%88isomorphic-strings%EF%BC%89.md)
+- [217 - 存在重复元素（contains-duplicate）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/217-%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0%EF%BC%88contains-duplicate%EF%BC%89.md)
 
 ### <a name="chapter-four-eleven" id="chapter-four-eleven">4.11 lastIndexOf() - 倒序查找第一个</a>
 
 > [返回目录](#chapter-one)
 
-* [lastIndexOf() 详细了解](./lastIndexOf.md)
+- [lastIndexOf() 详细了解](./lastIndexOf.md)
 
 `lastIndexOf()` 方法返回指定元素（也即有效的 JavaScript 值或变量）在数组中的最后一个的索引，如果不存在则返回 -1。
 
 ```js
-var array = [2, 5, 9, 2];
-var index = array.lastIndexOf(2); // 3
+var array = [2, 5, 9, 2]
+var index = array.lastIndexOf(2) // 3
 ```
 
 **实战 LeetCode**：
@@ -866,58 +871,62 @@ var index = array.lastIndexOf(2); // 3
 
 > [返回目录](#chapter-one)
 
-* [map() 详细了解](./map.md)
+- [map() 详细了解](./map.md)
 
 `map()` 方法创建一个新数组，其结果是该数组中的每个元素都调用一个提供的函数后返回的结果。
 
 ```js
-[1, 2, 3, 4].map(item => item * 2) // [2, 4, 6, 8]
+;[1, 2, 3, 4]
+  .map(item => item * 2) // [2, 4, 6, 8]
 
-[{
-  name: 'jsLe',
-  age: 24,
-}, {
-  name: '梁峻荣',
-  age: 124
-}].map((item, index) => {
-  return `${index} - ${item.name}`;
-}) // ['0 - jsLe', '1 - 梁峻荣']
+  [
+    ({
+      name: 'jsLe',
+      age: 24
+    },
+    {
+      name: '梁峻荣',
+      age: 124
+    })
+  ].map((item, index) => {
+    return `${index} - ${item.name}`
+  }) // ['0 - jsLe', '1 - 梁峻荣']
 ```
 
 **实战 LeetCode**：
 
-* [001 - 两数之和（two-sum）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/001-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%EF%BC%88two-sum%EF%BC%89.md)
-* [205 - 同构字符串（isomorphic-strings）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/205-%E5%90%8C%E6%9E%84%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%88isomorphic-strings%EF%BC%89.md)
-* [412 - FizzBuzz（fizz-buzz）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/412-FizzBuzz%EF%BC%88fizz-buzz%EF%BC%89.md)
-* [434 - 字符串中的单词数（number-of-segments-in-a-string）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/434-%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%8D%95%E8%AF%8D%E6%95%B0%EF%BC%88number-of-segments-in-a-string%EF%BC%89.md)
+- [001 - 两数之和（two-sum）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/001-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%EF%BC%88two-sum%EF%BC%89.md)
+- [205 - 同构字符串（isomorphic-strings）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/205-%E5%90%8C%E6%9E%84%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%88isomorphic-strings%EF%BC%89.md)
+- [412 - FizzBuzz（fizz-buzz）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/412-FizzBuzz%EF%BC%88fizz-buzz%EF%BC%89.md)
+- [434 - 字符串中的单词数（number-of-segments-in-a-string）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/434-%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%8D%95%E8%AF%8D%E6%95%B0%EF%BC%88number-of-segments-in-a-string%EF%BC%89.md)
 
 ### <a name="chapter-four-thirteen" id="chapter-four-thirteen">4.13 reverse() - 反转数组元素</a>
 
 > [返回目录](#chapter-one)
 
-* [reverse() 详细了解](./reverse.md)
+- [reverse() 详细了解](./reverse.md)
 
 `reverse()` 方法将数组中元素的位置颠倒,并返回该数组。该方法会改变原数组。
 
 ```js
-let arr = [1, 2, 3];
-arr.reverse();
-console.log(arr); // [3, 2, 1]
+let arr = [1, 2, 3]
+arr.reverse()
+console.log(arr) // [3, 2, 1]
 ```
 
 **实战 LeetCode**：
 
-* [067 - 二进制求和（add-binary）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/067-%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%B1%82%E5%92%8C%EF%BC%88add-binary%EF%BC%89.md)
-* [125 - 验证回文串（valid-palindrome）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/125-%E9%AA%8C%E8%AF%81%E5%9B%9E%E6%96%87%E4%B8%B2%EF%BC%88valid-palindrome%EF%BC%89.md)
-* [171 - Excel表列序号（excel-sheet-column-number）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/171-Excel%E8%A1%A8%E5%88%97%E5%BA%8F%E5%8F%B7%EF%BC%88excel-sheet-column-number%EF%BC%89.md)
-* [190 - 颠倒二进制位（reverse-bit）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/190-%E9%A2%A0%E5%80%92%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BD%8D%EF%BC%88reverse-bit%EF%BC%89.md)
-* [344 - 反转字符串（reverse-string）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/344-%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%88reverse-string%EF%BC%89.md)
+- [067 - 二进制求和（add-binary）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/067-%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%B1%82%E5%92%8C%EF%BC%88add-binary%EF%BC%89.md)
+- [125 - 验证回文串（valid-palindrome）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/125-%E9%AA%8C%E8%AF%81%E5%9B%9E%E6%96%87%E4%B8%B2%EF%BC%88valid-palindrome%EF%BC%89.md)
+- [171 - Excel 表列序号（excel-sheet-column-number）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/171-Excel%E8%A1%A8%E5%88%97%E5%BA%8F%E5%8F%B7%EF%BC%88excel-sheet-column-number%EF%BC%89.md)
+- [190 - 颠倒二进制位（reverse-bit）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/190-%E9%A2%A0%E5%80%92%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BD%8D%EF%BC%88reverse-bit%EF%BC%89.md)
+- [344 - 反转字符串（reverse-string）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/344-%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%88reverse-string%EF%BC%89.md)
 
 ### <a name="chapter-four-fourteen" id="chapter-four-fourteen">4.14 sort() - 数组排序</a>
 
 > [返回目录](#chapter-one)
 
-* [sort()](./sort.md)
+- [sort()](./sort.md)
 
 `sort()` 对数组的元素进行排序，并返回数组。
 
@@ -930,100 +939,100 @@ console.log(arr); // [3, 2, 1]
 
 **实战 LeetCode**：
 
-* [268 - 缺失数字（missing-number）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/268-%E7%BC%BA%E5%A4%B1%E6%95%B0%E5%AD%97%EF%BC%88missing-number%EF%BC%89.md)
-* [389 - 找不同（find-the-difference）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/389-%E6%89%BE%E4%B8%8D%E5%90%8C%EF%BC%88find-the-difference%EF%BC%89.md)
-* [414 - 第三大的数（third-maximum-number）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/414-%E7%AC%AC%E4%B8%89%E5%A4%A7%E7%9A%84%E6%95%B0%EF%BC%88third-maximum-number%EF%BC%89.md)
-* [448 - 找出所有数组中消失的数字（find-all-numbers-disappeared-in-an-array）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/448-%E6%89%BE%E5%87%BA%E6%89%80%E6%9C%89%E6%95%B0%E7%BB%84%E4%B8%AD%E6%B6%88%E5%A4%B1%E7%9A%84%E6%95%B0%E5%AD%97%EF%BC%88find-all-numbers-disappeared-in-an-array%EF%BC%89.md)
-* [455 - 分发饼干（assign-cookies）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/455-%E5%88%86%E5%8F%91%E9%A5%BC%E5%B9%B2%EF%BC%88assign-cookies%EF%BC%89.md)
+- [268 - 缺失数字（missing-number）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/268-%E7%BC%BA%E5%A4%B1%E6%95%B0%E5%AD%97%EF%BC%88missing-number%EF%BC%89.md)
+- [389 - 找不同（find-the-difference）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/389-%E6%89%BE%E4%B8%8D%E5%90%8C%EF%BC%88find-the-difference%EF%BC%89.md)
+- [414 - 第三大的数（third-maximum-number）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/414-%E7%AC%AC%E4%B8%89%E5%A4%A7%E7%9A%84%E6%95%B0%EF%BC%88third-maximum-number%EF%BC%89.md)
+- [448 - 找出所有数组中消失的数字（find-all-numbers-disappeared-in-an-array）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/448-%E6%89%BE%E5%87%BA%E6%89%80%E6%9C%89%E6%95%B0%E7%BB%84%E4%B8%AD%E6%B6%88%E5%A4%B1%E7%9A%84%E6%95%B0%E5%AD%97%EF%BC%88find-all-numbers-disappeared-in-an-array%EF%BC%89.md)
+- [455 - 分发饼干（assign-cookies）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/455-%E5%88%86%E5%8F%91%E9%A5%BC%E5%B9%B2%EF%BC%88assign-cookies%EF%BC%89.md)
 
 ### <a name="chapter-four-fifteen" id="chapter-four-fifteen">4.15 toString() - 数组转字符串</a>
 
 > [返回目录](#chapter-one)
 
-* [toString()](./toString.md)
+- [toString()](./toString.md)
 
 `toString()` 返回一个字符串，表示指定的数组及其元素。
 
 ```js
-let arr = [1, 2, 3];
-arr.toString(); // '1,2,3'
+let arr = [1, 2, 3]
+arr.toString() // '1,2,3'
 ```
 
 **实战 LeetCode**：
 
-* [190 - 颠倒二进制位（reverse-bit）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/190-%E9%A2%A0%E5%80%92%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BD%8D%EF%BC%88reverse-bit%EF%BC%89.md)
-* [191 - 位1的个数（number-of-1-bits）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/191-%E4%BD%8D1%E7%9A%84%E4%B8%AA%E6%95%B0%EF%BC%88number-of-1-bits%EF%BC%89.md)
-* [258 - 各位相加（add-digits）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/258-%E5%90%84%E4%BD%8D%E7%9B%B8%E5%8A%A0%EF%BC%88add-digits%EF%BC%89.md)
-* [443 - 压缩字符串（string-compression）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/443-%E5%8E%8B%E7%BC%A9%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%88string-compression%EF%BC%89.md)
+- [190 - 颠倒二进制位（reverse-bit）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/190-%E9%A2%A0%E5%80%92%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%BD%8D%EF%BC%88reverse-bit%EF%BC%89.md)
+- [191 - 位 1 的个数（number-of-1-bits）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/191-%E4%BD%8D1%E7%9A%84%E4%B8%AA%E6%95%B0%EF%BC%88number-of-1-bits%EF%BC%89.md)
+- [258 - 各位相加（add-digits）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/258-%E5%90%84%E4%BD%8D%E7%9B%B8%E5%8A%A0%EF%BC%88add-digits%EF%BC%89.md)
+- [443 - 压缩字符串（string-compression）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/443-%E5%8E%8B%E7%BC%A9%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%88string-compression%EF%BC%89.md)
 
 ### <a name="chapter-four-sixteen" id="chapter-four-sixteen">4.16 includes() - 数组包含某元素</a>
 
 > [返回目录](#chapter-one)
 
-* [includes() 详细了解](./includes.md)
+- [includes() 详细了解](./includes.md)
 
 `includes()` 方法用来判断一个数组是否包含一个指定的值，根据情况，如果包含则返回 true，否则返回 false。
 
 ```js
-[1, 2, 3].includes(2);     // true
-[1, 2, 3].includes(4);     // false
-[1, 2, 3].includes(3, 3);  // false
-[1, 2, 3].includes(3, -1); // true
-[1, 2, NaN].includes(NaN); // true
+;[1, 2, 3].includes(2) // true
+;[1, 2, 3].includes(4) // false
+;[1, 2, 3].includes(3, 3) // false
+;[1, 2, 3].includes(3, -1) // true
+;[1, 2, NaN].includes(NaN) // true
 ```
 
 **实战 LeetCode**：
 
-* [263 - 丑数（ugly-number）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/263-%E4%B8%91%E6%95%B0%EF%BC%88ugly-number%EF%BC%89.md)
+- [263 - 丑数（ugly-number）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/263-%E4%B8%91%E6%95%B0%EF%BC%88ugly-number%EF%BC%89.md)
 
 ### <a name="chapter-four-seventeen" id="chapter-four-seventeen">4.17 fill() - 填充数组</a>
 
 > [返回目录](#chapter-one)
 
-* [fill() 详细了解](./fill.md)
+- [fill() 详细了解](./fill.md)
 
 `fill()` 方法用一个固定值填充一个数组中从起始索引到终止索引内的全部元素。不包括终止索引。
 
 ```js
-let arr = [1, 2, 3, 4, 5];
-arr = new Array(arr.length).fill(0);
+let arr = [1, 2, 3, 4, 5]
+arr = new Array(arr.length).fill(0)
 // arr - [0, 0, 0, 0, 0];
 ```
 
 **实战 LeetCode**：
 
-* [073 - 矩阵置零（set-matrix-zeroes）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/medium/073-%E7%9F%A9%E9%98%B5%E7%BD%AE%E9%9B%B6%EF%BC%88set-matrix-zeroes%EF%BC%89.md)
+- [073 - 矩阵置零（set-matrix-zeroes）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/medium/073-%E7%9F%A9%E9%98%B5%E7%BD%AE%E9%9B%B6%EF%BC%88set-matrix-zeroes%EF%BC%89.md)
 
 ### <a name="chapter-four-eighteen" id="chapter-four-eighteen">4.18 reduce() - 数组累计</a>
 
 > [返回目录](#chapter-one)
 
-* [reduce()](./reduce.md)
+- [reduce()](./reduce.md)
 
-`reduce()` 方法对数组中的每个元素执行一个由您提供的reducer函数(升序执行)，将其结果汇总为单个返回值。
+`reduce()` 方法对数组中的每个元素执行一个由您提供的 reducer 函数(升序执行)，将其结果汇总为单个返回值。
 
 ```js
-[1, 2, 3, 4].reduce((prev, next) => {
-  return prev + next;
-}); // 10
-['前端', 'pang', 'liang'].reduce((prev, next, index) => {
-  return (index = 0 ? '-js' : '') + prev + 'js' + next;
-}); // 前端-jspang-jsLe
+;[1, 2, 3, 4].reduce((prev, next) => {
+  return prev + next
+}) // 10
+;['前端', 'pang', 'liang'].reduce((prev, next, index) => {
+  return (index = 0 ? '-js' : '') + prev + 'js' + next
+}) // 前端-jspang-jsLe
 ```
 
 **实战 LeetCode**：
 
-* [014 - 最长公共前缀（longest-common-prefix）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/014-%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80%EF%BC%88longest-common-prefix%EF%BC%89.md)
-* [202 - 快乐数（happy-number）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/202-%E5%BF%AB%E4%B9%90%E6%95%B0%EF%BC%88happy-number%EF%BC%89.md)
-* [258 - 各位相加（add-digits）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/258-%E5%90%84%E4%BD%8D%E7%9B%B8%E5%8A%A0%EF%BC%88add-digits%EF%BC%89.md)
-* [268 - 缺失数字（missing-number）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/268-%E7%BC%BA%E5%A4%B1%E6%95%B0%E5%AD%97%EF%BC%88missing-number%EF%BC%89.md)
-* [049 - 字母异位词分组（group-anagrams）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/medium/049-%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D%E5%88%86%E7%BB%84%EF%BC%88group-anagrams%EF%BC%89.md)
+- [014 - 最长公共前缀（longest-common-prefix）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/014-%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80%EF%BC%88longest-common-prefix%EF%BC%89.md)
+- [202 - 快乐数（happy-number）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/202-%E5%BF%AB%E4%B9%90%E6%95%B0%EF%BC%88happy-number%EF%BC%89.md)
+- [258 - 各位相加（add-digits）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/258-%E5%90%84%E4%BD%8D%E7%9B%B8%E5%8A%A0%EF%BC%88add-digits%EF%BC%89.md)
+- [268 - 缺失数字（missing-number）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/easy/268-%E7%BC%BA%E5%A4%B1%E6%95%B0%E5%AD%97%EF%BC%88missing-number%EF%BC%89.md)
+- [049 - 字母异位词分组（group-anagrams）](https://github.com/LiangJunrong/document-library/blob/master/other-library/LeetCode/medium/049-%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D%E5%88%86%E7%BB%84%EF%BC%88group-anagrams%EF%BC%89.md)
 
 ### <a name="chapter-four-nighteen" id="chapter-four-nighteen">4.19 find() - 查找数组元素</a>
 
 > [返回目录](#chapter-one)
 
-* [find() 详细了解](./find.md)
+- [find() 详细了解](./find.md)
 
 `find()` 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined。
 
@@ -1034,7 +1043,7 @@ var inventory = [
   {name: 'cherries', quantity: 5}
 ];
 
-function findCherries(fruit) { 
+function findCherries(fruit) {
   return fruit.name === 'cherries';
 }
 
@@ -1050,18 +1059,18 @@ inventory.find(findCherries));
 
 > [返回目录](#chapter-one)
 
-* [findIndex() 详细了解](./findIndex.md)
+- [findIndex() 详细了解](./findIndex.md)
 
 `findIndex()` 方法返回数组中满足提供的测试函数的第一个元素的索引。否则返回-1。
 
 ```js
-var array1 = [5, 12, 8, 130, 44];
+var array1 = [5, 12, 8, 130, 44]
 
 function isLargeNumber(element) {
-  return element > 13;
+  return element > 13
 }
 
-array1.findIndex(isLargeNumber); // 3
+array1.findIndex(isLargeNumber) // 3
 ```
 
 **实战 LeetCode**：

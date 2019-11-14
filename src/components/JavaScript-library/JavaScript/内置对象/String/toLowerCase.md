@@ -1,28 +1,27 @@
-方法 - toLowerCase()
-===
+# 方法 - toLowerCase()
 
 > Create by **jsLe** on **2019-09-16 14:36:42**  
 > Recently revised in **2019-09-16 14:36:45**
 
-* **原文**：[MDN - toLowerCase()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase)
+- **原文**：[MDN - toLowerCase()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase)
 
-* **功能**：`toLowerCase()` 会将调用该方法的字符串值转为小写形式，并返回。
+- **功能**：`toLowerCase()` 会将调用该方法的字符串值转为小写形式，并返回。
 
-* **语法**：`str.toLowerCase()`
+- **语法**：`str.toLowerCase()`
 
-* **返回值**：一个新的字符串，表示串转换为小写的调用字符。
+- **返回值**：一个新的字符串，表示串转换为小写的调用字符。
 
-* **代码**：
+- **代码**：
 
 ```js
 console.log('中文简体 zh-CN || zh-Hans'.toLowerCase());
 // 中文简体 zh-cn || zh-hans
 
-​console.log( "ALPHABET".toLowerCase() ); 
+​console.log( "ALPHABET".toLowerCase() );
 // "alphabet"
 ```
 
-* **注释**：`toLocalLowerCase` 区别于 `toLowerCase` 在于一些小种语言需要使用特定的 `toLocalLowerCase`/`toLocaleUpperCase` 进行转换大小写。
+- **注释**：`toLocalLowerCase` 区别于 `toLowerCase` 在于一些小种语言需要使用特定的 `toLocalLowerCase`/`toLocaleUpperCase` 进行转换大小写。
 
 ---
 

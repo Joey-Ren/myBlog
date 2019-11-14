@@ -1,5 +1,4 @@
-203 - 移除链表元素（remove-linked-list-elements）
-===
+# 203 - 移除链表元素（remove-linked-list-elements）
 
 > Create by **jsLe** on **2019-07-09 19:01:37**  
 > Recently revised in **2019-07-09 19:52:55**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - 正常解法](#chapter-three-one) |
-| &emsp;[3.2 解法 - 递归](#chapter-three-two) |
+| &emsp;[3.1 解法 - 正常解法](#chapter-three-one)                                          |
+| &emsp;[3.2 解法 - 递归](#chapter-three-two)                                              |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：链表
-* **题目地址**：https://leetcode-cn.com/problems/remove-linked-list-elements/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：链表
+- **题目地址**：https://leetcode-cn.com/problems/remove-linked-list-elements/
+- **题目内容**：
 
 ```
 删除链表中等于给定值 val 的所有节点。
@@ -44,65 +43,77 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var removeElements = function(head, val) {
   let result = {
     val: -99,
-    next: head,
-  };
-  let chase = result;
-  while(chase.next) {
+    next: head
+  }
+  let chase = result
+  while (chase.next) {
     if (chase.next.val === val) {
-      chase.next = chase.next.next;
+      chase.next = chase.next.next
     } else {
-      chase = chase.next;
+      chase = chase.next
     }
   }
-  return result.next;
-};
+  return result.next
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 > `head`：
 
 ```js
 let head = {
-  val: 1, next: {
-    val: 2, next: {
-      val: 6, next: {
-        val: 3, next: {
-          val: 4, next: {
-            val: 5, next: {
-              val: 6, next: null,
-            },
-          },
-        },
-      },
-    },
-  },
-};
+  val: 1,
+  next: {
+    val: 2,
+    next: {
+      val: 6,
+      next: {
+        val: 3,
+        next: {
+          val: 4,
+          next: {
+            val: 5,
+            next: {
+              val: 6,
+              next: null
+            }
+          }
+        }
+      }
+    }
+  }
+}
 ```
 
 > `return`：
 
 ```js
 let head = {
-  val: 1, next: {
-    val: 2, next: {
-      val: 3, next: {
-        val: 4, next: {
-          val: 5, next: null
-        },
-      },
-    },
-  },
-};
+  val: 1,
+  next: {
+    val: 2,
+    next: {
+      val: 3,
+      next: {
+        val: 4,
+        next: {
+          val: 5,
+          next: null
+        }
+      }
+    }
+  }
+}
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -111,7 +122,7 @@ let head = {
   ✔ Your memory usage beats 24.79 % of javascript submissions (37.5 MB)
 ```
 
-* **解题思路**：
+- **解题思路**：
 
 **虽然链表做过几次，但是感觉印象不深。**
 
@@ -121,20 +132,27 @@ let head = {
 
 ```js
 let head = {
-  val: 1, next: {
-    val: 2, next: {
-      val: 6, next: {
-        val: 3, next: {
-          val: 4, next: {
-            val: 5, next: {
-              val: 6, next: null,
-            },
-          },
-        },
-      },
-    },
-  },
-};
+  val: 1,
+  next: {
+    val: 2,
+    next: {
+      val: 6,
+      next: {
+        val: 3,
+        next: {
+          val: 4,
+          next: {
+            val: 5,
+            next: {
+              val: 6,
+              next: null
+            }
+          }
+        }
+      }
+    }
+  }
+}
 ```
 
 小伙伴们可以发现，相对于 **树** 来说，**链表** 比较简单一点，一个 `val` 显示当前的值，一个 `next` 指向下一个节点。
@@ -145,18 +163,18 @@ let head = {
 var removeElements = function(head, val) {
   let result = {
     val: -99,
-    next: head,
-  };
-  let chase = result;
-  while(chase.next) {
+    next: head
+  }
+  let chase = result
+  while (chase.next) {
     if (chase.next.val === val) {
-      chase.next = chase.next.next;
+      chase.next = chase.next.next
     } else {
-      chase = chase.next;
+      chase = chase.next
     }
   }
-  return result.next;
-};
+  return result.next
+}
 ```
 
 1. 新建一个 `result` 节点，用来获取最终的节点。因为我们不能直接引用 `head`（非址引用），所以我们创造一个，最后只需要指向它的 `next`，即可返回正确的链表。
@@ -170,23 +188,23 @@ var removeElements = function(head, val) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var removeElements = function(head, val) {
   if (!head) {
-    return null;
+    return null
   }
-  head.next = removeElements(head.next, val);
+  head.next = removeElements(head.next, val)
   if (head.val === val) {
-    return head.next;
+    return head.next
   } else {
-    return head;
+    return head
   }
-};
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 ```js
 ✔ Accepted
@@ -195,7 +213,7 @@ var removeElements = function(head, val) {
   ✔ Your memory usage beats 24.79 % of javascript submissions (37.5 MB)
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -204,7 +222,7 @@ var removeElements = function(head, val) {
   ✔ Your memory usage beats 5.13 % of javascript submissions (38.2 MB)
 ```
 
-* **解题思路**：
+- **解题思路**：
 
 **光明正大的偷懒。**
 

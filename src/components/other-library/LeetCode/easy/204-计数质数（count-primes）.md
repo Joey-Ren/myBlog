@@ -1,5 +1,4 @@
-204 - 计数质数（count-primes）
-===
+# 204 - 计数质数（count-primes）
 
 > Create by **jsLe** on **2019-07-10 19:07:34**  
 > Recently revised in **2019-7-11 11:01:06**
@@ -8,25 +7,25 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 进一步思考](#chapter-seven) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six)           |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 进一步思考](#chapter-seven)   |
 | <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 再进一步思考](#chapter-eight) |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：哈希表、数学
-* **题目地址**：https://leetcode-cn.com/problems/count-primes/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：哈希表、数学
+- **题目地址**：https://leetcode-cn.com/problems/count-primes/
+- **题目内容**：
 
 ```
 统计所有小于非负整数 n 的质数的数量。
@@ -44,25 +43,25 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码 - 厄拉多塞筛法**：
+- **解题代码 - 厄拉多塞筛法**：
 
 ```js
-var countPrimes = function (n) {
+var countPrimes = function(n) {
   if (n < 3) {
-    return 0;
+    return 0
   }
-  let result = [...new Array(n).keys()];
-  result[0] = result[1] = null;
+  let result = [...new Array(n).keys()]
+  result[0] = result[1] = null
   for (let i = 2; i < n; i++) {
     for (let j = 2; i * j <= n; j++) {
-      result[i * j] = null;
+      result[i * j] = null
     }
   }
   result = result.filter(a => {
-    return a != null;
-  });
-  return result.length;
-};
+    return a != null
+  })
+  return result.length
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
@@ -96,30 +95,30 @@ var countPrimes = function (n) {
 具体操作：
 
 1. 先将 2~n 的各个数放入表中，然后在 2 的上面画一个圆圈，表示 2 是质数，然后划去 2 的其他倍数；
-2. 接着，上一步中第 1 个既未画圈又没有被划去的数是 3，将它画圈，表示它是质数，再划去3的其他倍数；
+2. 接着，上一步中第 1 个既未画圈又没有被划去的数是 3，将它画圈，表示它是质数，再划去 3 的其他倍数；
 3. 再来，现在既未画圈又没有被划去的第 1 个数是 5，将它画圈，表示它是质数，并划去 5 的其他倍数
 4. ……依次类推，一直到所有小于或等于 n 的各数都画了圈或划去为止。这时，表中画了圈的以及未划去的那些数正好就是小于 n 的素数。
 
 **然后**，我们查看大神操作：
 
 ```js
-var countPrimes = function (n) {
+var countPrimes = function(n) {
   if (n < 3) {
-    return 0;
+    return 0
   }
-  let result = [...new Array(n).keys()];
-  result[0] = result[1] = null;
+  let result = [...new Array(n).keys()]
+  result[0] = result[1] = null
   for (let i = 2; i < n; i++) {
     for (let j = 2; i * j <= n; j++) {
-      result[i * j] = null;
-      console.log(result);
+      result[i * j] = null
+      console.log(result)
     }
   }
   result = result.filter(a => {
-    return a != null;
-  });
-  return result.length;
-};
+    return a != null
+  })
+  return result.length
+}
 ```
 
 1. 生成一个数组，表示从 `0` 到 `n - 1`，就好比输入 `10`，返回的即是：`[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`。
@@ -130,14 +129,15 @@ var countPrimes = function (n) {
 > **jsLe** 在代码中埋了个 `console.log`，方便小伙伴们观察：
 
 ```js
-[ null, null, 2, 3, null, 5, 6, 7, 8, 9 ]
-[ null, null, 2, 3, null, 5, null, 7, 8, 9 ]
-[ null, null, 2, 3, null, 5, null, 7, null, 9 ]
-[ null, null, 2, 3, null, 5, null, 7, null, 9, null ]
-[ null, null, 2, 3, null, 5, null, 7, null, 9, null ]
-[ null, null, 2, 3, null, 5, null, 7, null, null, null ]
-[ null, null, 2, 3, null, 5, null, 7, null, null, null ]
-[ null, null, 2, 3, null, 5, null, 7, null, null, null ]
+;[null, null, 2, 3, null, 5, 6, 7, 8, 9][
+  (null, null, 2, 3, null, 5, null, 7, 8, 9)
+][(null, null, 2, 3, null, 5, null, 7, null, 9)][
+  (null, null, 2, 3, null, 5, null, 7, null, 9, null)
+][(null, null, 2, 3, null, 5, null, 7, null, 9, null)][
+  (null, null, 2, 3, null, 5, null, 7, null, null, null)
+][(null, null, 2, 3, null, 5, null, 7, null, null, null)][
+  (null, null, 2, 3, null, 5, null, 7, null, null, null)
+]
 ```
 
 **最后**，统计剩下的长度，就是我们需要的结果值。
@@ -149,24 +149,24 @@ var countPrimes = function (n) {
 前面我们发现了一个问题，就是当我们的底数为 `4`、`6` 等数的时候，我们还会执行一遍 `for()` 循环，这样就有些浪费时间了，下面我们进行处理：
 
 ```js
-var countPrimes = function (n) {
+var countPrimes = function(n) {
   if (n < 3) {
-    return 0;
+    return 0
   }
-  let result = [...new Array(n).keys()];
-  result[0] = result[1] = null;
+  let result = [...new Array(n).keys()]
+  result[0] = result[1] = null
   for (let i = 2; i < n; i++) {
-		if (result[i]) {
-			for (let j = 2; i * j <= n; j++) {
-				result[i * j] = null;
-			}
-		}
+    if (result[i]) {
+      for (let j = 2; i * j <= n; j++) {
+        result[i * j] = null
+      }
+    }
   }
   result = result.filter(a => {
-    return a != null;
-  });
-  return result.length;
-};
+    return a != null
+  })
+  return result.length
+}
 ```
 
 经过处理，效果是有的：
@@ -185,24 +185,24 @@ var countPrimes = function (n) {
 经过大佬启发，想到自己能不能解出来呢？于是想到 **暴力破解**：
 
 ```js
-var countPrimes = function (n) {
+var countPrimes = function(n) {
   if (n < 3) {
-    return 0;
-	}
-	let length = 1;
-	n = n - 1;
-	while(n > 2) {
-		for (let i = 2; i < n; i++) {
-			if (n % i === 0) {
-				break;
-			} else if (i === n - 1 && n % i !== 0) {
-				length++;
-			}
-		};
-		n--;
-	}
-	return length;
-};
+    return 0
+  }
+  let length = 1
+  n = n - 1
+  while (n > 2) {
+    for (let i = 2; i < n; i++) {
+      if (n % i === 0) {
+        break
+      } else if (i === n - 1 && n % i !== 0) {
+        length++
+      }
+    }
+    n--
+  }
+  return length
+}
 ```
 
 当然，失败了：
@@ -211,8 +211,8 @@ var countPrimes = function (n) {
 × Time Limit Exceeded
   × 17/20 cases passed (N/A)
   × testcase: '499979'
-  × answer: 
-  × expected_answer: 
+  × answer:
+  × expected_answer:
   × stdout:
 ```
 

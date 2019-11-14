@@ -1,19 +1,17 @@
-JSON.parse
-===
+# JSON.parse
 
 > Create by **jsLe** on **2019-10-16 03:36:15**  
 > Recently revised in **2019-10-16 03:37:58**
 
-* **原文**：[MDN - JSON.parse()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
+- **原文**：[MDN - JSON.parse()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
 
-* **功能**：
+- **功能**：
 
-* **方法**：
+- **方法**：
 
-* **代码**：
+- **代码**：
 
 ```js
-
 ```
 
 ---

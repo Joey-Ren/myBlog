@@ -1,5 +1,4 @@
-367 - 有效的完全平方数（valid-perfect-square）
-===
+# 367 - 有效的完全平方数（valid-perfect-square）
 
 > Create by **jsLe** on **2019-07-23 16:05:55**  
 > Recently revised in **2019-09-18 13:56:56**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - 暴力破解](#chapter-three-one) |
-| &emsp;[3.2 解法 - 二分法](#chapter-three-two) |
+| &emsp;[3.1 解法 - 暴力破解](#chapter-three-one)                                          |
+| &emsp;[3.2 解法 - 二分法](#chapter-three-two)                                            |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数学、二分查找
-* **题目地址**：https://leetcode-cn.com/problems/valid-perfect-square/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数学、二分查找
+- **题目地址**：https://leetcode-cn.com/problems/valid-perfect-square/
+- **题目内容**：
 
 ```
 给定一个正整数 num，编写一个函数，如果 num 是一个完全平方数，则返回 True，否则返回 False。
@@ -49,23 +48,23 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var isPerfectSquare = function(num) {
   if (num === 1) {
-    return true;
+    return true
   }
   for (let i = 1; i < num / 2 + 1; i++) {
     if (i * i === num) {
-      return true;
+      return true
     }
   }
-  return false;
-};
+  return false
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `num`：`16`
 2. `return`：
@@ -74,7 +73,7 @@ var isPerfectSquare = function(num) {
 true
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -83,7 +82,7 @@ true
   ✔ Your memory usage beats 7 % of javascript submissions (34.7 MB)
 ```
 
-* **解题思路**：
+- **解题思路**：
 
 **最简单的想法往往是最暴力的。**
 
@@ -98,14 +97,14 @@ true
 
 ```js
 for (let i = 1; i < num / 2 + 1; i++) {
- if (i * i === num) {
-   return true;
- }
+  if (i * i === num) {
+    return true
+  }
 }
-return false;
+return false
 ```
 
-1. 遍历一半的想法是，最小的完全平方数为 4，4 = 2 * 2。而 4 之后，它们的底数都小于它们的一半，例如 9 = 3 * 3、16 = 4 * 4……都是小于它们的一半。
+1. 遍历一半的想法是，最小的完全平方数为 4，4 = 2 _ 2。而 4 之后，它们的底数都小于它们的一半，例如 9 = 3 _ 3、16 = 4 \* 4……都是小于它们的一半。
 2. 如果它等于 `i * i`，那么它就是一个完全平方数。
 
 **最后**，返回相应的 `true` 或者 `false` 即可。
@@ -114,32 +113,32 @@ return false;
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var isPerfectSquare = function(num) {
   if (num === 1) {
-    return true;
+    return true
   }
-  let left = 1;
-  let right = num / 2 + 1;
+  let left = 1
+  let right = num / 2 + 1
   while (left < right) {
-    let middle = Math.round((left + right) / 2);
+    let middle = Math.round((left + right) / 2)
     if (middle === right) {
-      return false;
+      return false
     }
     if (middle * middle < num) {
-      left = middle;
+      left = middle
     } else if (middle * middle > num) {
-      right = middle;
+      right = middle
     } else {
-      return true;
+      return true
     }
   }
-};
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `num`：`16`
 2. `return`：
@@ -148,7 +147,7 @@ var isPerfectSquare = function(num) {
 true
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -157,11 +156,11 @@ true
   ✔ Your memory usage beats 78 % of javascript submissions (33.5 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `Math`：JS 中的内置对象，具有数学常数和函数的属性和方法。[`Math` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Math/README.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **首先**，值得声明的是，这不是使用 `sqrt()` 直接求解，而是使用了 `Math.round()`，应该不算破坏了这道题的本意。
 

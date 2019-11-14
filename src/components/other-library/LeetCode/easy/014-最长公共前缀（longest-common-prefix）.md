@@ -1,5 +1,4 @@
-014 - 最长公共前缀（longest-common-prefix）
-===
+# 014 - 最长公共前缀（longest-common-prefix）
 
 > Create by **jsLe** on **2019-06-03 10:13:01**  
 > Recently revised in **2019-09-18 09:45:58**
@@ -8,24 +7,24 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - 暴力破解](#chapter-three-one) |
-| &emsp;[3.2 解法 - 水平扫描](#chapter-three-two) |
-| &emsp;[3.3 解法 - 正则表达式](#chapter-three-three) |
-| &emsp;[3.4 解法 - 水平扫描](#chapter-three-four) |
+| &emsp;[3.1 解法 - 暴力破解](#chapter-three-one)                                          |
+| &emsp;[3.2 解法 - 水平扫描](#chapter-three-two)                                          |
+| &emsp;[3.3 解法 - 正则表达式](#chapter-three-three)                                      |
+| &emsp;[3.4 解法 - 水平扫描](#chapter-three-four)                                         |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：字符串
-* **题目地址**：https://leetcode-cn.com/problems/longest-common-prefix/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：字符串
+- **题目地址**：https://leetcode-cn.com/problems/longest-common-prefix/
+- **题目内容**：
 
 ```
 编写一个函数来查找字符串数组中的最长公共前缀。
@@ -50,7 +49,7 @@
 
 > [返回目录](#chapter-one)
 
-* **官方题解**：https://leetcode-cn.com/problems/longest-common-prefix/solution/zui-chang-gong-gong-qian-zhui-by-leetcode/
+- **官方题解**：https://leetcode-cn.com/problems/longest-common-prefix/solution/zui-chang-gong-gong-qian-zhui-by-leetcode/
 
 解题千千万，官方独一家，上面是官方使用 Java 进行的题解。
 
@@ -60,55 +59,55 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var longestCommonPrefix = function(strs) {
   if (!strs.length) {
-    return '';
+    return ''
   }
-  let shortStrLength = strs[0].length; // 最短字符串的长度
-  let shortStrPosition = 0; // 最短字符串的位置
-  for (let i = 0; i < strs.length; i++){
+  let shortStrLength = strs[0].length // 最短字符串的长度
+  let shortStrPosition = 0 // 最短字符串的位置
+  for (let i = 0; i < strs.length; i++) {
     if (strs[i].length < shortStrLength) {
-      shortStrLength = strs[i].length;
-      shortStrPosition = i;
+      shortStrLength = strs[i].length
+      shortStrPosition = i
     }
   }
-  let result = [];
+  let result = []
   for (let i = 0; i < shortStrLength; i++) {
     for (let j = 0; j < strs.length; j++) {
       if (strs[shortStrPosition][i] != strs[j][i]) {
-        return result.join('');
+        return result.join('')
       }
       if (j === strs.length - 1) {
-        result[i] = strs[shortStrPosition][i];
+        result[i] = strs[shortStrPosition][i]
       }
     }
   }
-  return result.join('');
-};
+  return result.join('')
+}
 ```
 
-* **执行测试 1**：
+- **执行测试 1**：
 
 1. `strs`：`["flower","flow","flight"]`
 2. `return`：
 
 ```js
-"fl"
+'fl'
 ```
 
-* **执行测试 2**：
+- **执行测试 2**：
 
 1. `strs`：`["dog","racecar","car"]`
 2. `return`：
 
 ```js
-""
+''
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -117,11 +116,11 @@ var longestCommonPrefix = function(strs) {
   ✔ Your memory usage beats 36.33 % of javascript submissions (35.1 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `join()`：`join()` 方法将一个数组（或一个类数组对象）的所有元素连接成一个字符串并返回这个字符串。[`join()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/join.md)
 
-* **解题思路**：
+- **解题思路**：
 
 ![图](../../../public-repertory/img/other-algorithm-014-1.png)
 
@@ -137,46 +136,46 @@ var longestCommonPrefix = function(strs) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var longestCommonPrefix = function(strs) {
   if (strs.length < 2) {
-    return !strs.length ? '' : strs[0];
+    return !strs.length ? '' : strs[0]
   }
-  
-  var result = strs[0];
-  
-  for(let i = 0; i < result.length; i++) {
-    for(let j = 1; j < strs.length; j++) {
+
+  var result = strs[0]
+
+  for (let i = 0; i < result.length; i++) {
+    for (let j = 1; j < strs.length; j++) {
       if (result[i] !== strs[j][i]) {
-        return result.substring(0, i);
+        return result.substring(0, i)
       }
     }
   }
-  return result;
-};
+  return result
+}
 ```
 
-* **执行测试 1**：
+- **执行测试 1**：
 
 1. `strs`：`["flower","flow","flight"]`
 2. `return`：
 
 ```js
-"fl"
+'fl'
 ```
 
-* **执行测试 2**：
+- **执行测试 2**：
 
 1. `strs`：`["dog","racecar","car"]`
 2. `return`：
 
 ```js
-""
+''
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -185,11 +184,11 @@ var longestCommonPrefix = function(strs) {
   ✔ Your memory usage beats 46.38 % of javascript submissions (34.9 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `substring()`：`substring()` 方法将一个数组（或一个类数组对象）的所有元素连接成一个字符串并返回这个字符串。[`substring()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/String/substring.md)
 
-* **解题思路**：
+- **解题思路**：
 
 ![图](../../../public-repertory/img/other-algorithm-014-2.png)
 
@@ -199,49 +198,49 @@ var longestCommonPrefix = function(strs) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var longestCommonPrefix = function(strs) {
   if (strs.length < 2) {
-    return !strs.length ? '' : strs[0];
+    return !strs.length ? '' : strs[0]
   }
-  
+
   let base = strs.shift(),
     joinStrs = '@' + strs.join('@'),
     regx = '@',
-    res = '';
+    res = ''
 
-  for(let i = 0; i < base.length; i++){
-    regx += base.substring(i, i + 1);
-    let matchArr = joinStrs.match(new RegExp(`${regx}`,"g")) || [];
-    if(matchArr.length === strs.length){
-      res += base.substring(i, i+1);
+  for (let i = 0; i < base.length; i++) {
+    regx += base.substring(i, i + 1)
+    let matchArr = joinStrs.match(new RegExp(`${regx}`, 'g')) || []
+    if (matchArr.length === strs.length) {
+      res += base.substring(i, i + 1)
     }
   }
-  return res;
-};
+  return res
+}
 ```
 
-* **执行测试 1**：
+- **执行测试 1**：
 
 1. `strs`：`["flower","flow","flight"]`
 2. `return`：
 
 ```js
-"fl"
+'fl'
 ```
 
-* **执行测试 2**：
+- **执行测试 2**：
 
 1. `strs`：`["dog","racecar","car"]`
 2. `return`：
 
 ```js
-""
+''
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -250,13 +249,13 @@ var longestCommonPrefix = function(strs) {
   ✔ Your memory usage beats 16.23 % of javascript submissions (35.9 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `join()`：`join()` 方法将一个数组（或一个类数组对象）的所有元素连接成一个字符串并返回这个字符串。[`join()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/join.md)
 2. `substring()`：`substring()` 方法将一个数组（或一个类数组对象）的所有元素连接成一个字符串并返回这个字符串。[`substring()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/String/substring.md)
 3. `RegExp`：构造函数的原型对象。常用语一些便捷操作。[`RegExp` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/RegExp/README.md)
 
-* **解题思路**：
+- **解题思路**：
 
 ![图](../../../public-repertory/img/other-algorithm-014-3.png)
 
@@ -274,43 +273,43 @@ var longestCommonPrefix = function(strs) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var longestCommonPrefix = function(strs) {
   if (strs.length < 2) {
-    return !strs.length ? '' : strs[0];
+    return !strs.length ? '' : strs[0]
   }
-  
+
   return strs.reduce((prev, next) => {
-    let i = 0;
+    let i = 0
     while (prev[i] && next[i] && prev[i] === next[i]) {
-      i++;
-    };
-    return prev.slice(0, i);
-  });
-};
+      i++
+    }
+    return prev.slice(0, i)
+  })
+}
 ```
 
-* **执行测试 1**：
+- **执行测试 1**：
 
 1. `strs`：`["flower","flow","flight"]`
 2. `return`：
 
 ```js
-"fl"
+'fl'
 ```
 
-* **执行测试 2**：
+- **执行测试 2**：
 
 1. `strs`：`["dog","racecar","car"]`
 2. `return`：
 
 ```js
-""
+''
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -319,12 +318,12 @@ var longestCommonPrefix = function(strs) {
   ✔ Your memory usage beats 21.06 % of javascript submissions (35.5 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
-1. `reduce()`：`reduce()` 方法对数组中的每个元素执行一个由您提供的reducer函数(升序执行)，将其结果汇总为单个返回值。[`reduce()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/reduce.md)
+1. `reduce()`：`reduce()` 方法对数组中的每个元素执行一个由您提供的 reducer 函数(升序执行)，将其结果汇总为单个返回值。[`reduce()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/reduce.md)
 2. `slice()`：`slice()` 方法提取一个字符串的一部分，并返回一新的字符串。[`slice()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/String/slice.md)
 
-* **解题思路**：
+- **解题思路**：
 
 ![图](../../../public-repertory/img/other-algorithm-014-4.png)
 

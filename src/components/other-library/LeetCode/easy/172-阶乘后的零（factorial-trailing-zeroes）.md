@@ -1,5 +1,4 @@
-172 - 阶乘后的零（factorial-trailing-zeroes）
-===
+# 172 - 阶乘后的零（factorial-trailing-zeroes）
 
 > Create by **jsLe** on **2019-7-8 08:07:23**  
 > Recently revised in **2019-7-8 09:14:41**
@@ -8,23 +7,23 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six)           |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数学
-* **题目地址**：https://leetcode-cn.com/problems/factorial-trailing-zeroes/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数学
+- **题目地址**：https://leetcode-cn.com/problems/factorial-trailing-zeroes/
+- **题目内容**：
 
 ```
 给定一个整数 n，返回 n! 结果尾数中零的数量。
@@ -48,17 +47,17 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var trailingZeroes = function(n) {
-  let total = 0;
+  let total = 0
   while (n >= 5) {
-    n = Math.floor(n / 5);
-    total += n;
+    n = Math.floor(n / 5)
+    total += n
   }
-  return total;
-};
+  return total
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
@@ -89,19 +88,22 @@ var trailingZeroes = function(n) {
 
 ```js
 var trailingZeroes = function(n) {
-  let result = 1;
-  while(n > 0) {
-    result = result * n;
-    n--;
+  let result = 1
+  while (n > 0) {
+    result = result * n
+    n--
   }
-  result = result.toString().split('').reverse();
+  result = result
+    .toString()
+    .split('')
+    .reverse()
   for (let i = 0; i < result.length; i++) {
     if (result[i] !== '0') {
-      return i;
+      return i
     }
   }
-  return 0;
-};
+  return 0
+}
 ```
 
 在这份代码中，当你的数字为 30 的时候，你就超限了：
@@ -120,7 +122,7 @@ var trailingZeroes = function(n) {
 
 **接着**，咱访问下【评论】和【题解】，看看别人怎么破解，其中思路非常 nice 的是：
 
-* https://leetcode-cn.com/problems/factorial-trailing-zeroes/solution/jie-cheng-hou-de-ling-die-dai-ji-di-gui-jie-fa-by-/
+- https://leetcode-cn.com/problems/factorial-trailing-zeroes/solution/jie-cheng-hou-de-ling-die-dai-ji-di-gui-jie-fa-by-/
 
 它的题解有两种：
 
@@ -128,13 +130,13 @@ var trailingZeroes = function(n) {
 
 ```js
 var trailingZeroes = function(n) {
-  let total = 0;
+  let total = 0
   while (n >= 5) {
-    n = Math.floor(n / 5);
-    total += n;
+    n = Math.floor(n / 5)
+    total += n
   }
-  return total;
-};
+  return total
+}
 ```
 
 > 题解 2 - 递归
@@ -143,13 +145,13 @@ var trailingZeroes = function(n) {
 var trailingZeroes = function(n) {
   const helper = (n, total) => {
     if (n < 5) {
-      return total;
+      return total
     }
-    const count = Math.floor(n / 5);
-    return helper(count, total + count);
-  };
-  return helper(n, 0);
-};
+    const count = Math.floor(n / 5)
+    return helper(count, total + count)
+  }
+  return helper(n, 0)
+}
 ```
 
 那么，**jsLe** 看完题解，以自己意思表述一下：
@@ -158,30 +160,30 @@ var trailingZeroes = function(n) {
 
 **2**. 找规律：当 `n` 为 5 时，有 1 个 0，当 `n` 为 10 时，有 2 个 0……但是，碰到某个特定的数时，会有意外，详情看表格：
 
-| n | 个数 |
-| --- | --- |
-| 5 | 1 |
-| 10 | 2 |
-| 15 | 3 |
-| 20 | 4 |
-| 25 | 6 |
-| 30 | 7 |
-| 35 | 8 |
-| 40 | 9 |
-| 45 | 10 |
-| 50 | 12 |
+| n   | 个数 |
+| --- | ---- |
+| 5   | 1    |
+| 10  | 2    |
+| 15  | 3    |
+| 20  | 4    |
+| 25  | 6    |
+| 30  | 7    |
+| 35  | 8    |
+| 40  | 9    |
+| 45  | 10   |
+| 50  | 12   |
 
 即当 `n` 为 25 倍数的时候，还需要将个数调整一次：
 
 ```js
 var trailingZeroes = function(n) {
-  let total = 0;
+  let total = 0
   while (n >= 5) {
-    n = Math.floor(n / 5);
-    total += n;
+    n = Math.floor(n / 5)
+    total += n
   }
-  return total;
-};
+  return total
+}
 ```
 
 再结合题意，小伙伴们应该就比较清晰了。

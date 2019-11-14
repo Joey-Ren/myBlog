@@ -1,5 +1,4 @@
-447 - 回旋镖的数量（number-of-boomerangs）
-===
+# 447 - 回旋镖的数量（number-of-boomerangs）
 
 > Create by **jsLe** on **2019-07-29 19:45:23**  
 > Recently revised in **2019-7-29 22:42:06**
@@ -8,23 +7,23 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six)           |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：哈希表
-* **题目地址**：https://leetcode-cn.com/problems/number-of-boomerangs/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：哈希表
+- **题目地址**：https://leetcode-cn.com/problems/number-of-boomerangs/
+- **题目内容**：
 
 ```
 给定平面上 n 对不同的点，“回旋镖” 是由点表示的元组 (i, j, k) ，其中 i 和 j 之间的距离和 i 和 k 之间的距离相等（需要考虑元组的顺序）。
@@ -49,38 +48,38 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 const dist = (i, j) => {
-  return (i[0] - j[0]) * (i[0] - j[0]) + (i[1] - j[1]) * (i[1] - j[1]);
-};
+  return (i[0] - j[0]) * (i[0] - j[0]) + (i[1] - j[1]) * (i[1] - j[1])
+}
 
 const judge = (i, j, k) => {
-  let count = 0;
+  let count = 0
   if (dist(i, j) == dist(i, k)) {
-    count += 2;
+    count += 2
   }
   if (dist(j, i) == dist(j, k)) {
-    count += 2;
+    count += 2
   }
   if (dist(k, i) == dist(k, j)) {
-    count += 2;
+    count += 2
   }
-  return count;
-};
+  return count
+}
 
-const numberOfBoomerangs = (points) => {
-  let result = 0;
+const numberOfBoomerangs = points => {
+  let result = 0
   for (let i = 0; i < points.length - 2; i++) {
     for (let j = i + 1; j < points.length - 1; j++) {
       for (let k = j + 1; k < points.length; k++) {
-        result += judge(points[i], points[j], points[k]);
+        result += judge(points[i], points[j], points[k])
       }
     }
   }
-  return result;
-};
+  return result
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
@@ -113,9 +112,9 @@ const numberOfBoomerangs = (points) => {
 
 **首先**，个人猜测，对于题意，个人先解析一波：
 
-* 回旋镖表示的为元组（i, j, k），咱不太理解，姑且认为 `x, y, z` 构成的三维地址。
-* i 到 j 的距离 === i 到 k 的距离。
-* `[[0,0],[1,0],[2,0]]` 对应的即是：`[[1,0],[0,0],[2,0]]` 和 `[[1,0],[2,0],[0,0]]`。
+- 回旋镖表示的为元组（i, j, k），咱不太理解，姑且认为 `x, y, z` 构成的三维地址。
+- i 到 j 的距离 === i 到 k 的距离。
+- `[[0,0],[1,0],[2,0]]` 对应的即是：`[[1,0],[0,0],[2,0]]` 和 `[[1,0],[2,0],[0,0]]`。
 
 由于咱没有更多的数据支持，所以我们也无法确定，是元组可以随意组成任意组，然后差值相同？
 
@@ -161,34 +160,34 @@ func numberOfBoomerangs(points [][]int) int {   // 三层循环遍历每个三�
 
 ```js
 const dist = (i, j) => {
-  return (i[0] - j[0]) * (i[0] - j[0]) + (i[1] - j[1]) * (i[1] - j[1]);
-};
+  return (i[0] - j[0]) * (i[0] - j[0]) + (i[1] - j[1]) * (i[1] - j[1])
+}
 
 const judge = (i, j, k) => {
-  let count = 0;
+  let count = 0
   if (dist(i, j) == dist(i, k)) {
-    count += 2;
+    count += 2
   }
   if (dist(j, i) == dist(j, k)) {
-    count += 2;
+    count += 2
   }
   if (dist(k, i) == dist(k, j)) {
-    count += 2;
+    count += 2
   }
-  return count;
-};
+  return count
+}
 
-const numberOfBoomerangs = (points) => {
-  let result = 0;
+const numberOfBoomerangs = points => {
+  let result = 0
   for (let i = 0; i < points.length - 2; i++) {
     for (let j = i + 1; j < points.length - 1; j++) {
       for (let k = j + 1; k < points.length; k++) {
-        result += judge(points[i], points[j], points[k]);
+        result += judge(points[i], points[j], points[k])
       }
     }
   }
-  return result;
-};
+  return result
+}
 ```
 
 Submit 提交：
@@ -208,58 +207,58 @@ Submit 提交：
 
 ```js
 const dist = (i, j) => {
-  return (i[0] - j[0]) * (i[0] - j[0]) + (i[1] - j[1]) * (i[1] - j[1]);
-};
+  return (i[0] - j[0]) * (i[0] - j[0]) + (i[1] - j[1]) * (i[1] - j[1])
+}
 ```
 
 计算两个点的距离，就是它们对应坐标的差的平方相加。
 
 即：
 
-* x - [1, 2]
-* y - [2, 3]
-* dist(x, y) = (2 - 1)² + (3 - 2)²
+- x - [1, 2]
+- y - [2, 3]
+- dist(x, y) = (2 - 1)² + (3 - 2)²
 
 > 2、计算这三个点能构成几个“回旋镖”
 
 ```js
 const judge = (i, j, k) => {
-  let count = 0;
+  let count = 0
   if (dist(i, j) == dist(i, k)) {
-    count += 2;
+    count += 2
   }
   if (dist(j, i) == dist(j, k)) {
-    count += 2;
+    count += 2
   }
   if (dist(k, i) == dist(k, j)) {
-    count += 2;
+    count += 2
   }
-  return count;
-};
+  return count
+}
 ```
 
 正如题目所言，i 到 j 的距离等于 i 到 k 的距离。
 
 同样：
 
-* i - j === i - k
-* j - i === j - k
-* k - i === k - j
+- i - j === i - k
+- j - i === j - k
+- k - i === k - j
 
 > 3、三层循环遍历每个三元组
 
 ```js
-const numberOfBoomerangs = (points) => {
-  let result = 0;
+const numberOfBoomerangs = points => {
+  let result = 0
   for (let i = 0; i < points.length - 2; i++) {
     for (let j = i + 1; j < points.length - 1; j++) {
       for (let k = j + 1; k < points.length; k++) {
-        result += judge(points[i], points[j], points[k]);
+        result += judge(points[i], points[j], points[k])
       }
     }
   }
-  return result;
-};
+  return result
+}
 ```
 
 三层遍历数组，获取到每种可能，通过 `result` 获取最终结果，并输出最终结果。

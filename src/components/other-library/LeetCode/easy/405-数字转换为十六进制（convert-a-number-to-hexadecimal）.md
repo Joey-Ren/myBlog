@@ -1,5 +1,4 @@
-405 - 数字转换为十六进制（convert-a-number-to-hexadecimal）
-===
+# 405 - 数字转换为十六进制（convert-a-number-to-hexadecimal）
 
 > Create by **jsLe** on **2019-07-25 10:45:31**  
 > Recently revised in **2019-09-18 14:01:34**
@@ -8,24 +7,24 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six)             |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven)     |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：位运算
-* **题目地址**：https://leetcode-cn.com/problems/convert-a-number-to-hexadecimal/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：位运算
+- **题目地址**：https://leetcode-cn.com/problems/convert-a-number-to-hexadecimal/
+- **题目内容**：
 
 ```
 给定一个整数，编写一个算法将这个数转换为十六进制数。
@@ -59,22 +58,22 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
-var toHex = function (num) {
+var toHex = function(num) {
   if (!num) {
-    return '0';
+    return '0'
   }
-  num = num > -1 ? num : num + Math.pow(2, 32);
+  num = num > -1 ? num : num + Math.pow(2, 32)
   let res = '',
-    Hex = '0123456789abcdef';
+    Hex = '0123456789abcdef'
   while (num) {
-    res = Hex[num % 16] + res;
-    num = num / 16 | 0;
+    res = Hex[num % 16] + res
+    num = (num / 16) | 0
   }
-  return res;
-};
+  return res
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>

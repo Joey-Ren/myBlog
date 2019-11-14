@@ -1,5 +1,4 @@
-257 - 二叉树的所有路径（binary-tree-paths）
-===
+# 257 - 二叉树的所有路径（binary-tree-paths）
 
 > Create by **jsLe** on **2019-07-18 10:15:11**  
 > Recently revised in **2019-09-18 13:47:43**
@@ -8,25 +7,25 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven) |
-| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 进一步思考](#chapter-eight) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six)             |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven)     |
+| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 进一步思考](#chapter-eight)   |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：树、深度优先搜索
-* **题目地址**：https://leetcode-cn.com/problems/binary-tree-paths/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：树、深度优先搜索
+- **题目地址**：https://leetcode-cn.com/problems/binary-tree-paths/
+- **题目内容**：
 
 ```
 给定一个二叉树，返回所有从根节点到叶子节点的路径。
@@ -52,33 +51,33 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var binaryTreePaths = function(root) {
-  let result = [];
+  let result = []
   const ergodic = function(root, path) {
     if (!root) {
-      return;
+      return
     }
-    path = path + root.val + (root.left || root.right ? '->' : '');
+    path = path + root.val + (root.left || root.right ? '->' : '')
     if (!root.left && !root.right) {
-      result.push(path);
-      return;
+      result.push(path)
+      return
     }
-    ergodic(root.left, path);
-    ergodic(root.right, path);
-  };
-  ergodic(root, '');
-  return result;
-};
+    ergodic(root.left, path)
+    ergodic(root.right, path)
+  }
+  ergodic(root, '')
+  return result
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
 
 > [返回目录](#chapter-one)
 
-* `root`：
+- `root`：
 
 ```js
 const root = {
@@ -86,16 +85,16 @@ const root = {
   left: {
     val: 2,
     left: null,
-    right: { val: 5, left: null, right: null },
+    right: { val: 5, left: null, right: null }
   },
-  right: { val: 3, left: null, right: null },
-};
+  right: { val: 3, left: null, right: null }
+}
 ```
 
-* `return`：
+- `return`：
 
 ```js
-[ '1->2->5', '1->3' ]
+;['1->2->5', '1->3']
 ```
 
 ## <a name="chapter-five" id="chapter-five">五 LeetCode Submit</a>
@@ -124,10 +123,10 @@ const root = {
 ```js
 const ergodic = function(root) {
   if (!root) {
-    return;
+    return
   }
-  ergodic(root.left);
-  ergodic(root.right);
+  ergodic(root.left)
+  ergodic(root.right)
 }
 ```
 
@@ -137,22 +136,22 @@ const ergodic = function(root) {
 
 ```js
 var binaryTreePaths = function(root) {
-  let result = [];
+  let result = []
   const ergodic = function(root, path) {
     if (!root) {
-      return;
+      return
     }
-    path = path + root.val + (root.left || root.right ? '->' : '');
+    path = path + root.val + (root.left || root.right ? '->' : '')
     if (!root.left && !root.right) {
-      result.push(path);
-      return;
+      result.push(path)
+      return
     }
-    ergodic(root.left, path);
-    ergodic(root.right, path);
-  };
-  ergodic(root, '');
-  return result;
-};
+    ergodic(root.left, path)
+    ergodic(root.right, path)
+  }
+  ergodic(root, '')
+  return result
+}
 ```
 
 1. 定义 `result` 来接收最终结果。
@@ -171,37 +170,37 @@ var binaryTreePaths = function(root) {
 > 参考 1：递归
 
 ```js
-var binaryTreePaths = function (root) {
-  if (!root) return [];
+var binaryTreePaths = function(root) {
+  if (!root) return []
   if (!root.left && !root.right) {
-    return [root.val + ''];
+    return [root.val + '']
   }
-  let left = binaryTreePaths(root.left).map(key => root.val + '->' + key);
-  let right = binaryTreePaths(root.right).map(key => root.val + '->' + key);
-  return left.concat(right);
-};
+  let left = binaryTreePaths(root.left).map(key => root.val + '->' + key)
+  let right = binaryTreePaths(root.right).map(key => root.val + '->' + key)
+  return left.concat(right)
+}
 ```
 
 > 参考 2：递归
 
 ```js
-var binaryTreePaths = function (root) {
-  var res = [];
+var binaryTreePaths = function(root) {
+  var res = []
 
   function dfs(root, str) {
-    if (!root) return;
-    str += root.val;
+    if (!root) return
+    str += root.val
     if (!root.left && !root.right) {
-      res.push(str);
-      return;
+      res.push(str)
+      return
     }
-    str += '->';
-    dfs(root.left, str);
-    dfs(root.right, str);
+    str += '->'
+    dfs(root.left, str)
+    dfs(root.right, str)
   }
-  dfs(root, '');
-  return res;
-};
+  dfs(root, '')
+  return res
+}
 ```
 
 ---

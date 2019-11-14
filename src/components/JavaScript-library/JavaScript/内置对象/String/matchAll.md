@@ -1,27 +1,27 @@
-方法 - matchAll()
-===
+# 方法 - matchAll()
 
 > Create by **jsLe** on **2019-09-11 13:21:27**  
 > Recently revised in **2019-09-11 13:23:55**
 
-* **原文**：[MDN - matchAll()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll)
+- **原文**：[MDN - matchAll()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll)
 
-* **功能**：`matchAll()` 方法返回一个包含所有匹配正则表达式及分组捕获结果的迭代器。
+- **功能**：`matchAll()` 方法返回一个包含所有匹配正则表达式及分组捕获结果的迭代器。
 
-* **语法**：`str.matchAll(regexp)`
-  * `regexp`：正则表达式对象。
+- **语法**：`str.matchAll(regexp)`
 
-* **返回值**：一个迭代器。
+  - `regexp`：正则表达式对象。
 
-* **代码**：
+- **返回值**：一个迭代器。
+
+- **代码**：
 
 ```js
-const regexp = RegExp('foo*','g'); 
-const str = 'table football, foosball';
-let matches = str.matchAll(regexp);
+const regexp = RegExp('foo*', 'g')
+const str = 'table football, foosball'
+let matches = str.matchAll(regexp)
 
 for (const match of matches) {
-  console.log(match);
+  console.log(match)
 }
 // Array [ "foo" ]
 // Array [ "foo" ]

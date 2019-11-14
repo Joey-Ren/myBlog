@@ -1,21 +1,20 @@
-方法 - reverse()
-===
+# 方法 - reverse()
 
 > Create by **jsLe** on **2019-09-17 09:36:24**  
 > Recently revised in **2019-09-17 09:36:33**
 
-* **原文**：[MDN - reverse()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)
+- **原文**：[MDN - reverse()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)
 
-* **功能**：`reverse()` 方法将数组中元素的位置颠倒,并返回该数组。该方法会改变原数组。
+- **功能**：`reverse()` 方法将数组中元素的位置颠倒,并返回该数组。该方法会改变原数组。
 
-* **语法**：`arr.reverse()`
+- **语法**：`arr.reverse()`
 
-* **代码**：
+- **代码**：
 
 ```js
-let arr = [1, 2, 3];
-arr.reverse();
-console.log(arr); // [3, 2, 1]
+let arr = [1, 2, 3]
+arr.reverse()
+console.log(arr) // [3, 2, 1]
 ```
 
 ---

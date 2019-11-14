@@ -9,10 +9,20 @@
         前端图书馆
       </li>
     </ul>
-    <iframe src="../../../static/page.html" width="1200" height="600" frameborder="0" scrolling="auto"></iframe>
+    <iframe
+      src="../../../static/page.html"
+      width="1200"
+      height="600"
+      frameborder="0"
+      scrolling="auto"
+    ></iframe>
     <div>
-      <el-button type="primary" @click="goLibrary">笔记目录<i class="el-icon-position"></i></el-button>
-      <el-button type="primary" @click="goHome">跳转首页<i class="el-icon-lollipop"></i></el-button>
+      <el-button type="primary" @click="goLibrary"
+        >笔记目录<i class="el-icon-position"></i
+      ></el-button>
+      <el-button type="primary" @click="goHome"
+        >跳转首页<i class="el-icon-lollipop"></i
+      ></el-button>
     </div>
   </div>
 </template>
@@ -20,18 +30,18 @@
 <script>
 export default {
   name: 'indexpage',
-  data () {
+  data() {
     return {
       msg: 'Welcome to myBlog'
     }
   },
   methods: {
     // 跳转图书列表
-    goLibrary () {
+    goLibrary() {
       this.$router.replace('/markdown')
     },
     // 跳转首页列表
-    goHome () {
+    goHome() {
       this.$router.replace('/home')
     }
   }

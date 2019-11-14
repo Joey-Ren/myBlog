@@ -1,5 +1,4 @@
-Vue 上传文件
-===
+# Vue 上传文件
 
 > Create by **jsLe** on **2019-3-21 16:57:58**  
 > Recently revised in **2019-05-31 14:21:24**
@@ -48,26 +47,25 @@ dev: {
 ```html
 <template>
   <div>
-    <input type="file" @change="uploads">
+    <input type="file" @change="uploads" />
   </div>
 </template>
 
 <script>
   // 如果使用方法 1
   // import { uploadFile } from '../../api/api'
-  
+
   // 如果使用方法 2
   import axios from 'axios'
-  
+
   export default {
     methods: {
       // 普通上传图片
       uploads(e) {
-
         // 方法 1 - 可行
         // const file = e.target.files[0];
         // console.log(file);
-        
+
         // const fd = new FormData();
         // fd.append('userBlicence', file);
 
@@ -78,30 +76,31 @@ dev: {
         // })
 
         // 方法 2 - 可行
-        const file = e.target.files[0];
-        console.log(file);
-        
-        const fd = new FormData();
-        fd.append('userBlicence', file);
+        const file = e.target.files[0]
+        console.log(file)
+
+        const fd = new FormData()
+        fd.append('userBlicence', file)
 
         axios({
           method: 'post',
           timeout: 5000,
           headers: {
-            'Content-Type':'multipart/form-data',
-            timestamp: "2019032009000",
-            deviceid: "10001",
-            signature: "2743cfbda4601a359400929393b7657a",
+            'Content-Type': 'multipart/form-data',
+            timestamp: '2019032009000',
+            deviceid: '10001',
+            signature: '2743cfbda4601a359400929393b7657a'
           },
           url: '/services/Auser-uploadImg.action',
-          data: fd,
-        }).then( res => {
-          console.log(res);
-        }).catch( error => {
-          console.log(error);
+          data: fd
         })
-
-      },
+          .then(res => {
+            console.log(res)
+          })
+          .catch(error => {
+            console.log(error)
+          })
+      }
     }
   }
 </script>
@@ -115,7 +114,7 @@ dev: {
 
 ```js
 // 设置 axios
-import axios from 'axios';
+import axios from 'axios'
 
 // 请求配置
 const request = axios.create({
@@ -123,9 +122,9 @@ const request = axios.create({
   // baseURL: 'http://172.**.**.49:8080',
   timeout: 5000,
   headers: {
-    timestamp: "2019032009000",
-    deviceid: "10001",
-    signature: "2743cfbda4601a359400929393b7657a",
+    timestamp: '2019032009000',
+    deviceid: '10001',
+    signature: '2743cfbda4601a359400929393b7657a'
   }
 })
 
@@ -133,14 +132,15 @@ const request = axios.create({
  * 上传图片
  * userBlicence - 图片
  */
-export const uploadFile = data => request({
-  method: 'post',
-  headers: {
-    'Content-Type':'multipart/form-data',
-  },
-  url: '/services/Auser-uploadImg.action',
-  data: data,
-})
+export const uploadFile = data =>
+  request({
+    method: 'post',
+    headers: {
+      'Content-Type': 'multipart/form-data'
+    },
+    url: '/services/Auser-uploadImg.action',
+    data: data
+  })
 ```
 
 这样，当我们使用方法 1 的时候，我们直接调用接口即可。
@@ -152,7 +152,6 @@ export const uploadFile = data => request({
 相对于原生上传图片来说，ElementUI 上传图片更为便捷：
 
 ```html
-
 <template>
   <div>
     <el-upload
@@ -171,18 +170,18 @@ export const uploadFile = data => request({
     data() {
       return {
         headers: {
-          timestamp: "2019032009000",
-          deviceid: "10001",
-          signature: "2743cfbda4601a359400929393b7657a",
+          timestamp: '2019032009000',
+          deviceid: '10001',
+          signature: '2743cfbda4601a359400929393b7657a'
         }
       }
     },
     methods: {
       // ElementUI 上传图片成功
       uploadSuccess(res, file) {
-        console.log(res);
-        console.log(file);
-      },
+        console.log(res)
+        console.log(file)
+      }
     }
   }
 </script>

@@ -1,5 +1,4 @@
-532 - 数组中的K-diff数对（k-diff-pairs-in-an-array）
-===
+# 532 - 数组中的 K-diff 数对（k-diff-pairs-in-an-array）
 
 > Create by **jsLe** on **2019-11-08 08:44:22**  
 > Recently revised in **2019-11-08 09:52:50**
@@ -8,28 +7,28 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题及测试](#chapter-three) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题及测试](#chapter-three)   |
 | <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 LeetCode Submit](#chapter-four) |
-| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 解题思路](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 进一步思考](#chapter-six) |
+| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 解题思路](#chapter-five)        |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 进一步思考](#chapter-six)         |
 
 ## <a name="chapter-two" id="chapter-two"></a>二 前言
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数组、双指针
-* **题目地址**：https://leetcode-cn.com/problems/k-diff-pairs-in-an-array/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数组、双指针
+- **题目地址**：https://leetcode-cn.com/problems/k-diff-pairs-in-an-array/
+- **题目内容**：
 
 ```
 给定一个整数数组和一个整数 k, 你需要在数组里找到不同的 k-diff 数对。
 
-这里将 k-diff 数对定义为一个整数对 (i, j), 
+这里将 k-diff 数对定义为一个整数对 (i, j),
 
 其中 i 和 j 都是数组中的数字，且两数之差的绝对值是 k.
 
@@ -61,7 +60,7 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **LeetCode 给定函数体**：
+- **LeetCode 给定函数体**：
 
 ```js
 /**
@@ -69,9 +68,7 @@
  * @param {number} k
  * @return {number}
  */
-var findPairs = function(nums, k) {
-    
-};
+var findPairs = function(nums, k) {}
 ```
 
 根据上面的已知函数，尝试破解本题吧~
@@ -88,24 +85,24 @@ var findPairs = function(nums, k) {
  * @return {number}
  */
 const findPairs = (nums, k) => {
-  const map = new Map();
-  let result = 0;
+  const map = new Map()
+  let result = 0
   for (let i = 0; i < nums.length - 1; i++) {
     for (let j = i + 1; j < nums.length; j++) {
-      const max = Math.max(nums[i], nums[j]);
-      const min = Math.min(nums[i], nums[j]);
+      const max = Math.max(nums[i], nums[j])
+      const min = Math.min(nums[i], nums[j])
       if (max - min === k && map.get(`${min}${max}`) === undefined) {
-        result += 1;
-        map.set(`${min}${max}`, `${min}${max}`,);
+        result += 1
+        map.set(`${min}${max}`, `${min}${max}`)
       }
     }
   }
-  return result;
-};
+  return result
+}
 
 // console.log(findPairs([3, 1, 4, 1, 5], 2)); // 2
 // console.log(findPairs([1, 2, 3, 4, 5], 1)); // 4
-console.log(findPairs([1, 3, 1, 5, 4], 0)); // 1
+console.log(findPairs([1, 3, 1, 5, 4], 0)) // 1
 ```
 
 `node index.js` 返回：
@@ -133,23 +130,23 @@ Accepted
 
 ```js
 const findPairs = (nums, k) => {
-  const map = new Map();
-  let result = 0;
+  const map = new Map()
+  let result = 0
   for (let i = 0; i < nums.length - 1; i++) {
     for (let j = i + 1; j < nums.length; j++) {
-      const max = Math.max(nums[i], nums[j]);
-      const min = Math.min(nums[i], nums[j]);
+      const max = Math.max(nums[i], nums[j])
+      const min = Math.min(nums[i], nums[j])
       if (max - min === k && map.get(`${min}${max}`) === undefined) {
-        result += 1;
-        map.set(`${min}${max}`, `${min}${max}`,);
+        result += 1
+        map.set(`${min}${max}`, `${min}${max}`)
       }
     }
   }
-  return result;
-};
+  return result
+}
 ```
 
-Submit 结果 *“非常不错”*：
+Submit 结果 _“非常不错”_：
 
 ```js
 Accepted
@@ -169,24 +166,30 @@ Accepted
  */
 const findPairs = (nums, k) => {
   if (k < 0) {
-    return 0;
+    return 0
   }
-  const map1 = new Map();
-  const map2 = new Map();
-  let result = 0;
+  const map1 = new Map()
+  const map2 = new Map()
+  let result = 0
   for (let i = 0; i < nums.length; i++) {
-    if (nums[i] + k === map1.get(nums[i] + k) && map2.get(`${nums[i]}${nums[i] + k}`) === undefined) {
-      result += 1;
-      map2.set(`${nums[i]}${nums[i] + k}`, `${nums[i]}${nums[i] + k}`);
+    if (
+      nums[i] + k === map1.get(nums[i] + k) &&
+      map2.get(`${nums[i]}${nums[i] + k}`) === undefined
+    ) {
+      result += 1
+      map2.set(`${nums[i]}${nums[i] + k}`, `${nums[i]}${nums[i] + k}`)
     }
-    if (nums[i] - k === map1.get(nums[i] - k) && map2.get(`${nums[i] - k}${nums[i]}`) === undefined) {
-      result += 1;
-      map2.set(`${nums[i] - k}${nums[i]}`, `${nums[i] - k}${nums[i]}`);
+    if (
+      nums[i] - k === map1.get(nums[i] - k) &&
+      map2.get(`${nums[i] - k}${nums[i]}`) === undefined
+    ) {
+      result += 1
+      map2.set(`${nums[i] - k}${nums[i]}`, `${nums[i] - k}${nums[i]}`)
     }
-    map1.set(nums[i], nums[i]);
+    map1.set(nums[i], nums[i])
   }
-  return result;
-};
+  return result
+}
 ```
 
 Submit 试试：

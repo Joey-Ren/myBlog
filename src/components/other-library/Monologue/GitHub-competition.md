@@ -1,5 +1,4 @@
-暴走前端 - Github 竞赛
-===
+# 暴走前端 - Github 竞赛
 
 > Create by **jsLe** on **2018-12-17 08:16:35**  
 > Recently revised in **2019-11-3 12:25:21**
@@ -26,13 +25,13 @@
 
 ### 2019-10-13
 
-* [x] 休息
+- [x] 休息
 
 ### 2019-10-12
 
-* [x] 学习：插座学院
-* [x] 学习：算法与数据结构之栈和队列
-* [x] 锻炼：90 分钟
+- [x] 学习：插座学院
+- [x] 学习：算法与数据结构之栈和队列
+- [x] 锻炼：90 分钟
 
 ---
 
@@ -85,7 +84,7 @@
 1. 我竞赛的日志在 jsLe 的参赛地址：https://github.com/LiangJunrong/document-library/tree/master/other-library/Monologue/logs （GitHub 仓库地址）
 2. 我参赛昵称是 **广州-jsLe**（进群请修改成该昵称）
 3. 目前我的发展是先搞 `React` 基础，然后写几个 `React` Demo，最后深入探究下 `React` 源码。
-4. 本周我想开始参与，今天至周日还有 3 天，我先交 15 元（3 天 * 5 元）给你报名，今天开始记录，下周按正常周参与。
+4. 本周我想开始参与，今天至周日还有 3 天，我先交 15 元（3 天 \* 5 元）给你报名，今天开始记录，下周按正常周参与。
 
 ---
 
@@ -95,15 +94,15 @@
 
 ## 四 成员名单
 
-| 昵称 | GitHub 账号 | 小目标 |
-| --- | --- | --- |
-| 1. jsLe | [LiangJunrong](https://github.com/LiangJunrong/document-library/tree/master/other-library/Monologue/logs) | 技术提升 |
-| 2. teachat8 | [teachat8](https://github.com/teachat8/document-library/blob/master/other-library/RecordDailyGrowth/2019-11.md) | 能写 Vue 组件 |
-| 3. 黄敏坚 | [huangminjianxx](https://github.com/huangminjianxx/LearningRecord/) | 11 月找到实习 |
-| 4. apple | [donaf](https://github.com/donaf/daydayup/blob/master/logs/2019-11.md) | **（周结）** |
-| 5. 浓茶 | [NingZhuo](https://github.com/NingZhuo/Log/blob/master/Log.md) | 年前跳槽 |
-| 5. lien | [LienJack](https://github.com/LienJack/daliy-study/blob/master/201910/21-27.md) | 深入 Vue 源码 |
-| 6. chenxiaoyao | [chenxiaoyao6228](https://github.com/chenxiaoyao6228/daily-learing-log) |  |
+| 昵称           | GitHub 账号                                                                                                     | 小目标        |
+| -------------- | --------------------------------------------------------------------------------------------------------------- | ------------- |
+| 1. jsLe        | [LiangJunrong](https://github.com/LiangJunrong/document-library/tree/master/other-library/Monologue/logs)       | 技术提升      |
+| 2. teachat8    | [teachat8](https://github.com/teachat8/document-library/blob/master/other-library/RecordDailyGrowth/2019-11.md) | 能写 Vue 组件 |
+| 3. 黄敏坚      | [huangminjianxx](https://github.com/huangminjianxx/LearningRecord/)                                             | 11 月找到实习 |
+| 4. apple       | [donaf](https://github.com/donaf/daydayup/blob/master/logs/2019-11.md)                                          | **（周结）**  |
+| 5. 浓茶        | [NingZhuo](https://github.com/NingZhuo/Log/blob/master/Log.md)                                                  | 年前跳槽      |
+| 5. lien        | [LienJack](https://github.com/LienJack/daliy-study/blob/master/201910/21-27.md)                                 | 深入 Vue 源码 |
+| 6. chenxiaoyao | [chenxiaoyao6228](https://github.com/chenxiaoyao6228/daily-learing-log)                                         |               |
 
 ## 五 参赛记录和漏卡记录
 

@@ -1,14 +1,13 @@
-jQuery
-===
+# jQuery
 
 > Create by **jsLe** on **2018-11-4 10:38:08**  
 > Recently revised in **2019-05-31 13:10:32**
 
 记录 jQuery 学习及 jQuery 工作日常
 
-| 目录 |
-| --- |
-| [jQuery 基础](./jQuery-base.md) |
+| 目录                                                   |
+| ------------------------------------------------------ |
+| [jQuery 基础](./jQuery-base.md)                        |
 | [jQuery 工作常用解决方案](./jQuery-frequently-used.md) |
 
 ---

@@ -1,27 +1,27 @@
-方法 - replace()
-===
+# 方法 - replace()
 
 > Create by **jsLe** on **2019-09-11 13:24:45**  
 > Recently revised in **2019-09-11 16:59:06**
 
-* **原文**：[MDN - replace()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
+- **原文**：[MDN - replace()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
 
-* **功能**：`replace()` 方法返回一个由替换值（`replacement`）替换一些或所有匹配的模式（`pattern`）后的新字符串。模式可以是一个字符串或者一个正则表达式，替换值可以是一个字符串或者一个每次匹配都要调用的回调函数。
+- **功能**：`replace()` 方法返回一个由替换值（`replacement`）替换一些或所有匹配的模式（`pattern`）后的新字符串。模式可以是一个字符串或者一个正则表达式，替换值可以是一个字符串或者一个每次匹配都要调用的回调函数。
 
-* **语法**：`str.replace(regexp |substr, newSubStr| function)`
-  * `regexp`：正则表达式。
-  * `substr`：一个将被 `newSubStr` 替换的字符串。其被视为一整个字符串，而不是一个正则表达式。仅第一个匹配项会被替换。
-  * `newSubStr`：用于替换掉第一个参数在原字符串中的匹配部分的字符串。该字符串中可以内插一些特殊的变量名。
-  * `function`：一个用来创建新子字符串的函数，该函数的返回值将替换掉第一个参数匹配到的结果。
+- **语法**：`str.replace(regexp |substr, newSubStr| function)`
 
-* **返回值**：一个部分或全部匹配由替代模式所取代的新的字符串。
+  - `regexp`：正则表达式。
+  - `substr`：一个将被 `newSubStr` 替换的字符串。其被视为一整个字符串，而不是一个正则表达式。仅第一个匹配项会被替换。
+  - `newSubStr`：用于替换掉第一个参数在原字符串中的匹配部分的字符串。该字符串中可以内插一些特殊的变量名。
+  - `function`：一个用来创建新子字符串的函数，该函数的返回值将替换掉第一个参数匹配到的结果。
 
-* **代码**：
+- **返回值**：一个部分或全部匹配由替代模式所取代的新的字符串。
+
+- **代码**：
 
 ```js
-var str = 'Twas the night before Xmas...';
-var newstr = str.replace(/xmas/i, 'Christmas');
-console.log(newstr);  // Twas the night before Christmas...
+var str = 'Twas the night before Xmas...'
+var newstr = str.replace(/xmas/i, 'Christmas')
+console.log(newstr) // Twas the night before Christmas...
 ```
 
 ---

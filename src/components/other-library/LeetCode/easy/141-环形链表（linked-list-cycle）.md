@@ -1,5 +1,4 @@
-141 - 环形链表（linked-list-cycle）
-===
+# 141 - 环形链表（linked-list-cycle）
 
 > Create by **jsLe** on **2019-7-3 08:10:25**  
 > Recently revised in **2019-7-3 08:52:02**
@@ -8,20 +7,20 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：链表、双指针
-* **题目地址**：https://leetcode-cn.com/problems/linked-list-cycle/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：链表、双指针
+- **题目地址**：https://leetcode-cn.com/problems/linked-list-cycle/
+- **题目内容**：
 
 ```
 给定一个链表，判断链表中是否有环。
@@ -75,17 +74,15 @@
  * @param {ListNode} head
  * @return {boolean}
  */
-var hasCycle = function(head) {
-    
-};
+var hasCycle = function(head) {}
 ```
 
 enm...怎么只有 `head`，那个 `pos` 呢？
 
 回头看了下题解：
 
-* 官方题解：https://leetcode-cn.com/problems/linked-list-cycle/solution/huan-xing-lian-biao-by-leetcode/
-* 个人题解：https://leetcode-cn.com/problems/linked-list-cycle/solution/8mskuai-man-zhi-zhen-hashsi-lu-de-go-shi-xian-by-e/
+- 官方题解：https://leetcode-cn.com/problems/linked-list-cycle/solution/huan-xing-lian-biao-by-leetcode/
+- 个人题解：https://leetcode-cn.com/problems/linked-list-cycle/solution/8mskuai-man-zhi-zhen-hashsi-lu-de-go-shi-xian-by-e/
 
 > 比较有意思的题解：
 
@@ -93,14 +90,14 @@ enm...怎么只有 `head`，那个 `pos` 呢？
 var hasCycle = function(head) {
   while (head) {
     if (head.val === 'jsLe') {
-      return true;
+      return true
     } else {
-      head.val = 'jsLe';
+      head.val = 'jsLe'
     }
-    head = head.next;
+    head = head.next
   }
-  return false;
-};
+  return false
+}
 ```
 
 ```js

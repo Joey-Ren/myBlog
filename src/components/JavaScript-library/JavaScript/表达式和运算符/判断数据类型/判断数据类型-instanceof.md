@@ -1,70 +1,70 @@
-判断数据类型 - instanceof
-===
+# 判断数据类型 - instanceof
 
 > Create by **jsLe** on **2019-10-15 19:50:51**  
 > Recently revised in **2019-10-16 01:12:27**
 
-* **原文**：[MDN - instanceof](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof)
+- **原文**：[MDN - instanceof](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof)
 
-* **功能**：`instanceof` 运算符用于检测构造函数的 `prototype` 属性是否出现在某个实例对象的原型链上。
+- **功能**：`instanceof` 运算符用于检测构造函数的 `prototype` 属性是否出现在某个实例对象的原型链上。
 
-* **示例**：
+- **示例**：
 
 ```js
 function Car(make, model, year) {
-  this.make = make;
-  this.model = model;
-  this.year = year;
+  this.make = make
+  this.model = model
+  this.year = year
 }
-var auto = new Car('Honda', 'Accord', 1998);
+var auto = new Car('Honda', 'Accord', 1998)
 
-console.log(auto instanceof Car); // true
+console.log(auto instanceof Car) // true
 
-console.log(auto instanceof Object); // true
+console.log(auto instanceof Object) // true
 ```
 
-* **方法**：`object instanceof constructor`
-  * `object`：某个实例对象。
-  * `constructor`：某个构造函数
+- **方法**：`object instanceof constructor`
 
-* **说明**：
+  - `object`：某个实例对象。
+  - `constructor`：某个构造函数
+
+- **说明**：
 
 `instanceof` 运算符用来检测 `constructor.prototype` 是否存在于参数 `Object` 的原型链上。
 
 同时，`instanceof` 运算符也可以用来判断数据类型，但是它会存在一点 “缺陷”，详细可观看代码。
 
-* **代码**：
+- **代码**：
 
 ```js
 /**
  * @name instanceof示例1
  * @description 检测字符串类型
  */
-const simpleString = '这是简单的 String';
-const newString = new String('这是 New 出来的 String');
+const simpleString = '这是简单的 String'
+const newString = new String('这是 New 出来的 String')
 
-console.log(simpleString instanceof String); // false，检查原型链会返回 undefined
-console.log(newString instanceof String); // true
+console.log(simpleString instanceof String) // false，检查原型链会返回 undefined
+console.log(newString instanceof String) // true
 
 /**
  * @name instanceof示例2
  * @description 检测数字类型
  */
-const simpleNumber = 123;
-const newNumber = new Number(123);
+const simpleNumber = 123
+const newNumber = new Number(123)
 
-console.log(simpleNumber instanceof Number); // false
-console.log(newNumber instanceof Number); // true
+console.log(simpleNumber instanceof Number) // false
+console.log(newNumber instanceof Number) // true
 
 /**
  * @name instanceof示例3
  * @description 检测对象类型
  */
-const simpleOjbect = {};
-const newObject = new Object();
+const simpleOjbect = {}
+const newObject = new Object()
 
-console.log(simpleOjbect instanceof Object); // true
-console.log(newObject instanceof Object); // true
+console.log(simpleOjbect instanceof Object) // true
+console.log(newObject instanceof Object) // true
 ```
 
 ---

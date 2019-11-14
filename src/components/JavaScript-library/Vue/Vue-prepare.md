@@ -1,5 +1,4 @@
-Vue 开发准备
-===
+# Vue 开发准备
 
 > Create by **jsLe** on **2018-12-24 11:54:30**  
 > Recently revised in **2019-05-31 13:48:20**
@@ -10,21 +9,21 @@ Vue 开发准备
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |                                                                             
-| --- | 
-| [一 目录](#chapter-one) | 
-| [二 大体步骤](#chapter-two) |
-| [三 详细步骤](#chapter-three) |
-| &emsp;[3.1 安装 VueCli](#chapter-three-one) |
-| &emsp;[3.2 项目目录结构](#chapter-three-two) |
-| &emsp;[3.3 配置使用 less](#chapter-three-three) |
-| &emsp;[3.4 重置 CSS 样式](#chapter-three-four) |
-| &emsp;[3.5 引用左上角图标](#chapter-three-five) |
+| 目录                                               |
+| -------------------------------------------------- |
+| [一 目录](#chapter-one)                            |
+| [二 大体步骤](#chapter-two)                        |
+| [三 详细步骤](#chapter-three)                      |
+| &emsp;[3.1 安装 VueCli](#chapter-three-one)        |
+| &emsp;[3.2 项目目录结构](#chapter-three-two)       |
+| &emsp;[3.3 配置使用 less](#chapter-three-three)    |
+| &emsp;[3.4 重置 CSS 样式](#chapter-three-four)     |
+| &emsp;[3.5 引用左上角图标](#chapter-three-five)    |
 | &emsp;[3.6 按需引用 ElementUI](#chapter-three-six) |
-| &emsp;[3.7 Axios 封装使用](#chapter-three-seven) |
-| &emsp;[3.8 动态引用组件](#chapter-three-eight) |
+| &emsp;[3.7 Axios 封装使用](#chapter-three-seven)   |
+| &emsp;[3.8 动态引用组件](#chapter-three-eight)     |
 | &emsp;[3.9 图片的引用及打包](#chapter-three-night) |
-| &emsp;[3.10 rem 适配](#chapter-three-ten) |
+| &emsp;[3.10 rem 适配](#chapter-three-ten)          |
 
 ## <a name="chapter-two" id="chapter-two">二 大体步骤</a>
 
@@ -116,12 +115,12 @@ Vue 开发准备
 
 ```html
 <style lang="less" scoped>
-.left {
-  border: 1px solid #ccc;
-  .left-one {
-    font-size: 10px;
+  .left {
+    border: 1px solid #ccc;
+    .left-one {
+      font-size: 10px;
+    }
   }
-}
 </style>
 ```
 
@@ -130,10 +129,7 @@ Vue 开发准备
 > App.vue
 
 ```js
-<style lang="less">
-  @import './style/reset';
-  @import './style/common';
-</style>
+<style lang="less">@import './style/reset'; @import './style/common';</style>
 ```
 
 ### <a name="chapter-three-four" id="chapter-three-four">3.4 重置 CSS 样式</a>
@@ -162,48 +158,98 @@ th, td /* 表格元素 - table elements */ {
 }
 
 /** 设置默认字体 - setting the default font **/
-body, button, input, select, textarea {
+body,
+button,
+input,
+select,
+textarea {
   font: 18px/1.5 '黑体', Helvetica, sans-serif;
 }
-h1, h2, h3, h4, h5, h6, button, input, select, textarea { font-size: 100%; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
 
 /** 重置列表元素 - reset the list element **/
-ul, ol { list-style: none; }
+ul,
+ol {
+  list-style: none;
+}
 
 /** 重置文本格式元素 - reset the text format element **/
-a, a:hover { text-decoration: none; }
+a,
+a:hover {
+  text-decoration: none;
+}
 
 /** 重置表单元素 - reset the form element **/
-button { cursor: pointer; }
-input { font-size: 18px; outline: none; }
+button {
+  cursor: pointer;
+}
+input {
+  font-size: 18px;
+  outline: none;
+}
 
 /** 重置表格元素 - reset the table element **/
-table { border-collapse: collapse; border-spacing: 0; }
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
 /** 图片自适应 - image responsize **/
-img { border: 0; display: inline-block; width: 100%; max-width: 100%; height: auto; vertical-align: middle; }
+img {
+  border: 0;
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
 
 /* 
     * 默认box-sizing是content-box，该属性导致padding会撑大div，使用border-box可以解决该问题
     * set border-box for box-sizing when you use div, it solve the problem when you add padding and don't want to make the div width bigger
 */
-div, input { box-sizing: border-box; }
+div,
+input {
+  box-sizing: border-box;
+}
 
 /** 清除浮动 - clear float **/
-.jsLe-clear:after, .clear:after {
+.jsLe-clear:after,
+.clear:after {
   content: '\20';
   display: block;
   height: 0;
   clear: both;
 }
-.jsLe-clear, .clear {
+.jsLe-clear,
+.clear {
   *zoom: 1;
 }
 
 /** 设置input的placeholder - set input placeholder **/
-input::-webkit-input-placeholder { color: #919191; font-size: .26rem } /* Webkit browsers */
-input::-moz-placeholder { color: #919191; font-size: .26rem } /* Mozilla Firefox */
-input::-ms-input-placeholder { color: #919191; font-size: .26rem } /* Internet Explorer */
+input::-webkit-input-placeholder {
+  color: #919191;
+  font-size: 0.26rem;
+} /* Webkit browsers */
+input::-moz-placeholder {
+  color: #919191;
+  font-size: 0.26rem;
+} /* Mozilla Firefox */
+input::-ms-input-placeholder {
+  color: #919191;
+  font-size: 0.26rem;
+} /* Internet Explorer */
 ```
 
 **步骤 2**. 引用重置样式表
@@ -228,18 +274,18 @@ import '../static/css/reset.css'
 > index.html
 
 ```html
-<link rel="shortcut icon" type="image/ico" href="./static/img/icon.ico">
+<link rel="shortcut icon" type="image/ico" href="./static/img/icon.ico" />
 ```
 
 ### <a name="chapter-three-six" id="chapter-three-six">3.6 按需引用 ElementUI</a>
 
 > [返回目录](#chapter-one)
 
-* 安装 ElementUI：`npm i element-ui -S`
+- 安装 ElementUI：`npm i element-ui -S`
 
 ---
 
-* 如果需要完整使用 ElementUI：
+- 如果需要完整使用 ElementUI：
 
 > src/main.js
 
@@ -249,10 +295,10 @@ import App from './App'
 import router from './router'
 
 // 引用 ElementUI
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 
-Vue.use(ElementUI);
+Vue.use(ElementUI)
 // 引用 ElementUI 结束
 
 Vue.config.productionTip = false
@@ -263,7 +309,6 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
-
 ```
 
 > App.vue
@@ -279,7 +324,7 @@ new Vue({
 
 ---
 
-* 如果需要按需引用 ElementUI：
+- 如果需要按需引用 ElementUI：
 
 **步骤 1**. 安装 babel 插件：`cnpm i babel-plugin-component -D`
 
@@ -290,16 +335,19 @@ new Vue({
 ```json
 {
   "presets": [
-    ["env", {
-      "modules": false,
-      "targets": {
-        "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+    [
+      "env",
+      {
+        "modules": false,
+        "targets": {
+          "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+        }
       }
-    }],
+    ],
     "stage-2"
   ],
   "plugins": [
-    "transform-vue-jsx", 
+    "transform-vue-jsx",
     "transform-runtime",
     [
       "component",
@@ -318,8 +366,8 @@ new Vue({
 
 ```js
 // 引入及使用 ElementUI
-import {Row, Col} from 'element-ui';
-Vue.use(Row).use(Col);
+import { Row, Col } from 'element-ui'
+Vue.use(Row).use(Col)
 ```
 
 > App.vue
@@ -335,38 +383,38 @@ Vue.use(Row).use(Col);
 
 ---
 
-* 响应式布局下基于断点的隐藏类：
+- 响应式布局下基于断点的隐藏类：
 
 > main.js
 
 ```js
 // 引入基于断点的隐藏类
-import 'element-ui/lib/theme-chalk/display.css';
+import 'element-ui/lib/theme-chalk/display.css'
 ```
 
 然后你就可以使用下面的 CSS 类：
 
-* `hidden-xs-only` - 当视口在 `xs` 尺寸时隐藏
-* `hidden-sm-only` - 当视口在 `sm` 尺寸时隐藏
-* `hidden-sm-and-down` - 当视口在 `sm` 及以下尺寸时隐藏
-* `hidden-sm-and-up` - 当视口在 `sm` 及以上尺寸时隐藏
-* `hidden-md-only` - 当视口在 `md` 尺寸时隐藏
-* `hidden-md-and-down` - 当视口在 `md` 及以下尺寸时隐藏
-* `hidden-md-and-up` - 当视口在 `md` 及以上尺寸时隐藏
-* `hidden-lg-only` - 当视口在 `lg` 尺寸时隐藏
-* `hidden-lg-and-down` - 当视口在 `lg` 及以下尺寸时隐藏
-* `hidden-lg-and-up` - 当视口在 `lg` 及以上尺寸时隐藏
-* `hidden-xl-only` - 当视口在 `xl` 尺寸时隐藏
+- `hidden-xs-only` - 当视口在 `xs` 尺寸时隐藏
+- `hidden-sm-only` - 当视口在 `sm` 尺寸时隐藏
+- `hidden-sm-and-down` - 当视口在 `sm` 及以下尺寸时隐藏
+- `hidden-sm-and-up` - 当视口在 `sm` 及以上尺寸时隐藏
+- `hidden-md-only` - 当视口在 `md` 尺寸时隐藏
+- `hidden-md-and-down` - 当视口在 `md` 及以下尺寸时隐藏
+- `hidden-md-and-up` - 当视口在 `md` 及以上尺寸时隐藏
+- `hidden-lg-only` - 当视口在 `lg` 尺寸时隐藏
+- `hidden-lg-and-down` - 当视口在 `lg` 及以下尺寸时隐藏
+- `hidden-lg-and-up` - 当视口在 `lg` 及以上尺寸时隐藏
+- `hidden-xl-only` - 当视口在 `xl` 尺寸时隐藏
 
 注：
 
-| 参数 | 说明 |
-| --- | --- |
-| xs | `<768px` |
-| sm | `>=768px` |
-| md | `>=992px` |
-| lg | `>=1200px` |
-| xl | `>=1920px` |
+| 参数 | 说明       |
+| ---- | ---------- |
+| xs   | `<768px`   |
+| sm   | `>=768px`  |
+| md   | `>=992px`  |
+| lg   | `>=1200px` |
+| xl   | `>=1920px` |
 
 > 更多：[ElementUI 组件](http://element-cn.eleme.io/#/zh-CN/component/installation)
 
@@ -391,7 +439,7 @@ import 'element-ui/lib/theme-chalk/display.css';
  */
 
 // 设置 axios
-import axios from 'axios';
+import axios from 'axios'
 
 // 请求配置
 const request = axios.create({
@@ -399,9 +447,9 @@ const request = axios.create({
   // baseURL: 'http://172.26.167.5:8080',
   timeout: 5000,
   headers: {
-    timestamp: "20181026094424",
-    deviceid: "10102",
-    signature: "F9CB03DD3ED50EDA5DB214C42D4DC0D6",
+    timestamp: '20181026094424',
+    deviceid: '10102',
+    signature: 'F9CB03DD3ED50EDA5DB214C42D4DC0D6'
   }
 })
 
@@ -409,11 +457,12 @@ const request = axios.create({
  * 获取用户名
  * userId
  */
-export const getUserName = data => request({
-  method: 'get',
-  url: '/api/getUserName',
-  params: data
-})
+export const getUserName = data =>
+  request({
+    method: 'get',
+    url: '/api/getUserName',
+    params: data
+  })
 ```
 
 **步骤 3**. 在 `Pages` 中调用：
@@ -422,17 +471,16 @@ export const getUserName = data => request({
 
 ```js
 // 引用接口
-import { getUserName } from "@/api/api"
+import { getUserName } from '@/api/api'
 
 export default {
   methods: {
     _getUserName() {
-
       // 获取用户名
       getUserName({
-        userId: this.userId,
-      }).then( (res) => {
-        console.log("\n【API - 获取用户名】：");
+        userId: this.userId
+      }).then(res => {
+        console.log('\n【API - 获取用户名】：')
       })
     }
   }
@@ -487,9 +535,9 @@ export default new Router({
       component: Index,
       children: [
         {
-          path:'/',
+          path: '/',
           component: ListOnePageOne,
-          meta: ["第一组第一页"],
+          meta: ['第一组第一页']
         }
       ]
     }
@@ -503,13 +551,13 @@ export default new Router({
 
 在 VueCli 中，图片可以存放在两个位置：
 
-* 静态目录，不会被打包：`项目/static/img`
-* 动态目录，将会被打包：`项目/src/assets/img`
+- 静态目录，不会被打包：`项目/static/img`
+- 动态目录，将会被打包：`项目/src/assets/img`
 
 详细来说：
 
-* static 的目录中的图片，不会被 Webpack 相关机制理会，你引入的时候，是怎样的，它就是怎样的。
-* assets 中的图片，它会被 Webpack 处理，在配置了图片相关打包 loader 的情况下，它会在 `项目/build/webpack.base.conf.js` 中依据相关的 loader 限制，在一定大小下转换为 Base64。
+- static 的目录中的图片，不会被 Webpack 相关机制理会，你引入的时候，是怎样的，它就是怎样的。
+- assets 中的图片，它会被 Webpack 处理，在配置了图片相关打包 loader 的情况下，它会在 `项目/build/webpack.base.conf.js` 中依据相关的 loader 限制，在一定大小下转换为 Base64。
 
 > 项目/build/webpack.base.conf.js
 
@@ -531,12 +579,14 @@ export default new Router({
 ```html
 <template>
   <div>
-      <van-row>
-        <!-- 不推荐通过下面的方式直接引用 assets 图片，因为 webpack 打包可能没法成功打包 -->
-        <van-col span="8"><img src="../../assets/img/emoticon_happy.png" alt="表情包"></van-col>
-        <van-col span="8"><img :src="icon1" alt="表情包"></van-col>
-        <van-col span="8"><img :src="icon2" alt="表情包"></van-col>
-      </van-row>
+    <van-row>
+      <!-- 不推荐通过下面的方式直接引用 assets 图片，因为 webpack 打包可能没法成功打包 -->
+      <van-col span="8"
+        ><img src="../../assets/img/emoticon_happy.png" alt="表情包"
+      /></van-col>
+      <van-col span="8"><img :src="icon1" alt="表情包"/></van-col>
+      <van-col span="8"><img :src="icon2" alt="表情包"/></van-col>
+    </van-row>
   </div>
 </template>
 
@@ -565,17 +615,17 @@ module.exports = {
   dev: {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {}
     //... 省略剩下的代码
   },
-   build: {
+  build: {
     index: path.resolve(__dirname, '../dist/index.html'),
 
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: '/'
     // ...省略剩下的代码
-   }
+  }
 }
 ```
 
@@ -585,7 +635,7 @@ module.exports = {
 
 **VueCli 打包的时候，生成的是图片的绝对路径，部署的时候无法解析到图片，需要配置成相对路径，需要怎么改呢？**
 
-* 位置 1：
+- 位置 1：
 
 > 项目/build/webpack.prod.conf.js
 
@@ -600,7 +650,7 @@ output: {
 
 在 output 这块，新增代码 `publicPath: './'`。
 
-* 位置 2：
+- 位置 2：
 
 > 项目/build/utils.js
 
@@ -642,33 +692,49 @@ import './utils/rem'
  * 自定义设计稿的宽度：designWidth
  * 最大宽度：maxWidth
  * 这段 js 的最后面有两个参数记得要设置，一个为设计稿实际宽度，一个为制作稿最大宽度，例如设计稿为 750，最大宽度为 750，则为(750,750)
-*/
-! function (e, t) {
-    function n() {
-        var n = l.getBoundingClientRect().width;
-        t = t || 540, n > t && (n = t);
-        var i = 100 * n / e;
-        r.innerHTML = "html{font-size:" + i + "px;}"
-    }
-    var i, d = document,
-        o = window,
-        l = d.documentElement,
-        r = document.createElement("style");
-    if (l.firstElementChild) l.firstElementChild.appendChild(r);
-    else {
-        var a = d.createElement("div");
-        a.appendChild(r), d.write(a.innerHTML), a = null
-    }
-    n(), o.addEventListener("resize", function () {
-        clearTimeout(i), i = setTimeout(n, 300)
-    }, !1), o.addEventListener("pageshow", function (e) {
-        e.persisted && (clearTimeout(i), i = setTimeout(n, 300))
-    }, !1), "complete" === d.readyState ? d.body.style.fontSize = "16px" : d.addEventListener(
-        "DOMContentLoaded",
-        function (e) {
-            d.body.style.fontSize = "16px"
-        }, !1)
-}(750, 750);
+ */
+!(function(e, t) {
+  function n() {
+    var n = l.getBoundingClientRect().width
+    ;(t = t || 540), n > t && (n = t)
+    var i = (100 * n) / e
+    r.innerHTML = 'html{font-size:' + i + 'px;}'
+  }
+  var i,
+    d = document,
+    o = window,
+    l = d.documentElement,
+    r = document.createElement('style')
+  if (l.firstElementChild) l.firstElementChild.appendChild(r)
+  else {
+    var a = d.createElement('div')
+    a.appendChild(r), d.write(a.innerHTML), (a = null)
+  }
+  n(),
+    o.addEventListener(
+      'resize',
+      function() {
+        clearTimeout(i), (i = setTimeout(n, 300))
+      },
+      !1
+    ),
+    o.addEventListener(
+      'pageshow',
+      function(e) {
+        e.persisted && (clearTimeout(i), (i = setTimeout(n, 300)))
+      },
+      !1
+    ),
+    'complete' === d.readyState
+      ? (d.body.style.fontSize = '16px')
+      : d.addEventListener(
+          'DOMContentLoaded',
+          function(e) {
+            d.body.style.fontSize = '16px'
+          },
+          !1
+        )
+})(750, 750)
 ```
 
 ---

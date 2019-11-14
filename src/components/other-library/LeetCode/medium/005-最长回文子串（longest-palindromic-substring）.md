@@ -1,5 +1,4 @@
-005 - 最长回文子串（longest-palindromic-substring）
-===
+# 005 - 最长回文子串（longest-palindromic-substring）
 
 > Create by **jsLe** on **2019-08-12 10:48:42**  
 > Recently revised in **2019-09-18 14:14:12**
@@ -8,24 +7,24 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six)             |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven)     |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：中等
-* **涉及知识**：字符串、动态规划
-* **题目地址**：https://leetcode-cn.com/problems/longest-palindromic-substring/
-* **题目内容**：
+- **难度**：中等
+- **涉及知识**：字符串、动态规划
+- **题目地址**：https://leetcode-cn.com/problems/longest-palindromic-substring/
+- **题目内容**：
 
 ```
 给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。
@@ -48,40 +47,40 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
-const longestPalindrome = (s) => {
-  let max = '';
-  let length = s.length;
+const longestPalindrome = s => {
+  let max = ''
+  let length = s.length
   if (length < 2) {
-    return s;
+    return s
   }
   for (let i = 0; i <= length; i++) {
-    let newMax = core(s, i);
-    max = newMax.length > max.length ? newMax : max;
+    let newMax = core(s, i)
+    max = newMax.length > max.length ? newMax : max
   }
-  return max;
-};
+  return max
+}
 
 const core = (str, index) => {
   // 递归遍历
   const loop = (prev, next) => {
     if (!str[prev] || !str[next]) {
-      return str.slice(prev + 1, next);
+      return str.slice(prev + 1, next)
     }
     if (str.charAt(prev) === str.charAt(next)) {
-      return loop(prev - 1, next + 1);
+      return loop(prev - 1, next + 1)
     } else {
-      return str.slice(prev + 1, next);
+      return str.slice(prev + 1, next)
     }
   }
   // 一核对称
-  let maxOne = loop(index - 1, index + 1);
+  let maxOne = loop(index - 1, index + 1)
   // 双核对称
-  let maxTwo = loop(index, index + 1);
+  let maxTwo = loop(index, index + 1)
   // 返回结果
-  return maxOne.length > maxTwo.length ? maxOne : maxTwo;
+  return maxOne.length > maxTwo.length ? maxOne : maxTwo
 }
 ```
 
@@ -122,40 +121,40 @@ bab
 
 **既然如此**，我们就尝试理解下这两种方法吧：
 
-* **对称查找**：
+- **对称查找**：
 
 ```js
-const longestPalindrome = (s) => {
-  let max = '';
-  let length = s.length;
+const longestPalindrome = s => {
+  let max = ''
+  let length = s.length
   if (length < 2) {
-    return s;
+    return s
   }
   for (let i = 0; i <= length; i++) {
-    let newMax = core(s, i);
-    max = newMax.length > max.length ? newMax : max;
+    let newMax = core(s, i)
+    max = newMax.length > max.length ? newMax : max
   }
-  return max;
-};
+  return max
+}
 
 const core = (str, index) => {
   // 递归遍历
   const loop = (prev, next) => {
     if (!str[prev] || !str[next]) {
-      return str.slice(prev + 1, next);
+      return str.slice(prev + 1, next)
     }
     if (str.charAt(prev) === str.charAt(next)) {
-      return loop(prev - 1, next + 1);
+      return loop(prev - 1, next + 1)
     } else {
-      return str.slice(prev + 1, next);
+      return str.slice(prev + 1, next)
     }
   }
   // 一核对称
-  let maxOne = loop(index - 1, index + 1);
+  let maxOne = loop(index - 1, index + 1)
   // 双核对称
-  let maxTwo = loop(index, index + 1);
+  let maxTwo = loop(index, index + 1)
   // 返回结果
-  return maxOne.length > maxTwo.length ? maxOne : maxTwo;
+  return maxOne.length > maxTwo.length ? maxOne : maxTwo
 }
 ```
 
@@ -181,41 +180,41 @@ Submit 提交：
 3. 假设为二核对称，则发送索引以及索引的下一个进行判断。内部判断条件同上。
 4. 最终，通过 `str.slice(prev + 1, next)`，来返回当前索引能获得的最大回文串，跟原先的比较，直到循环结束。
 
-* **动态规划**：
+- **动态规划**：
 
 ```js
-const longestPalindrome = (s) => {
-  let dp = [];
+const longestPalindrome = s => {
+  let dp = []
   for (let i = 0; i < s.length; i++) {
-    dp[i] = [];
-  };
+    dp[i] = []
+  }
 
-  let max = -1;
-  let str = '';
+  let max = -1
+  let str = ''
   // 这样可以遍历出所有子串, 以不同子串的开头为基准, 遍历所有子串
   for (let k = 0; k < s.length; k++) {
     // 采用不同的间隔依次遍历
     // 这里 i 是子串的开始索引, j 是子串的结束索引, k + 1 其实就是子串的长度
     for (let i = 0; i + k < s.length; i++) {
-      let j = i + k;
+      let j = i + k
       if (k == 0) {
-        dp[i][j] = true;
+        dp[i][j] = true
       } else if (k <= 2) {
         if (s[i] == s[j]) {
-          dp[i][j] = true;
+          dp[i][j] = true
         } else {
-          dp[i][j] = false;
+          dp[i][j] = false
         }
       } else {
-        dp[i][j] = (dp[i + 1][j - 1] && s[i] == s[j]) ? true : false;
+        dp[i][j] = dp[i + 1][j - 1] && s[i] == s[j] ? true : false
       }
       if (j - i > max && dp[i][j]) {
-        max = j - i;
-        str = s.substring(i, j + 1);
+        max = j - i
+        str = s.substring(i, j + 1)
       }
-    };
-  };
-  return str;
+    }
+  }
+  return str
 }
 ```
 
@@ -236,21 +235,31 @@ Submit 提交：
 > 答案是有的，而且这道题至少有 4 种以上解法。
 
 ```js
-var longestPalindrome = function (s) {
-  let re = ro = 1,
-    p = s.length ? s[0] : "";
+var longestPalindrome = function(s) {
+  let re = (ro = 1),
+    p = s.length ? s[0] : ''
   // 检查是否回文串
-  let check = u => u.split("").reverse().join("") === u ? p = u : null;
-  for (let i = 1; i <= s.length - re;) {
+  let check = u =>
+    u
+      .split('')
+      .reverse()
+      .join('') === u
+      ? (p = u)
+      : null
+  for (let i = 1; i <= s.length - re; ) {
     // 待检测偶数字母回文半径
-    re = (p.length / 2 | 0) + 1;
+    re = ((p.length / 2) | 0) + 1
     // 待检测奇数字母回文半径
-    ro = Math.ceil(p.length / 2);
+    ro = Math.ceil(p.length / 2)
     // 没有匹配的话指针向后移
-    check(s.slice(i - re, i + re)) || check(s.slice(i - ro, i + ro + 1)) ? re >= i ? i++ : null : i++;
+    check(s.slice(i - re, i + re)) || check(s.slice(i - ro, i + ro + 1))
+      ? re >= i
+        ? i++
+        : null
+      : i++
   }
-  return p;
-};
+  return p
+}
 ```
 
 ---

@@ -1,5 +1,4 @@
-026 - 删除排序数组中的重复项（remove-duplicates-from-sorted-array）
-===
+# 026 - 删除排序数组中的重复项（remove-duplicates-from-sorted-array）
 
 > Create by **jsLe** on **2019-06-06 11:11:26**  
 > Recently revised in **2019-09-18 10:05:22**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - 双指针](#chapter-three-one) |
-| &emsp;[3.2 解法 - 违规操作](#chapter-three-two) |
+| &emsp;[3.1 解法 - 双指针](#chapter-three-one)                                            |
+| &emsp;[3.2 解法 - 违规操作](#chapter-three-two)                                          |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数组、双指针
-* **题目地址**：https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数组、双指针
+- **题目地址**：https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/
+- **题目内容**：
 
 ```
 给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。
@@ -32,8 +31,8 @@
 
 示例 1:
 
-给定数组 nums = [1,1,2], 
-函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。 
+给定数组 nums = [1,1,2],
+函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。
 你不需要考虑数组中超出新长度后面的元素。
 
 示例 2:
@@ -63,7 +62,7 @@ for (int i = 0; i < len; i++) {
 
 > [返回目录](#chapter-one)
 
-* **官方题解**：https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/solution/shan-chu-pai-xu-shu-zu-zhong-de-zhong-fu-xiang-by-/
+- **官方题解**：https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/solution/shan-chu-pai-xu-shu-zu-zhong-de-zhong-fu-xiang-by-/
 
 解题千千万，官方独一家，上面是官方使用 Java 进行的题解。
 
@@ -73,20 +72,20 @@ for (int i = 0; i < len; i++) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var removeDuplicates = function(nums) {
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] === nums[i + 1]) {
-      nums.splice(i, 1);
-      i--;
+      nums.splice(i, 1)
+      i--
     }
   }
-};
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums`：`[1, 1, 2]`
 2. `return`：
@@ -95,7 +94,7 @@ var removeDuplicates = function(nums) {
 2
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -104,25 +103,25 @@ var removeDuplicates = function(nums) {
   ✔ Your memory usage beats 15.24 % of javascript submissions (37.6 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `splice()`：`splice()` 方法通过删除或替换现有元素或者原地添加新的元素来修改数组,并以数组形式返回被修改的内容。此方法会改变原数组。[`splice()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/splice.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **首先**，这道题涉及到所谓的 **双指针** 了，什么是 **双指针** 呢？
 
-* [《LeetBook（LeetCode详解）》 - 双指针](https://hk029.gitbooks.io/leetbook/twopoint.html)
+- [《LeetBook（LeetCode 详解）》 - 双指针](https://hk029.gitbooks.io/leetbook/twopoint.html)
 
-双指针，顾名思义，就是利用两个指针去遍历数组，一般来说，遍历数组采用的是单指针（index) 去遍历，两个指针一般是在有序数组中使用，一个放首，一个放尾，同时向中间遍历，直到两个指针相交，完成遍历，时间复杂度也是O(n)。
+双指针，顾名思义，就是利用两个指针去遍历数组，一般来说，遍历数组采用的是单指针（index) 去遍历，两个指针一般是在有序数组中使用，一个放首，一个放尾，同时向中间遍历，直到两个指针相交，完成遍历，时间复杂度也是 O(n)。
 
 啥意思咧？就好比我们的代码：
 
 ```js
 for (let i = 0; i < nums.length; i++) {
   if (nums[i] === nums[i + 1]) {
-    nums.splice(i, 1);
-    i--;
+    nums.splice(i, 1)
+    i--
   }
 }
 ```
@@ -139,51 +138,56 @@ for (let i = 0; i < nums.length; i++) {
 
 ```js
 function ArraySplice(start, delete_count) {
-  CHECK_OBJECT_COERCIBLE(this, "Array.prototype.splice");
+  CHECK_OBJECT_COERCIBLE(this, 'Array.prototype.splice')
 
-  var num_arguments = arguments.length;
-  var array = TO_OBJECT(this);
-  var len = TO_LENGTH(array.length);
-  var start_i = ComputeSpliceStartIndex(TO_INTEGER(start), len);
-  var del_count = ComputeSpliceDeleteCount(delete_count, num_arguments, len, start_i);
-  var deleted_elements = ArraySpeciesCreate(array, del_count);
-  deleted_elements.length = del_count;
-  var num_elements_to_add = num_arguments > 2 ? num_arguments - 2 : 0;
+  var num_arguments = arguments.length
+  var array = TO_OBJECT(this)
+  var len = TO_LENGTH(array.length)
+  var start_i = ComputeSpliceStartIndex(TO_INTEGER(start), len)
+  var del_count = ComputeSpliceDeleteCount(
+    delete_count,
+    num_arguments,
+    len,
+    start_i
+  )
+  var deleted_elements = ArraySpeciesCreate(array, del_count)
+  deleted_elements.length = del_count
+  var num_elements_to_add = num_arguments > 2 ? num_arguments - 2 : 0
 
   if (del_count != num_elements_to_add && %object_is_sealed(array)) {
-    throw %make_type_error(kArrayFunctionsOnSealed);
+    throw %make_type_error(kArrayFunctionsOnSealed)
   } else if (del_count > 0 && %object_is_frozen(array)) {
-    throw %make_type_error(kArrayFunctionsOnFrozen);
+    throw %make_type_error(kArrayFunctionsOnFrozen)
   }
 
-  var changed_elements = del_count;
+  var changed_elements = del_count
   if (num_elements_to_add != del_count) {
     // If the slice needs to do a actually move elements after the insertion
     // point, then include those in the estimate of changed elements.
-    changed_elements += len - start_i - del_count;
+    changed_elements += len - start_i - del_count
   }
   if (UseSparseVariant(array, len, IS_ARRAY(array), changed_elements)) {
-    %NormalizeElements(array);
-    if (IS_ARRAY(deleted_elements)) %NormalizeElements(deleted_elements);
-    SparseSlice(array, start_i, del_count, len, deleted_elements);
-    SparseMove(array, start_i, del_count, len, num_elements_to_add);
+    %NormalizeElements(array)
+    if (IS_ARRAY(deleted_elements)) %NormalizeElements(deleted_elements)
+    SparseSlice(array, start_i, del_count, len, deleted_elements)
+    SparseMove(array, start_i, del_count, len, num_elements_to_add)
   } else {
-    SimpleSlice(array, start_i, del_count, len, deleted_elements);
-    SimpleMove(array, start_i, del_count, len, num_elements_to_add);
+    SimpleSlice(array, start_i, del_count, len, deleted_elements)
+    SimpleMove(array, start_i, del_count, len, num_elements_to_add)
   }
 
   // Insert the arguments into the resulting array in
   // place of the deleted elements.
-  var i = start_i;
-  var arguments_index = 2;
-  var arguments_length = arguments.length;
+  var i = start_i
+  var arguments_index = 2
+  var arguments_length = arguments.length
   while (arguments_index < arguments_length) {
-    array[i++] = arguments[arguments_index++];
+    array[i++] = arguments[arguments_index++]
   }
-  array.length = len - del_count + num_elements_to_add;
+  array.length = len - del_count + num_elements_to_add
 
   // Return the deleted elements.
-  return deleted_elements;
+  return deleted_elements
 }
 ```
 
@@ -195,17 +199,17 @@ function ArraySplice(start, delete_count) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var removeDuplicates = function(nums) {
-  var a = [...new Set(nums)];
-  for (var i = 0;i < a.length;i++) nums[i] = a[i];
-  return a.length;
-};
+  var a = [...new Set(nums)]
+  for (var i = 0; i < a.length; i++) nums[i] = a[i]
+  return a.length
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums`：`[1, 1, 2]`
 2. `return`：
@@ -214,7 +218,7 @@ var removeDuplicates = function(nums) {
 2
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -223,15 +227,15 @@ var removeDuplicates = function(nums) {
   ✔ Your memory usage beats 45.6 % of javascript submissions (37.1 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `Set`：`Set` 对象允许你存储任何类型的唯一值，无论是原始值或者是对象引用。[`Set` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Set/README.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **首先**，**jsLe** 表示这种方法可能不符合题意，但是它又是可行的！所以不管怎么说，莽就对了~
 
-**然后**，`Set` 对象会对值进行唯一操作，如果输入 `[1, 1, 2]`，那么这个 `Set` 会变成 `Set(2) {1, 2}`：`let a = new Set([1, 1, 2]);`。
+**然后**，`Set` 对象会对值进行唯一操作，如果输入 `[1, 1, 2]`，那么这个 `Set` 会变成 `Set(2) {1, 2}`：`let a = new Set([1, 1, 2]);`。
 
 **接着**，我们利用 ES6 的扩展运算符：`[...new Set(nums)]`，可以直接将 `Set` 类型转换成 `Array` 类型。
 

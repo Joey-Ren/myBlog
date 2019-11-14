@@ -1,6 +1,4 @@
-Map、Set 以及 WeakMap 的区别
-===
-
+# Map、Set 以及 WeakMap 的区别
 
 > create by **jsLe** on **2019-09-29 17:17:27**  
 > Recently revised in **2019-10-16 11:45:46**

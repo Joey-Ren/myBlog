@@ -1,29 +1,28 @@
-// https://eslint.org/docs/user-guide/configuring
-
 module.exports = {
   root: true,
   parserOptions: {
-    parser: 'babel-eslint'
+    // https://eslint.vuejs.org/user-guide/#usage
+    parser: 'babel-eslint',
+    ecmaVersion: 2019
   },
   env: {
-    browser: true,
+    //...
   },
-  extends: [
-    // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
-    // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
-    'plugin:vue/essential', 
-    // https://github.com/standard/standard/blob/master/docs/RULES-en.md
-    'standard'
-  ],
-  // required to lint *.vue files
-  plugins: [
-    'vue'
-  ],
+  extends: ['@zto_module/eslint-config-ts-vue'],
+  // check if imports actually resolve
+  // settings: {
+  //   'import/resolver': {
+  //     webpack: {
+  //       config: 'build/webpack.base.conf.js'
+  //     }
+  //   }
+  // },
+  globals: {
+    //...
+  },
   // add your custom rules here
+  // it is base on https://github.com/vuejs/eslint-config-vue
   rules: {
-    // allow async-await
-    'generator-star-spacing': 'off',
-    // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    //! avoid add stylistic rules
   }
 }

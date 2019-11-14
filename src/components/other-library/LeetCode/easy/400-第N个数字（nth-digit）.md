@@ -1,5 +1,4 @@
-400 - 第N个数字（nth-digit）
-===
+# 400 - 第 N 个数字（nth-digit）
 
 > Create by **jsLe** on **2019-7-24 07:48:12**  
 > Recently revised in **2019-09-18 14:00:41**
@@ -8,25 +7,25 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven) |
-| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 进一步思考](#chapter-eight) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six)             |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven)     |
+| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 进一步思考](#chapter-eight)   |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数学
-* **题目地址**：https://leetcode-cn.com/problems/nth-digit/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数学
+- **题目地址**：https://leetcode-cn.com/problems/nth-digit/
+- **题目内容**：
 
 ```
 在无限的整数序列 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ...中找到第 n 个数字。
@@ -56,23 +55,23 @@ n 是正数且在32为整形范围内 ( n < 231)。
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var findNthDigit = function(n) {
-  if (n < 10) return n;
+  if (n < 10) return n
   let length = 0,
     cnt = 9,
-    i = 1;
+    i = 1
   for (; length + cnt * i < n; i++) {
-    length += cnt * i;
-    cnt *= 10;
+    length += cnt * i
+    cnt *= 10
   }
-  let num = Math.pow(10, i - 1) - 1 + (n - length + 1) / i;
-  let index = (n - length - 1) % i;
+  let num = Math.pow(10, i - 1) - 1 + (n - length + 1) / i
+  let index = (n - length - 1) % i
 
-  return String(num)[index] - '0';
-};
+  return String(num)[index] - '0'
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
@@ -120,19 +119,19 @@ var findNthDigit = function(n) {
 
 ```js
 var findNthDigit = function(n) {
-  if (n < 10) return n;
+  if (n < 10) return n
   let length = 0,
     cnt = 9,
-    i = 1;
+    i = 1
   for (; length + cnt * i < n; i++) {
-    length += cnt * i;
-    cnt *= 10;
+    length += cnt * i
+    cnt *= 10
   }
-  let num = Math.pow(10, i - 1) - 1 + (n - length + 1) / i;
-  let index = (n - length - 1) % i;
+  let num = Math.pow(10, i - 1) - 1 + (n - length + 1) / i
+  let index = (n - length - 1) % i
 
-  return String(num)[index] - '0';
-};
+  return String(num)[index] - '0'
+}
 ```
 
 > 注释：

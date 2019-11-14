@@ -1,5 +1,4 @@
-VuePress
-===
+# VuePress
 
 > create by **jsLe** on **2019-5-30 08:56:20**  
 > Recently revised in **2019-05-30 16:15:46**
@@ -8,10 +7,10 @@ VuePress
 
 VuePress 是以 Vue 驱动的静态网站生成器，通过 Vue + Webpack + Markdown 的配合使用，打造个人的静态网站。
 
-* [VuePress 官网](https://vuepress.vuejs.org/zh/)
+- [VuePress 官网](https://vuepress.vuejs.org/zh/)
 
-| 目录 |
-| --- |
+| 目录                                 |
+| ------------------------------------ |
 | [VuePress 学习](./VuePress-study.md) |
 
 ---

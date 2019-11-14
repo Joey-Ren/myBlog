@@ -1,5 +1,4 @@
-028 - 实现strStr（implement-strstr）
-===
+# 028 - 实现 strStr（implement-strstr）
 
 > Create by **jsLe** on **2019-06-06 19:34:22**  
 > Recently revised in **2019-09-18 10:16:21**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - indexOf()](#chapter-three-one) |
-| &emsp;[3.2 解法 - substring()](#chapter-three-two) |
+| &emsp;[3.1 解法 - indexOf()](#chapter-three-one)                                         |
+| &emsp;[3.2 解法 - substring()](#chapter-three-two)                                       |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：双指针、字符串
-* **题目地址**：https://leetcode-cn.com/problems/implement-strstr/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：双指针、字符串
+- **题目地址**：https://leetcode-cn.com/problems/implement-strstr/
+- **题目内容**：
 
 ```
 实现 strStr() 函数。
@@ -54,15 +53,15 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var strStr = function(haystack, needle) {
-  return haystack.indexOf(needle);
-};
+  return haystack.indexOf(needle)
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `haystack`：`hello`
 2. `needle`：`ll`
@@ -72,7 +71,7 @@ var strStr = function(haystack, needle) {
 2
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -81,11 +80,11 @@ var strStr = function(haystack, needle) {
   ✔ Your memory usage beats 38.43 % of javascript submissions (34.2 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `indexOf()`：判断数组中是否存在判断条件中的值。如果存在，则返回第一次出现的索引；如果不存在，则返回 -1。[`indexOf()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/indexOf.md)
 
-* **解题思路**：
+- **解题思路**：
 
 破解的最快思路，帅的嘛就不谈了，直接使用 JS 内置方法……
 
@@ -93,23 +92,23 @@ var strStr = function(haystack, needle) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var strStr = function(haystack, needle) {
   if (!haystack && !needle) {
-    return 0;
+    return 0
   }
   for (let i = 0; i < haystack.length; i++) {
     if (haystack.substring(i, i + needle.length) === needle) {
-      return i;
+      return i
     }
   }
-  return -1;
-};
+  return -1
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `haystack`：`hello`
 2. `needle`：`ll`
@@ -119,7 +118,7 @@ var strStr = function(haystack, needle) {
 2
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -128,11 +127,11 @@ var strStr = function(haystack, needle) {
   ✔ Your memory usage beats 9.51 % of javascript submissions (35.8 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `substring()`：`substring()` 方法将一个数组（或一个类数组对象）的所有元素连接成一个字符串并返回这个字符串。[`substring()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/String/substring.md)
 
-* **解题思路**：
+- **解题思路**：
 
 这道题讲点道理，还是有双指针的影子在里面的，所以用 `substring` 又做了一遍：
 

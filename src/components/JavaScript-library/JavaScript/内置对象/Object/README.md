@@ -1,21 +1,20 @@
-Object
-===
+# Object
 
 > Create by **jsLe** on **2019-10-14 15:44:33**  
 > Recently revised in **2019-10-14 15:50:53**
 
-* **原文**：[MDN - Object](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)
+- **原文**：[MDN - Object](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)
 
-* **功能**：JavaScript 万物源于 `Object`，`Object` 构造函数用于创建一个对象包装器。
+- **功能**：JavaScript 万物源于 `Object`，`Object` 构造函数用于创建一个对象包装器。
 
-* **描述**：`Object` 构造函数为给定值创建一个对象包装器。如果给定值是 `null` 或者 `undefined`，将会创建并返回一个空对象，否则，将返回一个与给定值对应类型的对象。
+- **描述**：`Object` 构造函数为给定值创建一个对象包装器。如果给定值是 `null` 或者 `undefined`，将会创建并返回一个空对象，否则，将返回一个与给定值对应类型的对象。
 
 当以非构造函数形式被调用时，`Object` 等同于 `new Object()`。
 
-* **代码**：
+- **代码**：
 
 ```js
-var o = new Object();
+var o = new Object()
 ```
 
 ---

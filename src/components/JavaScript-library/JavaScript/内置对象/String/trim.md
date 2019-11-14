@@ -1,21 +1,20 @@
-方法 - trim()
-===
+# 方法 - trim()
 
 > Create by **jsLe** on **2019-09-16 14:42:39**  
 > Recently revised in **2019-09-16 14:43:48**
 
-* **原文**：[MDN - trim()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trim)
+- **原文**：[MDN - trim()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trim)
 
-* **功能**：`trim()` 方法会从一个字符串的两端删除空白字符。
+- **功能**：`trim()` 方法会从一个字符串的两端删除空白字符。
 
-* **语法**：`str.trim()`
+- **语法**：`str.trim()`
 
-* **返回值**：`trim()` 方法并不影响原字符串本身，它返回的是一个新的字符串。
+- **返回值**：`trim()` 方法并不影响原字符串本身，它返回的是一个新的字符串。
 
-* **代码**：
+- **代码**：
 
 ```js
-'   jsLe   '.trim(); // 'jsLe'
+'   jsLe   '.trim() // 'jsLe'
 ```
 
 ---

@@ -1,5 +1,4 @@
-507 - 完美数（perfect-number）
-===
+# 507 - 完美数（perfect-number）
 
 > Create by **jsLe** on **2019-11-3 11:48:39**  
 > Recently revised in **2019-11-3 12:23:01**
@@ -8,23 +7,23 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题及测试](#chapter-three) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题及测试](#chapter-three)   |
 | <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 LeetCode Submit](#chapter-four) |
-| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 解题思路](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 进一步思考](#chapter-six) |
+| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 解题思路](#chapter-five)        |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 进一步思考](#chapter-six)         |
 
 ## <a name="chapter-two" id="chapter-two"></a>二 前言
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数学
-* **题目地址**：https://leetcode-cn.com/problems/perfect-number/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数学
+- **题目地址**：https://leetcode-cn.com/problems/perfect-number/
+- **题目内容**：
 
 ```
 对于一个 正整数，如果它和除了它自身以外的所有正因子之和相等，我们称它为“完美数”。
@@ -47,16 +46,14 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **LeetCode 给定函数体**：
+- **LeetCode 给定函数体**：
 
 ```js
 /**
  * @param {number} num
  * @return {boolean}
  */
-var checkPerfectNumber = function(num) {
-    
-};
+var checkPerfectNumber = function(num) {}
 ```
 
 根据上面的已知函数，尝试破解本题吧~
@@ -71,24 +68,24 @@ var checkPerfectNumber = function(num) {
  * @param {number} num
  * @return {boolean}
  */
-const checkPerfectNumber = (num) => {
-  const positiveFactors = [1];
-  const hash = new Map();
+const checkPerfectNumber = num => {
+  const positiveFactors = [1]
+  const hash = new Map()
   for (let i = 2; i < num / 2; i++) {
     if (Number.isInteger(num / i) && !hash.get(i)) {
-      positiveFactors.push(i);
-      positiveFactors.push(num / i);
-      hash.set(num / i, i);
+      positiveFactors.push(i)
+      positiveFactors.push(num / i)
+      hash.set(num / i, i)
     }
   }
   const result = positiveFactors.reduce((prev, curr) => {
-    return prev + curr;
-  });
-  return num !== 1 && result === num;
-};
+    return prev + curr
+  })
+  return num !== 1 && result === num
+}
 
-const num = 28;
-console.log(checkPerfectNumber(num));
+const num = 28
+console.log(checkPerfectNumber(num))
 ```
 
 `node index.js` 返回：
@@ -124,21 +121,21 @@ Accepted
  * @param {number} num
  * @return {boolean}
  */
-const checkPerfectNumber = (num) => {
-  const positiveFactors = [1];
-  const hash = new Map();
+const checkPerfectNumber = num => {
+  const positiveFactors = [1]
+  const hash = new Map()
   for (let i = 2; i < num / 2; i++) {
     if (Number.isInteger(num / i) && !hash.get(i)) {
-      positiveFactors.push(i);
-      positiveFactors.push(num / i);
-      hash.set(num / i, i);
+      positiveFactors.push(i)
+      positiveFactors.push(num / i)
+      hash.set(num / i, i)
     }
   }
   const result = positiveFactors.reduce((prev, curr) => {
-    return prev + curr;
-  });
-  return num !== 1 && result === num;
-};
+    return prev + curr
+  })
+  return num !== 1 && result === num
+}
 ```
 
 Submit 提交：
@@ -169,9 +166,11 @@ Accepted
 > index.js
 
 ```js
-const checkPerfectNumber = (num) => {
-  return num === 6 || num === 28 || num === 496 || num === 8128 || num === 33550336;
-};
+const checkPerfectNumber = num => {
+  return (
+    num === 6 || num === 28 || num === 496 || num === 8128 || num === 33550336
+  )
+}
 ```
 
 Submit 试试：
@@ -185,7 +184,7 @@ Accepted
 
 这种方法叫做：我知道你的答案，所以我来个面向测试用例开发。/ 手动滑稽
 
-> 这种方法来自【题解】的灵感：https://leetcode-cn.com/problems/perfect-number/solution/507-wan-mei-shu-by-yukarun/ 
+> 这种方法来自【题解】的灵感：https://leetcode-cn.com/problems/perfect-number/solution/507-wan-mei-shu-by-yukarun/
 
 ---
 

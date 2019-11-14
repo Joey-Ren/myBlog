@@ -1,5 +1,4 @@
-344 - 反转字符串（reverse-string）
-===
+# 344 - 反转字符串（reverse-string）
 
 > Create by **jsLe** on **2019-07-22 19:06:50**  
 > Recently revised in **2019-09-18 13:53:43**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - 暴力破解](#chapter-three-one) |
-| &emsp;[3.2 解法 - 双指针](#chapter-three-two) |
+| &emsp;[3.1 解法 - 暴力破解](#chapter-three-one)                                          |
+| &emsp;[3.2 解法 - 双指针](#chapter-three-two)                                            |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：双指针、字符串
-* **题目地址**：https://leetcode-cn.com/problems/reverse-string/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：双指针、字符串
+- **题目地址**：https://leetcode-cn.com/problems/reverse-string/
+- **题目内容**：
 
 ```
 编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 char[] 的形式给出。
@@ -51,24 +50,24 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var reverseString = function(s) {
-  return s.reverse();
-};
+  return s.reverse()
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `s`：`['h', 'e', 'l', 'l', 'o']`
 2. `return`：
 
 ```js
-['o', 'l', 'l', 'e', 'h']
+;['o', 'l', 'l', 'e', 'h']
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -77,11 +76,11 @@ var reverseString = function(s) {
   ✔ Your memory usage beats 22.13 % of javascript submissions (47 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `reverse()`：`reverse()` 方法将数组中元素的位置颠倒,并返回该数组。该方法会改变原数组。[`reverse()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/reverse.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **看到这道题的第一眼，我就觉得非常熟悉，我是否曾经做过？**
 
@@ -91,13 +90,13 @@ var reverseString = function(s) {
 
 ```js
 var reverseString = function(s) {
-  return s.reverse();
-};
+  return s.reverse()
+}
 ```
 
 最后就告诉我提交成功了，enm...是我变强了还是 LeetCode 的简单类型的题目重复了？
 
-* **进一步思考**：
+- **进一步思考**：
 
 如果不使用 JS 原生 API，有其他解法吗？
 
@@ -105,29 +104,29 @@ var reverseString = function(s) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var reverseString = function(s) {
   for (let i = 0; i < (s.length - 1) / 2; i++) {
-    let temp = s[s.length - 1 - i];
-    s[s.length - 1 - i] = s[i];
-    s[i] = temp;
+    let temp = s[s.length - 1 - i]
+    s[s.length - 1 - i] = s[i]
+    s[i] = temp
   }
-  return s;
-};
+  return s
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `s`：`['h', 'e', 'l', 'l', 'o']`
 2. `return`：
 
 ```js
-['o', 'l', 'l', 'e', 'h']
+;['o', 'l', 'l', 'e', 'h']
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -136,19 +135,19 @@ var reverseString = function(s) {
   ✔ Your memory usage beats 65.2 % of javascript submissions (46.6 MB)
 ```
 
-* **解题思路**：
+- **解题思路**：
 
 **首先**，我们想到头尾调转。
 
 当我们有数组：`['0', '1', '2', '3', '4']` 的时候，我们需要调转的是：
 
-* `'0'` 和 `'4'`
-* `'1'` 和 `'3'`
+- `'0'` 和 `'4'`
+- `'1'` 和 `'3'`
 
 **然后**，它们转换成编程来讲，即是：
 
-* `'0'` 和 `'4'`：`i === 0`，`j === s.length - 1 - i`
-* `'1'` 和 `'3'`：`i === 1`，`j === s.length - 1 - i`
+- `'0'` 和 `'4'`：`i === 0`，`j === s.length - 1 - i`
+- `'1'` 和 `'3'`：`i === 1`，`j === s.length - 1 - i`
 
 OK，顺势推导，我们就可以完成这道题的题解。
 

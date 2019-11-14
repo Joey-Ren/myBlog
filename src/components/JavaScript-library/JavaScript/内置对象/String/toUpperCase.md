@@ -1,24 +1,23 @@
-方法 - toUpperCase()
-===
+# 方法 - toUpperCase()
 
 > Create by **jsLe** on **2019-09-16 14:41:05**  
 > Recently revised in **2019-09-16 14:41:08**
 
-* **原文**：[MDN - toUpperCase()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase)
+- **原文**：[MDN - toUpperCase()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase)
 
-* **功能**：`toUpperCase()` 将调用该方法的字符串值转换为大写形式，并返回
+- **功能**：`toUpperCase()` 将调用该方法的字符串值转换为大写形式，并返回
 
-* **语法**：`str.toUpperCase()`
+- **语法**：`str.toUpperCase()`
 
-* **返回值**：将调用该方法的字符串值转换为大写形式，并返回。`toUpperCase` 方法不影响字符串本身的值。
+- **返回值**：将调用该方法的字符串值转换为大写形式，并返回。`toUpperCase` 方法不影响字符串本身的值。
 
-* **代码**：
+- **代码**：
 
 ```js
 ​console.log( "alphabet".toUpperCase() ); // "ALPHABET"
 ```
 
-* **注释**：`toLocalUpperCase` 区别于 `toUpperCase` 在于一些小种语言需要使用特定的 `toLocalLowerCase`/`toLocaleUpperCase` 进行转换大小写。
+- **注释**：`toLocalUpperCase` 区别于 `toUpperCase` 在于一些小种语言需要使用特定的 `toLocalLowerCase`/`toLocaleUpperCase` 进行转换大小写。
 
 ---
 

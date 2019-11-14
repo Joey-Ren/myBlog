@@ -1,5 +1,4 @@
-453 - 最小移动次数使数组元素相等（minimum-moves-to-equal-array-elements）
-===
+# 453 - 最小移动次数使数组元素相等（minimum-moves-to-equal-array-elements）
 
 > Create by **jsLe** on **2019-07-30 09:44:22**  
 > Recently revised in **2019-09-18 14:10:23**
@@ -8,24 +7,24 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six)             |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven)     |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数学
-* **题目地址**：https://leetcode-cn.com/problems/minimum-moves-to-equal-array-elements/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数学
+- **题目地址**：https://leetcode-cn.com/problems/minimum-moves-to-equal-array-elements/
+- **题目内容**：
 
 ```
 给定一个长度为 n 的非空整数数组，找到让数组所有元素相等的最小移动次数。每次移动可以使 n - 1 个元素增加 1。
@@ -50,17 +49,17 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var minMoves = function(nums) {
-  let min =  Math.min.apply(null, nums);
-  let count = 0;
+  let min = Math.min.apply(null, nums)
+  let count = 0
   for (let i = 0; i < nums.length; i++) {
-    count += nums[i] - min;
+    count += nums[i] - min
   }
-  return count;
-};
+  return count
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
@@ -160,13 +159,13 @@ var minMoves = function(nums) {
 
 ```js
 var minMoves = function(nums) {
-  let min =  Math.min.apply(null, nums);
-  let count = 0;
+  let min = Math.min.apply(null, nums)
+  let count = 0
   for (let i = 0; i < nums.length; i++) {
-    count += nums[i] - min;
+    count += nums[i] - min
   }
-  return count;
-};
+  return count
+}
 ```
 
 Submit 提交后：
@@ -183,14 +182,16 @@ Submit 提交后：
 > 大佬优化的代码：
 
 ```js
-var minMoves = function (nums) {
-  var min = Math.min(...nums);
-  return nums.map(function (a) {
-    return a - min;
-  }).reduce(function (a, b) {
-    return a + b;
-  })
-};
+var minMoves = function(nums) {
+  var min = Math.min(...nums)
+  return nums
+    .map(function(a) {
+      return a - min
+    })
+    .reduce(function(a, b) {
+      return a + b
+    })
+}
 ```
 
 ---

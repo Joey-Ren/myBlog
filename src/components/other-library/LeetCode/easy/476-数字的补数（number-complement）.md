@@ -1,5 +1,4 @@
-476 - 数字的补数（number-complement）
-===
+# 476 - 数字的补数（number-complement）
 
 > Create by **jsLe** on **2019-10-25 09:17:22**  
 > Recently revised in **2019-10-25 17:20:04**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题及测试](#chapter-three) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题及测试](#chapter-three)   |
 | <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 LeetCode Submit](#chapter-four) |
-| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 解题思路](#chapter-five) |
+| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 解题思路](#chapter-five)        |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：位运算
-* **题目地址**：https://leetcode-cn.com/problems/number-complement/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：位运算
+- **题目地址**：https://leetcode-cn.com/problems/number-complement/
+- **题目内容**：
 
 ```
 给定一个正整数，输出它的补数。补数是对该数的二进制表示取反。
@@ -50,46 +49,44 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **LeetCode 给定函数体**：
+- **LeetCode 给定函数体**：
 
 ```js
 /**
  * @param {number} num
  * @return {number}
  */
-var findComplement = function(num) {
-  
-};
+var findComplement = function(num) {}
 ```
 
 根据上面的已知函数，尝试破解本题吧~
 
 > 确定了自己的答案再看下面代码哈~
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 /**
  * 数字补位
- * @param {string} string 
+ * @param {string} string
  * @return {string}
  */
-const digitComplement = (str) => {
-  const result = [];
+const digitComplement = str => {
+  const result = []
   for (let i = 0; i < str.length; i++) {
-    result.push(1 - Number(str[i]));
+    result.push(1 - Number(str[i]))
   }
-  return result.join('');
-};
+  return result.join('')
+}
 
 /**
  * @name 数字的补数
  * @param {number} num
  * @return {number}
  */
-const findComplement = (num) => {
-  return parseInt(digitComplement(num.toString(2)), 2);
-};
+const findComplement = num => {
+  return parseInt(digitComplement(num.toString(2)), 2)
+}
 ```
 
 `node index.js` 返回：
@@ -118,50 +115,50 @@ Accepted
 ```js
 /**
  * 十进制转二进制
- * @param {number} num 
+ * @param {number} num
  * @return {string}
  */
-const decimalToBinary = (num) => {
-  const stack = [];
+const decimalToBinary = num => {
+  const stack = []
   while (num > 0) {
-    stack.push(Math.floor(num % 2));
-    num = Math.floor(num / 2);
+    stack.push(Math.floor(num % 2))
+    num = Math.floor(num / 2)
   }
-  return stack.reverse().join('');
-};
+  return stack.reverse().join('')
+}
 
 /**
  * 数字补位
- * @param {string} string 
+ * @param {string} string
  * @return {string}
  */
-const digitComplement = (str) => {
-  const result = [];
+const digitComplement = str => {
+  const result = []
   for (let i = 0; i < str.length; i++) {
-    result.push(1 - Number(str[i]));
+    result.push(1 - Number(str[i]))
   }
-  return result.join('');
-};
+  return result.join('')
+}
 
 /**
  * 二进制转十进制
  * @param {string} string
- * @return {number} 
+ * @return {number}
  */
-const binaryToDecimal = (str) => {
-  return parseInt(str, 2);
-};
+const binaryToDecimal = str => {
+  return parseInt(str, 2)
+}
 
 /**
  * @name 数字的补数
  * @param {number} num
  * @return {number}
  */
-const findComplement = (num) => {
-  return binaryToDecimal(digitComplement(decimalToBinary(num)));
-};
+const findComplement = num => {
+  return binaryToDecimal(digitComplement(decimalToBinary(num)))
+}
 
-console.log(findComplement(5)); // 2
+console.log(findComplement(5)) // 2
 ```
 
 兴许看到这么一大串代码，小伙伴是懵逼的，我是谁，我在哪，**jsLe** 写了啥垃圾玩意。
@@ -184,25 +181,25 @@ Accepted
 ```js
 /**
  * 数字补位
- * @param {string} string 
+ * @param {string} string
  * @return {string}
  */
-const digitComplement = (str) => {
-  const result = [];
+const digitComplement = str => {
+  const result = []
   for (let i = 0; i < str.length; i++) {
-    result.push(1 - Number(str[i]));
+    result.push(1 - Number(str[i]))
   }
-  return result.join('');
-};
+  return result.join('')
+}
 
 /**
  * @name 数字的补数
  * @param {number} num
  * @return {number}
  */
-const findComplement = (num) => {
-  return parseInt(digitComplement(num.toString(2)), 2);
-};
+const findComplement = num => {
+  return parseInt(digitComplement(num.toString(2)), 2)
+}
 ```
 
 **最后**，感觉 OK 了，提交查看了下：
@@ -218,16 +215,26 @@ Accepted
 
 ---
 
-* 评论区代码秀：
+- 评论区代码秀：
 
 ```js
-const findComplement = (num) => {
-  return parseInt(Number(num.toString(2).toString().split('').map(n => {
-    return Number(n) === 1 ? '0' : '1'
-  }).join('')), 2);
-};
+const findComplement = num => {
+  return parseInt(
+    Number(
+      num
+        .toString(2)
+        .toString()
+        .split('')
+        .map(n => {
+          return Number(n) === 1 ? '0' : '1'
+        })
+        .join('')
+    ),
+    2
+  )
+}
 
-console.log(findComplement(5)); // 2
+console.log(findComplement(5)) // 2
 ```
 
 ---

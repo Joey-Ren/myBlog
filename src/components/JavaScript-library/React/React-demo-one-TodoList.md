@@ -1,31 +1,30 @@
-React Demo One - TodoList
-===
+# React Demo One - TodoList
 
 > Create by **jsLe** on **2019-3-18 08:37:10**  
 > Recently revised in **2019-05-31 15:05:26**
 
 **Hello 小伙伴们，如果觉得本文还不错，记得给个 **star** ， 小伙伴们的 **star** 是我持续更新的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
 
-* [React 系列文章代码地址](https://github.com/LiangJunrong/React)
+- [React 系列文章代码地址](https://github.com/LiangJunrong/React)
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 正文](#chapter-three) |
-| &emsp;[3.1 新建 React 项目](#chapter-three-one) |
-| &emsp;[3.2 项目目录解析](#chapter-three-two) |
-| &emsp;[3.3 精简项目结构](#chapter-three-three) |
-| &emsp;[3.4 初探组件](#chapter-three-four) |
-| &emsp;[3.5 JSX](#chapter-three-five) |
-| &emsp;[3.6 事件及双向数据绑定](#chapter-three-six) |
-| &emsp;[3.7 优化-抽取 CSS](#chapter-three-seven) |
-| &emsp;[3.8 优化-抽取 JS](#chapter-three-eight) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 总结](#chapter-four) |
+| 目录                                                                                      |
+| ----------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                   |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)        |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 正文](#chapter-three)  |
+| &emsp;[3.1 新建 React 项目](#chapter-three-one)                                           |
+| &emsp;[3.2 项目目录解析](#chapter-three-two)                                              |
+| &emsp;[3.3 精简项目结构](#chapter-three-three)                                            |
+| &emsp;[3.4 初探组件](#chapter-three-four)                                                 |
+| &emsp;[3.5 JSX](#chapter-three-five)                                                      |
+| &emsp;[3.6 事件及双向数据绑定](#chapter-three-six)                                        |
+| &emsp;[3.7 优化-抽取 CSS](#chapter-three-seven)                                           |
+| &emsp;[3.8 优化-抽取 JS](#chapter-three-eight)                                            |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 总结](#chapter-four)     |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 参考文献](#chapter-five) |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
@@ -36,24 +35,24 @@ React Demo One - TodoList
 
 本文参考来自慕课网：
 
-* [《React 16.4 开发简书项目从零基础入门到实战》](https://coding.imooc.com/class/229.html)
+- [《React 16.4 开发简书项目从零基础入门到实战》](https://coding.imooc.com/class/229.html)
 
 其中掺杂个人对编程的理解，如有错误，望多多指正。
 
-* **前置知识**：
+- **前置知识**：
 
 1. ES5/ES6
 2. Webpack
 3. npm
 
-* **文章结构**：
+- **文章结构**：
 
 1. 基础内容 -> 环境搭建 -> 基础语法 -> 原理进阶 -> 动画
 2. Redux -> Redux 进阶
 3. 实战项目 -> 环境搭建 -> Header -> 首页 -> 详情页
 4. 登录校验 -> 上线
 
-* **涉及知识点**：
+- **涉及知识点**：
 
 1. create-react-app
 2. 组件化思维
@@ -167,29 +166,25 @@ Now，开始搞事情。
 > App.js
 
 ```js
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class App extends Component {
   render() {
-    return (
-      <div className="App">
-        Hello React!
-      </div>
-    );
+    return <div className="App">Hello React!</div>
   }
 }
 
-export default App;
+export default App
 ```
 
 > index.js
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'))
 ```
 
 > package.json
@@ -213,12 +208,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
 }
 ```
 
@@ -238,21 +228,17 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ```js
 // 1. 引用 React 及其组件
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 // 2. 定义一个叫 App 的组件继承于 Component
 class App extends Component {
   render() {
-    return (
-      <div className="App">
-        Hello React!
-      </div>
-    );
+    return <div className="App">Hello React!</div>
   }
 }
 
 // 3. 根据 React 实例，在 App 内部编写完毕后，导出这个 App 组件
-export default App;
+export default App
 ```
 
 在上面，我们引用、定义并导出了这个 App 的组件，然后我们就要使用它：
@@ -261,14 +247,14 @@ export default App;
 
 ```js
 // 1. 引入 React、ReactDOM
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 // 2. 将 App.js 导入进来
-import App from './App';
+import App from './App'
 
 // 3. 通过 ReactDOM 将 App.js 以虚拟 DOM 的形式渲染/挂载到 root 根节点，该节点在 index.html 中
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'))
 ```
 
 `index.js` 告诉我们，它会通过 ReactDom，将 App.js 这个组件挂载到 `root` 这个节点上，那么，这个 `root` 在哪里呢？我们查看下 index.html：
@@ -305,7 +291,7 @@ OK，很容易地我们就捋清楚思路了：我们在 index.html 中定义了
 在 create-react-app 的文件中，不管是 index.js 中的：
 
 ```js
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'))
 ```
 
 还是 App.js 中的：
@@ -313,11 +299,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 ```js
 class App extends React.Component {
   render() {
-    return (
-      <div className="App">
-        Hello React!
-      </div>
-    );
+    return <div className="App">Hello React!</div>
   }
 }
 ```
@@ -325,20 +307,20 @@ class App extends React.Component {
 等这些有关 DOM 的渲染，都需要用到 JSX，因此需要引入 React：
 
 ```js
-import React from 'react';
+import React from 'react'
 ```
 
-* **JSX 的定义**：
+- **JSX 的定义**：
 
 那么，什么是 JSX 呢？
 
-React 的核心机制之一就是可以在内存中创建虚拟的 DOM 元素。React 利用虚拟 DOM 来减少对实际 DOM 的操作从而提升性能。 
+React 的核心机制之一就是可以在内存中创建虚拟的 DOM 元素。React 利用虚拟 DOM 来减少对实际 DOM 的操作从而提升性能。
 
 JSX 就是 JavaScript 和 XML 结合的一种格式。
 
 React 发明了 JSX，利用 HTML 语法来创建虚拟 DOM。当遇到 `<`，JSX 就当 HTML 解析，遇到 `{` 就当 JavaScript 解析。
 
-* **JSX 的使用**：
+- **JSX 的使用**：
 
 在 JSX 语法中，如果我们需要使用自己创建的组件，我们直接使用它的定义名即可，例如：
 
@@ -346,14 +328,14 @@ React 发明了 JSX，利用 HTML 语法来创建虚拟 DOM。当遇到 `<`，JS
 
 ```js
 // 1. 引入 React、ReactDOM
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 // 2. 将 App.js 导入进来
-import App from './App';
+import App from './App'
 
 // 3. 通过 ReactDOM 将 App.js 以虚拟 DOM 的形式渲染/挂载到 root 根节点，该节点在 index.html 中
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'))
 ```
 
 其中第三点即是自定义组件渲染到根节点。
@@ -377,19 +359,15 @@ ReactDOM.render(<App />, document.getElementById('root'));
 > ~~App.js~~ TodoList.js
 
 ```js
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class TodoList extends Component {
   render() {
-    return (
-      <div className="TodoList">
-        Hello React!
-      </div>
-    );
+    return <div className="TodoList">Hello React!</div>
   }
 }
 
-export default TodoList;
+export default TodoList
 ```
 
 **然后**，我们修改 index.js 中挂载到 index.html 的组件为 TodoList：
@@ -397,13 +375,13 @@ export default TodoList;
 > index.js
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-import TodoList from './TodoList';
+import TodoList from './TodoList'
 
 // 3. 通过 ReactDOM 将 App.js 以虚拟 DOM 的形式渲染/挂载到 root 根节点，该节点在 index.html 中
-ReactDOM.render(<TodoList />, document.getElementById('root'));
+ReactDOM.render(<TodoList />, document.getElementById('root'))
 ```
 
 修改完毕，小伙伴们可以重启下 3000 端口，查看下我们的 React 是否能正常启动。
@@ -416,12 +394,11 @@ ReactDOM.render(<TodoList />, document.getElementById('root'));
 
 ```js
 // Fragment 是一种占位符形式，类似于 Vue 的 Template
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment } from 'react'
 
 class TodoList extends Component {
-
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       inputValue: '',
       list: []
@@ -433,8 +410,8 @@ class TodoList extends Component {
       <Fragment>
         <div>
           {/* 单项数据绑定 */}
-          <input 
-            type="text" 
+          <input
+            type="text"
             value={this.state.inputValue}
             onChange={this.handleInputChange.bind(this)}
           />
@@ -459,15 +436,14 @@ class TodoList extends Component {
   }
 
   handleInputChange(e) {
-    console.log(e.target.value);
+    console.log(e.target.value)
     this.setState({
       inputValue: e.target.value
     })
   }
-
 }
 
-export default TodoList;
+export default TodoList
 ```
 
 我们先查看演示：
@@ -490,13 +466,12 @@ OK，这样我们在每输入一个字符的时候，我们就能立刻获取到
 
 ```js
 // Fragment 是一种占位符形式，类似于 Vue 的 Template
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment } from 'react'
 
 class TodoList extends Component {
-
   // 构造函数
   constructor(props) {
-    super(props);
+    super(props)
     // 定义数据
     this.state = {
       inputValue: '',
@@ -516,22 +491,29 @@ class TodoList extends Component {
         <div>
           {/* 单项数据绑定 */}
           {/* 在 React 中，绑定时间的，一般为半驼峰形式 */}
-          <input 
-            type="text" 
+          <input
+            type="text"
             value={this.state.inputValue}
             onChange={this.handleInputChange.bind(this)}
           />
           <button onClick={this.handleBtnClick.bind(this)}>提交</button>
         </div>
         <ul>
-          {
-            this.state.list.map( (item, index) => {
-              return <li key={index}>
-                <span>{index}. {item}</span>
-                <span style={closeStyle} onClick={this.handleItemDelete.bind(this, index)}>X</span>
+          {this.state.list.map((item, index) => {
+            return (
+              <li key={index}>
+                <span>
+                  {index}. {item}
+                </span>
+                <span
+                  style={closeStyle}
+                  onClick={this.handleItemDelete.bind(this, index)}
+                >
+                  X
+                </span>
               </li>
-            })
-          }
+            )
+          })}
         </ul>
       </Fragment>
     )
@@ -554,17 +536,16 @@ class TodoList extends Component {
 
   // 方法体 - 删除项目
   handleItemDelete(index) {
-    const list = [...this.state.list];
-    list.splice(index, 1);
+    const list = [...this.state.list]
+    list.splice(index, 1)
 
     this.setState({
       list: list
     })
   }
-
 }
 
-export default TodoList;
+export default TodoList
 ```
 
 ![图](../../public-repertory/img/js-react-demo-one-6.gif)
@@ -577,11 +558,20 @@ export default TodoList;
 
 ```js
 {
-  this.state.list.map( (item, index) => {
-    return <li key={index}>
-      <span>{index}. {item}</span>
-      <span style={closeStyle} onClick={this.handleItemDelete.bind(this, index)}>X</span>
-    </li>
+  this.state.list.map((item, index) => {
+    return (
+      <li key={index}>
+        <span>
+          {index}. {item}
+        </span>
+        <span
+          style={closeStyle}
+          onClick={this.handleItemDelete.bind(this, index)}
+        >
+          X
+        </span>
+      </li>
+    )
   })
 }
 ```
@@ -621,21 +611,28 @@ this.state = {
 > TodoList.js
 
 ```js
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment } from 'react'
 
 import './style.css'
 
 // ... 省略中间代码
 
-<ul>
-{
-  this.state.list.map( (item, index) => {
-    return <li key={index}>
-      <span>{index}. {item}</span>
-      <span className="icon-close" onClick={this.handleItemDelete.bind(this, index)}>X</span>
-    </li>
-  })
-}
+;<ul>
+  {this.state.list.map((item, index) => {
+    return (
+      <li key={index}>
+        <span>
+          {index}. {item}
+        </span>
+        <span
+          className="icon-close"
+          onClick={this.handleItemDelete.bind(this, index)}
+        >
+          X
+        </span>
+      </li>
+    )
+  })}
 </ul>
 ```
 
@@ -667,27 +664,26 @@ import './style.css'
 
 ```js
 // Fragment 是一种占位符形式，类似于 Vue 的 Template
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment } from 'react'
 
 // 引入组件
-import TodoItem from './TodoItem';
+import TodoItem from './TodoItem'
 
 // 引用样式
-import './style.css';
+import './style.css'
 
 class TodoList extends Component {
-
   // 构造函数
   constructor(props) {
-    super(props);
+    super(props)
     // 定义数据
     this.state = {
       inputValue: '',
       list: []
     }
-    this.handleInputChange = this.handleInputChange.bind(this);
-    this.handleBtnClick = this.handleBtnClick.bind(this);
-    this.handleItemDelete = this.handleItemDelete.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this)
+    this.handleBtnClick = this.handleBtnClick.bind(this)
+    this.handleItemDelete = this.handleItemDelete.bind(this)
   }
 
   // 渲染页面
@@ -698,9 +694,9 @@ class TodoList extends Component {
           <label htmlFor="insertArea">输入内容：</label>
           {/* 单项数据绑定 */}
           {/* 在 React 中，绑定时间的，一般为半驼峰形式 */}
-          <input 
+          <input
             id="insertArea"
-            type="text" 
+            type="text"
             value={this.state.inputValue}
             onChange={this.handleInputChange}
           />
@@ -708,7 +704,7 @@ class TodoList extends Component {
         </div>
         <ul>
           {/* 精简 JSX，将部分抽取出来 */}
-          { this.getTodoItem() }
+          {this.getTodoItem()}
         </ul>
       </Fragment>
     )
@@ -716,11 +712,11 @@ class TodoList extends Component {
 
   // 获取单独项
   getTodoItem() {
-    return this.state.list.map( (item, index) => {
+    return this.state.list.map((item, index) => {
       return (
-        <TodoItem 
+        <TodoItem
           key={index}
-          item={item} 
+          item={item}
           index={index}
           handleItemDelete={this.handleItemDelete}
         />
@@ -730,8 +726,8 @@ class TodoList extends Component {
 
   // 方法体 - 输入内容
   handleInputChange(e) {
-    const value = e.target.value;
-    this.setState( () => ({
+    const value = e.target.value
+    this.setState(() => ({
       inputValue: value
     }))
   }
@@ -739,8 +735,8 @@ class TodoList extends Component {
   // 方法体 - 点击提交
   handleBtnClick() {
     const list = this.state.list,
-          inputValue = this.state.inputValue;
-    this.setState( () => ({
+      inputValue = this.state.inputValue
+    this.setState(() => ({
       list: [...list, inputValue],
       inputValue: ''
     }))
@@ -749,17 +745,16 @@ class TodoList extends Component {
   // 方法体 - 删除项目
   handleItemDelete(index) {
     // immutable - state 不允许做任何改变
-    const list = [...this.state.list];
-    list.splice(index, 1);
+    const list = [...this.state.list]
+    list.splice(index, 1)
 
-    this.setState( () => ({
+    this.setState(() => ({
       list: list
     }))
   }
-
 }
 
-export default TodoList;
+export default TodoList
 ```
 
 我们关注下 TodoList.js 的改变：
@@ -767,7 +762,7 @@ export default TodoList;
 **首先**. 我们在 `constructor` 中，将方法进行了提前定义：
 
 ```js
-this.handleInputChange = this.handleInputChange.bind(this);
+this.handleInputChange = this.handleInputChange.bind(this)
 ```
 
 这样，我们在下面就不用写 `.bind(this)` 形式了。
@@ -785,7 +780,7 @@ this.setState({
 > 现写法：
 
 ```js
-this.setState( () => ({
+this.setState(() => ({
   list: list
 }))
 ```
@@ -795,7 +790,7 @@ this.setState( () => ({
 **最后**，我们引用了组件：
 
 ```js
-import TodoItem from './TodoItem';
+import TodoItem from './TodoItem'
 ```
 
 并且将组件放到方法体：`this.getTodoItem()` 中，而 `this.getTodoItem()` 的定义是：
@@ -805,9 +800,9 @@ import TodoItem from './TodoItem';
 getTodoItem() {
  return this.state.list.map( (item, index) => {
    return (
-     <TodoItem 
+     <TodoItem
        key={index}
-       item={item} 
+       item={item}
        index={index}
        handleItemDelete={this.handleItemDelete}
      />
@@ -824,37 +819,37 @@ getTodoItem() {
 import React, { Component } from 'react'
 
 class TodoItem extends Component {
-
   constructor(props) {
-    super(props);
+    super(props)
     // 这种写法可以节省性能
-    this.handleClick = this.handleClick.bind(this);
+    this.handleClick = this.handleClick.bind(this)
   }
 
   render() {
-    const { item } = this.props;
+    const { item } = this.props
     return (
       <li>
         <span>{item}</span>
-        <span className="icon-close" onClick={this.handleClick}>X</span>
+        <span className="icon-close" onClick={this.handleClick}>
+          X
+        </span>
       </li>
     )
   }
 
   handleClick() {
-    const { handleItemDelete, index } = this.props;
-    handleItemDelete(index);
+    const { handleItemDelete, index } = this.props
+    handleItemDelete(index)
   }
-
 }
 
-export default TodoItem;
+export default TodoItem
 ```
 
 这样，我们就完成了组件的抽取，并学会了
 
-* 父组件传递值给子组件
-* 子组件调用父组件的方法
+- 父组件传递值给子组件
+- 子组件调用父组件的方法
 
 由此，我们在接下来就可以编写更丰富健全的项目了。
 
@@ -881,7 +876,7 @@ export default TodoItem;
 
 > [返回目录](#chapter-one)
 
-1. [《React.Component 与 React.PureComponent（React之性能优化）》](https://www.cnblogs.com/clover77/p/9394514.html)
+1. [《React.Component 与 React.PureComponent（React 之性能优化）》](https://www.cnblogs.com/clover77/p/9394514.html)
 2. [《visual studio code + react 开发环境搭建》](https://www.jianshu.com/p/ec7c2bab16cc)
 3. [《react 中 constructor() 和 super() 到底是个啥？》](https://www.jianshu.com/p/8f6dd832e57a)
 

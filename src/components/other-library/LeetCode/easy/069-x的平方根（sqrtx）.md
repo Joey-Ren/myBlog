@@ -1,5 +1,4 @@
-069 - x 的平方根（sqrtx）
-===
+# 069 - x 的平方根（sqrtx）
 
 > Create by **jsLe** on **2019-06-11 15:17:21**  
 > Recently revised in **2019-09-18 10:20:48**
@@ -8,23 +7,23 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解题 - JS API](#chapter-three-one) |
-| &emsp;[3.2 解法 - 暴力破解](#chapter-three-two) |
-| &emsp;[3.3 解法 - 二分查找](#chapter-three-three) |
+| &emsp;[3.1 解题 - JS API](#chapter-three-one)                                            |
+| &emsp;[3.2 解法 - 暴力破解](#chapter-three-two)                                          |
+| &emsp;[3.3 解法 - 二分查找](#chapter-three-three)                                        |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数学、二分查找
-* **题目地址**：https://leetcode-cn.com/problems/sqrtx/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数学、二分查找
+- **题目地址**：https://leetcode-cn.com/problems/sqrtx/
+- **题目内容**：
 
 ```
 实现 int sqrt(int x) 函数。
@@ -40,7 +39,7 @@
 示例 2:
 输入: 8
 输出: 2
-说明: 8 的平方根是 2.82842..., 
+说明: 8 的平方根是 2.82842...,
      由于返回类型是整数，小数部分将被舍去。
 ```
 
@@ -54,15 +53,15 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var mySqrt = function(x) {
-  return Math.floor(Math.sqrt(x));
-};
+  return Math.floor(Math.sqrt(x))
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `x`：`8`
 2. `return`：
@@ -71,7 +70,7 @@ var mySqrt = function(x) {
 2
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -80,11 +79,11 @@ var mySqrt = function(x) {
   ✔ Your memory usage beats 77.02 % of javascript submissions (35.3 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `Math`：JS 中的内置对象，具有数学常数和函数的属性和方法。[`Math` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Math/README.md)
 
-* **解题思路**：
+- **解题思路**：
 
 直接使用 JS 原生 API 刷题，帅的嘛就不谈了，一分钟看题，两分钟解题，一分钟测试，搞定！
 
@@ -92,22 +91,22 @@ var mySqrt = function(x) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var mySqrt = function(x) {
   if (x === 0 || x === 1) {
-    return x;
+    return x
   }
   for (let i = 0; i < x; i++) {
     if (i * i <= x && (i + 1) * (i + 1) > x) {
-      return i;
+      return i
     }
   }
-};
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `x`：`8`
 2. `return`：
@@ -116,7 +115,7 @@ var mySqrt = function(x) {
 2
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -125,7 +124,7 @@ var mySqrt = function(x) {
   ✔ Your memory usage beats 39.85 % of javascript submissions (35.7 MB)
 ```
 
-* **解题思路**：
+- **解题思路**：
 
 **暴力破解一时爽，一直暴力一直爽**！
 
@@ -133,40 +132,40 @@ var mySqrt = function(x) {
 
 不过暴力破解忽略了时间和空间，所以效率是相当低下。
 
-* **进一步思考**：
+- **进一步思考**：
 
 ### <a name="chapter-three-three" id="chapter-three-three">3.3 解法 - 二分查找</a>
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var mySqrt = function(x) {
   if (x === 0 || x === 1) {
-    return x;
+    return x
   }
-  let left = 1;
-  let right = x;
+  let left = 1
+  let right = x
   while (left <= right) {
-    let middle = Math.floor((left + right) / 2);
+    let middle = Math.floor((left + right) / 2)
     if (middle * middle > x) {
-      right = middle;
+      right = middle
     }
     if (middle * middle < x) {
-      left = middle;
+      left = middle
     }
     if (middle * middle === x) {
-      return middle;
+      return middle
     }
     if (left === right - 1 && left * left <= x && right * right >= x) {
-      return left;
+      return left
     }
   }
-};
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `x`：`8`
 2. `return`：
@@ -175,7 +174,7 @@ var mySqrt = function(x) {
 2
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -184,11 +183,11 @@ var mySqrt = function(x) {
   ✔ Your memory usage beats 19.07 % of javascript submissions (35.9 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `Math`：JS 中的内置对象，具有数学常数和函数的属性和方法。[`Math` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Math/README.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **首先**，判断是不是 `0` 或者 `1` 这两种特殊情况，如果是，则返回这两个数字。
 

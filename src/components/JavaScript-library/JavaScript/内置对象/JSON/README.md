@@ -1,21 +1,19 @@
-JSON
-===
+# JSON
 
 > Create by **jsLe** on **2019-10-16 03:36:15**  
 > Recently revised in **2019-10-16 03:36:18**
 
 > 缺少文档：`JSON.parse()`、`JSON.stringify()`、`JSON.parse(JSON.stringify()) 的核心机制`
 
-* **原文**：[MDN - JSON](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON)
+- **原文**：[MDN - JSON](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 
-* **功能**：
+- **功能**：
 
-* **方法**：
+- **方法**：
 
-* **代码**：
+- **代码**：
 
 ```js
-
 ```
 
 ---

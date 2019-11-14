@@ -1,28 +1,28 @@
-方法 - indexOf()
-===
+# 方法 - indexOf()
 
 > Create by **jsLe** on **2019-09-17 09:35:04**  
 > Recently revised in **2019-09-17 09:43:13**
 
-* **原文**：[MDN - indexOf()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
+- **原文**：[MDN - indexOf()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
 
-* **功能**：`indexOf()` 方法返回调用 String 对象中第一次出现的指定值的索引。
+- **功能**：`indexOf()` 方法返回调用 String 对象中第一次出现的指定值的索引。
 
-* **语法**：`indexOf(searchValue, fromIndex)`
-  * `searchValue`：查找的值
-  * `formIndex`：开始查找的位置
+- **语法**：`indexOf(searchValue, fromIndex)`
 
-* **返回值**：如果找到了，则返回第一次出现的索引；如果没找到，则返回 `-1`。
+  - `searchValue`：查找的值
+  - `formIndex`：开始查找的位置
 
-* **代码**：
+- **返回值**：如果找到了，则返回第一次出现的索引；如果没找到，则返回 `-1`。
+
+- **代码**：
 
 ```js
-'I am jsLe'.indexOf('a', 4); // 9
-[1, 3, 1, 4].indexOf(1, 1); // 2
-'怪盗 jsLe'.indexOf('我'); // -1
+'I am jsLe'.indexOf('a', 4) // 9
+;[1, 3, 1, 4].indexOf(1, 1) // 2
+'怪盗 jsLe'.indexOf('我') // -1
 ```
 
-* **扩展**：如果需要查找到最后一次出现指定值的索引，可以使用 `lastIndexOf()`。
+- **扩展**：如果需要查找到最后一次出现指定值的索引，可以使用 `lastIndexOf()`。
 
 ---
 

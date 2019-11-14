@@ -1,5 +1,4 @@
-155 - 最小栈（min-stack）
-===
+# 155 - 最小栈（min-stack）
 
 > Create by **jsLe** on **2019-07-03 16:40:04**  
 > Recently revised in **2019-07-03 19:29:55**
@@ -8,23 +7,23 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six)           |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：栈、设计
-* **题目地址**：https://leetcode-cn.com/problems/min-stack/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：栈、设计
+- **题目地址**：https://leetcode-cn.com/problems/min-stack/
+- **题目内容**：
 
 ```
 设计一个支持 push，pop，top 操作，并能在常数时间内检索到最小元素的栈。
@@ -51,38 +50,40 @@ minStack.getMin();   --> 返回 -2.
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
-var MinStack = function () {
-  this.stack = [];
-  this.min = null;
-};
+var MinStack = function() {
+  this.stack = []
+  this.min = null
+}
 
-MinStack.prototype.push = function (x) {
-  this.stack.push(x);
+MinStack.prototype.push = function(x) {
+  this.stack.push(x)
   if (this.min === null) {
-    this.min = x;
+    this.min = x
   } else {
-    this.min = Math.min(this.min, x);
+    this.min = Math.min(this.min, x)
   }
-};
+}
 
-MinStack.prototype.pop = function () {
-  this.stack.pop();
-  this.min = this.stack.length ? this.stack.reduce((min, num) => Math.min(min, num), Infinity) : null;
-};
+MinStack.prototype.pop = function() {
+  this.stack.pop()
+  this.min = this.stack.length
+    ? this.stack.reduce((min, num) => Math.min(min, num), Infinity)
+    : null
+}
 
-MinStack.prototype.top = function () {
+MinStack.prototype.top = function() {
   if (!this.stack.length) {
-    return null;
+    return null
   }
-  return this.stack[this.stack.length - 1];
-};
+  return this.stack[this.stack.length - 1]
+}
 
-MinStack.prototype.getMin = function () {
-  return this.min;
-};
+MinStack.prototype.getMin = function() {
+  return this.min
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
@@ -90,18 +91,18 @@ MinStack.prototype.getMin = function () {
 > [返回目录](#chapter-one)
 
 ```js
-let minStack = new MinStack();
-minStack.push(-2);
-minStack.push(0);
-minStack.push(-3);
-let nowMin = minStack.getMin();
-console.log('现在最小：' + nowMin);
-minStack.pop();
-let nowTop = minStack.top();
-console.log('现在顶部：' + nowTop);
-let newMin = minStack.getMin();
-console.log(minStack);
-console.log('现在最小：' + newMin);
+let minStack = new MinStack()
+minStack.push(-2)
+minStack.push(0)
+minStack.push(-3)
+let nowMin = minStack.getMin()
+console.log('现在最小：' + nowMin)
+minStack.pop()
+let nowTop = minStack.top()
+console.log('现在顶部：' + nowTop)
+let newMin = minStack.getMin()
+console.log(minStack)
+console.log('现在最小：' + newMin)
 ```
 
 ## <a name="chapter-five" id="chapter-five">五 LeetCode Submit</a>
@@ -123,27 +124,27 @@ console.log('现在最小：' + newMin);
 
 ```js
 var MinStack = function() {
-  this.stack = [];
-};
+  this.stack = []
+}
 
 MinStack.prototype.push = function(x) {
-  this.stack.push(x);
-};
+  this.stack.push(x)
+}
 
 MinStack.prototype.pop = function() {
-  this.stack.pop();
-};
+  this.stack.pop()
+}
 
 MinStack.prototype.top = function() {
   if (!this.stack.length) {
-    return null;
+    return null
   }
-  return this.stack[this.stack.length - 1];
-};
+  return this.stack[this.stack.length - 1]
+}
 
 MinStack.prototype.getMin = function() {
-  return this.stack.slice().sort((a, b) => a - b)[0];
-};
+  return this.stack.slice().sort((a, b) => a - b)[0]
+}
 ```
 
 一开始我的思路是这样的，然后 LeetCode 提交返回：
@@ -152,8 +153,8 @@ MinStack.prototype.getMin = function() {
 ✘ Time Limit Exceeded
   ✘ 17/18 cases passed (N/A)
   ✘ testcase: '["MinStack","push","push",……]'
-  ✘ answer: 
-  ✘ expected_answer: 
+  ✘ answer:
+  ✘ expected_answer:
   ✘ stdout:
 ```
 

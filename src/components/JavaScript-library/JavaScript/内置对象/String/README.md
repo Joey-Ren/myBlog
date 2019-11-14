@@ -1,5 +1,4 @@
-String
-===
+# String
 
 > Create by **jsLe** on **2019-05-19 11:17:49**  
 > Recently revised in **2019-09-18 14:26:35**
@@ -8,33 +7,33 @@ String
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 简介](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 简介](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 详解](#chapter-three) |
-| &emsp;[3.1 字符串 - 查询](#chapter-three-one) |
-| &emsp;[3.2 字符串 - 正则表达式](#chapter-three-two) |
-| &emsp;[3.3 字符串 - 修改](#chapter-three-three) |
-| &emsp;[3.4 字符串 - 转类型](#chapter-three-four) |
-| &emsp;[3.5 字符串 - 大小写](#chapter-three-five) |
-| &emsp;[3.6 字符串 - 去空格](#chapter-three-six) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 拓展](#chapter-four) |
+| &emsp;[3.1 字符串 - 查询](#chapter-three-one)                                            |
+| &emsp;[3.2 字符串 - 正则表达式](#chapter-three-two)                                      |
+| &emsp;[3.3 字符串 - 修改](#chapter-three-three)                                          |
+| &emsp;[3.4 字符串 - 转类型](#chapter-three-four)                                         |
+| &emsp;[3.5 字符串 - 大小写](#chapter-three-five)                                         |
+| &emsp;[3.6 字符串 - 去空格](#chapter-three-six)                                          |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 拓展](#chapter-four)    |
 
 ## <a name="chapter-two" id="chapter-two">二 简介</a>
 
 > [返回目录](#chapter-one)
 
-* **参考**：[MDN - String](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)
+- **参考**：[MDN - String](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)
 
-* **功能**：`String` 全局对象是一个用于字符串或一个字符序列的构造函数。`String` 可以将其他类型的值转换成字符串。
+- **功能**：`String` 全局对象是一个用于字符串或一个字符序列的构造函数。`String` 可以将其他类型的值转换成字符串。
 
-* **使用**：
+- **使用**：
 
 ```js
 // String(anything)：将 anything 转成字符串。
-String(123); // '123'
-String(true); // 'true'
+String(123) // '123'
+String(true) // 'true'
 ```
 
 ## <a name="chapter-three" id="chapter-three">三 详解</a>
@@ -44,9 +43,9 @@ String(true); // 'true'
 在日常工作中，我们一般使用以下两种形式来定义某个数据类型为字符串：
 
 ```js
-let str = new String();
+let str = new String()
 // 或者
-str2 = '';
+str2 = ''
 ```
 
 然后，在 `String` 这个内置对象中，还存在许多内置的方法，例如：`str.repeat()`、`str.concat()` 等……
@@ -54,20 +53,20 @@ str2 = '';
 在讲解这些方法前，咱们来探索下，如何给 `String` 添加新的方法：
 
 ```js
-String.prototype.add = (a, b) => a + b;
-String.prototype.owner = 'jsLe';
-let str = new String();
-str.add(1, 3); // 4
-str.owner; // jsLe
+String.prototype.add = (a, b) => a + b
+String.prototype.owner = 'jsLe'
+let str = new String()
+str.add(1, 3) // 4
+str.owner // jsLe
 ```
 
 通过这个可以看出，使用原型链，我们可以往浏览器内置对象中添加方法，所以，为什么我们定义某个数据为字符串，就可以使用一堆方法，想必小伙伴们也了解为什么：
 
 ```js
-let str = 'jsLe';
-str.charAt(4); // 'a'
-str.concat(' like use js'); // 'jsLe like use js'
-str.indexOf(str[str.length - 1]); // 6
+let str = 'jsLe'
+str.charAt(4) // 'a'
+str.concat(' like use js') // 'jsLe like use js'
+str.indexOf(str[str.length - 1]) // 6
 ```
 
 那么，话不多说，咱们了解下日常工作中常用的一些 `String` 内置方法。
@@ -82,7 +81,7 @@ str.indexOf(str[str.length - 1]); // 6
 4. `str.includes(searchString, fromIndex))`：判断一个字符串里是否包含其他字符串。[详细学习](./includes.md)
 5. `str.indexOf(searchString, fromIndex)`：从字符串对象中返回首个被发现的给定值的索引值，如果没有找到则返回 -1。[详细学习](./indexOf.md)
 6. `str.lastIndexOf(searchString, fromIndex)`：从字符串对象中返回最后一个被发现的给定值的索引值，如果没有找到则返回 -1。[详细学习](./lastIndexOf.md)
-7.  `str.substring(indexStart, indexEnd)`：返回在字符串中指定两个下标之间的字符。[详细学习](./substring.md)
+7. `str.substring(indexStart, indexEnd)`：返回在字符串中指定两个下标之间的字符。[详细学习](./substring.md)
 
 ### <a name="chapter-three-two" id="chapter-three-two">3.2 字符串 - 正则表达式</a>
 

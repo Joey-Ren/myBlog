@@ -1,5 +1,4 @@
-036 - 有效的数独（valid-sudoku）
-===
+# 036 - 有效的数独（valid-sudoku）
 
 > Create by **jsLe** on **2019-08-05 10:22:26**  
 > Recently revised in **2019-09-18 14:15:52**
@@ -8,41 +7,41 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven) |
-| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 进一步思考](#chapter-eight) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six)             |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven)     |
+| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 进一步思考](#chapter-eight)   |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：中等
-* **涉及知识**：哈希表
-* **题目地址**：https://leetcode-cn.com/problems/valid-sudoku/
-* **题目内容**：
+- **难度**：中等
+- **涉及知识**：哈希表
+- **题目地址**：https://leetcode-cn.com/problems/valid-sudoku/
+- **题目内容**：
 
-判断一个 9x9 的数独是否有效。只需要根据以下规则，验证已经填入的数字是否有效即可。
+判断一个  9x9 的数独是否有效。只需要根据以下规则，验证已经填入的数字是否有效即可。
 
-数字 1-9 在每一行只能出现一次。
+数字  1-9  在每一行只能出现一次。
 
-数字 1-9 在每一列只能出现一次。
+数字  1-9  在每一列只能出现一次。
 
-数字 1-9 在每一个以粗实线分隔的 3x3 宫内只能出现一次。
+数字  1-9  在每一个以粗实线分隔的  3x3  宫内只能出现一次。
 
 ![图](../../../public-repertory/img/other-algorithm-036-1.png)
 
 上图是一个部分填充的有效的数独。
 
-数独部分空格内已填入了数字，空白格用 '.' 表示。
+数独部分空格内已填入了数字，空白格用  '.'  表示。
 
-示例 1:
+示例  1:
 
 输入:
 
@@ -61,7 +60,7 @@
 ```
 
 输出: true
-示例 2:
+示例  2:
 
 输入:
 
@@ -81,8 +80,8 @@
 
 输出: false
 
-解释: 除了第一行的第一个数字从 5 改为 8 以外，空格内其他数字均与 示例1 相同。
-     
+解释: 除了第一行的第一个数字从 5 改为 8 以外，空格内其他数字均与 示例 1 相同。
+  
 但由于位于左上角的 3x3 宫内有两个 8 存在, 因此这个数独是无效的。
 
 **说明**：
@@ -91,9 +90,9 @@
 
 只需要根据以上规则，验证已经填入的数字是否有效即可。
 
-给定数独序列只包含数字 1-9 和字符 '.' 。
+给定数独序列只包含数字  1-9  和字符  '.' 。
 
-给定数独永远是 9x9 形式的。
+给定数独永远是  9x9  形式的。
 
 ## <a name="chapter-three" id="chapter-three">三 解题</a>
 
@@ -101,73 +100,73 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
-let map = new Map();
+let map = new Map()
 
 // 计算横排
-const calculateHorizontalRow = (board) => {
-  map.clear();
+const calculateHorizontalRow = board => {
+  map.clear()
   for (let i = 0; i < 9; i++) {
     for (let j = 0; j < 9; j++) {
       if (board[i][j] !== '.' && map.get(board[i][j])) {
-        return false;
+        return false
       }
-      map.set(board[i][j], 1);
+      map.set(board[i][j], 1)
     }
-    map.clear();
+    map.clear()
   }
-  map.clear();
-  return true;
+  map.clear()
+  return true
 }
 
 // 计算纵排
-const calculateTandem = (board) => {
-  map.clear();
+const calculateTandem = board => {
+  map.clear()
   for (let i = 0; i < 9; i++) {
     for (let j = 0; j < 9; j++) {
       if (board[j][i] !== '.' && map.get(board[j][i])) {
-        return false;
+        return false
       }
-      map.set(board[j][i], 1);
+      map.set(board[j][i], 1)
     }
-    map.clear();
+    map.clear()
   }
-  map.clear();
-  return true;
+  map.clear()
+  return true
 }
 
 // 小九宫格计算
 const calculateTheNineSquares = (a, b, c, d, board) => {
-  map.clear();
+  map.clear()
   for (let i = a; i < b; i++) {
     for (let j = c; j < d; j++) {
       if (board[i][j] !== '.' && map.get(board[i][j])) {
-        return false;
+        return false
       }
-      map.set(board[i][j], 1);
+      map.set(board[i][j], 1)
     }
   }
-  map.clear();
-  return true;
+  map.clear()
+  return true
 }
 
-const isValidSudoku = (board) => {
+const isValidSudoku = board => {
   /**
    * 计算横排
    * board - 需要判断的数独
    */
   if (!calculateHorizontalRow(board)) {
-    return false;
-  };
+    return false
+  }
   /**
    * 计算纵排
    * board - 需要判断的数独
    */
   if (!calculateTandem(board)) {
-    return false;
-  };
+    return false
+  }
   /**
    * 计算 3 * 3 宫格
    * a - 横排起始位置
@@ -177,66 +176,66 @@ const isValidSudoku = (board) => {
    * board - 需要判断的数独
    */
   // 左上角
-  if (!calculateTheNineSquares(0, 3, 0, 3, board) ) {
-    return false;
-  };
+  if (!calculateTheNineSquares(0, 3, 0, 3, board)) {
+    return false
+  }
   // 中上角
   if (!calculateTheNineSquares(0, 3, 3, 6, board)) {
-    return false;
+    return false
   }
   // 右上角
   if (!calculateTheNineSquares(0, 3, 6, 9, board)) {
-    return false;
+    return false
   }
   // 左中角
   if (!calculateTheNineSquares(3, 6, 0, 3, board)) {
-    return false;
+    return false
   }
   // 中间
   if (!calculateTheNineSquares(3, 6, 3, 6, board)) {
-    return false;
+    return false
   }
   // 右中角
   if (!calculateTheNineSquares(3, 6, 6, 9, board)) {
-    return false;
+    return false
   }
   // 左下角
   if (!calculateTheNineSquares(6, 9, 0, 3, board)) {
-    return false;
+    return false
   }
   // 中下角
   if (!calculateTheNineSquares(6, 9, 3, 6, board)) {
-    return false;
+    return false
   }
   // 右下角
   if (!calculateTheNineSquares(6, 9, 6, 9, board)) {
-    return false;
+    return false
   }
-  return true;
-};
+  return true
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
 
 > [返回目录](#chapter-one)
 
-* `board`：
+- `board`：
 
 ```js
 const board = [
-  ["5","3",".",".","7",".",".",".","."],
-  ["6",".",".","1","9","5",".",".","."],
-  [".","9","8",".",".",".",".","6","."],
-  ["8",".",".",".","6",".",".",".","3"],
-  ["4",".",".","8",".","3",".",".","1"],
-  ["7",".",".",".","2",".",".",".","6"],
-  [".","6",".",".",".",".","2","8","."],
-  [".",".",".","4","1","9",".",".","5"],
-  [".",".",".",".","8",".",".","7","9"]
-];
+  ['5', '3', '.', '.', '7', '.', '.', '.', '.'],
+  ['6', '.', '.', '1', '9', '5', '.', '.', '.'],
+  ['.', '9', '8', '.', '.', '.', '.', '6', '.'],
+  ['8', '.', '.', '.', '6', '.', '.', '.', '3'],
+  ['4', '.', '.', '8', '.', '3', '.', '.', '1'],
+  ['7', '.', '.', '.', '2', '.', '.', '.', '6'],
+  ['.', '6', '.', '.', '.', '.', '2', '8', '.'],
+  ['.', '.', '.', '4', '1', '9', '.', '.', '5'],
+  ['.', '.', '.', '.', '8', '.', '.', '7', '9']
+]
 ```
 
-* `return`：
+- `return`：
 
 ```js
 true
@@ -270,31 +269,61 @@ true
 如果你没做过，没事儿，咱这里玩玩（做过的可以跳过，或者看看预热）。
 
 ```js
-let result = [];
+let result = []
 
 for (let i = 1; i <= 9; i++) {
-  let temp = [];
+  let temp = []
   for (let j = i; j <= 9; j++) {
-    temp.push(`${i} * ${j} = ${i * j}`);
+    temp.push(`${i} * ${j} = ${i * j}`)
   }
-  result.push(temp);
+  result.push(temp)
 }
 
-console.log(result);
+console.log(result)
 ```
 
 打印出来非常好看：
 
 ```js
-['1 * 1 = 1',  '1 * 2 = 2',  '1 * 3 = 3',  '1 * 4 = 4',  '1 * 5 = 5',  '1 * 6 = 6',  '1 * 7 = 7',  '1 * 8 = 8',  '1 * 9 = 9']
-['2 * 2 = 4',  '2 * 3 = 6',  '2 * 4 = 8',  '2 * 5 = 10', '2 * 6 = 12', '2 * 7 = 14', '2 * 8 = 16', '2 * 9 = 18']
-['3 * 3 = 9',  '3 * 4 = 12', '3 * 5 = 15', '3 * 6 = 18', '3 * 7 = 21', '3 * 8 = 24', '3 * 9 = 27']
-['4 * 4 = 16', '4 * 5 = 20', '4 * 6 = 24', '4 * 7 = 28', '4 * 8 = 32', '4 * 9 = 36']
-['5 * 5 = 25', '5 * 6 = 30', '5 * 7 = 35', '5 * 8 = 40', '5 * 9 = 45']
-['6 * 6 = 36', '6 * 7 = 42', '6 * 8 = 48', '6 * 9 = 54']
-['7 * 7 = 49', '7 * 8 = 56', '7 * 9 = 63']
-['8 * 8 = 64', '8 * 9 = 72']
-['9 * 9 = 81']
+;[
+  '1 * 1 = 1',
+  '1 * 2 = 2',
+  '1 * 3 = 3',
+  '1 * 4 = 4',
+  '1 * 5 = 5',
+  '1 * 6 = 6',
+  '1 * 7 = 7',
+  '1 * 8 = 8',
+  '1 * 9 = 9'
+][
+  ('2 * 2 = 4',
+  '2 * 3 = 6',
+  '2 * 4 = 8',
+  '2 * 5 = 10',
+  '2 * 6 = 12',
+  '2 * 7 = 14',
+  '2 * 8 = 16',
+  '2 * 9 = 18')
+][
+  ('3 * 3 = 9',
+  '3 * 4 = 12',
+  '3 * 5 = 15',
+  '3 * 6 = 18',
+  '3 * 7 = 21',
+  '3 * 8 = 24',
+  '3 * 9 = 27')
+][
+  ('4 * 4 = 16',
+  '4 * 5 = 20',
+  '4 * 6 = 24',
+  '4 * 7 = 28',
+  '4 * 8 = 32',
+  '4 * 9 = 36')
+][('5 * 5 = 25', '5 * 6 = 30', '5 * 7 = 35', '5 * 8 = 40', '5 * 9 = 45')][
+  ('6 * 6 = 36', '6 * 7 = 42', '6 * 8 = 48', '6 * 9 = 54')
+][('7 * 7 = 49', '7 * 8 = 56', '7 * 9 = 63')][('8 * 8 = 64', '8 * 9 = 72')][
+  '9 * 9 = 81'
+]
 ```
 
 为什么会扯到这个呢，因为接下来需要双重 `for()` 遍历，怕小伙伴们看不懂。
@@ -302,114 +331,123 @@ console.log(result);
 话不多说，先上代码：
 
 ```js
-var isValidSudoku = function (board) {
-  let map = new Map();
+var isValidSudoku = function(board) {
+  let map = new Map()
   // 计算横排
   for (let i = 0; i < 9; i++) {
     for (let j = 0; j < 9; j++) {
       if (board[i][j] !== '.' && map.get(board[i][j])) {
-        return false;
+        return false
       }
-      map.set(board[i][j], 1);
+      map.set(board[i][j], 1)
     }
-    map.clear();
+    map.clear()
   }
   // 计算竖排
-  map.clear();
+  map.clear()
   for (let i = 0; i < 9; i++) {
     for (let j = 0; j < 9; j++) {
       if (board[j][i] !== '.' && map.get(board[j][i])) {
-        return false;
+        return false
       }
-      map.set(board[j][i], 1);
+      map.set(board[j][i], 1)
     }
-    map.clear();
+    map.clear()
   }
-  map.clear();
+  map.clear()
   // 计算 3 * 3 宫格
-  for (let i = 0; i < 3; i++) { // 左上角
+  for (let i = 0; i < 3; i++) {
+    // 左上角
     for (let j = 0; j < 3; j++) {
       if (board[i][j] !== '.' && map.get(board[i][j])) {
-        return false;
+        return false
       }
-      map.set(board[i][j], 1);
+      map.set(board[i][j], 1)
     }
   }
-  map.clear();
-  for (let i = 0; i < 3; i++) { // 中上角
+  map.clear()
+  for (let i = 0; i < 3; i++) {
+    // 中上角
     for (let j = 3; j < 6; j++) {
       if (board[i][j] !== '.' && map.get(board[i][j])) {
-        return false;
+        return false
       }
-      map.set(board[i][j], 1);
+      map.set(board[i][j], 1)
     }
   }
-  map.clear();
-  for (let i = 0; i < 3; i++) { // 右上角
+  map.clear()
+  for (let i = 0; i < 3; i++) {
+    // 右上角
     for (let j = 6; j < 9; j++) {
       if (board[i][j] !== '.' && map.get(board[i][j])) {
-        return false;
+        return false
       }
-      map.set(board[i][j], 1);
+      map.set(board[i][j], 1)
     }
   }
-  map.clear();
-  for (let i = 3; i < 6; i++) { // 左中角
+  map.clear()
+  for (let i = 3; i < 6; i++) {
+    // 左中角
     for (let j = 0; j < 3; j++) {
       if (board[i][j] !== '.' && map.get(board[i][j])) {
-        return false;
+        return false
       }
-      map.set(board[i][j], 1);
+      map.set(board[i][j], 1)
     }
   }
-  map.clear();
-  for (let i = 3; i < 6; i++) { // 中间
+  map.clear()
+  for (let i = 3; i < 6; i++) {
+    // 中间
     for (let j = 3; j < 6; j++) {
       if (board[i][j] !== '.' && map.get(board[i][j])) {
-        return false;
+        return false
       }
-      map.set(board[i][j], 1);
+      map.set(board[i][j], 1)
     }
   }
-  map.clear();
-  for (let i = 3; i < 6; i++) { // 右中角
+  map.clear()
+  for (let i = 3; i < 6; i++) {
+    // 右中角
     for (let j = 6; j < 9; j++) {
       if (board[i][j] !== '.' && map.get(board[i][j])) {
-        return false;
+        return false
       }
-      map.set(board[i][j], 1);
+      map.set(board[i][j], 1)
     }
   }
-  map.clear();
-  for (let i = 6; i < 9; i++) { // 左下角
+  map.clear()
+  for (let i = 6; i < 9; i++) {
+    // 左下角
     for (let j = 0; j < 3; j++) {
       if (board[i][j] !== '.' && map.get(board[i][j])) {
-        return false;
+        return false
       }
-      map.set(board[i][j], 1);
+      map.set(board[i][j], 1)
     }
   }
-  map.clear();
-  for (let i = 6; i < 9; i++) { // 中下角
+  map.clear()
+  for (let i = 6; i < 9; i++) {
+    // 中下角
     for (let j = 3; j < 6; j++) {
       if (board[i][j] !== '.' && map.get(board[i][j])) {
-        return false;
+        return false
       }
-      map.set(board[i][j], 1);
+      map.set(board[i][j], 1)
     }
   }
-  map.clear();
-  for (let i = 6; i < 9; i++) { // 右下角
+  map.clear()
+  for (let i = 6; i < 9; i++) {
+    // 右下角
     for (let j = 6; j < 9; j++) {
       if (board[i][j] !== '.' && map.get(board[i][j])) {
-        return false;
+        return false
       }
-      map.set(board[i][j], 1);
+      map.set(board[i][j], 1)
     }
   }
-  map.clear();
-  return true;
-};
+  map.clear()
+  return true
+}
 ```
 
 思路是怎样的呢：
@@ -424,70 +462,70 @@ var isValidSudoku = function (board) {
 **最后的最后**，如果小伙伴发现一个代码是冗余的，类似于 **jsLe** 在上面写的 9 个小宫格的计算，那么我们可以尝试将其提取出来：
 
 ```js
-let map = new Map();
+let map = new Map()
 
 // 计算横排
-const calculateHorizontalRow = (board) => {
-  map.clear();
+const calculateHorizontalRow = board => {
+  map.clear()
   for (let i = 0; i < 9; i++) {
     for (let j = 0; j < 9; j++) {
       if (board[i][j] !== '.' && map.get(board[i][j])) {
-        return false;
+        return false
       }
-      map.set(board[i][j], 1);
+      map.set(board[i][j], 1)
     }
-    map.clear();
+    map.clear()
   }
-  map.clear();
-  return true;
+  map.clear()
+  return true
 }
 
 // 计算纵排
-const calculateTandem = (board) => {
-  map.clear();
+const calculateTandem = board => {
+  map.clear()
   for (let i = 0; i < 9; i++) {
     for (let j = 0; j < 9; j++) {
       if (board[j][i] !== '.' && map.get(board[j][i])) {
-        return false;
+        return false
       }
-      map.set(board[j][i], 1);
+      map.set(board[j][i], 1)
     }
-    map.clear();
+    map.clear()
   }
-  map.clear();
-  return true;
+  map.clear()
+  return true
 }
 
 // 小九宫格计算
 const calculateTheNineSquares = (a, b, c, d, board) => {
-  map.clear();
+  map.clear()
   for (let i = a; i < b; i++) {
     for (let j = c; j < d; j++) {
       if (board[i][j] !== '.' && map.get(board[i][j])) {
-        return false;
+        return false
       }
-      map.set(board[i][j], 1);
+      map.set(board[i][j], 1)
     }
   }
-  map.clear();
-  return true;
+  map.clear()
+  return true
 }
 
-const isValidSudoku = (board) => {
+const isValidSudoku = board => {
   /**
    * 计算横排
    * board - 需要判断的数独
    */
   if (!calculateHorizontalRow(board)) {
-    return false;
-  };
+    return false
+  }
   /**
    * 计算纵排
    * board - 需要判断的数独
    */
   if (!calculateTandem(board)) {
-    return false;
-  };
+    return false
+  }
   /**
    * 计算 3 * 3 宫格
    * a - 横排起始位置
@@ -497,43 +535,43 @@ const isValidSudoku = (board) => {
    * board - 需要判断的数独
    */
   // 左上角
-  if (!calculateTheNineSquares(0, 3, 0, 3, board) ) {
-    return false;
-  };
+  if (!calculateTheNineSquares(0, 3, 0, 3, board)) {
+    return false
+  }
   // 中上角
   if (!calculateTheNineSquares(0, 3, 3, 6, board)) {
-    return false;
+    return false
   }
   // 右上角
   if (!calculateTheNineSquares(0, 3, 6, 9, board)) {
-    return false;
+    return false
   }
   // 左中角
   if (!calculateTheNineSquares(3, 6, 0, 3, board)) {
-    return false;
+    return false
   }
   // 中间
   if (!calculateTheNineSquares(3, 6, 3, 6, board)) {
-    return false;
+    return false
   }
   // 右中角
   if (!calculateTheNineSquares(3, 6, 6, 9, board)) {
-    return false;
+    return false
   }
   // 左下角
   if (!calculateTheNineSquares(6, 9, 0, 3, board)) {
-    return false;
+    return false
   }
   // 中下角
   if (!calculateTheNineSquares(6, 9, 3, 6, board)) {
-    return false;
+    return false
   }
   // 右下角
   if (!calculateTheNineSquares(6, 9, 6, 9, board)) {
-    return false;
+    return false
   }
-  return true;
-};
+  return true
+}
 ```
 
 提升还是有的：
@@ -591,46 +629,49 @@ class Solution {
 }
 ```
 
-* 时间复杂度：O(1)O(1)，因为我们只对 81 个单元格进行了一次迭代。
-* 空间复杂度：O(1)O(1)。
+- 时间复杂度：O(1)O(1)，因为我们只对 81 个单元格进行了一次迭代。
+- 空间复杂度：O(1)O(1)。
 
 翻译成 JavaScript 就是：
 
 ```js
-const isValidSudoku = (board) => {
-  let rows = new Map();
-  let columns = new Map();
-  let boxes = new Map();
+const isValidSudoku = board => {
+  let rows = new Map()
+  let columns = new Map()
+  let boxes = new Map()
 
   for (let i = 0; i < 9; i++) {
-    rows.set(`rows${i}`, new Map());
-    columns.set(`columns${i}`, new Map());
-    boxes.set(`boxes${i}`, new Map());
+    rows.set(`rows${i}`, new Map())
+    columns.set(`columns${i}`, new Map())
+    boxes.set(`boxes${i}`, new Map())
   }
 
   for (let i = 0; i < 9; i++) {
-
     for (let j = 0; j < 9; j++) {
       if (board[i][j] == '.') {
-        continue;
+        continue
       }
-      let boxIndex = Math.floor(i / 3) * 3 + Math.floor(j / 3);
+      let boxIndex = Math.floor(i / 3) * 3 + Math.floor(j / 3)
 
-      let row = rows.get(`rows${i}`);
-      let col = columns.get(`columns${j}`);
-      let box = boxes.get(`boxes${boxIndex}`);
+      let row = rows.get(`rows${i}`)
+      let col = columns.get(`columns${j}`)
+      let box = boxes.get(`boxes${boxIndex}`)
 
-      if (row.has(board[i][j]) || col.has(board[i][j]) || box.has(board[i][j])) {
-        return false;
+      if (
+        row.has(board[i][j]) ||
+        col.has(board[i][j]) ||
+        box.has(board[i][j])
+      ) {
+        return false
       } else {
-        row.set(board[i][j], 1);
-        col.set(board[i][j], 1);
-        box.set(board[i][j], 1);
+        row.set(board[i][j], 1)
+        col.set(board[i][j], 1)
+        box.set(board[i][j], 1)
       }
     }
   }
-  return true;
-};
+  return true
+}
 ```
 
 提交后：
@@ -642,7 +683,7 @@ const isValidSudoku = (board) => {
   ✔ Your memory usage beats 26.62 % of javascript submissions (38.9 MB)
 ```
 
-相信看得懂的就看得懂了，看不懂的也不会看链接也不会百度也不会问的了。^_^ 滑稽脸
+相信看得懂的就看得懂了，看不懂的也不会看链接也不会百度也不会问的了。^\_^ 滑稽脸
 
 那么这道题就这样子了。
 

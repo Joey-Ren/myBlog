@@ -1,5 +1,4 @@
-205 - 同构字符串（isomorphic-strings）
-===
+# 205 - 同构字符串（isomorphic-strings）
 
 > Create by **jsLe** on **2019-07-12 18:40:54**  
 > Recently revised in **2019-09-18 11:44:12**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - Map()](#chapter-three-one) |
-| &emsp;[3.2 解法 - indexOf()](#chapter-three-two) |
+| &emsp;[3.1 解法 - Map()](#chapter-three-one)                                             |
+| &emsp;[3.2 解法 - indexOf()](#chapter-three-two)                                         |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：哈希表
-* **题目地址**：https://leetcode-cn.com/problems/isomorphic-strings/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：哈希表
+- **题目地址**：https://leetcode-cn.com/problems/isomorphic-strings/
+- **题目内容**：
 
 ```
 给定两个字符串 s 和 t，判断它们是否是同构的。
@@ -59,44 +58,44 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var isIsomorphic = function(s, t) {
-  let sMap = new Map(); // 记录 s 哈希表
-  let tMap = new Map(); // 记录 t 哈希表
-  let sFlag = 0;
-  let tFlag = 0;
+  let sMap = new Map() // 记录 s 哈希表
+  let tMap = new Map() // 记录 t 哈希表
+  let sFlag = 0
+  let tFlag = 0
   for (let i = 0; i < s.length; i++) {
     if (sMap.get(s[i])) {
-      s[i] = sMap.get(s[i]);
+      s[i] = sMap.get(s[i])
     } else {
-      sFlag++;
-      sMap.set(s[i], sFlag);
-      s[i] = sFlag;
+      sFlag++
+      sMap.set(s[i], sFlag)
+      s[i] = sFlag
     }
     if (tMap.get(t[i])) {
-      t[i] = tMap.get(t[i]);
+      t[i] = tMap.get(t[i])
     } else {
-      tFlag++;
-      tMap.set(t[i], tFlag);
-      t[i] = tFlag;
+      tFlag++
+      tMap.set(t[i], tFlag)
+      t[i] = tFlag
     }
     if (sMap.get(s[i]) !== tMap.get(t[i])) {
-      return false;
+      return false
     }
   }
-  return true;
-};
+  return true
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `s`：`ab`
 2. `t`：`ac`
 3. `return`：`true`
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -105,11 +104,11 @@ var isIsomorphic = function(s, t) {
   ✔ Your memory usage beats 17.35 % of javascript submissions (39.8 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `map()`：遍历数组，`item` 返回遍历项，`index` 返回当前索引。[`map()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/map.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **最愚蠢的就是老想着奇技淫巧**。
 
@@ -123,26 +122,26 @@ var isIsomorphic = function(s, t) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var isIsomorphic = function(s, t) {
   for (let i = 0; i < s.length; i++) {
     if (s.indexOf(s[i]) !== t.indexOf(t[i])) {
-      return false;
+      return false
     }
   }
-  return true;
-};
+  return true
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `s`：`ab`
 2. `t`：`ac`
 3. `return`：`true`
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -151,11 +150,11 @@ var isIsomorphic = function(s, t) {
   ✔ Your memory usage beats 92.86 % of javascript submissions (35 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `indexOf()`：判断数组中是否存在判断条件中的值。如果存在，则返回第一次出现的索引；如果不存在，则返回 -1。[`indexOf()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/indexOf.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **人比人，气死人**。
 

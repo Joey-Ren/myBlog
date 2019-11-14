@@ -1,5 +1,4 @@
-Markdown 学习
-===
+# Markdown 学习
 
 > create by **jsLe** on **2018-08-22 17:58:56**  
 > Recently revised in **2019-05-30 16:16:12**
@@ -12,32 +11,32 @@ Markdown 是一种可以使用普通文本编辑器编写的标记语言，通�
 
 在 **jsLe** 看来，Markdown 就是 HTML 的简化版、TXT 文本的格式版。
 
-如果你在编写中存在难点，你可以直接在 Markdown 中使用 HTML 标记语言、CSS 样式以及 JS 脚本，对自己编写的文章等进行扩展。 
+如果你在编写中存在难点，你可以直接在 Markdown 中使用 HTML 标记语言、CSS 样式以及 JS 脚本，对自己编写的文章等进行扩展。
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                              |
+| ------------------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                           |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)                |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 Markdown 语法](#chapter-three) |
-| &emsp;[3.1 标题](#chapter-three-one) |
-| &emsp;[3.2 无序列表](#chapter-three-two) |
-| &emsp;[3.3 有序列表](#chapter-three-three) |
-| &emsp;[3.4 区块引用](#chapter-three-four) |
-| &emsp;[3.5 分割线](#chapter-three-five) |
-| &emsp;[3.6 链接](#chapter-three-six) |
-| &emsp;[3.7 图片](#chapter-three-seven) |
-| &emsp;[3.8 代码框](#chapter-three-eight) |
-| &emsp;[3.9 表格](#chapter-three-night) |
-| &emsp;[3.10 强调](#chapter-three-ten) |
-| &emsp;[3.11 转义](#chapter-three-eleven) |
-| &emsp;[3.12 删除线](#chapter-three-twelve) |
-| &emsp;[3.13 功能实现](#chapter-three-thirteen) |
-| &emsp;[3.14 缩略标签](#chapter-three-fourteen) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 结语](#chapter-four) |
+| &emsp;[3.1 标题](#chapter-three-one)                                                              |
+| &emsp;[3.2 无序列表](#chapter-three-two)                                                          |
+| &emsp;[3.3 有序列表](#chapter-three-three)                                                        |
+| &emsp;[3.4 区块引用](#chapter-three-four)                                                         |
+| &emsp;[3.5 分割线](#chapter-three-five)                                                           |
+| &emsp;[3.6 链接](#chapter-three-six)                                                              |
+| &emsp;[3.7 图片](#chapter-three-seven)                                                            |
+| &emsp;[3.8 代码框](#chapter-three-eight)                                                          |
+| &emsp;[3.9 表格](#chapter-three-night)                                                            |
+| &emsp;[3.10 强调](#chapter-three-ten)                                                             |
+| &emsp;[3.11 转义](#chapter-three-eleven)                                                          |
+| &emsp;[3.12 删除线](#chapter-three-twelve)                                                        |
+| &emsp;[3.13 功能实现](#chapter-three-thirteen)                                                    |
+| &emsp;[3.14 缩略标签](#chapter-three-fourteen)                                                    |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 结语](#chapter-four)             |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
@@ -59,9 +58,9 @@ Markdown 是一种可以使用普通文本编辑器编写的标记语言，通�
 
 > [返回目录](#chapter-one)
 
-* **用法介绍**：标题可以像 HTML 一样使用一级至六级标题，使用 `#` 即可，一级标题的使用方法为：`# 一级标题`，几级标题就使用几个 `#`。  
+- **用法介绍**：标题可以像 HTML 一样使用一级至六级标题，使用 `#` 即可，一级标题的使用方法为：`# 一级标题`，几级标题就使用几个 `#`。
 
-* **写法**：
+- **写法**：
 
 ```
 # 一级标题
@@ -72,22 +71,27 @@ Markdown 是一种可以使用普通文本编辑器编写的标记语言，通�
 ###### 六级标题
 ```
 
-* **演示**：
+- **演示**：
 
 # 一级标题
+
 ## 二级标题
+
 ### 三级标题
+
 #### 四级标题
+
 ##### 五级标题
+
 ###### 六级标题
 
 ### <a name="chapter-three-two" id="chapter-three-two">3.2 无序列表</a>
 
 > [返回目录](#chapter-one)
 
-* **用法介绍**：无序列表可以使用 `*` `+` `-` 这三种格式，这里推荐使用`*`：`* 列表1`  
+- **用法介绍**：无序列表可以使用 `*` `+` `-` 这三种格式，这里推荐使用`*`：`* 列表1`
 
-* **写法**：
+- **写法**：
 
 ```
 * 列表1
@@ -95,19 +99,21 @@ Markdown 是一种可以使用普通文本编辑器编写的标记语言，通�
 - 列表3
 ```
 
-* **演示**：
+- **演示**：
 
-* 列表1
-+ 列表2
-- 列表3
+- 列表 1
+
+* 列表 2
+
+- 列表 3
 
 ### <a name="chapter-three-three" id="chapter-three-three">3.3 有序列表</a>
 
 > [返回目录](#chapter-one)
 
-* **用法介绍**：有序列表使用数字`1. ***`即可，如果开始数字是3，那这个列表就从`3. ***`开始，第二条是`4. ***`  
+- **用法介绍**：有序列表使用数字`1. ***`即可，如果开始数字是 3，那这个列表就从`3. ***`开始，第二条是`4. ***`
 
-* **写法**：
+- **写法**：
 
 ```
 1. 列表1
@@ -115,19 +121,19 @@ Markdown 是一种可以使用普通文本编辑器编写的标记语言，通�
 3. 列表3
 ```
 
-* **演示**：
+- **演示**：
 
-1. 列表1
-2. 列表2
-3. 列表3
+1. 列表 1
+2. 列表 2
+3. 列表 3
 
 ### <a name="chapter-three-four" id="chapter-three-four">3.4 区块引用</a>
 
 > [返回目录](#chapter-one)
 
-* **用法介绍**：区块引用使用 `>` 这个符号，空格后放文本即可：`> 一级区块`  
+- **用法介绍**：区块引用使用 `>` 这个符号，空格后放文本即可：`> 一级区块`
 
-* **写法**：
+- **写法**：
 
 ```
 > 注意：区块引用的左边，有个竖线！
@@ -135,19 +141,21 @@ Markdown 是一种可以使用普通文本编辑器编写的标记语言，通�
 >>> 注意：这是三级嵌套，相信你知道怎么用了
 ```
 
-* **演示**：
+- **演示**：
 
 > 注意：区块引用的左边，有个竖线！
->> 注意：引用还可以嵌套使用，这是二级的引用，二级以上相信你也懂了
->>> 注意：这是三级嵌套，相信你知道怎么用了
+>
+> > 注意：引用还可以嵌套使用，这是二级的引用，二级以上相信你也懂了
+> >
+> > > 注意：这是三级嵌套，相信你知道怎么用了
 
 ### <a name="chapter-three-five" id="chapter-three-five">3.5 分割线</a>
 
 > [返回目录](#chapter-one)
 
-* **用法介绍**：分割线使用三个及以上的 `*` 或者 `-` 或者 `_` 都可，这里使用三个 `*`：`***`  
+- **用法介绍**：分割线使用三个及以上的 `*` 或者 `-` 或者 `_` 都可，这里使用三个 `*`：`***`
 
-* **写法**：
+- **写法**：
 
 ```
 ***
@@ -155,11 +163,13 @@ Markdown 是一种可以使用普通文本编辑器编写的标记语言，通�
 ___
 ```
 
-* **演示**：
+- **演示**：
 
-***
 ---
-___
+
+---
+
+---
 
 ### <a name="chapter-three-six" id="chapter-three-six">3.6 链接</a>
 
@@ -171,13 +181,13 @@ ___
 
 > [返回目录](#chapter-one)
 
-* **写法**：
+- **写法**：
 
 ```
 [jsLe 的网站](http://www.jsLe.top)
 ```
 
-* **演示**：
+- **演示**：
 
 [jsLe 的网站](http://www.jsLe.top)
 
@@ -185,7 +195,7 @@ ___
 
 > [返回目录](#chapter-one)
 
-* **写法**：  
+- **写法**：
 
 ```
 [site]:http://www.jsLe.top "网站"
@@ -194,10 +204,10 @@ ___
 这里是 [site]，这里是 [网站]
 ```
 
-* **演示**：
+- **演示**：
 
-[site]:http://www.jsLe.top "网站"
-[网站]:http://www.jsLe.top "网站"
+[site]: http://www.jsLe.top '网站'
+[网站]: http://www.jsLe.top '网站'
 
 这里是 [site]，这里是 [网站]
 
@@ -205,7 +215,7 @@ ___
 
 > [返回目录](#chapter-one)
 
-* **用法介绍**：  
+- **用法介绍**：
 
 如果是本地图片，则支持绝对路径和相对路径
 
@@ -213,13 +223,13 @@ ___
 
 如果是 base64，怎么使用参考 [markdown 引用 base64](https://blog.csdn.net/slaughterdevil/article/details/79255933)
 
-* **写法**：
+- **写法**：
 
 ```
 ![图片](../../../public-repertory/img/other-markdown-logo.jpg)
 ```
 
-* **演示**：
+- **演示**：
 
 ![图片](../../../public-repertory/img/other-markdown-logo.jpg)
 
@@ -233,15 +243,15 @@ ___
 
 > [返回目录](#chapter-one)
 
-* **用法介绍**：` `` `  
+- **用法介绍**：` `` `
 
-* **写法**：
+- **写法**：
 
 ```
 `<p>你好使用者，要看看 jsLe 的网站吗？<a href="http://www.jsLe.top">点我跳转</a></p>`
 ```
 
-* **演示**：
+- **演示**：
 
 `<p>你好使用者，要看看 jsLe 的网站吗？<a href="http://www.jsLe.top">点我跳转</a></p>`
 
@@ -249,27 +259,27 @@ ___
 
 > [返回目录](#chapter-one)
 
-* **用法介绍**：  
+- **用法介绍**：
 
-\`\`\`   
+\`\`\`  
 \`\`\`
 
-* **写法**：
+- **写法**：
 
 \`\`\`注释（可以换成 html css js 等，GitHub 或者掘金有相应的渲染机制）  
-多行代码文本1  
-多行代码文本2  
+多行代码文本 1  
+多行代码文本 2  
 \`\`\`
 
 \`\`\`js  
 console.log('hello jsLe');  
 \`\`\`
 
-* **演示**：
+- **演示**：
 
 ```
-多行代码文本1  
-多行代码文本2  
+多行代码文本1
+多行代码文本2
 ```
 
 ### <a name="chapter-three-night" id="chapter-three-night">3.9 表格</a>
@@ -282,57 +292,57 @@ console.log('hello jsLe');
 
 > [返回目录](#chapter-one)
 
-* **写法**：  
+- **写法**：
 
-\| name    \| age  \| sex  \|  
+\| name \| age \| sex \|  
 \| :-----: \| :--- \| ---: \|  
-\| jsLe \| 23   \| 男   \|  
-\| 小梁    \| 23   \| 男   \|  
+\| jsLe \| 23 \| 男 \|  
+\| 小梁 \| 23 \| 男 \|
 
-* **演示**：
+- **演示**：
 
-| name    | age  | sex  |  
-| :-----: | :--- | ---: |  
-| jsLe | 23   | 男   |  
-| 小梁    | 23   | 男   |  
+| name | age | sex |
+| :--: | :-- | --: |
+| jsLe | 23  |  男 |
+| 小梁 | 23  |  男 |
 
 #### <a name="chapter-three-night-two" id="chapter-three-night-two">3.9.2 第二类表格</a>
 
 > [返回目录](#chapter-one)
 
-* **写法**： 
+- **写法**：
 
-\| name    \| age  \| sex  \|  
-\| ----- \| ----- \| -----  \|  
-\| jsLe \| 23   \| 男   \|  
-\| 小梁    \| 23   \| 男   \|  
+\| name \| age \| sex \|  
+\| ----- \| ----- \| ----- \|  
+\| jsLe \| 23 \| 男 \|  
+\| 小梁 \| 23 \| 男 \|
 
-* **演示**：
+- **演示**：
 
 | name | age | sex |
-| ----- | ----- | --- |
-| jsLe | 23   | 男   |  
-| 小梁    | 23   | 男   |  
+| ---- | --- | --- |
+| jsLe | 23  | 男  |
+| 小梁 | 23  | 男  |
 
 #### <a name="chapter-three-night-three" id="chapter-three-night-three">3.9.3 第三类表格</a>
 
 > [返回目录](#chapter-one)
 
-* **写法**：
+- **写法**：
 
 学号 \| 姓名 \| 分数  
 \- \| - \| -  
 小明 \| 男 \| 75  
 小红 \| 女 \| 79  
-小陆 \| 男 \| 92  
+小陆 \| 男 \| 92
 
-* **演示**：
+- **演示**：
 
-学号 | 姓名 | 分数  
-- | - | -  
-小明 | 男 | 75  
-小红 | 女 | 79  
-小陆 | 男 | 92  
+| 学号 | 姓名 | 分数 |
+| ---- | ---- | ---- |
+| 小明 | 男   | 75   |
+| 小红 | 女   | 79   |
+| 小陆 | 男   | 92   |
 
 ### <a name="chapter-three-ten" id="chapter-three-ten">3.10 强调</a>
 
@@ -342,18 +352,18 @@ console.log('hello jsLe');
 
 > [返回目录](#chapter-one)
 
-* **用法介绍**：`*字体倾斜*` 或者`_字体倾斜_`  
+- **用法介绍**：`*字体倾斜*` 或者`_字体倾斜_`
 
-* **写法**：
+- **写法**：
 
 ```
 *字体倾斜*
 _字体倾斜_
 ```
 
-* **演示**：
+- **演示**：
 
-*字体倾斜*
+_字体倾斜_
 
 _字体倾斜_
 
@@ -361,28 +371,28 @@ _字体倾斜_
 
 > [返回目录](#chapter-one)
 
-* **用法介绍**：`**字体加粗**` 或者 `__字体加粗__`  
+- **用法介绍**：`**字体加粗**` 或者 `__字体加粗__`
 
-* **写法**：
+- **写法**：
 
 ```
 **字体加粗**
 __字体加粗__
 ```
 
-* **演示**：
+- **演示**：
 
 **字体加粗**
 
-__字体加粗__
+**字体加粗**
 
 ### <a name="chapter-three-eleven" id="chapter-three-eleven">3.11 转义</a>
 
 > [返回目录](#chapter-one)
 
-* **用法介绍**：通过使用\加上特殊字符，达到转义效果。  
+- **用法介绍**：通过使用\加上特殊字符，达到转义效果。
 
-* **写法**：
+- **写法**：
 
 ```
 * \\
@@ -397,32 +407,32 @@ __字体加粗__
 * ……
 ```
 
-* **演示**：
+- **演示**：
 
-* \\
-* \`
-* \~
-* \*
-* \_
-* \-
-* \+
-* \.
-* \!
-* ……
+- \\
+- \`
+- \~
+- \*
+- \_
+- \-
+- \+
+- \.
+- \!
+- ……
 
 ### <a name="chapter-three-twelve" id="chapter-three-twelve">3.12 删除线</a>
 
 > [返回目录](#chapter-one)
 
-* **用法介绍**：`~~请删除我吧~~`  
+- **用法介绍**：`~~请删除我吧~~`
 
-* **写法**：  
+- **写法**：
 
 ```
 ~~请删除我吧！~~
 ```
 
-* **演示**：
+- **演示**：
 
 ~~请删除我吧！~~
 
@@ -434,41 +444,41 @@ __字体加粗__
 
 > [返回目录](#chapter-one)
 
-* **写法**：
+- **写法**：
 
 ```
 - [x] 功能1
 - [x] 功能2
 ```
 
-* **演示**：
+- **演示**：
 
-- [x] 功能1
-- [x] 功能2
+* [x] 功能 1
+* [x] 功能 2
 
 #### <a name="chapter-three-thriteen-two" id="chapter-three-thriteen-two">3.13.2 未实现的功能</a>
 
 > [返回目录](#chapter-one)
 
-* **写法**：
+- **写法**：
 
 ```
 - [ ] 功能3
 - [ ] 功能4
 ```
 
-* **演示**：
+- **演示**：
 
-- [ ] 功能3
-- [ ] 功能4
+* [ ] 功能 3
+* [ ] 功能 4
 
 ### <a name="chapter-three-fourteen" id="chapter-three-fourteen">3.14 缩略标签</a>
 
 > [返回目录](#chapter-one)
 
-* **介绍**：缩略标签属于 HTML 中的内容，但是巧妙用在 Markdown 也是可行的。
+- **介绍**：缩略标签属于 HTML 中的内容，但是巧妙用在 Markdown 也是可行的。
 
-* **写法**：
+- **写法**：
 
 ```
 <details>
@@ -481,7 +491,7 @@ __字体加粗__
 </details>
 ```
 
-* **演示**：
+- **演示**：
 
 <details>
   <summary>基础知识</summary>

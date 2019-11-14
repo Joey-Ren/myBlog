@@ -9,13 +9,11 @@ export default {
   name: 'home',
   methods: {
     // 跳转防抖界面
-    debounce () {
+    debounce() {
       this.$router.replace('/debounce')
     }
   }
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

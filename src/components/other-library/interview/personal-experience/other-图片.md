@@ -1,11 +1,10 @@
-面试知识点 - 图片
-===
+# 面试知识点 - 图片
 
 > Create by **jsLe** on **2019-3-1 13:27:47**  
 > Recently revised in **2019-05-24 11:09:19**
 
 **Hello 小伙伴们，如果觉得本文还不错，记得给个 **star** ， 你们的 **star** 是我学习的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
- 
+
 在我们日常工作中，我们会经常使用 JPG、PNG、GIF、SVG 等格式图片。
 
 但是，你真的懂图片吗？不同格式图片的区分，它们的优劣势以及使用场景等……
@@ -16,20 +15,20 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 正文](#chapter-three) |
-| &emsp;[3.1 BMP](#chapter-three-one) |
-| &emsp;[3.2 JPEG](#chapter-three-two) |
-| &emsp;[3.3 PNG](#chapter-three-three) |
-| &emsp;[3.4 GIF](#chapter-three-four) |
-| &emsp;[3.5 SVG](#chapter-three-five) |
-| &emsp;[3.6 Base64](#chapter-three-six) |
-| &emsp;[3.7 WebP](#chapter-three-seven) |
-| &emsp;[3.8 雪碧图](#chapter-three-eight) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 总结](#chapter-four) |
+| 目录                                                                                      |
+| ----------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                   |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)        |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 正文](#chapter-three)  |
+| &emsp;[3.1 BMP](#chapter-three-one)                                                       |
+| &emsp;[3.2 JPEG](#chapter-three-two)                                                      |
+| &emsp;[3.3 PNG](#chapter-three-three)                                                     |
+| &emsp;[3.4 GIF](#chapter-three-four)                                                      |
+| &emsp;[3.5 SVG](#chapter-three-five)                                                      |
+| &emsp;[3.6 Base64](#chapter-three-six)                                                    |
+| &emsp;[3.7 WebP](#chapter-three-seven)                                                    |
+| &emsp;[3.8 雪碧图](#chapter-three-eight)                                                  |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 总结](#chapter-four)     |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 参考文献](#chapter-five) |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
@@ -48,20 +47,20 @@
 
 **首先**，我们要清楚的是，图片从类型上分，可以分为 **位图** 和 **矢量图**。
 
-* **位图**：位图又叫点阵图或像素图，计算机屏幕上的图是由屏幕上的发光点（即像素）构成的，每个点用二进制数据来描述其颜色与亮度等信息。因为这些点是离散的，类似于点阵，同时因为多个像素的色彩组合就形成了图片，所以叫这种图为点阵图或者位图。常见位图有 JPG、PNG、GIF 等格式。
-* **矢量图**：矢量图又叫向量图，它是由一系列计算机指令来描述和记录一幅图，一幅图可以解为点、线、面等组成的子图。生成的矢量图文件存储量很小，特别适用于文字设计、图案设计等，而在前端中比较常用的矢量图有 SVG 等格式……
+- **位图**：位图又叫点阵图或像素图，计算机屏幕上的图是由屏幕上的发光点（即像素）构成的，每个点用二进制数据来描述其颜色与亮度等信息。因为这些点是离散的，类似于点阵，同时因为多个像素的色彩组合就形成了图片，所以叫这种图为点阵图或者位图。常见位图有 JPG、PNG、GIF 等格式。
+- **矢量图**：矢量图又叫向量图，它是由一系列计算机指令来描述和记录一幅图，一幅图可以解为点、线、面等组成的子图。生成的矢量图文件存储量很小，特别适用于文字设计、图案设计等，而在前端中比较常用的矢量图有 SVG 等格式……
 
 **然后**，我们按压缩划分，可以将图片分为 **无损压缩** 和 **有损压缩**。
 
-* **无损压缩**：无损压缩是对文件本身的压缩，使图片占用的存储空间变小，并且不会损害图片的质量。常见无损压缩有 PNG 等。
-* **有损压缩**：有损压缩是对图像本身的改变，会对图片质量造成损害，随着压缩次数越来越多，那么图片质量会越来越差。常见有损压缩有 JPG 等。
+- **无损压缩**：无损压缩是对文件本身的压缩，使图片占用的存储空间变小，并且不会损害图片的质量。常见无损压缩有 PNG 等。
+- **有损压缩**：有损压缩是对图像本身的改变，会对图片质量造成损害，随着压缩次数越来越多，那么图片质量会越来越差。常见有损压缩有 JPG 等。
 
 **最后**，究根结底，我们需要知道在计算机中，像素是用二进制来表示的。不同图片格式中像素与二进制位数之间的对应关系是不同的。一个像素对应的二进制位数越多，那么它可以表示的颜色种类就越多，成像效果也就越细腻，文件体积相应也会越大。
 
 一个二进制位表示两种颜色 **【 0|1 <——对应——> 黑|白 】**，如果一种图片格式对应的二进制位数有 n 个，那么它就可以呈现 2^n 中颜色。例如：
 
-* PNG-8：它有 2^8 种颜色，即 256 种颜色。
-* PNG-24：它有 2^24 种颜色，即 1677216 种颜色（1600 万种颜色）。
+- PNG-8：它有 2^8 种颜色，即 256 种颜色。
+- PNG-24：它有 2^24 种颜色，即 1677216 种颜色（1600 万种颜色）。
 
 OK，知道了这些基础知识，我们就按图片出现的顺序，一一讲解下常用的图片知识吧！
 
@@ -71,7 +70,7 @@ OK，知道了这些基础知识，我们就按图片出现的顺序，一一讲
 
 早期使用的图片格式，叫 **BMP**，取自英文单词 BitMap，Windows 中文版译作 **位图**，它的文件结构很简单，没有压缩，一个一个像素地记录下来。
 
-如果你的系统是 Windows，你可以打开 **画图** 工具，然后点击另存为，你可以看到保存的选项中有个 **24位位图** 的格式，即 1600 万色的图片。
+如果你的系统是 Windows，你可以打开 **画图** 工具，然后点击另存为，你可以看到保存的选项中有个 **24 位位图** 的格式，即 1600 万色的图片。
 
 当然，历史总在前进，BMP 这种没有压缩的图片格式，逐渐被后起之秀代替了。
 
@@ -110,19 +109,19 @@ PNG（可移植网络图形格式）是一种无损压缩的高保真的图片�
 
 PNG 分 PNG-8 和 PNG-24。
 
-* **PNG-8**：PNG-8 是无损压缩的索引色彩模式。PNG-8 是 GIF 格式很好的替代，虽然不能像 GIF 一样有动画，也不兼容 IE6 等老旧浏览器。PNG-8 最多支持 256 中颜色。
-* **PNG-24**：PNG-24 是无损压缩的直接色彩模式。PNG-24 会比 JPEG、GIF、PNG-8 占用更大的存储空间。PNG-24 可以呈现 1600 万种颜色。
+- **PNG-8**：PNG-8 是无损压缩的索引色彩模式。PNG-8 是 GIF 格式很好的替代，虽然不能像 GIF 一样有动画，也不兼容 IE6 等老旧浏览器。PNG-8 最多支持 256 中颜色。
+- **PNG-24**：PNG-24 是无损压缩的直接色彩模式。PNG-24 会比 JPEG、GIF、PNG-8 占用更大的存储空间。PNG-24 可以呈现 1600 万种颜色。
 
 > 2^8 = 256，2^24 = 1677216
 
 **适用场景**：
 
-* 普遍场景
+- 普遍场景
 
 1. 小的 Logo，颜色简单且对比强烈的图片或者背景。
 2. 颜色简单、对比度强的透明小图。
 
-* 什么时候使用 PNG-8，什么时候使用 PNG-24 呢？
+- 什么时候使用 PNG-8，什么时候使用 PNG-24 呢？
 
 1. 理论上，位数最大的就是最好的，直接上 PNG-24；但是实际上，为了避免体积过大的问题，一般在适合使用 PNG 的场景中，优先选择比较小巧的 PNG-8。
 2. 如何确定是使用 PNG-8 还是 PNG-24，这就看你的 UI 设计师或者负责人能接受那个了，除非你设计功底非常好，要不然不要做这个选择！
@@ -187,7 +186,7 @@ Base64 是一种用于传输 8 Bit 字节码的编码方式，通过对图片进
 **如何获取**：
 
 1. Webpack 的 loader：[url-loader](https://www.npmjs.com/package/url-loader)
-2. 在线编码工具：[图片转换Base64](http://imgbase64.duoshitong.com/)
+2. 在线编码工具：[图片转换 Base64](http://imgbase64.duoshitong.com/)
 
 ### <a name="chapter-three-seven" id="chapter-three-seven">3.7 WebP</a>
 
@@ -222,9 +221,19 @@ WebP 像 JPEG 一样对图片细节丰富，像 PNG 一样支持透明，像 GIF
 那么，平时如何使用雪碧图呢？
 
 ```css
-.img{background:url(../images/img.png)  no-repeat;}
-.my-head{height:160px;width:120px;background-position:0 0;}
-.my-picture{height:292px;width:1253px;background-position:0 -160px;}
+.img {
+  background: url(../images/img.png) no-repeat;
+}
+.my-head {
+  height: 160px;
+  width: 120px;
+  background-position: 0 0;
+}
+.my-picture {
+  height: 292px;
+  width: 1253px;
+  background-position: 0 -160px;
+}
 ```
 
 ```sass
@@ -245,38 +254,38 @@ WebP 像 JPEG 一样对图片细节丰富，像 PNG 一样支持透明，像 GIF
 
 至此，我们对图片的介绍就结束了，在这里我们列个表进行汇总：
 
-| 格式 | 使用场景 |
-| --- | --- |
-| JPG/JPEG | 1. 大的背景图； 2. 轮播图； 3. Banner 图 |
-| PNG | 1. 小 Logo； 2. 透明背景 |
-| GIF | 动态图片 |
-| SVG | 能适应不同设备且画质不能损坏的图片 |
-| Base64 | 大小不超过 2KB，且更新率低的图片 |
-| 雪碧图 | 小图太多的时候，集中成一张图片减少 HTTP 请求 |
+| 格式     | 使用场景                                     |
+| -------- | -------------------------------------------- |
+| JPG/JPEG | 1. 大的背景图； 2. 轮播图； 3. Banner 图     |
+| PNG      | 1. 小 Logo； 2. 透明背景                     |
+| GIF      | 动态图片                                     |
+| SVG      | 能适应不同设备且画质不能损坏的图片           |
+| Base64   | 大小不超过 2KB，且更新率低的图片             |
+| 雪碧图   | 小图太多的时候，集中成一张图片减少 HTTP 请求 |
 
 > 雪碧图不属于格式，但属于一种应用形式
 
 最后，在开发中会常用到一些资料，下面是 **jsLe** 在图片方面的个人资源，如果小伙伴有其他的好用资源推荐，可以 QQ 或者评论留言：
 
-* **常用优秀资源**：
+- **常用优秀资源**：
 
 1. SVG loading 效果：[SVG-Loaders](https://github.com/SamHerbert/SVG-Loaders)
 2. 矢量图标库：[Iconfont-阿里巴巴矢量图标库](https://www.iconfont.cn/)
 3. 在线制作 Logo：[U 钙网](http://www.uugai.com/logoa/yulan.php)
 4. 压缩 PNG 或者 JPG：[TinyPNG](https://tinypng.com/)
 
-* **获取图片素材**：
+- **获取图片素材**：
 
 1. 千库网：[地址](http://588ku.com/)
 2. 包图网：[地址](https://ibaotu.com/)
 
-* **在线转换工具**：
+- **在线转换工具**：
 
 1. [JPG、PNG 转 SVG](http://www.bejson.com/convert/image_to_svg/)
 2. [JPG、PNG、GIF 转 Base64](http://imgbase64.duoshitong.com/)
 3. [JPG、PNG、GIF 转 ICO](http://www.bitbug.net/)
 
-* **其他资料支持**：
+- **其他资料支持**：
 
 5. Can I Use —— 查看各种浏览器支持程度：[caniuse.com](https://caniuse.com)
 
@@ -284,8 +293,8 @@ WebP 像 JPEG 一样对图片细节丰富，像 PNG 一样支持透明，像 GIF
 
 > [返回目录](#chapter-one)
 
-1. [《jpg、png、svg、gif等图片格式的区别》](https://www.jianshu.com/p/6e1941de7952)
-2. [《PNG、JPEG、GIF、SVG应该用哪个？》](https://www.jianshu.com/p/c66f52d875d9)
+1. [《jpg、png、svg、gif 等图片格式的区别》](https://www.jianshu.com/p/6e1941de7952)
+2. [《PNG、JPEG、GIF、SVG 应该用哪个？》](https://www.jianshu.com/p/c66f52d875d9)
 3. [《图片优化——质量与性能的博弈》](https://note.youdao.com/ynoteshare1/index.html?id=e10c4db3f3570478ad6534903b8ec79b&type=note#/)
 4. [《横向对比 gif、jpeg、png、svg，教你如何合理选择图像格式》](https://www.qifeiye.com/%E6%A8%AA%E5%90%91%E5%AF%B9%E6%AF%94gifjpegpngsvg%EF%BC%8C%E6%95%99%E4%BD%A0%E5%A6%82%E4%BD%95%E5%90%88%E7%90%86%E9%80%89%E6%8B%A9%E5%9B%BE%E5%83%8F%E6%A0%BC%E5%BC%8F/)
 5. [《JPG？GIF？PNG？前端如何选择图片格式？》](https://www.jianshu.com/p/ab96bf20f90e)

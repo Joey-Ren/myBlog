@@ -1,19 +1,19 @@
-方法 - charCodeAt()
-===
+# 方法 - charCodeAt()
 
 > Create by **jsLe** on **2019-07-06 14:59:28**  
 > Recently revised in **2019-09-10 17:24:23**
 
-* **原文**：[MDN - charCodeAt()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt)
+- **原文**：[MDN - charCodeAt()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt)
 
-* **功能**：静态 `String.charCodeAt()` 方法返回 0 到 65535 之间的整数，表示给定索引处的 UTF-16 代码单元 (在 Unicode 编码单元表示一个单一的 UTF-16 编码单元的情况下，UTF-16 编码单元匹配 Unicode 编码单元。
+- **功能**：静态 `String.charCodeAt()` 方法返回 0 到 65535 之间的整数，表示给定索引处的 UTF-16 代码单元 (在 Unicode 编码单元表示一个单一的 UTF-16 编码单元的情况下，UTF-16 编码单元匹配 Unicode 编码单元。
 
-* **语法**：`charCodeAt(index)`
-  * `index`：一个大于等于 0，小于字符串长度的整数。如果不是一个数值，则默认为 0。详情可以查看百度百科 [ASCII](https://baike.baidu.com/item/ASCII/309296?fr=aladdin)
+- **语法**：`charCodeAt(index)`
 
-* **返回值**：返回值是一表示给定索引处（String 中 index 索引处）字符的 UTF-16 代码单元值的数字；如果索引超出范围，则返回 NaN。
+  - `index`：一个大于等于 0，小于字符串长度的整数。如果不是一个数值，则默认为 0。详情可以查看百度百科 [ASCII](https://baike.baidu.com/item/ASCII/309296?fr=aladdin)
 
-* **代码**：
+- **返回值**：返回值是一表示给定索引处（String 中 index 索引处）字符的 UTF-16 代码单元值的数字；如果索引超出范围，则返回 NaN。
+
+- **代码**：
 
 ```js
 'ABC'.charCodeAt(0) // 65

@@ -1,8 +1,17 @@
 <template>
   <div>
-    <el-button type="primary" @click="submit" round>防抖提交</el-button>
-    <el-button type="primary" @click="submitOne" :disabled="submitDisabled" round>禁用式防抖</el-button>
-    <el-input v-model="input" placeholder="这里要显示内容了哦，不要眨眼"></el-input>
+    <el-button type="primary" round @click="submit">防抖提交</el-button>
+    <el-button
+      type="primary"
+      :disabled="submitDisabled"
+      round
+      @click="submitOne"
+      >禁用式防抖</el-button
+    >
+    <el-input
+      v-model="input"
+      placeholder="这里要显示内容了哦，不要眨眼"
+    ></el-input>
     <!--参考博客文档-->
     <!--https://segmentfault.com/a/1190000017227559-->
 
@@ -19,7 +28,7 @@
 import utils from '@/common/js/Utils.js'
 export default {
   name: 'debounce',
-  data () {
+  data() {
     return {
       index: 0,
       input: '',
@@ -34,27 +43,31 @@ export default {
     //   console.log('在这里我执行了提价操作' + this.index)
     // }
     // 方案一：增加防抖功能按钮效果
-    submit: utils.debounce(function () {
-      this.index += 1
-      this.input = '在这里我执行了提价操作' + this.index
-    }, 1000, {'leading': true, 'trailing': false}),
+    submit: utils.debounce(
+      function() {
+        this.index += 1
+        this.input = '在这里我执行了提价操作' + this.index
+      },
+      1000,
+      { leading: true, trailing: false }
+    ),
 
     // 方案二：等待数据结果返回值后，按钮在启用
-    submitOne () {
+    submitOne() {
       this.submitDisabled = true
+      //  console.log('我再等数据返回！！！')
       // 模拟数据返回值后，按钮启用
       setTimeout(() => {
+        // console.log('好了，数据返回了')
         this.submitDisabled = false
       }, 3000)
     }
   },
-  watch: {},
   computed: {},
-  created () {},
-  mounted () {}
+  watch: {},
+  created() {},
+  mounted() {}
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

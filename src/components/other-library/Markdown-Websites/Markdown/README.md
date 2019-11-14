@@ -1,5 +1,4 @@
-Markdown
-===
+# Markdown
 
 > create by **jsLe** on **2018-08-22 17:58:56**  
 > Recently revised in **2019-05-30 16:16:29**
@@ -8,14 +7,14 @@ Markdown
 
 Markdown 是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本具有一定的格式。
 
-Markdown 文件的后缀为 `.md`。 
+Markdown 文件的后缀为 `.md`。
 
 在 **jsLe** 看来，Markdown 就是 HTML 的简化版、TXT 文本的格式版。
 
-如果你在编写中存在难点，你可以直接在 Markdown 中使用 HTML 标记语言、CSS 样式以及 JS 脚本，对自己编写的文章等进行扩展。 
+如果你在编写中存在难点，你可以直接在 Markdown 中使用 HTML 标记语言、CSS 样式以及 JS 脚本，对自己编写的文章等进行扩展。
 
-| 目录 |
-| --- |
+| 目录                                 |
+| ------------------------------------ |
 | [Markdown 学习](./Markdown-study.md) |
 
 ---

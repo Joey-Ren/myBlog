@@ -1,5 +1,4 @@
-029 - 搜索插入位置（search-insert-position）
-===
+# 029 - 搜索插入位置（search-insert-position）
 
 > Create by **jsLe** on **2019-06-10 08:54:47**  
 > Recently revised in **2019-09-18 10:16:56**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - 暴力破解](#chapter-three-one) |
-| &emsp;[3.2 解法 - 二分法](#chapter-three-two) |
+| &emsp;[3.1 解法 - 暴力破解](#chapter-three-one)                                          |
+| &emsp;[3.2 解法 - 二分法](#chapter-three-two)                                            |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数组、二分查找
-* **题目地址**：https://leetcode-cn.com/problems/search-insert-position/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数组、二分查找
+- **题目地址**：https://leetcode-cn.com/problems/search-insert-position/
+- **题目内容**：
 
 ```
 给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。
@@ -57,20 +56,20 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var searchInsert = function(nums, target) {
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] >= target) {
-      return i;
+      return i
     }
   }
-  return nums.length;
-};
+  return nums.length
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums`：`[1, 3, 5, 6]`
 2. `target`：`2`
@@ -80,7 +79,7 @@ var searchInsert = function(nums, target) {
 1
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -89,7 +88,7 @@ var searchInsert = function(nums, target) {
   ✔ Your memory usage beats 56.95 % of javascript submissions (33.9 MB)
 ```
 
-* **解题思路**：
+- **解题思路**：
 
 这道题通过遍历暴力破解的话，分 3 种情况判断：
 
@@ -101,28 +100,28 @@ var searchInsert = function(nums, target) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var searchInsert = function(nums, target) {
-  let left = 0;
-  let right = nums.length - 1;
-  
+  let left = 0
+  let right = nums.length - 1
+
   while (left <= right) {
-    let middle = Math.round((left + right) / 2);
+    let middle = Math.round((left + right) / 2)
     if (target === nums[middle]) {
-      return middle;
+      return middle
     } else if (target < nums[middle]) {
-      right = middle - 1;
+      right = middle - 1
     } else if (target > nums[middle]) {
-      left = middle + 1;
+      left = middle + 1
     }
-  } 
-  return left;
-};
+  }
+  return left
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums`：`[1, 3, 5, 6]`
 2. `target`：`2`
@@ -132,7 +131,7 @@ var searchInsert = function(nums, target) {
 1
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -141,11 +140,11 @@ var searchInsert = function(nums, target) {
   ✔ Your memory usage beats 47.82 % of javascript submissions (34.2 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `Math`：JS 中的内置对象，具有数学常数和函数的属性和方法。[`Math` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Math/README.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **首先**，我们需要了解的是，`一个数 / 2`，大概率返回的是小数，而我们的索引需要的是整数，所以我们通过 `Math.round()` 来四舍五入获取整数。
 

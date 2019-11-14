@@ -1,5 +1,4 @@
-108 - 将有序数组转换为二叉搜索树（convert-sorted-array-to-binary-search-tree）
-===
+# 108 - 将有序数组转换为二叉搜索树（convert-sorted-array-to-binary-search-tree）
 
 > Create by **jsLe** on **2019-06-17 08:57:03**  
 > Recently revised in **2019-09-18 10:23:20**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - 后序遍历](#chapter-three-one) |
-| &emsp;[3.2 解法 - 后序遍历（简化）](#chapter-three-two) |
+| &emsp;[3.1 解法 - 后序遍历](#chapter-three-one)                                          |
+| &emsp;[3.2 解法 - 后序遍历（简化）](#chapter-three-two)                                  |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：树、深度优先搜索
-* **题目地址**：https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：树、深度优先搜索
+- **题目地址**：https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree/
+- **题目内容**：
 
 ```
 将一个按照升序排列的有序数组，转换为一棵高度平衡二叉搜索树。
@@ -53,27 +52,27 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var sortedArrayToBST = function(nums) {
   let sort = (left, right) => {
     if (left > right) {
-      return null;
+      return null
     }
-    let m = left + Math.floor((right - left) / 2);
+    let m = left + Math.floor((right - left) / 2)
     let node = {
       val: nums[m],
       left: sort(left, m - 1),
-      right: sort(m + 1, right),
+      right: sort(m + 1, right)
     }
-    return node;
-  };
-  return sort(0, nums.length - 1);
-};
+    return node
+  }
+  return sort(0, nums.length - 1)
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums`：`[-10, -3, 0, 1, 5, 9]`
 2. `return`：
@@ -90,7 +89,7 @@ var sortedArrayToBST = function(nums) {
      right: { val: 9, left: null, right: null } } }
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 √ Accepted
@@ -99,15 +98,15 @@ var sortedArrayToBST = function(nums) {
   √ Your memory usage beats 25.53 % of javascript submissions (37.8 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `Math`：JS 中的内置对象，具有数学常数和函数的属性和方法。[`Math` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Math/README.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **首先**，这次解题涉及到一个名词，叫 **后序遍历**，希望了解更多的小伙伴，可以百度了解更多，这里仅做简单介绍。
 
-* **后序遍历**：**后序遍历**（LRD）是二叉树遍历的一种，也叫作后根遍历、后序周游。在 **后序遍历** 中，它会先访问左节点，再访问右节点，最后访问根节点。
+- **后序遍历**：**后序遍历**（LRD）是二叉树遍历的一种，也叫作后根遍历、后序周游。在 **后序遍历** 中，它会先访问左节点，再访问右节点，最后访问根节点。
 
 话再多还不如上图：
 
@@ -125,23 +124,23 @@ var sortedArrayToBST = function(nums) {
 var sortedArrayToBST = function(nums) {
   let sort = (left, right) => {
     if (left > right) {
-      return null;
+      return null
     }
-    let m = left + Math.floor((right - left) / 2);
+    let m = left + Math.floor((right - left) / 2)
     let node = {
       val: nums[m],
       left: sort(left, m - 1),
-      right: sort(m + 1, right),
+      right: sort(m + 1, right)
     }
-    console.log("------");
-    console.log(`${left} ${right}`);
-    console.log(node);
-    return node;
-  };
-  return sort(0, nums.length - 1);
-};
+    console.log('------')
+    console.log(`${left} ${right}`)
+    console.log(node)
+    return node
+  }
+  return sort(0, nums.length - 1)
+}
 
-sortedArrayToBST([-10, -3, 0, 1, 5, 9]);
+sortedArrayToBST([-10, -3, 0, 1, 5, 9])
 ```
 
 在这里，我们进行了 `console` 打印，那么小伙伴可以先想下，它会打印出什么来：
@@ -187,22 +186,22 @@ OK，看到这里，小伙伴们应该有谱了，是怎么跑起来的。
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var sortedArrayToBST = function(nums) {
-  if (!nums.length) return null;
-  let mid = Math.floor(nums.length / 2);
+  if (!nums.length) return null
+  let mid = Math.floor(nums.length / 2)
   let root = {
     val: nums[mid],
     left: sortedArrayToBST(nums.slice(0, mid)),
-    right: sortedArrayToBST(nums.slice(mid + 1)),
+    right: sortedArrayToBST(nums.slice(mid + 1))
   }
-  return root;
-};
+  return root
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums`：`[-10, -3, 0, 1, 5, 9]`
 2. `return`：
@@ -219,7 +218,7 @@ var sortedArrayToBST = function(nums) {
      right: null } }
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -228,58 +227,52 @@ var sortedArrayToBST = function(nums) {
   ✔ Your memory usage beats 66.67 % of javascript submissions (37.5 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `Math`：JS 中的内置对象，具有数学常数和函数的属性和方法。[`Math` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Math/README.md)
 
-* **解题思路**：
+- **解题思路**：
 
 经过上面一节的提示，这节小伙伴们可能就需要自己思考了：
 
 ```js
 var sortedArrayToBST = function(nums) {
-  if (!nums.length) return null;
-  let mid = Math.floor(nums.length / 2);
+  if (!nums.length) return null
+  let mid = Math.floor(nums.length / 2)
   let root = {
     val: nums[mid],
     left: sortedArrayToBST(nums.slice(0, mid)),
-    right: sortedArrayToBST(nums.slice(mid + 1)),
+    right: sortedArrayToBST(nums.slice(mid + 1))
   }
-  console.log('------');
-  console.log(root);
-  return root;
-};
+  console.log('------')
+  console.log(root)
+  return root
+}
 
-sortedArrayToBST([-10, -3, 0, 1, 5, 9]);
+sortedArrayToBST([-10, -3, 0, 1, 5, 9])
 ```
 
 这次打印会输出什么？
 
 ```js
-------
-{ val: -10, left: null, right: null }
-------
-{ val: 0, left: null, right: null }
-------
-{ val: -3,
+------{ val: -10, left: null, right: null }
+------{ val: 0, left: null, right: null }
+------{
+  val: -3,
   left: { val: -10, left: null, right: null },
-  right: { val: 0, left: null, right: null } }
-------
-{ val: 5, left: null, right: null }
-------
-{ val: 9,
-  left: { val: 5, left: null, right: null },
-  right: null }
-------
-{ val: 1,
-  left:
-   { val: -3,
-     left: { val: -10, left: null, right: null },
-     right: { val: 0, left: null, right: null } },
-  right:
-   { val: 9,
-     left: { val: 5, left: null, right: null },
-     right: null } }
+  right: { val: 0, left: null, right: null }
+}
+------{ val: 5, left: null, right: null }
+------{ val: 9, left: { val: 5, left: null, right: null }, right: null }
+------{
+  val: 1,
+  left: {
+    val: -3,
+    left: { val: -10, left: null, right: null },
+    right: { val: 0, left: null, right: null }
+  },
+  right: { val: 9, left: { val: 5, left: null, right: null }, right: null }
+}
 ```
 
 这样，我们就完成了本次的解题，下期再会~

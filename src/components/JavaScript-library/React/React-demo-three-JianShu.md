@@ -1,12 +1,11 @@
-React Demo Three - 简书
-===
+# React Demo Three - 简书
 
 > Create by **jsLe** on **2019-4-7 19:37:41**  
 > Recently revised in **2019-05-31 15:34:04**
 
 **Hello 小伙伴们，如果觉得本文还不错，记得给个 **star** ， 小伙伴们的 **star** 是我持续更新的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
 
-* [React 系列文章代码地址](https://github.com/LiangJunrong/React)
+- [React 系列文章代码地址](https://github.com/LiangJunrong/React)
 
 本文章最终成果：
 
@@ -18,35 +17,35 @@ React Demo Three - 简书
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 初始化项目目录](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 创建 React 头部组件](#chapter-four) |
-| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 编写简书头部导航](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 设置输入框动画](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 优化代码](#chapter-seven) |
+| 目录                                                                                                                   |
+| ---------------------------------------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                                                |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)                                     |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 初始化项目目录](#chapter-three)                     |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 创建 React 头部组件](#chapter-four)                   |
+| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 编写简书头部导航](#chapter-five)                      |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 设置输入框动画](#chapter-six)                           |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 优化代码](#chapter-seven)                           |
 | <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 使用 redux-devtools-extension 插件](#chapter-eight) |
-| <a name="catalog-chapter-night" id="catalog-chapter-night"></a>[九 优化：抽取 reducer.js](#chapter-night) |
-| <a name="catalog-chapter-ten" id="catalog-chapter-ten"></a>[十 优化：抽取 action](#chapter-ten) |
-| <a name="catalog-chapter-eleven" id="catalog-chapter-eleven"></a>[十一 优化：immutable.js](#chapter-eleven) |
-| <a name="catalog-chapter-twelve" id="catalog-chapter-twelve"></a>[十二 优化：redux-immutable](#chapter-twelve) |
-| <a name="catalog-chapter-thirteen" id="catalog-chapter-thirteen"></a>[十三 功能实现：热门搜索](#chapter-thirteen) |
-| <a name="catalog-chapter-fourteen" id="catalog-chapter-fourteen"></a>[十四 代码优化](#chapter-fourteen) |
-| <a name="catalog-chapter-fifteen" id="catalog-chapter-fifteen"></a>[十五 解决历史遗留问题](#chapter-fifteen) |
-| <a name="catalog-chapter-sixteen" id="catalog-chapter-sixteen"></a>[十六 功能实现：换一换](#chapter-sixteen) |
-| <a name="catalog-chapter-seventeen" id="catalog-chapter-seventeen"></a>[十七 功能优化](#chapter-seventeen) |
-| &emsp;[17.1 换一换图标旋转](#chapter-seventeen-one) |
-| &emsp;[17.2 避免聚焦重复请求](#chapter-seventeen-two) |
-| <a name="catalog-chapter-eighteen" id="catalog-chapter-eighteen"></a>[十八 React 路由](#chapter-eighteen) |
-| &emsp;[18.1 路由（一）](#chapter-eighteen-one) |
-| &emsp;[18.2 路由（二）](#chapter-eighteen-two) |
-| <a name="catalog-chapter-nighteen" id="catalog-chapter-nighteen"></a>[十九 页面实现：二级导航栏](#chapter-nighteen) |
-| <a name="catalog-chapter-twenty" id="catalog-chapter-twenty"></a>[二十 页面实现：首页](#chapter-twenty) |
-| &emsp;[20.1 多层级组件引用 store](#chapter-twenty-one) |
-| &emsp;[20.2 完善整个首页](#chapter-twenty-two) |
-| <a name="catalog-chapter-twentyone" id="catalog-chapter-twentyone"></a>[二十一 总结](#chapter-twentyone) |
+| <a name="catalog-chapter-night" id="catalog-chapter-night"></a>[九 优化：抽取 reducer.js](#chapter-night)              |
+| <a name="catalog-chapter-ten" id="catalog-chapter-ten"></a>[十 优化：抽取 action](#chapter-ten)                        |
+| <a name="catalog-chapter-eleven" id="catalog-chapter-eleven"></a>[十一 优化：immutable.js](#chapter-eleven)            |
+| <a name="catalog-chapter-twelve" id="catalog-chapter-twelve"></a>[十二 优化：redux-immutable](#chapter-twelve)         |
+| <a name="catalog-chapter-thirteen" id="catalog-chapter-thirteen"></a>[十三 功能实现：热门搜索](#chapter-thirteen)      |
+| <a name="catalog-chapter-fourteen" id="catalog-chapter-fourteen"></a>[十四 代码优化](#chapter-fourteen)                |
+| <a name="catalog-chapter-fifteen" id="catalog-chapter-fifteen"></a>[十五 解决历史遗留问题](#chapter-fifteen)           |
+| <a name="catalog-chapter-sixteen" id="catalog-chapter-sixteen"></a>[十六 功能实现：换一换](#chapter-sixteen)           |
+| <a name="catalog-chapter-seventeen" id="catalog-chapter-seventeen"></a>[十七 功能优化](#chapter-seventeen)             |
+| &emsp;[17.1 换一换图标旋转](#chapter-seventeen-one)                                                                    |
+| &emsp;[17.2 避免聚焦重复请求](#chapter-seventeen-two)                                                                  |
+| <a name="catalog-chapter-eighteen" id="catalog-chapter-eighteen"></a>[十八 React 路由](#chapter-eighteen)              |
+| &emsp;[18.1 路由（一）](#chapter-eighteen-one)                                                                         |
+| &emsp;[18.2 路由（二）](#chapter-eighteen-two)                                                                         |
+| <a name="catalog-chapter-nighteen" id="catalog-chapter-nighteen"></a>[十九 页面实现：二级导航栏](#chapter-nighteen)    |
+| <a name="catalog-chapter-twenty" id="catalog-chapter-twenty"></a>[二十 页面实现：首页](#chapter-twenty)                |
+| &emsp;[20.1 多层级组件引用 store](#chapter-twenty-one)                                                                 |
+| &emsp;[20.2 完善整个首页](#chapter-twenty-two)                                                                         |
+| <a name="catalog-chapter-twentyone" id="catalog-chapter-twentyone"></a>[二十一 总结](#chapter-twentyone)               |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
@@ -74,8 +73,8 @@ React 的学习，迈开 TodoList，进一步前行。
 
 **然后**，我们通过：
 
-* 安装依赖：`npm i`
-* 运行项目：`npm run start`
+- 安装依赖：`npm i`
+- 运行项目：`npm run start`
 
 跑起项目来，运行结果如下所示：
 
@@ -86,7 +85,7 @@ React 的学习，迈开 TodoList，进一步前行。
 > src/reset.css
 
 ```js
-/* 
+/*
   * reset 的目的不是让默认样式在所有浏览器下一致，而是减少默认样式有可能带来的问题。
   * The purpose of reset is not to allow default styles to be consistent across all browsers, but to reduce the potential problems of default styles.
   * create by jsLe
@@ -122,13 +121,13 @@ input { font-size: 18px; outline: none; }
 table { border-collapse: collapse; border-spacing: 0; }
 
 /*
-  * 图片自适应 - image responsize 
+  * 图片自适应 - image responsize
   * 1. 清空浏览器对图片的设置
   * 2. <div>图片</div> 的情况下，图片会撑高 div，这么设置可以清除该影响
 */
 img { border: 0; display: inline-block; width: 100%; max-width: 100%; height: auto; vertical-align: middle; }
 
-/* 
+/*
   * 默认box-sizing是content-box，该属性导致padding会撑大div，使用border-box可以解决该问题
   * set border-box for box-sizing when you use div, it solve the problem when you add padding and don't want to make the div width bigger
 */
@@ -158,13 +157,13 @@ input::-ms-input-placeholder { color: #919191; font-size: 1em } /* Internet Expl
 > src/index.js
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import './reset.css';
-import './index.css';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
+import './reset.css'
+import './index.css'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'))
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 创建 React 头部组件</a>
@@ -176,7 +175,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 > src/common/header/index.js
 
 ```js
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class Header extends Component {
   render() {
@@ -188,7 +187,7 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default Header
 ```
 
 **然后**，我们在 App.js 中引入 header.js：
@@ -196,8 +195,8 @@ export default Header;
 > src/App.js
 
 ```js
-import React, { Component } from 'react';
-import Header from './common/header';
+import React, { Component } from 'react'
+import Header from './common/header'
 
 class App extends Component {
   render() {
@@ -205,11 +204,11 @@ class App extends Component {
       <div className="App">
         <Header />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
 ```
 
 **最后**，页面显示为：
@@ -227,20 +226,19 @@ export default App;
 > src/common/heder/index.js
 
 ```js
-import React, { Component } from 'react';
-import './index.css';
+import React, { Component } from 'react'
+import './index.css'
 
-import homeImage from '../../resources/img/header-home.png';
+import homeImage from '../../resources/img/header-home.png'
 class Header extends Component {
-
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       inputFocus: true
     }
-    this.searchFocusOrBlur = this.searchFocusOrBlur.bind(this);
+    this.searchFocusOrBlur = this.searchFocusOrBlur.bind(this)
   }
-  
+
   render() {
     return (
       <header>
@@ -260,13 +258,21 @@ class Header extends Component {
               <span>下载App</span>
             </div>
             <div className="nav-item header_center-left-search">
-              <input 
-                className={this.state.inputFocus ? 'input-nor-active' : 'input-active'}
+              <input
+                className={
+                  this.state.inputFocus ? 'input-nor-active' : 'input-active'
+                }
                 placeholder="搜索"
                 onFocus={this.searchFocusOrBlur}
                 onBlur={this.searchFocusOrBlur}
               />
-              <i className={this.state.inputFocus ? 'icon icon-search' : 'icon icon-search icon-active'}></i>
+              <i
+                className={
+                  this.state.inputFocus
+                    ? 'icon icon-search'
+                    : 'icon icon-search icon-active'
+                }
+              ></i>
             </div>
           </div>
           <div className="header_center-right">
@@ -290,15 +296,14 @@ class Header extends Component {
   }
 
   searchFocusOrBlur(e) {
-    const inputFocus = this.state.inputFocus;
-    this.setState( () => ({
+    const inputFocus = this.state.inputFocus
+    this.setState(() => ({
       inputFocus: !inputFocus
     }))
   }
-
 }
 
-export default Header;
+export default Header
 ```
 
 **然后**，我们添加 CSS 样式：
@@ -368,12 +373,13 @@ header {
   display: flex;
   color: #969696;
 }
-.header_right-register, .header_right-write {
+.header_right-register,
+.header_right-write {
   width: 80px;
   text-align: center;
   height: 38px;
   line-height: 38px;
-  border: 1px solid rgba(236,97,73,.7);
+  border: 1px solid rgba(236, 97, 73, 0.7);
   border-radius: 20px;
   font-size: 15px;
   color: #ea6f5a;
@@ -424,14 +430,14 @@ header {
 > src/index.js
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import './reset.css';
-import './index.css';
-import './common.css';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
+import './reset.css'
+import './index.css'
+import './common.css'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'))
 ```
 
 至此，我们页面展示为：
@@ -444,28 +450,27 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 > 参考地址：[react-transition-group](https://github.com/reactjs/react-transition-group)
 
-* 安装动画库：`npm i react-transition-group -S`
+- 安装动画库：`npm i react-transition-group -S`
 
 修改代码：
 
 > src/common/header/index.js
 
 ```js
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 // 1. 引入动画库
-import { CSSTransition } from 'react-transition-group';
-import './index.css';
+import { CSSTransition } from 'react-transition-group'
+import './index.css'
 
-import homeImage from '../../resources/img/header-home.png';
+import homeImage from '../../resources/img/header-home.png'
 
 class Header extends Component {
-
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       inputBlur: true
     }
-    this.searchFocusOrBlur = this.searchFocusOrBlur.bind(this);
+    this.searchFocusOrBlur = this.searchFocusOrBlur.bind(this)
   }
 
   render() {
@@ -493,14 +498,22 @@ class Header extends Component {
                 timeout={200}
                 classNames="slide"
               >
-                <input 
-                  className={this.state.inputBlur ? 'input-nor-active' : 'input-active'}
+                <input
+                  className={
+                    this.state.inputBlur ? 'input-nor-active' : 'input-active'
+                  }
                   placeholder="搜索"
                   onFocus={this.searchFocusOrBlur}
                   onBlur={this.searchFocusOrBlur}
                 />
               </CSSTransition>
-              <i className={this.state.inputBlur ? 'icon icon-search' : 'icon icon-search icon-active'}></i>
+              <i
+                className={
+                  this.state.inputBlur
+                    ? 'icon icon-search'
+                    : 'icon icon-search icon-active'
+                }
+              ></i>
             </div>
           </div>
           <div className="header_center-right">
@@ -524,15 +537,14 @@ class Header extends Component {
   }
 
   searchFocusOrBlur(e) {
-    const inputBlur = this.state.inputBlur;
-    this.setState( () => ({
+    const inputBlur = this.state.inputBlur
+    this.setState(() => ({
       inputBlur: !inputBlur
     }))
   }
-
 }
 
-export default Header;
+export default Header
 ```
 
 > src/common/header/index.css
@@ -572,13 +584,13 @@ header {
 }
 /* 3. 编写对应的 CSS 样式 */
 .slide-enter {
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .slide-enter-active {
   width: 280px;
 }
 .slide-exit {
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .silde-exit-active {
   width: 240px;
@@ -614,12 +626,13 @@ header {
   display: flex;
   color: #969696;
 }
-.header_right-register, .header_right-write {
+.header_right-register,
+.header_right-write {
   width: 80px;
   text-align: center;
   height: 38px;
   line-height: 38px;
-  border: 1px solid rgba(236,97,73,.7);
+  border: 1px solid rgba(236, 97, 73, 0.7);
   border-radius: 20px;
   font-size: 15px;
   color: #ea6f5a;
@@ -649,21 +662,21 @@ header {
 
 > [返回目录](#chapter-one)
 
-* 安装 Redux：`npm i redux -S`
-* 安装 React-Redux：`npm i react-redux -S`
-* 开始在代码中加入 Redux 和 React-Redux
+- 安装 Redux：`npm i redux -S`
+- 安装 React-Redux：`npm i react-redux -S`
+- 开始在代码中加入 Redux 和 React-Redux
 
 **首先**，创建 store 文件夹，并在里面创建 index.js 和 reducer.js：
 
 > src/store/index.js
 
 ```js
-import { createStore } from 'redux';
-import reducer from './reducer';
+import { createStore } from 'redux'
+import reducer from './reducer'
 
-const store = createStore(reducer);
+const store = createStore(reducer)
 
-export default store;
+export default store
 ```
 
 > src/store/reducer.js
@@ -671,10 +684,10 @@ export default store;
 ```js
 const defaultState = {
   inputBlur: true
-};
+}
 
 export default (state = defaultState, action) => {
-  return state;
+  return state
 }
 ```
 
@@ -683,10 +696,10 @@ export default (state = defaultState, action) => {
 > src/App.js
 
 ```js
-import React, { Component } from 'react';
-import { Provider } from 'react-redux';
-import Header from './common/header';
-import store from './store';
+import React, { Component } from 'react'
+import { Provider } from 'react-redux'
+import Header from './common/header'
+import store from './store'
 
 class App extends Component {
   render() {
@@ -694,11 +707,11 @@ class App extends Component {
       <Provider store={store} className="App">
         <Header />
       </Provider>
-    );
+    )
   }
 }
 
-export default App;
+export default App
 ```
 
 **然后**，修改 src 下 common 中 header 里面 index.js 中的内容：
@@ -706,12 +719,12 @@ export default App;
 > src/common/header/index.js
 
 ```js
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { CSSTransition } from 'react-transition-group';
-import './index.css';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { CSSTransition } from 'react-transition-group'
+import './index.css'
 
-import homeImage from '../../resources/img/header-home.png';
+import homeImage from '../../resources/img/header-home.png'
 
 class Header extends Component {
   render() {
@@ -738,14 +751,22 @@ class Header extends Component {
                 timeout={200}
                 classNames="slide"
               >
-                <input 
-                  className={this.props.inputBlur ? 'input-nor-active' : 'input-active'}
+                <input
+                  className={
+                    this.props.inputBlur ? 'input-nor-active' : 'input-active'
+                  }
                   placeholder="搜索"
                   onFocus={this.props.searchFocusOrBlur}
                   onBlur={this.props.searchFocusOrBlur}
                 />
               </CSSTransition>
-              <i className={this.props.inputBlur ? 'icon icon-search' : 'icon icon-search icon-active'}></i>
+              <i
+                className={
+                  this.props.inputBlur
+                    ? 'icon icon-search'
+                    : 'icon icon-search icon-active'
+                }
+              ></i>
             </div>
           </div>
           <div className="header_center-right">
@@ -769,24 +790,24 @@ class Header extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     inputBlur: state.inputBlur
   }
 }
 
-const mapDispathToProps = (dispatch) => {
+const mapDispathToProps = dispatch => {
   return {
     searchFocusOrBlur() {
       const action = {
         type: 'search_focus_or_blur'
       }
-      dispatch(action);
+      dispatch(action)
     }
   }
 }
 
-export default connect(mapStateToProps, mapDispathToProps)(Header);
+export default connect(mapStateToProps, mapDispathToProps)(Header)
 ```
 
 **再来**，我们再修改下 reducer.js，获取并处理 src/index.js 中 `dispatch` 过来的值：
@@ -796,15 +817,15 @@ export default connect(mapStateToProps, mapDispathToProps)(Header);
 ```js
 const defaultState = {
   inputBlur: true
-};
+}
 
 export default (state = defaultState, action) => {
-  if(action.type === 'search_focus_or_blur') {
-    const newState = JSON.parse(JSON.stringify(state));
+  if (action.type === 'search_focus_or_blur') {
+    const newState = JSON.parse(JSON.stringify(state))
     newState.inputBlur = !newState.inputBlur
-    return newState;
+    return newState
   }
-  return state;
+  return state
 }
 ```
 
@@ -813,14 +834,14 @@ export default (state = defaultState, action) => {
 > src/common/header/index.js
 
 ```js
-import React from 'react';
-import { connect } from 'react-redux';
-import { CSSTransition } from 'react-transition-group';
-import './index.css';
+import React from 'react'
+import { connect } from 'react-redux'
+import { CSSTransition } from 'react-transition-group'
+import './index.css'
 
-import homeImage from '../../resources/img/header-home.png';
+import homeImage from '../../resources/img/header-home.png'
 
-const Header = (props) => {
+const Header = props => {
   return (
     <header>
       <div className="header_left">
@@ -844,14 +865,22 @@ const Header = (props) => {
               timeout={200}
               classNames="slide"
             >
-              <input 
-                className={props.inputBlur ? 'input-nor-active' : 'input-active'}
+              <input
+                className={
+                  props.inputBlur ? 'input-nor-active' : 'input-active'
+                }
                 placeholder="搜索"
                 onFocus={props.searchFocusOrBlur}
                 onBlur={props.searchFocusOrBlur}
               />
             </CSSTransition>
-            <i className={props.inputBlur ? 'icon icon-search' : 'icon icon-search icon-active'}></i>
+            <i
+              className={
+                props.inputBlur
+                  ? 'icon icon-search'
+                  : 'icon icon-search icon-active'
+              }
+            ></i>
           </div>
         </div>
         <div className="header_center-right">
@@ -874,24 +903,24 @@ const Header = (props) => {
   )
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     inputBlur: state.inputBlur
   }
 }
 
-const mapDispathToProps = (dispatch) => {
+const mapDispathToProps = dispatch => {
   return {
     searchFocusOrBlur() {
       const action = {
         type: 'search_focus_or_blur'
       }
-      dispatch(action);
+      dispatch(action)
     }
   }
 }
 
-export default connect(mapStateToProps, mapDispathToProps)(Header);
+export default connect(mapStateToProps, mapDispathToProps)(Header)
 ```
 
 **最后**，我们完成了 Redux、React-Redux 的引用及使用，以及对 header/index.js 的无状态组件的升级。
@@ -907,14 +936,14 @@ export default connect(mapStateToProps, mapDispathToProps)(Header);
 > src/store/index.js
 
 ```js
-import { createStore, compose } from 'redux';
-import reducer from './reducer';
+import { createStore, compose } from 'redux'
+import reducer from './reducer'
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 const store = createStore(reducer, composeEnhancers())
 
-export default store;
+export default store
 ```
 
 这时候，我们就成功开启之前安装过的 redux-devtools-extension 插件。
@@ -941,15 +970,15 @@ export default store;
 // 1. 将 reducer.js 转移到 header/store/reducer.js 中
 const defaultState = {
   inputBlur: true
-};
+}
 
 export default (state = defaultState, action) => {
-  if(action.type === 'search_focus_or_blur') {
-    const newState = JSON.parse(JSON.stringify(state));
+  if (action.type === 'search_focus_or_blur') {
+    const newState = JSON.parse(JSON.stringify(state))
     newState.inputBlur = !newState.inputBlur
-    return newState;
+    return newState
   }
-  return state;
+  return state
 }
 ```
 
@@ -959,14 +988,14 @@ export default (state = defaultState, action) => {
 
 ```js
 // 2. 通过 combineReducers 整合多个 reducer.js 文件
-import { combineReducers } from 'redux';
-import headerReducer from '../common/header/store/reducer';
+import { combineReducers } from 'redux'
+import headerReducer from '../common/header/store/reducer'
 
-const reducer =  combineReducers({
+const reducer = combineReducers({
   header: headerReducer
 })
 
-export default reducer;
+export default reducer
 ```
 
 **最后**，我们修改 src/common/header/index.js 内容：
@@ -975,7 +1004,7 @@ export default reducer;
 
 ```js
 // 代码省略 。。。
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     // 3. 因为引用的层级变了，所以需要修改 state.inputBlur 为 state.header.inputBlue
     inputBlur: state.header.inputBlur
@@ -1010,16 +1039,16 @@ export const searchFocusOrBlur = () => ({
 > src/common/header/index.js
 
 ```js
-import React from 'react';
-import { connect } from 'react-redux';
-import { CSSTransition } from 'react-transition-group';
-import './index.css';
+import React from 'react'
+import { connect } from 'react-redux'
+import { CSSTransition } from 'react-transition-group'
+import './index.css'
 // 2. 以 actionCreators 的形式将所有 action 引入进来
-import * as actionCreators from './store/actionCreators';
+import * as actionCreators from './store/actionCreators'
 
-import homeImage from '../../resources/img/header-home.png';
+import homeImage from '../../resources/img/header-home.png'
 
-const Header = (props) => {
+const Header = props => {
   return (
     <header>
       <div className="header_left">
@@ -1043,14 +1072,22 @@ const Header = (props) => {
               timeout={200}
               classNames="slide"
             >
-              <input 
-                className={props.inputBlur ? 'input-nor-active' : 'input-active'}
+              <input
+                className={
+                  props.inputBlur ? 'input-nor-active' : 'input-active'
+                }
                 placeholder="搜索"
                 onFocus={props.searchFocusOrBlur}
                 onBlur={props.searchFocusOrBlur}
               />
             </CSSTransition>
-            <i className={props.inputBlur ? 'icon icon-search' : 'icon icon-search icon-active'}></i>
+            <i
+              className={
+                props.inputBlur
+                  ? 'icon icon-search'
+                  : 'icon icon-search icon-active'
+              }
+            ></i>
           </div>
         </div>
         <div className="header_center-right">
@@ -1073,22 +1110,22 @@ const Header = (props) => {
   )
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     inputBlur: state.header.inputBlur
   }
 }
 
-const mapDispathToProps = (dispatch) => {
+const mapDispathToProps = dispatch => {
   return {
     searchFocusOrBlur() {
       // 3. 使用 actionCreators
-      dispatch(actionCreators.searchFocusOrBlur());
+      dispatch(actionCreators.searchFocusOrBlur())
     }
   }
 }
 
-export default connect(mapStateToProps, mapDispathToProps)(Header);
+export default connect(mapStateToProps, mapDispathToProps)(Header)
 ```
 
 **接着**，因为我们在 actionCreators.js 中使用的 `type` 是字符串，所以我们同样在 store 中创建 actionTypes.js，将其变成常量：
@@ -1096,7 +1133,7 @@ export default connect(mapStateToProps, mapDispathToProps)(Header);
 > src/common/header/store/actionTypes.js
 
 ```js
-export const SEARCH_FOCUS_OR_BLUR = 'search_focus_or_blur';
+export const SEARCH_FOCUS_OR_BLUR = 'search_focus_or_blur'
 ```
 
 **再然后**，我们在 actionCreators.js 中引入 actionTypes.js：
@@ -1105,7 +1142,7 @@ export const SEARCH_FOCUS_OR_BLUR = 'search_focus_or_blur';
 
 ```js
 // 4. 引入常量
-import { SEARCH_FOCUS_OR_BLUR } from './actionTypes';
+import { SEARCH_FOCUS_OR_BLUR } from './actionTypes'
 
 // 1. 定义 actionCreators
 // 5. 将 action 中的字符串修改为常量
@@ -1124,16 +1161,16 @@ import * as actionTypes from './actionTypes'
 
 const defaultState = {
   inputBlur: true
-};
+}
 
 export default (state = defaultState, action) => {
   // 7. 使用常量
-  if(action.type === actionTypes.SEARCH_FOCUS_OR_BLUR) {
-    const newState = JSON.parse(JSON.stringify(state));
+  if (action.type === actionTypes.SEARCH_FOCUS_OR_BLUR) {
+    const newState = JSON.parse(JSON.stringify(state))
     newState.inputBlur = !newState.inputBlur
-    return newState;
+    return newState
   }
-  return state;
+  return state
 }
 ```
 
@@ -1143,26 +1180,26 @@ export default (state = defaultState, action) => {
 
 ```js
 // 8. 统一管理 store 目录中的文件
-import * as actionCreators from './actionCreators';
-import * as actionTypes from './actionTypes';
-import reducer from './reducer';
+import * as actionCreators from './actionCreators'
+import * as actionTypes from './actionTypes'
+import reducer from './reducer'
 
-export { actionCreators, actionTypes, reducer };
+export { actionCreators, actionTypes, reducer }
 ```
 
 **此时**，值得注意的是，这时候我们需要处理下 header/index.js 文件：
 
 ```js
-import React from 'react';
-import { connect } from 'react-redux';
-import { CSSTransition } from 'react-transition-group';
-import './index.css';
+import React from 'react'
+import { connect } from 'react-redux'
+import { CSSTransition } from 'react-transition-group'
+import './index.css'
 // 2. 以 actionCreators 的形式将所有 action 引入进来
 // import * as actionCreators from './store/actionCreators';
 // 9. 引入 store/index 文件即可
-import { actionCreators } from './store';
+import { actionCreators } from './store'
 
-import homeImage from '../../resources/img/header-home.png';
+import homeImage from '../../resources/img/header-home.png'
 
 // 代码省略
 ```
@@ -1170,15 +1207,15 @@ import homeImage from '../../resources/img/header-home.png';
 **最后**，再处理下 src/store/reducer.js，因为它引用了 common/header/store 中的 reducer.js：
 
 ```js
-import { combineReducers } from 'redux';
+import { combineReducers } from 'redux'
 // 10. 修改下引用方式
-import { reducer as headerReducer } from '../common/header/store';
+import { reducer as headerReducer } from '../common/header/store'
 
-const reducer =  combineReducers({
+const reducer = combineReducers({
   header: headerReducer
 })
 
-export default reducer;
+export default reducer
 ```
 
 至此，我们就完成了本次的优化抽取。
@@ -1191,14 +1228,14 @@ export default reducer;
 
 所以，这时候，我们就需要使用 immutable.js，它是由 Facebook 团队开发的，用来帮助我们生产 `immutable` 对象，从而限制 `state` 不可被改变。
 
-* 安装 immutable.js：`npm i immutable -S`。
-* 案例 immutable.js：
+- 安装 immutable.js：`npm i immutable -S`。
+- 案例 immutable.js：
 
 ```js
-const { Map } = require('immutable');
-const map1 = Map({ a: 1, b: 2, c: 3 });
-const map2 = map1.set('b', 50);
-map1.get('b') + " vs. " + map2.get('b'); // 2 vs. 50
+const { Map } = require('immutable')
+const map1 = Map({ a: 1, b: 2, c: 3 })
+const map2 = map1.set('b', 50)
+map1.get('b') + ' vs. ' + map2.get('b') // 2 vs. 50
 ```
 
 看起来很简单，我们直接在简书 Demo 中使用：
@@ -1208,39 +1245,39 @@ map1.get('b') + " vs. " + map2.get('b'); // 2 vs. 50
 ```js
 import * as actionTypes from './actionTypes'
 // 1. 通过 immutable 引入 fromJS
-import { fromJS } from 'immutable';
+import { fromJS } from 'immutable'
 
 // 2. 对 defaultState 使用 fromJS
 const defaultState = fromJS({
   inputBlur: true
-});
+})
 
 export default (state = defaultState, action) => {
-  if(action.type === actionTypes.SEARCH_FOCUS_OR_BLUR) {
+  if (action.type === actionTypes.SEARCH_FOCUS_OR_BLUR) {
     // const newState = JSON.parse(JSON.stringify(state));
     // newState.inputBlur = !newState.inputBlur
     // return newState;
 
     // 4. 通过 immutable 的方法来 set state 的值
     // immutable 对象的 set 方法，会结合之前 immutable 对象的值和设置的值，返回一个全新的对象
-    return state.set('inputBlur', !state.get('inputBlur'));
+    return state.set('inputBlur', !state.get('inputBlur'))
   }
-  return state;
+  return state
 }
 ```
 
 > src/common/header/index.js
 
 ```js
-import React from 'react';
-import { connect } from 'react-redux';
-import { CSSTransition } from 'react-transition-group';
-import './index.css';
-import { actionCreators } from './store';
+import React from 'react'
+import { connect } from 'react-redux'
+import { CSSTransition } from 'react-transition-group'
+import './index.css'
+import { actionCreators } from './store'
 
-import homeImage from '../../resources/img/header-home.png';
+import homeImage from '../../resources/img/header-home.png'
 
-const Header = (props) => {
+const Header = props => {
   return (
     <header>
       <div className="header_left">
@@ -1264,14 +1301,22 @@ const Header = (props) => {
               timeout={200}
               classNames="slide"
             >
-              <input 
-                className={props.inputBlur ? 'input-nor-active' : 'input-active'}
+              <input
+                className={
+                  props.inputBlur ? 'input-nor-active' : 'input-active'
+                }
                 placeholder="搜索"
                 onFocus={props.searchFocusOrBlur}
                 onBlur={props.searchFocusOrBlur}
               />
             </CSSTransition>
-            <i className={props.inputBlur ? 'icon icon-search' : 'icon icon-search icon-active'}></i>
+            <i
+              className={
+                props.inputBlur
+                  ? 'icon icon-search'
+                  : 'icon icon-search icon-active'
+              }
+            ></i>
           </div>
         </div>
         <div className="header_center-right">
@@ -1294,22 +1339,22 @@ const Header = (props) => {
   )
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     // 3. 通过 immutable 提供的 get() 方法来获取 inputBlur 属性
     inputBlur: state.header.get('inputBlur')
   }
 }
 
-const mapDispathToProps = (dispatch) => {
+const mapDispathToProps = dispatch => {
   return {
     searchFocusOrBlur() {
-      dispatch(actionCreators.searchFocusOrBlur());
+      dispatch(actionCreators.searchFocusOrBlur())
     }
   }
 }
 
-export default connect(mapStateToProps, mapDispathToProps)(Header);
+export default connect(mapStateToProps, mapDispathToProps)(Header)
 ```
 
 我们大致做了四个步骤，从而完成了 immutable.js 的引用及使用：
@@ -1333,29 +1378,29 @@ inputBlur: state.header.get('inputBlur')
 
 这个 `header` 也是 `state` 的值，所以我们也需要对它进行保护，所以我们就需要 redux-immutable
 
-* 安装 redux-immutable：`npm i redux-immutable -S`
-* 使用 redux-immutable：
+- 安装 redux-immutable：`npm i redux-immutable -S`
+- 使用 redux-immutable：
 
 > src/store/reducer.js
 
 ```js
 // import { combineReducers } from 'redux';
 // 1. 通过 redux-immutable 引入 combineReducers 而非原先的 redux
-import { combineReducers } from 'redux-immutable';
-import { reducer as headerReducer } from '../common/header/store';
+import { combineReducers } from 'redux-immutable'
+import { reducer as headerReducer } from '../common/header/store'
 
-const reducer =  combineReducers({
+const reducer = combineReducers({
   header: headerReducer
 })
 
-export default reducer;
+export default reducer
 ```
 
 > src/common/header/index.js
 
 ```js
 // 代码省略。。。
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     // 2. 通过同样的 get 方法来获取 header
     inputBlur: state.get('header').get('inputBlur')
@@ -1461,13 +1506,13 @@ header {
   position: relative;
 }
 .slide-enter {
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .slide-enter-active {
   width: 280px;
 }
 .slide-exit {
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .silde-exit-active {
   width: 240px;
@@ -1501,7 +1546,7 @@ header {
   cursor: pointer;
 }
 .header_center-left-hot-search:before {
-  content: "";
+  content: '';
   left: 27px;
   width: 10px;
   height: 10px;
@@ -1510,7 +1555,7 @@ header {
   z-index: -1;
   position: absolute;
   background-color: #fff;
-  box-shadow: 0 0 8px rgba(0,0,0,.2);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 .header_center-left-hot-search {
   position: absolute;
@@ -1564,12 +1609,13 @@ header {
 }
 
 /* 头部右边 */
-.header_right-register, .header_right-write {
+.header_right-register,
+.header_right-write {
   width: 80px;
   text-align: center;
   height: 38px;
   line-height: 38px;
-  border: 1px solid rgba(236,97,73,.7);
+  border: 1px solid rgba(236, 97, 73, 0.7);
   border-radius: 20px;
   font-size: 15px;
   color: #ea6f5a;
@@ -1587,15 +1633,15 @@ header {
 > src/common/header/index.js
 
 ```js
-import React from 'react';
-import { connect } from 'react-redux';
-import { CSSTransition } from 'react-transition-group';
-import './index.css';
-import { actionCreators } from './store';
+import React from 'react'
+import { connect } from 'react-redux'
+import { CSSTransition } from 'react-transition-group'
+import './index.css'
+import { actionCreators } from './store'
 
-import homeImage from '../../resources/img/header-home.png';
+import homeImage from '../../resources/img/header-home.png'
 
-const Header = (props) => {
+const Header = props => {
   return (
     <header>
       <div className="header_left">
@@ -1619,16 +1665,30 @@ const Header = (props) => {
               timeout={200}
               classNames="slide"
             >
-              <input 
-                className={props.inputBlur ? 'input-nor-active' : 'input-active'}
+              <input
+                className={
+                  props.inputBlur ? 'input-nor-active' : 'input-active'
+                }
                 placeholder="搜索"
                 onFocus={props.searchFocusOrBlur}
                 onBlur={props.searchFocusOrBlur}
               />
             </CSSTransition>
-            <i className={props.inputBlur ? 'icon icon-search' : 'icon icon-search icon-active'}></i>
+            <i
+              className={
+                props.inputBlur
+                  ? 'icon icon-search'
+                  : 'icon icon-search icon-active'
+              }
+            ></i>
             {/* 添加热搜模块 */}
-            <div className={props.inputBlur ? 'display-hide header_center-left-hot-search' : 'display-show header_center-left-hot-search'}>
+            <div
+              className={
+                props.inputBlur
+                  ? 'display-hide header_center-left-hot-search'
+                  : 'display-show header_center-left-hot-search'
+              }
+            >
               <div className="header_center-left-hot-search-title">
                 <span>热门搜索</span>
                 <span>
@@ -1667,21 +1727,21 @@ const Header = (props) => {
   )
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     inputBlur: state.get('header').get('inputBlur')
   }
 }
 
-const mapDispathToProps = (dispatch) => {
+const mapDispathToProps = dispatch => {
   return {
     searchFocusOrBlur() {
-      dispatch(actionCreators.searchFocusOrBlur());
+      dispatch(actionCreators.searchFocusOrBlur())
     }
   }
 }
 
-export default connect(mapStateToProps, mapDispathToProps)(Header);
+export default connect(mapStateToProps, mapDispathToProps)(Header)
 ```
 
 由此，我们完成了热门搜索的显示隐藏：
@@ -1693,13 +1753,13 @@ PS：由于页面逐渐增大，所以我们 header 中使用无状态组件已�
 > src/common/header/index.js
 
 ```js
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { CSSTransition } from 'react-transition-group';
-import './index.css';
-import { actionCreators } from './store';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { CSSTransition } from 'react-transition-group'
+import './index.css'
+import { actionCreators } from './store'
 
-import homeImage from '../../resources/img/header-home.png';
+import homeImage from '../../resources/img/header-home.png'
 
 class Header extends Component {
   render() {
@@ -1726,15 +1786,29 @@ class Header extends Component {
                 timeout={200}
                 classNames="slide"
               >
-                <input 
-                  className={this.props.inputBlur ? 'input-nor-active' : 'input-active'}
+                <input
+                  className={
+                    this.props.inputBlur ? 'input-nor-active' : 'input-active'
+                  }
                   placeholder="搜索"
                   onFocus={this.props.searchFocusOrBlur}
                   onBlur={this.props.searchFocusOrBlur}
                 />
               </CSSTransition>
-              <i className={this.props.inputBlur ? 'icon icon-search' : 'icon icon-search icon-active'}></i>
-              <div className={this.props.inputBlur ? 'display-hide header_center-left-hot-search' : 'display-show header_center-left-hot-search'}>
+              <i
+                className={
+                  this.props.inputBlur
+                    ? 'icon icon-search'
+                    : 'icon icon-search icon-active'
+                }
+              ></i>
+              <div
+                className={
+                  this.props.inputBlur
+                    ? 'display-hide header_center-left-hot-search'
+                    : 'display-show header_center-left-hot-search'
+                }
+              >
                 <div className="header_center-left-hot-search-title">
                   <span>热门搜索</span>
                   <span>
@@ -1774,21 +1848,21 @@ class Header extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     inputBlur: state.get('header').get('inputBlur')
   }
 }
 
-const mapDispathToProps = (dispatch) => {
+const mapDispathToProps = dispatch => {
   return {
     searchFocusOrBlur() {
-      dispatch(actionCreators.searchFocusOrBlur());
+      dispatch(actionCreators.searchFocusOrBlur())
     }
   }
 }
 
-export default connect(mapStateToProps, mapDispathToProps)(Header);
+export default connect(mapStateToProps, mapDispathToProps)(Header)
 ```
 
 **然后**，由于我们的数据是从接口模拟过来的，而在上一篇文章说过，如果要对接口代码进行管理，最好使用 Redux-Thunk 和 Redux-Saga，这里我们使用 Redux-Thunk：
@@ -1804,19 +1878,17 @@ export default connect(mapStateToProps, mapDispathToProps)(Header);
 
 ```js
 // 2. 引入 redux 的 applyMiddleware，进行多中间件的使用
-import { createStore, compose, applyMiddleware } from 'redux';
+import { createStore, compose, applyMiddleware } from 'redux'
 // 1. 引入 redux-thunk
-import thunk from 'redux-thunk';
-import reducer from './reducer';
+import thunk from 'redux-thunk'
+import reducer from './reducer'
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 // 3. 通过 applyMiddleware 同时使用 redux-thunk 和 redux-dev-tools
-const store = createStore(reducer, composeEnhancers(
-  applyMiddleware(thunk)
-));
+const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)))
 
-export default store;
+export default store
 ```
 
 1. 引入 redux-thunk
@@ -1828,13 +1900,13 @@ export default store;
 > src/common/header/index.js
 
 ```js
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { CSSTransition } from 'react-transition-group';
-import './index.css';
-import { actionCreators } from './store';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { CSSTransition } from 'react-transition-group'
+import './index.css'
+import { actionCreators } from './store'
 
-import homeImage from '../../resources/img/header-home.png';
+import homeImage from '../../resources/img/header-home.png'
 
 class Header extends Component {
   render() {
@@ -1861,15 +1933,29 @@ class Header extends Component {
                 timeout={200}
                 classNames="slide"
               >
-                <input 
-                  className={this.props.inputBlur ? 'input-nor-active' : 'input-active'}
+                <input
+                  className={
+                    this.props.inputBlur ? 'input-nor-active' : 'input-active'
+                  }
                   placeholder="搜索"
                   onFocus={this.props.searchFocusOrBlur}
                   onBlur={this.props.searchFocusOrBlur}
                 />
               </CSSTransition>
-              <i className={this.props.inputBlur ? 'icon icon-search' : 'icon icon-search icon-active'}></i>
-              <div className={this.props.inputBlur ? 'display-hide header_center-left-hot-search' : 'display-show header_center-left-hot-search'}>
+              <i
+                className={
+                  this.props.inputBlur
+                    ? 'icon icon-search'
+                    : 'icon icon-search icon-active'
+                }
+              ></i>
+              <div
+                className={
+                  this.props.inputBlur
+                    ? 'display-hide header_center-left-hot-search'
+                    : 'display-show header_center-left-hot-search'
+                }
+              >
                 <div className="header_center-left-hot-search-title">
                   <span>热门搜索</span>
                   <span>
@@ -1879,11 +1965,9 @@ class Header extends Component {
                 </div>
                 <div className="header_center-left-hot-search-content">
                   {/* 15. 遍历输出该数据 */}
-                  {
-                    this.props.list.map((item) => {
-                      return <span key={item}>{item}</span>
-                    })
-                  }
+                  {this.props.list.map(item => {
+                    return <span key={item}>{item}</span>
+                  })}
                 </div>
               </div>
             </div>
@@ -1909,7 +1993,7 @@ class Header extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     inputBlur: state.get('header').get('inputBlur'),
     // 14. 获取 reducer.js 中的 list 数据
@@ -1917,17 +2001,17 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispathToProps = (dispatch) => {
+const mapDispathToProps = dispatch => {
   return {
     searchFocusOrBlur() {
       // 4. 派发 action 到 actionCreators.js 中的 getList() 方法
-      dispatch(actionCreators.getList());
-      dispatch(actionCreators.searchFocusOrBlur());
+      dispatch(actionCreators.getList())
+      dispatch(actionCreators.searchFocusOrBlur())
     }
   }
 }
 
-export default connect(mapStateToProps, mapDispathToProps)(Header);
+export default connect(mapStateToProps, mapDispathToProps)(Header)
 ```
 
 > src/common/header/store/actionCreators.js
@@ -1935,35 +2019,38 @@ export default connect(mapStateToProps, mapDispathToProps)(Header);
 ```js
 import * as actionTypes from './actionTypes'
 // 7. 引入 axios
-import axios from 'axios';
+import axios from 'axios'
 // 11. 引入 immutable 的类型转换
-import { fromJS } from 'immutable';
+import { fromJS } from 'immutable'
 
 export const searchFocusOrBlur = () => ({
   type: actionTypes.SEARCH_FOCUS_OR_BLUR
 })
 
 // 10. 定义 action，接受参数 data，同时因为我们使用了 Immutable，所以需要将获取的数据转换为 immutable 类型
-const changeList = (data) => ({
+const changeList = data => ({
   type: actionTypes.GET_LIST,
   data: fromJS(data)
 })
 
 // 5. 编写 getList 的 action，由于需要 actionTypes 中定义，所以前往 actionTypes.js 中新增
 export const getList = () => {
-  return (dispatch) => {
+  return dispatch => {
     // 8. 调用 create-react-app 中提供的 Node 服务器，从而 mock 数据
-    axios.get('/api/headerList.json').then( (res) => {
-      if(res.data.code === 0) {
-        const data = res.data.list;
-        // 由于数据太多，我们限制数据量为 15 先
-        data.length = 15;
-        // 12. 派发 changeList 类型
-        dispatch(changeList(data));
-      }
-    }).catch( (error) => {
-      console.log(error);
-    });
+    axios
+      .get('/api/headerList.json')
+      .then(res => {
+        if (res.data.code === 0) {
+          const data = res.data.list
+          // 由于数据太多，我们限制数据量为 15 先
+          data.length = 15
+          // 12. 派发 changeList 类型
+          dispatch(changeList(data))
+        }
+      })
+      .catch(error => {
+        console.log(error)
+      })
   }
 }
 ```
@@ -1971,32 +2058,32 @@ export const getList = () => {
 > src/common/header/store/actionTypes.js
 
 ```js
-export const SEARCH_FOCUS_OR_BLUR = 'header/search_focus_or_blur';
+export const SEARCH_FOCUS_OR_BLUR = 'header/search_focus_or_blur'
 // 6. 新增 actionType
-export const GET_LIST = 'header/get_list';
+export const GET_LIST = 'header/get_list'
 ```
 
 > src/common/header/store/reducer.js
 
 ```js
 import * as actionTypes from './actionTypes'
-import { fromJS } from 'immutable';
+import { fromJS } from 'immutable'
 
 const defaultState = fromJS({
   inputBlur: true,
   // 9. 给 header 下的 reducer.js 提供存储数据的地方
   list: []
-});
+})
 
 export default (state = defaultState, action) => {
-  if(action.type === actionTypes.SEARCH_FOCUS_OR_BLUR) {
-    return state.set('inputBlur', !state.get('inputBlur'));
+  if (action.type === actionTypes.SEARCH_FOCUS_OR_BLUR) {
+    return state.set('inputBlur', !state.get('inputBlur'))
   }
   // 13. 判断 actionTypes 是否为 GET_LIST，如果是则执行该 action
-  if(action.type === actionTypes.GET_LIST) {
-    return state.set('list', action.data);
+  if (action.type === actionTypes.GET_LIST) {
+    return state.set('list', action.data)
   }
-  return state;
+  return state
 }
 ```
 
@@ -2017,9 +2104,9 @@ export default (state = defaultState, action) => {
 4. 引入 axios
 5. 调用 create-react-app 中提供的 Node 服务器，从而 mock 数据
 6. 给 header 下的 reducer.js 提供存储数据的地方
-7.  定义 `action`，接受参数 `data`，同时因为我们使用了 Immutable，所以需要将获取的数据转换为 `immutable` 类型
-8.  引入 Immutable 的类型转换
-9.  派发 `changeList` 类型
+7. 定义 `action`，接受参数 `data`，同时因为我们使用了 Immutable，所以需要将获取的数据转换为 `immutable` 类型
+8. 引入 Immutable 的类型转换
+9. 派发 `changeList` 类型
 10. 判断 `actionTypes` 是否为 `GET_LIST`，如果是则执行该 `action`
 11. 获取 reducer.js 中的 `list` 数据
 12. 遍历输出该数据
@@ -2032,27 +2119,27 @@ export default (state = defaultState, action) => {
 
 > [返回目录](#chapter-one)
 
-* reducer.js 中使用 `switch...case...` 替换掉 `if...` 语句。
+- reducer.js 中使用 `switch...case...` 替换掉 `if...` 语句。
 
 > src/common/header/store/reducer.js
 
 ```js
 import * as actionTypes from './actionTypes'
-import { fromJS } from 'immutable';
+import { fromJS } from 'immutable'
 
 const defaultState = fromJS({
   inputBlur: true,
   list: []
-});
+})
 
 export default (state = defaultState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case actionTypes.SEARCH_FOCUS_OR_BLUR:
-      return state.set('inputBlur', !state.get('inputBlur'));
+      return state.set('inputBlur', !state.get('inputBlur'))
     case actionTypes.GET_LIST:
-      return state.set('list', action.data);
+      return state.set('list', action.data)
     default:
-      return state;
+      return state
   }
 }
 ```
@@ -2067,30 +2154,30 @@ export default (state = defaultState, action) => {
 
 ```js
 import * as actionTypes from './actionTypes'
-import { fromJS } from 'immutable';
+import { fromJS } from 'immutable'
 
 const defaultState = fromJS({
   inputFocus: false,
   // 1. 设置鼠标移动到热门模块为 false
   mouseInHot: false,
-  list: [],
-});
+  list: []
+})
 
 export default (state = defaultState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case actionTypes.SEARCH_FOCUS:
-      return state.set('inputFocus', true);
+      return state.set('inputFocus', true)
     case actionTypes.SEARCH_BLUR:
-      return state.set('inputFocus', false);
+      return state.set('inputFocus', false)
     case actionTypes.GET_LIST:
-      return state.set('list', action.data);
+      return state.set('list', action.data)
     // 6. 在 reducer.js 中判断这两个 action 执行设置 mouseInHot
     case actionTypes.ON_MOUSE_ENTER_HOT:
-      return state.set('mouseInHot', true);
+      return state.set('mouseInHot', true)
     case actionTypes.ON_MOUSE_LEAVE_HOT:
-      return state.set('mouseInHot', false);
+      return state.set('mouseInHot', false)
     default:
-      return state;
+      return state
   }
 }
 ```
@@ -2098,13 +2185,13 @@ export default (state = defaultState, action) => {
 > 2. src/common/header/index.js
 
 ```js
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { CSSTransition } from 'react-transition-group';
-import './index.css';
-import { actionCreators } from './store';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { CSSTransition } from 'react-transition-group'
+import './index.css'
+import { actionCreators } from './store'
 
-import homeImage from '../../resources/img/header-home.png';
+import homeImage from '../../resources/img/header-home.png'
 
 class Header extends Component {
   render() {
@@ -2131,17 +2218,29 @@ class Header extends Component {
                 timeout={200}
                 classNames="slide"
               >
-                <input 
-                  className={this.props.inputFocus ? 'input-active' : 'input-nor-active'}
+                <input
+                  className={
+                    this.props.inputFocus ? 'input-active' : 'input-nor-active'
+                  }
                   placeholder="搜索"
                   onFocus={this.props.searchFocus}
                   onBlur={this.props.searchBlur}
                 />
               </CSSTransition>
-              <i className={this.props.inputFocus ? 'icon icon-search icon-active' : 'icon icon-search'}></i>
+              <i
+                className={
+                  this.props.inputFocus
+                    ? 'icon icon-search icon-active'
+                    : 'icon icon-search'
+                }
+              ></i>
               {/* 8. 在判断中加多一个 this.props.mouseInHot，这样只要有一个为 true，它就不会消失 */}
-              <div 
-                className={this.props.inputFocus || this.props.mouseInHot ? 'display-show header_center-left-hot-search' : 'display-hide header_center-left-hot-search'}
+              <div
+                className={
+                  this.props.inputFocus || this.props.mouseInHot
+                    ? 'display-show header_center-left-hot-search'
+                    : 'display-hide header_center-left-hot-search'
+                }
                 // 2. 设置移入为 onMouseEnterHot，移出为 onMouseLeaveHot
                 onMouseEnter={this.props.onMouseEnterHot}
                 onMouseLeave={this.props.onMouseLeaveHot}
@@ -2154,11 +2253,9 @@ class Header extends Component {
                   </span>
                 </div>
                 <div className="header_center-left-hot-search-content">
-                  {
-                    this.props.list.map((item) => {
-                      return <span key={item}>{item}</span>
-                    })
-                  }
+                  {this.props.list.map(item => {
+                    return <span key={item}>{item}</span>
+                  })}
                 </div>
               </div>
             </div>
@@ -2184,43 +2281,43 @@ class Header extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     inputFocus: state.get('header').get('inputFocus'),
     list: state.get('header').get('list'),
     // 7. 在 index.js 中获取
-    mouseInHot: state.get('header').get('mouseInHot'),
+    mouseInHot: state.get('header').get('mouseInHot')
   }
 }
 
-const mapDispathToProps = (dispatch) => {
+const mapDispathToProps = dispatch => {
   return {
     searchFocus() {
-      dispatch(actionCreators.getList());
-      dispatch(actionCreators.searchFocus());
+      dispatch(actionCreators.getList())
+      dispatch(actionCreators.searchFocus())
     },
     searchBlur() {
-      dispatch(actionCreators.searchBlur());
+      dispatch(actionCreators.searchBlur())
     },
     // 3. 定义 onMouseEnterHot 和 onMouseLeaveHot 方法
     onMouseEnterHot() {
-      dispatch(actionCreators.onMouseEnterHot());
+      dispatch(actionCreators.onMouseEnterHot())
     },
     onMouseLeaveHot() {
-      dispatch(actionCreators.onMouseLeaveHot());
-    },
+      dispatch(actionCreators.onMouseLeaveHot())
+    }
   }
 }
 
-export default connect(mapStateToProps, mapDispathToProps)(Header);
+export default connect(mapStateToProps, mapDispathToProps)(Header)
 ```
 
 > src/common/header/store/actionCreators.js
 
 ```js
 import * as actionTypes from './actionTypes'
-import axios from 'axios';
-import { fromJS } from 'immutable';
+import axios from 'axios'
+import { fromJS } from 'immutable'
 
 export const searchFocus = () => ({
   type: actionTypes.SEARCH_FOCUS
@@ -2232,29 +2329,32 @@ export const searchBlur = () => ({
 
 // 4. 在 actionCreators.js 中定义这两个方法：onMouseEnterHot 和 onMouseLeaveHot
 export const onMouseEnterHot = () => ({
-  type: actionTypes.ON_MOUSE_ENTER_HOT,
+  type: actionTypes.ON_MOUSE_ENTER_HOT
 })
 
 export const onMouseLeaveHot = () => ({
-  type: actionTypes.ON_MOUSE_LEAVE_HOT,
+  type: actionTypes.ON_MOUSE_LEAVE_HOT
 })
 
 export const getList = () => {
-  return (dispatch) => {
-    axios.get('/api/headerList.json').then( (res) => {
-      if(res.data.code === 0) {
-        const data = res.data.list;
-        // 由于数据太多，我们限制数据量为 15 先
-        data.length = 15;
-        dispatch(changeList(data));
-      }
-    }).catch( (error) => {
-      console.log(error);
-    });
+  return dispatch => {
+    axios
+      .get('/api/headerList.json')
+      .then(res => {
+        if (res.data.code === 0) {
+          const data = res.data.list
+          // 由于数据太多，我们限制数据量为 15 先
+          data.length = 15
+          dispatch(changeList(data))
+        }
+      })
+      .catch(error => {
+        console.log(error)
+      })
   }
 }
 
-const changeList = (data) => ({
+const changeList = data => ({
   type: actionTypes.GET_LIST,
   data: fromJS(data)
 })
@@ -2263,12 +2363,12 @@ const changeList = (data) => ({
 > src/common/header/store/actionTypes.js
 
 ```js
-export const SEARCH_FOCUS = 'header/search_focus';
-export const SEARCH_BLUR = 'header/search_blur';
-export const GET_LIST = 'header/get_list';
+export const SEARCH_FOCUS = 'header/search_focus'
+export const SEARCH_BLUR = 'header/search_blur'
+export const GET_LIST = 'header/get_list'
 // 5. 在 actionTypes.js 中新增 action 类型
-export const ON_MOUSE_ENTER_HOT = 'header/on_mouse_enter_hot';
-export const ON_MOUSE_LEAVE_HOT = 'header/on_mouse_leave_hot';
+export const ON_MOUSE_ENTER_HOT = 'header/on_mouse_enter_hot'
+export const ON_MOUSE_LEAVE_HOT = 'header/on_mouse_leave_hot'
 ```
 
 我们先看实现：
@@ -2298,7 +2398,7 @@ export const ON_MOUSE_LEAVE_HOT = 'header/on_mouse_leave_hot';
 
 ```js
 import * as actionTypes from './actionTypes'
-import { fromJS } from 'immutable';
+import { fromJS } from 'immutable'
 
 const defaultState = fromJS({
   inputFocus: false,
@@ -2306,30 +2406,30 @@ const defaultState = fromJS({
   list: [],
   // 1. 在 reducer.js 中设置页数和总页数
   page: 1,
-  totalPage: 1,
-});
+  totalPage: 1
+})
 
 export default (state = defaultState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case actionTypes.SEARCH_FOCUS:
-      return state.set('inputFocus', true);
+      return state.set('inputFocus', true)
     case actionTypes.SEARCH_BLUR:
-      return state.set('inputFocus', false);
+      return state.set('inputFocus', false)
     case actionTypes.GET_LIST:
       // 4. 我们通过 merge 方法同时设置多个 state 值
       return state.merge({
         list: action.data,
         totalPage: action.totalPage
-      });
+      })
     case actionTypes.ON_MOUSE_ENTER_HOT:
-      return state.set('mouseInHot', true);
+      return state.set('mouseInHot', true)
     case actionTypes.ON_MOUSE_LEAVE_HOT:
-      return state.set('mouseInHot', false);
+      return state.set('mouseInHot', false)
     // 11. 判断 action 类型，并进行设置
     case actionTypes.CHANGE_PAGE:
-      return state.set('page', action.page + 1);
+      return state.set('page', action.page + 1)
     default:
-      return state;
+      return state
   }
 }
 ```
@@ -2338,8 +2438,8 @@ export default (state = defaultState, action) => {
 
 ```js
 import * as actionTypes from './actionTypes'
-import axios from 'axios';
-import { fromJS } from 'immutable';
+import axios from 'axios'
+import { fromJS } from 'immutable'
 
 export const searchFocus = () => ({
   type: actionTypes.SEARCH_FOCUS
@@ -2350,29 +2450,32 @@ export const searchBlur = () => ({
 })
 
 export const onMouseEnterHot = () => ({
-  type: actionTypes.ON_MOUSE_ENTER_HOT,
+  type: actionTypes.ON_MOUSE_ENTER_HOT
 })
 
 export const onMouseLeaveHot = () => ({
-  type: actionTypes.ON_MOUSE_LEAVE_HOT,
+  type: actionTypes.ON_MOUSE_LEAVE_HOT
 })
 
 export const getList = () => {
-  return (dispatch) => {
-    axios.get('/api/headerList.json').then( (res) => {
-      if(res.data.code === 0) {
-        const data = res.data.list;
-        // 2. 由于数据太多，我们之前限制数据量为 15，这里我们去掉该行代码
-        // data.length = 15;
-        dispatch(changeList(data));
-      }
-    }).catch( (error) => {
-      console.log(error);
-    });
+  return dispatch => {
+    axios
+      .get('/api/headerList.json')
+      .then(res => {
+        if (res.data.code === 0) {
+          const data = res.data.list
+          // 2. 由于数据太多，我们之前限制数据量为 15，这里我们去掉该行代码
+          // data.length = 15;
+          dispatch(changeList(data))
+        }
+      })
+      .catch(error => {
+        console.log(error)
+      })
   }
 }
 
-const changeList = (data) => ({
+const changeList = data => ({
   type: actionTypes.GET_LIST,
   data: fromJS(data),
   // 3. 我们在这里计算总页数
@@ -2380,22 +2483,22 @@ const changeList = (data) => ({
 })
 
 // 9. 定义 changePage 方法
-export const changePage = (page) => ({
+export const changePage = page => ({
   type: actionTypes.CHANGE_PAGE,
-  page: page,
+  page: page
 })
 ```
 
 > src/common/header/index.js
 
 ```js
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { CSSTransition } from 'react-transition-group';
-import './index.css';
-import { actionCreators } from './store';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { CSSTransition } from 'react-transition-group'
+import './index.css'
+import { actionCreators } from './store'
 
-import homeImage from '../../resources/img/header-home.png';
+import homeImage from '../../resources/img/header-home.png'
 
 class Header extends Component {
   render() {
@@ -2422,39 +2525,59 @@ class Header extends Component {
                 timeout={200}
                 classNames="slide"
               >
-                <input 
-                  className={this.props.inputFocus ? 'input-active' : 'input-nor-active'}
+                <input
+                  className={
+                    this.props.inputFocus ? 'input-active' : 'input-nor-active'
+                  }
                   placeholder="搜索"
                   onFocus={this.props.searchFocus}
                   onBlur={this.props.searchBlur}
                 />
               </CSSTransition>
-              <i className={this.props.inputFocus ? 'icon icon-search icon-active' : 'icon icon-search'}></i>
-              <div 
-                className={this.props.inputFocus || this.props.mouseInHot ? 'display-show header_center-left-hot-search' : 'display-hide header_center-left-hot-search'}
+              <i
+                className={
+                  this.props.inputFocus
+                    ? 'icon icon-search icon-active'
+                    : 'icon icon-search'
+                }
+              ></i>
+              <div
+                className={
+                  this.props.inputFocus || this.props.mouseInHot
+                    ? 'display-show header_center-left-hot-search'
+                    : 'display-hide header_center-left-hot-search'
+                }
                 onMouseEnter={this.props.onMouseEnterHot}
                 onMouseLeave={this.props.onMouseLeaveHot}
               >
                 <div className="header_center-left-hot-search-title">
                   <span>热门搜索</span>
                   {/* 7. 进行换页功能实现，传递参数 page 和 totalPage */}
-                  <span onClick={() => this.props.changePage(this.props.page, this.props.totalPage)}>
+                  <span
+                    onClick={() =>
+                      this.props.changePage(
+                        this.props.page,
+                        this.props.totalPage
+                      )
+                    }
+                  >
                     <i className="icon-change"></i>
                     <span className="span-change">换一批</span>
                   </span>
                 </div>
                 <div className="header_center-left-hot-search-content">
-                  {
-                    // 6. 在 index.js 中进行计算：
-                    // 一开始显示 0-9 共 10 条，换页的时候显示 10-19 ……以此类推
-                    this.props.list.map((item, index) => {
-                      if(index >= (this.props.page - 1) * 10 && index < this.props.page * 10) {
-                        return <span key={item}>{item}</span>
-                      } else {
-                        return '';
-                      }
-                    })
-                  }
+                  {// 6. 在 index.js 中进行计算：
+                  // 一开始显示 0-9 共 10 条，换页的时候显示 10-19 ……以此类推
+                  this.props.list.map((item, index) => {
+                    if (
+                      index >= (this.props.page - 1) * 10 &&
+                      index < this.props.page * 10
+                    ) {
+                      return <span key={item}>{item}</span>
+                    } else {
+                      return ''
+                    }
+                  })}
                 </div>
               </div>
             </div>
@@ -2480,57 +2603,57 @@ class Header extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     inputFocus: state.get('header').get('inputFocus'),
     list: state.get('header').get('list'),
     mouseInHot: state.get('header').get('mouseInHot'),
     // 5. 在 index.js 中 mapStateToProps 获取数据
     page: state.get('header').get('page'),
-    totalPage: state.get('header').get('totalPage'),
+    totalPage: state.get('header').get('totalPage')
   }
 }
 
-const mapDispathToProps = (dispatch) => {
+const mapDispathToProps = dispatch => {
   return {
     searchFocus() {
-      dispatch(actionCreators.getList());
-      dispatch(actionCreators.searchFocus());
+      dispatch(actionCreators.getList())
+      dispatch(actionCreators.searchFocus())
     },
     searchBlur() {
-      dispatch(actionCreators.searchBlur());
+      dispatch(actionCreators.searchBlur())
     },
     onMouseEnterHot() {
-      dispatch(actionCreators.onMouseEnterHot());
+      dispatch(actionCreators.onMouseEnterHot())
     },
     onMouseLeaveHot() {
-      dispatch(actionCreators.onMouseLeaveHot());
+      dispatch(actionCreators.onMouseLeaveHot())
     },
     // 8. 调用 changePage 方法
     changePage(page, totalPage) {
-      if(page === totalPage) {
-        page = 1;
-        dispatch(actionCreators.changePage(page));
+      if (page === totalPage) {
+        page = 1
+        dispatch(actionCreators.changePage(page))
       } else {
-        dispatch(actionCreators.changePage(page));
+        dispatch(actionCreators.changePage(page))
       }
     }
   }
 }
 
-export default connect(mapStateToProps, mapDispathToProps)(Header);
+export default connect(mapStateToProps, mapDispathToProps)(Header)
 ```
 
 > src/common/header/store/actionTypes.js
 
 ```js
-export const SEARCH_FOCUS = 'header/search_focus';
-export const SEARCH_BLUR = 'header/search_blur';
-export const GET_LIST = 'header/get_list';
-export const ON_MOUSE_ENTER_HOT = 'header/on_mouse_enter_hot';
-export const ON_MOUSE_LEAVE_HOT = 'header/on_mouse_leave_hot';
-// 10. 定义 action 
-export const CHANGE_PAGE = 'header/change_page';
+export const SEARCH_FOCUS = 'header/search_focus'
+export const SEARCH_BLUR = 'header/search_blur'
+export const GET_LIST = 'header/get_list'
+export const ON_MOUSE_ENTER_HOT = 'header/on_mouse_enter_hot'
+export const ON_MOUSE_LEAVE_HOT = 'header/on_mouse_leave_hot'
+// 10. 定义 action
+export const CHANGE_PAGE = 'header/change_page'
 ```
 
 此时我们代码思路是：
@@ -2544,7 +2667,7 @@ export const CHANGE_PAGE = 'header/change_page';
 7. 在 index.js 中进行换页功能实现，传递参数 `page` 和 `totalPage`
 8. 在 index.js 调用 `changePage` 方法，进行是否重置为第一页判断，并 `dispatch` 方法
 9. 在 actionCreators.js 中定义 `changePage` 方法
-10. 在 actionTypes.js 中定义 `action` 
+10. 在 actionTypes.js 中定义 `action`
 11. 在 reducer.js 中判断 `action` 类型，并进行设置
 
 如此，我们就实现了换一换功能：
@@ -2605,13 +2728,13 @@ header {
   position: relative;
 }
 .slide-enter {
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .slide-enter-active {
   width: 280px;
 }
 .slide-exit {
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .silde-exit-active {
   width: 240px;
@@ -2645,7 +2768,7 @@ header {
   cursor: pointer;
 }
 .header_center-left-hot-search:before {
-  content: "";
+  content: '';
   left: 27px;
   width: 10px;
   height: 10px;
@@ -2654,7 +2777,7 @@ header {
   z-index: -1;
   position: absolute;
   background-color: #fff;
-  box-shadow: 0 0 8px rgba(0,0,0,.2);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 .header_center-left-hot-search {
   position: absolute;
@@ -2684,7 +2807,7 @@ header {
   background: url('../../resources/img/icon-change.png') no-repeat center;
   background-size: 100%;
   /* 1. 在 index.css 中添加动画 */
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
   transform-origin: center center;
 }
 .icon-change:hover {
@@ -2714,12 +2837,13 @@ header {
 }
 
 /* 头部右边 */
-.header_right-register, .header_right-write {
+.header_right-register,
+.header_right-write {
   width: 80px;
   text-align: center;
   height: 38px;
   line-height: 38px;
-  border: 1px solid rgba(236,97,73,.7);
+  border: 1px solid rgba(236, 97, 73, 0.7);
   border-radius: 20px;
   font-size: 15px;
   color: #ea6f5a;
@@ -2737,13 +2861,13 @@ header {
 > src/common/header/index.js
 
 ```js
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { CSSTransition } from 'react-transition-group';
-import './index.css';
-import { actionCreators } from './store';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { CSSTransition } from 'react-transition-group'
+import './index.css'
+import { actionCreators } from './store'
 
-import homeImage from '../../resources/img/header-home.png';
+import homeImage from '../../resources/img/header-home.png'
 
 class Header extends Component {
   render() {
@@ -2770,37 +2894,63 @@ class Header extends Component {
                 timeout={200}
                 classNames="slide"
               >
-                <input 
-                  className={this.props.inputFocus ? 'input-active' : 'input-nor-active'}
+                <input
+                  className={
+                    this.props.inputFocus ? 'input-active' : 'input-nor-active'
+                  }
                   placeholder="搜索"
                   onFocus={this.props.searchFocus}
                   onBlur={this.props.searchBlur}
                 />
               </CSSTransition>
-              <i className={this.props.inputFocus ? 'icon icon-search icon-active' : 'icon icon-search'}></i>
-              <div 
-                className={this.props.inputFocus || this.props.mouseInHot ? 'display-show header_center-left-hot-search' : 'display-hide header_center-left-hot-search'}
+              <i
+                className={
+                  this.props.inputFocus
+                    ? 'icon icon-search icon-active'
+                    : 'icon icon-search'
+                }
+              ></i>
+              <div
+                className={
+                  this.props.inputFocus || this.props.mouseInHot
+                    ? 'display-show header_center-left-hot-search'
+                    : 'display-hide header_center-left-hot-search'
+                }
                 onMouseEnter={this.props.onMouseEnterHot}
                 onMouseLeave={this.props.onMouseLeaveHot}
               >
                 <div className="header_center-left-hot-search-title">
                   <span>热门搜索</span>
                   {/* 2. 在 index.js 中给 i 标签添加 ref，并通过 changePage 方法传递过去 */}
-                  <span onClick={() => this.props.changePage(this.props.page, this.props.totalPage, this.spinIcon)}>
-                    <i className="icon-change" ref={(icon) => {this.spinIcon = icon}}></i>
+                  <span
+                    onClick={() =>
+                      this.props.changePage(
+                        this.props.page,
+                        this.props.totalPage,
+                        this.spinIcon
+                      )
+                    }
+                  >
+                    <i
+                      className="icon-change"
+                      ref={icon => {
+                        this.spinIcon = icon
+                      }}
+                    ></i>
                     <span className="span-change">换一批</span>
                   </span>
                 </div>
                 <div className="header_center-left-hot-search-content">
-                  {
-                    this.props.list.map((item, index) => {
-                      if(index >= (this.props.page - 1) * 10 && index < this.props.page * 10) {
-                        return <span key={item}>{item}</span>
-                      } else {
-                        return '';
-                      }
-                    })
-                  }
+                  {this.props.list.map((item, index) => {
+                    if (
+                      index >= (this.props.page - 1) * 10 &&
+                      index < this.props.page * 10
+                    ) {
+                      return <span key={item}>{item}</span>
+                    } else {
+                      return ''
+                    }
+                  })}
                 </div>
               </div>
             </div>
@@ -2826,50 +2976,49 @@ class Header extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     inputFocus: state.get('header').get('inputFocus'),
     list: state.get('header').get('list'),
     mouseInHot: state.get('header').get('mouseInHot'),
     page: state.get('header').get('page'),
-    totalPage: state.get('header').get('totalPage'),
+    totalPage: state.get('header').get('totalPage')
   }
 }
 
-const mapDispathToProps = (dispatch) => {
+const mapDispathToProps = dispatch => {
   return {
     searchFocus() {
-      dispatch(actionCreators.getList());
-      dispatch(actionCreators.searchFocus());
+      dispatch(actionCreators.getList())
+      dispatch(actionCreators.searchFocus())
     },
     searchBlur() {
-      dispatch(actionCreators.searchBlur());
+      dispatch(actionCreators.searchBlur())
     },
     onMouseEnterHot() {
-      dispatch(actionCreators.onMouseEnterHot());
+      dispatch(actionCreators.onMouseEnterHot())
     },
     onMouseLeaveHot() {
-      dispatch(actionCreators.onMouseLeaveHot());
+      dispatch(actionCreators.onMouseLeaveHot())
     },
     changePage(page, totalPage, spinIcon) {
       // 3. 在 index.js 中设置它原生 DOM 的 CSS 属性
-      if(spinIcon.style.transform === 'rotate(360deg)') {
-        spinIcon.style.transform = 'rotate(0deg)';
+      if (spinIcon.style.transform === 'rotate(360deg)') {
+        spinIcon.style.transform = 'rotate(0deg)'
       } else {
-        spinIcon.style.transform = 'rotate(360deg)';
+        spinIcon.style.transform = 'rotate(360deg)'
       }
-      if(page === totalPage) {
-        page = 1;
-        dispatch(actionCreators.changePage(page));
+      if (page === totalPage) {
+        page = 1
+        dispatch(actionCreators.changePage(page))
       } else {
-        dispatch(actionCreators.changePage(page));
+        dispatch(actionCreators.changePage(page))
       }
     }
   }
 }
 
-export default connect(mapStateToProps, mapDispathToProps)(Header);
-
+export default connect(mapStateToProps, mapDispathToProps)(Header)
 ```
 
 这里我们通过三个步骤实现了图标旋转：
@@ -2891,13 +3040,13 @@ export default connect(mapStateToProps, mapDispathToProps)(Header);
 > src/common/header/index.js
 
 ```js
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { CSSTransition } from 'react-transition-group';
-import './index.css';
-import { actionCreators } from './store';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { CSSTransition } from 'react-transition-group'
+import './index.css'
+import { actionCreators } from './store'
 
-import homeImage from '../../resources/img/header-home.png';
+import homeImage from '../../resources/img/header-home.png'
 
 class Header extends Component {
   render() {
@@ -2924,37 +3073,63 @@ class Header extends Component {
                 timeout={200}
                 classNames="slide"
               >
-                <input 
-                  className={this.props.inputFocus ? 'input-active' : 'input-nor-active'}
+                <input
+                  className={
+                    this.props.inputFocus ? 'input-active' : 'input-nor-active'
+                  }
                   placeholder="搜索"
                   // 1. 给 searchFocus 传递 list
                   onFocus={() => this.props.searchFocus(this.props.list)}
                   onBlur={this.props.searchBlur}
                 />
               </CSSTransition>
-              <i className={this.props.inputFocus ? 'icon icon-search icon-active' : 'icon icon-search'}></i>
-              <div 
-                className={this.props.inputFocus || this.props.mouseInHot ? 'display-show header_center-left-hot-search' : 'display-hide header_center-left-hot-search'}
+              <i
+                className={
+                  this.props.inputFocus
+                    ? 'icon icon-search icon-active'
+                    : 'icon icon-search'
+                }
+              ></i>
+              <div
+                className={
+                  this.props.inputFocus || this.props.mouseInHot
+                    ? 'display-show header_center-left-hot-search'
+                    : 'display-hide header_center-left-hot-search'
+                }
                 onMouseEnter={this.props.onMouseEnterHot}
                 onMouseLeave={this.props.onMouseLeaveHot}
               >
                 <div className="header_center-left-hot-search-title">
                   <span>热门搜索</span>
-                  <span onClick={() => this.props.changePage(this.props.page, this.props.totalPage, this.spinIcon)}>
-                    <i className="icon-change" ref={(icon) => {this.spinIcon = icon}}></i>
+                  <span
+                    onClick={() =>
+                      this.props.changePage(
+                        this.props.page,
+                        this.props.totalPage,
+                        this.spinIcon
+                      )
+                    }
+                  >
+                    <i
+                      className="icon-change"
+                      ref={icon => {
+                        this.spinIcon = icon
+                      }}
+                    ></i>
                     <span className="span-change">换一批</span>
                   </span>
                 </div>
                 <div className="header_center-left-hot-search-content">
-                  {
-                    this.props.list.map((item, index) => {
-                      if(index >= (this.props.page - 1) * 10 && index < this.props.page * 10) {
-                        return <span key={item}>{item}</span>
-                      } else {
-                        return '';
-                      }
-                    })
-                  }
+                  {this.props.list.map((item, index) => {
+                    if (
+                      index >= (this.props.page - 1) * 10 &&
+                      index < this.props.page * 10
+                    ) {
+                      return <span key={item}>{item}</span>
+                    } else {
+                      return ''
+                    }
+                  })}
                 </div>
               </div>
             </div>
@@ -2980,52 +3155,51 @@ class Header extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     inputFocus: state.get('header').get('inputFocus'),
     list: state.get('header').get('list'),
     mouseInHot: state.get('header').get('mouseInHot'),
     page: state.get('header').get('page'),
-    totalPage: state.get('header').get('totalPage'),
+    totalPage: state.get('header').get('totalPage')
   }
 }
 
-const mapDispathToProps = (dispatch) => {
+const mapDispathToProps = dispatch => {
   return {
     searchFocus(list) {
       // 2. 判断 list 的 size 是不是等于 0，是的话才请求数据（第一次），不是的话则不请求
-      if(list.size === 0) {
-        dispatch(actionCreators.getList());
+      if (list.size === 0) {
+        dispatch(actionCreators.getList())
       }
-      dispatch(actionCreators.searchFocus());
+      dispatch(actionCreators.searchFocus())
     },
     searchBlur() {
-      dispatch(actionCreators.searchBlur());
+      dispatch(actionCreators.searchBlur())
     },
     onMouseEnterHot() {
-      dispatch(actionCreators.onMouseEnterHot());
+      dispatch(actionCreators.onMouseEnterHot())
     },
     onMouseLeaveHot() {
-      dispatch(actionCreators.onMouseLeaveHot());
+      dispatch(actionCreators.onMouseLeaveHot())
     },
     changePage(page, totalPage, spinIcon) {
-      if(spinIcon.style.transform === 'rotate(360deg)') {
-        spinIcon.style.transform = 'rotate(0deg)';
+      if (spinIcon.style.transform === 'rotate(360deg)') {
+        spinIcon.style.transform = 'rotate(0deg)'
       } else {
-        spinIcon.style.transform = 'rotate(360deg)';
+        spinIcon.style.transform = 'rotate(360deg)'
       }
-      if(page === totalPage) {
-        page = 1;
-        dispatch(actionCreators.changePage(page));
+      if (page === totalPage) {
+        page = 1
+        dispatch(actionCreators.changePage(page))
       } else {
-        dispatch(actionCreators.changePage(page));
+        dispatch(actionCreators.changePage(page))
       }
     }
   }
 }
 
-export default connect(mapStateToProps, mapDispathToProps)(Header);
-
+export default connect(mapStateToProps, mapDispathToProps)(Header)
 ```
 
 在这里，我们做了两个步骤：
@@ -3043,23 +3217,23 @@ export default connect(mapStateToProps, mapDispathToProps)(Header);
 
 > [返回目录](#chapter-one)
 
-* 什么是路由？
+- 什么是路由？
 
 前端路由就是根据 URL 的不同，显示不同的内容。
 
-* 安装 React 的路由：`npm i react-router-dom -S`
+- 安装 React 的路由：`npm i react-router-dom -S`
 
 安装完毕之后，我们只需要修改下 `src/App.js`，就可以体验到路由：
 
 > src/App.js
 
 ```js
-import React, { Component } from 'react';
-import { Provider } from 'react-redux';
-import Header from './common/header';
-import store from './store';
+import React, { Component } from 'react'
+import { Provider } from 'react-redux'
+import Header from './common/header'
+import store from './store'
 // 1. 引入 React 路由的 BrowserRouter 和 Route
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom'
 
 class App extends Component {
   render() {
@@ -3072,11 +3246,11 @@ class App extends Component {
           <Route path="/detail" exact render={() => <div>DETAIL</div>}></Route>
         </BrowserRouter>
       </Provider>
-    );
+    )
   }
 }
 
-export default App;
+export default App
 ```
 
 在这里我们仅需要做两个步骤：
@@ -3093,8 +3267,9 @@ export default App;
 > [返回目录](#chapter-one)
 
 **首先**，在 src 下新建 pages 文件夹，然后在该文件夹下新建文件夹和文件：
-   1. src/pages/detail/index.js
-   2. src/pages/home/index.js
+
+1.  src/pages/detail/index.js
+2.  src/pages/home/index.js
 
 **此时**，它们的内容如下：
 
@@ -3107,13 +3282,11 @@ import React, { Component } from 'react'
 
 class Detail extends Component {
   render() {
-    return (
-      <div>Detail</div>
-    )
+    return <div>Detail</div>
   }
 }
 
-export default Detail;
+export default Detail
 ```
 
 > src/pages/home/index.js
@@ -3123,13 +3296,11 @@ import React, { Component } from 'react'
 
 class Home extends Component {
   render() {
-    return (
-      <div>Home</div>
-    )
+    return <div>Home</div>
   }
 }
 
-export default Home;
+export default Home
 ```
 
 在有 header 的经验下，我们应该知道，我们希望在 URL 输入路径 `localhost:3000` 的时候，访问 home 组件；在输入 `localhost:3000/detail` 的时候，访问 detail 组件。
@@ -3139,14 +3310,14 @@ export default Home;
 > src/App.js
 
 ```js
-import React, { Component } from 'react';
-import { Provider } from 'react-redux';
-import Header from './common/header';
-import store from './store';
-import { BrowserRouter, Route } from 'react-router-dom';
+import React, { Component } from 'react'
+import { Provider } from 'react-redux'
+import Header from './common/header'
+import store from './store'
+import { BrowserRouter, Route } from 'react-router-dom'
 // 1. 引入 Home、Detail 组件
-import Home from './pages/home';
-import Detail from './pages/detail';
+import Home from './pages/home'
+import Detail from './pages/detail'
 
 class App extends Component {
   render() {
@@ -3159,11 +3330,11 @@ class App extends Component {
           <Route path="/detail" exact component={Detail}></Route>
         </BrowserRouter>
       </Provider>
-    );
+    )
   }
 }
 
-export default App;
+export default App
 ```
 
 现在，我们切换下路由，就可以看到不用的页面，这些页面我们也可以通过编辑对应的 index.js 来修改了。
@@ -3211,13 +3382,13 @@ body {
 > 2. src/App.js
 
 ```js
-import React, { Component } from 'react';
-import { Provider } from 'react-redux';
-import Header from './common/header';
-import store from './store';
-import { BrowserRouter, Route } from 'react-router-dom';
-import Home from './pages/home';
-import Detail from './pages/detail';
+import React, { Component } from 'react'
+import { Provider } from 'react-redux'
+import Header from './common/header'
+import store from './store'
+import { BrowserRouter, Route } from 'react-router-dom'
+import Home from './pages/home'
+import Detail from './pages/detail'
 
 class App extends Component {
   render() {
@@ -3229,11 +3400,11 @@ class App extends Component {
           <Route path="/detail" exact component={Detail}></Route>
         </BrowserRouter>
       </Provider>
-    );
+    )
   }
 }
 
-export default App;
+export default App
 ```
 
 > src/common/header/index.css
@@ -3286,13 +3457,13 @@ header {
   position: relative;
 }
 .slide-enter {
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .slide-enter-active {
   width: 280px;
 }
 .slide-exit {
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .silde-exit-active {
   width: 240px;
@@ -3329,7 +3500,7 @@ header {
   cursor: pointer;
 }
 .header_center-left-hot-search:before {
-  content: "";
+  content: '';
   left: 27px;
   width: 10px;
   height: 10px;
@@ -3338,7 +3509,7 @@ header {
   z-index: -1;
   position: absolute;
   background-color: #fff;
-  box-shadow: 0 0 8px rgba(0,0,0,.2);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 .header_center-left-hot-search {
   position: absolute;
@@ -3367,7 +3538,7 @@ header {
   height: 14px;
   background: url('../../resources/img/icon-change.png') no-repeat center;
   background-size: 100%;
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
   transform-origin: center center;
 }
 .icon-change:hover {
@@ -3397,12 +3568,13 @@ header {
 }
 
 /* 头部右边 */
-.header_right-register, .header_right-write {
+.header_right-register,
+.header_right-write {
   width: 80px;
   text-align: center;
   height: 38px;
   line-height: 38px;
-  border: 1px solid rgba(236,97,73,.7);
+  border: 1px solid rgba(236, 97, 73, 0.7);
   border-radius: 20px;
   font-size: 15px;
   color: #ea6f5a;
@@ -3415,17 +3587,16 @@ header {
   color: #fff;
   background-color: #ea6f5a;
 }
-
 ```
 
 > src/pages/home/index.js
 
 ```js
-import React, { Component } from 'react';
-import LeftList from './components/LeftList';
-import RightRecommend from './components/RightRecommend';
-import TopNav from './components/TopNav';
-import './index.css';
+import React, { Component } from 'react'
+import LeftList from './components/LeftList'
+import RightRecommend from './components/RightRecommend'
+import TopNav from './components/TopNav'
+import './index.css'
 
 class Home extends Component {
   render() {
@@ -3441,7 +3612,7 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Home
 ```
 
 > src/pages/home/index.css
@@ -3465,7 +3636,7 @@ export default Home;
   height: 46px;
   line-height: 46px;
   z-index: 100;
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   font-size: 14px;
   background: #fff;
 }
@@ -3516,8 +3687,8 @@ export default Home;
 > src/pages/home/components/TopNav.js
 
 ```js
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class TopNav extends Component {
   render() {
@@ -3563,7 +3734,7 @@ class TopNav extends Component {
   }
 }
 
-export default TopNav;
+export default TopNav
 ```
 
 > src/pages/home/components/LeftList.js
@@ -3573,15 +3744,11 @@ import React, { Component } from 'react'
 
 class LeftList extends Component {
   render() {
-    return (
-      <div className="left-list">
-        左侧
-      </div>
-    )
+    return <div className="left-list">左侧</div>
   }
 }
 
-export default LeftList;
+export default LeftList
 ```
 
 > src/pages/home/components/RightRecommend.js
@@ -3591,15 +3758,11 @@ import React, { Component } from 'react'
 
 class RightRecommend extends Component {
   render() {
-    return (
-      <div className="right-recommend">
-        右侧
-      </div>
-    )
+    return <div className="right-recommend">右侧</div>
   }
 }
 
-export default RightRecommend;
+export default RightRecommend
 ```
 
 此时，页面显示为：
@@ -3619,11 +3782,11 @@ export default RightRecommend;
 > src/pages/home/components/LeftList.js
 
 ```js
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 // 1. 在 LeftList 中引入 react-redux 的 connect
-import { connect } from 'react-redux';
-import { actionCreators } from '../store';
+import { connect } from 'react-redux'
+import { actionCreators } from '../store'
 
 class LeftList extends Component {
   render() {
@@ -3632,97 +3795,87 @@ class LeftList extends Component {
         <div className="left-list-top">
           <ul className="left-list-top-left">
             <li className="active">
-              <Link to='remen'>热门</Link>
+              <Link to="remen">热门</Link>
             </li>
             <span>|</span>
             <li>
-              <Link to='zuixin'>最新</Link>
+              <Link to="zuixin">最新</Link>
             </li>
             <span>|</span>
             <li>
-              <Link to='pinglun'>评论</Link>
+              <Link to="pinglun">评论</Link>
             </li>
           </ul>
           <ul className="left-list-top-right">
             <li>
-              <Link to='benzhouzuire'>本周最热</Link>
+              <Link to="benzhouzuire">本周最热</Link>
             </li>
-            ·
+            ·<li>
+              <Link to="benyuezuire">本月最热</Link>
+            </li>·
             <li>
-              <Link to='benyuezuire'>本月最热</Link>
-            </li>
-            ·
-            <li>
-              <Link to='lishizuire'>历史最热</Link>
+              <Link to="lishizuire">历史最热</Link>
             </li>
           </ul>
         </div>
         <div className="left-list-container">
           {/* 5. 循环输出 props 里面的数据 */}
-          {
-            this.props.list.map((item) => {
-              return (
-                <div className="left-list-item" key={item.get('id')}>
-                  <div className="left-list-item-tag">
-                    <span className="hot">热</span>·
-                    <span className="special">专栏</span>·
-                    <span>
-                      {
-                        item.get('user').get('username')
+          {this.props.list.map(item => {
+            return (
+              <div className="left-list-item" key={item.get('id')}>
+                <div className="left-list-item-tag">
+                  <span className="hot">热</span>·
+                  <span className="special">专栏</span>·
+                  <span>{item.get('user').get('username')}</span>·
+                  <span>一天前</span>·
+                  <span>
+                    {item.get('tags').map((tagsItem, index) => {
+                      if (index === 0) {
+                        return tagsItem.get('title')
+                      } else {
+                        return null
                       }
-                    </span>·
-                    <span>一天前</span>·
-                    <span>
-                      {
-                        item.get('tags').map((tagsItem, index) => {
-                          if (index === 0) {
-                            return tagsItem.get('title');
-                          } else {
-                            return null;
-                          }
-                        })
-                      }
-                    </span>
-                  </div>
-                  <h3 className="left-list-item-title">
-                    <Link to="detail">{item.get('title')}</Link>
-                  </h3>
-                  <div className="left-list-item-interactive">
-                    <span>{item.get('likeCount')}</span>
-                    <span>{item.get('commentsCount')}</span>
-                  </div>
+                    })}
+                  </span>
                 </div>
-              )
-            })
-          }
+                <h3 className="left-list-item-title">
+                  <Link to="detail">{item.get('title')}</Link>
+                </h3>
+                <div className="left-list-item-interactive">
+                  <span>{item.get('likeCount')}</span>
+                  <span>{item.get('commentsCount')}</span>
+                </div>
+              </div>
+            )
+          })}
         </div>
       </div>
     )
   }
 
   componentDidMount() {
-    this.props.getLeftList();
+    this.props.getLeftList()
   }
 }
 
 // 3. 在 LeftList 中定义 mapStateToProps
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     list: state.get('home').get('leftNav')
   }
-};
+}
 
 // 4. 在 LeftList 中定义 mapDispathToProps
-const mapDispathToProps = (dispatch) => {
+const mapDispathToProps = dispatch => {
   return {
     getLeftList() {
-      dispatch(actionCreators.getLeftList());
+      dispatch(actionCreators.getLeftList())
     }
   }
-};
+}
 
 // 2. 在 LeftList 中使用 connect
-export default connect(mapStateToProps, mapDispathToProps)(LeftList);
+export default connect(mapStateToProps, mapDispathToProps)(LeftList)
 ```
 
 ### <a name="chapter-twenty-two" id="chapter-twenty-two">20.2 完善整个首页</a>
@@ -3733,7 +3886,7 @@ export default connect(mapStateToProps, mapDispathToProps)(LeftList);
 
 是的，因为它只是全部代码的一部分，所以需要你去完善它。当然，你也可以直接获取全部代码：
 
-* [React 系列文章代码地址](https://github.com/LiangJunrong/React)
+- [React 系列文章代码地址](https://github.com/LiangJunrong/React)
 
 不管如何，你实现的最终成果如下所示：
 

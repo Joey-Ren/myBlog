@@ -1,5 +1,4 @@
-500 - 键盘行（keyboard-row）
-===
+# 500 - 键盘行（keyboard-row）
 
 > Create by **jsLe** on **2019-10-30 11:13:45**  
 > Recently revised in **2019-10-30 17:30:33**
@@ -8,23 +7,23 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题及测试](#chapter-three) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题及测试](#chapter-three)   |
 | <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 LeetCode Submit](#chapter-four) |
-| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 解题思路](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 进一步思考](#chapter-six) |
+| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 解题思路](#chapter-five)        |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 进一步思考](#chapter-six)         |
 
 ## <a name="chapter-two" id="chapter-two"></a>二 前言
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：哈希表
-* **题目地址**：https://leetcode-cn.com/problems/keyboard-row/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：哈希表
+- **题目地址**：https://leetcode-cn.com/problems/keyboard-row/
+- **题目内容**：
 
 给定一个单词列表，只返回可以使用在键盘同一行的字母打印出来的单词。
 
@@ -48,16 +47,14 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **LeetCode 给定函数体**：
+- **LeetCode 给定函数体**：
 
 ```js
 /**
  * @param {string[]} words
  * @return {string[]}
  */
-var findWords = function(words) {
-  
-};
+var findWords = function(words) {}
 ```
 
 根据上面的已知函数，尝试破解本题吧~
@@ -72,26 +69,29 @@ var findWords = function(words) {
  * @param {string[]} words
  * @return {string[]}
  */
-const findWords = (words) => {
-  const rows = ['qwertyuiop','asdfghjkl','zxcvbnm'];
+const findWords = words => {
+  const rows = ['qwertyuiop', 'asdfghjkl', 'zxcvbnm']
   return words.filter(word => {
     return rows.some(row => {
-      return word.toLocaleLowerCase().split('').every(z => {
-        return row.includes(z);
-      });
-    });
-  });
-};
+      return word
+        .toLocaleLowerCase()
+        .split('')
+        .every(z => {
+          return row.includes(z)
+        })
+    })
+  })
+}
 
 // const words = ['Hello', 'Alaska', 'Dad', 'Peace'];
-const words = ['a', 'b'];
-console.log(findWords(words));
+const words = ['a', 'b']
+console.log(findWords(words))
 ```
 
 `node index.js` 返回：
 
 ```js
-['a', 'b']
+;['a', 'b']
 ```
 
 ## <a name="chapter-four" id="chapter-four"></a>四 LeetCode Submit
@@ -117,7 +117,7 @@ Accepted
  * @param {string[]} words
  * @return {string[]}
  */
-const findWords = (words) => {
+const findWords = words => {
   const hash = [
     { title: 'Q', index: 1 },
     { title: 'W', index: 1 },
@@ -144,32 +144,35 @@ const findWords = (words) => {
     { title: 'V', index: 3 },
     { title: 'B', index: 3 },
     { title: 'N', index: 3 },
-    { title: 'M', index: 3 },
+    { title: 'M', index: 3 }
   ]
-  const result = [];
+  const result = []
   for (let i = 0; i < words.length; i++) {
     if (words[i].length === 1) {
-      result.push(words[i]);
+      result.push(words[i])
     } else {
       for (let j = 0; j < words[i].length - 1; j++) {
-        const prevIndex = hash.find(item => item.title === words[i][j].toUpperCase()).index;
-        const nextIndex = hash.find(item => item.title === words[i][j + 1].toUpperCase()).index;
+        const prevIndex = hash.find(
+          item => item.title === words[i][j].toUpperCase()
+        ).index
+        const nextIndex = hash.find(
+          item => item.title === words[i][j + 1].toUpperCase()
+        ).index
         if (prevIndex !== nextIndex) {
-          break;
+          break
         }
         if (prevIndex === nextIndex && j === words[i].length - 2) {
-          result.push(words[i]);
+          result.push(words[i])
         }
       }
     }
   }
-  return result;
-};
-
+  return result
+}
 
 // const words = ['Hello', 'Alaska', 'Dad', 'Peace'];
-const words = ['a', 'b'];
-console.log(findWords(words));
+const words = ['a', 'b']
+console.log(findWords(words))
 ```
 
 **然后**，Submit 提交看下：
@@ -199,12 +202,12 @@ Accepted
 > 正则表达式
 
 ```js
-const findWords = (words) => {
-  const regexp = /^([qwertyuiop]+|[asdfghjkl]+|[zxcvbnm]+)$/i;
+const findWords = words => {
+  const regexp = /^([qwertyuiop]+|[asdfghjkl]+|[zxcvbnm]+)$/i
   return words.filter(item => {
-    return regexp.test(item);
+    return regexp.test(item)
   })
-};
+}
 ```
 
 正则表达式的效率挺感人的：
@@ -221,12 +224,17 @@ Accepted
 > 复合计算
 
 ```js
-const findWords = (words) => {
-  const rows = ['qwertyuiop','asdfghjkl','zxcvbnm'];
+const findWords = words => {
+  const rows = ['qwertyuiop', 'asdfghjkl', 'zxcvbnm']
   return words.filter(word => {
-    return rows.some(row => word.toLocaleLowerCase().split('').every(z => row.includes(z)));
-  });
-};
+    return rows.some(row =>
+      word
+        .toLocaleLowerCase()
+        .split('')
+        .every(z => row.includes(z))
+    )
+  })
+}
 ```
 
 Submit 提交：
@@ -241,16 +249,19 @@ Accepted
 OK，比起正则和我的暴力破解来，这个是比较中规中矩的，怕小伙伴们看不清楚，这里我们整理了下，顺带讲讲它的解法：
 
 ```js
-const findWords = (words) => {
-  const rows = ['qwertyuiop','asdfghjkl','zxcvbnm'];
+const findWords = words => {
+  const rows = ['qwertyuiop', 'asdfghjkl', 'zxcvbnm']
   return words.filter(word => {
     return rows.some(row => {
-      return word.toLocaleLowerCase().split('').every(z => {
-        return row.includes(z);
-      });
-    });
-  });
-};
+      return word
+        .toLocaleLowerCase()
+        .split('')
+        .every(z => {
+          return row.includes(z)
+        })
+    })
+  })
+}
 ```
 
 1. `rows` 存储键盘对应的三行。

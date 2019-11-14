@@ -1,5 +1,4 @@
-303 - 区域和检索之数组不可变（range-sum-query-immutable）
-===
+# 303 - 区域和检索之数组不可变（range-sum-query-immutable）
 
 > Create by **jsLe** on **2019-07-22 10:22:11**  
 > Recently revised in **2019-09-18 13:52:42**
@@ -8,24 +7,24 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six)             |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven)     |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：动态规划
-* **题目地址**：https://leetcode-cn.com/problems/range-sum-query-immutable/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：动态规划
+- **题目地址**：https://leetcode-cn.com/problems/range-sum-query-immutable/
+- **题目内容**：
 
 ```
 给定一个整数数组  nums，求出数组从索引 i 到 j  (i ≤ j) 范围内元素的总和，包含 i,  j 两点。
@@ -49,20 +48,20 @@ sumRange(0, 5) -> -3
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
-var NumArray = function (nums) {
-  this.map = new Map();
-  this.map.set(-1, 0);
+var NumArray = function(nums) {
+  this.map = new Map()
+  this.map.set(-1, 0)
   for (let i = 0; i < nums.length; i++) {
-    this.map.set(i, this.map.get(i - 1) + nums[i]);
+    this.map.set(i, this.map.get(i - 1) + nums[i])
   }
-};
+}
 
-NumArray.prototype.sumRange = function (i, j) {
-  return this.map.get(j) - this.map.get(i - 1);
-};
+NumArray.prototype.sumRange = function(i, j) {
+  return this.map.get(j) - this.map.get(i - 1)
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
@@ -70,13 +69,13 @@ NumArray.prototype.sumRange = function (i, j) {
 > [返回目录](#chapter-one)
 
 ```js
-const obj = new NumArray([-2, 0, 3, -5, 2, -1]);
-const sum1 = obj.sumRange(0, 2);
-const sum2 = obj.sumRange(2, 5);
-const sum3 = obj.sumRange(0, 5);
-console.log(sum1); // 1
-console.log(sum2); // -1
-console.log(sum3); // -3
+const obj = new NumArray([-2, 0, 3, -5, 2, -1])
+const sum1 = obj.sumRange(0, 2)
+const sum2 = obj.sumRange(2, 5)
+const sum3 = obj.sumRange(0, 5)
+console.log(sum1) // 1
+console.log(sum2) // -1
+console.log(sum3) // -3
 ```
 
 ## <a name="chapter-five" id="chapter-five">五 LeetCode Submit</a>
@@ -108,14 +107,14 @@ console.log(sum3); // -3
 
 ```js
 var NumArray = function(nums) {
-  this.nums = nums;
-};
+  this.nums = nums
+}
 
 NumArray.prototype.sumRange = function(i, j) {
   return this.nums.slice(i, j + 1).reduce((prev, next) => {
-    return prev + next;
+    return prev + next
   })
-};
+}
 ```
 
 Submit 后系统很诚恳的给出：
@@ -124,8 +123,8 @@ Submit 后系统很诚恳的给出：
 ✘ Time Limit Exceeded
   ✘ 16/16 cases passed (N/A)
   ✘ testcase: '["NumArray","sumRange", ... 省略 10 万个'
-  ✘ answer: 
-  ✘ expected_answer: 
+  ✘ answer:
+  ✘ expected_answer:
   ✘ stdout:
 ```
 
@@ -135,16 +134,16 @@ Submit 后系统很诚恳的给出：
 
 ```js
 var NumArray = function(nums) {
-  this.nums = nums;
-};
+  this.nums = nums
+}
 
 NumArray.prototype.sumRange = function(i, j) {
-  let sum = 0;
+  let sum = 0
   for (let z = i; z < j + 1; z++) {
-    sum += this.nums[z];
+    sum += this.nums[z]
   }
-  return sum;
-};
+  return sum
+}
 ```
 
 不行，还是超时了！！！
@@ -152,17 +151,17 @@ NumArray.prototype.sumRange = function(i, j) {
 **然后**，如何才能做到以空间换时间呢？需要缓存吧？怎么缓存呢？
 
 ```js
-var NumArray = function (nums) {
-  this.map = new Map();
-  this.map.set(-1, 0);
+var NumArray = function(nums) {
+  this.map = new Map()
+  this.map.set(-1, 0)
   for (let i = 0; i < nums.length; i++) {
-    this.map.set(i, this.map.get(i - 1) + nums[i]);
+    this.map.set(i, this.map.get(i - 1) + nums[i])
   }
-};
+}
 
-NumArray.prototype.sumRange = function (i, j) {
-  return this.map.get(j) - this.map.get(i - 1);
-};
+NumArray.prototype.sumRange = function(i, j) {
+  return this.map.get(j) - this.map.get(i - 1)
+}
 ```
 
 没错，我们将每次的和通过 `Map` 都记录下来。
@@ -175,8 +174,8 @@ NumArray.prototype.sumRange = function (i, j) {
 
 **最后**，如果我们求两个位置之间的差值，将其相减即可。
 
-* [3, 4] => 15 - 6 = 9
-* [0, 4] => 15 - 0 = 15
+- [3, 4] => 15 - 6 = 9
+- [0, 4] => 15 - 0 = 15
 
 ---
 

@@ -1,5 +1,4 @@
-263 - 丑数（ugly-number）
-===
+# 263 - 丑数（ugly-number）
 
 > Create by **jsLe** on **2019-07-18 17:15:35**  
 > Recently revised in **2019-09-18 13:49:13**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - 数学](#chapter-three-one) |
-| &emsp;[3.2 解法 - 递归](#chapter-three-two) |
+| &emsp;[3.1 解法 - 数学](#chapter-three-one)                                              |
+| &emsp;[3.2 解法 - 递归](#chapter-three-two)                                              |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数学
-* **题目地址**：https://leetcode-cn.com/problems/ugly-number/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数学
+- **题目地址**：https://leetcode-cn.com/problems/ugly-number/
+- **题目内容**：
 
 ```
 编写一个程序判断给定的数是否为丑数。
@@ -42,7 +41,7 @@
 
 示例 3:
 输入: 14
-输出: false 
+输出: false
 解释: 14 不是丑数，因为它包含了另外一个质因数 7。
 
 说明：
@@ -60,40 +59,40 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var isUgly = function(num) {
   if (!num) {
-    return false;
+    return false
   }
   while (num % 2 === 0 || num % 3 === 0 || num % 5 === 0) {
     if (num % 2 === 0) {
-      num = num / 2;
+      num = num / 2
     }
     if (num % 3 === 0) {
-      num = num / 3;
+      num = num / 3
     }
     if (num % 5 === 0) {
-      num = num / 5;
+      num = num / 5
     }
   }
   if (num === 1) {
-    return true;
+    return true
   }
   if (num !== 2 || num !== 3 || num !== 5) {
-    return false;
+    return false
   }
-  return true;
-};
+  return true
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `num`：`14`
 2. `return`：`false`
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -102,7 +101,7 @@ var isUgly = function(num) {
   ✔ Your memory usage beats 43.01 % of javascript submissions (35.4 MB)
 ```
 
-* **解题思路**：
+- **解题思路**：
 
 **最复杂的思路，有可能是你最原始的思路**。
 
@@ -116,27 +115,27 @@ var isUgly = function(num) {
 ```js
 var isUgly = function(num) {
   if (!num) {
-    return false;
+    return false
   }
   while (num % 2 === 0 || num % 3 === 0 || num % 5 === 0) {
     if (num % 2 === 0) {
-      num = num / 2;
+      num = num / 2
     }
     if (num % 3 === 0) {
-      num = num / 3;
+      num = num / 3
     }
     if (num % 5 === 0) {
-      num = num / 5;
+      num = num / 5
     }
   }
   if (num === 1) {
-    return true;
+    return true
   }
   if (num !== 2 || num !== 3 || num !== 5) {
-    return false;
+    return false
   }
-  return true;
-};
+  return true
+}
 ```
 
 **最后**，将结果值返回出去。
@@ -145,36 +144,36 @@ var isUgly = function(num) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
-var isUgly = function (num) {
-  var list = [1, 2, 3, 5];
+var isUgly = function(num) {
+  var list = [1, 2, 3, 5]
 
   if (num <= 0) {
-    return false;
+    return false
   }
 
   if (list.includes(num)) {
-    return true;
+    return true
   } else {
     for (li in list) {
       if (num % list[li] === 0 && list[li] !== 1) {
-        return isUgly(num / list[li]);
+        return isUgly(num / list[li])
       }
     }
   }
 
-  return false;
-};
+  return false
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `num`：`14`
 2. `return`：`false`
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -183,11 +182,11 @@ var isUgly = function (num) {
   ✔ Your memory usage beats 7.53 % of javascript submissions (35.8 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `includes()`：`includes()` 方法用来判断一个数组是否包含一个指定的值，根据情况，如果包含则返回 true，否则返回 false。[`includes()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/includes.md)
 
-* **解题思路**：
+- **解题思路**：
 
 判断这个数，是否属于 1、2、3、5，如果不属于，则按照丑数规则进行递归，最后返回这个数的结果即可。
 

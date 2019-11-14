@@ -1,57 +1,56 @@
-表达式和运算符
-===
+# 表达式和运算符
 
 > create by **jsLe** on **2019-10-16 01:15:15**  
 > Recently revised in **2019-10-16 01:21:05**
 
 本目录按照 MDN 中关于 JavaScript 的分类，将主要表达式 `this`、`function`、`class`、`yield`……等以及算术运算符 `+`、`-`、`*`、`/`……等放到该目录讲解。
 
-* [MDN - 表达式和运算符](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators)
+- [MDN - 表达式和运算符](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators)
 
 ## 一 主要表达式
 
-| 目录 |
-| --- |
-| this |
-| function |
-| class |
-| funciton* |
-| yield |
-| yield* |
-| [] |
-| {} |
-| /ab+c/i |
-| () |
+| 目录       |
+| ---------- |
+| this       |
+| function   |
+| class      |
+| funciton\* |
+| yield      |
+| yield\*    |
+| []         |
+| {}         |
+| /ab+c/i    |
+| ()         |
 
 ## 二 左表达式
 
-| 目录 |
-| --- |
+| 目录       |
+| ---------- |
 | 属性访问符 |
-| new |
+| new        |
 | new.target |
-| super |
-| ...obj |
+| super      |
+| ...obj     |
 
 ## 三 自增和自减
 
 | 目录 |
-| --- |
-| A++ |
-| A-- |
-| ++A |
-| --A |
+| ---- |
+| A++  |
+| A--  |
+| ++A  |
+| --A  |
 
 ## 四 一元运算符
 
-| 目录 |
-| --- |
+| 目录   |
+| ------ |
 | delete |
-| void |
-| + |
-| - |
-| ~ |
-| ! |
+| void   |
+| +      |
+| -      |
+| ~      |
+| !      |
 
 ## 五 更多
 

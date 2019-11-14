@@ -1,5 +1,4 @@
-073 - 矩阵置零（set-matrix-zeroes）
-===
+# 073 - 矩阵置零（set-matrix-zeroes）
 
 > Create by **jsLe** on **2019-08-09 10:43:32**  
 > Recently revised in **2019-09-18 14:18:51**
@@ -8,37 +7,37 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six)             |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven)     |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：中等
-* **涉及知识**：数组
-* **题目地址**：https://leetcode-cn.com/problems/set-matrix-zeroes/
-* **题目内容**：
+- **难度**：中等
+- **涉及知识**：数组
+- **题目地址**：https://leetcode-cn.com/problems/set-matrix-zeroes/
+- **题目内容**：
 
 ```
 给定一个 m x n 的矩阵，如果一个元素为 0，则将其所在行和列的所有元素都设为 0。请使用原地算法。
 
 示例 1:
 
-输入: 
+输入:
 [
   [1,1,1],
   [1,0,1],
   [1,1,1]
 ]
-输出: 
+输出:
 [
   [1,0,1],
   [0,0,0],
@@ -47,13 +46,13 @@
 
 示例 2:
 
-输入: 
+输入:
 [
   [0,1,2,0],
   [3,4,5,2],
   [1,3,1,5]
 ]
-输出: 
+输出:
 [
   [0,0,0,0],
   [0,4,5,0],
@@ -74,64 +73,64 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
-const setZeroes = (matrix) => {
+const setZeroes = matrix => {
   // 每排的长度
-  const rowLength = matrix[0].length;
+  const rowLength = matrix[0].length
   // 总共有几排
-  const verticalLength = matrix.length;
+  const verticalLength = matrix.length
   // 标记 0 的数组
-  let mark = [];
+  let mark = []
   // 遍历矩阵，将 0 都找出来。
   for (let i = 0; i < verticalLength; i++) {
-    let zeroIndexList = [];
+    let zeroIndexList = []
     for (let j = 0; j < rowLength; j++) {
       if (matrix[i][j] === 0) {
-        zeroIndexList.push(j);
+        zeroIndexList.push(j)
       }
     }
-    mark.push(zeroIndexList);
+    mark.push(zeroIndexList)
   }
   // 遍历标记数组，修改对应的矩阵
   for (let i = 0; i < verticalLength; i++) {
     if (mark[i].length) {
       // 计算横排
-      matrix[i] = new Array(rowLength).fill(0);
+      matrix[i] = new Array(rowLength).fill(0)
       // 计算竖排
-      mark[i].forEach((item) => {
+      mark[i].forEach(item => {
         for (let i = 0; i < verticalLength; i++) {
-          matrix[i][item] = 0;
+          matrix[i][item] = 0
         }
       })
     }
   }
-  return matrix;
-};
+  return matrix
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
 
 > [返回目录](#chapter-one)
 
-* `matrix`：
+- `matrix`：
 
 ```js
 let matrix = [
-  [1,1,1],
-  [1,0,1],
-  [1,1,1]
-];
+  [1, 1, 1],
+  [1, 0, 1],
+  [1, 1, 1]
+]
 ```
 
-* `return`：
+- `return`：
 
 ```js
-[
-  [ 1, 0, 1 ],
-  [ 0, 0, 0 ],
-  [ 1, 0, 1 ]
+;[
+  [1, 0, 1],
+  [0, 0, 0],
+  [1, 0, 1]
 ]
 ```
 
@@ -161,33 +160,33 @@ let matrix = [
 **首先**，就我这榆木脑袋，肯定不撞南墙不回头，先暴力试试：
 
 ```js
-const setZeroes = (matrix) => {
-  const rowLength = matrix[0].length;
-  const verticalLength = matrix.length;
-  let temp = [];
+const setZeroes = matrix => {
+  const rowLength = matrix[0].length
+  const verticalLength = matrix.length
+  let temp = []
   for (let i = 0; i < verticalLength; i++) {
-    let zeroIndexList = [];
+    let zeroIndexList = []
     for (let j = 0; j < rowLength; j++) {
       if (matrix[i][j] === 0) {
-        zeroIndexList.push(j);
+        zeroIndexList.push(j)
       }
     }
-    temp.push(zeroIndexList);
+    temp.push(zeroIndexList)
   }
   for (let i = 0; i < verticalLength; i++) {
     if (temp[i].length) {
       // 计算横排
-      matrix[i] = new Array(rowLength).fill(0);
+      matrix[i] = new Array(rowLength).fill(0)
       // 计算竖排
-      temp[i].forEach((item) => {
+      temp[i].forEach(item => {
         for (let i = 0; i < verticalLength; i++) {
-          matrix[i][item] = 0;
+          matrix[i][item] = 0
         }
       })
     }
   }
-  return matrix;
-};
+  return matrix
+}
 ```
 
 思路比较复杂点：
@@ -212,38 +211,38 @@ const setZeroes = (matrix) => {
 **然后**，咱们想想优化方案：
 
 ```js
-const setZeroes = (matrix) => {
+const setZeroes = matrix => {
   // 每排的长度
-  const rowLength = matrix[0].length;
+  const rowLength = matrix[0].length
   // 总共有几排
-  const verticalLength = matrix.length;
+  const verticalLength = matrix.length
   // 标记 0 的数组
-  let mark = [];
+  let mark = []
   // 遍历矩阵，将 0 都找出来。
   for (let i = 0; i < verticalLength; i++) {
-    let zeroIndexList = [];
+    let zeroIndexList = []
     for (let j = 0; j < rowLength; j++) {
       if (matrix[i][j] === 0) {
-        zeroIndexList.push(j);
+        zeroIndexList.push(j)
       }
     }
-    mark.push(zeroIndexList);
+    mark.push(zeroIndexList)
   }
   // 遍历标记数组，修改对应的矩阵
   for (let i = 0; i < verticalLength; i++) {
     if (mark[i].length) {
       // 计算横排
-      matrix[i] = new Array(rowLength).fill(0);
+      matrix[i] = new Array(rowLength).fill(0)
       // 计算竖排
-      mark[i].forEach((item) => {
+      mark[i].forEach(item => {
         for (let i = 0; i < verticalLength; i++) {
-          matrix[i][item] = 0;
+          matrix[i][item] = 0
         }
       })
     }
   }
-  return matrix;
-};
+  return matrix
+}
 ```
 
 写死了~只要写写注释了。

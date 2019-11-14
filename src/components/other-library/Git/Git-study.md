@@ -1,5 +1,4 @@
-Git 学习
-===
+# Git 学习
 
 > Create by **jsLe** on **2018-10-25 15:14:00**  
 > Recently revised in **2019-05-24 13:43:15**
@@ -8,10 +7,10 @@ Git 学习
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 正文](#chapter-three) |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
@@ -22,7 +21,7 @@ Git 学习
 
 但是，仅仅是这些是不够的。所以，跟随 **廖雪峰** 等大神的 Git 教程进行一波自我更新：
 
-* [《Git 教程 - 廖雪峰》](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
+- [《Git 教程 - 廖雪峰》](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
 ## 什么是 Git
 
@@ -38,14 +37,14 @@ Git 是目前世界上最先进的分布式版本控制系统。
 
 这时候，如果有个软件之类的东西帮我们记录就好了：
 
-| 文件名 | 更新信息 | 时间 |
-| --- | --- | --- |
-| 毕业论文 | 第一版，整体内容搭建 | 2019-3-28 08:41:04 |
-| 毕业论文完成版 | 第二版，完成了大部分内容，并进行了排版 | 2019-3-29 08:41:46 |
-| 毕业论文最终版 | 第三版，对第二版进行了删减 | 2019-3-30 08:42:21 |
-| 毕业论文最最终版 | 第四版，对第三版进行了新增 | 2019-3-31 08:42:42 |
-| ... | ... | ... |
-| 毕业论文最最最最终版 | 第六版，对整了下格式 | 2019-4-2 08:43:17 |
+| 文件名               | 更新信息                               | 时间               |
+| -------------------- | -------------------------------------- | ------------------ |
+| 毕业论文             | 第一版，整体内容搭建                   | 2019-3-28 08:41:04 |
+| 毕业论文完成版       | 第二版，完成了大部分内容，并进行了排版 | 2019-3-29 08:41:46 |
+| 毕业论文最终版       | 第三版，对第二版进行了删减             | 2019-3-30 08:42:21 |
+| 毕业论文最最终版     | 第四版，对第三版进行了新增             | 2019-3-31 08:42:42 |
+| ...                  | ...                                    | ...                |
+| 毕业论文最最最最终版 | 第六版，对整了下格式                   | 2019-4-2 08:43:17  |
 
 OK，这时候我们会发觉，我们要找到被删减的内容，只需要去第二版中查找就行了，这就是为何会有版本管理工具的原因。
 
@@ -55,10 +54,10 @@ OK，这时候我们会发觉，我们要找到被删减的内容，只需要去
 
 历史总是前进的，在 Git 之前，还是有其他的版本管理系统：
 
-* VSS：最老的版本有锁，需要锁住才能编辑，提交时解锁，独占修改，小规模最好用，大规模最难用。
-* CSV：代表协作版本系统或者并发版本系统同，是一种版本控制系统，提交失败时解决冲突比较麻烦。
-* SVN：目标是想取代 CSV，相对于 CSV 采用了分支管理系统，配置成 HTTP 服务时比较简单，稳定。
-* Git：相对于 SVN 多一个本地库。
+- VSS：最老的版本有锁，需要锁住才能编辑，提交时解锁，独占修改，小规模最好用，大规模最难用。
+- CSV：代表协作版本系统或者并发版本系统同，是一种版本控制系统，提交失败时解决冲突比较麻烦。
+- SVN：目标是想取代 CSV，相对于 CSV 采用了分支管理系统，配置成 HTTP 服务时比较简单，稳定。
+- Git：相对于 SVN 多一个本地库。
 
 > 历史总是被湮没，每次找资料，都找不全
 
@@ -66,11 +65,11 @@ OK，这时候我们会发觉，我们要找到被删减的内容，只需要去
 
 关于 SVN 和 Git，其实涉及两种管理系统的比较，即：**集中式与分布式**。
 
-* 什么是集中式？集中式版本控制系统，版本库是集中存放在中央服务器的，而干活的时候，用的都是自己的电脑，所以要先从中央服务器取得最新的版本，然后开始干活，干完活了，再把自己的活推送给中央服务器。中央服务器就好比一个图书馆，你要改一本书，必须先从图书馆借出来，然后回到家自己改，改完了，再放回图书馆。
+- 什么是集中式？集中式版本控制系统，版本库是集中存放在中央服务器的，而干活的时候，用的都是自己的电脑，所以要先从中央服务器取得最新的版本，然后开始干活，干完活了，再把自己的活推送给中央服务器。中央服务器就好比一个图书馆，你要改一本书，必须先从图书馆借出来，然后回到家自己改，改完了，再放回图书馆。
 
 ![图](../../public-repertory/img/other-git-2.jpg)
 
-* 什么是分布式？区别于集中式版本控制系统，分布式版本控制系统中没有 “中央服务器”，每个人的电脑都是一个完整的版本库。既然你的电脑是一个完整的版本库，假设你改了文件 A，你的同事也改了文件 A，你们需要协作，这时候只需要将各自修改推送给对方，双方就知道对方修改了什么了。这就好比诸葛亮和周瑜在攻打曹操的时候，各自在手心写了一个字，写完之后亮给对方看，相视一笑：嗯，这 b 跟老子想得一样。
+- 什么是分布式？区别于集中式版本控制系统，分布式版本控制系统中没有 “中央服务器”，每个人的电脑都是一个完整的版本库。既然你的电脑是一个完整的版本库，假设你改了文件 A，你的同事也改了文件 A，你们需要协作，这时候只需要将各自修改推送给对方，双方就知道对方修改了什么了。这就好比诸葛亮和周瑜在攻打曹操的时候，各自在手心写了一个字，写完之后亮给对方看，相视一笑：嗯，这 b 跟老子想得一样。
 
 ![图](../../public-repertory/img/other-git-3.jpg)
 
@@ -80,7 +79,7 @@ OK，这时候我们会发觉，我们要找到被删减的内容，只需要去
 
 对于 Git 安装，2018 年 **jsLe** 入职公司的时候已经安装过，又因为 **廖雪峰** 大佬已经安排的明明白白了，故不多此一举，贴上安装步骤文章：
 
-* [《安装 Git》](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137396287703354d8c6c01c904c7d9ff056ae23da865a000)
+- [《安装 Git》](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137396287703354d8c6c01c904c7d9ff056ae23da865a000)
 
 ## Git 新建版本库
 
@@ -118,7 +117,7 @@ Git 学习
 Git 学习
 ===
 
-> Create by **jsLe** on **2019-3-29 09:08:48**  
+> Create by **jsLe** on **2019-3-29 09:08:48**
 > Recently revised in **2019-3-29 09:08:53**
 ```
 
@@ -156,8 +155,8 @@ index b379f95..78fb1fe 100644
 
 12. 这时候，我们添加了时间，做了新的更改，所以我们又可以进行新一轮的提交：
 
-* `git add .`
-* `git commit -m "添加时间"`
+- `git add .`
+- `git commit -m "添加时间"`
 
 13. 我们再添加下证书并提交：
 
@@ -167,16 +166,16 @@ index b379f95..78fb1fe 100644
 Git 学习
 ===
 
-> Create by **jsLe** on **2019-3-29 09:09:03**  
+> Create by **jsLe** on **2019-3-29 09:09:03**
 > Recently revised in **2019-3-29 09:09:07**
 
 > <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
 ```
 
-* `git add .`
-* `git commit -m "添加协议"`
+- `git add .`
+- `git commit -m "添加协议"`
 
-14.  当我们做的事儿越多，越不可能记住几个字的更改，所以我们需要查找历史记录，见证我们成长的点滴：`git log`
+14. 当我们做的事儿越多，越不可能记住几个字的更改，所以我们需要查找历史记录，见证我们成长的点滴：`git log`
 
 ```bash
 commit 7b88d86f3e079e048c3e5444f91616b826f553a0 (HEAD -> master)
@@ -227,7 +226,7 @@ OK，现在它又回来了。**记住：如果你操作失误回退了，请不�
 
 ### git fetch
 
-从一个或多个其他存储库中获取分支和/或标签(统称为“引用”)以及完成其历史所必需的对象。 远程跟踪分支已更新(Git术语叫做commit)，需要将这些更新取回本地，这时就要用到git fetch命令。
+从一个或多个其他存储库中获取分支和/或标签(统称为“引用”)以及完成其历史所必需的对象。 远程跟踪分支已更新(Git 术语叫做 commit)，需要将这些更新取回本地，这时就要用到 git fetch 命令。
 
 ### git 取消忽略文件大小写的更改
 
@@ -235,9 +234,9 @@ OK，现在它又回来了。**记住：如果你操作失误回退了，请不�
 
 ### git 删除文件夹
 
-* 删除 `target` 文件夹：`git rm -r --cached target`
-* 提交更改：`git commit -m "删除 target 目录"`
-* 确认更改：`git push`
+- 删除 `target` 文件夹：`git rm -r --cached target`
+- 提交更改：`git commit -m "删除 target 目录"`
+- 确认更改：`git push`
 
 ### git 覆盖上一次 commit 提交信息
 
@@ -245,22 +244,22 @@ OK，现在它又回来了。**记住：如果你操作失误回退了，请不�
 
 ### git 分支
 
-* 创建分支：`git branch cheny`
-* 切换到分支：`git checkout cheny`
-* 添加修改代码到缓存：`git add .`
-* 提交：`git commit -m "修改"`
-* 提交到分支：`git push origin cheny`/`git push --set-upstream origin cheny`
+- 创建分支：`git branch cheny`
+- 切换到分支：`git checkout cheny`
+- 添加修改代码到缓存：`git add .`
+- 提交：`git commit -m "修改"`
+- 提交到分支：`git push origin cheny`/`git push --set-upstream origin cheny`
 
 ## 同时配置 GitLab 和 GitHub
 
-* 缘由：公司使用 GitLab，个人使用 GitHub，因此需要配置下 Git，方便上传到公司的 GitLab 项目和个人的 GitHub 项目上。
+- 缘由：公司使用 GitLab，个人使用 GitHub，因此需要配置下 Git，方便上传到公司的 GitLab 项目和个人的 GitHub 项目上。
 
-* 参考文献：
+- 参考文献：
 
-1. [同一台电脑同时使用gitlab和github](https://blog.csdn.net/u014296452/article/details/79984867)
+1. [同一台电脑同时使用 gitlab 和 github](https://blog.csdn.net/u014296452/article/details/79984867)
 2. [配置同时使用 Gitlab 和 Github 的开发环境](https://www.cnblogs.com/kelsen/archive/2018/01/24/8342239.html)
 
-* Mac 配置步骤
+- Mac 配置步骤
 
 1. CD 到用户根目录下的 `.ssh` 文件夹中：`cd .ssh`
 2. 生成 GitLab 秘钥：`ssh-keygen -t rsa -C "注册 gitlab 账户的邮箱"`，提示后输入 `id_rsa_gitlab`，这样就在 `.ssh` 目录下生成了 GitLab 的秘钥。
@@ -274,8 +273,8 @@ id_rsa_github		id_rsa_gitlab
 ```
 
 4. 提供公钥给服务器
-   1. 复制 ~/.ssh/id_rsa_gitlab.pub文件内容，进入gitlab / profile / SSH Keys，将公钥内容添加至 gitlab 。
-   2. 复制 ~/.ssh/id_rsa_github.pub文件内容，进入github / setting / SSH and GPG keys / New SSH key 将公钥内容添加至 github 。
+   1. 复制 ~/.ssh/id_rsa_gitlab.pub 文件内容，进入 gitlab / profile / SSH Keys，将公钥内容添加至 gitlab 。
+   2. 复制 ~/.ssh/id_rsa_github.pub 文件内容，进入 github / setting / SSH and GPG keys / New SSH key 将公钥内容添加至 github 。
 5. 在 `.ssh` 中添加 `config` 文件（文本文件，不存在后缀），内容为：
 
 > config
@@ -334,14 +333,14 @@ id_rsa_github		id_rsa_gitlab		known_hosts
 # 找到那次版本记录
 git reset --hard 0cdade676ed032777f6f8ecbf2f61257c1a98283
 # 强制推送到远程仓库
-git push -f -u origin master 
+git push -f -u origin master
 ```
 
 这样，就成功返回了之前的版本！
 
 ## 配置 .gitignore
 
-在我们使用Git的过程中，有时候喜欢建一些文件给自己查看使用而不是给大众使用，或者说像是 node_modules 这些文件不希望上传到代码仓库的，这时候就需要设置响应的忽略规则，来忽略这些文件的提交。
+在我们使用 Git 的过程中，有时候喜欢建一些文件给自己查看使用而不是给大众使用，或者说像是 node_modules 这些文件不希望上传到代码仓库的，这时候就需要设置响应的忽略规则，来忽略这些文件的提交。
 
 ### 全局生效
 
@@ -400,4 +399,4 @@ node_modules
 [![图](../../public-repertory/img/z-small-seek-ali-3.jpg)](https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=w7hismrh)
 [![图](../../public-repertory/img/z-small-seek-tencent-2.jpg)](https://cloud.tencent.com/redirect.php?redirect=1014&cps_key=49f647c99fce1a9f0b4e1eeb1be484c9&from=console)
 
-> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。
+> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

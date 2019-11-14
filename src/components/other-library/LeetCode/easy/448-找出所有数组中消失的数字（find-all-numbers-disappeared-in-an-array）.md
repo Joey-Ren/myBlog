@@ -1,5 +1,4 @@
-448 - 找出所有数组中消失的数字（find-all-numbers-disappeared-in-an-array）
-===
+# 448 - 找出所有数组中消失的数字（find-all-numbers-disappeared-in-an-array）
 
 > Create by **jsLe** on **2019-7-30 07:50:53**  
 > Recently revised in **2019-09-18 14:09:51**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - Map](#chapter-three-one) |
-| &emsp;[3.2 解法 - Set](#chapter-three-two) |
+| &emsp;[3.1 解法 - Map](#chapter-three-one)                                               |
+| &emsp;[3.2 解法 - Set](#chapter-three-two)                                               |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数组
-* **题目地址**：https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数组
+- **题目地址**：https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/
+- **题目内容**：
 
 ```
 给定一个范围在  1 ≤ a[i] ≤ n ( n = 数组大小 ) 的 整型数组，数组中的元素一些出现了两次，另一些只出现一次。
@@ -51,37 +50,37 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
-const findDisappearedNumbers = (nums) => {
-  let map = new Map();
+const findDisappearedNumbers = nums => {
+  let map = new Map()
   for (let i = 1; i <= nums.length; i++) {
-    map.set(i, 1);
+    map.set(i, 1)
   }
   for (let j = 0; j < nums.length; j++) {
     if (map.get(nums[j])) {
-      map.delete(nums[j]);
+      map.delete(nums[j])
     }
   }
-  let result = [];
+  let result = []
   for (let key of map.keys()) {
-    result.push(key);
+    result.push(key)
   }
-  return result;
-};
+  return result
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums`：`[4,3,2,7,8,2,3,1]`
 2. `return`：
 
 ```js
-[5, 6]
+;[5, 6]
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 √ Accepted
@@ -90,12 +89,12 @@ const findDisappearedNumbers = (nums) => {
   √ Your memory usage beats 5.17 % of javascript submissions (61.9 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `Map`：保存键值对。任何值(对象或者原始值) 都可以作为一个键或一个值。[`Map` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Map/README.md)
 2. `push()`：`push()` 方法将一个或多个元素添加到数组的末尾，并返回该数组的新长度。[`push()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/push.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **犹豫即将败北**。
 
@@ -104,22 +103,22 @@ const findDisappearedNumbers = (nums) => {
 所以直接上手：
 
 ```js
-const findDisappearedNumbers = (nums) => {
-  let map = new Map();
+const findDisappearedNumbers = nums => {
+  let map = new Map()
   for (let i = 1; i <= nums.length; i++) {
-    map.set(i, 1);
+    map.set(i, 1)
   }
   for (let j = 0; j < nums.length; j++) {
     if (map.get(nums[j])) {
-      map.delete(nums[j]);
+      map.delete(nums[j])
     }
   }
-  let result = [];
+  let result = []
   for (let key of map.keys()) {
-    result.push(key);
+    result.push(key)
   }
-  return result;
-};
+  return result
+}
 ```
 
 **然后**，Submit 提交看看：
@@ -138,9 +137,9 @@ const findDisappearedNumbers = (nums) => {
 步骤 1：设置一个 1-n 的哈希表：
 
 ```js
-let map = new Map();
+let map = new Map()
 for (let i = 1; i <= nums.length; i++) {
-  map.set(i, 1);
+  map.set(i, 1)
 }
 // Map {
 //   1 => 1,
@@ -159,7 +158,7 @@ for (let i = 1; i <= nums.length; i++) {
 ```js
 for (let j = 0; j < nums.length; j++) {
   if (map.get(nums[j])) {
-    map.delete(nums[j]);
+    map.delete(nums[j])
   }
 }
 // Map {
@@ -171,11 +170,11 @@ for (let j = 0; j < nums.length; j++) {
 步骤 3：遍历哈希表，将其转换为数组：
 
 ```js
-let result = [];
+let result = []
 for (let key of map.keys()) {
-  result.push(key);
+  result.push(key)
 }
-return result;
+return result
 // [ 5, 6 ]
 ```
 
@@ -187,32 +186,32 @@ return result;
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
-const findDisappearedNumbers = (nums) => {
-  let newNums = [...new Set(nums)].sort((a, b) => a - b);
-  let result = [];
+const findDisappearedNumbers = nums => {
+  let newNums = [...new Set(nums)].sort((a, b) => a - b)
+  let result = []
   for (let i = 0; i < nums.length; i++) {
-    if (newNums[i] != (i + 1)) {
-      newNums.splice(i, 0, (i + 1));
-      result.push((i + 1));
+    if (newNums[i] != i + 1) {
+      newNums.splice(i, 0, i + 1)
+      result.push(i + 1)
     }
   }
-  return result;
-};
+  return result
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums`：`[4,3,2,7,8,2,3,1]`
 2. `return`：
 
 ```js
-[5, 6]
+;[5, 6]
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 √ Accepted
@@ -221,29 +220,29 @@ const findDisappearedNumbers = (nums) => {
   √ Your memory usage beats 5.17 % of javascript submissions (51.9 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `Set`：`Set` 对象允许你存储任何类型的唯一值，无论是原始值或者是对象引用。[`Set` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Set/README.md)
 2. `sort()`：排序，保持返回数组的数字为顺序排列。[`sort()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/sort.md)
 3. `splice()`：`splice()` 方法通过删除或替换现有元素或者原地添加新的元素来修改数组,并以数组形式返回被修改的内容。此方法会改变原数组。[`splice()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/splice.md)
 4. `push()`：`push()` 方法将一个或多个元素添加到数组的末尾，并返回该数组的新长度。[`push()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/push.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **首先**，在上文中，我们讲到了使用 `Map` 进行求解。而讲起 `Map`，**jsLe** 又想到了它的死对头 `Set`，然后尝试了一波：
 
 ```js
-const findDisappearedNumbers = (nums) => {
-  let newNums = [...new Set(nums)].sort((a, b) => a - b);
-  let result = [];
+const findDisappearedNumbers = nums => {
+  let newNums = [...new Set(nums)].sort((a, b) => a - b)
+  let result = []
   for (let i = 0; i < nums.length; i++) {
-    if (newNums[i] != (i + 1)) {
-      newNums.splice(i, 0, (i + 1));
-      result.push((i + 1));
+    if (newNums[i] != i + 1) {
+      newNums.splice(i, 0, i + 1)
+      result.push(i + 1)
     }
   }
-  return result;
-};
+  return result
+}
 ```
 
 **然后**，我们看看它的思路：
@@ -254,7 +253,7 @@ const findDisappearedNumbers = (nums) => {
 
 **最后**，我们将 `result` 返回出去即可。
 
-* **进一步思考**：
+- **进一步思考**：
 
 那么，在上面，我们使用了自己的智慧进行解题，下面该看看大佬们的解题技巧啦：
 
@@ -262,18 +261,18 @@ const findDisappearedNumbers = (nums) => {
 
 ```js
 var findDisappearedNumbers = function(nums) {
-  var newNums = [];
-  var result = [];
+  var newNums = []
+  var result = []
   for (var i = 1; i <= nums.length; i++) {
-    newNums[i] = nums.findIndex(e => e === i);
+    newNums[i] = nums.findIndex(e => e === i)
   }
   for (var i in newNums) {
     if (newNums[i] === -1) {
-      result.push(i);
+      result.push(i)
     }
   }
-  return result;
-};
+  return result
+}
 ```
 
 Submit：
@@ -289,12 +288,12 @@ Submit：
 
 ```js
 const findDisappearedNumbers = nums => {
-  const arr = [...nums];
+  const arr = [...nums]
   for (let i = 0; i < nums.length; i++) {
-    arr[nums[i] - 1] > 0 && (arr[nums[i] - 1] *= -1);
+    arr[nums[i] - 1] > 0 && (arr[nums[i] - 1] *= -1)
   }
-  return arr.map((item, index) => item > 0 && index + 1).filter(Number);
-};
+  return arr.map((item, index) => item > 0 && index + 1).filter(Number)
+}
 ```
 
 Submit：
@@ -312,17 +311,17 @@ Submit：
 var findDisappearedNumbers = function(nums) {
   let ans = Array(nums.length)
     .fill(null)
-    .map((_, h) => h + 1);
+    .map((_, h) => h + 1)
   for (let i = 0; i < nums.length; i++) {
     if (ans[nums[i] - 1] == nums[i]) {
-      ans[nums[i] - 1] = 0;
+      ans[nums[i] - 1] = 0
     }
   }
   ans = ans.filter(value => {
-    return value != 0;
-  });
-  return ans;
-};
+    return value != 0
+  })
+  return ans
+}
 ```
 
 Submit：

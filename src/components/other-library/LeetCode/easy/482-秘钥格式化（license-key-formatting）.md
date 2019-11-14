@@ -1,5 +1,4 @@
-482 - 秘钥格式化（license-key-formatting）
-===
+# 482 - 秘钥格式化（license-key-formatting）
 
 > Create by **jsLe** on **2019-10-26 16:04:27**  
 > Recently revised in **2019-10-26 17:05:48**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题及测试](#chapter-three) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题及测试](#chapter-three)   |
 | <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 LeetCode Submit](#chapter-four) |
-| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 解题思路](#chapter-five) |
+| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 解题思路](#chapter-five)        |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数组、字符串
-* **题目地址**：https://leetcode-cn.com/problems/license-key-formatting/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数组、字符串
+- **题目地址**：https://leetcode-cn.com/problems/license-key-formatting/
+- **题目内容**：
 
 ```
 给定一个密钥字符串S，只包含字母，数字以及 '-'（破折号）。
@@ -66,7 +65,7 @@ S 非空
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **LeetCode 给定函数体**：
+- **LeetCode 给定函数体**：
 
 ```js
 /**
@@ -74,9 +73,7 @@ S 非空
  * @param {number} K
  * @return {string}
  */
-var licenseKeyFormatting = function(S, K) {
-  
-};
+var licenseKeyFormatting = function(S, K) {}
 ```
 
 根据上面的已知函数，尝试破解本题吧~
@@ -93,24 +90,27 @@ var licenseKeyFormatting = function(S, K) {
  * @return {string}
  */
 const licenseKeyFormatting = (S, K) => {
-  S = S.split('').filter(i => i !== '-').join('').toUpperCase();
+  S = S.split('')
+    .filter(i => i !== '-')
+    .join('')
+    .toUpperCase()
 
-  let result = '';
+  let result = ''
   for (let i = S.length - 1, j = 1; i >= 0; i--, j++) {
-    result = S[i] + result;
+    result = S[i] + result
     if (j === K && i !== 0) {
-      result = '-' + result;
-      j = 0;
+      result = '-' + result
+      j = 0
     }
   }
-  return result;
-};
+  return result
+}
 
 // const S = '2-5g-3-J';
 // const K = 2;
-const S = '5F3Z-2e-9-w';
-const K = 4;
-console.log(licenseKeyFormatting(S, K));
+const S = '5F3Z-2e-9-w'
+const K = 4
+console.log(licenseKeyFormatting(S, K))
 ```
 
 `node index.js` 返回：
@@ -144,17 +144,19 @@ Accepted
  * @return {string}
  */
 const licenseKeyFormatting = (S, K) => {
-  S = S.split('').filter(i => i !== '-').join('');
-  let result = '';
+  S = S.split('')
+    .filter(i => i !== '-')
+    .join('')
+  let result = ''
   for (let i = 0; i < S.length; i++) {
-    if ((i + 1) % K === 0 && (i + 1) != S.length) {
-      result = result + S[i] + '-';
+    if ((i + 1) % K === 0 && i + 1 != S.length) {
+      result = result + S[i] + '-'
     } else {
-      result += S[i];
+      result += S[i]
     }
   }
-  return result.toUpperCase();
-};
+  return result.toUpperCase()
+}
 ```
 
 Submit 后立马暴毙：
@@ -186,26 +188,29 @@ Expected Answer
  * @return {string}
  */
 const licenseKeyFormatting = (S, K) => {
-  let result = '';
+  let result = ''
   // 切割第一个分组
-  const firstLength = S.split('-')[0].length;
+  const firstLength = S.split('-')[0].length
   // 切割第二个及以上分组
-  let start = 0;
+  let start = 0
   if (firstLength <= K) {
-    start = firstLength;
+    start = firstLength
   } else {
-    start = K;
+    start = K
   }
-  S = S.split('').filter(i => i !== '-').join('').toUpperCase();
-  result = result + S.slice(0, start) + '-';
+  S = S.split('')
+    .filter(i => i !== '-')
+    .join('')
+    .toUpperCase()
+  result = result + S.slice(0, start) + '-'
   for (let i = start; i < S.length; i++) {
-    result += S[i];
-    if ((i + 1 - start) % K === 0 && (i + 1) != S.length) {
-      result += '-';
+    result += S[i]
+    if ((i + 1 - start) % K === 0 && i + 1 != S.length) {
+      result += '-'
     }
   }
-  return result;
-};
+  return result
+}
 ```
 
 Submit 提交：
@@ -234,18 +239,21 @@ Expected Answer
  * @return {string}
  */
 const licenseKeyFormatting = (S, K) => {
-  S = S.split('').filter(i => i !== '-').join('').toUpperCase();
+  S = S.split('')
+    .filter(i => i !== '-')
+    .join('')
+    .toUpperCase()
 
-  let result = '';
+  let result = ''
   for (let i = S.length - 1, j = 1; i >= 0; i--, j++) {
-    result = S[i] + result;
+    result = S[i] + result
     if (j === K && i !== 0) {
-      result = '-' + result;
-      j = 0;
+      result = '-' + result
+      j = 0
     }
   }
-  return result;
-};
+  return result
+}
 ```
 
 Submit 提交：

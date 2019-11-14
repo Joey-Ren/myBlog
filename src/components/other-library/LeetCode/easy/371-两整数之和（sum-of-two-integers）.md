@@ -1,5 +1,4 @@
-371 - 两整数之和（sum-of-two-integers）
-===
+# 371 - 两整数之和（sum-of-two-integers）
 
 > Create by **jsLe** on **2019-07-23 17:01:33**  
 > Recently revised in **2019-07-23 17:14:46**
@@ -8,23 +7,23 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six)           |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：位运算
-* **题目地址**：https://leetcode-cn.com/problems/sum-of-two-integers/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：位运算
+- **题目地址**：https://leetcode-cn.com/problems/sum-of-two-integers/
+- **题目内容**：
 
 ```
 不使用运算符 + 和 - ​​​​​​​，计算两整数 ​​​​​​​a 、b ​​​​​​​之和。
@@ -44,19 +43,19 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
-var getSum = function (a, b) {
-  var sum = a ^ b;
-  var carry = (a & b) << 1;
+var getSum = function(a, b) {
+  var sum = a ^ b
+  var carry = (a & b) << 1
   while (carry) {
-    var temp = sum;
-    sum ^= carry;
-    carry = (temp & carry) << 1;
+    var temp = sum
+    sum ^= carry
+    carry = (temp & carry) << 1
   }
-  return sum;
-};
+  return sum
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
@@ -90,8 +89,8 @@ var getSum = function (a, b) {
 
 ```js
 var getSum = function(a, b) {
-  return a + b;
-};
+  return a + b
+}
 ```
 
 得到 Submit：
@@ -110,20 +109,20 @@ var getSum = function(a, b) {
 **然后**，还是看看大佬怎么做的吧：
 
 ```js
-var getSum = function (a, b) {
+var getSum = function(a, b) {
   /* 按位与：只有两个操作数中相应位为 1 结果才为 1，其余情况结果为 0。
    * 按位异或：只有两个操作数同时为 1 或为 0 结果为 0，其余情况结果为 1。
    * + 运算符：两操作数同时为 1 结果为 0 并进位 1，其余为 0。
    */
-  var sum = a ^ b;
-  var carry = (a & b) << 1;
+  var sum = a ^ b
+  var carry = (a & b) << 1
   while (carry) {
-    var temp = sum;
-    sum ^= carry;
-    carry = (temp & carry) << 1;
+    var temp = sum
+    sum ^= carry
+    carry = (temp & carry) << 1
   }
-  return sum;
-};
+  return sum
+}
 ```
 
 Submit 后：

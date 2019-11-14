@@ -1,25 +1,21 @@
-Function.prototype.call()
-===
+# Function.prototype.call()
 
 > Create by **jsLe** on **2019-10-15 22:28:55**  
 > Recently revised in **2019-10-15 22:28:58**
 
-* **原文**：[MDN - call()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
+- **原文**：[MDN - call()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
 
-* **功能**：`call()` 方法调用一个具有给定 `this` 值的函数，以及作为一个数组（或类似数组对象）提供的参数。
+- **功能**：`call()` 方法调用一个具有给定 `this` 值的函数，以及作为一个数组（或类似数组对象）提供的参数。
 
-* **方法**：`obj.toString()`
+- **方法**：`obj.toString()`
 
-* **返回值**：一个表示该对象的字符串。
+- **返回值**：一个表示该对象的字符串。
 
-* **说明**：
-
-
+- **说明**：
 
 * **代码**：
 
 ```js
-
 ```
 
 ---

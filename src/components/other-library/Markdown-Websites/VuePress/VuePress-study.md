@@ -1,14 +1,13 @@
-VuePress 学习
-===
+# VuePress 学习
 
 > Create by **jsLe** on **2018-10-20 10:34:39**  
 > Recently revised in **2019-05-30 20:42:39**
 
 **小伙伴们如果觉得不错可以到 [jsLe 的文档库](https://github.com/LiangJunrong/document-library) 为 jsLe 点个 star，谢谢~**
 
-* **参考文档**：[VuePress 中文网](http://caibaojian.com/vuepress/)
+- **参考文档**：[VuePress 中文网](http://caibaojian.com/vuepress/)
 
-* **效果**：
+- **效果**：
 
 ![图](../../../public-repertory/img/other-VuePress-1.png)
 
@@ -18,16 +17,16 @@ VuePress 学习
 
 **不折腾的前端，和咸鱼有什么区别！**
 
-| 目录名 |
-| --- |
-| <a name="catalog-chapter-one" id="catalog-chapter-one"></a>[一 目录](#chapter-one) |
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录名                                                                                            |
+| ------------------------------------------------------------------------------------------------- |
+| <a name="catalog-chapter-one" id="catalog-chapter-one"></a>[一 目录](#chapter-one)                |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)                |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 搭建 VuePress](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 目录讲解](#chapter-four) |
-| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 导航栏](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 侧边栏](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 默认首页](#chapter-seven) |
-| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 总结](#chapter-eight) |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 目录讲解](#chapter-four)         |
+| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 导航栏](#chapter-five)           |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 侧边栏](#chapter-six)              |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 默认首页](#chapter-seven)      |
+| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 总结](#chapter-eight)          |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
@@ -37,23 +36,23 @@ VuePress，是以 Vue 为驱动的主题系统的简约静态网站生成工具 
 
 它是咱 **尤雨溪** 大神折腾出来的一个工具，初始目的是为了方便他使用 Markdown 语法来写文档，然后生成 HTML 代码，部署到服务器上即可。
 
-在众多网友的修改下，它可以拿来写静态网站，也就是可以拿来发布我们编写的博文。[【VuePress 官网】](http://caibaojian.com/vuepress/)  
+在众多网友的修改下，它可以拿来写静态网站，也就是可以拿来发布我们编写的博文。[【VuePress 官网】](http://caibaojian.com/vuepress/)
 
 本章节需要有 Markdown 基础，如果你还不知道 Markdown，请前往 **jsLe** 的 Markdown 文章进行学习。
 
-* [Markdown 学习](../Markdown/Markdown-study.md)
+- [Markdown 学习](../Markdown/Markdown-study.md)
 
 ## <a name="chapter-three" id="chapter-three">三 搭建 VuePress</a>
 
 > [返回目录](#chapter-one)
 
-* **步骤 1**. 安装 VuePress
+- **步骤 1**. 安装 VuePress
 
 在你需要存放的目录中，通过终端命令行安装 VuePress：`npm i vuepress -D`
 
 ![图](../../../public-repertory/img/other-VuePress-3.png)
 
-* **步骤 2**. 创建目录及部署代码
+- **步骤 2**. 创建目录及部署代码
 
 ![图](../../../public-repertory/img/other-VuePress-4.png)
 
@@ -75,8 +74,8 @@ VuePress，是以 Vue 为驱动的主题系统的简约静态网站生成工具 
 
 > 注：
 
-* `npm run dev` 即可开始实时编辑模式
-* `npm run build` 即可对代码进行压缩打包，打包后的文件夹在 `.vuepress/dist` 上。
+- `npm run dev` 即可开始实时编辑模式
+- `npm run build` 即可对代码进行压缩打包，打包后的文件夹在 `.vuepress/dist` 上。
 
 **然后**，创建 docs 文件夹，并在 docs 文件夹下创建 README.md 文件
 
@@ -91,13 +90,13 @@ Hello VuePress
 
 ![图](../../../public-repertory/img/other-VuePress-5.png)
 
-值得注意的是。在这里，我们是通过 `npm run dev` 即时获取我们修改的页面显示（Webpack 配置），所以我们只需要改动完毕保存页面，浏览器会自动刷新。。  
+值得注意的是。在这里，我们是通过 `npm run dev` 即时获取我们修改的页面显示（Webpack 配置），所以我们只需要改动完毕保存页面，浏览器会自动刷新。。
 
 **最后**，我们可以通过 `npm run build` 打包我们的代码，你可以在 `.vuepress` 中找到一个 `dist` 文件夹，然后将 `dist` 中的文件夹上传至 `用户名.github.io`，即可完成 VuePress 的部署。
 
 > 关于如何部署 GitHub Pages 并能通过 `用户名.github.io` 访问：
 
-* [Github Pages 学习](../Github-Pages/Github-Pages-study.md)
+- [Github Pages 学习](../Github-Pages/Github-Pages-study.md)
 
 ## <a name="chapter-four" id="chapter-four">四 目录讲解</a>
 
@@ -135,7 +134,7 @@ Hello VuePress
 
 > [返回目录](#chapter-one)
 
-在这里，我们开始进行顶部导航栏的配置。  
+在这里，我们开始进行顶部导航栏的配置。
 
 **首先**，我们填写下 `config.js` 中的配置代码：
 
@@ -150,14 +149,17 @@ module.exports = {
   // 头部部署，右上角小图标
   head: [
     // ico 配置
-    ['link', {
-      rel: 'icon',
-      href: '/img/logo.ico'
-    }]
+    [
+      'link',
+      {
+        rel: 'icon',
+        href: '/img/logo.ico'
+      }
+    ]
   ],
   // 主题部署
   themeConfig: {
-    /** 
+    /**
      * 右侧导航条
      * text - 显示字段
      * link - 链接：注意前后带 / 符号
@@ -168,11 +170,11 @@ module.exports = {
         link: '/'
       },
       /**
-      * 多级菜单
-      * 开头 text 为一级标题
-      * 数组内 text 为二级标题
-      * link 为链接，注意带 /
-      */
+       * 多级菜单
+       * 开头 text 为一级标题
+       * 数组内 text 为二级标题
+       * link 为链接，注意带 /
+       */
       {
         text: '博文',
         items: [
@@ -194,7 +196,7 @@ module.exports = {
       {
         text: 'Github',
         link: 'https://www.github.com/LiangJunrong'
-      },
+      }
     ]
   }
 }
@@ -225,11 +227,11 @@ module.exports = {
   title: 'jsLe 的文档库',
   description: '前端工程师 jsLe 的文档库',
   head: [
-    // ...省略，配置代码同 3.2.2    
+    // ...省略，配置代码同 3.2.2
   ],
   themeConfig: {
     nav: [
-      // ...省略，配置代码同 3.2.2   
+      // ...省略，配置代码同 3.2.2
     ],
     /**
      * 侧边栏配置：侧边栏组
@@ -265,7 +267,7 @@ module.exports = {
 
 VuePress 为我们设置了一套默认的首页，我们直接拿来用，看看它长什么样子吧！
 
-**首先**，我们找一张 banner.png 图，放到 `public/img/banner.png` 上。  
+**首先**，我们找一张 banner.png 图，放到 `public/img/banner.png` 上。
 
 **然后**，我们修改下 `docs/README.md` 文件：
 

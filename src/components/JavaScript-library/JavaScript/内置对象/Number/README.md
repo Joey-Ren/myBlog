@@ -1,29 +1,29 @@
-Number
-===
+# Number
 
 > Create by **jsLe** on **2019-09-16 15:40:32**  
 > Recently revised in **2019-09-18 08:51:07**
 
-* **原文**：[MDN - Number](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number)
+- **原文**：[MDN - Number](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number)
 
-* **功能**：`Number` 可以将其他类型的值转为数字。
+- **功能**：`Number` 可以将其他类型的值转为数字。
 
-* **方法**：
-  * `new Map()`：新建一个 `Map` 对象
-  * `Number(x)`：将其他类型的值转为数字
-  * `Number.MAX_SAFE_INTEGER`：JavaScript 中最大的安全整数 (2 的 53 次方 - 1)。
-  * `Number.MIN_SAFE_INTEGER`：JavaScript 中最小的安全整数 (-(2 的 53 次方 - 1)).
+- **方法**：
 
-* **代码**：
+  - `new Map()`：新建一个 `Map` 对象
+  - `Number(x)`：将其他类型的值转为数字
+  - `Number.MAX_SAFE_INTEGER`：JavaScript 中最大的安全整数 (2 的 53 次方 - 1)。
+  - `Number.MIN_SAFE_INTEGER`：JavaScript 中最小的安全整数 (-(2 的 53 次方 - 1)).
+
+- **代码**：
 
 ```js
-Number("123")     // 123
-Number("")        // 0
-Number("0x11")    // 17
-Number("0b11")    // 3
-Number("0o11")    // 9
-Number("foo")     // NaN
-Number("100a")    // NaN
+Number('123') // 123
+Number('') // 0
+Number('0x11') // 17
+Number('0b11') // 3
+Number('0o11') // 9
+Number('foo') // NaN
+Number('100a') // NaN
 ```
 
 ---

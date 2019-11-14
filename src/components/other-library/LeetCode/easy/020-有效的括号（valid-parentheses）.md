@@ -1,5 +1,4 @@
-020 - 有效的括号（valid-parentheses）
-===
+# 020 - 有效的括号（valid-parentheses）
 
 > Create by **jsLe** on **2019-06-04 11:39:30**  
 > Recently revised in **2019-09-18 09:55:03**
@@ -8,20 +7,20 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：栈、字符串
-* **题目地址**：https://leetcode-cn.com/problems/valid-parentheses/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：栈、字符串
+- **题目地址**：https://leetcode-cn.com/problems/valid-parentheses/
+- **题目内容**：
 
 ```
 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
@@ -57,43 +56,43 @@
 
 > [返回目录](#chapter-one)
 
-* **官方题解**：https://leetcode-cn.com/problems/valid-parentheses/solution/you-xiao-de-gua-hao-by-leetcode/
+- **官方题解**：https://leetcode-cn.com/problems/valid-parentheses/solution/you-xiao-de-gua-hao-by-leetcode/
 
 解题千千万，官方独一家，上面是官方使用 Java 进行的题解。
 
 小伙伴可以先自己在本地尝试解题，再看看官方解题，最后再回来看看 **jsLe** 讲解下使用 JavaScript 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var isValid = function(s) {
   let judge = {
     '[': ']',
     '(': ')',
-    '{': '}',
+    '{': '}'
   }
-  let parameter = s.split('');
-  let stack = [];
+  let parameter = s.split('')
+  let stack = []
   for (let i = 0; i < parameter.length; i++) {
     if (judge[stack[stack.length - 1]] === parameter[i]) {
-      stack.pop();
+      stack.pop()
     } else {
-      stack.push(parameter[i]);
+      stack.push(parameter[i])
     }
   }
   if (stack.length == 0) {
-    return true;
+    return true
   }
-  return false;
-};
+  return false
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `s`：`()[]{}`
 2. `return`：`true`
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -102,17 +101,17 @@ var isValid = function(s) {
   ✔ Your memory usage beats 66.23 % of javascript submissions (33.8 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `split()`：`split()` 方法使用指定的分隔符字符串将一个 String 对象分割成字符串数组，以将字符串分隔为子字符串，以确定每个拆分的位置。[`split()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/String/split.md)
 2. `push()`：`push()` 方法将一个或多个元素添加到数组的末尾，并返回该数组的新长度。[`push()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/push.md)
 3. `pop()`：`pop()` 方法从数组中删除最后一个元素，并返回该元素的值。此方法更改数组的长度。[`pop()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/pop.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **首先**，我们来想下平时玩的翻牌游戏：
 
-游戏屏幕中有 4 * 4 共 16 张牌。
+游戏屏幕中有 4 \* 4 共 16 张牌。
 
 如果在同一个回合中（一个回合能翻 2 次牌），我们翻出来相同的两张牌，就把它摊开（消掉）；
 
@@ -133,7 +132,7 @@ OK，这么讲，小伙伴们大致清楚了。
 
 **同时**，我们初始化下数据：
 
-* `judge`: 
+- `judge`:
 
 ```
 {
@@ -143,8 +142,8 @@ OK，这么讲，小伙伴们大致清楚了。
 }
 ```
 
-* `parameter`：`[ '(', '(', ')', '[', ']', '{', '}', ')' ]`
-* `stack`：`[]`
+- `parameter`：`[ '(', '(', ')', '[', ']', '{', '}', ')' ]`
+- `stack`：`[]`
 
 **然后**，我们是不是该开始使用我们的作弊器了：
 

@@ -1,22 +1,21 @@
-微信小程序之奇技淫巧
-===
+# 微信小程序之奇技淫巧
 
 > Create by **jsLe** on **2018-11-21 20:46:36**  
 > Recently revised in **2019-05-30 20:09:52**
 
 **Hello 小伙伴们，如果觉得本文还不错，记得给个 **star** ， 你们的 **star** 是我学习的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
 
-* **开篇点题**：  
+- **开篇点题**：
 
-这是一篇专研微信小程序各种功能实现的文章，例如布局、通讯录、组件之底部导航栏等……  
+这是一篇专研微信小程序各种功能实现的文章，例如布局、通讯录、组件之底部导航栏等……
 
 感觉不错的小伙伴，点赞点 Star 走一波；
 
-感觉文章有误的小伙伴，评论区、[QQ群](https://jq.qq.com/?_wv=1027&k=5qu79al) 溜达一番。  
+感觉文章有误的小伙伴，评论区、[QQ 群](https://jq.qq.com/?_wv=1027&k=5qu79al) 溜达一番。
 
-虚心求教，不胜感激~ 
+虚心求教，不胜感激~
 
-* **项目图**：
+- **项目图**：
 
 ![图](../../public-repertory/img/other-WechatAppletFunctionList-1.png)
 
@@ -26,40 +25,40 @@
 
 > 文章篇幅甚多，请利用好目录进行跳转！
 
-| 目录 |                                                                             
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 功能列表](#chapter-three) |
-| &emsp;<a name="catalog-chapter-three-one" id="catalog-chapter-three-one"></a>[3.1 排兵布阵 - Flex布局](#chapter-three-one) |
-| &emsp;&emsp;[3.1.1 楼起平地 - 基础概念](#chapter-three-one-one) |
-| &emsp;&emsp;[3.1.2 搭砖建瓦 - 左右布局](#chapter-three-one-two) |
-| &emsp;&emsp;[3.1.3 层台累榭 - 混合布局](#chapter-three-one-three) |
-| &emsp;<a name="catalog-chapter-three-two" id="catalog-chapter-three-two"></a>[3.2 沙场点兵 - 通讯录](#chapter-three-two) |
-| &emsp;&emsp;[3.2.1 谋定苍生 - 整体布局](#chapter-three-two-one) |
-| &emsp;&emsp;[3.2.2 千里寻敌 - 搜索功能](#chapter-three-two-two) |
-| &emsp;&emsp;[3.2.3 遥控追踪 - 底部导航](#chapter-three-two-three) |
-| &emsp;&emsp;[3.2.4 拒敌长城 - 弹窗实现](#chapter-three-two-four) |
-| &emsp;&emsp;[3.2.5 卧薪尝胆 - 思路整理](#chapter-three-two-five) |
-| &emsp;&emsp;[3.2.6 广聚民心 - 新增功能](#chapter-three-two-six) |
-| &emsp;&emsp;[3.2.7 化繁为简 - 修改功能](#chapter-three-two-seven) |
-| &emsp;&emsp;[3.2.8 革新去旧 - 删除功能](#chapter-three-two-eight) |
-| &emsp;&emsp;[3.2.9 兵分一路 - 正常加载](#chapter-three-two-night) |
-| &emsp;&emsp;[3.2.10 兵分二路 - 拼音导航](#chapter-three-two-ten) |
-| &emsp;&emsp;[3.2.11 一统天下 - 归纳总结](#chapter-three-two-eleven) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 项目地址](#chapter-four) |
+| 目录                                                                                                                        |
+| --------------------------------------------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                                                     |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)                                          |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 功能列表](#chapter-three)                                |
+| &emsp;<a name="catalog-chapter-three-one" id="catalog-chapter-three-one"></a>[3.1 排兵布阵 - Flex 布局](#chapter-three-one) |
+| &emsp;&emsp;[3.1.1 楼起平地 - 基础概念](#chapter-three-one-one)                                                             |
+| &emsp;&emsp;[3.1.2 搭砖建瓦 - 左右布局](#chapter-three-one-two)                                                             |
+| &emsp;&emsp;[3.1.3 层台累榭 - 混合布局](#chapter-three-one-three)                                                           |
+| &emsp;<a name="catalog-chapter-three-two" id="catalog-chapter-three-two"></a>[3.2 沙场点兵 - 通讯录](#chapter-three-two)    |
+| &emsp;&emsp;[3.2.1 谋定苍生 - 整体布局](#chapter-three-two-one)                                                             |
+| &emsp;&emsp;[3.2.2 千里寻敌 - 搜索功能](#chapter-three-two-two)                                                             |
+| &emsp;&emsp;[3.2.3 遥控追踪 - 底部导航](#chapter-three-two-three)                                                           |
+| &emsp;&emsp;[3.2.4 拒敌长城 - 弹窗实现](#chapter-three-two-four)                                                            |
+| &emsp;&emsp;[3.2.5 卧薪尝胆 - 思路整理](#chapter-three-two-five)                                                            |
+| &emsp;&emsp;[3.2.6 广聚民心 - 新增功能](#chapter-three-two-six)                                                             |
+| &emsp;&emsp;[3.2.7 化繁为简 - 修改功能](#chapter-three-two-seven)                                                           |
+| &emsp;&emsp;[3.2.8 革新去旧 - 删除功能](#chapter-three-two-eight)                                                           |
+| &emsp;&emsp;[3.2.9 兵分一路 - 正常加载](#chapter-three-two-night)                                                           |
+| &emsp;&emsp;[3.2.10 兵分二路 - 拼音导航](#chapter-three-two-ten)                                                            |
+| &emsp;&emsp;[3.2.11 一统天下 - 归纳总结](#chapter-three-two-eleven)                                                         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 项目地址](#chapter-four)                                   |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#catalog-chapter-two)
 
-写文章无形中也会磨炼自己的表达能力。  
+写文章无形中也会磨炼自己的表达能力。
 
 这周 (`2018-11-19`) 在开发微信小程序的定制 **通讯录** 时，突然发现 **[微信小程序 bug 集中营](./WeChat-applet-bug-lists.md)** 这篇文章不能再继续写了，因为它变得 **臃肿**、**丑陋** 且 **难维护**，就连我这个写作人都感慨：
 
-* 如果没有 `Ctrl + F` ，以及我的 **目录** 写得还不错，我真心不想再翻这篇文章。  
+- 如果没有 `Ctrl + F` ，以及我的 **目录** 写得还不错，我真心不想再翻这篇文章。
 
-为此，**jsLe** 单独开了一篇文章：**微信小程序功能清单**。用来记录小程序各种功能的实现，例如布局、通讯录、底部导航栏……  
+为此，**jsLe** 单独开了一篇文章：**微信小程序功能清单**。用来记录小程序各种功能的实现，例如布局、通讯录、底部导航栏……
 
 然后嘛，为了能吸引小伙伴点进来瞅瞅，起个标新立异的标题吧：**微信小程序之奇技淫巧**。
 
@@ -69,7 +68,7 @@
 
 为了小伙伴能快速了解代码中的意思，小伙伴可以去该 [项目地址](https://github.com/LiangJunrong/WeChatApplet) 下载代码到本地运行查看。
 
-**敲了再说**  
+**敲了再说**
 
 **敲&emsp;&emsp;看**  
 **一&emsp;&emsp;一**  
@@ -83,25 +82,25 @@
 
 顺带附上一些资源网站：
 
-* [Iconfont - 阿里巴巴矢量图标库](http://www.iconfont.cn/home/index)
-* [图片压缩 - TinyPNG](https://tinypng.com/)
+- [Iconfont - 阿里巴巴矢量图标库](http://www.iconfont.cn/home/index)
+- [图片压缩 - TinyPNG](https://tinypng.com/)
 
-### <a name="chapter-three-one" id="chapter-three-one">3.1 排兵布阵 - Flex布局</a>
+### <a name="chapter-three-one" id="chapter-three-one">3.1 排兵布阵 - Flex 布局</a>
 
 > [返回目录](#catalog-chapter-three-one)
 
-如果你发现你的 `CSS` 水平还处于 `float` 布局，你会发现在小程序中你举步维艰，因为单单只用浮动布局，在小程序中它不好用。  
+如果你发现你的 `CSS` 水平还处于 `float` 布局，你会发现在小程序中你举步维艰，因为单单只用浮动布局，在小程序中它不好用。
 
-所以，`Flex` 布局，是你的不二选择：布局的传统解决方案，基于盒状模型，依赖 `display` 属性 + `position` 属性 + `float` 属性。它对于那些特殊布局非常不方便，比如，垂直居中就不容易实现。而 `Flex` 布局。又称弹性布局，可以简便、完整、响应式地实现各种页面布局。  
+所以，`Flex` 布局，是你的不二选择：布局的传统解决方案，基于盒状模型，依赖 `display` 属性 + `position` 属性 + `float` 属性。它对于那些特殊布局非常不方便，比如，垂直居中就不容易实现。而 `Flex` 布局。又称弹性布局，可以简便、完整、响应式地实现各种页面布局。
 
 网上较好的教程有：
 
-* [Flex 布局语法教程 | 菜鸟教程](https://www.runoob.com/w3cnote/flex-grammar.html)
-* [Flex 布局教程：实例篇 | 阮一峰](http://www.techug.com/post/flex-examples.html)  
+- [Flex 布局语法教程 | 菜鸟教程](https://www.runoob.com/w3cnote/flex-grammar.html)
+- [Flex 布局教程：实例篇 | 阮一峰](http://www.techug.com/post/flex-examples.html)
 
-如果你想全面了解 `Flex`，推荐去看上面的文章。  
+如果你想全面了解 `Flex`，推荐去看上面的文章。
 
-如果你已经了解 `Flex` 布局，点击 [返回目录](#chapter-one) 寻找更多精彩！  
+如果你已经了解 `Flex` 布局，点击 [返回目录](#chapter-one) 寻找更多精彩！
 
 如果你想快速复习浏览 `Flex` 布局，那么，`Here we go`~
 
@@ -141,11 +140,11 @@ align-content: space-between;
 下面我们详细分析这些元素的情况：
 
 **知识点 1**. `flex-direction`：决定主轴的方向
-  
-* `row` - （默认）水平方向，起点在左端
-* `row-reverse` - 水平方向，起点在右端 
-* `column` - 垂直方向，起点在上沿 
-* `column-reverse` - 垂直方向，起点在下沿
+
+- `row` - （默认）水平方向，起点在左端
+- `row-reverse` - 水平方向，起点在右端
+- `column` - 垂直方向，起点在上沿
+- `column-reverse` - 垂直方向，起点在下沿
 
 ```
 display: flex;
@@ -157,14 +156,14 @@ flex-direction: row | row-reverse | column | column-reverse;
 
 **知识点 2**. `flex-wrap`：一条轴线（一行）排不下时如何解决
 
-* `nowrap` - （默认）不换行
-* `wrap` - 换行，第一行在上方
-* `wrap-reverse` - 换行，第一行在下方
+- `nowrap` - （默认）不换行
+- `wrap` - 换行，第一行在上方
+- `wrap-reverse` - 换行，第一行在下方
 
 ```
 display: flex;
 
-flex-wrap: nowrap | wrap | wrap-reverse;  
+flex-wrap: nowrap | wrap | wrap-reverse;
 ```
 
 ![图](../../public-repertory/img/other-WechatAppletFunctionList-4.png)
@@ -173,7 +172,7 @@ flex-wrap: nowrap | wrap | wrap-reverse;
 
 **知识点 3**. `flex-flow`：flex-flow = flex-direction + flex-wrap。即 flex-flow 是这两个属性的合集
 
-* `row nowrap` - （默认）水平方向，起点在左端，不换行
+- `row nowrap` - （默认）水平方向，起点在左端，不换行
 
 ```
 display: flex;
@@ -185,11 +184,11 @@ flex-flow: <flex-direction> || <flex-wrap>;
 
 **知识点 4**. `justify-content`：定义项目在主轴上的对齐方式
 
-* `flex-start` - 左边对齐
-* `flex-end` - 右边对齐
-* `center` - 居中对齐
-* `space-between` - 两端对齐，空格在中间
-* `space-around` - 空格环绕
+- `flex-start` - 左边对齐
+- `flex-end` - 右边对齐
+- `center` - 居中对齐
+- `space-between` - 两端对齐，空格在中间
+- `space-around` - 空格环绕
 
 ```
 display: flex;
@@ -201,11 +200,11 @@ justify-content: flex-start | flex-end | center | space-between | space-around;
 
 **知识点 5**. `align-items`：定义项目在交叉轴上如何对齐
 
-* `flex-start` - 顶部对齐，即文字图片等顶部同一条线上
-* `flex-end` - 底部对其，即文字图片等底部在同一条线上
-* `center` - 中间对其，即文字图片不管多高，都拿它们的中间放在同一条线上
-* `stretch` - 将文字图片充满整个容器的高度，强制统一
-* `baseline` - 将每项的第一行文字做统一在一条线上对齐
+- `flex-start` - 顶部对齐，即文字图片等顶部同一条线上
+- `flex-end` - 底部对其，即文字图片等底部在同一条线上
+- `center` - 中间对其，即文字图片不管多高，都拿它们的中间放在同一条线上
+- `stretch` - 将文字图片充满整个容器的高度，强制统一
+- `baseline` - 将每项的第一行文字做统一在一条线上对齐
 
 ```
 display: flex;
@@ -217,12 +216,12 @@ align-items: flex-start | flex-end | center | stretch | baseline;
 
 **知识点 6**. `align-content`：定义多根轴线的对齐方式。如果只有一根轴线（只有一行），该属性不起作用
 
-* `flex-start` - 这几行顶部对齐
-* `flex-end` - 这几行底部对齐
-* `center` - 这几行居中对齐
-* `stretch` - 这几行进行扩展或者缩放，从而填满容器高
-* `space-between` - 这几行中间使用空格进行填充
-* `space-around` - 这几行两边及中间进行填充
+- `flex-start` - 这几行顶部对齐
+- `flex-end` - 这几行底部对齐
+- `center` - 这几行居中对齐
+- `stretch` - 这几行进行扩展或者缩放，从而填满容器高
+- `space-between` - 这几行中间使用空格进行填充
+- `space-around` - 这几行两边及中间进行填充
 
 ```
 display: flex;
@@ -242,7 +241,7 @@ align-content: flex-start | flex-end | center | space-between | space-around | s
 
 如图，这是我们要实现的左右布局效果。那么，在微信小程序要怎么做呢？
 
-> *.wxml
+> \*.wxml
 
 ```
 <view class="left-and-right-layout">
@@ -256,7 +255,7 @@ align-content: flex-start | flex-end | center | space-between | space-around | s
 </view>
 ```
 
-> *.wxss
+> \*.wxss
 
 ```css
 .left-and-right-layout {
@@ -295,7 +294,7 @@ align-content: flex-start | flex-end | center | space-between | space-around | s
 
 如图，这是我们要实现的混合布局效果，那么在微信小程序中要如何编程呢？
 
-> *.wxml
+> \*.wxml
 
 ```
 <view class="mixed-layout">
@@ -322,7 +321,7 @@ align-content: flex-start | flex-end | center | space-between | space-around | s
 </view>
 ```
 
-> *.wxss
+> \*.wxss
 
 ```css
 /* 混合布局 */
@@ -396,13 +395,13 @@ align-content: flex-start | flex-end | center | space-between | space-around | s
 
 > [返回目录](#catalog-chapter-three-two)
 
-不知道小伙伴们在日常开发中，有没有碰到各种稀奇古怪的功能效果，我们觉得不可思议，但是在项目经理的眼中它却是能 “**满足客户需求**” 的。  
+不知道小伙伴们在日常开发中，有没有碰到各种稀奇古怪的功能效果，我们觉得不可思议，但是在项目经理的眼中它却是能 “**满足客户需求**” 的。
 
-所以，拿到 “**奇怪的**” 需求清单的时候不要恐慌，我们仔细分析，总能找到它的破绽，从而完成我们的任务。  
+所以，拿到 “**奇怪的**” 需求清单的时候不要恐慌，我们仔细分析，总能找到它的破绽，从而完成我们的任务。
 
-通讯录功能的开发如下：  
+通讯录功能的开发如下：
 
-开发时间：4 天  
+开发时间：4 天
 
 实现效果：
 
@@ -412,7 +411,7 @@ align-content: flex-start | flex-end | center | space-between | space-around | s
 
 > [返回目录](#catalog-chapter-three-two)
 
-工欲善其事，必先利其器。  
+工欲善其事，必先利其器。
 
 **首先**，我们先将该页面命名为：`addressList`，并编写它的 `json` 门面：
 
@@ -429,18 +428,18 @@ align-content: flex-start | flex-end | center | space-between | space-around | s
 
 **接着**，我们明确需要实现的功能点：
 
-* 搜索功能
-* 弹窗新增功能
-* 弹窗修改功能
-* 删除功能
-* 拼音导航功能
-* 底部导航栏
+- 搜索功能
+- 弹窗新增功能
+- 弹窗修改功能
+- 删除功能
+- 拼音导航功能
+- 底部导航栏
 
 **然后**，我们明确下页面布局：
 
 ![图](../../public-repertory/img/other-WechatAppletFunctionList-12.png)
 
-如上图，它主要分三大块：头部、内容区、底部。  
+如上图，它主要分三大块：头部、内容区、底部。
 
 **最后**，我们根据功能实现及页面布局编写 `wxml` 的布局：
 
@@ -471,12 +470,12 @@ align-content: flex-start | flex-end | center | space-between | space-around | s
 
 如上，我们将页面分为 7 种情况，其中：
 
-* 搜索功能 - **`part1`**、**`part2`**、`part4`、`part5`
-* 弹窗新增功能 - `part1`、`part3`、`part4`、`part5`、**`part6`**
-* 弹窗修改功能 - `part1`、`part3`、`part4`、`part5`、**`part7`**
-* 删除功能 - `part1`、`part3`、`part4`、`part5`
-* 拼音导航功能 - `part1`、`part3`、`part4`、`part5`
-* 底部导航栏 - `part1`、`part3`、`part4`、`part5`
+- 搜索功能 - **`part1`**、**`part2`**、`part4`、`part5`
+- 弹窗新增功能 - `part1`、`part3`、`part4`、`part5`、**`part6`**
+- 弹窗修改功能 - `part1`、`part3`、`part4`、`part5`、**`part7`**
+- 删除功能 - `part1`、`part3`、`part4`、`part5`
+- 拼音导航功能 - `part1`、`part3`、`part4`、`part5`
+- 底部导航栏 - `part1`、`part3`、`part4`、`part5`
 
 请注意，出现的 `part` 部分表明在这种模式下，页面要显示的 `part` 都有哪些，其他的则暂时隐藏，而加粗的意味着这是这个功能特有的部分。为此，我们应该在 `js` 的 `data` 中定义好这些模式：
 
@@ -499,12 +498,12 @@ Page({
     editModel: false,
     deleteModel: false,
     searchModel: true,
-    pinyinNavModel: false,
+    pinyinNavModel: false
   }
 })
 ```
 
-这样，我们除了底部导航栏外，为其他功能定义了一个模式，正常情况下我们开启 `normalModel`，其他暂时关闭。  
+这样，我们除了底部导航栏外，为其他功能定义了一个模式，正常情况下我们开启 `normalModel`，其他暂时关闭。
 
 在下文中，我们将根据模式的开启与关闭，显示/隐藏某些内容，并进行数据的管理，请小伙伴们稍微理解下这种思路。
 
@@ -512,9 +511,9 @@ Page({
 
 > [返回目录](#catalog-chapter-three-two)
 
-* 查看 `wxml` 代码：[Go to wxml](#chapter-three-two-two-wxml)
-* 查看 `wxss` 代码：[Go to wxss](#chapter-three-two-two-wxss)
-* 查看 `js`代码`：[Go to js](#chapter-three-two-two-js)
+- 查看 `wxml` 代码：[Go to wxml](#chapter-three-two-two-wxml)
+- 查看 `wxss` 代码：[Go to wxss](#chapter-three-two-two-wxss)
+- 查看 `js`代码`：[Go to js](#chapter-three-two-two-js)
 
 本章节实现效果：
 
@@ -524,12 +523,12 @@ Page({
 
 > <a name="chapter-three-two-two-wxml" id="chapter-three-two-two-wxml">addressList.wxml</a>
 
-* **关键点 1**，在 `wxml` 与 `wxss` 结构上。  
+- **关键点 1**，在 `wxml` 与 `wxss` 结构上。
 
 **首先**，我们通过 `fixed` 定位，将 `search-form` 固定在顶部。  
-**然后**，我们将 `search-form` 其内部分为 **搜索区** `search` 与 **功能区** `action`。  
+**然后**，我们将 `search-form` 其内部分为 **搜索区** `search` 与 **功能区** `action`。
 
-**接着**，我们将 `search` 分为 **假的搜索区** `search-model-one` 与 **真的搜索区** `search-model-two`。为什么要分两种情况呢？因为这样我们就不用烦恼 `input` 的 `placeholder` 一会居中一会靠边要怎么区分，思路不容易乱。  
+**接着**，我们将 `search` 分为 **假的搜索区** `search-model-one` 与 **真的搜索区** `search-model-two`。为什么要分两种情况呢？因为这样我们就不用烦恼 `input` 的 `placeholder` 一会居中一会靠边要怎么区分，思路不容易乱。
 
 **最后**，根据功能，我们逐步完善 `wxml` 与 `wxss`代码。
 
@@ -611,7 +610,7 @@ view {
 
 /* 搜索区域 - 结构 1 */
 .search {
- width: 60%; 
+  width: 60%;
 }
 .search-model {
   height: 70rpx;
@@ -700,7 +699,9 @@ view {
   border: 1rpx solid deepskyblue;
   border-radius: 40rpx;
 }
-.action-add, .action-delete, .action-delete-comfirm {
+.action-add,
+.action-delete,
+.action-delete-comfirm {
   margin-left: 10rpx;
 }
 .action-delete-comfirm {
@@ -747,22 +748,21 @@ view {
 
 > <a name="chapter-three-two-two-js" id="chapter-three-two-two-js">addressList.js</a>
 
-* **关键点 2**. 在 `js`上。
+- **关键点 2**. 在 `js`上。
 
 我们仔细观察本节开头的 `GIF` 图，发现它有这几个特点：
 
-* 点击假的搜索区，进入真的搜索区
-* 输入内容，按钮由【取消】变为【搜索】
-* 点击【搜索】按钮，页面显示搜索内容
-* 上拉加载更多数据
-* 点击 `×` 按钮，输入内容消失
-* 点击【取消】按钮，关闭搜索页面
+- 点击假的搜索区，进入真的搜索区
+- 输入内容，按钮由【取消】变为【搜索】
+- 点击【搜索】按钮，页面显示搜索内容
+- 上拉加载更多数据
+- 点击 `×` 按钮，输入内容消失
+- 点击【取消】按钮，关闭搜索页面
 
 > [返回本节开头](#chapter-three-two-two)
 
 ```js
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -791,7 +791,7 @@ Page({
      */
     inputFocus: false,
     searchVal: '',
-    searchData: [],
+    searchData: []
   },
 
   /**
@@ -815,11 +815,11 @@ Page({
     })
   },
   searchSubmit(e) {
-    console.log("\n【API - 确认搜索】");
-    console.log("搜素字段：" + this.data.searchVal);
-    
+    console.log('\n【API - 确认搜索】')
+    console.log('搜素字段：' + this.data.searchVal)
+
     // 原数据
-    let searchData = this.data.searchData;
+    let searchData = this.data.searchData
 
     // 搜索数据 - 假设搜索数据是这个，实际应该是接口返回数据
     let newSearchData = [
@@ -872,22 +872,21 @@ Page({
         userName: '激狸',
         userPhone: '18800000000',
         pinyin: 'jli'
-      },
+      }
     ]
 
     // 拼接新旧数据
-    searchData.push(...newSearchData);
+    searchData.push(...newSearchData)
 
-    console.log("\搜索后数据：");
-    console.log(searchData);
+    console.log('搜索后数据：')
+    console.log(searchData)
 
     this.setData({
       searchData: searchData
     })
-
   },
   clearInput(e) {
-    console.log("\n清除搜索");
+    console.log('\n清除搜索')
     this.setData({
       searchVal: ''
     })
@@ -905,19 +904,21 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    console.log("\n通讯录");
+  onLoad: function(options) {
+    console.log('\n通讯录')
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-    if (this.data.normalModel) { // 正常模式上拉
-      console.log("\n正常模式上拉")
-    } else if (this.data.searchModel) { // 搜索模式上拉
+  onReachBottom: function() {
+    if (this.data.normalModel) {
+      // 正常模式上拉
+      console.log('\n正常模式上拉')
+    } else if (this.data.searchModel) {
+      // 搜索模式上拉
 
-      console.log("\n搜索模式上拉：");
+      console.log('\n搜索模式上拉：')
 
       // 新数据
       let newSearchData = [
@@ -925,32 +926,32 @@ Page({
           userName: '克狸',
           userPhone: '18811121112',
           pinyin: 'keli'
-        },
+        }
       ]
 
       // 原数据
-      let searchData = this.data.searchData;
+      let searchData = this.data.searchData
 
       // 拼接新旧数据
-      searchData.push(...newSearchData);
+      searchData.push(...newSearchData)
 
-      console.log("\上拉加载后数据：");
-      console.log(searchData);
+      console.log('上拉加载后数据：')
+      console.log(searchData)
 
       this.setData({
         searchData: searchData
       })
-
-    } else if (this.data.pinyinNavModel) { // 拼音模式上拉
-      console.log("\n拼音模式上拉");
+    } else if (this.data.pinyinNavModel) {
+      // 拼音模式上拉
+      console.log('\n拼音模式上拉')
     }
-  },
+  }
 })
 ```
 
-到此，我们就实现了搜索功能。尽管它还有点小 `bug`，就是不停上拉的时候，它会重复地加载一条数据。  
+到此，我们就实现了搜索功能。尽管它还有点小 `bug`，就是不停上拉的时候，它会重复地加载一条数据。
 
-在实际项目中，**jsLe** 会定义一个 `searchNoData` 来判断接口是否还在返回数据，如果它不再返回数据，那么通过判断 `searchNoData == true` 来禁止继续加载。  
+在实际项目中，**jsLe** 会定义一个 `searchNoData` 来判断接口是否还在返回数据，如果它不再返回数据，那么通过判断 `searchNoData == true` 来禁止继续加载。
 
 这样，我们就完美搞定了搜索功能的实现。
 
@@ -962,21 +963,21 @@ Page({
 
 ![图](../../public-repertory/img/other-WechatAppletFunctionList-14.png)
 
-众所周知，微信小程序的子页面（除了设置 `tabBar` 的页面）是没有底部导航栏的。那么，我们要如何设计，才能编写一个 **自定义的底部导航栏** 呢？  
+众所周知，微信小程序的子页面（除了设置 `tabBar` 的页面）是没有底部导航栏的。那么，我们要如何设计，才能编写一个 **自定义的底部导航栏** 呢？
 
-在日常开发中，我们通过 `fixed` 布局，在页面实现一个 **自定义的底部导航栏** 是很容易的。  
+在日常开发中，我们通过 `fixed` 布局，在页面实现一个 **自定义的底部导航栏** 是很容易的。
 
 但是，考虑到其他页面可能也需要使用这个底部导航栏，我们就需要想办法将其封装成组件了：
 
 微信小程序 - [自定义组件](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/)
 
-是的，微信小程序官方文档中是存在这个东西的。当然，仅有官方文档，是满足不了我的，至于过程中我百度了几篇文章来辅助写出下面的代码，你猜？  
+是的，微信小程序官方文档中是存在这个东西的。当然，仅有官方文档，是满足不了我的，至于过程中我百度了几篇文章来辅助写出下面的代码，你猜？
 
 下面贴出实现代码及如何使用：
 
-**步骤 1**. 建立目录。  
+**步骤 1**. 建立目录。
 
-**首先**，在根目录中新建 `component` 目录，用来存放我们项目的组件。  
+**首先**，在根目录中新建 `component` 目录，用来存放我们项目的组件。
 
 **然后**，我们新建 `navBar` 目录，用来存放我们的组件 `navBar`。
 
@@ -1030,7 +1031,7 @@ Page({
   border-top: 1rpx solid #cccccc;
   position: fixed;
   bottom: 0;
-  background: #F7F7FA;
+  background: #f7f7fa;
 }
 .navBar image {
   width: 55rpx;
@@ -1079,30 +1080,28 @@ Component({
   /**
    * 组件的初始数据
    */
-  data: {
-
-  },
+  data: {},
 
   /**
    * 组件的方法列表
    */
   methods: {
     // 返回首页
-    goHome: function (e) {
+    goHome: function(e) {
       wx.switchTab({
-        url: '../index/index',
+        url: '../index/index'
       })
     },
     // 返回探索页
-    goExplore: function (e) {
+    goExplore: function(e) {
       wx.switchTab({
-        url: '../explore/explore',
+        url: '../explore/explore'
       })
     },
     // 返回我的
-    goUser: function (e) {
+    goUser: function(e) {
       wx.switchTab({
-        url: '../user/user',
+        url: '../user/user'
       })
     }
   }
@@ -1151,16 +1150,16 @@ Component({
 Page({
   data: {
     // 引用底部导航
-    homeActive: true,
+    homeActive: true
   }
 })
 ```
- 
-下次我们还需使用该底部导航栏的时候，我们只需要重复在 `addressList` 的步骤就行了。  
 
-当然，我们需要根据需要活跃的位置，进行 `homeActive`、`exploreActive`、`userActive` 这三个活跃状态与否的设置。  
+下次我们还需使用该底部导航栏的时候，我们只需要重复在 `addressList` 的步骤就行了。
 
-这样，我们就实现了底部导航栏组件的开发及引用。 
+当然，我们需要根据需要活跃的位置，进行 `homeActive`、`exploreActive`、`userActive` 这三个活跃状态与否的设置。
+
+这样，我们就实现了底部导航栏组件的开发及引用。
 
 #### <a name="chapter-three-two-four" id="chapter-three-two-four">3.2.4 拒敌长城 - 弹窗实现</a>
 
@@ -1174,16 +1173,16 @@ Page({
 
 | 类型      | 说明                                                                                                              | 地址                                                                                                                           |
 | --------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| 模态弹窗  | wx.showModal(Object) - 模态弹窗可以给你选择【取消】或者【确定】                           | [链接](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showToast.html?search-key=wx.showModal)          |
-| \<modal\> | \<modal\>是可以提供用户填写                                                                     | [链接](https://blog.csdn.net/qq_35181466/article/details/80405248)                                                             |
+| 模态弹窗  | wx.showModal(Object) - 模态弹窗可以给你选择【取消】或者【确定】                                                   | [链接](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showToast.html?search-key=wx.showModal)          |
+| \<modal\> | \<modal\>是可以提供用户填写                                                                                       | [链接](https://blog.csdn.net/qq_35181466/article/details/80405248)                                                             |
 | 消息弹窗  | wx.showToast(Object) - 消息弹窗就是操作成功或者操作失败的那一刻，系统的提示弹窗，无需用户操作，可设定几秒自动关闭 | [链接](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showToast.html?search-key=wx.showToast)          |
 | 操作菜单  | wx.showActionSheet(Object) - 操作菜单类似于弹出的下拉菜单，提供你选择其中某项或者【取消】                         | [链接](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showActionSheet.html?search-key=showActionSheet) |
 
 然而，逐一尝试，你会发现，上面辣么多弹窗，没有一种符合你的需求的！所以，咱要画一个属于自己的弹窗：
 
-**首先**，咱在 `part6` 中新增两个层：遮罩层 `jsLe-mask` 和弹窗内容 `jsLe-alert`。  
+**首先**，咱在 `part6` 中新增两个层：遮罩层 `jsLe-mask` 和弹窗内容 `jsLe-alert`。
 
-**然后**，往弹窗内容中编写我们需要的标题、 `input` 输入框以及 `text` 按钮。  
+**然后**，往弹窗内容中编写我们需要的标题、 `input` 输入框以及 `text` 按钮。
 
 **最后**，我们逐一细化编写代码。
 
@@ -1231,7 +1230,7 @@ Page({
   height: 100%;
   background: #404040;
   filter: alpha(opacity=90);
-  -ms-filter: "alpha(opacity=90)";
+  -ms-filter: 'alpha(opacity=90)';
   opacity: 0.9;
 }
 .jsLe-alert {
@@ -1241,7 +1240,7 @@ Page({
   left: 9%;
   width: 620rpx;
   height: 580rpx;
-  box-shadow: 2rpx 2rpx 4rpx #A0A0A0, -2rpx -2rpx 4rpx #A0A0A0;
+  box-shadow: 2rpx 2rpx 4rpx #a0a0a0, -2rpx -2rpx 4rpx #a0a0a0;
   background-color: #fff;
   border-radius: 15rpx;
 }
@@ -1275,7 +1274,8 @@ Page({
   font-size: 30rpx;
   border-bottom: 1rpx solid #e6e6e6;
 }
-.jsLe-alert-content-user-name-placeholder, .jsLe-alert-content-user-phone-placeholder {
+.jsLe-alert-content-user-name-placeholder,
+.jsLe-alert-content-user-phone-placeholder {
   font-size: 30rpx;
   color: #b6b6b6;
 }
@@ -1295,7 +1295,7 @@ Page({
 }
 ```
 
-这样，我们就可以通过控制 `addModel` 的 `true` 或者 `false`，来显示隐藏新增弹窗。  
+这样，我们就可以通过控制 `addModel` 的 `true` 或者 `false`，来显示隐藏新增弹窗。
 
 同理，我们可以依法炮制通过 `editModel` 控制修改弹窗。
 
@@ -1309,18 +1309,18 @@ Page({
 
 如上，我们实现了：
 
-* 搜索功能
-* 底部导航
-* 弹窗显示
+- 搜索功能
+- 底部导航
+- 弹窗显示
 
 那么，我们还缺少：
 
-* 新增成员功能
-* 修改成员功能
-* 删除成员功能
-* 拼音导航功能
+- 新增成员功能
+- 修改成员功能
+- 删除成员功能
+- 拼音导航功能
 
-很好！我们实现了一半功能了！但是，小伙伴有没有发现，我们的主内容区是空白的。  
+很好！我们实现了一半功能了！但是，小伙伴有没有发现，我们的主内容区是空白的。
 
 所以，为了剩下的功能实现，我们应该编写下 **内容区域**，并进行页面的数据加载：
 
@@ -1443,20 +1443,19 @@ Page({
       { groupName: 'X', users: [] },
       { groupName: 'Y', users: [] },
       { groupName: 'Z', users: [] }
-    ],
+    ]
   },
-  
+
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    
-    console.log("\n通讯录");
+  onLoad: function(options) {
+    console.log('\n通讯录')
 
-    let that = this;
+    let that = this
 
     // 原数据
-    let oldData = that.data.contactsData;
+    let oldData = that.data.contactsData
 
     // 第一页数据
     let newData = [
@@ -1509,38 +1508,38 @@ Page({
         userName: '激狸',
         userPhone: '18800000000',
         pinyin: 'jli'
-      },
+      }
     ]
 
     // 循环新数据
     for (let newDataItem in newData) {
       // 转换新数据拼音首字母为大写
-      let initials = newData[newDataItem].pinyin.substr(0, 1).toUpperCase();
+      let initials = newData[newDataItem].pinyin.substr(0, 1).toUpperCase()
       // 循环旧数据
       for (let oldDataItem in oldData) {
         // 获取旧数据字母分组
-        let groupName = oldData[oldDataItem].groupName;
+        let groupName = oldData[oldDataItem].groupName
 
         // 判断两个字母是否相同
         if (initials == groupName) {
           // 使用 array[array.length] 将数据加入到该组中
-          oldData[oldDataItem].users[oldData[oldDataItem].users.length] = newData[newDataItem];
+          oldData[oldDataItem].users[oldData[oldDataItem].users.length] =
+            newData[newDataItem]
         }
       }
     }
 
-    console.log("\页面初始加载数据：");
-    console.log(oldData);
+    console.log('页面初始加载数据：')
+    console.log(oldData)
 
     that.setData({
       contactsData: oldData
     })
-
   }
 })
 ```
 
-如上，我们在前几章节代码的前提下，将 `part3` 部分进行定义，并在 `onLoad()` 这个内置的页面加载函数中，虚拟了接口返回的第一页数据，最后将它循环判断，放在不同的字母中，从而实现了首页的加载。  
+如上，我们在前几章节代码的前提下，将 `part3` 部分进行定义，并在 `onLoad()` 这个内置的页面加载函数中，虚拟了接口返回的第一页数据，最后将它循环判断，放在不同的字母中，从而实现了首页的加载。
 
 所以，我们可以开始实现我们其他的功能咯~
 
@@ -1630,7 +1629,7 @@ showAdd(e) {
   height: 100%;
   background: #404040;
   filter: alpha(opacity=90);
-  -ms-filter: "alpha(opacity=90)";
+  -ms-filter: 'alpha(opacity=90)';
   opacity: 0.9;
 }
 .jsLe-alert {
@@ -1640,7 +1639,7 @@ showAdd(e) {
   left: 9%;
   width: 620rpx;
   height: 580rpx;
-  box-shadow: 2rpx 2rpx 4rpx #A0A0A0, -2rpx -2rpx 4rpx #A0A0A0;
+  box-shadow: 2rpx 2rpx 4rpx #a0a0a0, -2rpx -2rpx 4rpx #a0a0a0;
   background-color: #fff;
   border-radius: 15rpx;
 }
@@ -1674,7 +1673,8 @@ showAdd(e) {
   font-size: 30rpx;
   border-bottom: 1rpx solid #e6e6e6;
 }
-.jsLe-alert-content-user-name-placeholder, .jsLe-alert-content-user-phone-placeholder {
+.jsLe-alert-content-user-name-placeholder,
+.jsLe-alert-content-user-phone-placeholder {
   font-size: 30rpx;
   color: #b6b6b6;
 }
@@ -1702,7 +1702,6 @@ showAdd(e) {
 
 ```js
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -1713,7 +1712,7 @@ Page({
      * addUserPhone - 新增的电话号码
      */
     addUserName: '',
-    addUserPhone: '',
+    addUserPhone: ''
   },
 
   /**
@@ -1739,37 +1738,42 @@ Page({
     })
   },
   addConfirm(e) {
-    console.log("\n【API -添加成员】");
+    console.log('\n【API -添加成员】')
 
-    let userName = this.data.addUserName;
-    let userPhone = this.data.addUserPhone;
+    let userName = this.data.addUserName
+    let userPhone = this.data.addUserPhone
 
-    if (userName == "") { // 不允许姓名为空
+    if (userName == '') {
+      // 不允许姓名为空
       wx.showModal({
         title: '添加失败',
         content: '姓名不能为空~',
         showCancel: false
       })
-    } else if (!(/^[\u4e00-\u9fa5a-zA-Z]{1,11}$/.test(userName))) { // 不允许非中文或者大小写英文
+    } else if (!/^[\u4e00-\u9fa5a-zA-Z]{1,11}$/.test(userName)) {
+      // 不允许非中文或者大小写英文
       wx.showModal({
         title: '添加失败',
         content: '请用中文或者大小写英文命名~',
         showCancel: false
       })
-    } else if (userPhone == "") { // 不允许电话号码为空
+    } else if (userPhone == '') {
+      // 不允许电话号码为空
       wx.showModal({
         title: '添加失败',
         content: '电话号码不能为空~',
         showCancel: false
       })
-    } else if (!(/^1[345789]\d{9}$/.test(userPhone))) { // 不允许电话号码不是 13/4/5/7/8/9 开头的 11 位数字
+    } else if (!/^1[345789]\d{9}$/.test(userPhone)) {
+      // 不允许电话号码不是 13/4/5/7/8/9 开头的 11 位数字
       wx.showModal({
         title: '添加失败',
         content: '请输入正确的 11 位电话号码~',
         showCancel: false
       })
-    } else { // 添加成功
-      
+    } else {
+      // 添加成功
+
       // 新数据。假设后端接口返回的数据为 newData
       let newData = {
         userName: this.data.addUserName,
@@ -1778,25 +1782,27 @@ Page({
       }
 
       // 旧数据
-      let oldData = this.data.contactsData;
+      let oldData = this.data.contactsData
 
       // 获取新数据的首字母并转换为大写
-      let initials = newData.pinyin.substr(0, 1).toUpperCase();
+      let initials = newData.pinyin.substr(0, 1).toUpperCase()
 
       // 循环旧数据
       for (let oldDataItem in oldData) {
         // 获取旧数据字母
-        let groupName = oldData[oldDataItem].groupName;
+        let groupName = oldData[oldDataItem].groupName
         // 判断这两者字母是否相同
         if (initials === groupName) {
           // 往该字母最后一位数据添加新数据
-          oldData[oldDataItem].users[oldData[oldDataItem].users.length] = newData;
+          oldData[oldDataItem].users[
+            oldData[oldDataItem].users.length
+          ] = newData
         }
       }
 
-      console.log("新增后数据：");
-      console.log(oldData);
-      
+      console.log('新增后数据：')
+      console.log(oldData)
+
       this.setData({
         contactsData: oldData,
         normalModel: true,
@@ -1819,12 +1825,12 @@ Page({
 
 ![图](../../public-repertory/img/other-WechatAppletFunctionList-19.gif)
 
-在新增功能的开发后，我们的修改功能就显得比较容易了。  
+在新增功能的开发后，我们的修改功能就显得比较容易了。
 
 **首先**，我们整理下修改的思路：
 
-* 用户点击按钮，传递数据给窗口：用户姓名、用户电话。
-* 用户点击修改，循环遍历原数据，找到要修改的字母组下要修改的名字再进行修改，所以，单单是上面的两个字段还不够，应该有：用户所在组、用户原姓名、用户新姓名、用户电话。
+- 用户点击按钮，传递数据给窗口：用户姓名、用户电话。
+- 用户点击修改，循环遍历原数据，找到要修改的字母组下要修改的名字再进行修改，所以，单单是上面的两个字段还不够，应该有：用户所在组、用户原姓名、用户新姓名、用户电话。
 
 所以，在 `wxml` 中我们应该这么写：
 
@@ -1899,7 +1905,7 @@ Page({
   height: 100%;
   background: #404040;
   filter: alpha(opacity=90);
-  -ms-filter: "alpha(opacity=90)";
+  -ms-filter: 'alpha(opacity=90)';
   opacity: 0.9;
 }
 .jsLe-alert {
@@ -1909,7 +1915,7 @@ Page({
   left: 9%;
   width: 620rpx;
   height: 580rpx;
-  box-shadow: 2rpx 2rpx 4rpx #A0A0A0, -2rpx -2rpx 4rpx #A0A0A0;
+  box-shadow: 2rpx 2rpx 4rpx #a0a0a0, -2rpx -2rpx 4rpx #a0a0a0;
   background-color: #fff;
   border-radius: 15rpx;
 }
@@ -1943,7 +1949,8 @@ Page({
   font-size: 30rpx;
   border-bottom: 1rpx solid #e6e6e6;
 }
-.jsLe-alert-content-user-name-placeholder, .jsLe-alert-content-user-phone-placeholder {
+.jsLe-alert-content-user-name-placeholder,
+.jsLe-alert-content-user-phone-placeholder {
   font-size: 30rpx;
   color: #b6b6b6;
 }
@@ -1977,7 +1984,6 @@ Page({
 ```js
 // pages/addressList/addressList.js
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -1992,7 +1998,7 @@ Page({
     editGroupName: '',
     editOldUserName: '',
     editNewUserName: '',
-    editUserPhone: '',
+    editUserPhone: ''
   },
 
   /**
@@ -2003,15 +2009,17 @@ Page({
    * editConfirm - 确认修改
    */
   showEdit(e) {
-    if (!this.data.editModel) { // 显示弹窗则传递数据
+    if (!this.data.editModel) {
+      // 显示弹窗则传递数据
       this.setData({
         editModel: true,
         editGroupName: e.currentTarget.dataset.groupname,
         editOldUserName: e.currentTarget.dataset.username,
         editNewUserName: e.currentTarget.dataset.username,
-        editUserPhone: e.currentTarget.dataset.userphone,
+        editUserPhone: e.currentTarget.dataset.userphone
       })
-    } else { // 否则只控制弹窗隐藏
+    } else {
+      // 否则只控制弹窗隐藏
       this.setData({
         editModel: false
       })
@@ -2028,27 +2036,27 @@ Page({
     })
   },
   editConfirm(e) {
+    console.log('\n【API - 修改成员】')
 
-    console.log("\n【API - 修改成员】");
+    let userName = this.data.editNewUserName
+    let userPhone = this.data.editUserPhone
 
-    let userName = this.data.editNewUserName;
-    let userPhone = this.data.editUserPhone;
-
-    if (userName == "") { // 不允许姓名为空
+    if (userName == '') {
+      // 不允许姓名为空
       wx.showModal({
         title: '修改失败',
         content: '姓名不能为空~',
         showCancel: false
       })
-    } else if (!(/^[\u4e00-\u9fa5a-zA-Z]{1,11}$/.test(userName))) { // 不允许非中文或者大小写英文
+    } else if (!/^[\u4e00-\u9fa5a-zA-Z]{1,11}$/.test(userName)) {
+      // 不允许非中文或者大小写英文
       wx.showModal({
         title: '修改失败',
         content: '请用中文或者大小写英文命名~',
         showCancel: false
       })
     } else {
-
-      let contactsData = this.data.contactsData;
+      let contactsData = this.data.contactsData
 
       // 循环遍历原数据
       for (let groupInfo in contactsData) {
@@ -2057,12 +2065,17 @@ Page({
           // 遍历该组的用户名
           for (let userInfo in contactsData[groupInfo].users) {
             // 找到原数据中相同的姓名
-            if (this.data.editOldUserName == contactsData[groupInfo].users[userInfo].userName) {
+            if (
+              this.data.editOldUserName ==
+              contactsData[groupInfo].users[userInfo].userName
+            ) {
               // 修改它的姓名
-              contactsData[groupInfo].users[userInfo].userName = this.data.editNewUserName;
+              contactsData[groupInfo].users[
+                userInfo
+              ].userName = this.data.editNewUserName
 
-              console.log("新增后数据：");
-              console.log(contactsData);
+              console.log('新增后数据：')
+              console.log(contactsData)
 
               this.setData({
                 contactsData: contactsData,
@@ -2071,11 +2084,10 @@ Page({
               })
 
               wx.showToast({
-                title: '修改成功~',
+                title: '修改成功~'
               })
 
-              break;
-
+              break
             }
           }
         }
@@ -2154,10 +2166,10 @@ showDelete(e) {
 </view>
 ```
 
-然后，如何实现删除功能呢？我们需要传递什么数据给 `js`？  
+然后，如何实现删除功能呢？我们需要传递什么数据给 `js`？
 
-* 字母组名
-* 该项所在索引
+- 字母组名
+- 该项所在索引
 
 我们只需要遍历原数据，找到对应的组，并根据传递过来的索引，删除该组中对应索引的值，我们就完成了删除的功能：
 
@@ -2178,31 +2190,30 @@ Page({
     })
   },
   deleteConfirm(e) {
+    console.log('\n【API - 删除用户')
 
-    console.log("\n【API - 删除用户");
-
-    let userName = e.currentTarget.dataset.username;
-    let groupName = e.currentTarget.dataset.groupname;
-    let index = e.currentTarget.dataset.index;
+    let userName = e.currentTarget.dataset.username
+    let groupName = e.currentTarget.dataset.groupname
+    let index = e.currentTarget.dataset.index
 
     wx.showModal({
       title: '删除确认',
-      content: '是否删除成员【' + e.currentTarget.dataset.username + "】?",
-      success: (e) => {
-        
-        if (e.confirm) { // 如果确认删除
+      content: '是否删除成员【' + e.currentTarget.dataset.username + '】?',
+      success: e => {
+        if (e.confirm) {
+          // 如果确认删除
 
-          console.log("删除成功!");
+          console.log('删除成功!')
 
           // 原数据
-          let contactsData = this.data.contactsData;
+          let contactsData = this.data.contactsData
 
           // 遍历原数据
           for (let groupInfo in contactsData) {
             // 找到要删除成员所在的组
             if (groupName == contactsData[groupInfo].groupName) {
               // 根据索引删除该条记录
-              contactsData[groupInfo].users.splice(index, 1);
+              contactsData[groupInfo].users.splice(index, 1)
             }
           }
 
@@ -2211,13 +2222,12 @@ Page({
           })
 
           wx.showToast({
-            title: '删除成功~',
+            title: '删除成功~'
           })
-
-        } else if (e.cancel) { // 如果取消
-          console.log("取消删除!");
+        } else if (e.cancel) {
+          // 如果取消
+          console.log('取消删除!')
         }
-
       }
     })
   }
@@ -2232,7 +2242,7 @@ Page({
 
 ![图](../../public-repertory/img/other-WechatAppletFunctionList-21.gif)
 
-写到这里，**jsLe** 终于可以松一口气了，咱离胜利不远了~  
+写到这里，**jsLe** 终于可以松一口气了，咱离胜利不远了~
 
 现在，我们实现正常情况下的不断下拉加载：
 
@@ -2245,14 +2255,16 @@ page({
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-    
-    if (this.data.normalModel) { // 正常模式上拉
-      console.log("\n正常模式上拉");
-    } else if (this.data.searchModel) { // 搜索模式上拉
-      console.log("\n搜索模式上拉");
-    } else if (this.data.pinyinNavModel) { // 拼音模式上拉
-      console.log("\n拼音模式上拉");
+  onReachBottom: function() {
+    if (this.data.normalModel) {
+      // 正常模式上拉
+      console.log('\n正常模式上拉')
+    } else if (this.data.searchModel) {
+      // 搜索模式上拉
+      console.log('\n搜索模式上拉')
+    } else if (this.data.pinyinNavModel) {
+      // 拼音模式上拉
+      console.log('\n拼音模式上拉')
     }
   }
 })
@@ -2264,7 +2276,6 @@ page({
 
 ```js
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -2273,19 +2284,21 @@ Page({
      * 上拉触底
      * normalModelNoData - 正常模式没数据加载了
      */
-    normalModelNoData: false,
+    normalModelNoData: false
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-    if (this.data.normalModel) { // 正常模式上拉
-      
-      console.log("\n正常模式上拉");
+  onReachBottom: function() {
+    if (this.data.normalModel) {
+      // 正常模式上拉
 
-      if (!this.data.normalModelNoData) { // 如果还有数据
-        
+      console.log('\n正常模式上拉')
+
+      if (!this.data.normalModelNoData) {
+        // 如果还有数据
+
         // 新数据
         let newData = [
           {
@@ -2341,46 +2354,50 @@ Page({
         ]
 
         // 原数据
-        let oldData = this.data.contactsData;
+        let oldData = this.data.contactsData
 
         // 循环新数据
         for (let newDataItem in newData) {
           // 转换新数据拼音首字母为大写
-          let initials = newData[newDataItem].pinyin.substr(0, 1).toUpperCase();
+          let initials = newData[newDataItem].pinyin.substr(0, 1).toUpperCase()
           // 循环旧数据
           for (let oldDataItem in oldData) {
             // 获取旧数据字母分组
-            let groupName = oldData[oldDataItem].groupName;
+            let groupName = oldData[oldDataItem].groupName
 
             // 判断两个字母是否相同
             if (initials == groupName) {
               // 使用 array[array.length] 将数据加入到该组中
-              oldData[oldDataItem].users[oldData[oldDataItem].users.length] = newData[newDataItem];
+              oldData[oldDataItem].users[oldData[oldDataItem].users.length] =
+                newData[newDataItem]
             }
           }
         }
 
-        console.log("\上拉加载后数据：");
-        console.log(oldData);
+        console.log('上拉加载后数据：')
+        console.log(oldData)
 
         this.setData({
           contactsData: oldData,
           normalModelNoData: true
         })
-        
-      } else { // 如果没数据了
-        console.log("正常模式没数据");
+      } else {
+        // 如果没数据了
+        console.log('正常模式没数据')
       }
-
-    } else if (this.data.searchModel) { // 搜索模式上拉
-      console.log("\n搜索模式上拉：");
-    } else if (this.data.pinyinNavModel) { // 拼音模式上拉
-      console.log("\n拼音模式上拉");
+    } else if (this.data.searchModel) {
+      // 搜索模式上拉
+      console.log('\n搜索模式上拉：')
+    } else if (this.data.pinyinNavModel) {
+      // 拼音模式上拉
+      console.log('\n拼音模式上拉')
     }
   }
 })
 ```
+
 #
+
 ### <a name="chapter-three-two-ten" id="chapter-three-two-ten">3.2.10 兵分二路 - 拼音导航</a>
 
 > [返回目录](#catalog-chapter-three-two)
@@ -2438,7 +2455,6 @@ Page({
 
 ```js
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -2447,21 +2463,48 @@ Page({
      * 拼音导航功能
      * letters - 导航字母
      */
-    letters: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
+    letters: [
+      'A',
+      'B',
+      'C',
+      'D',
+      'E',
+      'F',
+      'G',
+      'H',
+      'I',
+      'J',
+      'K',
+      'L',
+      'M',
+      'N',
+      'O',
+      'P',
+      'Q',
+      'R',
+      'S',
+      'T',
+      'U',
+      'V',
+      'W',
+      'X',
+      'Y',
+      'Z'
+    ]
   },
   /**
    * 拼音导航功能
    * pininNav - 点击字母
    */
   pingyinNav(e) {
-    console.log(e.currentTarget.dataset.byte);
-  },
+    console.log(e.currentTarget.dataset.byte)
+  }
 })
 ```
 
-**然后**，布局有了，我们要如何实现滚动效果呢？  
+**然后**，布局有了，我们要如何实现滚动效果呢？
 
-* [参考资料 - 根据设备宽高动态设置元素宽高](https://blog.csdn.net/qq_41080490/article/details/80268298)
+- [参考资料 - 根据设备宽高动态设置元素宽高](https://blog.csdn.net/qq_41080490/article/details/80268298)
 
 考虑到设备的不同，它的高度也不同，所以我们是需要获取到样式的动态高度的。先看看我们在 `wxss` 中定义的高度吧：
 
@@ -2478,7 +2521,7 @@ Page({
 }
 ```
 
-因此，我们的一个字母的高度，为 `44rpx`；而一个用户数据的高度，为 `120rpx`，即我们要滚动的高度 = 44 * 字母个数 + 120 * 用户条数。
+因此，我们的一个字母的高度，为 `44rpx`；而一个用户数据的高度，为 `120rpx`，即我们要滚动的高度 = 44 _ 字母个数 + 120 _ 用户条数。
 
 **最后**，我们先在正常模式下模拟实现一遍拼音导航：
 
@@ -2488,7 +2531,6 @@ Page({
 
 ```js
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -2498,8 +2540,35 @@ Page({
      * letters - 导航字母
      * equipmentOneRpx - 设备中 1rpx 为多少 px
      */
-    letters: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
-    equipmentOneRpx: '',
+    letters: [
+      'A',
+      'B',
+      'C',
+      'D',
+      'E',
+      'F',
+      'G',
+      'H',
+      'I',
+      'J',
+      'K',
+      'L',
+      'M',
+      'N',
+      'O',
+      'P',
+      'Q',
+      'R',
+      'S',
+      'T',
+      'U',
+      'V',
+      'W',
+      'X',
+      'Y',
+      'Z'
+    ],
+    equipmentOneRpx: ''
   },
 
   /**
@@ -2507,62 +2576,62 @@ Page({
    * pininNav - 点击字母
    */
   pingyinNav(e) {
-        
-    console.log("\n【API - 拼音导航】");
+    console.log('\n【API - 拼音导航】')
 
-    let byte = e.currentTarget.dataset.byte;
+    let byte = e.currentTarget.dataset.byte
 
-    let dataLength = 0;
-    let byteLength = 0;
+    let dataLength = 0
+    let byteLength = 0
 
-    let data = this.data.contactsData;
+    let data = this.data.contactsData
 
     for (let item in data) {
       // 如果该字母比点击的字母小，则添加数据长度
       if (data[item].groupName < byte) {
-        dataLength = dataLength + data[item].users.length;
+        dataLength = dataLength + data[item].users.length
       }
       // 如果该字母有内容，则加上它的字母长度
       if (data[item].users.length >= 1 && data[item].groupName != byte) {
-        byteLength = byteLength + 1;
+        byteLength = byteLength + 1
       }
       // 如果该字母等于点击的字母，则中断循环
       if (data[item].groupName == byte) {
-        break;
+        break
       }
     }
 
-    console.log("title 长度为：" + byteLength);
-    console.log("data 条数为：" + dataLength);
+    console.log('title 长度为：' + byteLength)
+    console.log('data 条数为：' + dataLength)
 
-    console.log("\n现在数组为：");
-    console.log(data);
+    console.log('\n现在数组为：')
+    console.log(data)
 
     wx.pageScrollTo({
       // 滚动高度
-      scrollTop: byteLength * (44 / this.data.equipmentOneRpx) + dataLength * (120 / this.data.equipmentOneRpx)
+      scrollTop:
+        byteLength * (44 / this.data.equipmentOneRpx) +
+        dataLength * (120 / this.data.equipmentOneRpx)
     })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
-    console.log("\n通讯录");
+  onLoad: function(options) {
+    console.log('\n通讯录')
 
     // 设备信息
     wx.getSystemInfo({
       success: res => {
-        console.log("\n设备信息为：");
-        console.log(res);
+        console.log('\n设备信息为：')
+        console.log(res)
 
-        let equipmentOneRpx = 750 / res.windowWidth;
-        console.log("换算信息：1rpx = " + equipmentOneRpx + "px");
+        let equipmentOneRpx = 750 / res.windowWidth
+        console.log('换算信息：1rpx = ' + equipmentOneRpx + 'px')
         this.setData({
           equipmentOneRpx: equipmentOneRpx
         })
-      },
+      }
     })
   }
 })
@@ -2574,17 +2643,17 @@ Page({
 
 现在，我们开始 **真拼音导航** 功能的实现：
 
-**首先**，我们应该考虑到，正常加载模式与拼音导航模式，会对 `contactsData` 的使用产生冲突：假如用户划拉了几页数据，然后进入拼音导航，那么，用户想下拉刷新页面的时候，可能就加载原本数据了，而不是加载该字母上面的数据……为此，我们在第一次加载拼音模式的时候，应该清空 `contactsData`（多了也不行，因为用户可能点击其他字母）。  
+**首先**，我们应该考虑到，正常加载模式与拼音导航模式，会对 `contactsData` 的使用产生冲突：假如用户划拉了几页数据，然后进入拼音导航，那么，用户想下拉刷新页面的时候，可能就加载原本数据了，而不是加载该字母上面的数据……为此，我们在第一次加载拼音模式的时候，应该清空 `contactsData`（多了也不行，因为用户可能点击其他字母）。
 
-**然后**，我们关闭正常模式，并开启拼音导航模式，设置拼音导航模式不是第一次加载了。  
+**然后**，我们关闭正常模式，并开启拼音导航模式，设置拼音导航模式不是第一次加载了。
 
-**接着**，我们遍历空数据和新数据，删除重复数据后，将数据添加到 `contactsData` 中。  
+**接着**，我们遍历空数据和新数据，删除重复数据后，将数据添加到 `contactsData` 中。
 
 **最后**，我们才用上我们前面的页面滚动效果，滚动到我们希望跳转到的位置。
 
 以上，考虑到步骤繁杂，我们应该使用 `Promise` 来实现：
 
-* [ES6 入门之 Promise | 阮一峰](http://es6.ruanyifeng.com/#docs/promise#Promise-%E7%9A%84%E5%90%AB%E4%B9%89)
+- [ES6 入门之 Promise | 阮一峰](http://es6.ruanyifeng.com/#docs/promise#Promise-%E7%9A%84%E5%90%AB%E4%B9%89)
 
 > addressList.js 代码片段
 
@@ -2592,7 +2661,6 @@ Page({
 
 ```js
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -2603,9 +2671,36 @@ Page({
      * equipmentOneRpx - 设备中 1rpx 为多少 px
      * firstEntryPinyinModel - 第一次进入拼音导航模式
      */
-    letters: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
+    letters: [
+      'A',
+      'B',
+      'C',
+      'D',
+      'E',
+      'F',
+      'G',
+      'H',
+      'I',
+      'J',
+      'K',
+      'L',
+      'M',
+      'N',
+      'O',
+      'P',
+      'Q',
+      'R',
+      'S',
+      'T',
+      'U',
+      'V',
+      'W',
+      'X',
+      'Y',
+      'Z'
+    ],
     equipmentOneRpx: '',
-    firstEntryPinyinModel: true,
+    firstEntryPinyinModel: true
   },
 
   /**
@@ -2613,15 +2708,13 @@ Page({
    * pininNav - 点击字母
    */
   pinyinNav(e) {
+    console.log('\n【API - 拼音导航】')
 
-    console.log("\n【API - 拼音导航】");
-
-    let byte = e.currentTarget.dataset.byte;
+    let byte = e.currentTarget.dataset.byte
 
     // 开启 Promise
     const promise = new Promise((resolve, reject) => {
-
-      console.log("\n第一步：清空原数据");
+      console.log('\n第一步：清空原数据')
 
       let contactsData = [
         {
@@ -2728,162 +2821,175 @@ Page({
           groupName: 'Z',
           users: []
         }
-      ];
+      ]
 
-      if (this.data.firstEntryPinyinModel) { // 为防止无法下拉，第一次进入拼音导航模式，清空原数据
+      if (this.data.firstEntryPinyinModel) {
+        // 为防止无法下拉，第一次进入拼音导航模式，清空原数据
         this.setData({
           contactsData: contactsData
         })
       }
 
       // 告诉下一步可以执行了
-      let success = true;
-      resolve(success);
+      let success = true
+      resolve(success)
+    })
+      .then(() => {
+        console.log('\n第二步：开启拼音导航模式')
 
-    }).then(() => {
-
-      console.log("\n第二步：开启拼音导航模式");
-
-      this.setData({
-        normalModel: false,
-        pinyinNavModel: true,
-        firstEntryPinyinModel: false,
+        this.setData({
+          normalModel: false,
+          pinyinNavModel: true,
+          firstEntryPinyinModel: false
+        })
       })
+      .then(() => {
+        console.log('\n第三步：判断并添加数据')
 
-    }).then(() => {
+        let data = this.data.contactsData
+        console.log('\n现在的数据有：')
+        console.log(data)
 
-      console.log("\n第三步：判断并添加数据");
+        let newData = [
+          {
+            userName: '克狸',
+            userPhone: '18811121112',
+            pinyin: 'keli'
+          },
+          {
+            userName: '拉狸',
+            userPhone: '18811131113',
+            pinyin: 'lali'
+          },
+          {
+            userName: '磨狸',
+            userPhone: '18811141114',
+            pinyin: 'moli'
+          },
+          {
+            userName: '尼狸',
+            userPhone: '18811151115',
+            pinyin: 'nili'
+          },
+          {
+            userName: '噢狸',
+            userPhone: '18811161116',
+            pinyin: 'oli'
+          },
+          {
+            userName: '皮皮狸',
+            userPhone: '18811171117',
+            pinyin: 'pipili'
+          },
+          {
+            userName: '曲狸',
+            userPhone: '18811181118',
+            pinyin: 'quli'
+          },
+          {
+            userName: '任狸',
+            userPhone: '18811191119',
+            pinyin: 'renli'
+          },
+          {
+            userName: '司马狸',
+            userPhone: '18811211121',
+            pinyin: 'simali'
+          },
+          {
+            userName: '提狸',
+            userPhone: '18811221122',
+            pinyin: 'tili'
+          }
+        ]
+        console.log('\n新数据有：')
+        console.log(newData)
 
-      let data = this.data.contactsData;
-      console.log("\n现在的数据有：");
-      console.log(data);
+        console.log('\n组合数据：')
+        for (let groupInfo in data) {
+          // 循环原数据
+          for (let item in newData) {
+            // 循环新数据
 
-      let newData = [
-        {
-          userName: '克狸',
-          userPhone: '18811121112',
-          pinyin: 'keli'
-        },
-        {
-          userName: '拉狸',
-          userPhone: '18811131113',
-          pinyin: 'lali'
-        },
-        {
-          userName: '磨狸',
-          userPhone: '18811141114',
-          pinyin: 'moli'
-        },
-        {
-          userName: '尼狸',
-          userPhone: '18811151115',
-          pinyin: 'nili'
-        },
-        {
-          userName: '噢狸',
-          userPhone: '18811161116',
-          pinyin: 'oli'
-        },
-        {
-          userName: '皮皮狸',
-          userPhone: '18811171117',
-          pinyin: 'pipili'
-        },
-        {
-          userName: '曲狸',
-          userPhone: '18811181118',
-          pinyin: 'quli'
-        },
-        {
-          userName: '任狸',
-          userPhone: '18811191119',
-          pinyin: 'renli'
-        },
-        {
-          userName: '司马狸',
-          userPhone: '18811211121',
-          pinyin: 'simali'
-        },
-        {
-          userName: '提狸',
-          userPhone: '18811221122',
-          pinyin: 'tili'
-        }
-      ]
-      console.log("\n新数据有：");
-      console.log(newData);
+            if (
+              data[groupInfo].groupName ==
+              newData[item].pinyin.substr(0, 1).toUpperCase()
+            ) {
+              // 如果新数据字母 与 原数据字母相同
 
-      console.log("\n组合数据：");
-      for (let groupInfo in data) { // 循环原数据
-        for (let item in newData) { // 循环新数据
+              // 清君侧，删除重复数据
+              // 循环用户数据，判断 新数据的用户名 是否存在于用户数据，如果存在则删除之
+              for (let userInfo in data[groupInfo].users) {
+                // 循环用户原数据
+                console.log(newData)
+                if (newData.length > 1) {
+                  if (
+                    data[groupInfo].users[userInfo].userName ==
+                    newData[item].userName
+                  ) {
+                    // 判断 新数据的用户名 是否存在于原用户数据
+                    newData.splice(item, 1)
+                  }
+                }
+              }
 
-          if (data[groupInfo].groupName == newData[item].pinyin.substr(0, 1).toUpperCase()) { // 如果新数据字母 与 原数据字母相同
-
-            // 清君侧，删除重复数据
-            // 循环用户数据，判断 新数据的用户名 是否存在于用户数据，如果存在则删除之
-            for (let userInfo in data[groupInfo].users) { // 循环用户原数据
-              console.log(newData);
               if (newData.length > 1) {
-                if (data[groupInfo].users[userInfo].userName == newData[item].userName) { // 判断 新数据的用户名 是否存在于原用户数据
-                  newData.splice(item, 1);
+                // 判断是否还有数据
+                if (
+                  data[groupInfo].groupName ==
+                  newData[item].pinyin.substr(0, 1).toUpperCase()
+                ) {
+                  // 再判断一次新数据与旧数据字母是否相同
+                  console.log('添加到组：【' + data[groupInfo].groupName + '】')
+                  data[groupInfo].users.push(newData[item])
+                  console.log(data)
                 }
               }
             }
-
-            if (newData.length > 1) { // 判断是否还有数据
-              if (data[groupInfo].groupName == newData[item].pinyin.substr(0, 1).toUpperCase()) { // 再判断一次新数据与旧数据字母是否相同
-                console.log("添加到组：【" + data[groupInfo].groupName + "】");
-                data[groupInfo].users.push(newData[item]);
-                console.log(data);
-              }
-            }
-
           }
         }
-      }
 
-      this.setData({
-        contactsData: data,
+        this.setData({
+          contactsData: data
+        })
       })
+      .then(() => {
+        console.log('\n第四步：滚动页面')
 
-    }).then(() => {
+        let dataLength = 0
+        let byteLength = 0
 
-      console.log("\n第四步：滚动页面");
+        let data = this.data.contactsData
+        console.log(data)
 
-      let dataLength = 0;
-      let byteLength = 0;
-
-      let data = this.data.contactsData;
-      console.log(data);
-
-      for (let item in data) {
-        // 如果该字母比点击的字母小，则添加数据长度
-        if (data[item].groupName < byte) {
-          dataLength = dataLength + data[item].users.length;
+        for (let item in data) {
+          // 如果该字母比点击的字母小，则添加数据长度
+          if (data[item].groupName < byte) {
+            dataLength = dataLength + data[item].users.length
+          }
+          // 如果该字母有内容，则加上它的字母长度
+          if (data[item].users.length >= 1 && data[item].groupName != byte) {
+            byteLength = byteLength + 1
+          }
+          // 如果该字母等于点击的字母，则中断循环
+          if (data[item].groupName == byte) {
+            break
+          }
         }
-        // 如果该字母有内容，则加上它的字母长度
-        if (data[item].users.length >= 1 && data[item].groupName != byte) {
-          byteLength = byteLength + 1;
-        }
-        // 如果该字母等于点击的字母，则中断循环
-        if (data[item].groupName == byte) {
-          break;
-        }
-      }
 
-      console.log("title 长度为：" + byteLength);
-      console.log("data 条数为：" + dataLength);
+        console.log('title 长度为：' + byteLength)
+        console.log('data 条数为：' + dataLength)
 
-      console.log("\n现在数组为：");
-      console.log(data);
+        console.log('\n现在数组为：')
+        console.log(data)
 
-      wx.pageScrollTo({
-        // 滚动高度
-        scrollTop: byteLength * (44 / this.data.equipmentOneRpx) + dataLength * (120 / this.data.equipmentOneRpx)
+        wx.pageScrollTo({
+          // 滚动高度
+          scrollTop:
+            byteLength * (44 / this.data.equipmentOneRpx) +
+            dataLength * (120 / this.data.equipmentOneRpx)
+        })
       })
-
-    })
-
   }
 })
 ```
@@ -2920,15 +3026,15 @@ Page({
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
+    if (this.data.pinyinNavModel) {
+      // 拼音下拉刷新
 
-    if (this.data.pinyinNavModel) { // 拼音下拉刷新
+      console.log('\n【API - 拼音下拉刷新】')
 
-      console.log("\n【API - 拼音下拉刷新】");
-
-      let data = this.data.contactsData;
-      console.log("\n现在的数据有：");
-      console.log(data);
+      let data = this.data.contactsData
+      console.log('\n现在的数据有：')
+      console.log(data)
 
       let newData = [
         {
@@ -2980,35 +3086,50 @@ Page({
           userName: '激狸',
           userPhone: '18800000000',
           pinyin: 'jli'
-        },
+        }
       ]
-      console.log("\n新数据有：");
-      console.log(newData);
+      console.log('\n新数据有：')
+      console.log(newData)
 
-      console.log("\n组合数据：");
-      for (let groupInfo in data) { // 循环原数据
-        for (let item in newData) { // 循环新数据
+      console.log('\n组合数据：')
+      for (let groupInfo in data) {
+        // 循环原数据
+        for (let item in newData) {
+          // 循环新数据
 
-          if (data[groupInfo].groupName == newData[item].pinyin.substr(0, 1).toUpperCase()) { // 如果新数据字母 与 原数据字母相同
+          if (
+            data[groupInfo].groupName ==
+            newData[item].pinyin.substr(0, 1).toUpperCase()
+          ) {
+            // 如果新数据字母 与 原数据字母相同
 
             // 清君侧，删除重复数据
             // 循环用户数据，判断 新数据的用户名 是否存在于用户数据，如果存在则删除之
-            for (let userInfo in data[groupInfo].users) { // 循环用户原数据
+            for (let userInfo in data[groupInfo].users) {
+              // 循环用户原数据
               if (newData.length > 1) {
-                if (data[groupInfo].users[userInfo].userName == newData[item].userName) { // 判断 新数据的用户名 是否存在于原用户数据
-                  newData.splice(item, 1);
+                if (
+                  data[groupInfo].users[userInfo].userName ==
+                  newData[item].userName
+                ) {
+                  // 判断 新数据的用户名 是否存在于原用户数据
+                  newData.splice(item, 1)
                 }
               }
             }
 
-            if (newData.length > 1) { // 判断是否还有数据
-              if (data[groupInfo].groupName == newData[item].pinyin.substr(0, 1).toUpperCase()) { // 再判断一次新数据与旧数据字母是否相同
-                console.log("添加到组：【" + data[groupInfo].groupName + "】");
-                data[groupInfo].users.unshift(newData[item]);
-                console.log(data);
+            if (newData.length > 1) {
+              // 判断是否还有数据
+              if (
+                data[groupInfo].groupName ==
+                newData[item].pinyin.substr(0, 1).toUpperCase()
+              ) {
+                // 再判断一次新数据与旧数据字母是否相同
+                console.log('添加到组：【' + data[groupInfo].groupName + '】')
+                data[groupInfo].users.unshift(newData[item])
+                console.log(data)
               }
             }
-
           }
         }
       }
@@ -3016,7 +3137,6 @@ Page({
       this.setData({
         contactsData: data
       })
-
     }
   }
 })
@@ -3030,20 +3150,22 @@ Page({
 
 ```js
 Page({
-onReachBottom: function () {
-    if (this.data.normalModel) { // 正常模式上拉
+  onReachBottom: function() {
+    if (this.data.normalModel) {
+      // 正常模式上拉
 
-      console.log("\n正常模式上拉");
+      console.log('\n正常模式上拉')
+    } else if (this.data.searchModel) {
+      // 搜索模式上拉
+      console.log('\n搜索模式上拉：')
+    } else if (this.data.pinyinNavModel) {
+      // 拼音模式上拉
 
-    } else if (this.data.searchModel) { // 搜索模式上拉
-      console.log("\n搜索模式上拉：");
-    } else if (this.data.pinyinNavModel) { // 拼音模式上拉
-      
-      console.log("\n拼音模式上拉");
+      console.log('\n拼音模式上拉')
 
-      let data = this.data.contactsData;
-      console.log("\n现在的数据有：");
-      console.log(data);
+      let data = this.data.contactsData
+      console.log('\n现在的数据有：')
+      console.log(data)
 
       let newData = [
         {
@@ -3077,34 +3199,49 @@ onReachBottom: function () {
           pinyin: 'zuili'
         }
       ]
-      console.log("\n新数据有：");
-      console.log(newData);
+      console.log('\n新数据有：')
+      console.log(newData)
 
-      console.log("\n组合数据：");
-      for (let groupInfo in data) { // 循环原数据
-        for (let item in newData) { // 循环新数据
+      console.log('\n组合数据：')
+      for (let groupInfo in data) {
+        // 循环原数据
+        for (let item in newData) {
+          // 循环新数据
 
-          if (data[groupInfo].groupName == newData[item].pinyin.substr(0, 1).toUpperCase()) { // 如果新数据字母 与 原数据字母相同
+          if (
+            data[groupInfo].groupName ==
+            newData[item].pinyin.substr(0, 1).toUpperCase()
+          ) {
+            // 如果新数据字母 与 原数据字母相同
 
             // 清君侧，删除重复数据
             // 循环用户数据，判断 新数据的用户名 是否存在于用户数据，如果存在则删除之
-            for (let userInfo in data[groupInfo].users) { // 循环用户原数据
-              console.log(newData);
+            for (let userInfo in data[groupInfo].users) {
+              // 循环用户原数据
+              console.log(newData)
               if (newData.length > 1) {
-                if (data[groupInfo].users[userInfo].userName == newData[item].userName) { // 判断 新数据的用户名 是否存在于原用户数据
-                  newData.splice(item, 1);
+                if (
+                  data[groupInfo].users[userInfo].userName ==
+                  newData[item].userName
+                ) {
+                  // 判断 新数据的用户名 是否存在于原用户数据
+                  newData.splice(item, 1)
                 }
               }
             }
 
-            if (newData.length > 1) { // 判断是否还有数据
-              if (data[groupInfo].groupName == newData[item].pinyin.substr(0, 1).toUpperCase()) { // 再判断一次新数据与旧数据字母是否相同
-                console.log("添加到组：【" + data[groupInfo].groupName + "】");
-                data[groupInfo].users.push(newData[item]);
-                console.log(data);
+            if (newData.length > 1) {
+              // 判断是否还有数据
+              if (
+                data[groupInfo].groupName ==
+                newData[item].pinyin.substr(0, 1).toUpperCase()
+              ) {
+                // 再判断一次新数据与旧数据字母是否相同
+                console.log('添加到组：【' + data[groupInfo].groupName + '】')
+                data[groupInfo].users.push(newData[item])
+                console.log(data)
               }
             }
-
           }
         }
       }
@@ -3112,7 +3249,6 @@ onReachBottom: function () {
       this.setData({
         contactsData: data
       })
-
     }
   }
 })
@@ -3124,17 +3260,17 @@ onReachBottom: function () {
 
 > [返回目录](#catalog-chapter-three-two)
 
-天下大势，分久必合，合久必分。  
+天下大势，分久必合，合久必分。
 
-写到这里，我们的通讯录已然完结，在此附上 **jsLe** 的代码地址：[项目地址](https://github.com/LiangJunrong/WeChatApplet)  
+写到这里，我们的通讯录已然完结，在此附上 **jsLe** 的代码地址：[项目地址](https://github.com/LiangJunrong/WeChatApplet)
 
 然而，这是结束吗？并不是，我们的通讯录，还有个功能未实现：
 
 **如何在新增、删除的时候，对新增的字母进行排序，并导航到具体位置？**
 
-在工作项目的开发中，**jsLe** 曾想到将新增的中文昵称转换为拼音，然后通过二分查找法，找到对应的位置并进行插入……  
+在工作项目的开发中，**jsLe** 曾想到将新增的中文昵称转换为拼音，然后通过二分查找法，找到对应的位置并进行插入……
 
-但是，正印了那句话：**我的能力，可以造火箭，我却只有敲钉子的时间！**  
+但是，正印了那句话：**我的能力，可以造火箭，我却只有敲钉子的时间！**
 
 时间是一切程序猿的杀手，新增排序，咱们，有缘再会！
 
@@ -3142,9 +3278,9 @@ onReachBottom: function () {
 
 > [返回目录](#catalog-chapter-four)
 
-不定期更新，详情可关注 **jsLe** 的 [GitHub 地址](https://github.com/LiangJunrong/document-library/blob/master/other-library/WeChatApplet/WeChatAppletFunctionList.md)  
+不定期更新，详情可关注 **jsLe** 的 [GitHub 地址](https://github.com/LiangJunrong/document-library/blob/master/other-library/WeChatApplet/WeChatAppletFunctionList.md)
 
-最后的最后，奉上上面实例中的地址：  
+最后的最后，奉上上面实例中的地址：
 
 [项目地址](https://github.com/LiangJunrong/WeChatApplet)
 

@@ -1,19 +1,19 @@
-方法 - sort()
-===
+# 方法 - sort()
 
 > Create by **jsLe** on **2019-09-17 09:37:28**  
 > Recently revised in **2019-09-17 09:37:39**
 
-* **原文**：[MDN - sort()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+- **原文**：[MDN - sort()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 
-* **功能**：`sort()` 对数组的元素进行排序，并返回数组。
+- **功能**：`sort()` 对数组的元素进行排序，并返回数组。
 
-* **语法**：`sort(function)`
-  * `function`：按某种顺序进行排列的函数。
+- **语法**：`sort(function)`
 
-* **返回值**：排序后的数组。
+  - `function`：按某种顺序进行排列的函数。
 
-* **代码**：
+- **返回值**：排序后的数组。
+
+- **代码**：
 
 ```js
 [4, 2, 5, 1, 3].sort(), // [1, 2, 3, 4, 5]

@@ -1,64 +1,63 @@
-语句和声明
-===
+# 语句和声明
 
 > create by **jsLe** on **2019-10-14 11:10:01**  
 > Recently revised in **2019-10-14 11:16:14**
 
 本目录按照 MDN 中关于 JavaScript 的分类，将声明方式（let、var、const）以及语句（for、for...in、switch）等放到该目录讲解。
 
-* [MDN - 语句和声明](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements)
+- [MDN - 语句和声明](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements)
 
 ## 一 控制流程
 
-| 目录 |
-| --- |
-| Block |
-| break |
-| continue |
-| Empty |
-| if...else |
-| switch |
-| throw |
+| 目录        |
+| ----------- |
+| Block       |
+| break       |
+| continue    |
+| Empty       |
+| if...else   |
+| switch      |
+| throw       |
 | try...catch |
 
 ## 二 声明
 
-| 目录 |
-| --- |
-| var |
-| let |
+| 目录  |
+| ----- |
+| var   |
+| let   |
 | const |
 
 ## 三 函数和类
 
-| 目录 |
-| --- |
-| function |
-| function* |
+| 目录           |
+| -------------- |
+| function       |
+| function\*     |
 | async function |
-| return |
-| class |
+| return         |
+| class          |
 
 ## 四 迭代器
 
-| 目录 |
-| --- |
-| do...while |
-| for |
-| for...in |
-| for...of |
+| 目录           |
+| -------------- |
+| do...while     |
+| for            |
+| for...in       |
+| for...of       |
 | for await...of |
-| while |
+| while          |
 
 ## 五 其他
 
-| 目录 |
-| --- |
-| debugger |
-| export |
-| import |
+| 目录        |
+| ----------- |
+| debugger    |
+| export      |
+| import      |
 | import.meta |
-| label |
+| label       |
 
 ---
 

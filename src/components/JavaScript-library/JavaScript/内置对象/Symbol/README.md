@@ -1,15 +1,14 @@
-Symbol
-===
+# Symbol
 
 > Create by **jsLe** on **2019-10-15 19:25:00**  
 > Recently revised in **2019-10-15 19:36:57**
 
-* **参考文献**：
+- **参考文献**：
 
 1. [MDN - Symbol](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
 2. [阮一峰 - Symbol](http://es6.ruanyifeng.com/#docs/symbol)
 
-* **功能**：
+- **功能**：
 
 ES5 的对象属性名都是字符串，这容易造成属性名的冲突。
 
@@ -24,31 +23,31 @@ ES5 的对象属性名都是字符串，这容易造成属性名的冲突。
 ES6 引入了一种新的原始数据类型 `Symbol`，表示独一无二的值。它是 JavaScript 语言的第七种数据类型，前六种是：`undefined`、`null`、布尔值（Boolean）、字符串（String）、数值（Number）、对象（Object）。
 
 ```js
-let s1 = Symbol('foo');
-let s2 = Symbol('foo');
+let s1 = Symbol('foo')
+let s2 = Symbol('foo')
 
-s1 === s2; // false
-
+s1 === s2 // false
 ```
 
-* **语法**：`Symbol(description)`
-  * `description`：可选的字符串。Symbol 的描述，可用于调试但不能访问 Symbol 本身。
+- **语法**：`Symbol(description)`
 
-* **进一步探索**：
+  - `description`：可选的字符串。Symbol 的描述，可用于调试但不能访问 Symbol 本身。
+
+- **进一步探索**：
 
 Symbol 并不能通过 new 生成，如果你通过 new 来创建 Symbol，会报错：
 
 ```js
-var sym = new Symbol(); // TypeError
+var sym = new Symbol() // TypeError
 ```
 
 需要注意的是：
 
-* `typeof` 可以识别 Symbol 类型
-* `for...in` 不能枚举 Symbol 类型（浅拷贝如果数据中存在该类型需要注意）
-* `JSON.stringify()` 中以 Symbol 作为键的属性会被忽略（深拷贝方式 `JSON.parse(JSON.stringify())` 如果数据中存在该类型需要注意）
+- `typeof` 可以识别 Symbol 类型
+- `for...in` 不能枚举 Symbol 类型（浅拷贝如果数据中存在该类型需要注意）
+- `JSON.stringify()` 中以 Symbol 作为键的属性会被忽略（深拷贝方式 `JSON.parse(JSON.stringify())` 如果数据中存在该类型需要注意）
 
-* **更多**：
+- **更多**：
 
 建议参考阮一峰文章，这里不做过多描述。
 

@@ -1,5 +1,4 @@
-Vue + Koa2 + MongoDB 搭建商城
-===
+# Vue + Koa2 + MongoDB 搭建商城
 
 > Create by **jsLe** on **2018-10-25 15:14:00**  
 > Recently revised in **2019-05-28 19:28:23**
@@ -8,17 +7,17 @@ Vue + Koa2 + MongoDB 搭建商城
 
 本文通过 Vue + Koa2 + MongoDB 搭建一个春节/新年皮肤的商城。
 
-本文参考教程：[Vue.js+Koa2移动电商实战视频教程(文字版)](http://jspang.com/post/vue-koa.html)
+本文参考教程：[Vue.js+Koa2 移动电商实战视频教程(文字版)](http://jspang.com/post/vue-koa.html)
 
 涉及技术点：
 
-* Vue - `2.5.2`
-* Vant - `1.3.8`
-* Node - `8.11.2`
+- Vue - `2.5.2`
+- Vant - `1.3.8`
+- Node - `8.11.2`
 
-值得注意的是，你在这里看到的，不是从无到有的开发过程，即：这不是一篇手把手带你 0 基础搞定一切的文章。  
+值得注意的是，你在这里看到的，不是从无到有的开发过程，即：这不是一篇手把手带你 0 基础搞定一切的文章。
 
-细瞧代码片刻，竟无语凝噎，唯有泪千行，妈妈我不知道怎么跟小伙伴们讲啊！前端代码涉及知识点太多了~  
+细瞧代码片刻，竟无语凝噎，唯有泪千行，妈妈我不知道怎么跟小伙伴们讲啊！前端代码涉及知识点太多了~
 
 但，文章篇幅会非常详细，**jsLe** 会尽可能地提供相应的开发思路，如果你在阅读这篇文章的过程中，发现某些无法看懂，请自行 `百度` 或者 `Google` 或者在 `QQ 群` @ 我。这就好比咱要做一件坏事，**jsLe** 为你提供了作案思路和作案工具，还有外援([QQ 群 798961601](https://jq.qq.com/?_wv=1027&k=5bSk4rs))，相信小伙伴们在自己的努力下，会收获不一样的精彩。
 
@@ -32,32 +31,32 @@ Vue + Koa2 + MongoDB 搭建商城
 
 **我不是想犯罪，只是，似乎证据确凿？……**
 
-| 目录名 |
-| --- |
-| <a name="catalog-chapter-one" id="catalog-chapter-one"></a>[一 目录：你一定会回来的](#chapter-one) |
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 自白：我想做个好人](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 犯罪商城：奇技淫巧](#chapter-three) |
-| &emsp;[3.1 VS Code 插件](#chapter-three-one) |
-| &emsp;[3.2 Iconfont-阿里巴巴矢量图标库](#chapter-three-two) |
-| &emsp;[3.3 Vant——Vue的组件库](#chapter-three-three) |
-| &emsp;&emsp;[3.3.1 引用 Vant 组件库](#chapter-three-three-one)|
-| &emsp;&emsp;[3.3.2 Button 按钮](#chapter-three-three-two)|
-| &emsp;&emsp;[3.3.3 Layout 布局](#chapter-three-three-three)|
-| &emsp;[3.4 模拟网速缓慢 - Slow 3G](#chapter-three-four) |
-| &emsp;[3.5 mock 数据 - Easy Mock](#chapter-three-five) |
-| &emsp;[3.6 Chrome 插件 - Vue Devtool](#chapter-three-six) |
-| &emsp;[3.7 Swiper 组件 - vue-awesome-swiper](#chapter-three-seven) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 犯罪前奏：前端基础](#chapter-four) |
-| &emsp;[4.1 vue-cli 的安装及使用](#chapter-four-one) |
-| &emsp;[4.2 引用图片](#chapter-four-two) |
-| &emsp;[4.3 引用 Axios 获取 API](#chapter-four-three) |
-| &emsp;[4.4 API 接口文件配置](#chapter-four-four) |
-| &emsp;[4.5 Filter 过滤器](#chapter-four-five) |
-| &emsp;[4.6 Sass 的安装](#chapter-four-six) |
-| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 犯罪经过：页面布局](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 牢狱之灾：初识数据](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 作案新招：后端基础](#chapter-seven) |
-| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 卷土重来：项目部署](#chapter-eight) |
+| 目录名                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------ |
+| <a name="catalog-chapter-one" id="catalog-chapter-one"></a>[一 目录：你一定会回来的](#chapter-one)           |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 自白：我想做个好人](#chapter-two)             |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 犯罪商城：奇技淫巧](#chapter-three)       |
+| &emsp;[3.1 VS Code 插件](#chapter-three-one)                                                                 |
+| &emsp;[3.2 Iconfont-阿里巴巴矢量图标库](#chapter-three-two)                                                  |
+| &emsp;[3.3 Vant——Vue 的组件库](#chapter-three-three)                                                         |
+| &emsp;&emsp;[3.3.1 引用 Vant 组件库](#chapter-three-three-one)                                               |
+| &emsp;&emsp;[3.3.2 Button 按钮](#chapter-three-three-two)                                                    |
+| &emsp;&emsp;[3.3.3 Layout 布局](#chapter-three-three-three)                                                  |
+| &emsp;[3.4 模拟网速缓慢 - Slow 3G](#chapter-three-four)                                                      |
+| &emsp;[3.5 mock 数据 - Easy Mock](#chapter-three-five)                                                       |
+| &emsp;[3.6 Chrome 插件 - Vue Devtool](#chapter-three-six)                                                    |
+| &emsp;[3.7 Swiper 组件 - vue-awesome-swiper](#chapter-three-seven)                                           |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 犯罪前奏：前端基础](#chapter-four)          |
+| &emsp;[4.1 vue-cli 的安装及使用](#chapter-four-one)                                                          |
+| &emsp;[4.2 引用图片](#chapter-four-two)                                                                      |
+| &emsp;[4.3 引用 Axios 获取 API](#chapter-four-three)                                                         |
+| &emsp;[4.4 API 接口文件配置](#chapter-four-four)                                                             |
+| &emsp;[4.5 Filter 过滤器](#chapter-four-five)                                                                |
+| &emsp;[4.6 Sass 的安装](#chapter-four-six)                                                                   |
+| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 犯罪经过：页面布局](#chapter-five)          |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 牢狱之灾：初识数据](#chapter-six)             |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 作案新招：后端基础](#chapter-seven)       |
+| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 卷土重来：项目部署](#chapter-eight)       |
 | <a name="catalog-chapter-night" id="catalog-chapter-night"></a>[九 枪决前刻：我真的是个好人](#chapter-night) |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
@@ -68,14 +67,15 @@ Vue + Koa2 + MongoDB 搭建商城
 
 **规则**：
 
-* 用户有 10000 初始金币
-* 用户可以向系统商城购买商品
-* 用户可以购买店铺皮肤
-* 用户可以修改商品标题、介绍、图片、详情
-* 用户通过售卖商品、商铺点赞、商品点赞获得金币
-* 用户可以参与销售比赛。比赛规则：假如有 10 个用户参与商户竞赛，总共有 1000 个用户参与其中。那么，比赛主持人（我）将投入 100 块钱，假如其中一个用户最后获得 100 * 10000 金币，那么，它将得到 10 块钱……以此类推
+- 用户有 10000 初始金币
+- 用户可以向系统商城购买商品
+- 用户可以购买店铺皮肤
+- 用户可以修改商品标题、介绍、图片、详情
+- 用户通过售卖商品、商铺点赞、商品点赞获得金币
+- 用户可以参与销售比赛。比赛规则：假如有 10 个用户参与商户竞赛，总共有 1000 个用户参与其中。那么，比赛主持人（我）将投入 100 块钱，假如其中一个用户最后获得 100 \* 10000 金币，那么，它将得到 10 块钱……以此类推
 
 **页面**：
+
 1. 注册/登录
 2. 商城首页-商品推荐页
 3. 商家首页-商品列表页
@@ -87,13 +87,13 @@ Vue + Koa2 + MongoDB 搭建商城
 9. 道具页
 10. 打卡日历页
 
-**下载代码**：代码目前在 **jsLe** 的 **unfineshed-code** 仓库中，等这篇文章完结了会单独开一个仓库以供下载，如果你想即刻拥有原始资料，那就点击链接加 QQ 群拿资料吧：[798961601](https://jq.qq.com/?_wv=1027&k=5bSk4rs)。  
+**下载代码**：代码目前在 **jsLe** 的 **unfineshed-code** 仓库中，等这篇文章完结了会单独开一个仓库以供下载，如果你想即刻拥有原始资料，那就点击链接加 QQ 群拿资料吧：[798961601](https://jq.qq.com/?_wv=1027&k=5bSk4rs)。
 
-我是 **jsLe**，我在天书世界等你，噢，不是……  
+我是 **jsLe**，我在天书世界等你，噢，不是……
 
-我是 **jsLe**，想要资料就来砍我，哦，不是……  
+我是 **jsLe**，想要资料就来砍我，哦，不是……
 
-我是 **jsLe**，我在 **jsLe** 资料群等你~  
+我是 **jsLe**，我在 **jsLe** 资料群等你~
 
 **运行代码**：
 
@@ -112,34 +112,33 @@ npm run build
 
 > [返回目录](#catalog-chapter-three)
 
-在这个章节中，你可以看到 VS Code 的一些插件的妙用；可以看到 Iconfont 这个图标库的使用；可以看到一些比较实用的组件库例如 Vant 的介绍……  
+在这个章节中，你可以看到 VS Code 的一些插件的妙用；可以看到 Iconfont 这个图标库的使用；可以看到一些比较实用的组件库例如 Vant 的介绍……
 
-通过这些小技巧，提高你的开发效率。  
+通过这些小技巧，提高你的开发效率。
 
 如果这些小技巧你都用得非常熟练了，请通过目录跳转至第四章或者直接前往第五章，学习其他的开发技巧。
 
 ### <a name="chapter-three-one" id="chapter-three-one">3.1 VS Code 插件</a>
 
-
 > [返回目录](#catalog-chapter-three)
 
 使用方法：Visio Studio Code 软件 -> 扩展 -> 搜索关键字 -> 安装 -> 重启 VS Code
 
-* `Vetur`：该插件可以使得 VS Code 能识别 `.vue` 文件，并支持 `.vue` 文件的语法高亮显示，同时，还兼顾大多数主流的前端开发和插件，例如 `Sass` 和 `TypeScript`。
+- `Vetur`：该插件可以使得 VS Code 能识别 `.vue` 文件，并支持 `.vue` 文件的语法高亮显示，同时，还兼顾大多数主流的前端开发和插件，例如 `Sass` 和 `TypeScript`。
 
-* `Vue VSCode Snippets`：该插件可以方便编写 Vue 代码。通过安装后，在页面中敲 `vbase` 并回车可以得到一个空模板，敲 `vdata` 可以获得一个 `data()` 方法。
+- `Vue VSCode Snippets`：该插件可以方便编写 Vue 代码。通过安装后，在页面中敲 `vbase` 并回车可以得到一个空模板，敲 `vdata` 可以获得一个 `data()` 方法。
 
 ### <a name="chapter-three-two" id="chapter-three-two">3.2 Iconfont-阿里巴巴矢量图标库</a>
 
 > [返回目录](#catalog-chapter-three)
 
-在阿里巴巴图标库，设计师将图标上传到 Iconfont 平台，用户可以自定义下载多种格式的 icon，平台也可将图标转换为字体，便于前端工程师自由调整与调用。  
+在阿里巴巴图标库，设计师将图标上传到 Iconfont 平台，用户可以自定义下载多种格式的 icon，平台也可将图标转换为字体，便于前端工程师自由调整与调用。
 
 地址：[阿里巴巴图标库](http://www.iconfont.cn/)
 
 使用方法，通过加入购物车的形式，将需要的图标一起打包下载。如果实在是不看攻略就搞不懂，可参考文档：[链接-如何使用 iconfont 下载图标？](https://www.cnblogs.com/hjvsdr/p/6639649.html)
 
-### <a name="chapter-three-three" id="chapter-three-three">3.3 Vant——Vue的组件库</a>
+### <a name="chapter-three-three" id="chapter-three-three">3.3 Vant——Vue 的组件库</a>
 
 > [返回目录](#catalog-chapter-three)
 
@@ -165,7 +164,7 @@ Vant 是轻量、可靠的移动端 Vue 组件库：[Vant 官网](https://youzan
       ... 省略，详情在 .babelrc 中有，复制下面的 plugins 至代码中即可
   ],
   "plugins": [
-    "transform-vue-jsx", 
+    "transform-vue-jsx",
     "transform-runtime",
     [
       "import",
@@ -220,10 +219,9 @@ import App from './App'
 import router from './router'
 import { Button, Row, Col } from 'vant'
 
-Vue
-.use(Button)
-.use(Row)
-.use(Col)
+Vue.use(Button)
+  .use(Row)
+  .use(Col)
 
 Vue.config.productionTip = false
 
@@ -234,7 +232,6 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
-
 ```
 
 **然后**，我们在 `ShopingMall.vue` 中使用布局
@@ -255,7 +252,7 @@ new Vue({
 
 <script>
     export default {
-        
+
     }
 </script>
 
@@ -270,11 +267,11 @@ new Vue({
 
 > [返回目录](#catalog-chapter-three)
 
-由于我们制作的是商城，到时候可能加载大量的图片。  
+由于我们制作的是商城，到时候可能加载大量的图片。
 
-所以，我们不仅需要考虑用户在 WiFi 下的愉快体验，更需要考虑在野外等手机信号差的 3G，甚至 2G 信号下商城的加载速度，从而优化用户的浏览体验。  
+所以，我们不仅需要考虑用户在 WiFi 下的愉快体验，更需要考虑在野外等手机信号差的 3G，甚至 2G 信号下商城的加载速度，从而优化用户的浏览体验。
 
-因为我们平时在公司或者家里开发，都是 `WiFi` 网络。所以，在这里，我们使用 `Chrome` 控制台的 `Slow 3G`，通过加载PC端淘宝，进行网速慢的模拟。
+因为我们平时在公司或者家里开发，都是 `WiFi` 网络。所以，在这里，我们使用 `Chrome` 控制台的 `Slow 3G`，通过加载 PC 端淘宝，进行网速慢的模拟。
 
 **首先**，我们通过 `Chrome` 打开淘宝首页，通过 `F12` 打开控制台，点开 `Network` 并通过按 `Ctrl + F5` 进行强制刷新，得到下面这个图：
 
@@ -288,7 +285,7 @@ new Vue({
 
 ![图](../../public-repertory/img/other-website-ShoppingMall-4.png)
 
-**最后**，可以看出，在网速缓慢的情况下，我们加载 DOM 节点的内容，加载了 `10.43s`。无疑，假设我们开发的商城在上线后变成这样，当用户在网速更差的情况下，可能会选择直接关闭网站。  
+**最后**，可以看出，在网速缓慢的情况下，我们加载 DOM 节点的内容，加载了 `10.43s`。无疑，假设我们开发的商城在上线后变成这样，当用户在网速更差的情况下，可能会选择直接关闭网站。
 
 所以，通过网络缓慢的情景模拟，可以对网站做一些性能优化，从而减少我们的用户量。
 
@@ -296,12 +293,12 @@ new Vue({
 
 > [返回目录](#catalog-chapter-three)
 
-对于页面中最后需要调用接口渲染的数据，我们大概会使用两种方法：  
+对于页面中最后需要调用接口渲染的数据，我们大概会使用两种方法：
 
 1. 直接在 `data` 中使用假数据，读取接口后再进行更新；
-2. 根据接口文档，进行 `mock`，获取 `mock` 数据。  
+2. 根据接口文档，进行 `mock`，获取 `mock` 数据。
 
-在这里，我们介绍一种比较便捷的方式：[Easy Mock](https://www.easy-mock.com)  
+在这里，我们介绍一种比较便捷的方式：[Easy Mock](https://www.easy-mock.com)
 
 Easy Mock 是一个比较好用的图形化网站，小伙伴们点击进去会立刻 get 到它的设计意图，我们可以直接在项目中通过 `Axios` 直接调用它的链接，获取到数据。
 
@@ -322,8 +319,8 @@ https://github.com/vuejs/vue-devtools
 
 所以，我们下载了个 `Vue Devtools` 的插件，并进行了安装。插件安装包和安装方式：
 
-* [参考地址1-安装方式](https://segmentfault.com/a/1190000009682735)
-* [参考地址2-安装包](http://chromecj.com/downloadstart.html#886)（加入公众号 -> 获取验证码 -> 下载资料 -> 取消关注）
+- [参考地址 1-安装方式](https://segmentfault.com/a/1190000009682735)
+- [参考地址 2-安装包](http://chromecj.com/downloadstart.html#886)（加入公众号 -> 获取验证码 -> 下载资料 -> 取消关注）
 
 安装完成后，我们可以刷新页面，可以在 Vue 项目的控制台中看到：
 
@@ -337,13 +334,13 @@ https://github.com/vuejs/vue-devtools
 
 `vue-awesome-swiper` 是关于 Vue 的一个 Swiper 组件，它实现了轮播图、滑动、内容滚动等功能，GitHub 地址：[vue-awesome-swiper](https://github.com/surmon-china/vue-awesome-swiper)
 
-它适合 `PC` 或者 `Mobile` 端，可用于 `SPA`  或者 `SSR` 页面。
+它适合 `PC` 或者 `Mobile` 端，可用于 `SPA` 或者 `SSR` 页面。
 
 它的使用技巧及 `Example` 在上面的 `GitHub` 地址存在，如果你想先了解它的作用，可以点击这里：[展示地址](https://surmon-china.github.io/vue-awesome-swiper/)
 
 然后，上面的演示对应的代码为：[代码地址](https://github.com/surmon-china/vue-awesome-swiper/tree/master/examples)。在安装了 `vue-awesome-swiper` 的情况下，将代码地址中的任意一个 `.vue` 文件复制到我们的项目，进行稍微修改即可。
 
-* 全局引用：
+- 全局引用：
 
 > main.js
 
@@ -356,16 +353,14 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 
 // 全局使用
-Vue.use(
-  VueAwesomeSwiper, 
-)
+Vue.use(VueAwesomeSwiper)
 
 // ...
 ```
 
-* 页面中组件形式引用
+- 页面中组件形式引用
 
-> *.vue
+> \*.vue
 
 ```js
 // 以组件方式引用
@@ -395,7 +390,7 @@ export default {
 
 > [返回目录](#catalog-chapter-four)
 
-* **步骤**：
+- **步骤**：
 
 1. 安装 `vue-cli`：`npm i vue-cli -g`
 2. 初始化 Vue 项目：`vue init webpack`
@@ -406,9 +401,9 @@ export default {
 
 > [返回目录](#catalog-chapter-four)
 
-如果你没用过 `Vue-cli`，那么，你可能会对它的图片存放路径存在问题，因为它可以存放在 `src/assets` 及 `static` 这两个目录中。你可能对此感到疑惑，为什么它会有两个文件夹来进行存放呢？  
+如果你没用过 `Vue-cli`，那么，你可能会对它的图片存放路径存在问题，因为它可以存放在 `src/assets` 及 `static` 这两个目录中。你可能对此感到疑惑，为什么它会有两个文件夹来进行存放呢？
 
-讲个大白话：`src/assets` 目录中的图片是会被 `webpack` 打包成 base64 的，`static` 目录中的图片是不会被打包的。  
+讲个大白话：`src/assets` 目录中的图片是会被 `webpack` 打包成 base64 的，`static` 目录中的图片是不会被打包的。
 
 那么，为什么会存在打包成 `base64` 的区别呢？因为当浏览器加载你的图片的时候，每一张图片就相当于一次 `http` 请求，当图片多了的时候，它就会损耗你的性能。所以，就像 [雪碧图](https://zhidao.baidu.com/question/646556016260409565.html) 的引用一样，在 vue-cli 的配置上：
 
@@ -425,11 +420,11 @@ export default {
 
 可以看出，它对于小于 10K(10000/1024) 的图片，会打包成 base64，从而减少了我们在浏览器加载时的性能损耗。
 
-讲解完 `src/assets` 及 `static` 的区别后，我们继续讲在这两个文件夹中图片的引用。  
+讲解完 `src/assets` 及 `static` 的区别后，我们继续讲在这两个文件夹中图片的引用。
 
-由于 `src/assets` 目录中，我们存放一些比较小的，需要打包的图片，所以我们应该通过 require 的方式，将它当成模块进行引用。  
+由于 `src/assets` 目录中，我们存放一些比较小的，需要打包的图片，所以我们应该通过 require 的方式，将它当成模块进行引用。
 
-而在 `static` 目录的图片，`vue-cli` 已经对其进行了个解析：   
+而在 `static` 目录的图片，`vue-cli` 已经对其进行了个解析：
 
 > config/index/js
 
@@ -442,17 +437,17 @@ module.exports = {
   dev: {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {}
     //... 省略剩下的代码
   },
-   build: {
+  build: {
     index: path.resolve(__dirname, '../dist/index.html'),
 
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: '/'
     // ...省略剩下的代码
-   }
+  }
 }
 ```
 
@@ -496,14 +491,14 @@ module.exports = {
 
 > [返回目录](#catalog-chapter-four)
 
-* **步骤**：
+- **步骤**：
 
 1. 安装 `axios`：`npm i axios -S`
 2. 在 `src/components/pages/ShoppingMall.vue` 的 `<script>` 标签中引用并使用 `axios`：
 
 ```html
 <script>
-  import axios from 'axios';
+  import axios from 'axios'
   export default {
     data() {
       return {
@@ -515,11 +510,13 @@ module.exports = {
       axios({
         url: 'https://www.easy-mock.com/mock/5bd2b50e6388c25a14965a22/index',
         method: 'get'
-      }).then(res => {
-        console.log(res.data.data);
-      }).catch(err => {
-        console.log(err);
       })
+        .then(res => {
+          console.log(res.data.data)
+        })
+        .catch(err => {
+          console.log(err)
+        })
     }
   }
 </script>
@@ -531,22 +528,23 @@ module.exports = {
 
 > [返回目录](#catalog-chapter-four)
 
-在 `4.3` 章节中，我们提及到了 `Axios` 对接口的调用。  
+在 `4.3` 章节中，我们提及到了 `Axios` 对接口的调用。
 
-但是，小伙伴们有没有想到，如果某天，后端大大对你说，某台服务器过期了，你将接口地址更改一下。听到这话，你乖乖地一个一个 `.vue` 文件改一遍，当你还没有改完时，后端大大又发你一个接口地址：“确定了，咱还是用这个。”……  
+但是，小伙伴们有没有想到，如果某天，后端大大对你说，某台服务器过期了，你将接口地址更改一下。听到这话，你乖乖地一个一个 `.vue` 文件改一遍，当你还没有改完时，后端大大又发你一个接口地址：“确定了，咱还是用这个。”……
 
-不知道小伙伴会是什么心情吧……所以，为了预防万一，我们将 `API` 地址统一抽取到一个文件，到时候修改起来也方便。  
+不知道小伙伴会是什么心情吧……所以，为了预防万一，我们将 `API` 地址统一抽取到一个文件，到时候修改起来也方便。
 
 我们在 `src` 目录下新建一个 `serviceAPI.config.js` 配置文件，用来存放 `API` 接口地址：
 
 > src/serviceAPI.config.js
 
 ```js
-const BASEURL = "https://www.easy-mock.com/mock/5bd2b50e6388c25a14965a22/ShoppingMall/"
+const BASEURL =
+  'https://www.easy-mock.com/mock/5bd2b50e6388c25a14965a22/ShoppingMall/'
 
 const URL = {
   getGoodsInfo: BASEURL + 'getGoodsInfo',
-  getUserInfo: BASEURL + 'getUserInfo',
+  getUserInfo: BASEURL + 'getUserInfo'
 }
 
 module.exports = URL
@@ -554,7 +552,7 @@ module.exports = URL
 
 然后，我们在 Vue 文件中获取该数据：
 
-> *.vue
+> \*.vue
 
 ```
 <template>
@@ -600,14 +598,14 @@ module.exports = URL
 
 > [返回目录](#catalog-chapter-four)
 
-在 Vue 中，可能经常对一些数据进行处理。例如：对后台返回的时间进行处理，对后台返回的金钱进行处理……在这里，我们就需要写过滤器，完成对这些数据的处理。  
+在 Vue 中，可能经常对一些数据进行处理。例如：对后台返回的时间进行处理，对后台返回的金钱进行处理……在这里，我们就需要写过滤器，完成对这些数据的处理。
 
 下面讲解一个金钱格式过滤器。现在 `src` 文件下建立一个 `filter` 文件夹，然后 `filter` 文件夹下建立一个 `moneyFilter.js` 文件，我们用它来进行金钱格式的过滤：
 
 > src/filter/moneyFilter.js
 
 ```js
-export function toMoney(money = 0){
+export function toMoney(money = 0) {
   return money.toFixed(2)
 }
 ```
@@ -616,7 +614,7 @@ export function toMoney(money = 0){
 
 &emsp;然后，我们在页面中引入并使用这个金钱过滤器：
 
-> *.vue
+> \*.vue
 
 ```js
 <script>
@@ -666,8 +664,8 @@ export function toMoney(money = 0){
 
 **步骤 1**. 安装对应的依赖：
 
-* `npm i node-sass -D`
-* `npm i sass-loader -D`
+- `npm i node-sass -D`
+- `npm i sass-loader -D`
 
 **步骤 2**. 在 `build/webpack.base.config.js` 的 `rules` 中加上：
 

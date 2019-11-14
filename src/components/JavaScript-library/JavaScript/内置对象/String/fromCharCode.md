@@ -1,23 +1,23 @@
-方法 - fromCharCode()
-===
+# 方法 - fromCharCode()
 
 > Create by **jsLe** on **2019-09-18 10:42:21**  
 > Recently revised in **2019-09-18 10:42:25**
 
-* **原文**：[MDN - fromCharCode()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode)
+- **原文**：[MDN - fromCharCode()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode)
 
-* **功能**：静态 `String.fromCharCode()` 方法返回由指定的 UTF-16 代码单元序列创建的字符串。简单来说，就是接受一个 Unicode 值，然后返回一个字符串。例如 65 - A，66 - B
+- **功能**：静态 `String.fromCharCode()` 方法返回由指定的 UTF-16 代码单元序列创建的字符串。简单来说，就是接受一个 Unicode 值，然后返回一个字符串。例如 65 - A，66 - B
 
-* **语法**：`fromCharCode(num)`
-  * `num`：范围在 0-65535 之间，65 对应 A、66 对应 B，详情可以查看百度百科 [ASCII](https://baike.baidu.com/item/ASCII/309296?fr=aladdin)
+- **语法**：`fromCharCode(num)`
 
-* **返回值**：一个长度为 N 的字符串，由 N 个指定的 UTF-16 代码单元组成。
+  - `num`：范围在 0-65535 之间，65 对应 A、66 对应 B，详情可以查看百度百科 [ASCII](https://baike.baidu.com/item/ASCII/309296?fr=aladdin)
 
-* **代码**：
+- **返回值**：一个长度为 N 的字符串，由 N 个指定的 UTF-16 代码单元组成。
+
+- **代码**：
 
 ```js
-String.fromCharCode(65, 66, 67);  // 'ABC'
-String.fromCharCode(0x2014)       // '—'
+String.fromCharCode(65, 66, 67) // 'ABC'
+String.fromCharCode(0x2014) // '—'
 ```
 
 ---

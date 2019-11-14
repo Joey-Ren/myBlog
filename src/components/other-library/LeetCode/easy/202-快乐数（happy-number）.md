@@ -1,5 +1,4 @@
-202 - 快乐数（happy-number）
-===
+# 202 - 快乐数（happy-number）
 
 > Create by **jsLe** on **2019-7-9 08:04:52**  
 > Recently revised in **2019-09-18 11:43:25**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - 最蠢解题](#chapter-three-one) |
-| &emsp;[3.2 解法 - 数学解法](#chapter-three-two) |
+| &emsp;[3.1 解法 - 最蠢解题](#chapter-three-one)                                          |
+| &emsp;[3.2 解法 - 数学解法](#chapter-three-two)                                          |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：哈希表、数学
-* **题目地址**：https://leetcode-cn.com/problems/happy-number/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：哈希表、数学
+- **题目地址**：https://leetcode-cn.com/problems/happy-number/
+- **题目内容**：
 
 ```
 编写一个算法来判断一个数是不是“快乐数”。
@@ -35,7 +34,7 @@
 示例: 
 输入: 19
 输出: true
-解释: 
+解释:
 1² + 9² = 82
 8² + 2² = 68
 6² + 8² = 100
@@ -52,40 +51,40 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 let numToArr = function(n) {
-	let arr = [];
-	n = ('' + n).split('');
-	while(n.length) {
-		arr.unshift(parseInt(n.pop()));
-	}
-	return arr;
-};
+  let arr = []
+  n = ('' + n).split('')
+  while (n.length) {
+    arr.unshift(parseInt(n.pop()))
+  }
+  return arr
+}
 
 var isHappy = function(n) {
-	let time = 30;
-	while(time) {
-		n = numToArr(n);
-		n = n.reduce((prev, next) => {
-			return prev + next * next;
-		}, 0);
-		if (n === 1) {
-			return true;
-		}
-		time--;
-	}
-	return false;
-};
+  let time = 30
+  while (time) {
+    n = numToArr(n)
+    n = n.reduce((prev, next) => {
+      return prev + next * next
+    }, 0)
+    if (n === 1) {
+      return true
+    }
+    time--
+  }
+  return false
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `n`：`19`
 2. `return`：`true`
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 √ Accepted
@@ -94,15 +93,15 @@ var isHappy = function(n) {
   √ Your memory usage beats 5.52 % of javascript submissions (45.4 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `split()`：`split()` 方法使用指定的分隔符字符串将一个 String 对象分割成字符串数组，以将字符串分隔为子字符串，以确定每个拆分的位置。[`split()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/String/split.md)
 2. `unshift()`：`unshift()` 方法将一个或多个元素添加到数组的开头，并返回该数组的新长度。[`unshift()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/unshift.md)
 3. `parseInt()`：`parseInt(string, radix)`，`string` 为字符串，`radix` 为介于 2-36 之间的数。使用者告诉这个函数 `string`（比如 11）是 `radix`（比如 2 ）进制的，函数将固定返回 `string` 以十进制时显示的数（3）。[`parseInt()` 详细介绍](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
 4. `pop()`：`pop()` 方法从数组中删除最后一个元素，并返回该元素的值。此方法更改数组的长度。[`pop()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/pop.md)
-5. `reduce()`：`reduce()` 方法对数组中的每个元素执行一个由您提供的reducer函数(升序执行)，将其结果汇总为单个返回值。[`reduce()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/reduce.md)
+5. `reduce()`：`reduce()` 方法对数组中的每个元素执行一个由您提供的 reducer 函数(升序执行)，将其结果汇总为单个返回值。[`reduce()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/reduce.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **解出题不代表聪明，可能还一定程度证明你代码的愚蠢。**
 
@@ -113,7 +112,7 @@ var isHappy = function(n) {
 ```
 输入: 19
 输出: true
-解释: 
+解释:
 1² + 9² = 82
 8² + 2² = 68
 6² + 8² = 100
@@ -136,7 +135,7 @@ n 次是多少次？不知道，咱设置一个阈值：`30`
 
 **从愚蠢中看到聪明。**
 
-* **进一步思考**：
+- **进一步思考**：
 
 在上面我们使用了愚蠢的解法，所以我们可以尝试改进。
 
@@ -144,20 +143,20 @@ n 次是多少次？不知道，咱设置一个阈值：`30`
 
 ```js
 var isHappy = function(n) {
-	let time = 6;
-	while(time) {
-		n = ('' + n).split('');
-		console.log(n);
-		n = n.reduce((prev, next) => {
-			return prev + next * next;
-		}, 0);
-		if (n === 1) {
-			return true;
-		}
-		time--;
-	}
-	return false;
-};
+  let time = 6
+  while (time) {
+    n = ('' + n).split('')
+    console.log(n)
+    n = n.reduce((prev, next) => {
+      return prev + next * next
+    }, 0)
+    if (n === 1) {
+      return true
+    }
+    time--
+  }
+  return false
+}
 ```
 
 OK，咱们优化完毕，查看提交成果：
@@ -175,32 +174,32 @@ OK，咱们优化完毕，查看提交成果：
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var isHappy = function(n) {
   if (n == 1 || n == 7) {
-    return true;
+    return true
   }
   if (n < 10) {
-    return false;
+    return false
   }
-  let sum = 0;
+  let sum = 0
   while (n >= 1) {
-    let d = n % 10;
-    sum += d * d;
-    n = Math.floor(n / 10);
+    let d = n % 10
+    sum += d * d
+    n = Math.floor(n / 10)
   }
-  return isHappy(sum);
-};
+  return isHappy(sum)
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `n`：`19`
 2. `return`：`true`
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 √ Accepted
@@ -209,11 +208,11 @@ var isHappy = function(n) {
   √ Your memory usage beats 74.85 % of javascript submissions (35.1 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `Math`：JS 中的内置对象，具有数学常数和函数的属性和方法。[`Math` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Math/README.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **愚蠢可以天生，但是聪明非学习不可。**
 
@@ -225,7 +224,7 @@ var isHappy = function(n) {
 2. 一个数，假设是 89。那么，第一次遍历，将它磨 10，得到的是个位数 9；除以 10（JS 没有强类型，需要借助 `Math.floor()`），那么缩短 1 位变成 8。第二次遍历，将它磨 10，得到 8，再除以 10，得到的数小于 1，终止循环。
 3. 在这过程中，我们得到 `sum = 9 * 9 + 8 * 8`，即将一个数彻底分解。递归往复，在结果为 10 之内的时候，就可以返回 `true` 或者 `false` 了。
 
-* **进一步思考**：
+- **进一步思考**：
 
 那么，除了这种找规律，是否还有其他解法？
 
@@ -235,24 +234,24 @@ var isHappy = function(n) {
 
 ```js
 var isHappy = function(n) {
-  var mySet = new Set();
+  var mySet = new Set()
   while (1) {
     var k = n,
-      sum = 0;
+      sum = 0
     while (k) {
-      sum += Math.pow(k % 10, 2);
-      k = Math.floor(k / 10);
+      sum += Math.pow(k % 10, 2)
+      k = Math.floor(k / 10)
     }
     if (sum == 1) {
-      return true;
+      return true
     } else if (!mySet.has(sum)) {
-      mySet.add(sum);
-      n = sum;
+      mySet.add(sum)
+      n = sum
     } else {
-      return false;
+      return false
     }
   }
-};
+}
 ```
 
 > Submission

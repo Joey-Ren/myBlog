@@ -1,27 +1,27 @@
-方法 - includes()
-===
+# 方法 - includes()
 
 > Create by **jsLe** on **2019-09-17 09:38:32**  
 > Recently revised in **2019-09-17 09:38:40**
 
-* **原文**：[MDN - includes()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
+- **原文**：[MDN - includes()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
 
-* **功能**：`includes()` 方法用来判断一个数组是否包含一个指定的值，根据情况，如果包含则返回 true，否则返回 false。
+- **功能**：`includes()` 方法用来判断一个数组是否包含一个指定的值，根据情况，如果包含则返回 true，否则返回 false。
 
-* **语法**：`arr.includes(valueToFind, fromIndex)`
-  * `searchValue`：需要查找的元素值。
-  * `formIndex`：可选，开始查找的位置
+- **语法**：`arr.includes(valueToFind, fromIndex)`
 
-* **返回值**：返回一个布尔值 Boolean。
+  - `searchValue`：需要查找的元素值。
+  - `formIndex`：可选，开始查找的位置
 
-* **代码**：
+- **返回值**：返回一个布尔值 Boolean。
+
+- **代码**：
 
 ```js
-[1, 2, 3].includes(2);     // true
-[1, 2, 3].includes(4);     // false
-[1, 2, 3].includes(3, 3);  // false
-[1, 2, 3].includes(3, -1); // true
-[1, 2, NaN].includes(NaN); // true
+;[1, 2, 3].includes(2) // true
+;[1, 2, 3].includes(4) // false
+;[1, 2, 3].includes(3, 3) // false
+;[1, 2, 3].includes(3, -1) // true
+;[1, 2, NaN].includes(NaN) // true
 ```
 
 ---

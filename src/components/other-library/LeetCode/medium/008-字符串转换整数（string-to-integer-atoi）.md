@@ -1,5 +1,4 @@
-008 - 字符串转换整数（string-to-integer-atoi）
-===
+# 008 - 字符串转换整数（string-to-integer-atoi）
 
 > Create by **jsLe** on **2019-8-21 07:33:59**  
 > Recently revised in **2019-09-18 14:14:59**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - 正则表达式](#chapter-three-one) |
-| &emsp;[3.2 解法 - 暴力破解法](#chapter-three-two) |
+| &emsp;[3.1 解法 - 正则表达式](#chapter-three-one)                                        |
+| &emsp;[3.2 解法 - 暴力破解法](#chapter-three-two)                                        |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：中等
-* **涉及知识**：数字、字符串
-* **题目地址**：https://leetcode-cn.com/problems/string-to-integer-atoi/
-* **题目内容**：
+- **难度**：中等
+- **涉及知识**：数字、字符串
+- **题目地址**：https://leetcode-cn.com/problems/string-to-integer-atoi/
+- **题目内容**：
 
 ```
 请你来实现一个 atoi 函数，使其能将字符串转换成整数。
@@ -66,7 +65,7 @@
 示例 5:
 输入: "-91283472332"
 输出: -2147483648
-解释: 数字 "-91283472332" 超过 32 位有符号整数范围。 
+解释: 数字 "-91283472332" 超过 32 位有符号整数范围。
      因此返回 INT_MIN (−231) 。
 ```
 
@@ -80,27 +79,27 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 const myAtoi = function(str) {
-  const result = str.trim().match(/^(-|\+)?\d+/g);
+  const result = str.trim().match(/^(-|\+)?\d+/g)
   return result
     ? Math.max(Math.min(Number(result[0]), 2 ** 31 - 1), -(2 ** 31))
-    : 0;
-};
+    : 0
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
-1. `str`：`   -42`
+1. `str`：`-42`
 2. `return`：
 
 ```js
--42
+;-42
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 √ Accepted
@@ -109,16 +108,16 @@ const myAtoi = function(str) {
   √ Your memory usage beats 45.24 % of javascript submissions (35.9 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `Math`：JS 中的内置对象，具有数学常数和函数的属性和方法。[`Math` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Math/README.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **jsLe** 懂一点点正则，但是自己又写不出，只能求助于【题解】的大佬了：
 
 1. 使用正则提取满足条件的字符，`/^(-|\+)?\d+/g`，`(-|\+)?` 表示第一位是 - 或 + 或都不是，`\d+` 表示匹配多个数字。
-2. `Math.max(Math.min(Number(result[0]), 2 ** 31 - 1), -(2 ** 31))` 是 `- 2 ** 31 < num < 2 ** 31 - 1` 的js写法，保证不超出范围。
+2. `Math.max(Math.min(Number(result[0]), 2 ** 31 - 1), -(2 ** 31))` 是 `- 2 ** 31 < num < 2 ** 31 - 1` 的 js 写法，保证不超出范围。
 
 这道题考验的是一种设计能力，毕竟如果使用正常的 JavaScript 编写，是比较麻烦的（去空格以及匹配数字）。
 
@@ -128,59 +127,59 @@ const myAtoi = function(str) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var myAtoi = function(s) {
   let i = 0,
-    reg = /\d|[+-]/;
-  let sign = "+",
-    arr = [];
+    reg = /\d|[+-]/
+  let sign = '+',
+    arr = []
   let INT_MAX = 2 ** 31 - 1,
-    INT_MIN = -(2 ** 31); //模拟数值极限,实际上js中只有64位浮点数
-  while (s[i] === " ") {
-    ++i; //跳过首部的所有空字符
+    INT_MIN = -(2 ** 31) //模拟数值极限,实际上js中只有64位浮点数
+  while (s[i] === ' ') {
+    ++i //跳过首部的所有空字符
   }
-  let firstChar = s[i];
-  if (!reg.test(firstChar)) return 0; //首个非空字符不是数字或者正负号
-  if (firstChar === "+" || firstChar === "-") {
-    sign = firstChar;
-    ++i; //记录并跳过正负号
+  let firstChar = s[i]
+  if (!reg.test(firstChar)) return 0 //首个非空字符不是数字或者正负号
+  if (firstChar === '+' || firstChar === '-') {
+    sign = firstChar
+    ++i //记录并跳过正负号
   }
   while (/\d/.test(s[i])) {
-    let num = s[i].charCodeAt() - 48; //字符"0-9"的charCode: 48-57,这里用字符编码计算出字符对应的数值;
-    arr.push(num); //记录有效的连续数字
-    ++i;
+    let num = s[i].charCodeAt() - 48 //字符"0-9"的charCode: 48-57,这里用字符编码计算出字符对应的数值;
+    arr.push(num) //记录有效的连续数字
+    ++i
   }
   let res = 0,
-    over = sign === "+" ? 7 : 8;
+    over = sign === '+' ? 7 : 8
   for (let index = 0; index < arr.length; ++index) {
-    let item = arr[index]; //当前数字
-    let pow = arr.length - 1 - index; //10的指数
-    let step = item * 10 ** pow; //即将累加到结果中的数值
+    let item = arr[index] //当前数字
+    let pow = arr.length - 1 - index //10的指数
+    let step = item * 10 ** pow //即将累加到结果中的数值
     if (
       res - (res % 10) > 2147483640 ||
       (res - (res % 10) === 2147483640 && step > over)
     )
-      return sign === "+" ? INT_MAX : INT_MIN;
+      return sign === '+' ? INT_MAX : INT_MIN
     //注意题目的假设条件:环境仅支持32位带符号的整数,所以这一步是在溢出前 用max_int除以10来比较,以防止结果溢出
     //很多人无视这个限制,先溢出再比较,这是不对的,因为按照题目意思,溢出后的数值是无法表达的,也就无法得知是否溢出了,只能提前判断.
-    res += item * 10 ** pow; //结果累加
+    res += item * 10 ** pow //结果累加
   }
-  return sign === "+" ? res : -res;
-};
+  return sign === '+' ? res : -res
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
-1. `str`：`   -42`
+1. `str`：`-42`
 2. `return`：
 
 ```js
--42
+;-42
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 √ Accepted
@@ -189,12 +188,12 @@ var myAtoi = function(s) {
   √ Your memory usage beats 20.84 % of javascript submissions (36.6 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `charCodeAt()`：`charCodeAt()` 获得字母对应的 ASCII 编码，例如 A - 65。[`charCodeAt()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/String/charCodeAt.md)
 2. `push()`：`push()` 方法将一个或多个元素添加到数组的末尾，并返回该数组的新长度。[`push()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/push.md)
 
-* **解题思路**：
+- **解题思路**：
 
 正如前面所说，如果使用暴力破解，你会感到：**难受**。
 

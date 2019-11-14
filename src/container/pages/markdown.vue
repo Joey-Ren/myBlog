@@ -3,7 +3,7 @@
     <el-row>
       <el-col :md="3" :lg="6" :xl="8" class="hidden-sm-and-down">&nbsp;</el-col>
       <el-col :sm="24" :md="18" :lg="12" :xl="8">
-        <div v-html="html" class="center"></div>
+        <div class="center" v-html="html"></div>
       </el-col>
       <el-col :md="3" :lg="6" :xl="8" class="hidden-sm-and-down">&nbsp;</el-col>
     </el-row>
@@ -13,18 +13,18 @@
 import showdown from 'showdown'
 import readme from '../../../SUMMARY.md'
 export default {
-  data () {
+  components: {
+    showdown
+  },
+  data() {
     return {
       md: readme,
       html: ''
     }
   },
-  components: {
-    showdown
-  },
-  mounted () {
-    let converter = new showdown.Converter()
-    let text = this.md.toString()
+  mounted() {
+    const converter = new showdown.Converter()
+    const text = this.md.toString()
     this.html = converter.makeHtml(text)
   }
 }
@@ -44,11 +44,11 @@ ul li {
   line-height: 25px;
 }
 pre code {
-  background: #F6F6F6;
+  background: #f6f6f6;
 }
 p code {
-  color: #D34B62;
-  background: #F6F6F6;
+  color: #d34b62;
+  background: #f6f6f6;
   margin: 0 2px;
 }
 
@@ -149,7 +149,8 @@ h1 {
   background-color: #333;
   color: rgb(144, 144, 144);
   width: 300px;
-  font-family: 'Open Sans', 'Myriad Pro', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
+  font-family: 'Open Sans', 'Myriad Pro', 'Lucida Grande', 'Lucida Sans Unicode',
+    'Lucida Sans', Geneva, Verdana, sans-serif;
 }
 
 .lateral-menu label {
@@ -192,7 +193,7 @@ h1 {
   padding-top: 65px;
 }
 
-.container>* {
+.container > * {
   display: block;
   width: 50%;
   margin-left: 10px;
@@ -202,7 +203,7 @@ h1 {
 
 .container textarea {
   resize: none;
-  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-family: Consolas, 'Liberation Mono', Courier, monospace;
   height: 97%;
   max-height: 97%;
   width: 45%;

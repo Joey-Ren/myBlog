@@ -1,24 +1,24 @@
-方法 - slice()
-===
+# 方法 - slice()
 
 > Create by **jsLe** on **2019-10-14 19:09:09**  
 > Recently revised in **2019-10-14 19:11:05**
 
-* **原文**：[MDN - slice()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+- **原文**：[MDN - slice()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
 
-* **功能**：`slice()` 方法返回一个新的数组对象，这一对象是一个由 `begin` 和 `end` 决定的原数组的浅拷贝（包括 `begin`，不包括 `end`）。原始数组不会被改变。
+- **功能**：`slice()` 方法返回一个新的数组对象，这一对象是一个由 `begin` 和 `end` 决定的原数组的浅拷贝（包括 `begin`，不包括 `end`）。原始数组不会被改变。
 
-* **语法**：`array.slice(begin, end)`
-  * `begin`：（可选）提取起始处的索引（从 0 开始），从该索引开始提取原数组元素。
-  * `end`：（可选）提取终止处的索引（从 0 开始），在该索引处结束提取原数组元素。
+- **语法**：`array.slice(begin, end)`
 
-* **返回值**：一个含有被提取元素的新数组。
+  - `begin`：（可选）提取起始处的索引（从 0 开始），从该索引开始提取原数组元素。
+  - `end`：（可选）提取终止处的索引（从 0 开始），在该索引处结束提取原数组元素。
 
-* **代码**：
+- **返回值**：一个含有被提取元素的新数组。
+
+- **代码**：
 
 ```js
-var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
-var citrus = fruits.slice(1, 3);
+var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
+var citrus = fruits.slice(1, 3)
 
 // fruits contains ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
 // citrus contains ['Orange','Lemon']

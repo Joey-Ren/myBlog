@@ -1,19 +1,17 @@
-JSON.stringify
-===
+# JSON.stringify
 
 > Create by **jsLe** on **2019-10-16 03:38:26**  
 > Recently revised in **2019-10-16 03:38:30**
 
-* **原文**：[MDN - JSON.stringify()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
+- **原文**：[MDN - JSON.stringify()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
 
-* **功能**：
+- **功能**：
 
-* **方法**：
+- **方法**：
 
-* **代码**：
+- **代码**：
 
 ```js
-
 ```
 
 ---

@@ -1,5 +1,4 @@
-067 - 二进制求和（add-binary）
-===
+# 067 - 二进制求和（add-binary）
 
 > Create by **jsLe** on **2019-06-11 10:07:17**  
 > Recently revised in **2019-09-18 10:20:02**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解题 - 转数组](#chapter-three-one) |
-| &emsp;[3.2 解题 - 数学算法](#chapter-three-two) |
+| &emsp;[3.1 解题 - 转数组](#chapter-three-one)                                            |
+| &emsp;[3.2 解题 - 数学算法](#chapter-three-two)                                          |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数字、字符串
-* **题目地址**：https://leetcode-cn.com/problems/add-binary/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数字、字符串
+- **题目地址**：https://leetcode-cn.com/problems/add-binary/
+- **题目内容**：
 
 ```
 给定两个二进制字符串，返回他们的和（用二进制表示）。
@@ -49,59 +48,61 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
-var addBinary = function (a, b) {
+var addBinary = function(a, b) {
   // 字符串转数组
-  const arrA = a.split('');
-  const arrB = b.split('');
-  
+  const arrA = a.split('')
+  const arrB = b.split('')
+
   // 补位
-  const mark = arrA.length > arrB.length ? 'a' : 'b'; // 标记
-  const differenceLength = mark === 'a' ? arrA.length - arrB.length : arrB.length - arrA.length; // 需要补位的次数
-  let patch = mark === 'a' ? arrA : arrB; // 最长的数组，用来补位
-  let willBePatch = mark === 'b' ? arrA : arrB; // 较短的数组，需要被补位
-  for (let i = 0; i < differenceLength; i++) { // 开始补位
-    willBePatch.unshift('0');
+  const mark = arrA.length > arrB.length ? 'a' : 'b' // 标记
+  const differenceLength =
+    mark === 'a' ? arrA.length - arrB.length : arrB.length - arrA.length // 需要补位的次数
+  let patch = mark === 'a' ? arrA : arrB // 最长的数组，用来补位
+  let willBePatch = mark === 'b' ? arrA : arrB // 较短的数组，需要被补位
+  for (let i = 0; i < differenceLength; i++) {
+    // 开始补位
+    willBePatch.unshift('0')
   }
 
   // 二进制加法
-  const maxLength = mark === 'a' ? arrA.length : arrB.length; // 最长数组的长度
-  let result = [];
+  const maxLength = mark === 'a' ? arrA.length : arrB.length // 最长数组的长度
+  let result = []
   for (let i = maxLength - 1; i >= 0; i--) {
-    const sum = Number(patch[i]) + Number(willBePatch[i]);
+    const sum = Number(patch[i]) + Number(willBePatch[i])
     if (sum === 3) {
-      result[i] = '1';
+      result[i] = '1'
       if (willBePatch[i - 1] === '0') {
-        willBePatch[i - 1] = '1';
-      } else if(willBePatch[i - 1] === '1') {
-        willBePatch[i - 1] = '2';
+        willBePatch[i - 1] = '1'
+      } else if (willBePatch[i - 1] === '1') {
+        willBePatch[i - 1] = '2'
       }
       if (i === 0) {
-        result = ['1', ...result];
+        result = ['1', ...result]
       }
     } else if (sum === 2) {
-      result[i] = '0';
+      result[i] = '0'
       if (willBePatch[i - 1] === '0') {
-        willBePatch[i - 1] = '1';
-      } else if(willBePatch[i - 1] === '1') {
-        willBePatch[i - 1] = '2';
+        willBePatch[i - 1] = '1'
+      } else if (willBePatch[i - 1] === '1') {
+        willBePatch[i - 1] = '2'
       }
       if (i === 0) {
-        result = ['1', ...result];
+        result = ['1', ...result]
       }
     } else if (sum === 1) {
-      result[i] = '1';
+      result[i] = '1'
     } else if (sum === 0) {
-      result[i] = '0';
+      result[i] = '0'
     }
   }
-  return result.join('');
-};
+  return result.join('')
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `a`：`['1', '1', '1'`
 2. `b`：`['1']`
@@ -111,7 +112,7 @@ var addBinary = function (a, b) {
 1000
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -120,13 +121,13 @@ var addBinary = function (a, b) {
   ✔ Your memory usage beats 15.19 % of javascript submissions (36.4 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `split()`：`split()` 方法使用指定的分隔符字符串将一个 String 对象分割成字符串数组，以将字符串分隔为子字符串，以确定每个拆分的位置。[`split()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/String/split.md)
 2. `unshift()`：`unshift()` 方法将一个或多个元素添加到数组的开头，并返回该数组的新长度。[`unshift()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/unshift.md)
 3. `join()`：`join()` 方法将一个数组（或一个类数组对象）的所有元素连接成一个字符串并返回这个字符串。[`join()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/join.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **首先**，看到本次解题，小伙伴们应该被震惊到了。
 
@@ -136,11 +137,11 @@ var addBinary = function (a, b) {
 
 **然后**，我们分两组情况进行讲解：
 
-* **第一组**：`(a, b) => ('11', '1')`
+- **第一组**：`(a, b) => ('11', '1')`
 
 ![图](../../../public-repertory/img/other-algorithm-067-1.png)
 
-* **第二组**：`(a, b) => ('1011', '1101')`
+- **第二组**：`(a, b) => ('1011', '1101')`
 
 ![图](../../../public-repertory/img/other-algorithm-067-2.png)
 
@@ -150,29 +151,30 @@ var addBinary = function (a, b) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
-var addBinary = function (a, b) {
-  let carry = 0; // 进位标记
-  let res = [];
-  aindex = a.length - 1;
-  bindex = b.length - 1;
-  while (aIndex >= 0 || bIndex >= 0) { // a 或 b 还有位可以相加
-    sum = (+a[aIndex] || 0) + (+b[bIndex] || 0) + carry; // aIndex bIndex可能为负数值，需要转化为 0
-    carry = sum >= 2 ? 1 : 0;
-    res.push(sum % 2);
-    aIndex--;
-    bIndex--;
+var addBinary = function(a, b) {
+  let carry = 0 // 进位标记
+  let res = []
+  aindex = a.length - 1
+  bindex = b.length - 1
+  while (aIndex >= 0 || bIndex >= 0) {
+    // a 或 b 还有位可以相加
+    sum = (+a[aIndex] || 0) + (+b[bIndex] || 0) + carry // aIndex bIndex可能为负数值，需要转化为 0
+    carry = sum >= 2 ? 1 : 0
+    res.push(sum % 2)
+    aIndex--
+    bIndex--
   }
   if (carry) {
-    res.push(1);
+    res.push(1)
   }
-  return res.reverse().join('');
-};
+  return res.reverse().join('')
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `a`：`['1', '1', '1'`
 2. `b`：`['1']`
@@ -182,7 +184,7 @@ var addBinary = function (a, b) {
 1000
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -191,13 +193,13 @@ var addBinary = function (a, b) {
   ✔ Your memory usage beats 83.12 % of javascript submissions (35.3 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `push()`：`push()` 方法将一个或多个元素添加到数组的末尾，并返回该数组的新长度。[`push()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/push.md)
 2. `reverse()`：`reverse()` 方法将数组中元素的位置颠倒,并返回该数组。该方法会改变原数组。[`reverse()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/reverse.md)
 3. `join()`：`join()` 方法将一个数组（或一个类数组对象）的所有元素连接成一个字符串并返回这个字符串。[`join()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/join.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **首先**，毋庸置疑，这个方法比 **jsLe** 写的方法好多了。
 

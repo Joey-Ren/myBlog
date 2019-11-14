@@ -1,25 +1,25 @@
-方法 - padStart()
-===
+# 方法 - padStart()
 
 > Create by **jsLe** on **2019-09-16 11:32:20**  
 > Recently revised in **2019-09-16 11:36:26**
 
-* **原文**：[MDN - padStart()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/padStart)
+- **原文**：[MDN - padStart()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/padStart)
 
-* **功能**：`padStart()` 方法用另一个字符串填充当前字符串(重复，如果需要的话)，以便产生的字符串达到给定的长度。填充从当前字符串的开始(左侧)应用的。
+- **功能**：`padStart()` 方法用另一个字符串填充当前字符串(重复，如果需要的话)，以便产生的字符串达到给定的长度。填充从当前字符串的开始(左侧)应用的。
 
-* **语法**：`str.padStart(targetLength, padString)`
-  * `targetLength`：当前字符串需要填充到的目标长度。如果这个数值小于当前字符串的长度，则返回当前字符串本身。
-  * `padString`：填充字符串。如果字符串太长，使填充后的字符串长度超过了目标长度，则只保留最左侧的部分，其他部分会被截断。
+- **语法**：`str.padStart(targetLength, padString)`
 
-* **返回值**：在原字符串开头填充指定的填充字符串直到目标长度所形成的新字符串。
+  - `targetLength`：当前字符串需要填充到的目标长度。如果这个数值小于当前字符串的长度，则返回当前字符串本身。
+  - `padString`：填充字符串。如果字符串太长，使填充后的字符串长度超过了目标长度，则只保留最左侧的部分，其他部分会被截断。
 
-* **代码**：
+- **返回值**：在原字符串开头填充指定的填充字符串直到目标长度所形成的新字符串。
+
+- **代码**：
 
 ```js
-'jsLe'.padStart(10); // '   jsLe' 共 10 长度
-'jsLe'.padStart(10, 'a'); // 'aaajsLe'
-'jsLe'.padStart(20, 'JavaScriptLiang'); // JavaScriptLiajsLe
+'jsLe'.padStart(10) // '   jsLe' 共 10 长度
+'jsLe'.padStart(10, 'a') // 'aaajsLe'
+'jsLe'.padStart(20, 'JavaScriptLiang') // JavaScriptLiajsLe
 ```
 
 ---

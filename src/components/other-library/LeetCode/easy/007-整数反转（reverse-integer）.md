@@ -1,33 +1,32 @@
-007 - 整数反转（reverse-integer）
-===
+# 007 - 整数反转（reverse-integer）
 
 > Create by **jsLe** on **2019-05-19 09:42:39**  
 > Recently revised in **2019-09-18 09:22:31**
 
 **Hello 小伙伴们，如果觉得本文还不错，记得给个 **star** ， 小伙伴们的 **star** 是我持续更新的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
 
-* [LeetCode 攻略地址](https://github.com/LiangJunrong/document-library/tree/master/other-library/LeetCode)
+- [LeetCode 攻略地址](https://github.com/LiangJunrong/document-library/tree/master/other-library/LeetCode)
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - 转字符串](#chapter-three-one) |
-| &emsp;[3.2 解法 - 数学算法](#chapter-three-two) |
+| &emsp;[3.1 解法 - 转字符串](#chapter-three-one)                                          |
+| &emsp;[3.2 解法 - 数学算法](#chapter-three-two)                                          |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数组、数学
-* **题目地址**：https://leetcode-cn.com/problems/reverse-integer/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数组、数学
+- **题目地址**：https://leetcode-cn.com/problems/reverse-integer/
+- **题目内容**：
 
 ```
 给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。
@@ -53,7 +52,7 @@
 
 > [返回目录](#chapter-one)
 
-* **官方题解**：https://leetcode-cn.com/problems/reverse-integer/solution/zheng-shu-fan-zhuan-by-leetcode/
+- **官方题解**：https://leetcode-cn.com/problems/reverse-integer/solution/zheng-shu-fan-zhuan-by-leetcode/
 
 解题千千万，官方独一家，上面是官方使用 C++ / Java 进行的题解。
 
@@ -63,40 +62,39 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var reverse = function(x) {
   // 转数组
-  let numberToArray = String(Math.abs(x)).split('');
-  
+  let numberToArray = String(Math.abs(x)).split('')
+
   // 转字符串
-  let result = '';
+  let result = ''
   for (const i = 0; i < numberToArray.length; ) {
-    result += numberToArray.pop();
+    result += numberToArray.pop()
   }
-  result = x > 0 ? Number(result) : - Number(result);
-  
+  result = x > 0 ? Number(result) : -Number(result)
+
   // 超 [-Math.pow(2, 31), Math.pow(2, 31) - 1] 判断
-  if (result > Math.pow(2, 31) - 1
-  || result < - Math.pow(2, 31)) {
-    result = 0;
+  if (result > Math.pow(2, 31) - 1 || result < -Math.pow(2, 31)) {
+    result = 0
   }
-  
-  return result;
-};
+
+  return result
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `x`：`-1234`
 2. `return`：
 
 ```js
--4321
+;-4321
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -105,14 +103,14 @@ var reverse = function(x) {
   ✔ Your memory usage beats 46.01 % of javascript submissions (35.8 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `String`：将其他值转成字符串。[`String` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/String/README.md)
 2. `Number`：将其他值转成数字值。[`Number` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Number/README.md)
 3. `pop()`：`pop()` 方法从数组中删除最后一个元素，并返回该元素的值。此方法更改数组的长度。[`pop()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/pop.md)
 4. `Math`：JS 中的内置对象，具有数学常数和函数的属性和方法。[`Math` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Math/README.md)
 
-* **解题思路**：
+- **解题思路**：
 
 ![图](../../../public-repertory/img/other-algorithm-007-1.png)
 
@@ -122,41 +120,40 @@ var reverse = function(x) {
 
 **最后**，判断这个 `result` 是否超过题目限制，如果超过则变成 0 。
 
-* **进一步思考**：
+- **进一步思考**：
 
 ### <a name="chapter-three-two" id="chapter-three-two">3.2 解法 - 数学算法</a>
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var reverse = function(x) {
-  let result = 0;
-  let y = Math.abs(x);
+  let result = 0
+  let y = Math.abs(x)
   while (y != 0) {
-    result = result * 10 + y % 10;
-    y = Math.floor(y / 10);
-    if (result > Math.pow(2, 31) - 1
-    || result < -Math.pow(2, 31)) {
-      result = 0;
-      y = 0;
+    result = result * 10 + (y % 10)
+    y = Math.floor(y / 10)
+    if (result > Math.pow(2, 31) - 1 || result < -Math.pow(2, 31)) {
+      result = 0
+      y = 0
     }
   }
-  return x > 0 ? result : -result;
-};
+  return x > 0 ? result : -result
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `x`：`-1234`
 2. `return`：
 
 ```js
--4321
+;-4321
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -165,11 +162,11 @@ var reverse = function(x) {
   ✔ Your memory usage beats 23.63 % of javascript submissions (36 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `Math`：JS 中的内置对象，具有数学常数和函数的属性和方法。[`Math` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Math/README.md)
 
-* **解题思路**：
+- **解题思路**：
 
 ![图](../../../public-repertory/img/other-algorithm-007-2.png)
 

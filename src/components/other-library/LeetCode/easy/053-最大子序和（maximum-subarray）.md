@@ -1,5 +1,4 @@
-053 - 最大子序和（maximum-subarray）
-===
+# 053 - 最大子序和（maximum-subarray）
 
 > Create by **jsLe** on **2019-06-10 15:15:45**  
 > Recently revised in **2019-06-10 17:46:24**
@@ -8,21 +7,21 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - 动态规划](#chapter-three-one) |
+| &emsp;[3.1 解法 - 动态规划](#chapter-three-one)                                          |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数组、分治算法、动态规划
-* **题目地址**：https://leetcode-cn.com/problems/maximum-subarray/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数组、分治算法、动态规划
+- **题目地址**：https://leetcode-cn.com/problems/maximum-subarray/
+- **题目内容**：
 
 ```
 给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
@@ -46,29 +45,29 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var maxSubArray = function(nums) {
-  let result = nums[0]; // 最终结果值
+  let result = nums[0] // 最终结果值
   for (let i = 0; i < nums.length; i++) {
-    let accumulativeValue = nums[i]; // 本次累加值
-    let highest = nums[i]; // 本次最高值
+    let accumulativeValue = nums[i] // 本次累加值
+    let highest = nums[i] // 本次最高值
     for (let j = i; j + 1 < nums.length; j++) {
-      accumulativeValue = accumulativeValue + nums[j + 1];
+      accumulativeValue = accumulativeValue + nums[j + 1]
       if (accumulativeValue > highest) {
-        highest = accumulativeValue;
+        highest = accumulativeValue
       }
     }
     if (highest > result) {
-      result = highest;
+      result = highest
     }
   }
-  return result;
-};
+  return result
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums`：`[1, -2, 2, 3, -1]`
 2. `return`：
@@ -77,7 +76,7 @@ var maxSubArray = function(nums) {
 5
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -86,7 +85,7 @@ var maxSubArray = function(nums) {
   ✔ Your memory usage beats 97.97 % of javascript submissions (34.5 MB)
 ```
 
-* **解题思路**：
+- **解题思路**：
 
 讲道理说，这种解法属于动态规划。
 
@@ -94,21 +93,21 @@ var maxSubArray = function(nums) {
 
 当然，**jsLe** 解题的时候实际上不会想这么多，无非就是用正常的思路来破解。
 
-* **进一步思考**：
+- **进一步思考**：
 
 其实我一开始（上面解法）的思路还是复杂了，顶多算 **暴力破解**，所以可以做很大的优化，小伙伴们可以想想，再看看下面的优化。
 
 ```js
 var maxSubArray = function(nums) {
-  let max = nums[0]; // 最高值
-  let val = 0; // 累加值
+  let max = nums[0] // 最高值
+  let val = 0 // 累加值
   for (let i = 0; i < nums.length; i++) {
-    val = val + nums[i];
-    max = val > max ? val : max;
-    val = 0 > val ? 0 : val;
+    val = val + nums[i]
+    max = val > max ? val : max
+    val = 0 > val ? 0 : val
   }
-  return max;
-};
+  return max
+}
 ```
 
 ```js

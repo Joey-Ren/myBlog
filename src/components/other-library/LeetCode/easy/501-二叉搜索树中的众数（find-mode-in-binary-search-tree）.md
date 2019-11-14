@@ -1,5 +1,4 @@
-501 - 二叉搜索树中的众数（find-mode-in-binary-search-tree）
-===
+# 501 - 二叉搜索树中的众数（find-mode-in-binary-search-tree）
 
 > Create by **jsLe** on **2019-10-31 19:00:37**  
 > Recently revised in **2019-10-31 19:30:55**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题及测试](#chapter-three) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题及测试](#chapter-three)   |
 | <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 LeetCode Submit](#chapter-four) |
-| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 解题思路](#chapter-five) |
+| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 解题思路](#chapter-five)        |
 
 ## <a name="chapter-two" id="chapter-two"></a>二 前言
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：树
-* **题目地址**：https://leetcode-cn.com/problems/find-mode-in-binary-search-tree/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：树
+- **题目地址**：https://leetcode-cn.com/problems/find-mode-in-binary-search-tree/
+- **题目内容**：
 
 ```
 给定一个有相同值的二叉搜索树（BST），找出 BST 中的所有众数
@@ -59,16 +58,14 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **LeetCode 给定函数体**：
+- **LeetCode 给定函数体**：
 
 ```js
 /**
  * @param {TreeNode} root
  * @return {number[]}
  */
-var findMode = function(root) {
-  
-};
+var findMode = function(root) {}
 ```
 
 根据上面的已知函数，尝试破解本题吧~
@@ -83,30 +80,30 @@ var findMode = function(root) {
  * @param {TreeNode} root
  * @return {number[]}
  */
-const findMode = (root) => {
-  let result = [];
-  let map = new Map();
-  let max = 0;
-  const regodic = (root) => {
+const findMode = root => {
+  let result = []
+  let map = new Map()
+  let max = 0
+  const regodic = root => {
     if (!root) {
       return '!#'
     }
     if (map.get(root.val) === undefined) {
-      map.set(root.val, 1);
+      map.set(root.val, 1)
     } else {
-      map.set(root.val, map.get(root.val) + 1);
+      map.set(root.val, map.get(root.val) + 1)
     }
-    max = Math.max(max, map.get(root.val));
-    return `!${root.val}${regodic(root.left)}${regodic(root.right)}`;
+    max = Math.max(max, map.get(root.val))
+    return `!${root.val}${regodic(root.left)}${regodic(root.right)}`
   }
-  regodic(root);
+  regodic(root)
   for (let [key, value] of map.entries()) {
     if (value === max) {
-      result.push(key);
+      result.push(key)
     }
   }
-  return result;
-};
+  return result
+}
 
 const root = {
   val: 1,
@@ -116,18 +113,18 @@ const root = {
     left: {
       val: 2,
       left: null,
-      right: null,
+      right: null
     },
-    right: null,
+    right: null
   }
-};
-console.log(findMode(root));
+}
+console.log(findMode(root))
 ```
 
 `node index.js` 返回：
 
 ```js
-[2]
+;[2]
 ```
 
 ## <a name="chapter-four" id="chapter-four"></a>四 LeetCode Submit
@@ -148,13 +145,13 @@ Accepted
 **首先**，说到树，第一时间我又想起了我的万能公式，试了下还没忘：
 
 ```js
-const regodic = (root) => {
+const regodic = root => {
   if (!root) {
     return '!#'
   }
-  return `!${root.val}${regodic(root.left)}${regodic(root.right)}`;
+  return `!${root.val}${regodic(root.left)}${regodic(root.right)}`
 }
-regodic(root);
+regodic(root)
 // 举例上面的树
 // !1!#!2!2!#!#!#
 ```
@@ -167,30 +164,30 @@ regodic(root);
  * @param {TreeNode} root
  * @return {number[]}
  */
-const findMode = (root) => {
-  let result = [];
-  let map = new Map();
-  let max = 0;
-  const regodic = (root) => {
+const findMode = root => {
+  let result = []
+  let map = new Map()
+  let max = 0
+  const regodic = root => {
     if (!root) {
       return '!#'
     }
     if (map.get(root.val) === undefined) {
-      map.set(root.val, 1);
+      map.set(root.val, 1)
     } else {
-      map.set(root.val, map.get(root.val) + 1);
+      map.set(root.val, map.get(root.val) + 1)
     }
-    max = Math.max(max, map.get(root.val));
-    return `!${root.val}${regodic(root.left)}${regodic(root.right)}`;
+    max = Math.max(max, map.get(root.val))
+    return `!${root.val}${regodic(root.left)}${regodic(root.right)}`
   }
-  regodic(root);
+  regodic(root)
   for (let [key, value] of map.entries()) {
     if (value === max) {
-      result.push(key);
+      result.push(key)
     }
   }
-  return result;
-};
+  return result
+}
 ```
 
 Submit 提交试试：

@@ -1,5 +1,4 @@
-LeetCode
-===
+# LeetCode
 
 > Create by **jsLe** on **2019-5-16 22:12:29**  
 > Recently revised in **2019-09-18 14:27:25**
@@ -8,10 +7,10 @@ LeetCode
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 攻略](#chapter-three) |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
@@ -37,9 +36,9 @@ LeetCode 是个题库，里面有很编程多面试的题目，可以在线编�
 5. 攻略困难
 6. 熟练算法与数据结构
 
-* [简单难度攻略](./easy/README.md)
-* [中等难度攻略](./medium/README.md)
-* [困难难度攻略](./hard/README.md)
+- [简单难度攻略](./easy/README.md)
+- [中等难度攻略](./medium/README.md)
+- [困难难度攻略](./hard/README.md)
 
 ---
 

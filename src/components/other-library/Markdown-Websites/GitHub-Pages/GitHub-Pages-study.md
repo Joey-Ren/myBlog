@@ -1,5 +1,4 @@
-GitHub Pages 学习
-===
+# GitHub Pages 学习
 
 > create by **jsLe** on **2019-5-30 08:31:37**  
 > Recently revised in **2019-05-30 20:42:08**
@@ -12,18 +11,18 @@ GitHub Pages 是一个通过 GitHub 项目/仓库 进行部署的，以 `用户�
 
 通过 GitHub Pages，用户只需要把自己的内容在本地编辑好，然后推送到 GitHub 仓库即可。
 
-* [jsLe 的 GitHub Pages 仓库](https://github.com/LiangJunrong/LiangJunrong.github.io)
-* [jsLe 的 GitHub Pages 页面](https://liangjunrong.github.io/)
+- [jsLe 的 GitHub Pages 仓库](https://github.com/LiangJunrong/LiangJunrong.github.io)
+- [jsLe 的 GitHub Pages 页面](https://liangjunrong.github.io/)
 
 GitHub Pages 的搭建非常简单，现在我们开始搭建：
 
-* **步骤 1：新建仓库**
+- **步骤 1：新建仓库**
 
 打开 [GitHub](https://github.com/) 页面，注册号用户后，新建仓库（New repository），在仓库名（Repository name）中输入 `用户名.github.io`，例如 **jsLe** 的就是：`LiangJunrong.github.io`，然后点击 Create repository 即可创建一个部署好的环境。
 
 ![图](../../../public-repertory/img/other-GitHub-Pages-1.png)
 
-* **步骤 2：Clone 项目**
+- **步骤 2：Clone 项目**
 
 Clone 项目至电脑：
 
@@ -49,25 +48,28 @@ Hello Github Pages
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Hello Github Pages</title>
-  <style>
-    .container {
-      margin-top: 300px;
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-  <h1 class="container">Hello Github Pages</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hello Github Pages</title>
+    <style>
+      .container {
+        margin-top: 300px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="container">Hello Github Pages</h1>
+  </body>
 </html>
 ```
 
-* **步骤 3：上传项目到 GitHub**
+- **步骤 3：上传项目到 GitHub**
 
 上传我们的代码到 GitHub：
 
@@ -77,7 +79,7 @@ git commit -m "Github Pages"
 git push
 ```
 
-* **步骤 4：打开 `github.io`**
+- **步骤 4：打开 `github.io`**
 
 最后我们打开 `用户名.github.io`：
 

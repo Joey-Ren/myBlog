@@ -1,25 +1,25 @@
-方法 - fill()
-===
+# 方法 - fill()
 
 > Create by **jsLe** on **2019-09-17 09:39:02**  
 > Recently revised in **2019-09-17 09:39:12**
 
-* **原文**：[MDN - fill()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/fill)
+- **原文**：[MDN - fill()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/fill)
 
-* **功能**：`fill()` 方法用一个固定值填充一个数组中从起始索引到终止索引内的全部元素。不包括终止索引。
+- **功能**：`fill()` 方法用一个固定值填充一个数组中从起始索引到终止索引内的全部元素。不包括终止索引。
 
-* **语法**：`arr.fill(value, start, end)`
-  * `value`：用来填充数组元素的值。
-  * `start`：起始索引，默认值为0。
-  * `end`：终止索引，默认值为 `this.length`。
+- **语法**：`arr.fill(value, start, end)`
 
-* **返回值**：修改后的数组。
+  - `value`：用来填充数组元素的值。
+  - `start`：起始索引，默认值为 0。
+  - `end`：终止索引，默认值为 `this.length`。
 
-* **代码**：
+- **返回值**：修改后的数组。
+
+- **代码**：
 
 ```js
-let arr = [1, 2, 3, 4, 5];
-arr = new Array(arr.length).fill(0);
+let arr = [1, 2, 3, 4, 5]
+arr = new Array(arr.length).fill(0)
 // arr - [0, 0, 0, 0, 0];
 ```
 

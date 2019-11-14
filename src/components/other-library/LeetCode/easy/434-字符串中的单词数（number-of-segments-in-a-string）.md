@@ -1,5 +1,4 @@
-434 - 字符串中的单词数（number-of-segments-in-a-string）
-===
+# 434 - 字符串中的单词数（number-of-segments-in-a-string）
 
 > Create by **jsLe** on **2019-07-26 10:54:15**  
 > Recently revised in **2019-09-18 14:05:53**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - 暴力破解 1](#chapter-three-one) |
-| &emsp;[3.2 解法 - 暴力破解 2](#chapter-three-two) |
+| &emsp;[3.1 解法 - 暴力破解 1](#chapter-three-one)                                        |
+| &emsp;[3.2 解法 - 暴力破解 2](#chapter-three-two)                                        |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：字符串
-* **题目地址**：https://leetcode-cn.com/problems/number-of-segments-in-a-string/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：字符串
+- **题目地址**：https://leetcode-cn.com/problems/number-of-segments-in-a-string/
+- **题目内容**：
 
 ```
 统计字符串中的单词个数，这里的单词指的是连续的不是空格的字符。
@@ -46,22 +45,22 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var countSegments = function(s) {
-  s = s.split(' ');
-  let length = s.length;
-  s.forEach((item) => {
+  s = s.split(' ')
+  let length = s.length
+  s.forEach(item => {
     if (item === '') {
-      length--;
+      length--
     }
   })
-  return length;
-};
+  return length
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `s`：`Hello, my name is John`
 2. `return`：
@@ -70,7 +69,7 @@ var countSegments = function(s) {
 5
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -79,24 +78,24 @@ var countSegments = function(s) {
   ✔ Your memory usage beats 11.76 % of javascript submissions (33.9 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `split()`：`split()` 方法使用指定的分隔符字符串将一个 String 对象分割成字符串数组，以将字符串分隔为子字符串，以确定每个拆分的位置。[`split()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/String/split.md)
 2. `forEach()`：`forEach()` 方法对数组的每个元素执行一次提供的函数。[`forEach()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/forEach.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **首先**，明确题意：
 
 1. `'Hello, my name is John'` 返回 5。
-2. `'           '` 返回 0。
+2. `' '` 返回 0。
 
 **然后**，原本打算直接：
 
 ```js
 var countSegments = function(s) {
-  return s.split(' ').length;
-};
+  return s.split(' ').length
+}
 ```
 
 结果不满足条件 2，报错了。
@@ -105,15 +104,15 @@ var countSegments = function(s) {
 
 ```js
 var countSegments = function(s) {
-  s = s.split(' ');
-  let length = s.length;
-  s.forEach((item) => {
+  s = s.split(' ')
+  let length = s.length
+  s.forEach(item => {
     if (item === '') {
-      length--;
+      length--
     }
   })
-  return length;
-};
+  return length
+}
 ```
 
 即：我们先切割，再统计它的长度，遍历一次，如果发现里面存在 `''` 空字符串，那么我们就将其长度减一。
@@ -124,21 +123,21 @@ var countSegments = function(s) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
-var countSegments = function (s) {
-  let res = 0;
-  s.split(' ').map((val) => {
+var countSegments = function(s) {
+  let res = 0
+  s.split(' ').map(val => {
     if (val !== '') {
-      res++;
+      res++
     }
   })
-  return res;
+  return res
 }
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `s`：`Hello, my name is John`
 2. `return`：
@@ -147,7 +146,7 @@ var countSegments = function (s) {
 5
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -156,38 +155,38 @@ var countSegments = function (s) {
   ✔ Your memory usage beats 42.65 % of javascript submissions (33.7 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `split()`：`split()` 方法使用指定的分隔符字符串将一个 String 对象分割成字符串数组，以将字符串分隔为子字符串，以确定每个拆分的位置。[`split()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/String/split.md)
 2. `map()`：遍历数组，`item` 返回遍历项，`index` 返回当前索引。[`map()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/map.md)
 
-* **解题思路**：
+- **解题思路**：
 
 思路同 3.1，先将字符串切割成数组，然后遍历数组。
 
 如果数组中的元素不是空格，那么就让元素 + 1，最终返回 `res` 即可。
 
-* **进一步思考**：
+- **进一步思考**：
 
 > 扩展题解 1：
 
 ```js
-var countSegments = function (s) {
+var countSegments = function(s) {
   let transfer = [
       [0, 1],
       [0, 1]
     ],
     state = 0,
-    count = 0;
-  s += " ";
+    count = 0
+  s += ' '
   for (let i = 0; i < s.length; ++i) {
-    let id = (s[i] != " ") | 0,
-      ns = transfer[state][id];
-    if (state > ns) count++;
-    state = ns;
+    let id = (s[i] != ' ') | 0,
+      ns = transfer[state][id]
+    if (state > ns) count++
+    state = ns
   }
-  return count;
-};
+  return count
+}
 ```
 
 Submit 提交记录：
@@ -202,10 +201,10 @@ Submit 提交记录：
 > 扩展题解 2：
 
 ```js
-var countSegments = function (s) {
+var countSegments = function(s) {
   //去除前后空白符，用\s+任何Unicode空白符分割的数组
-  return (s.trim() === '') ? 0 : s.trim().split(/\s+/).length;
-};
+  return s.trim() === '' ? 0 : s.trim().split(/\s+/).length
+}
 ```
 
 Submit 提交记录：

@@ -1,12 +1,11 @@
-jQuery 工作常用解决方案
-===
+# jQuery 工作常用解决方案
 
 > Create by **jsLe** on **2018-11-4 10:37:33**  
 > Recently revised in **2019-05-31 00:06:05**
 
 **Hello 小伙伴们，如果觉得本文还不错，记得给个 **star** ， 你们的 **star** 是我学习的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
 
-记录工作中，使用 jQuery、HTML、CSS 等技术的技巧，包括但不限于：`rem` 适配、`css reset`、活动边框、弹窗等。  
+记录工作中，使用 jQuery、HTML、CSS 等技术的技巧，包括但不限于：`rem` 适配、`css reset`、活动边框、弹窗等。
 
 比较琐碎，各取所需。
 
@@ -18,11 +17,11 @@ CDN：`<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>`
 
 ### 1.2 双引号与单引号的使用规范
 
-在平时的时候，能使用双引号就用双引号。  
+在平时的时候，能使用双引号就用双引号。
 
 在拼接字符串的时候，使用单引号裹住。
 
-### 1.3 移动端rem适配
+### 1.3 移动端 rem 适配
 
 直接在 `index.html` 中引用该 `js` 文件即可。
 
@@ -37,32 +36,48 @@ CDN：`<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>`
  * 最大宽度: maxWidth
  * 这段 js 的最后面有两个参数记得要设置，一个为设计稿实际宽度，一个为制作稿最大宽度，例如设计稿为 750，最大宽度为 750，则为(750,750)
  */
-! function (e, t) {
+!(function(e, t) {
   function n() {
-    var n = l.getBoundingClientRect().width;
-    t = t || 540, n > t && (n = t);
-    var i = 100 * n / e;
-    r.innerHTML = "html{font-size:" + i + "px;}"
+    var n = l.getBoundingClientRect().width
+    ;(t = t || 540), n > t && (n = t)
+    var i = (100 * n) / e
+    r.innerHTML = 'html{font-size:' + i + 'px;}'
   }
-  var i, d = document,
+  var i,
+    d = document,
     o = window,
     l = d.documentElement,
-    r = document.createElement("style");
-  if (l.firstElementChild) l.firstElementChild.appendChild(r);
+    r = document.createElement('style')
+  if (l.firstElementChild) l.firstElementChild.appendChild(r)
   else {
-    var a = d.createElement("div");
-    a.appendChild(r), d.write(a.innerHTML), a = null
+    var a = d.createElement('div')
+    a.appendChild(r), d.write(a.innerHTML), (a = null)
   }
-  n(), o.addEventListener("resize", function () {
-    clearTimeout(i), i = setTimeout(n, 300)
-  }, !1), o.addEventListener("pageshow", function (e) {
-    e.persisted && (clearTimeout(i), i = setTimeout(n, 300))
-  }, !1), "complete" === d.readyState ? d.body.style.fontSize = "16px" : d.addEventListener(
-    "DOMContentLoaded",
-    function (e) {
-      d.body.style.fontSize = "16px"
-    }, !1)
-}(1000, 1000);
+  n(),
+    o.addEventListener(
+      'resize',
+      function() {
+        clearTimeout(i), (i = setTimeout(n, 300))
+      },
+      !1
+    ),
+    o.addEventListener(
+      'pageshow',
+      function(e) {
+        e.persisted && (clearTimeout(i), (i = setTimeout(n, 300)))
+      },
+      !1
+    ),
+    'complete' === d.readyState
+      ? (d.body.style.fontSize = '16px')
+      : d.addEventListener(
+          'DOMContentLoaded',
+          function(e) {
+            d.body.style.fontSize = '16px'
+          },
+          !1
+        )
+})(1000, 1000)
 ```
 
 ### 1.4 jQuery ajax
@@ -75,56 +90,62 @@ $.ajax({
   type: 'get',
   dataType: 'json',
   data: {
-  addressName: $serA
-}
-}).done(function (res) {
-  console.log(res);
-}).fail(function () {
-  console.log("error");
-}).always(function () {
-  console.log("complete");
-});
+    addressName: $serA
+  }
+})
+  .done(function(res) {
+    console.log(res)
+  })
+  .fail(function() {
+    console.log('error')
+  })
+  .always(function() {
+    console.log('complete')
+  })
 ```
 
-方法2：
+方法 2：
 
 ```js
 $.ajax({
-    url: host + '/olduser/up',
-    type: 'get',
-    dataType: 'json',
-    data: {
-    userName: $("#search-name").val(),
-    adsl: $("#search-id").val()
+  url: host + '/olduser/up',
+  type: 'get',
+  dataType: 'json',
+  data: {
+    userName: $('#search-name').val(),
+    adsl: $('#search-id').val()
   },
-  success:function(res){
-    if(res.code == 0) {
-      $("#search-name").val() + "&adsl=" + escape($("#search-id").val());
+  success: function(res) {
+    if (res.code == 0) {
+      $('#search-name').val() + '&adsl=' + escape($('#search-id').val())
     } else {
-      alert(res.msg);
+      alert(res.msg)
     }
   }
 })
 ```
 
-### 1.5 URL加码及解码
+### 1.5 URL 加码及解码
 
 加码：
 
 ```js
-window.location = "adslList.htm?name=" + escape(name) + "&idNo=" + escape(idNo);
+window.location = 'adslList.htm?name=' + escape(name) + '&idNo=' + escape(idNo)
 ```
 
 解码：
 
 ```js
 function getUrlParam(name) {
-  var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
-  var r = window.location.search.substr(1).match(reg);
-  if(r!=null)return unescape(r[2]); return null;
+  var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)')
+  var r = window.location.search.substr(1).match(reg)
+  if (r != null) return unescape(r[2])
+  return null
 }
 
-console.log("url name=" + getUrlParam("name") + ",url idNo=" + getUrlParam("idNo"));
+console.log(
+  'url name=' + getUrlParam('name') + ',url idNo=' + getUrlParam('idNo')
+)
 ```
 
 ### 1.6 常用正则表达式
@@ -132,21 +153,21 @@ console.log("url name=" + getUrlParam("name") + ",url idNo=" + getUrlParam("idNo
 **知识点 1**. 使用方式：
 
 ```js
-if(!/^((\d{8})|(1[35784]\d{9}))$/.test($("#user-phone").val())){
-  alert('请填写11位手机号码或8位固话号码');
-  return false;
+if (!/^((\d{8})|(1[35784]\d{9}))$/.test($('#user-phone').val())) {
+  alert('请填写11位手机号码或8位固话号码')
+  return false
 }
 ```
 
 **知识点 2**. 密码强度
 
-* 必须包含数字+小写字母+大写字母的密码，位数在8-10位之间：
+- 必须包含数字+小写字母+大写字母的密码，位数在 8-10 位之间：
 
 ```
 ^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$
 ```
 
-* 只能是字母、数字和下划线：
+- 只能是字母、数字和下划线：
 
 ```
 ^\w+$
@@ -158,7 +179,7 @@ if(!/^((\d{8})|(1[35784]\d{9}))$/.test($("#user-phone").val())){
 ^[\u4e00-\u9fa5]{0,}$
 ```
 
-**知识点 4**. Email验证：
+**知识点 4**. Email 验证：
 
 ```
 [\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?
@@ -170,7 +191,7 @@ if(!/^((\d{8})|(1[35784]\d{9}))$/.test($("#user-phone").val())){
 ^(\d{6})(\d{4})(\d{2})(\d{2})(\d{3})([0-9]|X)$
 ```
 
-**知识点 6**. 手机号验证：以1开头，第二位数是3/4/5/7/8的11位手机号码
+**知识点 6**. 手机号验证：以 1 开头，第二位数是 3/4/5/7/8 的 11 位手机号码
 
 ```
 ^1[3,4,5,7,8]\d{9}$
@@ -189,15 +210,21 @@ if(!/^((\d{8})|(1[35784]\d{9}))$/.test($("#user-phone").val())){
 
 ## 三 CSS
 
-### 3.1 设置input的placeholder
+### 3.1 设置 input 的 placeholder
 
 > reset.css
 
 ```css
 /** 设置input的placeholder - set input placeholder **/
-input::-webkit-input-placeholder { color: #727272; } /* Webkit browsers */
-input::-moz-placeholder { color: #727272; } /* Mozilla Firefox */
-input::-ms-input-placeholder { color: #727272; } /* Internet Explorer */
+input::-webkit-input-placeholder {
+  color: #727272;
+} /* Webkit browsers */
+input::-moz-placeholder {
+  color: #727272;
+} /* Mozilla Firefox */
+input::-ms-input-placeholder {
+  color: #727272;
+} /* Internet Explorer */
 ```
 
 ### 3.2 使图片根据不同设备自适应
@@ -206,25 +233,32 @@ input::-ms-input-placeholder { color: #727272; } /* Internet Explorer */
 
 ```css
 /** 图片自适应 - image responsize **/
-img { border: 0; display: inline-block; width: 100%; max-width: 100%; height: auto; }
+img {
+  border: 0;
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
 ```
 
 ### 3.3 垂直居中
 
-首先，父元素设置relative；  
+首先，父元素设置 relative；
 
-然后，需要定位的元素设置absolute；  
+然后，需要定位的元素设置 absolute；
 
-最后，垂直居中的top为50%，margin-top为该元素高度的负一半的高度值。  
+最后，垂直居中的 top 为 50%，margin-top 为该元素高度的负一半的高度值。
 
 ```css
 .search-result-area {
   position: relative;
   padding: 0 36px;
 }
-.previous-page, .next-page {
+.previous-page,
+.next-page {
   position: absolute;
-  top:50%;
+  top: 50%;
   margin-top: -36px;
 }
 .previous-page {
@@ -237,9 +271,9 @@ img { border: 0; display: inline-block; width: 100%; max-width: 100%; height: au
 
 ### 3.4 左右两栏布局
 
-1. div1不变，div2浮动，div2的margin-left为div1的宽度。
-2. div1+div2浮动，父级overflow=hidden。
-3. 父级relative定位，子级absolute定位。
+1. div1 不变，div2 浮动，div2 的 margin-left 为 div1 的宽度。
+2. div1+div2 浮动，父级 overflow=hidden。
+3. 父级 relative 定位，子级 absolute 定位。
 
 ### 3.5 css reset
 
@@ -256,76 +290,126 @@ dl, dt, dd, ul, ol, li, /* 列表元素 - list elements */
 pre, /* 文本格式元素 - text formatting elements */
 form, fieldset, legend, button, input, textarea, /* 表单元素 - from elements */
 th, td /* 表格元素 - table elements */ {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /** 设置默认字体 - setting the default font **/
-body, button, input, select, textarea {
-    font: 18px/1.5 '黑体', Helvetica, sans-serif;
+body,
+button,
+input,
+select,
+textarea {
+  font: 18px/1.5 '黑体', Helvetica, sans-serif;
 }
-h1, h2, h3, h4, h5, h6, button, input, select, textarea { font-size: 100%; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
 
 /** 重置列表元素 - reset the list element **/
-ul, ol { list-style: none; }
+ul,
+ol {
+  list-style: none;
+}
 
 /** 重置文本格式元素 - reset the text format element **/
-a, a:hover { text-decoration: none; }
+a,
+a:hover {
+  text-decoration: none;
+}
 
 /** 重置表单元素 - reset the form element **/
-button { cursor: pointer; }
-input { font-size: 18px; outline: none; }
+button {
+  cursor: pointer;
+}
+input {
+  font-size: 18px;
+  outline: none;
+}
 
 /** 重置表格元素 - reset the table element **/
-table { border-collapse: collapse; border-spacing: 0; }
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
 /*
   * 图片自适应 - image responsize 
   * 1. 清空浏览器对图片的设置
   * 2. <div>图片</div> 的情况下，图片会撑高 div，这么设置可以清除该影响
 */
-img { border: 0; display: inline-block; width: 100%; max-width: 100%; height: auto; vertical-align: middle; }
+img {
+  border: 0;
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
 
 /* 
   * 默认box-sizing是content-box，该属性导致padding会撑大div，使用border-box可以解决该问题
   * set border-box for box-sizing when you use div, it solve the problem when you add padding and don't want to make the div width bigger
 */
-div, input { box-sizing: border-box; }
+div,
+input {
+  box-sizing: border-box;
+}
 
 /** 清除浮动 - clear float **/
-.jsLe-clear:after, .clear:after {
-    content: '\20';
-    display: block;
-    height: 0;
-    clear: both;
+.jsLe-clear:after,
+.clear:after {
+  content: '\20';
+  display: block;
+  height: 0;
+  clear: both;
 }
-.jsLe-clear, .clear {
-    *zoom: 1;
+.jsLe-clear,
+.clear {
+  *zoom: 1;
 }
 
 /** 设置input的placeholder - set input placeholder **/
-input::-webkit-input-placeholder { color: #919191; font-size: .32rem } /* Webkit browsers */
-input::-moz-placeholder { color: #919191; font-size: .32rem } /* Mozilla Firefox */
-input::-ms-input-placeholder { color: #919191; font-size: .32rem } /* Internet Explorer */
+input::-webkit-input-placeholder {
+  color: #919191;
+  font-size: 0.32rem;
+} /* Webkit browsers */
+input::-moz-placeholder {
+  color: #919191;
+  font-size: 0.32rem;
+} /* Mozilla Firefox */
+input::-ms-input-placeholder {
+  color: #919191;
+  font-size: 0.32rem;
+} /* Internet Explorer */
 ```
 
-### 3.6 li前面点换成图片
+### 3.6 li 前面点换成图片
 
 ```css
-ul{
-  list-style-image: url(img/5.jpg);
+ul {
+  list-style-image: url(img/5.jpg);
 }
 ```
 
-### 3.7 制作div的边框
+### 3.7 制作 div 的边框
 
 ```css
 .content:before {
-  content: " ";
+  content: ' ';
   display: block;
   width: 100%;
   height: 3.46rem;
-  background: url("../images/mobile-frame-top.jpg") no-repeat center;
+  background: url('../images/mobile-frame-top.jpg') no-repeat center;
   background-size: 100%;
   position: absolute;
   left: 0;
@@ -334,18 +418,18 @@ ul{
 }
 .content {
   position: relative;
-  background: url("../images/mobile-frame-content.jpg") repeat-y center;
+  background: url('../images/mobile-frame-content.jpg') repeat-y center;
   background-size: 100% auto;
   width: 10rem;
   padding: 3.46rem 1.37rem 2.26rem;
-  font-size: .3rem;
+  font-size: 0.3rem;
 }
 .content:after {
-  content: " ";
+  content: ' ';
   display: block;
   width: 100%;
   height: 2.26rem;
-  background: url("../images/mobile-frame-bottom.png") no-repeat center;
+  background: url('../images/mobile-frame-bottom.png') no-repeat center;
   background-size: 100%;
   position: absolute;
   left: 0;
@@ -358,35 +442,37 @@ ul{
 
 ```css
 .banner {
-  background: url("../images/banner.jpg") no-repeat;
+  background: url('../images/banner.jpg') no-repeat;
   background-size: 100% auto;
 }
 ```
 
-### 3.9 position情况下居中
+### 3.9 position 情况下居中
 
-left 值计算：width - button宽度一半
+left 值计算：width - button 宽度一半
 
-### 3.10 jsLe的弹窗
+### 3.10 jsLe 的弹窗
 
 如果希望弹窗不固定大小，在手机端或者 PC 端都能使用，推荐使用百分比配置。
 
-> *.html
+> \*.html
 
 ```html
 <div class="jsLe-prompt">
   <div class="jsLe-mask"></div>
   <div class="jsLe-alert">
-    <img src="./images/error.png" alt="error">
+    <img src="./images/error.png" alt="error" />
     <p class="jsLe-tips">该板块暂未开放~</p>
     <p>
-      <a href="javascript:void(0)" class="jsLe-get-it" id="jsLe-get-it">好的，我知道了</a>
+      <a href="javascript:void(0)" class="jsLe-get-it" id="jsLe-get-it"
+        >好的，我知道了</a
+      >
     </p>
   </div>
 </div>
 ```
 
-> *.css
+> \*.css
 
 ```css
 /** 弹窗 - alert **/
@@ -402,8 +488,8 @@ left 值计算：width - button宽度一半
   height: 100%;
   background: #000;
   filter: alpha(opacity=30);
-  -ms-filter: "alpha(opacity=30)";
-  opacity: .3;
+  -ms-filter: 'alpha(opacity=30)';
+  opacity: 0.3;
 }
 .jsLe-alert {
   z-index: 999;
@@ -412,7 +498,7 @@ left 值计算：width - button宽度一半
   left: 40%;
   width: 320px;
   height: 220px;
-  box-shadow: 2px 2px 4px #A0A0A0, -2px -2px 4px #A0A0A0;
+  box-shadow: 2px 2px 4px #a0a0a0, -2px -2px 4px #a0a0a0;
   background-color: #fff;
   padding: 25px;
   border-radius: 15px;
@@ -449,7 +535,7 @@ left 值计算：width - button宽度一半
 /* end */
 ```
 
-### 3.11 常用SVG
+### 3.11 常用 SVG
 
 直接引用到页面即可。
 
@@ -490,35 +576,35 @@ left 值计算：width - button宽度一半
 http://www.xuanfengge.com/demo/201311/scroll/css3-scroll.html
 ```
 
-### 3.13 修改select样式
+### 3.13 修改 select 样式
 
-> *.html
+> \*.html
 
 ```html
 <div class="activity-area-select">
   <select class="activity-area" id="activity-friday-area">
-    <option value ="请选择商铺区域">请选择商铺区域</option>
-    <option value ="香洲">香洲</option>
-    <option value ="拱北">拱北</option>
-    <option value ="前山">前山</option>
-    <option value ="横琴">横琴</option>
-    <option value ="斗门">斗门</option>
-    <option value ="金湾">金湾</option>
+    <option value="请选择商铺区域">请选择商铺区域</option>
+    <option value="香洲">香洲</option>
+    <option value="拱北">拱北</option>
+    <option value="前山">前山</option>
+    <option value="横琴">横琴</option>
+    <option value="斗门">斗门</option>
+    <option value="金湾">金湾</option>
   </select>
 </div>
 ```
 
-> *.css
+> \*.css
 
 ```css
 .activity-area-select {
   width: 4.3rem;
-  height: .6rem;
-  line-height: .6rem;
-  margin-left: .5rem;
+  height: 0.6rem;
+  line-height: 0.6rem;
+  margin-left: 0.5rem;
   border: 1px solid #e0e0e0;
-  border-radius: .28rem;
-  font-size: .24rem;
+  border-radius: 0.28rem;
+  font-size: 0.24rem;
   float: left;
 }
 /* 修改浏览器默认select */
@@ -532,9 +618,10 @@ http://www.xuanfengge.com/demo/201311/scroll/css3-scroll.html
   -moz-appearance: none;
   -webkit-appearance: none;
   /*在选择框的最右侧中间显示小箭头图片*/
-  background: url("../images/icon-select.png") no-repeat center right scroll transparent;
+  background: url('../images/icon-select.png') no-repeat center right scroll
+    transparent;
   /*为下拉小箭头留出一点位置，避免被文字覆盖*/
-  padding-left: .3rem;
+  padding-left: 0.3rem;
   padding-right: 2rem;
 }
 /* 清除边框 - 清除ie的默认选择框样式清除，隐藏下拉箭头*/
@@ -544,9 +631,9 @@ http://www.xuanfengge.com/demo/201311/scroll/css3-scroll.html
 }
 ```
 
-### 3.14 修改table样式
+### 3.14 修改 table 样式
 
-> *.html
+> \*.html
 
 ```html
 <table class="search-result-table" id="search-result-table">
@@ -569,28 +656,29 @@ http://www.xuanfengge.com/demo/201311/scroll/css3-scroll.html
 </table>
 ```
 
-> *.css
+> \*.css
 
 ```css
 .search-result-table {
-  border:solid #e1e1e1;
-  border-width:1px 0px 0px 1px;
+  border: solid #e1e1e1;
+  border-width: 1px 0px 0px 1px;
 }
-table thead, tbody tr {
+table thead,
+tbody tr {
   display: table;
   width: 100%;
   table-layout: fixed;
 }
-.search-result-table tr:nth-child(2n+2) {
+.search-result-table tr:nth-child(2n + 2) {
   background: #fff7ef;
 }
 .search-result-table th {
   background: #ffa751;
   color: #fff;
-  font-size: .24rem;
-  height: .63rem;
-  line-height: .63rem;
-  border:solid #e1e1e1; 
+  font-size: 0.24rem;
+  height: 0.63rem;
+  line-height: 0.63rem;
+  border: solid #e1e1e1;
   border-width: 0px 1px 1px 0px;
 }
 .search-result-table tbody {
@@ -600,10 +688,10 @@ table thead, tbody tr {
   overflow-y: scroll;
 }
 .search-result-table td {
-  font-size: .22rem;
-  height: .9rem;
-  padding-left: .22rem;
-  border:solid #e1e1e1; 
+  font-size: 0.22rem;
+  height: 0.9rem;
+  padding-left: 0.22rem;
+  border: solid #e1e1e1;
   border-width: 0px 1px 1px 0px;
 }
 ```
@@ -612,7 +700,7 @@ table thead, tbody tr {
 
 ### 4.1 VSCode 选中设置
 
-文件 -> 设置 -> User Settings -> editor.wordSeparators  
+文件 -> 设置 -> User Settings -> editor.wordSeparators
 
 下划线选中：
 
@@ -623,22 +711,22 @@ table thead, tbody tr {
 横杠选中：
 
 ```
-./\\()\"':,.;<>~!@#$%^&*|+=[]{}`~?  
+./\\()\"':,.;<>~!@#$%^&*|+=[]{}`~?
 ```
 
 ### 4.2 浏览器前缀参照
 
--moz- 对应 Firefox,   
+-moz- 对应 Firefox,
 
--webkit- 对应 Safari and Chrome  
+-webkit- 对应 Safari and Chrome
 
--o- 对应 Opera  
+-o- 对应 Opera
 
 -ms- 对应 Internet Explorer
 
-### 4.3 git的使用
+### 4.3 git 的使用
 
-本地仓库上传到GitHub：
+本地仓库上传到 GitHub：
 
 1. git init
 2. git add .
@@ -646,13 +734,13 @@ table thead, tbody tr {
 4. git remote add origin https://github.com/address
 5. git push -u origin master
 
-更新本地仓库到GitHub
+更新本地仓库到 GitHub
 
 1. git add .
 2. git commit -m "更新"
 3. git push -u origin master
 
-拉取GitHub项目到本地
+拉取 GitHub 项目到本地
 
 1. git clone address
 
@@ -661,11 +749,12 @@ table thead, tbody tr {
 1. 安装插件 HTML Snippets
 2. 文件-首选项-用户代码片段-HTML
 3. 修改文件内容为：
+
 ```json
 {
-  // Place your snippets for html here. Each snippet is defined under a snippet name and has a prefix, body and 
+  // Place your snippets for html here. Each snippet is defined under a snippet name and has a prefix, body and
   // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
   // same ids are connected.
   // Example:
   // "Print to console": {
@@ -677,27 +766,28 @@ table thead, tbody tr {
   //  "description": "Log output to console"
   // }
   "!!": {
-  "prefix": "!!",
-  "body": [
-    "<!DOCTYPE html>",
-    "<html lang=\"en\">",
-    "<head>",
-    "\t<meta charset=\"UTF-8\">",
-    "\t<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no\">",
-    "\t<meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">",
-    "\t<title>HelloWorld</title>",
-    "</head>",
-    "<body>",
-    "\t$1",
-    "\t",
-    "\t<script src=\"https://cdn.bootcss.com/jquery/3.3.1/jquery.js\"></script>",
-    "</body>",
-    "</html>"
-  ],
-  "description": "!! - Defines a template for a html5 document"
+    "prefix": "!!",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html lang=\"en\">",
+      "<head>",
+      "\t<meta charset=\"UTF-8\">",
+      "\t<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no\">",
+      "\t<meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">",
+      "\t<title>HelloWorld</title>",
+      "</head>",
+      "<body>",
+      "\t$1",
+      "\t",
+      "\t<script src=\"https://cdn.bootcss.com/jquery/3.3.1/jquery.js\"></script>",
+      "</body>",
+      "</html>"
+    ],
+    "description": "!! - Defines a template for a html5 document"
   }
 }
 ```
+
 4. 在 HTML 页面输入！！然后回车，即可看到新效果
 
 ---

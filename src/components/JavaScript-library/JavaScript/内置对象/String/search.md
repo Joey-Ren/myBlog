@@ -1,26 +1,26 @@
-方法 - search()
-===
+# 方法 - search()
 
 > Create by **jsLe** on **2019-09-11 17:01:23**  
 > Recently revised in **2019-09-11 17:01:26**
 
-* **原文**：[MDN - search()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/search)
+- **原文**：[MDN - search()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/search)
 
-* **功能**：`search()` 方法执行正则表达式和 `String` 对象之间的一个搜索匹配。
+- **功能**：`search()` 方法执行正则表达式和 `String` 对象之间的一个搜索匹配。
 
-* **语法**：`str.search(regexp)`
-  * `regexp`：正则表达式。
+- **语法**：`str.search(regexp)`
 
-* **返回值**：如果匹配成功，则 `search()` 返回正则表达式在字符串中首次匹配项的索引;否则，返回 -1。
+  - `regexp`：正则表达式。
 
-* **代码**：
+- **返回值**：如果匹配成功，则 `search()` 返回正则表达式在字符串中首次匹配项的索引;否则，返回 -1。
+
+- **代码**：
 
 ```js
-var str = "hey JudE";
-var re = /[A-Z]/g;
-var re2 = /[.]/g;
-console.log(str.search(re)); // 4
-console.log(str.search(re2)); // -1
+var str = 'hey JudE'
+var re = /[A-Z]/g
+var re2 = /[.]/g
+console.log(str.search(re)) // 4
+console.log(str.search(re2)) // -1
 ```
 
 ---

@@ -1,5 +1,4 @@
-292 - Nim游戏（nim-game）
-===
+# 292 - Nim 游戏（nim-game）
 
 > Create by **jsLe** on **2019-07-19 16:54:36**  
 > Recently revised in **2019-07-19 17:38:27**
@@ -8,24 +7,24 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 题外话](#chapter-seven) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six)           |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 题外话](#chapter-seven)       |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：迷、极小化极大
-* **题目地址**：https://leetcode-cn.com/problems/nim-game/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：迷、极小化极大
+- **题目地址**：https://leetcode-cn.com/problems/nim-game/
+- **题目内容**：
 
 ```
 你和你的朋友，两个人一起玩 Nim 游戏：桌子上有一堆石头，每次你们轮流拿掉 1 - 3 块石头。 拿掉最后一块石头的人就是获胜者。你作为先手。
@@ -35,7 +34,7 @@
 示例:
 
 输入: 4
-输出: false 
+输出: false
 解释: 如果堆中有 4 块石头，那么你永远不会赢得比赛；
      因为无论你拿走 1 块、2 块 还是 3 块石头，最后一块石头总是会被你的朋友拿走。
 ```
@@ -46,12 +45,12 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var canWinNim = function(n) {
-  return n % 4;
-};
+  return n % 4
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
@@ -86,9 +85,9 @@ false
 
 **然后**，**jsLe** 是通过找规律来破解的：
 
-| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+| 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| √ | √ | √ | x | √ | √ | √ | x | √ |
+| √   | √   | √   | x   | √   | √   | √   | x   | √   |
 
 因为你和你的小伙伴都是极其机智的人，所以假设在你先手并且知道牌数的情况下，你一定不会让最后的数小于 3，毕竟这样你就输了（小伙伴可以一把拿走最大 3 张牌）。
 

@@ -1,26 +1,26 @@
-WeakMap
-===
+# WeakMap
 
 > Create by **jsLe** on **2019-10-16 11:37:43**  
 > Recently revised in **2019-10-16 11:45:22**
 
-* **参考文献**：[MDN - WeakMap](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)
+- **参考文献**：[MDN - WeakMap](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)
 
-* **功能**：
+- **功能**：
 
 `WeakMap` 对象是一组键/值对的集合，其中的键是弱引用的。
 
 其键必须是对象，而值可以是任意的。
 
-* **语法**：`new WeakMap([iterable])`
-  * `iterable`：`Iterable` 是一个数组（二元数组）或者其他可迭代的且其元素是键值对的对象。每个键值对会被加到新的 `WeakMap` 里。`null` 会被当做 `undefined`。
+- **语法**：`new WeakMap([iterable])`
 
-* **属性**：
+  - `iterable`：`Iterable` 是一个数组（二元数组）或者其他可迭代的且其元素是键值对的对象。每个键值对会被加到新的 `WeakMap` 里。`null` 会被当做 `undefined`。
+
+- **属性**：
 
 1. `WeakMap.length`：`length` 属性的值为 0。
 2. `WeakMap.prototype`：`WeakMap` 构造器的原型。允许添加属性到所有的 `WeakMap` 对象。
 
-* **WeakMap 实例**：
+- **WeakMap 实例**：
 
 **属性**：
 
@@ -29,32 +29,32 @@ WeakMap
 **方法**：
 
 1. `WeakMap.prototype.delete(key)`：移除 `key` 的关联对象。执行后 `WeakMap.prototype.has(key)` 返回 `false`。
-2. `WeakMap.prototype.get(key)`：返回 `key` 关联对象, 或者  `undefined` (没有 `key` 关联对象时)。
+2. `WeakMap.prototype.get(key)`：返回 `key` 关联对象, 或者 `undefined` (没有 `key` 关联对象时)。
 3. `WeakMap.prototype.has(key)`：根据是否有 `key` 关联对象返回一个 `Boolean` 值。
 4. `WeakMap.prototype.set(key, value)`：在 `WeakMap` 中设置一组 `key` 关联对象，返回这个 `WeakMap` 对象。
 
-* **代码示例**：
+- **代码示例**：
 
 ```js
 let wm1 = new WeakMap(),
-    wm2 = new WeakMap(),
-    wm3 = new WeakMap();
+  wm2 = new WeakMap(),
+  wm3 = new WeakMap()
 let o1 = {},
-    o2 = function(){};
+  o2 = function() {}
 
-wm1.set(o1, 37);
-wm1.set(o2, "azerty");
-wm2.set(o1, o2); // value 可以是任意值,包括一个对象
-wm2.set(wm1, wm2); // 键和值可以是任意对象,甚至另外一个 WeakMap 对象
-wm1.get(o2); // "azerty"
-wm2.get(o2); // undefined，wm2 中没有 o2 这个键
+wm1.set(o1, 37)
+wm1.set(o2, 'azerty')
+wm2.set(o1, o2) // value 可以是任意值,包括一个对象
+wm2.set(wm1, wm2) // 键和值可以是任意对象,甚至另外一个 WeakMap 对象
+wm1.get(o2) // "azerty"
+wm2.get(o2) // undefined，wm2 中没有 o2 这个键
 
-wm1.has(o2); // true
-wm2.has(o2); // false
+wm1.has(o2) // true
+wm2.has(o2) // false
 
-wm1.has(o1);   // true
-wm1.delete(o1);
-wm1.has(o1);   // false
+wm1.has(o1) // true
+wm1.delete(o1)
+wm1.has(o1) // false
 ```
 
 ---

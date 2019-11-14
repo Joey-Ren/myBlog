@@ -1,5 +1,4 @@
-027 - 移除元素（remove-element）
-===
+# 027 - 移除元素（remove-element）
 
 > Create by **jsLe** on **2019-06-06 15:56:49**  
 > Recently revised in **2019-09-18 10:06:19**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - 双指针](#chapter-three-one) |
-| &emsp;[3..2 解法 - 递归](#chapter-three-two) |
+| &emsp;[3.1 解法 - 双指针](#chapter-three-one)                                            |
+| &emsp;[3..2 解法 - 递归](#chapter-three-two)                                             |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数组、双指针
-* **题目地址**：https://leetcode-cn.com/problems/remove-element/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数组、双指针
+- **题目地址**：https://leetcode-cn.com/problems/remove-element/
+- **题目内容**：
 
 ```
 给定一个数组 nums 和一个值 val，你需要原地移除所有数值等于 val 的元素，返回移除后数组的新长度。
@@ -66,7 +65,7 @@ for (int i = 0; i < len; i++) {
 
 > [返回目录](#chapter-one)
 
-* **官方题解**：https://leetcode-cn.com/problems/remove-element/solution/yi-chu-yuan-su-by-leetcode/
+- **官方题解**：https://leetcode-cn.com/problems/remove-element/solution/yi-chu-yuan-su-by-leetcode/
 
 解题千千万，官方独一家，上面是官方使用 Java 进行的题解。
 
@@ -76,21 +75,21 @@ for (int i = 0; i < len; i++) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var removeElement = function(nums, val) {
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] === val) {
-      nums.splice(i, 1);
-      i--;
+      nums.splice(i, 1)
+      i--
     }
   }
-  return nums.length;
-};
+  return nums.length
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums`：`[0,1,2,2,3,0,4,2]`
 2. `val`：`2`
@@ -101,7 +100,7 @@ var removeElement = function(nums, val) {
 5
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -110,11 +109,11 @@ var removeElement = function(nums, val) {
   ✔ Your memory usage beats 95.17 % of javascript submissions (33.4 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `splice()`：`splice()` 方法通过删除或替换现有元素或者原地添加新的元素来修改数组,并以数组形式返回被修改的内容。此方法会改变原数组。[`splice()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/splice.md)
 
-* **解题思路**：
+- **解题思路**：
 
 如果小伙伴们看过上一道（第 26 题）中关于双指针的解法，那么小伙伴对这道题应该非常清晰。
 
@@ -132,19 +131,19 @@ var removeElement = function(nums, val) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var removeElement = function(nums, val) {
-  if(nums.indexOf(val) != -1) {
-    nums.splice(nums.indexOf(val), 1);
-    return removeElement(nums, val);
+  if (nums.indexOf(val) != -1) {
+    nums.splice(nums.indexOf(val), 1)
+    return removeElement(nums, val)
   }
-  return nums.length;
-};
+  return nums.length
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums`：`[0,1,2,2,3,0,4,2]`
 2. `val`：`2`
@@ -155,7 +154,7 @@ var removeElement = function(nums, val) {
 5
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -164,21 +163,21 @@ var removeElement = function(nums, val) {
   ✔ Your memory usage beats 86.91 % of javascript submissions (33.5 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `splice()`：`splice()` 方法通过删除或替换现有元素或者原地添加新的元素来修改数组,并以数组形式返回被修改的内容。此方法会改变原数组。[`splice()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/splice.md)
 2. `indexOf()`：判断数组中是否存在判断条件中的值。如果存在，则返回第一次出现的索引；如果不存在，则返回 -1。[`indexOf()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/indexOf.md)
 
-* **解题思路**：
+- **解题思路**：
 
 ```js
 var removeElement = function(nums, val) {
-  if(nums.indexOf(val) != -1) {
-    nums.splice(nums.indexOf(val), 1);
-    return removeElement(nums, val);
+  if (nums.indexOf(val) != -1) {
+    nums.splice(nums.indexOf(val), 1)
+    return removeElement(nums, val)
   }
-  return nums.length;
-};
+  return nums.length
+}
 ```
 
 总有那么一两个破解的方式，令人眼前一亮！
@@ -190,8 +189,7 @@ var removeElement = function(nums, val) {
 ```js
 2
 2
-5
--1
+5 - 1
 ```
 
 即对应我们的 `2` 出现的位置。

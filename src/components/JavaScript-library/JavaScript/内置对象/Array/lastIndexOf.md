@@ -1,27 +1,27 @@
-方法 - lastIndexOf()
-===
+# 方法 - lastIndexOf()
 
 > Create by **jsLe** on **2019-09-17 09:35:29**  
 > Recently revised in **2019-09-17 09:35:38**
 
-* **原文**：[MDN - lastIndexOf()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf)
+- **原文**：[MDN - lastIndexOf()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf)
 
-* **功能**：`lastIndexOf()` 方法返回指定元素（也即有效的 JavaScript 值或变量）在数组中的最后一个的索引，如果不存在则返回 -1。
+- **功能**：`lastIndexOf()` 方法返回指定元素（也即有效的 JavaScript 值或变量）在数组中的最后一个的索引，如果不存在则返回 -1。
 
-* **语法**：`lastIndexOf(searchValue, fromIndex)`
-  * `searchValue`：查找的值
-  * `formIndex`：从该位置逆向查找
+- **语法**：`lastIndexOf(searchValue, fromIndex)`
 
-* **返回值**：数组中最后一个元素的索引，如未找到返回 -1。
+  - `searchValue`：查找的值
+  - `formIndex`：从该位置逆向查找
 
-* **代码**：
+- **返回值**：数组中最后一个元素的索引，如未找到返回 -1。
+
+- **代码**：
 
 ```js
-var array = [2, 5, 9, 2];
-var index = array.lastIndexOf(2); // 3
+var array = [2, 5, 9, 2]
+var index = array.lastIndexOf(2) // 3
 ```
 
-* **扩展**：如果需要查找到第一次出现指定值的索引，可以使用 `indexOf()`。
+- **扩展**：如果需要查找到第一次出现指定值的索引，可以使用 `indexOf()`。
 
 ---
 

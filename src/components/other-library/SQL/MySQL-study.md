@@ -1,5 +1,4 @@
-MySQL 学习
-===
+# MySQL 学习
 
 > Create by **jsLe** on **2019-05-28 16:51:52**  
 > Recently revised in **2019-05-28 16:51:55**

@@ -1,5 +1,4 @@
-语句和声明 - 迭代器 - for...in 和 for...of 对比
-===
+# 语句和声明 - 迭代器 - for...in 和 for...of 对比
 
 > create by **jsLe** on **2019-10-14 15:29:27**  
 > Recently revised in **2019-10-14 15:31:01**
@@ -19,14 +18,14 @@
  * @name 区分
  * @description for...of 和 for...in 的区别
  */
-Object.prototype.objCustom = function() {};
-Array.prototype.arrCustom = function() {};
+Object.prototype.objCustom = function() {}
+Array.prototype.arrCustom = function() {}
 
-const iterable = [3, 5, 7];
-iterable.foo = 'hello';
+const iterable = [3, 5, 7]
+iterable.foo = 'hello'
 
 for (let i in iterable) {
-  console.log(i);
+  console.log(i)
 }
 // 0
 // 1
@@ -37,7 +36,7 @@ for (let i in iterable) {
 
 for (let i in iterable) {
   if (iterable.hasOwnProperty(i)) {
-    console.log(i);
+    console.log(i)
   }
 }
 // 0
@@ -46,7 +45,7 @@ for (let i in iterable) {
 // foo
 
 for (let i of iterable) {
-  console.log(i);
+  console.log(i)
 }
 // 3
 // 5
@@ -66,7 +65,7 @@ for (let i of iterable) {
 
 ```js
 for (let i in iterable) {
-  console.log(i);
+  console.log(i)
 }
 // 0
 // 1
@@ -81,7 +80,7 @@ for (let i in iterable) {
 ```js
 for (let i in iterable) {
   if (iterable.hasOwnProperty(i)) {
-    console.log(i);
+    console.log(i)
   }
 }
 // 0

@@ -1,5 +1,4 @@
-475 - 供暖器（heaters）
-===
+# 475 - 供暖器（heaters）
 
 > Create by **jsLe** on **2019-10-24 09:37:30**  
 > Recently revised in **2019-10-24 17:40:42**
@@ -8,23 +7,23 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题及测试](#chapter-three) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题及测试](#chapter-three)   |
 | <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 LeetCode Submit](#chapter-four) |
-| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 知识点](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six) |
+| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 知识点](#chapter-five)          |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six)           |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：二分查找
-* **题目地址**：https://leetcode-cn.com/problems/heaters/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：二分查找
+- **题目地址**：https://leetcode-cn.com/problems/heaters/
+- **题目内容**：
 
 ```
 冬季已经来临。 你的任务是设计一个有固定加热半径的供暖器向所有房屋供暖。
@@ -61,7 +60,7 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **LeetCode 给定函数体**：
+- **LeetCode 给定函数体**：
 
 ```js
 /**
@@ -69,9 +68,7 @@
  * @param {number[]} heaters
  * @return {number}
  */
-var findRadius = function(houses, heaters) {
-    
-};
+var findRadius = function(houses, heaters) {}
 ```
 
 根据上面的已知函数，尝试破解本题吧~
@@ -88,33 +85,33 @@ var findRadius = function(houses, heaters) {
 const findRadius = (houses, heaters) => {
   // 去除边界
   if (
-    !houses.length
-    || !heaters.length
-    || houses.length > 25000
-    || heaters.length > 25000
+    !houses.length ||
+    !heaters.length ||
+    houses.length > 25000 ||
+    heaters.length > 25000
   ) {
-    return 0;
+    return 0
   }
-  let result = Number.MIN_SAFE_INTEGER;
+  let result = Number.MIN_SAFE_INTEGER
   for (let i = 0; i < houses.length; i++) {
-    let max = Number.MAX_SAFE_INTEGER;
+    let max = Number.MAX_SAFE_INTEGER
     for (let j = 0; j < heaters.length; j++) {
-      max = Math.min(max, Math.abs(houses[i] - heaters[j]));
+      max = Math.min(max, Math.abs(houses[i] - heaters[j]))
     }
-    result = Math.max(result, max);
+    result = Math.max(result, max)
   }
-  return result;
-};
+  return result
+}
 
 // 测试组 1
-const houses = [1, 5];
-const heaters = [2];
+const houses = [1, 5]
+const heaters = [2]
 
 // 测试组 2
 // const houses = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 // const heaters = [3, 8, 12];
 
-console.log(findRadius(houses, heaters));
+console.log(findRadius(houses, heaters))
 ```
 
 `node index.js` 返回：

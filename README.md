@@ -4,7 +4,7 @@
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 
@@ -29,21 +29,19 @@ npm test
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-集腋成裘  聚沙成塔
-===
+# 集腋成裘 聚沙成塔
 
 > 不折腾的前端，和咸鱼有什么区别！
 
 ## 一 最新
 
-* 【推荐】[前端面试每日3+1](https://github.com/haizlin/fe-interview)，以面试题来驱动学习，坚持每天学习与思考，每天进步一点！
-
+- 【推荐】[前端面试每日 3+1](https://github.com/haizlin/fe-interview)，以面试题来驱动学习，坚持每天学习与思考，每天进步一点！
 
 ## 二 前言
 
-本文档库始建于 `2018-08-20`。  
+本文档库始建于 `2018-08-20`。
 
-如想知道 **jsLe** 最新学习进度，请前往 **[撰文思路](src/components/other-library/Monologue/logs/README.md)** 进行查看。  
+如想知道 **jsLe** 最新学习进度，请前往 **[撰文思路](src/components/other-library/Monologue/logs/README.md)** 进行查看。
 
 如想知道 **jsLe** 各种新奇玩意，请前往 **[网站清单](src/components/other-library/Website/README.md)** 进行查看。
 
@@ -55,19 +53,18 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 所以，集一生洪荒之力，写一个编程文档库，存放，我编程生涯的点点滴滴。
 
-**不折腾的前端，跟咸鱼有什么区别！** 
+**不折腾的前端，跟咸鱼有什么区别！**
 
 ## 三 文件目录
 
-| 文件名             | 存放内容                           |
-| ------------------ | --------------------------------  |
-| [SUMMARY](./SUMMARY.md) | 目录                         |
-| [news](./news.md) | 最新更新                         |
-| [message-board](./message-board.md) | 留言板             |
-| [friendship-links](./friendship-links.md) | 友情链接    |
-| CSS-library        | CSS 文档仓库                       |
-| HTML-library       | HTML 文档仓库                      |
-| JavaScript-library | JavaScript 文档仓库                |
-| other-library      | 其他文档仓库(整站制作/微信小程序)      |
-| public-repertory   | 文档仓库使用到的图片、CSS 文件等……     |
-
+| 文件名                                    | 存放内容                           |
+| ----------------------------------------- | ---------------------------------- |
+| [SUMMARY](./SUMMARY.md)                   | 目录                               |
+| [news](./news.md)                         | 最新更新                           |
+| [message-board](./message-board.md)       | 留言板                             |
+| [friendship-links](./friendship-links.md) | 友情链接                           |
+| CSS-library                               | CSS 文档仓库                       |
+| HTML-library                              | HTML 文档仓库                      |
+| JavaScript-library                        | JavaScript 文档仓库                |
+| other-library                             | 其他文档仓库(整站制作/微信小程序)  |
+| public-repertory                          | 文档仓库使用到的图片、CSS 文件等…… |

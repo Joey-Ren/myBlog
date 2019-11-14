@@ -1,24 +1,24 @@
-方法 - concat()
-===
+# 方法 - concat()
 
 > Create by **jsLe** on **2019-09-16 11:25:56**  
 > Recently revised in **2019-09-16 11:25:59**
 
-* **原文**：[MDN - concat()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/concat)
+- **原文**：[MDN - concat()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/concat)
 
-* **功能**：`concat()` 方法将一个或多个字符串与原字符串连接合并，形成一个新的字符串并返回。
+- **功能**：`concat()` 方法将一个或多个字符串与原字符串连接合并，形成一个新的字符串并返回。
 
-* **语法**：`str.concat(string2, string3, ..., stringN)`
-  * `string2, string3, ..., stringN`：和原字符串连接的多个字符串。
+- **语法**：`str.concat(string2, string3, ..., stringN)`
 
-* **返回值**：新的字符串
+  - `string2, string3, ..., stringN`：和原字符串连接的多个字符串。
 
-* **代码**：
+- **返回值**：新的字符串
+
+- **代码**：
 
 ```js
-let hello = 'Hello, ';
+let hello = 'Hello, '
 
-hello.concat('jsLe.'); // Hello, jsLe.
+hello.concat('jsLe.') // Hello, jsLe.
 ```
 
 ---

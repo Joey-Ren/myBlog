@@ -1,5 +1,4 @@
-485 - 最大连续1的个数（max-consecutive-ones）
-===
+# 485 - 最大连续 1 的个数（max-consecutive-ones）
 
 > Create by **jsLe** on **2019-10-27 18:51:17**  
 > Recently revised in **2019-10-27 19:18:20**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题及测试](#chapter-three) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题及测试](#chapter-three)   |
 | <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 LeetCode Submit](#chapter-four) |
-| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 解题思路](#chapter-five) |
+| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 解题思路](#chapter-five)        |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数组
-* **题目地址**：https://leetcode-cn.com/problems/max-consecutive-ones/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数组
+- **题目地址**：https://leetcode-cn.com/problems/max-consecutive-ones/
+- **题目内容**：
 
 ```
 给定一个二进制数组， 计算其中最大连续1的个数。
@@ -45,16 +44,14 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **LeetCode 给定函数体**：
+- **LeetCode 给定函数体**：
 
 ```js
 /**
  * @param {number[]} nums
  * @return {number}
  */
-var findMaxConsecutiveOnes = function(nums) {
-    
-};
+var findMaxConsecutiveOnes = function(nums) {}
 ```
 
 根据上面的已知函数，尝试破解本题吧~
@@ -69,17 +66,17 @@ var findMaxConsecutiveOnes = function(nums) {
  * @param {number[]} nums
  * @return {number}
  */
-const findMaxConsecutiveOnes = (nums) => {
-  nums = nums.join('').split('0');
-  let result = 0;
-  nums.forEach((item) => {
-    result = Math.max(item.length, result);
-  });
-  return result;
-};
+const findMaxConsecutiveOnes = nums => {
+  nums = nums.join('').split('0')
+  let result = 0
+  nums.forEach(item => {
+    result = Math.max(item.length, result)
+  })
+  return result
+}
 
-const nums = [1, 1, 0, 1, 1, 1];
-console.log(findMaxConsecutiveOnes(nums));
+const nums = [1, 1, 0, 1, 1, 1]
+console.log(findMaxConsecutiveOnes(nums))
 ```
 
 `node index.js` 返回：
@@ -111,20 +108,20 @@ Accepted
  * @param {number[]} nums
  * @return {number}
  */
-const findMaxConsecutiveOnes = (nums) => {
-  let result = 0; // 存放最大值
-  let counter = 0; // 计数器，存放当前出现的次数
+const findMaxConsecutiveOnes = nums => {
+  let result = 0 // 存放最大值
+  let counter = 0 // 计数器，存放当前出现的次数
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] === 1) {
-      counter += 1;
-      result = Math.max(counter, result);
+      counter += 1
+      result = Math.max(counter, result)
     }
     if (nums[i] === 0) {
-      counter = 0;
+      counter = 0
     }
   }
-  return result;
-};
+  return result
+}
 ```
 
 Submit 提交一看，果然通过了！
@@ -153,14 +150,14 @@ Accepted
  * @param {number[]} nums
  * @return {number}
  */
-const findMaxConsecutiveOnes = (nums) => {
-  nums = nums.join('').split('0');
-  let result = 0;
-  nums.forEach((item) => {
-    result = Math.max(item.length, result);
-  });
-  return result;
-};
+const findMaxConsecutiveOnes = nums => {
+  nums = nums.join('').split('0')
+  let result = 0
+  nums.forEach(item => {
+    result = Math.max(item.length, result)
+  })
+  return result
+}
 ```
 
 这种想法就是将数组合并成字符串，然后通过 0 去分割，从而得到 1 的分组，最后求这些分组的最长长度就行了~

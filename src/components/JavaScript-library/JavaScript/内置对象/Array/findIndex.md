@@ -1,31 +1,31 @@
-方法 - findIndex()
-===
+# 方法 - findIndex()
 
 > Create by **jsLe** on **2019-09-17 09:40:26**  
 > Recently revised in **2019-09-17 09:40:37**
 
-* **原文**：[MDN - findIndex()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)
+- **原文**：[MDN - findIndex()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)
 
-* **功能**：`findIndex()` 方法返回数组中满足提供的测试函数的第一个元素的索引。否则返回-1。
+- **功能**：`findIndex()` 方法返回数组中满足提供的测试函数的第一个元素的索引。否则返回-1。
 
-* **语法**：`arr.findIndex(callback)`
-  * `callback`：在数组每一项上执行的函数，接收 3 个参数：
-    * `element`：当前遍历到的元素。
-    * `index`：当前遍历到的索引。
-    * `array`：数组本身。
+- **语法**：`arr.findIndex(callback)`
 
-* **返回值**：返回数组中满足提供的测试函数的第一个元素的索引。否则返回-1。
+  - `callback`：在数组每一项上执行的函数，接收 3 个参数：
+    - `element`：当前遍历到的元素。
+    - `index`：当前遍历到的索引。
+    - `array`：数组本身。
 
-* **代码**：
+- **返回值**：返回数组中满足提供的测试函数的第一个元素的索引。否则返回-1。
+
+- **代码**：
 
 ```js
-var array1 = [5, 12, 8, 130, 44];
+var array1 = [5, 12, 8, 130, 44]
 
 function isLargeNumber(element) {
-  return element > 13;
+  return element > 13
 }
 
-array1.findIndex(isLargeNumber); // 3
+array1.findIndex(isLargeNumber) // 3
 ```
 
 ---

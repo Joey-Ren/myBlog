@@ -1,34 +1,34 @@
-Function
-===
+# Function
 
 > Create by **jsLe** on **2019-10-15 22:18:16**  
 > Recently revised in **2019-10-15 22:26:19**
 
-* **原文**：[MDN - Function](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function)
+- **原文**：[MDN - Function](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function)
 
-* **功能**：`Function` 构造函数创建一个新的 `Function` 对象。在 JavaScript 中，每个函数实际上都是一个 `Function` 对象。
+- **功能**：`Function` 构造函数创建一个新的 `Function` 对象。在 JavaScript 中，每个函数实际上都是一个 `Function` 对象。
 
-* **语法**：`new Function ([arg1[, arg2[, ...argN]],] functionBody)`
-  * `arg1, arg2, ...argN`：被函数使用的参数的名称必须是合法命名的。参数名称是一个有效的 JavaScript 标识符的字符串，或者一个用逗号分隔的有效字符串的列表;例如 '×'，'theValue'，或 'A, B'。
-  * `functionBody`：一个含有包括函数定义的 JavaScript 语句的字符串。
+- **语法**：`new Function ([arg1[, arg2[, ...argN]],] functionBody)`
 
-* **属性对象**：
+  - `arg1, arg2, ...argN`：被函数使用的参数的名称必须是合法命名的。参数名称是一个有效的 JavaScript 标识符的字符串，或者一个用逗号分隔的有效字符串的列表;例如 '×'，'theValue'，或 'A, B'。
+  - `functionBody`：一个含有包括函数定义的 JavaScript 语句的字符串。
+
+- **属性对象**：
 
 1. `Function.length`：获取函数的接收参数个数。
 2. `Function.prototype.constructor`：声明函数的原型构造方法。
 
-* **方法**：
+- **方法**：
 
 1. `Function.prototype.apply()`：在一个对象的上下文中应用另一个对象的方法；参数能够以数组形式传入。
 2. `Function.prototype.bind()`：`bind()` 方法会创建一个新函数，称为绑定函数。当调用这个绑定函数时，绑定函数会以创建它时传入 `bind()` 方法的第一个参数作为 `this`，传入 `bind()` 方法的第二个以及以后的参数加上绑定函数运行时本身的参数按照顺序作为原函数的参数来调用原函数。
 3. `Function.prototype.call()`：在一个对象的上下文中应用另一个对象的方法；参数能够以列表形式传入。
 4. `Function.prototype.toString()`：获取函数的实现源码的字符串。覆盖了 `Object.prototype.toString` 方法。
 
-* **代码**：
+- **代码**：
 
 ```js
-const adder = new Function('a', 'b', 'return a + b');
-console.log(adder(2, 6)); // 8
+const adder = new Function('a', 'b', 'return a + b')
+console.log(adder(2, 6)) // 8
 ```
 
 ---

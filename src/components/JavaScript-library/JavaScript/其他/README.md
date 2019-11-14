@@ -1,5 +1,4 @@
-JavaScript - 其他
-===
+# JavaScript - 其他
 
 > Create by **jsLe** on **2019-05-30 21:44:49**  
 > Recently revised in **2019-09-17 10:09:27**

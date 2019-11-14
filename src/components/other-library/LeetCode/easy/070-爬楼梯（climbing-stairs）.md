@@ -1,5 +1,4 @@
-070 - 爬楼梯（climbing-stairs）
-===
+# 070 - 爬楼梯（climbing-stairs）
 
 > Create by **jsLe** on **2019-06-11 18:37:47**  
 > Recently revised in **2019-06-11 19:36:15**
@@ -8,21 +7,21 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解题 - 动态规划](#chapter-three-one) |
+| &emsp;[3.1 解题 - 动态规划](#chapter-three-one)                                          |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：动态规划
-* **题目地址**：https://leetcode-cn.com/problems/climbing-stairs/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：动态规划
+- **题目地址**：https://leetcode-cn.com/problems/climbing-stairs/
+- **题目内容**：
 
 ```
 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
@@ -57,23 +56,23 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var climbStairs = function(n) {
   if (n === 1 || n === 2 || n === 3) {
-    return n;
+    return n
   }
 
-  let memory = [0, 1, 2, 3];
+  let memory = [0, 1, 2, 3]
   for (let i = 4; i <= n; i++) {
-    memory[i] = memory[i - 1] + memory[i - 2];
+    memory[i] = memory[i - 1] + memory[i - 2]
   }
-  return memory[n];
-};
+  return memory[n]
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `n`：`5`
 2. `return`：
@@ -82,7 +81,7 @@ var climbStairs = function(n) {
 8
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -91,7 +90,7 @@ var climbStairs = function(n) {
   ✔ Your memory usage beats 99.53 % of javascript submissions (33.2 MB)
 ```
 
-* **解题思路**：
+- **解题思路**：
 
 **首先**，一开始看到这道题其实我是拒绝的，因为动态规划没好事！题不好做啊！(⊙﹏⊙)b
 
@@ -109,11 +108,11 @@ var climbStairs = function(n) {
 ```js
 var climbStairs = function(n) {
   if (n === 1 || n === 2 || n === 3) {
-    return n;
+    return n
   }
-  let sum = climbStairs(n - 1) + climbStairs(n - 2);
-  return sum;
-};
+  let sum = climbStairs(n - 1) + climbStairs(n - 2)
+  return sum
+}
 ```
 
 然而，这是不可行的，LeetCode 会告诉你超时了：
@@ -122,8 +121,8 @@ var climbStairs = function(n) {
 ✘ Time Limit Exceeded
   ✘ 31/45 cases passed (N/A)
   ✘ testcase: '45'
-  ✘ answer: 
-  ✘ expected_answer: 
+  ✘ answer:
+  ✘ expected_answer:
   ✘ stdout:
 ```
 
@@ -133,29 +132,29 @@ var climbStairs = function(n) {
 var climbStairs = function(n) {
   switch (n) {
     case 1:
-      return 1;
+      return 1
     case 2:
-      return 2;
+      return 2
     case 3:
-      return 3;
+      return 3
     case 4:
-      return 5;
+      return 5
     case 5:
-      return 8;
+      return 8
     case 6:
-      return 13;
+      return 13
     case 7:
-      return 21;
+      return 21
     case 8:
-      return 34;
+      return 34
     case 9:
-      return 55;
+      return 55
     case 10:
-      return 89;
+      return 89
   }
-  let sum = climbStairs(n - 1) + climbStairs(n - 2);
-  return sum;
-};
+  let sum = climbStairs(n - 1) + climbStairs(n - 2)
+  return sum
+}
 ```
 
 提交试试：
@@ -174,15 +173,15 @@ var climbStairs = function(n) {
 ```js
 var climbStairs = function(n) {
   if (n === 1 || n === 2 || n === 3) {
-    return n;
+    return n
   }
 
-  let memory = [0, 1, 2, 3];
+  let memory = [0, 1, 2, 3]
   for (let i = 4; i <= n; i++) {
-    memory[i] = memory[i - 1] + memory[i - 2];
+    memory[i] = memory[i - 1] + memory[i - 2]
   }
-  return memory[n];
-};
+  return memory[n]
+}
 ```
 
 ```js
@@ -200,7 +199,7 @@ var climbStairs = function(n) {
 
 > 不知道少年知不知道另外一种骚操作，就是将测试的 45 种情况添加过去，会得到神奇的答案喔~
 
-> 就是把第二种解法的 `switch...case` 写 45 次…… ^_^
+> 就是把第二种解法的 `switch...case` 写 45 次…… ^\_^
 
 ---
 

@@ -1,19 +1,18 @@
-RegExp
-===
+# RegExp
 
 > Create by **jsLe** on **2019-09-16 15:40:10**  
 > Recently revised in **2019-09-18 08:51:33**
 
-* **原文**：[MDN - String](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype)
+- **原文**：[MDN - String](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype)
 
-* **功能**：通过正则表达式，进行一些便捷操作。
+- **功能**：通过正则表达式，进行一些便捷操作。
 
-* **推荐**：小伙伴可以查看 **jsLe** 写的文章：[正则表达式学习](https://github.com/LiangJunrong/document-library/blob/master/other-library/regular-expression/regular-expression-study.md) 来快速入门正则表达式。
+- **推荐**：小伙伴可以查看 **jsLe** 写的文章：[正则表达式学习](https://github.com/LiangJunrong/document-library/blob/master/other-library/regular-expression/regular-expression-study.md) 来快速入门正则表达式。
 
-* **代码**：
+- **代码**：
 
 ```js
-'@flow@flight'.match(new RegExp(`${'@fl'}`,"g")); // ['@fl', '@fl']
+'@flow@flight'.match(new RegExp(`${'@fl'}`, 'g')) // ['@fl', '@fl']
 ```
 
 ---

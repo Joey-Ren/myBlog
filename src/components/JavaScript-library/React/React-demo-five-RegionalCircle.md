@@ -1,20 +1,19 @@
-React Demo Five - 区域圈
-===
+# React Demo Five - 区域圈
 
 > Create by **jsLe** on **2019-5-16 22:09:22**  
 > Recently revised in **2019-05-31 15:39:56**
 
 **Hello 小伙伴们，如果觉得本文还不错，记得给个 **star** ， 小伙伴们的 **star** 是我持续更新的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
 
-* [React 系列文章代码地址](https://github.com/LiangJunrong/React)
+- [React 系列文章代码地址](https://github.com/LiangJunrong/React)
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
+| 目录                                                                               |
+| ---------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                            |
 | <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
@@ -27,8 +26,8 @@ React Demo Five - 区域圈
 
 所以，兴致而来，开发一个多端登录的 App，记录附近的点点滴滴。
 
-* [React 系列文章地址](https://github.com/LiangJunrong/document-library/tree/master/JavaScript-library/React)
-* [Node 系列文章地址](https://github.com/LiangJunrong/document-library/tree/master/other-library/Node)
+- [React 系列文章地址](https://github.com/LiangJunrong/document-library/tree/master/JavaScript-library/React)
+- [Node 系列文章地址](https://github.com/LiangJunrong/document-library/tree/master/other-library/Node)
 
 由于文章有这两个前置，如果不熟悉 React 或者 Node 开发的一套，请先去学习对应的前置。
 
@@ -36,11 +35,11 @@ React Demo Five - 区域圈
 
 > [返回目录](#chapter-one)
 
-* - [ ] 功能结构划分
-* - [ ] 衣
-* - [ ] 食
-* - [ ] 住
-* - [ ] 行
+- - [ ] 功能结构划分
+- - [ ] 衣
+- - [ ] 食
+- - [ ] 住
+- - [ ] 行
 
 ### 3.2 食
 

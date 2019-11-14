@@ -1,5 +1,4 @@
-509 - 斐波那契数列（fibonacci-number）
-===
+# 509 - 斐波那契数列（fibonacci-number）
 
 > Create by **jsLe** on **2019-11-04 09:12:19**  
 > Recently revised in **2019-11-04 09:36:09**
@@ -8,23 +7,23 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题及测试](#chapter-three) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题及测试](#chapter-three)   |
 | <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 LeetCode Submit](#chapter-four) |
-| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 解题思路](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 进一步思考](#chapter-six) |
+| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 解题思路](#chapter-five)        |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 进一步思考](#chapter-six)         |
 
 ## <a name="chapter-two" id="chapter-two"></a>二 前言
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数组
-* **题目地址**：https://leetcode-cn.com/problems/fibonacci-number/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数组
+- **题目地址**：https://leetcode-cn.com/problems/fibonacci-number/
+- **题目内容**：
 
 ```
 斐波那契数，通常用 F(n) 表示，形成的序列称为斐波那契数列。该数列由 0 和 1 开始，后面的每一项数字都是前面两项数字的和。也就是：
@@ -59,16 +58,14 @@ F(N) = F(N - 1) + F(N - 2), 其中 N > 1.
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **LeetCode 给定函数体**：
+- **LeetCode 给定函数体**：
 
 ```js
 /**
  * @param {number} N
  * @return {number}
  */
-var fib = function(N) {
-    
-};
+var fib = function(N) {}
 ```
 
 根据上面的已知函数，尝试破解本题吧~
@@ -83,13 +80,13 @@ var fib = function(N) {
  * @param {number} N
  * @return {number}
  */
-const fib = (N) => {
-  const list = [0, 1];
+const fib = N => {
+  const list = [0, 1]
   for (let i = 2; i <= N; i++) {
-    list[i] = list[i - 1] + list[i - 2];
+    list[i] = list[i - 1] + list[i - 2]
   }
-  return list[N];
-};
+  return list[N]
+}
 ```
 
 `node index.js` 返回：
@@ -124,16 +121,16 @@ Accepted
 > 暴力破解
 
 ```js
-const fib = (N) => {
-  const list = [0, 1];
+const fib = N => {
+  const list = [0, 1]
   for (let i = 2; i <= N; i++) {
-    list[i] = list[i - 1] + list[i - 2];
+    list[i] = list[i - 1] + list[i - 2]
   }
-  return list[N];
-};
+  return list[N]
+}
 
-const N = 5;
-console.log(fib(N));
+const N = 5
+console.log(fib(N))
 ```
 
 Submit 提交结果：
@@ -148,8 +145,9 @@ Accepted
 > 超暴力输出
 
 ```js
-const fib = (N) => {
-  const list = [ 0,
+const fib = N => {
+  const list = [
+    0,
     1,
     1,
     2,
@@ -179,9 +177,10 @@ const fib = (N) => {
     196418,
     317811,
     514229,
-    832040 ];
-  return list[N];
-};
+    832040
+  ]
+  return list[N]
+}
 ```
 
 Submit 提交结果：
@@ -196,15 +195,15 @@ Accepted
 > 递归
 
 ```js
-const fib = (N) => {
+const fib = N => {
   if (N === 0) {
-    return 0;
+    return 0
   }
   if (N === 1) {
-    return 1;
+    return 1
   }
-  return fib(N - 1) + fib(N - 2);
-};
+  return fib(N - 1) + fib(N - 2)
+}
 ```
 
 Submit 提交结果：

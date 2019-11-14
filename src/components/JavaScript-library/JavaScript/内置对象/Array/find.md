@@ -1,22 +1,22 @@
-方法 - find()
-===
+# 方法 - find()
 
 > Create by **jsLe** on **2019-09-17 09:40:00**  
 > Recently revised in **2019-09-17 09:40:08**
 
-* **原文**：[MDN - find()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
+- **原文**：[MDN - find()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
 
-* **功能**：`find()` 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined。
+- **功能**：`find()` 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined。
 
-* **语法**：`arr.find(callback)`
-  * `callback`：在数组每一项上执行的函数，接收 3 个参数：
-    * `element`：当前遍历到的元素。
-    * `index`：当前遍历到的索引。
-    * `array`：数组本身。
+- **语法**：`arr.find(callback)`
 
-* **返回值**：数组中第一个满足所提供测试函数的元素的值，否则返回 undefined。
+  - `callback`：在数组每一项上执行的函数，接收 3 个参数：
+    - `element`：当前遍历到的元素。
+    - `index`：当前遍历到的索引。
+    - `array`：数组本身。
 
-* **代码**：
+- **返回值**：数组中第一个满足所提供测试函数的元素的值，否则返回 undefined。
+
+- **代码**：
 
 ```js
 var inventory = [
@@ -25,7 +25,7 @@ var inventory = [
   {name: 'cherries', quantity: 5}
 ];
 
-function findCherries(fruit) { 
+function findCherries(fruit) {
   return fruit.name === 'cherries';
 }
 

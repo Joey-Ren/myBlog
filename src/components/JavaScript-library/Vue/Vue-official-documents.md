@@ -1,5 +1,4 @@
-Vue 官方文档二三事
-===
+# Vue 官方文档二三事
 
 > Create by **jsLe** on **2019-1-14 10:40:32**  
 > Recently revised in **2019-05-31 13:43:25**
@@ -8,32 +7,32 @@ Vue 官方文档二三事
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
 
-| 目录 |
-| --- |
-| <a name="catalog-chapter-one" id="catalog-chapter-one"></a>[一 目录](#chapter-one) |
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 Vue](#chapter-two) |
-| &emsp;[2.1 安装](#chapter-two-one) |
-| &emsp;[2.2 指令](#chapter-two-two) |
-| &emsp;[2.3 生命周期钩子](#chapter-two-three) |
-| &emsp;[2.4 数据监听](#chapter-two-four) |
-| &emsp;[2.5 样式](#chapter-two-five) |
-| &emsp;[2.6 数组操作](#chapter-two-six) |
-| &emsp;[2.7 事件修饰符](#chapter-two-seven) |
-| &emsp;[2.8 按键修饰符](#chapter-two-eight) |
-| &emsp;[2.9 父子组件及其通讯](#chapter-two-night) |
-| &emsp;[2.10 过渡动画](#chapter-two-ten) |
-| &emsp;[2.11 混入](#chapter-two-eleven) |
-| &emsp;[2.12 自定义指令](#chapter-two-twelve) |
-| &emsp;[2.13 过滤器](#chapter-two-thirteen) |
+| 目录                                                                                           |
+| ---------------------------------------------------------------------------------------------- |
+| <a name="catalog-chapter-one" id="catalog-chapter-one"></a>[一 目录](#chapter-one)             |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 Vue](#chapter-two)              |
+| &emsp;[2.1 安装](#chapter-two-one)                                                             |
+| &emsp;[2.2 指令](#chapter-two-two)                                                             |
+| &emsp;[2.3 生命周期钩子](#chapter-two-three)                                                   |
+| &emsp;[2.4 数据监听](#chapter-two-four)                                                        |
+| &emsp;[2.5 样式](#chapter-two-five)                                                            |
+| &emsp;[2.6 数组操作](#chapter-two-six)                                                         |
+| &emsp;[2.7 事件修饰符](#chapter-two-seven)                                                     |
+| &emsp;[2.8 按键修饰符](#chapter-two-eight)                                                     |
+| &emsp;[2.9 父子组件及其通讯](#chapter-two-night)                                               |
+| &emsp;[2.10 过渡动画](#chapter-two-ten)                                                        |
+| &emsp;[2.11 混入](#chapter-two-eleven)                                                         |
+| &emsp;[2.12 自定义指令](#chapter-two-twelve)                                                   |
+| &emsp;[2.13 过滤器](#chapter-two-thirteen)                                                     |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 Vue Router](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 Vue Cli](#chapter-four) |
-| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 Vuex](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 风格规范](#chapter-six) |
-| &emsp;[6.1 命名规范](#chapter-six-one) |
-| &emsp;[6.2 全局规范](#chapter-six-two) |
-| &emsp;[6.3 HTMl 规范](#chapter-six-three) |
-| &emsp;[6.4 JS 规范](#chapter-six-four) |
-| &emsp;[6.5 CSS 规范](#chapter-six-five) |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 Vue Cli](#chapter-four)       |
+| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 Vuex](#chapter-five)          |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 风格规范](#chapter-six)         |
+| &emsp;[6.1 命名规范](#chapter-six-one)                                                         |
+| &emsp;[6.2 全局规范](#chapter-six-two)                                                         |
+| &emsp;[6.3 HTMl 规范](#chapter-six-three)                                                      |
+| &emsp;[6.4 JS 规范](#chapter-six-four)                                                         |
+| &emsp;[6.5 CSS 规范](#chapter-six-five)                                                        |
 
 ## <a name="chapter-two" id="chapter-two">二 Vue</a>
 
@@ -41,20 +40,20 @@ Vue 官方文档二三事
 
 本章节内容参考自：
 
-* [Vue 教程](https://cn.vuejs.org/v2/guide/)
-* [Vue API](https://cn.vuejs.org/v2/api/)
+- [Vue 教程](https://cn.vuejs.org/v2/guide/)
+- [Vue API](https://cn.vuejs.org/v2/api/)
 
 ### <a name="chapter-two-one" id="chapter-two-one">2.1 安装</a>
 
 > [返回目录](#catalog-chapter-two)
 
-* 如果是 0 基础，推荐通过 CDN 引用 Vue：[BootCDN](https://www.bootcdn.cn/vue/)。
+- 如果是 0 基础，推荐通过 CDN 引用 Vue：[BootCDN](https://www.bootcdn.cn/vue/)。
 
 ```html
 <script src="https://cdn.bootcss.com/vue/2.5.21/vue.js"></script>
 ```
 
-* 如果有 Node + Webpack 基础，推荐使用命令行工具：[Vue Cli](https://cli.vuejs.org/zh/guide/)
+- 如果有 Node + Webpack 基础，推荐使用命令行工具：[Vue Cli](https://cli.vuejs.org/zh/guide/)
 
 ```
 npm i @vue/cli -g
@@ -64,15 +63,15 @@ npm i @vue/cli -g
 
 > [返回目录](#catalog-chapter-two)
 
-* **v-text** —— 将数据解析为纯文本。另外还可以使用 \{\{ \}\}，它也会将数据解析为纯文本，与 `v-text` 的区别就是花括号在网络加载慢的时候会显示 \{\{ *** \}\}。
-* **v-html** —— 输出真正的 HTML，在 `v-html` 中可以使用 HTML 标签，但是请注意防范 XSS 攻击。
-* **v-if** —— 通过值 `true` 或者 `false` 来 **添加/删除标签**，一般会结合三元表达式使用。与 `v-show` 的区别是，`v-if` 的标签，如果为 `false` 是直接删掉该节点，而 `v-show` 是通过 `display:none` 来控制标签。同时，`v-if` 与 `v-else-if`、`v-else` 可以配套使用。
-* **v-show** —— 通过值 `true` 或者 `false` 来切换 `display` **显示/隐藏标签**，一般会结合三元表达式。
-* **v-for** —— 常见形式：`v-for="(item, index) in items`。`item` 是单个元素，`index` 是数组下标。其他形式：`v-for="item of items`。
-* **v-bind** —— 可以通过 `v-bind` 或者其简写 `:bind` 绑定到 HTML 的属性字段上，例如 `<a>` 标签动态绑定 `url` 的时候 `:url` 或者自定义属性 `:disabled` 或者动态绑定 `class`、`style` 中使用 `:class`、`style` 等…… 
-* **v-on** —— 可以通过 `v-on` 或者其简写 `@` 来绑定到 HTML 事件上，例如点击事件 `@click` 或者鼠标回车事件 `v-on:keyup.enter`。`v-on` 与 `methods` 是一对搭档。
-* **v-model** —— 双向数据绑定。通常与 `<input>`、`<textarea>` 及 `<select>` 进行绑定。
-* **v-once** —— 只渲染元素和组件一次。之后重新渲染，该元素及其子元素会被视为静态内容忽略。
+- **v-text** —— 将数据解析为纯文本。另外还可以使用 \{\{ \}\}，它也会将数据解析为纯文本，与 `v-text` 的区别就是花括号在网络加载慢的时候会显示 \{\{ \*\*\* \}\}。
+- **v-html** —— 输出真正的 HTML，在 `v-html` 中可以使用 HTML 标签，但是请注意防范 XSS 攻击。
+- **v-if** —— 通过值 `true` 或者 `false` 来 **添加/删除标签**，一般会结合三元表达式使用。与 `v-show` 的区别是，`v-if` 的标签，如果为 `false` 是直接删掉该节点，而 `v-show` 是通过 `display:none` 来控制标签。同时，`v-if` 与 `v-else-if`、`v-else` 可以配套使用。
+- **v-show** —— 通过值 `true` 或者 `false` 来切换 `display` **显示/隐藏标签**，一般会结合三元表达式。
+- **v-for** —— 常见形式：`v-for="(item, index) in items`。`item` 是单个元素，`index` 是数组下标。其他形式：`v-for="item of items`。
+- **v-bind** —— 可以通过 `v-bind` 或者其简写 `:bind` 绑定到 HTML 的属性字段上，例如 `<a>` 标签动态绑定 `url` 的时候 `:url` 或者自定义属性 `:disabled` 或者动态绑定 `class`、`style` 中使用 `:class`、`style` 等……
+- **v-on** —— 可以通过 `v-on` 或者其简写 `@` 来绑定到 HTML 事件上，例如点击事件 `@click` 或者鼠标回车事件 `v-on:keyup.enter`。`v-on` 与 `methods` 是一对搭档。
+- **v-model** —— 双向数据绑定。通常与 `<input>`、`<textarea>` 及 `<select>` 进行绑定。
+- **v-once** —— 只渲染元素和组件一次。之后重新渲染，该元素及其子元素会被视为静态内容忽略。
 
 > 详细介绍：[API - Vue.js](https://cn.vuejs.org/v2/api/#%E6%8C%87%E4%BB%A4)
 
@@ -98,26 +97,26 @@ npm i @vue/cli -g
 
 **对比一**：
 
-* `computed` 强调计算。例如 `c = a + b`，因为你只要显示 `c`，所以不需要理会 `a` 与 `b` 的值是否动态传入，只需要使用 `computed` 监察 `c` 即可。
-* `watch` 属性强调自身值的变化前后的动作。如果需要完成 `c = a + b`，那么你需要 `watch` 数据 `a` 与 `b` 的变化，在这两者变化的时候，在方法中执行 `c = a + b`。
+- `computed` 强调计算。例如 `c = a + b`，因为你只要显示 `c`，所以不需要理会 `a` 与 `b` 的值是否动态传入，只需要使用 `computed` 监察 `c` 即可。
+- `watch` 属性强调自身值的变化前后的动作。如果需要完成 `c = a + b`，那么你需要 `watch` 数据 `a` 与 `b` 的变化，在这两者变化的时候，在方法中执行 `c = a + b`。
 
 **对比二**：
 
-* `watch` 在处理异步操作或者开销较大的操作上有优势。执行异步操作不能串行返回结果、执行开销较大的操作避免堵塞主线程的时候，使用 `watch`。
-* 简单且串行返回的，使用 `computed`。
+- `watch` 在处理异步操作或者开销较大的操作上有优势。执行异步操作不能串行返回结果、执行开销较大的操作避免堵塞主线程的时候，使用 `watch`。
+- 简单且串行返回的，使用 `computed`。
 
 **对比三**：
 
-* `computed` 对绑定的值有依赖，如果每次操作的值不变化，则不进行计算，具有缓存特性。
-* `watch` 会侦听前后变化的状态，无论操作的值是否变化，都会执行定义的函数体，所以会有 `data(newVal, oldVal)`。
+- `computed` 对绑定的值有依赖，如果每次操作的值不变化，则不进行计算，具有缓存特性。
+- `watch` 会侦听前后变化的状态，无论操作的值是否变化，都会执行定义的函数体，所以会有 `data(newVal, oldVal)`。
 
 ### <a name="chapter-two-five" id="chapter-two-five">2.5 样式</a>
 
 > [返回目录](#catalog-chapter-two)
 
-| 类型 | 说明 |
-| --- | --- |
-| `:class` | 动态绑定 Class，可以通过多分类：`:class="{ a: true, 'b', c: false }`，或者结合计算属性 `:class="computedClass"`，或者通过三元表达式：`:class="{ a ? a == 1 : a == 2 }"` |
+| 类型     | 说明                                                                                                                                                                              |
+| -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `:class` | 动态绑定 Class，可以通过多分类：`:class="{ a: true, 'b', c: false }`，或者结合计算属性 `:class="computedClass"`，或者通过三元表达式：`:class="{ a ? a == 1 : a == 2 }"`           |
 | `:style` | 动态绑定行内样式，如果是 `font-size` 之类的，最好通过驼峰式 `fontSize` 来编写。如果采用 `:style="{styleOne, styleTwo}"` 的形式，当遇到 `transform` 时，Vue 会自动添加相应的前缀。 |
 
 ### <a name="chapter-two-six" id="chapter-two-six">2.6 数组操作</a>
@@ -126,19 +125,19 @@ npm i @vue/cli -g
 
 **改变原数组的方法**：
 
-* `push()` - 向数组尾部添加元素
-* `pop()` - 删除并导出数组最后一个元素
-* `shift()` - 删除并导出数组第一个元素
-* `unshift()` - 向数组开头添加元素
-* `splice()` - 向数组中添加/删除元素并返回新的数组
-* `sort()` - 排序
-* `reverse()` - 反转数组
+- `push()` - 向数组尾部添加元素
+- `pop()` - 删除并导出数组最后一个元素
+- `shift()` - 删除并导出数组第一个元素
+- `unshift()` - 向数组开头添加元素
+- `splice()` - 向数组中添加/删除元素并返回新的数组
+- `sort()` - 排序
+- `reverse()` - 反转数组
 
 **不改变原数组的方法**：
 
-* `filter()` - 过滤数组
-* `concat()` - 拼接两至多个数组
-* `slice()` - 获取数组指定位置数据
+- `filter()` - 过滤数组
+- `concat()` - 拼接两至多个数组
+- `slice()` - 获取数组指定位置数据
 
 > 不改变原数组的方法比改变原数组的方法高效，至于怎么姿势才爽，那就看个人感受了。
 
@@ -146,12 +145,12 @@ npm i @vue/cli -g
 
 > [返回目录](#catalog-chapter-two)
 
-* `.stop` - 阻止事件冒泡。例如：`@click.stop="say"` 阻止 `say` 方法传递到上一级 DOM。
-* `.prevent` - 阻止默认事件。例如：`@click.prevent="say"`，阻止点击事件，然后执行 `say`。
-* `.capture` - 给元素添加监听器，在一个 HTML 模块中，如果有 4 层嵌套，前 2 层使用了 `.capture` 修饰符，第 3/4 层未使用，点击第 4 层触发点击事件，则顺序为：1 -> 2 -> 4 -> 3，因为 `.capture` 会先触发。
-* `.self` - 只触发该 DOM 本身的事件。相比于 `.stop` 阻止事件冒泡，`.self` 忽略事件冒泡和捕获的影响。
-* `.once` - 事件将只会触发一次。例如：`@click.once='doOnce'`，`doOnce` 只会执行一次。
-* `.passive` - 不要阻止事件的默认行为。例如：`v-on:scroll.passive="onScroll"`，在进行滚动的时候同时执行 `onScroll`，而不是等 `onScroll` 执行完再滚动。
+- `.stop` - 阻止事件冒泡。例如：`@click.stop="say"` 阻止 `say` 方法传递到上一级 DOM。
+- `.prevent` - 阻止默认事件。例如：`@click.prevent="say"`，阻止点击事件，然后执行 `say`。
+- `.capture` - 给元素添加监听器，在一个 HTML 模块中，如果有 4 层嵌套，前 2 层使用了 `.capture` 修饰符，第 3/4 层未使用，点击第 4 层触发点击事件，则顺序为：1 -> 2 -> 4 -> 3，因为 `.capture` 会先触发。
+- `.self` - 只触发该 DOM 本身的事件。相比于 `.stop` 阻止事件冒泡，`.self` 忽略事件冒泡和捕获的影响。
+- `.once` - 事件将只会触发一次。例如：`@click.once='doOnce'`，`doOnce` 只会执行一次。
+- `.passive` - 不要阻止事件的默认行为。例如：`v-on:scroll.passive="onScroll"`，在进行滚动的时候同时执行 `onScroll`，而不是等 `onScroll` 执行完再滚动。
 
 ### <a name="chapter-two-eight" id="chapter-two-eight">2.8 按键修饰符</a>
 
@@ -159,31 +158,31 @@ npm i @vue/cli -g
 
 > `v-on:keyup.13` = `@click.enter`
 
-* `.enter` - 回车
-* `.tab` - Tab 键
-* `.delete` - Back Space 或者 Delete
-* `.esc` - Esc 键
-* `.space` - 空格键
-* `.up` - 上箭头
-* `.down` - 下箭头
-* `.left` - 左箭头
-* `.right` - 右箭头
-* `.ctrl` - Ctrl 键
-* `.alt` - Alt 键
-* `.shift` - Shift 键
+- `.enter` - 回车
+- `.tab` - Tab 键
+- `.delete` - Back Space 或者 Delete
+- `.esc` - Esc 键
+- `.space` - 空格键
+- `.up` - 上箭头
+- `.down` - 下箭头
+- `.left` - 左箭头
+- `.right` - 右箭头
+- `.ctrl` - Ctrl 键
+- `.alt` - Alt 键
+- `.shift` - Shift 键
 
 ### <a name="chapter-two-night" id="chapter-two-night">2.9 父子组件及其通讯</a>
 
 > [返回目录](#catalog-chapter-two)
 
-* 基础组件的写法
-* 全局组件与局部组件
-* 父组件传递数据给子组件
-* 子组件传递数据给父组件
-* 父子组件的 `v-model` 实现
-* `<slot>` - 默认插槽与其具名插槽
-* `:is` 的灵活应用
-* `<keep-alive>` 缓存状态，避免重新渲染
+- 基础组件的写法
+- 全局组件与局部组件
+- 父组件传递数据给子组件
+- 子组件传递数据给父组件
+- 父子组件的 `v-model` 实现
+- `<slot>` - 默认插槽与其具名插槽
+- `:is` 的灵活应用
+- `<keep-alive>` 缓存状态，避免重新渲染
 
 > 静态赋值 `props`：`title="My name is jsLe"`；动态赋值 `props`：`:title="article.title + ' by ' + article.name`；`props` 可以传入 `String`、`Number`、`Boolean`、`Array`、`Object`、`Date`、`Function`、`Symbol` 并且对其进行以上类型验证。
 
@@ -191,15 +190,15 @@ npm i @vue/cli -g
 
 > [返回目录](#catalog-chapter-two)
 
-* 单组件过渡 `<transition>`
-* 过渡 6 状态：`v-enter`、`v-enter-active`、`v-enter-to`、`v-leave`、`v-leave-active`、`v-leave-to`
-* 过渡系统 + 第三方 CSS 动画库（[Animate.css](https://daneden.github.io/animate.css/)）
-* 过渡时间：`:duration`
-* 过渡钩子：`@:before-enter`、`@:enter`、`@:after-enter`、`@:enter-cancelled`、`@:before-leave`、`@:leave`、`@:after-leave`、`@:leave-cancelled`
-* `key` 在 `<transition>` 的作用
-* 过渡模式：`in-out` 与 `out-in`
-* 数字过渡
-* 颜色过渡
+- 单组件过渡 `<transition>`
+- 过渡 6 状态：`v-enter`、`v-enter-active`、`v-enter-to`、`v-leave`、`v-leave-active`、`v-leave-to`
+- 过渡系统 + 第三方 CSS 动画库（[Animate.css](https://daneden.github.io/animate.css/)）
+- 过渡时间：`:duration`
+- 过渡钩子：`@:before-enter`、`@:enter`、`@:after-enter`、`@:enter-cancelled`、`@:before-leave`、`@:leave`、`@:after-leave`、`@:leave-cancelled`
+- `key` 在 `<transition>` 的作用
+- 过渡模式：`in-out` 与 `out-in`
+- 数字过渡
+- 颜色过渡
 
 ### <a name="chapter-two-eleven" id="chapter-two-eleven">2.11 混入</a>
 
@@ -247,21 +246,21 @@ import mymixin from '../src/mixins/mixins'
 
 new Vue({
   mixins: mymixin,
-  data: function () {
+  data: function() {
     return {
       message: 'goodbye',
       bar: 'def'
     }
   },
-  created: function () {
+  created: function() {
     console.log(this.$data)
     // => { message: "goodbye", foo: "abc", bar: "def" }
   }
 })
 ```
 
-* 选项混入
-* 全局混入
+- 选项混入
+- 全局混入
 
 > 1. extends 类似于 mixins
 > 2. extends 支持单个对象，mixins 支持数组
@@ -272,62 +271,59 @@ new Vue({
 ```html
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
-  <title>Vue 学习</title>
+    <title>Vue 学习</title>
+  </head>
 
-</head>
+  <body>
+    <div id="app"></div>
 
-<body>
+    <!-- Vue CDN - 提供 Vue 服务 -->
+    <script src="https://cdn.bootcss.com/vue/2.5.21/vue.js"></script>
 
-  <div id="app"></div>
-
-  <!-- Vue CDN - 提供 Vue 服务 -->
-  <script src="https://cdn.bootcss.com/vue/2.5.21/vue.js"></script>
-  
-  <script>
-
-    var extend = {
-      data() {
-        return {
-          number: 1
+    <script>
+      var extend = {
+        data() {
+          return {
+            number: 1
+          }
         }
       }
-    }
 
-    var mixin = {
-      data() {
-        return {
-          number: 2
+      var mixin = {
+        data() {
+          return {
+            number: 2
+          }
         }
       }
-    }
 
-    new Vue({
-      el: '#app',
-      data() {
-        return {
-          number: 3
+      new Vue({
+        el: '#app',
+        data() {
+          return {
+            number: 3
+          }
+        },
+        extends: extend,
+        mixins: [mixin],
+        created() {
+          // 在这里不推荐同时使用 extends 与 mixins，因为会混淆
+          // 如果代码是这样子的，则这里输出的是 3
+          // 如果 new Vue 中没定义 number，则输出的是 2（mixins 中的值）
+          // 如果 mixins 中没定义 number，则输出的是 1（extend 中的值）
+          console.log(this.number) // Console：3
         }
-      },
-      extends: extend,
-      mixins: [mixin],
-      created() {
-        // 在这里不推荐同时使用 extends 与 mixins，因为会混淆
-        // 如果代码是这样子的，则这里输出的是 3
-        // 如果 new Vue 中没定义 number，则输出的是 2（mixins 中的值）
-        // 如果 mixins 中没定义 number，则输出的是 1（extend 中的值）
-        console.log(this.number); // Console：3
-      }
-    })
-
-  </script>
-</body>
-
+      })
+    </script>
+  </body>
 </html>
 ```
 
@@ -335,13 +331,13 @@ new Vue({
 
 > [返回目录](#catalog-chapter-two)
 
-* 局部指令：`directives`
-* 全局指令：`Vue.directive`
-* 自定义指令钩子函数：`bind`、`inserted`、`update`、`componentUpdated`、`unbind`
+- 局部指令：`directives`
+- 全局指令：`Vue.directive`
+- 自定义指令钩子函数：`bind`、`inserted`、`update`、`componentUpdated`、`unbind`
 
 **作用**：
 
-* `focus` 自动聚焦
+- `focus` 自动聚焦
 
 ### <a name="chapter-two-thirteen" id="chapter-two-thirteen">2.13 过滤器</a>
 
@@ -349,28 +345,28 @@ new Vue({
 
 使用方法：`{{ message | messageFilter }}`，然后定义 `filters: { messageFilter(value) { // ...代码 } }`
 
-* 局部过滤器
-* 全局过滤器
-* 串联过滤器
+- 局部过滤器
+- 全局过滤器
+- 串联过滤器
 
 ## <a name="chapter-three" id="chapter-three">三 Vue Router</a>
 
 > [返回目录](#catalog-chapter-three)
 
-* Vue Router 的基础使用。
-* 动态路由匹配，动态设置匹配路径，动态匹配任意路径。
-* 路由可以嵌套匹配，每个页面都可以有自己的 `<router-view></router-view>`。
-* 编程式导航：不仅可以通过 `<router-link :to="..."></router-link>` 来定义导航链接，也可以通过 `router.push("...")` 的形式来实现。同时，我们还可以采用 `router.replace("...")` 来实现路由替换，通过 `router.go(n)` 来实现前进或者后退多少步路由。
-* 命名路由的两种形式：在 `<router-link>` 中通过 `:to="{name, params}"` 或者在 `router.push()` 中通过 `{name, params}` 来定义。
-* 一个页面可以同时存在多个 `<router-view>`，只需要通过给它们命名 `name` 就可以实现。
-* 路由可以通过 `redirect` 进行重定向，或者通过 `alias` 取别名，从而自由地将 UI 结构映射到任意的 URL。
-* 路由还可以进行传参，通过取代与 `$route` 的耦合或者通过 `props` 解耦。其中有三种模式：布尔模式、对象模式以及函数模式。
-* Vue Router 的默认模式是 hash 模式，我们可以通过 `mode`，将其设置为 history 模式。
-* 通过 `router.beforeEach((to, from, next) => { ... })` 来注册全局路由守卫，它会在访问某个路由前进行拦截。其中 `to` 为即将进入的目标，`from` 为当前路由即将离开的位置，`next` 类似于 Promise 的 `resolve`。在 2.5+ 版本添加了 `router.beforeResolve`，作用类似于 `router.beforeEach`
-* 路由全局后置钩子：`router.afterEach((to, from) => {})`。
-* 可以针对某个路由进行守卫，即在 `new VueRouter({})` 中通过 `beforeEnter: (to, from, next) => {}` 进行守卫。
-* 可以直接在路由组件中定义：`beforeRouteEnter`、`beforeRouteUpdate` 以及 `beforeRouteLeave`。
-* 完整的导航解析流程：
+- Vue Router 的基础使用。
+- 动态路由匹配，动态设置匹配路径，动态匹配任意路径。
+- 路由可以嵌套匹配，每个页面都可以有自己的 `<router-view></router-view>`。
+- 编程式导航：不仅可以通过 `<router-link :to="..."></router-link>` 来定义导航链接，也可以通过 `router.push("...")` 的形式来实现。同时，我们还可以采用 `router.replace("...")` 来实现路由替换，通过 `router.go(n)` 来实现前进或者后退多少步路由。
+- 命名路由的两种形式：在 `<router-link>` 中通过 `:to="{name, params}"` 或者在 `router.push()` 中通过 `{name, params}` 来定义。
+- 一个页面可以同时存在多个 `<router-view>`，只需要通过给它们命名 `name` 就可以实现。
+- 路由可以通过 `redirect` 进行重定向，或者通过 `alias` 取别名，从而自由地将 UI 结构映射到任意的 URL。
+- 路由还可以进行传参，通过取代与 `$route` 的耦合或者通过 `props` 解耦。其中有三种模式：布尔模式、对象模式以及函数模式。
+- Vue Router 的默认模式是 hash 模式，我们可以通过 `mode`，将其设置为 history 模式。
+- 通过 `router.beforeEach((to, from, next) => { ... })` 来注册全局路由守卫，它会在访问某个路由前进行拦截。其中 `to` 为即将进入的目标，`from` 为当前路由即将离开的位置，`next` 类似于 Promise 的 `resolve`。在 2.5+ 版本添加了 `router.beforeResolve`，作用类似于 `router.beforeEach`
+- 路由全局后置钩子：`router.afterEach((to, from) => {})`。
+- 可以针对某个路由进行守卫，即在 `new VueRouter({})` 中通过 `beforeEnter: (to, from, next) => {}` 进行守卫。
+- 可以直接在路由组件中定义：`beforeRouteEnter`、`beforeRouteUpdate` 以及 `beforeRouteLeave`。
+- 完整的导航解析流程：
 
 1. 导航被触发。
 2. 在失活的组件里调用离开守卫。
@@ -385,30 +381,30 @@ new Vue({
 11. 触发 DOM 更新。
 12. 用创建好的实例调用 `beforeRouteEnter` 守卫中传给 `next` 的回调函数。
 
-* Vue Router 通过定义 `meta`，可以制定路由鉴权，缓存，标题信息等。
-* 通过给 `<router-view>` 添加 `<transition>` 包裹，并给 `<transition>` 设置不同的 `name`，则添加过渡效果。同时，可以根据当前路由与目标路由的关系，动态设置过渡效果。
-* Vue Router 的引用，可以让我们动态设置数据是在导航完成之后获取还是在导航完成之前获取。
-* 路由可以设置滚动行为，在切换到新路由时，可以滚动到顶部或者保持原先的滚动位置。
-* 当路由过多，组件过大的时候，我们应该把不同的路由对应的组件分割成不同的代码块，从而使这些路由被访问的时候才加载对应组件，从而提高加载效率。使用 `const Foo = () => import('./Foo.vue')` 即可。同时，这些组件都可以通过 `/* webpackChunkName: "***" */` 的形式，进行命名 chunk。
+- Vue Router 通过定义 `meta`，可以制定路由鉴权，缓存，标题信息等。
+- 通过给 `<router-view>` 添加 `<transition>` 包裹，并给 `<transition>` 设置不同的 `name`，则添加过渡效果。同时，可以根据当前路由与目标路由的关系，动态设置过渡效果。
+- Vue Router 的引用，可以让我们动态设置数据是在导航完成之后获取还是在导航完成之前获取。
+- 路由可以设置滚动行为，在切换到新路由时，可以滚动到顶部或者保持原先的滚动位置。
+- 当路由过多，组件过大的时候，我们应该把不同的路由对应的组件分割成不同的代码块，从而使这些路由被访问的时候才加载对应组件，从而提高加载效率。使用 `const Foo = () => import('./Foo.vue')` 即可。同时，这些组件都可以通过 `/* webpackChunkName: "***" */` 的形式，进行命名 chunk。
 
 ## <a name="chapter-four" id="chapter-four">四 Vue Cli</a>
 
 > [返回目录](#catalog-chapter-four)
 
-* 安装：`npm install -g @vue/cli`
-* 创建项目：`vue create my-project` 或者 `vue ui`
-* 兼容 VueCli 2.0 版本：`npm i @vue/cli-init`，然后就可以使用 `vue init webpack` 了。
+- 安装：`npm install -g @vue/cli`
+- 创建项目：`vue create my-project` 或者 `vue ui`
+- 兼容 VueCli 2.0 版本：`npm i @vue/cli-init`，然后就可以使用 `vue init webpack` 了。
 
 ## <a name="chapter-five" id="chapter-five">五 Vuex</a>
 
 > [返回目录](#catalog-chapter-five)
 
-* 为什么使用 Vuex ？
+- 为什么使用 Vuex ？
 
 1. 数据的综合交错，很容易使代码难以维护。
 2. 数据传参非常繁琐，尤其是兄弟组件。
 
-* 什么情况下使用 Vuex ？
+- 什么情况下使用 Vuex ？
 
 1. 开发大型应用
 2. 数据庞大且繁杂
@@ -537,7 +533,7 @@ computed: {
 }}
 ```
 
-**知识点 2**.  **尽可能在 HTML、CSS 中使用双引号（"），在 JS 中使用单引号（'）**。例如：
+**知识点 2**. **尽可能在 HTML、CSS 中使用双引号（"），在 JS 中使用单引号（'）**。例如：
 
 ```
 <input type="text">

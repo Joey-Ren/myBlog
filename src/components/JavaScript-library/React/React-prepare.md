@@ -1,20 +1,19 @@
-React 开发准备
-===
+# React 开发准备
 
 > Create by **jsLe** on **2019-04-25 16:20:59**  
 > Recently revised in **2019-05-31 14:51:17**
 
 **Hello 小伙伴们，如果觉得本文还不错，记得给个 **star** ， 小伙伴们的 **star** 是我持续更新的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
 
-* [React 系列文章代码地址](https://github.com/LiangJunrong/React)
+- [React 系列文章代码地址](https://github.com/LiangJunrong/React)
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
+| 目录                                                                               |
+| ---------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                            |
 | <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
@@ -60,7 +59,6 @@ React 开发准备
 ```
 
 当然，一般我们都需要进行项目定制化，有些功能不需要的（例如 Service Worker），有些文件不需要的（例如 logo.svg），有些文件需要修改的（例如 index.html），就需要进行简化下：
-
 
 ```
 - demo
@@ -110,74 +108,124 @@ th, td /* 表格元素 - table elements */ {
 }
 
 /** 设置默认字体 - setting the default font **/
-body, button, input, select, textarea {
-    font: 16px/1.5 '黑体', Helvetica, sans-serif;
+body,
+button,
+input,
+select,
+textarea {
+  font: 16px/1.5 '黑体', Helvetica, sans-serif;
 }
-h1, h2, h3, h4, h5, h6, button, input, select, textarea { font-size: 100%; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
 
 /** 重置列表元素 - reset the list element **/
-ul, ol { list-style: none; }
+ul,
+ol {
+  list-style: none;
+}
 
 /** 重置文本格式元素 - reset the text format element **/
-a, a:hover { text-decoration: none; }
+a,
+a:hover {
+  text-decoration: none;
+}
 
 /** 重置表单元素 - reset the form element **/
-button { cursor: pointer; }
-input { font-size: 16px; outline: none; }
+button {
+  cursor: pointer;
+}
+input {
+  font-size: 16px;
+  outline: none;
+}
 
 /** 重置表格元素 - reset the table element **/
-table { border-collapse: collapse; border-spacing: 0; }
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
 /*
   * 图片自适应 - image responsize 
   * 1. 清空浏览器对图片的设置
   * 2. <div>图片</div> 的情况下，图片会撑高 div，这么设置可以清除该影响
 */
-img { border: 0; display: inline-block; width: 100%; max-width: 100%; height: auto; vertical-align: middle; }
+img {
+  border: 0;
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
 
 /* 
   * 默认box-sizing是content-box，该属性导致padding会撑大div，使用border-box可以解决该问题
   * set border-box for box-sizing when you use div, it solve the problem when you add padding and don't want to make the div width bigger
 */
-div, input { box-sizing: border-box; }
+div,
+input {
+  box-sizing: border-box;
+}
 
 /** 清除浮动 - clear float **/
-.jsLe-clear:after, .clear:after {
+.jsLe-clear:after,
+.clear:after {
   content: '\20';
   display: block;
   height: 0;
   clear: both;
 }
-.jsLe-clear, .clear {
+.jsLe-clear,
+.clear {
   *zoom: 1;
 }
 
 /** 设置input的placeholder - set input placeholder **/
-input::-webkit-input-placeholder { color: #919191; font-size: .32rem } /* Webkit browsers */
-input::-moz-placeholder { color: #919191; font-size: .32rem } /* Mozilla Firefox */
-input::-ms-input-placeholder { color: #919191; font-size: .32rem } /* Internet Explorer */
+input::-webkit-input-placeholder {
+  color: #919191;
+  font-size: 0.32rem;
+} /* Webkit browsers */
+input::-moz-placeholder {
+  color: #919191;
+  font-size: 0.32rem;
+} /* Mozilla Firefox */
+input::-ms-input-placeholder {
+  color: #919191;
+  font-size: 0.32rem;
+} /* Internet Explorer */
 ```
 
 ## Npm Install
 
-* 安装 Redux：`npm i redux -S`
-* 安装 React-Redux：`npm i react-redux -S`
-* 安装 Redux-Saga：`npm i redux-saga -S`
-* 安装 React-Router：`npm i react-router-dom -S`
-* 安装 Ant Design：`npm i antd -S`
-* 安装 Axios：`npm i axios -S`
+- 安装 Redux：`npm i redux -S`
+- 安装 React-Redux：`npm i react-redux -S`
+- 安装 Redux-Saga：`npm i redux-saga -S`
+- 安装 React-Router：`npm i react-router-dom -S`
+- 安装 Ant Design：`npm i antd -S`
+- 安装 Axios：`npm i axios -S`
 
-* 总：`cnpm i redux react-redux redux-saga react-router-dom antd axios -S`
+- 总：`cnpm i redux react-redux redux-saga react-router-dom antd axios -S`
 
 ## React Router DOM
 
 > 案例
 
 ```js
-import React, { Fragment } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
-import Header from './components/Header';
-import TimeLine from './pages/TimeLine';
+import React, { Fragment } from 'react'
+import { BrowserRouter, Route } from 'react-router-dom'
+import Header from './components/Header'
+import TimeLine from './pages/TimeLine'
 
 function App() {
   return (
@@ -187,10 +235,10 @@ function App() {
         <Route path="/" exact component={TimeLine}></Route>
       </BrowserRouter>
     </Fragment>
-  );
+  )
 }
 
-export default App;
+export default App
 ```
 
 ---

@@ -1,5 +1,4 @@
-492 - 构造矩形（construct-the-rectangle）
-===
+# 492 - 构造矩形（construct-the-rectangle）
 
 > Create by **jsLe** on **2019-10-28 10:54:31**  
 > Recently revised in **2019-10-28 12:32:14**
@@ -8,23 +7,23 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题及测试](#chapter-three) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题及测试](#chapter-three)   |
 | <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 LeetCode Submit](#chapter-four) |
-| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 解题思路](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 进一步思考](#chapter-six) |
+| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 解题思路](#chapter-five)        |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 进一步思考](#chapter-six)         |
 
 ## <a name="chapter-two" id="chapter-two"></a>二 前言
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数学
-* **题目地址**：https://leetcode-cn.com/problems/construct-the-rectangle/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数学
+- **题目地址**：https://leetcode-cn.com/problems/construct-the-rectangle/
+- **题目内容**：
 
 ```
 作为一位web开发者，懂得怎样去规划一个页面的尺寸是很重要的。
@@ -58,16 +57,14 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **LeetCode 给定函数体**：
+- **LeetCode 给定函数体**：
 
 ```js
 /**
  * @param {number} area
  * @return {number[]}
  */
-var constructRectangle = function(area) {
-    
-};
+var constructRectangle = function(area) {}
 ```
 
 根据上面的已知函数，尝试破解本题吧~
@@ -82,23 +79,23 @@ var constructRectangle = function(area) {
  * @param {number} area
  * @return {number[]}
  */
-const constructRectangle = (area) => {
-  const harf = Math.ceil(Math.sqrt(area));
+const constructRectangle = area => {
+  const harf = Math.ceil(Math.sqrt(area))
   for (let i = harf; i <= area; i++) {
     if (Number.isInteger(area / i)) {
-      return [i, area / i];
+      return [i, area / i]
     }
   }
-};
+}
 
-const area = 4;
-console.log(constructRectangle(area));
+const area = 4
+console.log(constructRectangle(area))
 ```
 
 `node index.js` 返回：
 
 ```js
-[2, 2]
+;[2, 2]
 ```
 
 ## <a name="chapter-four" id="chapter-four"></a>四 LeetCode Submit
@@ -124,17 +121,17 @@ Accepted
  * @param {number} area
  * @return {number[]}
  */
-const constructRectangle = (area) => {
-  const harf = Math.ceil(Math.sqrt(area));
+const constructRectangle = area => {
+  const harf = Math.ceil(Math.sqrt(area))
   for (let i = harf; i <= area; i++) {
     if (Number.isInteger(area / i)) {
-      return [i, area / i];
+      return [i, area / i]
     }
   }
-};
+}
 
-const area = 2;
-console.log(constructRectangle(area));
+const area = 2
+console.log(constructRectangle(area))
 ```
 
 **然后**，尝试提交：
@@ -148,7 +145,7 @@ Accepted
 
 **最后**，讲下思路：
 
-1. 首先，最极端的状况肯定是：2 * 2 或者 3 * 3 等，所以先开方 `area`，再向上取整。
+1. 首先，最极端的状况肯定是：2 _ 2 或者 3 _ 3 等，所以先开方 `area`，再向上取整。
 2. 然后，从开方的地方开始，到 `area` 结束，进行遍历。
 3. 最后，判断 `area` 是否能整除 `i`，如果可以，说明它们有故事，就可以给 good ending 了。
 

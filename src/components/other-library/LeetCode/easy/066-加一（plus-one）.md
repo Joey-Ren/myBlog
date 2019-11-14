@@ -1,5 +1,4 @@
-066 - 加一（plus-one）
-===
+# 066 - 加一（plus-one）
 
 > Create by **jsLe** on **2019-06-11 07:52:37**  
 > Recently revised in **2019-06-11 08:48:21**
@@ -8,21 +7,21 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解题 - 数学运算](#chapter-three-one) |
+| &emsp;[3.1 解题 - 数学运算](#chapter-three-one)                                          |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数组
-* **题目地址**：https://leetcode-cn.com/problems/plus-one/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数组
+- **题目地址**：https://leetcode-cn.com/problems/plus-one/
+- **题目内容**：
 
 ```
 给定一个由整数组成的非空数组所表示的非负整数，在该数的基础上加一。
@@ -52,31 +51,31 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var plusOne = function(digits) {
-  for (let i = digits.length - 1; i >=0; i--) {
-    digits[i]++;
-    digits[i] = digits[i] % 10;
+  for (let i = digits.length - 1; i >= 0; i--) {
+    digits[i]++
+    digits[i] = digits[i] % 10
     if (digits[i] > 0) {
-      return digits;
+      return digits
     }
   }
-  return [1, ...digits];
-};
+  return [1, ...digits]
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `digits`：`[9, 9, 9]`
 2. `return`：
 
 ```js
-[1, 0, 0, 0]
+;[1, 0, 0, 0]
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 √ Accepted
@@ -85,14 +84,14 @@ var plusOne = function(digits) {
   √ Your memory usage beats 46.4 % of javascript submissions (33.7 MB)
 ```
 
-* **解题思路**：
+- **解题思路**：
 
 看到题目，一开始 **jsLe** 觉得 so easy 啦，于是：
 
 ```js
 var plusOne = function(digits) {
-  return String(Number(digits.join('')) + 1).split('');
-};
+  return String(Number(digits.join('')) + 1).split('')
+}
 ```
 
 然后它告诉我报错了：
@@ -115,11 +114,11 @@ var plusOne = function(digits) {
 ```js
 var plusOne = function(digits) {
   if (digits[digits.length - 1] === 9) {
-    return String(Number(digits.join('')) + 1).split('');
+    return String(Number(digits.join('')) + 1).split('')
   }
-  digits[digits.length - 1] = digits[digits.length - 1] + 1;
-  return digits;
-};
+  digits[digits.length - 1] = digits[digits.length - 1] + 1
+  return digits
+}
 ```
 
 这个法子，对末尾是 `9` 的进行转字符串再转数字，加一后再转字符串并转成数组。对末尾不是 `9` 的，直接进行后面一位的操作。
@@ -141,15 +140,15 @@ var plusOne = function(digits) {
 
 ```js
 var plusOne = function(digits) {
-  for (let i = digits.length - 1; i >=0; i--) {
-    digits[i]++;
-    digits[i] = digits[i] % 10;
+  for (let i = digits.length - 1; i >= 0; i--) {
+    digits[i]++
+    digits[i] = digits[i] % 10
     if (digits[i] > 0) {
-      return digits;
+      return digits
     }
   }
-  return [1, ...digits];
-};
+  return [1, ...digits]
+}
 ```
 
 > [题解](https://leetcode-cn.com/problems/plus-one/solution/java-shu-xue-jie-ti-by-yhhzw/) 中使用的是 Java 解题思路，不过无大碍，转换成 JavaScript 就行了。
@@ -170,16 +169,16 @@ var plusOne = function(digits) {
 
 ```js
 var plusOne = function(digits) {
-  for (let i = digits.length - 1; i >=0; i--) {
-    digits[i]++;
-    digits[i] = digits[i] % 10;
+  for (let i = digits.length - 1; i >= 0; i--) {
+    digits[i]++
+    digits[i] = digits[i] % 10
     if (digits[i] > 0) {
-      return digits;
+      return digits
     }
   }
-  digits.unshift(1);
-  return digits;
-};
+  digits.unshift(1)
+  return digits
+}
 ```
 
 ---

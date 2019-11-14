@@ -1,5 +1,4 @@
-118 - 杨辉三角（pascals-triangle）
-===
+# 118 - 杨辉三角（pascals-triangle）
 
 > Create by **jsLe** on **2019-6-27 07:33:45**  
 > Recently revised in **2019-09-18 10:25:04**
@@ -8,25 +7,25 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven) |
-| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 进一步探索](#chapter-eight) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six)             |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven)     |
+| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 进一步探索](#chapter-eight)   |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数组
-* **题目地址**：https://leetcode-cn.com/problems/pascals-triangle/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数组
+- **题目地址**：https://leetcode-cn.com/problems/pascals-triangle/
+- **题目内容**：
 
 ```
 给定一个非负整数 numRows，生成杨辉三角的前 numRows 行。
@@ -52,7 +51,7 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var generate = function(numRows) {
@@ -60,30 +59,27 @@ var generate = function(numRows) {
     return []
   }
   if (numRows === 1) {
-    return [[1]];
+    return [[1]]
   }
-  let fullResult = [
-    [1],
-    [1, 1],
-  ];
+  let fullResult = [[1], [1, 1]]
   let recursion = function(numRows) {
     if (numRows === 2) {
-      return fullResult[1];
+      return fullResult[1]
     }
-    let prevArr = recursion(numRows - 1);
-    let result = [];
+    let prevArr = recursion(numRows - 1)
+    let result = []
     for (let i = 0; i < prevArr.length; i++) {
       if (prevArr[i] && prevArr[i + 1]) {
-        result.push(prevArr[i] + prevArr[i + 1]);
+        result.push(prevArr[i] + prevArr[i + 1])
       }
     }
-    result = [1, ...result, 1];
-    fullResult.push(result);
-    return result;
+    result = [1, ...result, 1]
+    fullResult.push(result)
+    return result
   }
-  recursion(numRows);
-  return fullResult;
-};
+  recursion(numRows)
+  return fullResult
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
@@ -94,13 +90,7 @@ var generate = function(numRows) {
 2. `return`：
 
 ```js
-[
-     [1],
-    [1,1],
-   [1,2,1],
-  [1,3,3,1],
- [1,4,6,4,1]
-]
+;[[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
 ```
 
 ## <a name="chapter-five" id="chapter-five">五 LeetCode Submit</a>
@@ -132,40 +122,20 @@ var generate = function(numRows) {
 var generate = function(numRows) {
   switch (numRows) {
     case 0:
-      return [];
+      return []
     case 1:
-      return [
-        [1]
-      ];
+      return [[1]]
     case 2:
-      return [
-        [1],
-        [1, 1]
-      ];
+      return [[1], [1, 1]]
     case 3:
-      return [
-        [1],
-        [1, 1],
-        [1, 2, 1],
-      ];
+      return [[1], [1, 1], [1, 2, 1]]
     case 4:
-      return [
-        [1],
-        [1, 1],
-        [1, 2, 1],
-        [1, 3, 3, 1],
-      ];
+      return [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1]]
     case 5:
-      return [
-        [1],
-        [1, 1],
-        [1, 2, 1],
-        [1, 3, 3, 1],
-        [1, 4, 6, 4, 1],
-      ];
+      return [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
     // case 6……
   }
-};
+}
 ```
 
 开玩笑开玩笑~
@@ -177,13 +147,7 @@ var generate = function(numRows) {
 **首先**，观察多几遍题意：
 
 ```js
-[
-     [1],
-    [1,1],
-   [1,2,1],
-  [1,3,3,1],
- [1,4,6,4,1]
-]
+;[[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
 ```
 
 就是说，我左边的 1 和右边的 1，是固定不动的，即：
@@ -198,9 +162,9 @@ var generate = function(numRows) {
 
 所以还是使用递归吧，在 `numRows` 为 2 的时候，返回 `[1, 1]`，遍历一遍结果为 `[2]`，塞到数组中即为：`[1, 2, 1]`，以此类推：
 
-* `numsRows === 3`：`[1, 2, 1]`
-* `numsRows === 4`：`[1, 3, 3, 1]`
-* ……
+- `numsRows === 3`：`[1, 2, 1]`
+- `numsRows === 4`：`[1, 3, 3, 1]`
+- ……
 
 这样，我们就完成了暴力破解的解法啦~
 
@@ -223,23 +187,23 @@ var generate = function(numRows) {
 ```js
 var generate = function(numRows) {
   // 规律 a[i][j] = a[i-2][j-1]+a[i-2][j]
-  let arr = [];
+  let arr = []
   if (numRows == 0) {
-    return arr;
+    return arr
   }
   for (let i = 1; i < numRows + 1; i++) {
-    var temp = [];
+    var temp = []
     for (let j = 0; j < i; j++) {
       if (j == 0 || j == i - 1) {
-        temp.push(1);
+        temp.push(1)
       } else {
-        temp.push(arr[i - 2][j - 1] + arr[i - 2][j]);
+        temp.push(arr[i - 2][j - 1] + arr[i - 2][j])
       }
     }
-    arr.push(temp);
+    arr.push(temp)
   }
-  return arr;
-};
+  return arr
+}
 ```
 
 通过 `for` 遍历求出每层的值，再添加到 `arr` 中。
@@ -248,22 +212,22 @@ var generate = function(numRows) {
 
 ```js
 var generate = function(numRows) {
-  const res = [];
+  const res = []
   for (let i = 0; i < numRows; i++) {
     if (i === 0) {
-      res.push([1]); // 第一行 基础行
+      res.push([1]) // 第一行 基础行
     } else {
-      const arrs = [1]; // 初始化当前行的第一个元素为1
-      const preRows = res[i - 1]; // 上一行数据
+      const arrs = [1] // 初始化当前行的第一个元素为1
+      const preRows = res[i - 1] // 上一行数据
       for (let j = 0; j < preRows.length; j++) {
         // 上一行遍历获取左上方和右上方的数的和
-        arrs.push(preRows[j] + (preRows[j + 1] || 0));
+        arrs.push(preRows[j] + (preRows[j + 1] || 0))
       }
-      res.push(arrs);
+      res.push(arrs)
     }
   }
-  return res;
-};
+  return res
+}
 ```
 
 比攻略 1 优秀点，可以吸取下经验。

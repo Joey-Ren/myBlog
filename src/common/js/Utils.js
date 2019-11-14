@@ -1,9 +1,9 @@
-let FUNC_ERROR_TEXT = 'Expected a function'
+const FUNC_ERROR_TEXT = 'Expected a function'
 
-let nativeMax = Math.max // 原生最大值方法
-let nativeMin = Math.min // 原生最小值方法
+const nativeMax = Math.max // 原生最大值方法
+const nativeMin = Math.min // 原生最小值方法
 
-function debounce (func, wait, options) {
+function debounce(func, wait, options) {
   let lastArgs, // debounced 被调用后被赋值,表示至少调用 debounced一次
     lastThis, // 上次调用this
     maxWait, // 最大等待时间
@@ -21,20 +21,20 @@ function debounce (func, wait, options) {
   if (typeof func !== 'function') {
     throw new TypeError(FUNC_ERROR_TEXT)
   }
-  wait = +wait || 0
+  wait = Number(wait) || 0
   if (typeof options === 'object') {
     // 判断当前接收的的参数是否为object对象
     // 对配置的一些初始化
-    leading = !!options.leading // 指定在超时的前沿调用。
+    leading = Boolean(options.leading) // 指定在超时的前沿调用。
     maxing = 'maxWait' in options
-    maxWait = maxing ? nativeMax(options.maxWait * 1 || 0, wait) : maxWait // 允许在调用之前延迟最大时间。
-    trailing = 'trailing' in options ? !!options.trailing : trailing // 指定在超时的后沿调用。
+    maxWait = maxing ? nativeMax(Number(options.maxWait) || 0, wait) : maxWait // 允许在调用之前延迟最大时间。
+    trailing = 'trailing' in options ? Boolean(options.trailing) : trailing // 指定在超时的后沿调用。
   }
 
   // 执行 用户传入的 func
   // 重置 lastArgs，lastThis
   // lastInvokeTime 在此时被赋值，记录上一次调用 func的时间
-  function invokeFunc (time) {
+  function invokeFunc(time) {
     // 调用func，参数为当前时间
     const args = lastArgs // 调用参数
     const thisArg = lastThis // 调用的this
@@ -48,7 +48,7 @@ function debounce (func, wait, options) {
   //  防抖开始时执行的操作
   //  lastInvokeTime 在此时被赋值，记录上一次调用 func的时间
   //  设置了立即执行func，则执行func， 否则设置定时器
-  function leadingEdge (time) {
+  function leadingEdge(time) {
     // 超时之前调用
     // Reset any `maxWait` timer.
     lastInvokeTime = time // 设置上次调用时间为当前时间
@@ -61,7 +61,7 @@ function debounce (func, wait, options) {
   // 计算还需要等待多久
   // 没设置最大等待时间，结果为 wait - (当前时间 - 上一次触发(scroll) )  时间，也就是  wait - 已经等候时间
   // 设置了最长等待时间，结果为 最长等待时间 和 按照wait 计算还需要等待时间 的最小值
-  function remainingWait (time) {
+  function remainingWait(time) {
     // 设置还需要等待的时间
     const timeSinceLastCall = time - lastCallTime // 距离上次debounced函数被调用的时间 距离上次触发的时间
     const timeSinceLastInvoke = time - lastInvokeTime // 距离上次函数被执行的时间 距离上次调用func的时间
@@ -76,7 +76,7 @@ function debounce (func, wait, options) {
   }
 
   // 根据时间判断 func 能否被执行
-  function shouldInvoke (time) {
+  function shouldInvoke(time) {
     const timeSinceLastCall = time - lastCallTime // 距离上次触发时间的时间
     const timeSinceLastInvoke = time - lastInvokeTime // 距离上次调用func的时间
 
@@ -92,7 +92,7 @@ function debounce (func, wait, options) {
   // 执行函数呢 还是继续设置定时器呢？ 防抖的核心
   // 时间满足条件，执行
   // 否则 重新设置定时器
-  function timerExpired () {
+  function timerExpired() {
     // 刷新timer
     const time = Date.now()
     // 在 trailing edge 且时间符合条件时，调用 trailingEdge函数，否则重启定时器
@@ -107,7 +107,7 @@ function debounce (func, wait, options) {
   // 重置 定时器
   // 执行 func
   // 重置 lastArgs = lastThis 为 undefined
-  function trailingEdge (time) {
+  function trailingEdge(time) {
     // 超时之后调用
     timerId = undefined
 
@@ -123,7 +123,7 @@ function debounce (func, wait, options) {
 
   // 取消防抖
   //  重置所有变量  清除定时器
-  function cancel () {
+  function cancel() {
     // 取消执行
     if (timerId !== undefined) {
       clearTimeout(timerId)
@@ -133,18 +133,18 @@ function debounce (func, wait, options) {
   }
 
   // 定时器已存在，去执行
-  function flush () {
+  function flush() {
     // 直接执行
     return timerId === undefined ? result : trailingEdge(Date.now())
   }
 
   //  是否正在 等待中
-  function pending () {
+  function pending() {
     return timerId !== undefined
   }
 
   // 正房来了！这是入口函数，在这里运筹帷幄，根据敌情调配各个函数，势必骗过用户那个傻子，我没有一直在执行但你以为我一直在响应你哦
-  function debounced (...args) {
+  function debounced(...args) {
     const time = Date.now()
     const isInvoking = shouldInvoke(time) // 是否满足时间条件
 
@@ -179,7 +179,7 @@ function debounce (func, wait, options) {
 
 // 简易版防抖函数
 
-function simpleDebounce (func, time, options) {
+function simpleDebounce(func, time, options) {
   let leading = false // 是否第一次触发时立即执行
   // 判断当前传输函数的准确性
   if (typeof func !== 'function') {
@@ -188,12 +188,12 @@ function simpleDebounce (func, time, options) {
   // 判断当前接收的的参数是否为object对象
   if (typeof options === 'object') {
     // 对配置的一些初始化
-    leading = !!options.leading // 指定当前函数是否立即执行
+    leading = Boolean(options.leading) // 指定当前函数是否立即执行
   }
   let timeout = null
-  return function () {
-    timeout && clearTimeout(timeout);
-    (leading && !timeout) && func.apply(this, arguments)
+  return function() {
+    timeout && clearTimeout(timeout)
+    leading && !timeout && func.apply(this, arguments)
     timeout = setTimeout(() => {
       leading && (timeout = null)
       !leading && func.apply(this, arguments)

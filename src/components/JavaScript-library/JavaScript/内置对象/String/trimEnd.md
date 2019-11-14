@@ -1,21 +1,20 @@
-方法 - trimEnd()
-===
+# 方法 - trimEnd()
 
 > Create by **jsLe** on **2019-09-16 14:46:10**  
 > Recently revised in **2019-09-16 14:46:59**
 
-* **原文**：[MDN - trimEnd()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd)
+- **原文**：[MDN - trimEnd()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd)
 
-* **功能**：`trimEnd()` 方法从字符串的末尾删除空格。`trimRight()` 是此方法的别名。
+- **功能**：`trimEnd()` 方法从字符串的末尾删除空格。`trimRight()` 是此方法的别名。
 
-* **语法**：`str.trimEnd()`
+- **语法**：`str.trimEnd()`
 
-* **返回值**：一个新字符串，表示从其（右）端剥去空白的调用字符串。
+- **返回值**：一个新字符串，表示从其（右）端剥去空白的调用字符串。
 
-* **代码**：
+- **代码**：
 
 ```js
-'   jsLe   '.trimEnd(); // '   jsLe'
+'   jsLe   '.trimEnd() // '   jsLe'
 ```
 
 ---

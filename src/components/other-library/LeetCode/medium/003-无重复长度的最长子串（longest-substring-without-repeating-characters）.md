@@ -1,5 +1,4 @@
-003 - 无重复长度的最长子串（longest-substring-without-repeating-characters）
-===
+# 003 - 无重复长度的最长子串（longest-substring-without-repeating-characters）
 
 > Create by **jsLe** on **2019-08-09 15:28:03**  
 > Recently revised in **2019-09-18 14:13:28**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - Map(1)](#chapter-three-one) |
-| &emsp;[3.2 解法 - Map(2)](#chapter-three-two) |
+| &emsp;[3.1 解法 - Map(1)](#chapter-three-one)                                            |
+| &emsp;[3.2 解法 - Map(2)](#chapter-three-two)                                            |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：中等
-* **涉及知识**：哈希表、双指针、字符串、滑动窗口
-* **题目地址**：https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/
-* **题目内容**：
+- **难度**：中等
+- **涉及知识**：哈希表、双指针、字符串、滑动窗口
+- **题目地址**：https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/
+- **题目内容**：
 
 ```
 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
@@ -31,7 +30,7 @@
 示例 1:
 
 输入: "abcabcbb"
-输出: 3 
+输出: 3
 解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
 
 示例 2:
@@ -58,32 +57,32 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var lengthOfLongestSubstring = function(s) {
-  let maxLength = 0; // 最长长度
-  let mark = 0; // 当前起始位置
-  let map = new Map(); // 哈希表-记录出现的字符串
+  let maxLength = 0 // 最长长度
+  let mark = 0 // 当前起始位置
+  let map = new Map() // 哈希表-记录出现的字符串
   for (let i = 0; i < s.length; i++) {
     if (map.get(s[i]) !== undefined) {
-      maxLength = maxLength > map.size ? maxLength : map.size;
+      maxLength = maxLength > map.size ? maxLength : map.size
       // 清空重置
-      map.clear();
-      i = mark; // 回滚
-      mark = mark + 1;
+      map.clear()
+      i = mark // 回滚
+      mark = mark + 1
     } else {
-      map.set(s[i], 1);
+      map.set(s[i], 1)
       if (i === s.length - 1) {
-        maxLength = maxLength > map.size ? maxLength : map.size;    
+        maxLength = maxLength > map.size ? maxLength : map.size
       }
     }
   }
-  return maxLength;
-};
+  return maxLength
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `s`：`pwwkew`
 2. `return`：
@@ -92,7 +91,7 @@ var lengthOfLongestSubstring = function(s) {
 3
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -101,11 +100,11 @@ var lengthOfLongestSubstring = function(s) {
   ✔ Your memory usage beats 24.1 % of javascript submissions (41.8 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `Map`：保存键值对。任何值(对象或者原始值) 都可以作为一个键或一个值。[`Map` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Map/README.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **首先**，在讲解这道题前，给大家讲解一个游戏，叫：排火车。规则如下：
 
@@ -118,25 +117,25 @@ var lengthOfLongestSubstring = function(s) {
 
 ```js
 var lengthOfLongestSubstring = function(s) {
-  let maxLength = 0; // 最长长度
-  let mark = 0; // 当前起始位置
-  let map = new Map(); // 哈希表-记录出现的字符串
+  let maxLength = 0 // 最长长度
+  let mark = 0 // 当前起始位置
+  let map = new Map() // 哈希表-记录出现的字符串
   for (let i = 0; i < s.length; i++) {
     if (map.get(s[i]) !== undefined) {
-      maxLength = maxLength > map.size ? maxLength : map.size;
+      maxLength = maxLength > map.size ? maxLength : map.size
       // 清空重置
-      map.clear();
-      i = mark; // 回滚
-      mark = mark + 1;
+      map.clear()
+      i = mark // 回滚
+      mark = mark + 1
     } else {
-      map.set(s[i], 1);
+      map.set(s[i], 1)
       if (i === s.length - 1) {
-        maxLength = maxLength > map.size ? maxLength : map.size;    
+        maxLength = maxLength > map.size ? maxLength : map.size
       }
     }
   }
-  return maxLength;
-};
+  return maxLength
+}
 ```
 
 1. 从某个位置（i）开始查找，如果字符串中存在跟（i）相同的字符串，那么这段旅途结束了。
@@ -150,25 +149,25 @@ var lengthOfLongestSubstring = function(s) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
-var lengthOfLongestSubstring = function (s) {
-  let n = s.length;
-  let hashMap = new Map();
-  let ans = 0;
+var lengthOfLongestSubstring = function(s) {
+  let n = s.length
+  let hashMap = new Map()
+  let ans = 0
   for (let i = 0, j = 0; i < n; i++) {
     if (hashMap.has(s[i])) {
       j = Math.max(hashMap.get(s[i]), j)
     }
-    ans = Math.max(ans, i - j + 1);
-    hashMap.set(s[i], i + 1);
+    ans = Math.max(ans, i - j + 1)
+    hashMap.set(s[i], i + 1)
   }
-  return ans;
-};
+  return ans
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `s`：`pwwkew`
 2. `return`：
@@ -177,7 +176,7 @@ var lengthOfLongestSubstring = function (s) {
 3
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -186,12 +185,12 @@ var lengthOfLongestSubstring = function (s) {
   ✔ Your memory usage beats 85.52 % of javascript submissions (37.7 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `Map`：保存键值对。任何值(对象或者原始值) 都可以作为一个键或一个值。[`Map` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Map/README.md)
 2. `Math`：JS 中的内置对象，具有数学常数和函数的属性和方法。[`Math` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Math/README.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **从来就没有什么最优解，有的只是无穷的脑洞。**
 

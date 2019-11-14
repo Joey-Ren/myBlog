@@ -1,5 +1,4 @@
-350 - 两个数组的交集II（intersection-of-two-arrays-ii）
-===
+# 350 - 两个数组的交集 II（intersection-of-two-arrays-ii）
 
 > Create by **jsLe** on **2019-07-23 15:16:40**  
 > Recently revised in **2019-09-18 13:56:17**
@@ -8,24 +7,24 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six)             |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven)     |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：排序、哈希表、双指针、二分查找
-* **题目地址**：https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：排序、哈希表、双指针、二分查找
+- **题目地址**：https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/
+- **题目内容**：
 
 ```
 给定两个数组，编写一个函数来计算它们的交集。
@@ -54,20 +53,20 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var intersect = function(nums1, nums2) {
-  let result = [];
+  let result = []
   nums1.forEach(value => {
-    let index = nums2.indexOf(value);
+    let index = nums2.indexOf(value)
     if (index > -1) {
-      result.push(value);
-      nums2.splice(index, 1);
+      result.push(value)
+      nums2.splice(index, 1)
     }
   })
-  return result;
-};
+  return result
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
@@ -79,7 +78,7 @@ var intersect = function(nums1, nums2) {
 3. `return`：
 
 ```js
-[ 4, 9 ]
+;[4, 9]
 ```
 
 ## <a name="chapter-five" id="chapter-five">五 LeetCode Submit</a>
@@ -112,16 +111,16 @@ var intersect = function(nums1, nums2) {
 
 ```js
 var intersect = function(nums1, nums2) {
-  let result = [];
+  let result = []
   nums1.forEach(value => {
-    let index = nums2.indexOf(value);
+    let index = nums2.indexOf(value)
     if (index > -1) {
-      result.push(value);
-      nums2.splice(index, 1);
+      result.push(value)
+      nums2.splice(index, 1)
     }
   })
-  return result;
-};
+  return result
+}
 ```
 
 它的主要思路是：

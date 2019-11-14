@@ -1,25 +1,24 @@
-方法 - shift()
-===
+# 方法 - shift()
 
 > Create by **jsLe** on **2019-09-17 09:31:56**  
 > Recently revised in **2019-09-17 09:32:08**
 
-* **原文**：[MDN - shift()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
+- **原文**：[MDN - shift()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
 
-* **功能**：`shift()` 方法从数组中删除第一个元素，并返回该元素的值。此方法更改数组的长度。
+- **功能**：`shift()` 方法从数组中删除第一个元素，并返回该元素的值。此方法更改数组的长度。
 
-* **语法**：`arr.shift()`
+- **语法**：`arr.shift()`
 
-* **返回值**：数组中删除第一个元素，并返回该元素的值。
+- **返回值**：数组中删除第一个元素，并返回该元素的值。
 
-* **代码**：
+- **代码**：
 
 ```js
-let str = [1, 2, 3];
-console.log(str.shift()); // 1
-console.log(str.shift()); // 2
-console.log(str.shift()); // 3
-console.log(str.shift()); // undefined
+let str = [1, 2, 3]
+console.log(str.shift()) // 1
+console.log(str.shift()) // 2
+console.log(str.shift()) // 3
+console.log(str.shift()) // undefined
 ```
 
 ---

@@ -1,5 +1,4 @@
-JavaScript - 内置对象
-===
+# JavaScript - 内置对象
 
 > Create by **jsLe** on **2019-09-10 16:33:28**  
 > Recently revised in **2019-09-10 16:34:23**
@@ -12,7 +11,7 @@ JavaScript - 内置对象
 
 通过这种形式的学习，扩展了解各种知识点。
 
-* 内置对象和数据类型
+- 内置对象和数据类型
 
 在 JavaScript 中，内置对象有 Object、Number、String、Boolean、Array、Function、Date、RegExp、Error……等
 
@@ -20,15 +19,15 @@ JavaScript - 内置对象
 
 数据类型是内置类型的子集，是它的一部分。
 
-* 目录大纲
+- 目录大纲
 
-| 目录 |
-| --- |
-| [Map](./Map/README.md) |
-| [Math](./Math/README.md) |
+| 目录                         |
+| ---------------------------- |
+| [Map](./Map/README.md)       |
+| [Math](./Math/README.md)     |
 | [Number](./Number/README.md) |
 | [RegExp](./RegExp/README.md) |
-| [Set](./Set/README.md) |
+| [Set](./Set/README.md)       |
 | [String](./String/README.md) |
 
 那么，祝你学习愉快~

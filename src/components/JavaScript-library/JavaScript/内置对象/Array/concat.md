@@ -1,24 +1,24 @@
-方法 - concat()
-===
+# 方法 - concat()
 
 > Create by **jsLe** on **2019-09-17 09:32:54**  
 > Recently revised in **2019-09-17 09:33:03**
 
-* **原文**：[MDN - concat()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
+- **原文**：[MDN - concat()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
 
-* **功能**：`concat()` 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组。
+- **功能**：`concat()` 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组。
 
-* **语法**：`newArr = arr1.concat(arr2)`
-  * `newArr`：新数组
-  * `arr1`：旧数组 1
-  * `arr2`：旧数组 2
+- **语法**：`newArr = arr1.concat(arr2)`
 
-* **返回值**：新的 `Array` 实例。
+  - `newArr`：新数组
+  - `arr1`：旧数组 1
+  - `arr2`：旧数组 2
 
-* **代码**：
+- **返回值**：新的 `Array` 实例。
+
+- **代码**：
 
 ```js
-const newArr = [1, 2, 3].concat(['a', 'b', 'c']);
+const newArr = [1, 2, 3].concat(['a', 'b', 'c'])
 
 // [1, 2, 3, 'a', 'b', 'c']
 ```

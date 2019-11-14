@@ -1,5 +1,4 @@
-334 - 递增的三元子序列（increasing-triplet-subsequence）
-===
+# 334 - 递增的三元子序列（increasing-triplet-subsequence）
 
 > Create by **jsLe** on **2019-08-12 17:29:14**  
 > Recently revised in **2019-08-12 18:58:50**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - 暴力破解](#chapter-three-one) |
-| &emsp;[3.2 解法 - 贪心算法](#chapter-three-two) |
+| &emsp;[3.1 解法 - 暴力破解](#chapter-three-one)                                          |
+| &emsp;[3.2 解法 - 贪心算法](#chapter-three-two)                                          |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：中等
-* **涉及知识**：数组、贪心算法
-* **题目地址**：https://leetcode-cn.com/problems/increasing-triplet-subsequence/
-* **题目内容**：
+- **难度**：中等
+- **涉及知识**：数组、贪心算法
+- **题目地址**：https://leetcode-cn.com/problems/increasing-triplet-subsequence/
+- **题目内容**：
 
 ```
 给定一个未排序的数组，判断这个数组中是否存在长度为 3 的递增子序列。
@@ -55,7 +54,7 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var increasingTriplet = function(nums) {
@@ -64,17 +63,17 @@ var increasingTriplet = function(nums) {
       if (nums[i] < nums[j]) {
         for (let k = j + 1; k < nums.length; k++) {
           if (nums[i] < nums[j] && nums[j] < nums[k]) {
-            return true;
+            return true
           }
         }
       }
     }
   }
-  return false;
-};
+  return false
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums`：`[1,2,3,4,5]`
 2. `return`：
@@ -83,7 +82,7 @@ var increasingTriplet = function(nums) {
 true
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -92,7 +91,7 @@ true
   ✔ Your memory usage beats 27.91 % of javascript submissions (34.8 MB)
 ```
 
-* **解题思路**：
+- **解题思路**：
 
 **首先**，先说说感想感觉暴力是最直观最快的破解方式了。
 
@@ -105,14 +104,14 @@ var increasingTriplet = function(nums) {
       if (nums[i] < nums[j]) {
         for (let k = j + 1; k < nums.length; k++) {
           if (nums[i] < nums[j] && nums[j] < nums[k]) {
-            return true;
+            return true
           }
         }
       }
     }
   }
-  return false;
-};
+  return false
+}
 ```
 
 1. 先 `for()` 遍历 `nums`，获得指针 `i`。
@@ -129,26 +128,26 @@ var increasingTriplet = function(nums) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var increasingTriplet = function(nums) {
-  let one = 16666666666666;
-  let two = 18888888888888;
+  let one = 16666666666666
+  let two = 18888888888888
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] <= one) {
-      one = nums[i];
+      one = nums[i]
     } else if (nums[i] <= two) {
-      two = nums[i];
+      two = nums[i]
     } else {
-      return true;
+      return true
     }
   }
-  return false;
-};
+  return false
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums`：`[1,2,3,4,5]`
 2. `return`：
@@ -157,7 +156,7 @@ var increasingTriplet = function(nums) {
 true
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -166,25 +165,25 @@ true
   ✔ Your memory usage beats 62.79 % of javascript submissions (34.4 MB)
 ```
 
-* **解题思路**：
+- **解题思路**：
 
 **当然**，除了暴力，或者下面的 **贪心算法**，我们还有其他方法的，这里演示一种 **贪心算法** 解题：
 
 ```js
 var increasingTriplet = function(nums) {
-  let one = 16666666666666;
-  let two = 18888888888888;
+  let one = 16666666666666
+  let two = 18888888888888
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] <= one) {
-      one = nums[i];
+      one = nums[i]
     } else if (nums[i] <= two) {
-      two = nums[i];
+      two = nums[i]
     } else {
-      return true;
+      return true
     }
   }
-  return false;
-};
+  return false
+}
 ```
 
 什么意思呢？我们举例：`[1,2,3,4,5]`。

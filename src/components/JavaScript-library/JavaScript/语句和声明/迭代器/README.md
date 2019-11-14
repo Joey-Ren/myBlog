@@ -1,17 +1,16 @@
-语句和声明 - 迭代器
-===
+# 语句和声明 - 迭代器
 
 > create by **jsLe** on **2019-10-14 11:08:04**  
 > Recently revised in **2019-10-14 15:37:54**
 
-| 目录 |
-| --- |
-| do...while |
-| for |
+| 目录                      |
+| ------------------------- |
+| do...while                |
+| for                       |
 | [for...in](./for...in.md) |
 | [for...of](./for...of.md) |
-| for await...of |
-| while |
+| for await...of            |
+| while                     |
 
 ## More...
 

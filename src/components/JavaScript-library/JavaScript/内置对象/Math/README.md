@@ -1,29 +1,29 @@
-Math
-===
+# Math
 
 > Create by **jsLe** on **2019-09-16 15:40:47**  
 > Recently revised in **2019-09-18 08:50:41**
 
-* **原文**：[MDN - Math](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math)
+- **原文**：[MDN - Math](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math)
 
-* **功能**：`Math` 是一个内置对象，它具有数学常数和函数的属性和方法。不是一个函数对象。
+- **功能**：`Math` 是一个内置对象，它具有数学常数和函数的属性和方法。不是一个函数对象。
 
-* **方法**：
-  * `Math.abs(x)`：返回 `x` 的绝对值。
-  * `Math.ceil(x)`：返回 `x` 向上取整后的值。`x = 99.1; result = 100`
-  * `Math.floor(x)`：返回小于 `x` 的最大整数。`x = 99.1; result = 99`
-  * `Math.pow(x,y)`：返回 `x` 的 `y` 次幂。
-  * `Math.round(x)`：返回四舍五入后的整数。
+- **方法**：
 
-* **代码**：
+  - `Math.abs(x)`：返回 `x` 的绝对值。
+  - `Math.ceil(x)`：返回 `x` 向上取整后的值。`x = 99.1; result = 100`
+  - `Math.floor(x)`：返回小于 `x` 的最大整数。`x = 99.1; result = 99`
+  - `Math.pow(x,y)`：返回 `x` 的 `y` 次幂。
+  - `Math.round(x)`：返回四舍五入后的整数。
+
+- **代码**：
 
 ```js
-Math.abs(-999); // 999
-Math.ceil(99.1); // 100
-Math.floor(99.1); // 99
-Math.pow(2, 3); // 8
-Math.round(99.5); // 100
-Math.round(99.4); // 99
+Math.abs(-999) // 999
+Math.ceil(99.1) // 100
+Math.floor(99.1) // 99
+Math.pow(2, 3) // 8
+Math.round(99.5) // 100
+Math.round(99.4) // 99
 ```
 
 ---

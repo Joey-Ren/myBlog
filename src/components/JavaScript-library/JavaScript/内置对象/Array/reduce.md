@@ -1,29 +1,29 @@
-方法 - reduce()
-===
+# 方法 - reduce()
 
 > Create by **jsLe** on **2019-09-17 09:39:31**  
 > Recently revised in **2019-09-17 09:39:41**
 
-* **原文**：[MDN - reduce()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+- **原文**：[MDN - reduce()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 
-* **功能**：`reduce()` 方法对数组中的每个元素执行一个由您提供的reducer函数(升序执行)，将其结果汇总为单个返回值。
+- **功能**：`reduce()` 方法对数组中的每个元素执行一个由您提供的 reducer 函数(升序执行)，将其结果汇总为单个返回值。
 
-* **语法**：`arr.reduce((prev, next) => { return prev + next }`
-  * `prev`：数组前一项的值
-  * `next`：数组后一项的值
-  * `return`：`return` 出来的值，会被当成下一次的 `prev`
+- **语法**：`arr.reduce((prev, next) => { return prev + next }`
 
-* **返回值**：函数累计处理的结果
+  - `prev`：数组前一项的值
+  - `next`：数组后一项的值
+  - `return`：`return` 出来的值，会被当成下一次的 `prev`
 
-* **代码**：
+- **返回值**：函数累计处理的结果
+
+- **代码**：
 
 ```js
-[1, 2, 3, 4].reduce((prev, next) => {
-  return prev + next;
-}); // 10
-['前端', 'pang', 'liang'].reduce((prev, next, index) => {
-  return (index = 0 ? '-js' : '') + prev + 'js' + next;
-}); // 前端-jspang-jsLe
+;[1, 2, 3, 4].reduce((prev, next) => {
+  return prev + next
+}) // 10
+;['前端', 'pang', 'liang'].reduce((prev, next, index) => {
+  return (index = 0 ? '-js' : '') + prev + 'js' + next
+}) // 前端-jspang-jsLe
 ```
 
 ---

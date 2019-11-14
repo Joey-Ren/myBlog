@@ -1,23 +1,23 @@
-方法 - lastIndexOf()
-===
+# 方法 - lastIndexOf()
 
 > Create by **jsLe** on **2019-09-11 11:21:41**  
 > Recently revised in **2019-09-11 11:24:28**
 
-* **原文**：[MDN - lastIndexOf()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf)
+- **原文**：[MDN - lastIndexOf()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf)
 
-* **功能**：`lastIndexOf()` 方法返回指定值在调用该方法的字符串中最后出现的位置，如果没找到则返回 -1。从该字符串的后面向前查找，从 `fromIndex` 处开始。
+- **功能**：`lastIndexOf()` 方法返回指定值在调用该方法的字符串中最后出现的位置，如果没找到则返回 -1。从该字符串的后面向前查找，从 `fromIndex` 处开始。
 
-* **语法**：`str.lastIndexOf(searchString, fromIndex)`
-  * `searchString`：一个字符串表示被查找的值。
-  * `fromIndex`：从调用该方法字符串的此位置处开始查找（从末尾到开头寻找）。
+- **语法**：`str.lastIndexOf(searchString, fromIndex)`
 
-* **返回值**：指定值的第一次出现的索引；如果没有找到，则返回 -1。
+  - `searchString`：一个字符串表示被查找的值。
+  - `fromIndex`：从调用该方法字符串的此位置处开始查找（从末尾到开头寻找）。
 
-* **代码**：
+- **返回值**：指定值的第一次出现的索引；如果没有找到，则返回 -1。
+
+- **代码**：
 
 ```js
-'jsLes'.lastIndexOf('s', 3); // 1
+'jsLes'.lastIndexOf('s', 3) // 1
 ```
 
 ---

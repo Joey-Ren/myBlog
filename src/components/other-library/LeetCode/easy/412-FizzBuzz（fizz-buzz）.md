@@ -1,5 +1,4 @@
-412 - FizzBuzz（fizz-buzz）
-===
+# 412 - FizzBuzz（fizz-buzz）
 
 > Create by **jsLe** on **2019-07-25 15:48:32**  
 > Recently revised in **2019-09-18 14:03:00**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - 暴力破解](#chapter-three-one) |
-| &emsp;[3.2 解法 - 奇技淫巧](#chapter-three-two) |
+| &emsp;[3.1 解法 - 暴力破解](#chapter-three-one)                                          |
+| &emsp;[3.2 解法 - 奇技淫巧](#chapter-three-two)                                          |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：无
-* **题目地址**：https://leetcode-cn.com/problems/fizz-buzz/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：无
+- **题目地址**：https://leetcode-cn.com/problems/fizz-buzz/
+- **题目内容**：
 
 ```
 写一个程序，输出从 1 到 n 数字的字符串表示。
@@ -66,33 +65,34 @@ n = 15,
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var fizzBuzz = function(n) {
-  let result = [];
+  let result = []
   for (let i = 1; i <= n; i++) {
     if (i % 3 === 0 && i % 5 === 0) {
-      result.push('FizzBuzz');
+      result.push('FizzBuzz')
     } else if (i % 3 === 0) {
-      result.push('Fizz');
+      result.push('Fizz')
     } else if (i % 5 === 0) {
-      result.push('Buzz');
+      result.push('Buzz')
     } else {
-      result.push(i + '');
+      result.push(i + '')
     }
   }
-  return result;
-};
+  return result
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `n`：`15`
 2. `return`：
 
 ```js
-[ '1',
+;[
+  '1',
   '2',
   'Fizz',
   '4',
@@ -106,10 +106,11 @@ var fizzBuzz = function(n) {
   'Fizz',
   '13',
   '14',
-  'FizzBuzz' ]
+  'FizzBuzz'
+]
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -118,11 +119,11 @@ var fizzBuzz = function(n) {
   ✔ Your memory usage beats 57.05 % of javascript submissions (37.3 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `push()`：`push()` 方法将一个或多个元素添加到数组的末尾，并返回该数组的新长度。[`push()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/push.md)
 
-* **解题思路**：
+- **解题思路**：
 
 虽然这是一道 LeetCode 题，但是我觉得这是一道大一作业题，可以说是简单地不能再简单了，完全就是玩了可以丢的那种~
 
@@ -132,21 +133,32 @@ var fizzBuzz = function(n) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var fizzBuzz = function(n) {
-  return Array(n).fill(0).map((_, i) => (i + 1) % 3 === 0? (i + 1) % 5 === 0? 'FizzBuzz': 'Fizz': (i + 1) % 5 === 0? 'Buzz': i + 1 + '');
-};
+  return Array(n)
+    .fill(0)
+    .map((_, i) =>
+      (i + 1) % 3 === 0
+        ? (i + 1) % 5 === 0
+          ? 'FizzBuzz'
+          : 'Fizz'
+        : (i + 1) % 5 === 0
+        ? 'Buzz'
+        : i + 1 + ''
+    )
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `n`：`15`
 2. `return`：
 
 ```js
-[ '1',
+;[
+  '1',
   '2',
   'Fizz',
   '4',
@@ -160,10 +172,11 @@ var fizzBuzz = function(n) {
   'Fizz',
   '13',
   '14',
-  'FizzBuzz' ]
+  'FizzBuzz'
+]
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -172,11 +185,11 @@ var fizzBuzz = function(n) {
   ✔ Your memory usage beats 30.13 % of javascript submissions (37.4 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `map()`：遍历数组，`item` 返回遍历项，`index` 返回当前索引。[`map()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/map.md)
 
-* **解题思路**：
+- **解题思路**：
 
 有点像是强行压缩成一行，引起极度不适~
 

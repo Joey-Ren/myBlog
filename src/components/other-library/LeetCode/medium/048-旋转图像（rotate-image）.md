@@ -1,5 +1,4 @@
-048 - 旋转图像（rotate-image）
-===
+# 048 - 旋转图像（rotate-image）
 
 > Create by **jsLe** on **2019-8-7 08:04:04**  
 > Recently revised in **2019-09-18 14:16:19**
@@ -8,25 +7,25 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven) |
-| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 进一步思考](#chapter-eight) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six)             |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven)     |
+| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 进一步思考](#chapter-eight)   |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：中等
-* **涉及知识**：数组
-* **题目地址**：https://leetcode-cn.com/problems/rotate-image/
-* **题目内容**：
+- **难度**：中等
+- **涉及知识**：数组
+- **题目地址**：https://leetcode-cn.com/problems/rotate-image/
+- **题目内容**：
 
 ```
 给定一个 n × n 的二维矩阵表示一个图像。
@@ -39,7 +38,7 @@
 
 示例 1:
 
-给定 matrix = 
+给定 matrix =
 [
   [1,2,3],
   [4,5,6],
@@ -61,7 +60,7 @@
   [ 2, 4, 8,10],
   [13, 3, 6, 7],
   [15,14,12,16]
-], 
+],
 
 原地旋转输入矩阵，使其变为:
 [
@@ -78,52 +77,52 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var rotate = function(matrix) {
-  const length = matrix.length;
-  let temp = new Array(length);
+  const length = matrix.length
+  let temp = new Array(length)
   for (let i = 0; i < length; i++) {
     for (let j = 0; j < length; j++) {
       if (!temp[i]) {
-        temp[i] = [matrix[i][j]];
+        temp[i] = [matrix[i][j]]
       } else {
-        temp[i].push(matrix[i][j]);
+        temp[i].push(matrix[i][j])
       }
     }
   }
   for (let i = 0; i < length; i++) {
     for (let j = 0; j < length; j++) {
-      matrix[i][j] = temp[length - 1 - j][i];
+      matrix[i][j] = temp[length - 1 - j][i]
     }
   }
-};
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
 
 > [返回目录](#chapter-one)
 
-* `matrix`：
+- `matrix`：
 
 ```js
-[
-  [ 1, 2, 3, 4],
-  [ 5, 6, 7, 8],
-  [ 9,10,11,12],
-  [13,14,15,16]
+;[
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 10, 11, 12],
+  [13, 14, 15, 16]
 ]
 ```
 
-* `return`：
+- `return`：
 
 ```js
-[
+;[
   [13, 9, 5, 1],
-  [14,10, 6, 2],
-  [15,11, 7, 3],
-  [16,12, 8, 4]
+  [14, 10, 6, 2],
+  [15, 11, 7, 3],
+  [16, 12, 8, 4]
 ]
 ```
 
@@ -148,27 +147,27 @@ var rotate = function(matrix) {
 
 > [返回目录](#chapter-one)
 
-**首先**，不知者无畏，像我这样的 *斜杠青年*，当然是怎么简单怎么来：
+**首先**，不知者无畏，像我这样的 _斜杠青年_，当然是怎么简单怎么来：
 
 ```js
 var rotate = function(matrix) {
-  const length = matrix.length;
-  let temp = new Array(length);
+  const length = matrix.length
+  let temp = new Array(length)
   for (let i = 0; i < length; i++) {
     for (let j = 0; j < length; j++) {
       if (!temp[i]) {
-        temp[i] = [matrix[i][j]];
+        temp[i] = [matrix[i][j]]
       } else {
-        temp[i].push(matrix[i][j]);
+        temp[i].push(matrix[i][j])
       }
     }
   }
   for (let i = 0; i < length; i++) {
     for (let j = 0; j < length; j++) {
-      matrix[i][j] = temp[length - 1 - j][i];
+      matrix[i][j] = temp[length - 1 - j][i]
     }
   }
-};
+}
 ```
 
 提交后查看：
@@ -192,7 +191,7 @@ var rotate = function(matrix) {
 请不要使用另一个矩阵来旋转图像。
 ```
 
-好吧，臣妾是不是做错了 -_-|| 我这算起了一个新空间了吧（起了另一个矩阵）。
+好吧，臣妾是不是做错了 -\_-|| 我这算起了一个新空间了吧（起了另一个矩阵）。
 
 ## <a name="chapter-eight" id="chapter-eight">八 进一步思考</a>
 
@@ -231,26 +230,26 @@ class Solution {
 
 ```js
 var rotate = function(matrix) {
-  const length = matrix.length;
+  const length = matrix.length
 
   for (let i = 0; i < length; i++) {
     for (let j = i; j < length; j++) {
-      const temp = matrix[j][i];
-      matrix[j][i] = matrix[i][j];
-      matrix[i][j] = temp;
+      const temp = matrix[j][i]
+      matrix[j][i] = matrix[i][j]
+      matrix[i][j] = temp
     }
   }
 
   for (let i = 0; i < length; i++) {
     for (let j = 0; j < length / 2; j++) {
-      const temp = matrix[i][j];
-      matrix[i][j] = matrix[i][length - j - 1];
-      matrix[i][length - j - 1] = temp;
+      const temp = matrix[i][j]
+      matrix[i][j] = matrix[i][length - j - 1]
+      matrix[i][length - j - 1] = temp
     }
   }
 
-  return matrix;
-};
+  return matrix
+}
 ```
 
 这个什么意思呢？
@@ -258,28 +257,34 @@ var rotate = function(matrix) {
 假设初始数组为：
 
 ```js
-[ [ 1, 2, 3, 4],
-  [ 5, 6, 7, 8],
-  [ 9,10,11,12],
-  [13,14,15,16] ]
+;[
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 10, 11, 12],
+  [13, 14, 15, 16]
+]
 ```
 
 第一个双重 `for()` 循环，遍历得到：
 
 ```js
-[ [ 1, 5, 9, 13 ],
-  [ 2, 6, 10, 14 ],
-  [ 3, 7, 11, 15 ],
-  [ 4, 8, 12, 16 ] ]
+;[
+  [1, 5, 9, 13],
+  [2, 6, 10, 14],
+  [3, 7, 11, 15],
+  [4, 8, 12, 16]
+]
 ```
 
 第二个双重 `for()` 循环，遍历得到：
 
 ```js
-[ [ 13, 9, 5, 1 ],
-  [ 14, 10, 6, 2 ],
-  [ 15, 11, 7, 3 ],
-  [ 16, 12, 8, 4 ] ]
+;[
+  [13, 9, 5, 1],
+  [14, 10, 6, 2],
+  [15, 11, 7, 3],
+  [16, 12, 8, 4]
+]
 ```
 
 即先转置矩阵，然后翻转每一行。
@@ -300,17 +305,17 @@ var rotate = function(matrix) {
 
 ```js
 var rotate = function(matrix) {
-  let n = matrix.length;
-  for (let i = 0; i < Math.floor((n + 1) / 2); i ++) {
+  let n = matrix.length
+  for (let i = 0; i < Math.floor((n + 1) / 2); i++) {
     for (let j = 0; j < Math.floor(n / 2); j++) {
-      let temp = matrix[n - 1 - j][i];
-      matrix[n - 1 - j][i] = matrix[n - 1 - i][n - j - 1];
-      matrix[n - 1 - i][n - j - 1] = matrix[j][n - 1 -i];
-      matrix[j][n - 1 - i] = matrix[i][j];
-      matrix[i][j] = temp;
+      let temp = matrix[n - 1 - j][i]
+      matrix[n - 1 - j][i] = matrix[n - 1 - i][n - j - 1]
+      matrix[n - 1 - i][n - j - 1] = matrix[j][n - 1 - i]
+      matrix[j][n - 1 - i] = matrix[i][j]
+      matrix[i][j] = temp
     }
   }
-};
+}
 ```
 
 Submit：

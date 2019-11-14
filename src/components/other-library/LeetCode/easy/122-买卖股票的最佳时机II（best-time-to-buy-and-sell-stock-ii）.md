@@ -1,5 +1,4 @@
-122 - 买卖股票的最佳时机II（best-time-to-buy-and-sell-stock-ii）
-===
+# 122 - 买卖股票的最佳时机 II（best-time-to-buy-and-sell-stock-ii）
 
 > Create by **jsLe** on **2019-07-01 17:45:53**  
 > Recently revised in **2019-07-01 19:42:53**
@@ -8,23 +7,23 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six)           |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：贪心算法、数组
-* **题目地址**：https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：贪心算法、数组
+- **题目地址**：https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/
+- **题目内容**：
 
 ```
 给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。
@@ -58,17 +57,17 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
-var maxProfit = function (prices) {
-  var res = 0;
+var maxProfit = function(prices) {
+  var res = 0
   for (var i = 0; i < prices.length - 1; i++) {
     if (prices[i] < prices[i + 1]) {
-      res += prices[i + 1] - prices[i];
+      res += prices[i + 1] - prices[i]
     }
   }
-  return res;
+  return res
 }
 ```
 
@@ -94,13 +93,13 @@ var maxProfit = function (prices) {
 
 > [返回目录](#chapter-one)
 
-**首先**，这道题的解法肯定不止我这一种，但是我没想到会是这么 ** 的解法也是可以的。
+**首先**，这道题的解法肯定不止我这一种，但是我没想到会是这么 \*\* 的解法也是可以的。
 
 按照论坛的意思：**只要后一天价格比前一天高，就在前一天买进后一天卖出**
 
 就是说：
 
-* `[1,2,3,4,5]`：
+- `[1,2,3,4,5]`：
 
 1. 1 买 2 卖，收益 `2 - 1 = 1`
 2. 2 买 3 卖，收益 `3 - 2 = 1`
@@ -108,7 +107,7 @@ var maxProfit = function (prices) {
 4. 4 买 5 卖，收益 `5 - 4 = 1`
 5. `sum = 1 + 1 + 1 + 1 = 4`
 
-* `[7,1,5,3,6,4]`：
+- `[7,1,5,3,6,4]`：
 
 1. 1 买 5 卖，收益 `5 - 1 = 4`
 2. 3 卖 6 卖，收益 `6 - 3 = 3`

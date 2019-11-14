@@ -1,5 +1,4 @@
-Java
-===
+# Java
 
 > Create by **jsLe** on **2018-10-28 11:12:28**  
 > Recently revised in **2019-05-23 18:54:22**

@@ -1,5 +1,4 @@
-463 - 岛屿的周长（island-perimeter）
-===
+# 463 - 岛屿的周长（island-perimeter）
 
 > Create by **jsLe** on **2019-10-23 10:40:38**  
 > Recently revised in **2019-10-23 11:45:10**
@@ -8,24 +7,24 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题即测试](#chapter-three) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题即测试](#chapter-three)   |
 | <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 LeetCode Submit](#chapter-four) |
-| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 知识点](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 进一步思考](#chapter-seven) |
+| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 知识点](#chapter-five)          |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six)           |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 进一步思考](#chapter-seven)   |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：哈希表
-* **题目地址**：https://leetcode-cn.com/problems/island-perimeter/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：哈希表
+- **题目地址**：https://leetcode-cn.com/problems/island-perimeter/
+- **题目内容**：
 
 ```
 给定一个包含 0 和 1 的二维网格地图，其中 1 表示陆地 0 表示水域。
@@ -69,21 +68,19 @@
 
 > index.js
 
-* **LeetCode 给定函数体**：
+- **LeetCode 给定函数体**：
 
 ```js
 /**
  * @param {number[][]} grid
  * @return {number}
  */
-var islandPerimeter = function(grid) {
-    
-};
+var islandPerimeter = function(grid) {}
 ```
 
 > 确定了自己的答案再看下面代码哈~
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 /**
@@ -97,12 +94,12 @@ var islandPerimeter = function(grid) {
 const judge = (grid, i, j) => {
   // 如果有上下左右，那么就用上下左右的值
   // 如果上下左右没值，那么就给 0
-  const top = grid[i - 1] ? grid[i - 1][j] : 0;
-  const bottom = grid[i + 1] ? grid[i + 1][j] : 0;
-  const left = grid[i][j - 1] || 0;
-  const right = grid[i][j + 1] || 0;
+  const top = grid[i - 1] ? grid[i - 1][j] : 0
+  const bottom = grid[i + 1] ? grid[i + 1][j] : 0
+  const left = grid[i][j - 1] || 0
+  const right = grid[i][j + 1] || 0
   // 总共 4 条边，出现 1 表明这条边有岛屿
-  return 4 - (top + bottom + left + right);
+  return 4 - (top + bottom + left + right)
 }
 
 /**
@@ -110,29 +107,29 @@ const judge = (grid, i, j) => {
  * @param {number[][]} grid 地图
  * @return {number}
  */
-const islandPerimeter = (grid) => {
+const islandPerimeter = grid => {
   if (grid.length <= 0 || grid.length > 100) {
-    return 0;
+    return 0
   }
-  let result = 0;
+  let result = 0
   for (let i = 0; i < grid.length; i++) {
     for (let j = 0; j < grid[i].length; j++) {
       if (grid[i][j] === 1) {
-        result += judge(grid, i, j);
+        result += judge(grid, i, j)
       }
     }
   }
-  return result;
-};
+  return result
+}
 
 const grid = [
-  [0,1,0,0],
-  [1,1,1,0],
-  [0,1,0,0],
-  [1,1,0,0],
-];
+  [0, 1, 0, 0],
+  [1, 1, 1, 0],
+  [0, 1, 0, 0],
+  [1, 1, 0, 0]
+]
 
-console.log(islandPerimeter(grid));
+console.log(islandPerimeter(grid))
 ```
 
 `node index.js` 返回：

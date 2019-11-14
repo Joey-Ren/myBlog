@@ -1,11 +1,10 @@
-JavaScript 资料室
-===
+# JavaScript 资料室
 
 > Create by **jsLe** on **2018-10-28 10:51:18**  
 > Recently revised in **2019-5-20 08:24:52**
 
-* Here is an article about JavaScript
-* 这里存放了关于 JavaScript 的文章
+- Here is an article about JavaScript
+- 这里存放了关于 JavaScript 的文章
 
 # 目录
 

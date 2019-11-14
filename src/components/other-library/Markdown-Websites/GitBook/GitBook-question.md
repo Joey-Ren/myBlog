@@ -1,5 +1,4 @@
-GitBook 开发问题记录
-===
+# GitBook 开发问题记录
 
 > Create by **jsLe** on **2019-5-23 08:57:02**  
 > Recently revised in **2019-5-29 08:48:05**
@@ -25,15 +24,15 @@ GitBook 开发问题记录
 
 然后，我顺着文章查看：
 
-* [GitBook-Markdown bug](https://github.com/GitbookIO/gitbook-markdown/issues/2)
+- [GitBook-Markdown bug](https://github.com/GitbookIO/gitbook-markdown/issues/2)
 
 ## 关于 CR、LF、CRLF
 
-* CR：Carriage Return，对应 ASCII 中转义字符 \r，表示回车。早期的 Mac 系统（MacIntosh）采用 CR 格式。
-* LF：Linefeed，对应 ASCII 中转义字符 \n，表示换行。Unix / Linux / Mac OS X 等使用 LF 格式。
-* CRLF：Carriage Return & Linefeed，对应 ASCII 中转义字符 \r\n，表示回车并换行。Windows 系统采用两个字符换行，即 CR + LF。
+- CR：Carriage Return，对应 ASCII 中转义字符 \r，表示回车。早期的 Mac 系统（MacIntosh）采用 CR 格式。
+- LF：Linefeed，对应 ASCII 中转义字符 \n，表示换行。Unix / Linux / Mac OS X 等使用 LF 格式。
+- CRLF：Carriage Return & Linefeed，对应 ASCII 中转义字符 \r\n，表示回车并换行。Windows 系统采用两个字符换行，即 CR + LF。
 
-更多可以查看：[CRLF、CR、LF详解](https://blog.csdn.net/lishuoboy/article/details/84768748)
+更多可以查看：[CRLF、CR、LF 详解](https://blog.csdn.net/lishuoboy/article/details/84768748)
 
 我们文中出现的 bug，应该是 GitBook 编译的时候，使用的换行符配置不同，导致 Mac 和 Windows 有差异。
 

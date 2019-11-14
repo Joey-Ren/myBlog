@@ -1,25 +1,24 @@
-方法 - toString()
-===
+# 方法 - toString()
 
 > Create by **jsLe** on **2019-09-16 14:31:52**  
 > Recently revised in **2019-09-16 14:35:31**
 
-* **原文**：[MDN - toString()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toString)
+- **原文**：[MDN - toString()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toString)
 
-* **功能**：`toString()` 方法返回指定对象的字符串形式。
+- **功能**：`toString()` 方法返回指定对象的字符串形式。
 
-* **语法**：`str.toString()`
+- **语法**：`str.toString()`
 
-* **返回值**：指定对象的字符串形式。
+- **返回值**：指定对象的字符串形式。
 
-* **代码**：
+- **代码**：
 
 ```js
 // toString 测试仅能转换数组
-[1, 2].toString(); // '1,2'
+;[1, 2].toString() // '1,2'
 
 // 如果需要转换数字，建议还是 String(Number)
-String(3); // '3'
+String(3) // '3'
 ```
 
 ---

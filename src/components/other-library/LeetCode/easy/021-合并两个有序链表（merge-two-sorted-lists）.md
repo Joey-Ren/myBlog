@@ -1,5 +1,4 @@
-021 - 合并两个有序链表（merge-two-sorted-lists）
-===
+# 021 - 合并两个有序链表（merge-two-sorted-lists）
 
 > Create by **jsLe** on **2019-06-05 08:37:00**  
 > Recently revised in **2019-06-05 17:31:37**
@@ -8,32 +7,32 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 官方题解](#chapter-three-one) |
-| &emsp;[3.2 解题代码](#chapter-three-two) |
-| &emsp;[3.3 执行测试](#chapter-three-three) |
-| &emsp;[3.4 LeetCode Submit](#chapter-three-four) |
-| &emsp;[3.5 知识补充](#chapter-three-five) |
-| &emsp;[3.6 解题思路](#chapter-three-six) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 总结](#chapter-four) |
+| &emsp;[3.1 官方题解](#chapter-three-one)                                                 |
+| &emsp;[3.2 解题代码](#chapter-three-two)                                                 |
+| &emsp;[3.3 执行测试](#chapter-three-three)                                               |
+| &emsp;[3.4 LeetCode Submit](#chapter-three-four)                                         |
+| &emsp;[3.5 知识补充](#chapter-three-five)                                                |
+| &emsp;[3.6 解题思路](#chapter-three-six)                                                 |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 总结](#chapter-four)    |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：链表
-* **题目地址**：https://leetcode-cn.com/problems/merge-two-sorted-lists/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：链表
+- **题目地址**：https://leetcode-cn.com/problems/merge-two-sorted-lists/
+- **题目内容**：
 
 ```
 将两个有序链表合并为一个新的有序链表并返回。
 
-新链表是通过拼接给定的两个链表的所有节点组成的。 
+新链表是通过拼接给定的两个链表的所有节点组成的。
 
 示例：
 输入：1->2->4, 1->3->4
@@ -59,33 +58,33 @@ https://leetcode-cn.com/problems/merge-two-sorted-lists/solution/he-bing-liang-g
 > [返回目录](#chapter-one)
 
 ```js
-var mergeTwoLists = function (l1, l2) {
+var mergeTwoLists = function(l1, l2) {
   var mergedHead = {
       val: -1,
       next: null
     },
-    crt = mergedHead;
+    crt = mergedHead
   while (l1 && l2) {
     if (l1.val > l2.val) {
-      crt.next = l2;
-      l2 = l2.next;
+      crt.next = l2
+      l2 = l2.next
     } else {
-      crt.next = l1;
-      l1 = l1.next;
+      crt.next = l1
+      l1 = l1.next
     }
-    crt = crt.next;
+    crt = crt.next
   }
-  crt.next = l1 || l2;
+  crt.next = l1 || l2
 
-  return mergedHead.next;
-};
+  return mergedHead.next
+}
 ```
 
 ### <a name="chapter-three-three" id="chapter-three-three">3.3 执行测试</a>
 
 > [返回目录](#chapter-one)
 
-* **参数 1**：
+- **参数 1**：
 
 ```js
 l1 = {
@@ -100,7 +99,7 @@ l1 = {
 }
 ```
 
-* **参数 2**：
+- **参数 2**：
 
 ```js
 l2 = {
@@ -115,7 +114,7 @@ l2 = {
 }
 ```
 
-* **返回值**：
+- **返回值**：
 
 ```js
 {
@@ -158,7 +157,7 @@ l2 = {
 
 然后因为 **jsLe** 跟小伙伴们一样，也是 **算法与数据结构** 的菜鸟，所以网上找了篇文章：
 
-js实现链表： https://www.cnblogs.com/EganZhang/p/6594830.html
+js 实现链表： https://www.cnblogs.com/EganZhang/p/6594830.html
 
 **jsLe** 碰到这种结构的时候，也是挠头抓耳，然后百度找到这篇文章，基本的结构看懂了，所以在这推荐给小伙伴们。
 

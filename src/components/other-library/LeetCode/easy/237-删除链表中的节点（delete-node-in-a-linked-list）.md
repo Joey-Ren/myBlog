@@ -1,5 +1,4 @@
-237 - 删除链表中的节点（delete-node-in-a-linked-list）
-===
+# 237 - 删除链表中的节点（delete-node-in-a-linked-list）
 
 > Create by **jsLe** on **2019-07-17 16:54:11**  
 > Recently revised in **2019-07-17 17:30:39**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
 | <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 LeetCode Submit](#chapter-four) |
-| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 解题思路](#chapter-five) |
+| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 解题思路](#chapter-five)        |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：链表
-* **题目地址**：https://leetcode-cn.com/problems/delete-node-in-a-linked-list/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：链表
+- **题目地址**：https://leetcode-cn.com/problems/delete-node-in-a-linked-list/
+- **题目内容**：
 
 ```
 请编写一个函数，使其可以删除某个链表中给定的（非末尾）节点，你将只被给定要求被删除的节点。
@@ -55,13 +54,13 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var deleteNode = function(node) {
-  node.val = node.next.val;
-  node.next = node.next.next;
-};
+  node.val = node.next.val
+  node.next = node.next.next
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 LeetCode Submit</a>
@@ -86,7 +85,7 @@ var deleteNode = function(node) {
 ```js
 var deleteNode = function(node) {
   // ...
-};
+}
 ```
 
 它给的代码上，标明传的参是 `node`，所以 **jsLe** 就懵圈了，这是想干啥。
@@ -101,9 +100,9 @@ https://leetcode-cn.com/problems/delete-node-in-a-linked-list/comments/
 
 ```js
 var deleteNode = function(node) {
-  node.val = node.next.val;
-  node.next = node.next.next;
-};
+  node.val = node.next.val
+  node.next = node.next.next
+}
 ```
 
 **最后**，怎么想都想不透，这智商锅我背不背~

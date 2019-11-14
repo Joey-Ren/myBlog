@@ -1,5 +1,4 @@
-121 - 买卖股票的最佳时机（best-time-to-buy-and-sell-stock）
-===
+# 121 - 买卖股票的最佳时机（best-time-to-buy-and-sell-stock）
 
 > Create by **jsLe** on **2019-7-1 08:37:50**  
 > Recently revised in **2019-7-1 09:15:08**
@@ -8,23 +7,23 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - 暴力破解](#chapter-three-one) |
-| &emsp;[3.2 解法 - 机遇求解](#chapter-three-two) |
-| &emsp;[3.3 解法 - 进一步思考](#chapter-three-three) |
+| &emsp;[3.1 解法 - 暴力破解](#chapter-three-one)                                          |
+| &emsp;[3.2 解法 - 机遇求解](#chapter-three-two)                                          |
+| &emsp;[3.3 解法 - 进一步思考](#chapter-three-three)                                      |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数组、动态规划
-* **题目地址**：https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数组、动态规划
+- **题目地址**：https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/
+- **题目内容**：
 
 ```
 给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。
@@ -55,29 +54,29 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var maxProfit = function(prices) {
-  let max = 0;
+  let max = 0
   for (let i = 0; i < prices.length - 1; i++) {
     for (let j = i + 1; j < prices.length; j++) {
-      let temp = prices[j] - prices[i];
+      let temp = prices[j] - prices[i]
       if (temp > max) {
-        max = temp;
+        max = temp
       }
     }
   }
-  return max;
-};
+  return max
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `prices`：`[7, 1, 5, 3, 6, 4]`
 2. `return`：`5`
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 √ Accepted
@@ -86,7 +85,7 @@ var maxProfit = function(prices) {
   √ Your memory usage beats 81.63 % of javascript submissions (35.1 MB)
 ```
 
-* **解题思路**：
+- **解题思路**：
 
 **暴力一时爽，一直暴力一直爽**
 
@@ -117,9 +116,9 @@ var maxProfit = function(prices) {
 ```js
 for (let i = 0; i < prices.length - 1; i++) {
   for (let j = i + 1; j < prices.length; j++) {
-    let temp = prices[j] - prices[i];
+    let temp = prices[j] - prices[i]
     if (temp > max) {
-      max = temp;
+      max = temp
     }
   }
 }
@@ -137,29 +136,29 @@ for (let i = 0; i < prices.length - 1; i++) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var maxProfit = function(prices) {
-  let min = Number.MAX_VALUE;
-  let max = 0;
+  let min = Number.MAX_VALUE
+  let max = 0
   for (let i = 0; i < prices.length; i++) {
     if (prices[i] < min) {
-      min = prices[i];
+      min = prices[i]
     } else if (prices[i] - min > max) {
-      max = prices[i] - min;
+      max = prices[i] - min
     }
   }
-  return max;
-};
+  return max
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `prices`：`[7, 1, 5, 3, 6, 4]`
 2. `return`：`5`
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 √ Accepted
@@ -168,7 +167,7 @@ var maxProfit = function(prices) {
   √ Your memory usage beats 22.08 % of javascript submissions (35.8 MB)
 ```
 
-* **解题思路**：
+- **解题思路**：
 
 这种解法，相对于暴力破解，也是挺有意思的。
 
@@ -187,17 +186,17 @@ var maxProfit = function(prices) {
 
 ```js
 var maxProfit = function(prices) {
-  let min = Number.MAX_VALUE;
-  let max = 0;
+  let min = Number.MAX_VALUE
+  let max = 0
   for (let i = 0; i < prices.length; i++) {
     if (prices[i] < min) {
-      min = prices[i];
+      min = prices[i]
     } else if (prices[i] - min > max) {
-      max = prices[i] - min;
+      max = prices[i] - min
     }
   }
-  return max;
-};
+  return max
+}
 ```
 
 **最后**，我们获取到了最高值，解题完毕。

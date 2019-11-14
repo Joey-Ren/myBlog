@@ -1,14 +1,13 @@
-ECharts + Vue 折腾记
-===
+# ECharts + Vue 折腾记
 
 > Create by **jsLe** on **2018-11-28 11:01:39**  
 > Recently revised in **2019-05-31 16:30:08**
 
 **Hello 小伙伴们，如果觉得本文还不错，记得点个赞或者给个 star，你们的赞和 star 是我编写更多更精彩文章的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
 
-技术官网就是躺坑的地儿！  
+技术官网就是躺坑的地儿！
 
-翻遍百度文，一把辛酸泪~  
+翻遍百度文，一把辛酸泪~
 
 整合网上的 Vue + ElementUI，Vue + ECharts，ECharts + 百度地图 API……的文章，带你走非一般的道路。
 
@@ -16,26 +15,26 @@ ECharts + Vue 折腾记
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |                                                                             
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 正文](#chapter-three) |
-| &emsp;[3.1 Vue](#chapter-three-one) |
-| &emsp;[3.2 Echarts](#chapter-three-two) |
-| &emsp;[3.3 ElementUI](#chapter-three-three) |
-| &emsp;[3.4 百度地图](#chapter-three-four) |
+| 目录                                                                                      |
+| ----------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                   |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)        |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 正文](#chapter-three)  |
+| &emsp;[3.1 Vue](#chapter-three-one)                                                       |
+| &emsp;[3.2 Echarts](#chapter-three-two)                                                   |
+| &emsp;[3.3 ElementUI](#chapter-three-three)                                               |
+| &emsp;[3.4 百度地图](#chapter-three-four)                                                 |
 | <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 精细入微](#chapter-four) |
-| &emsp;[4.1 百度地图调整](#chapter-four-one) |
-| &emsp;[4.2 样式问题集](#chapter-four-two) |
+| &emsp;[4.1 百度地图调整](#chapter-four-one)                                               |
+| &emsp;[4.2 样式问题集](#chapter-four-two)                                                 |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#catalog-chapter-two)
 
-现在是大数据和云计算的时代，所以数据可视化逐渐变成一种趋势。  
+现在是大数据和云计算的时代，所以数据可视化逐渐变成一种趋势。
 
-而 ECharts 对于制作的图表可以满足小伙伴们的创造力，它具备华丽的外衣，且实用。  
+而 ECharts 对于制作的图表可以满足小伙伴们的创造力，它具备华丽的外衣，且实用。
 
 在这里，**jsLe** 将通过 ECharts + Vue 进行折腾。
 
@@ -56,10 +55,10 @@ ECharts + Vue 折腾记
 10. [在 vue 项目中引入高德地图及其 UI 组件 | CSDN - shuaizi96](https://blog.csdn.net/shuaizi96/article/details/73611254/)
 11. [vue 引入高德地图 echarts](https://www.jianshu.com/p/6fa910498b26)
 12. [百度地图引用报错 A parser-blocking, cross site (i.e. different eTLD+1) script | CSDN - 雨中畅游](https://blog.csdn.net/viewyu12345/article/details/80705114)
-13. [vue 引入公共css文件 | CSDN - Smartsunsing](https://blog.csdn.net/smartsunsing/article/details/78529374)
-14. [调用百度地图api 去掉地图左下角LOGO或文字 | CSDN - 陈小黏](https://blog.csdn.net/weixin_37930716/article/details/81034352)
-15. [Echarts数据可视化系列文章 | CSDN - 数据架构师](https://blog.csdn.net/luanpeng825485697/article/details/76864440)
-16. [几种css炫酷背景欣赏 | CSDN - 小圣贤君](https://blog.csdn.net/zhongguohaoshaonian/article/details/78393563)
+13. [vue 引入公共 css 文件 | CSDN - Smartsunsing](https://blog.csdn.net/smartsunsing/article/details/78529374)
+14. [调用百度地图 api 去掉地图左下角 LOGO 或文字 | CSDN - 陈小黏](https://blog.csdn.net/weixin_37930716/article/details/81034352)
+15. [Echarts 数据可视化系列文章 | CSDN - 数据架构师](https://blog.csdn.net/luanpeng825485697/article/details/76864440)
+16. [几种 css 炫酷背景欣赏 | CSDN - 小圣贤君](https://blog.csdn.net/zhongguohaoshaonian/article/details/78393563)
 
 ## <a name="chapter-three" id="chapter-three">三 正文</a>
 
@@ -69,8 +68,8 @@ Now, let's go~
 
 > 如果你觉得自己的 npm 下载速度过慢，请使用 cnpm：
 
-* 安装：`npm install -g cnpm --registry=https://registry.npm.taobao.org`
-* 使用：`cnpm i 插件 -g`
+- 安装：`npm install -g cnpm --registry=https://registry.npm.taobao.org`
+- 使用：`cnpm i 插件 -g`
 
 ### <a name="chapter-three-one" id="chapter-three-one">3.1 Vue</a>
 
@@ -78,8 +77,8 @@ Now, let's go~
 
 Vue 参考文档：
 
-* [介绍 Vue.js | Vue 官网](https://cn.vuejs.org/v2/guide/)
-* [介绍 Vue Router | Vue Router 官网](https://router.vuejs.org/zh/)
+- [介绍 Vue.js | Vue 官网](https://cn.vuejs.org/v2/guide/)
+- [介绍 Vue Router | Vue Router 官网](https://router.vuejs.org/zh/)
 
 步骤：
 
@@ -100,7 +99,7 @@ npm i echarts -S
 
 **然后**，你可以选择按需引用还是全局引用：
 
-* **全局引用**
+- **全局引用**
 
 &emsp;ECharts 初始化应在钩子函数 `mounted()` 中，这个钩子函数是在 `el` 被新创建的 `vm.$el` 替换，并挂载到实例上去之后调用。
 
@@ -173,9 +172,9 @@ export default {
 </style>
 ```
 
-* **按需引用**
+- **按需引用**
 
-如果我们使用全局引用。将 ECharts 图表打包，会导致体积过大，所以项目中最好按需引入。  
+如果我们使用全局引用。将 ECharts 图表打包，会导致体积过大，所以项目中最好按需引入。
 
 在这里我们使用 `requrie` 引用而不是 `import`，因为 `import` 必须写全路径，比较麻烦。
 
@@ -242,7 +241,7 @@ export default {
 
 > [返回目录](#catalog-chapter-three)
 
-考虑到项目没有 UI 设计稿。那么，就需要引用一款 Vue 的 UI 框架了，偷懒用 ElementUI 吧。  
+考虑到项目没有 UI 设计稿。那么，就需要引用一款 Vue 的 UI 框架了，偷懒用 ElementUI 吧。
 
 然后，为了使项目尽可能小巧，**jsLe** 打算按需引入 ElementUI：
 
@@ -266,7 +265,7 @@ export default {
     "stage-2"
   ],
   "plugins": [
-    "transform-vue-jsx", 
+    "transform-vue-jsx",
     "transform-runtime",
     [
       "component",
@@ -290,8 +289,8 @@ import router from './router'
 
 Vue.config.productionTip = false
 
-import {Row, Col} from 'element-ui';
-Vue.use(Row).use(Col);
+import { Row, Col } from 'element-ui'
+Vue.use(Row).use(Col)
 
 new Vue({
   el: '#app',
@@ -317,10 +316,13 @@ new Vue({
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>ECharts 图表</title>
-    <script type="text/javascript" src="http://api.map.baidu.com/getscript?v=3.0&ak=Xjmh9v5jGa******6ZVf0PU2ueSedr5F"></script>
+    <script
+      type="text/javascript"
+      src="http://api.map.baidu.com/getscript?v=3.0&ak=Xjmh9v5jGa******6ZVf0PU2ueSedr5F"
+    ></script>
   </head>
   <body>
     <div id="app"></div>
@@ -412,9 +414,9 @@ export default {
 
 > [返回目录](#catalog-chapter-four)
 
-有时候，一些小细节总会困惑你。  
+有时候，一些小细节总会困惑你。
 
-在这里，**jsLe** 将贴出自己解决的小细节。  
+在这里，**jsLe** 将贴出自己解决的小细节。
 
 结合 `Ctrl + F` 搜索关键字喔~
 
@@ -422,21 +424,20 @@ export default {
 
 > [返回目录](#catalog-chapter-three)
 
-* **问**：为什么开发的时候控制台报 `warning`？  
+- **问**：为什么开发的时候控制台报 `warning`？
 
 ```
-api?v=3.0&ak=Xjmh9v5jGa*****6ZVf0PU2ueSedr5F:1 
-A parser-blocking, 
+api?v=3.0&ak=Xjmh9v5jGa*****6ZVf0PU2ueSedr5F:1
+A parser-blocking,
 cross site (i.e. different eTLD+1) script,
 http://api.map.baidu.com/getscript?
 ```
 
-* **答**：  
+- **答**：
 
 这时候你的引用地址应该是：
 
-`<script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=Xjmh9v5jGa******6ZVf0PU2ueSedr5F"></script>
-`
+`<script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=Xjmh9v5jGa******6ZVf0PU2ueSedr5F"></script>`
 
 你只需要将 `api` 改成 `getscript` 即可解决它的 `warning` 警告：
 
@@ -444,9 +445,9 @@ http://api.map.baidu.com/getscript?
 
 <hr>
 
-* **问**：如何去除百度地图左下角的信息（logo 和 文字）？
+- **问**：如何去除百度地图左下角的信息（logo 和 文字）？
 
-* **答**：
+- **答**：
 
 &emsp;你只需要在全局样式里写上下面这段话就可以屏蔽它：
 
@@ -464,9 +465,9 @@ http://api.map.baidu.com/getscript?
 
 > [返回目录](#catalog-chapter-three)
 
-* **问**：为什么 Chrome 上的 `body` 会有 `8px` 的 `margin` 值？或者 `img` 不贴边之类的。
+- **问**：为什么 Chrome 上的 `body` 会有 `8px` 的 `margin` 值？或者 `img` 不贴边之类的。
 
-* **答**：
+- **答**：
 
 这是浏览器自带的样式喔，去掉方式：
 
@@ -492,48 +493,98 @@ th, td /* 表格元素 - table elements */ {
 }
 
 /** 设置默认字体 - setting the default font **/
-body, button, input, select, textarea {
+body,
+button,
+input,
+select,
+textarea {
   font: 18px/1.5 '黑体', Helvetica, sans-serif;
 }
-h1, h2, h3, h4, h5, h6, button, input, select, textarea { font-size: 100%; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
 
 /** 重置列表元素 - reset the list element **/
-ul, ol { list-style: none; }
+ul,
+ol {
+  list-style: none;
+}
 
 /** 重置文本格式元素 - reset the text format element **/
-a, a:hover { text-decoration: none; }
+a,
+a:hover {
+  text-decoration: none;
+}
 
 /** 重置表单元素 - reset the form element **/
-button { cursor: pointer; }
-input { font-size: 18px; outline: none; }
+button {
+  cursor: pointer;
+}
+input {
+  font-size: 18px;
+  outline: none;
+}
 
 /** 重置表格元素 - reset the table element **/
-table { border-collapse: collapse; border-spacing: 0; }
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
 /** 图片自适应 - image responsize **/
-img { border: 0; display: inline-block; width: 100%; max-width: 100%; height: auto; vertical-align: middle; }
+img {
+  border: 0;
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
 
 /* 
     * 默认box-sizing是content-box，该属性导致padding会撑大div，使用border-box可以解决该问题
     * set border-box for box-sizing when you use div, it solve the problem when you add padding and don't want to make the div width bigger
 */
-div, input { box-sizing: border-box; }
+div,
+input {
+  box-sizing: border-box;
+}
 
 /** 清除浮动 - clear float **/
-.jsLe-clear:after, .clear:after {
+.jsLe-clear:after,
+.clear:after {
   content: '\20';
   display: block;
   height: 0;
   clear: both;
 }
-.jsLe-clear, .clear {
+.jsLe-clear,
+.clear {
   *zoom: 1;
 }
 
 /** 设置input的placeholder - set input placeholder **/
-input::-webkit-input-placeholder { color: #919191; font-size: .26rem } /* Webkit browsers */
-input::-moz-placeholder { color: #919191; font-size: .26rem } /* Mozilla Firefox */
-input::-ms-input-placeholder { color: #919191; font-size: .26rem } /* Internet Explorer */
+input::-webkit-input-placeholder {
+  color: #919191;
+  font-size: 0.26rem;
+} /* Webkit browsers */
+input::-moz-placeholder {
+  color: #919191;
+  font-size: 0.26rem;
+} /* Mozilla Firefox */
+input::-ms-input-placeholder {
+  color: #919191;
+  font-size: 0.26rem;
+} /* Internet Explorer */
 ```
 
 然后，在项目目录的 `src` 目录下的 `main.js` 文件中添加下面的语句，就可以引用 `css` 样式，清空浏览器的内置了：

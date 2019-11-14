@@ -57,68 +57,68 @@
     <script src="http://www.jq22.com/jquery/1.11.1/jquery.min.js"></script>
     <script>
       $(function() {
-        var imgl = $("div.pic img").size();
-        var deg = 360 / imgl;
-        var roY = 0;
-        var rox = -10;
+        var imgl = $('div.pic img').size()
+        var deg = 360 / imgl
+        var roY = 0
+        var rox = -10
         var xn = 0,
-          yn = 0;
-        var play = null;
+          yn = 0
+        var play = null
 
-        $("div.pic img").each(function(i) {
+        $('div.pic img').each(function(i) {
           $(this).css({
-            transform: "rotateY(" + i * deg + "deg) translateZ(350px)"
-          });
-          $(this).attr("ondragstart", "return false");
-        });
+            transform: 'rotateY(' + i * deg + 'deg) translateZ(350px)'
+          })
+          $(this).attr('ondragstart', 'return false')
+        })
         $(document)
           .mousedown(function(ev) {
-            var x_ = ev.clientX;
-            var y_ = ev.clientY;
-            clearInterval(play);
-            $(this).bind("mousemove", function(ev) {
-              var x = ev.clientX;
-              var y = ev.clientY;
+            var x_ = ev.clientX
+            var y_ = ev.clientY
+            clearInterval(play)
+            $(this).bind('mousemove', function(ev) {
+              var x = ev.clientX
+              var y = ev.clientY
 
-              xn = x - x_;
-              yn = y - y_;
-              varyn = y - y_;
-              roY += xn * 0.2;
-              rox -= yn * 0.1;
+              xn = x - x_
+              yn = y - y_
+              varyn = y - y_
+              roY += xn * 0.2
+              rox -= yn * 0.1
 
-              $("div.pic").css({
+              $('div.pic').css({
                 transform:
-                  "perspective(800px) rotateX(" +
+                  'perspective(800px) rotateX(' +
                   rox +
-                  "deg) rotateY(" +
+                  'deg) rotateY(' +
                   roY +
-                  "deg)"
-              });
+                  'deg)'
+              })
 
-              x_ = ev.clientX;
-              y_ = ev.clientY;
-            });
+              x_ = ev.clientX
+              y_ = ev.clientY
+            })
           })
           .mouseup(function() {
-            $(this).unbind("mousemove");
+            $(this).unbind('mousemove')
             var play = setInterval(function() {
-              xn *= 0.95;
-              yn *= 0.95;
-              if (Math.abs(xn) < 1 && Math.abs(yn) < 1) clearInterval(play);
+              xn *= 0.95
+              yn *= 0.95
+              if (Math.abs(xn) < 1 && Math.abs(yn) < 1) clearInterval(play)
 
-              roY += xn * 0.2;
-              rox -= yn * 0.1;
-              $("div.pic").css({
+              roY += xn * 0.2
+              rox -= yn * 0.1
+              $('div.pic').css({
                 transform:
-                  "perspective(800px) rotateX(" +
+                  'perspective(800px) rotateX(' +
                   rox +
-                  "deg) rotateY(" +
+                  'deg) rotateY(' +
                   roY +
-                  "deg)"
-              });
-            }, 30);
-          });
-      });
+                  'deg)'
+              })
+            }, 30)
+          })
+      })
     </script>
   </body>
 </html>

@@ -1,5 +1,4 @@
-455 - 分发饼干（assign-cookies）
-===
+# 455 - 分发饼干（assign-cookies）
 
 > Create by **jsLe** on **2019-07-30 11:12:02**  
 > Recently revised in **2019-09-18 14:10:47**
@@ -8,25 +7,25 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven) |
-| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 进一步思考](#chapter-eight) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six)             |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven)     |
+| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 进一步思考](#chapter-eight)   |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：贪心算法
-* **题目地址**：https://leetcode-cn.com/problems/assign-cookies/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：贪心算法
+- **题目地址**：https://leetcode-cn.com/problems/assign-cookies/
+- **题目内容**：
 
 ```
 假设你是一位很棒的家长，想要给你的孩子们一些小饼干。但是，每个孩子最多只能给一块饼干。对每个孩子 i ，都有一个胃口值 gi ，这是能让孩子们满足胃口的饼干的最小尺寸；并且每块饼干 j ，都有一个尺寸 sj 。如果 sj >= gi ，我们可以将这个饼干 j 分配给孩子 i ，这个孩子会得到满足。你的目标是尽可能满足越多数量的孩子，并输出这个最大数值。
@@ -42,7 +41,7 @@
 
 输出: 1
 
-解释: 
+解释:
 你有三个孩子和两块小饼干，3个孩子的胃口值分别是：1,2,3。
 虽然你有两块小饼干，由于他们的尺寸都是1，你只能让胃口值是1的孩子满足。
 所以你应该输出1。
@@ -53,12 +52,11 @@
 
 输出: 2
 
-解释: 
+解释:
 你有两个孩子和三块小饼干，2个孩子的胃口值分别是1,2。
 你拥有的饼干数量和尺寸都足以让所有孩子满足。
 所以你应该输出2.
 ```
-
 
 ## <a name="chapter-three" id="chapter-three">三 解题</a>
 
@@ -66,32 +64,32 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var findContentChildren = function(g, s) {
-  g.sort((a, b) => a - b);
-  s.sort((a, b) => a - b);
+  g.sort((a, b) => a - b)
+  s.sort((a, b) => a - b)
 
-  let result  = 0;
+  let result = 0
 
-  let i = 0;
-  let j = 0;
+  let i = 0
+  let j = 0
 
   while (i < g.length && j < s.length) {
     if (g[i] <= s[j]) {
       // 可以满足胃口，喂食
-      result += 1;
-      i += 1;
-      j += 1;
+      result += 1
+      i += 1
+      j += 1
     } else {
       // 不满足胃口，查看下一块小饼干
-      j += 1;
+      j += 1
     }
   }
 
-  return result;
-};
+  return result
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
@@ -127,7 +125,6 @@ var findContentChildren = function(g, s) {
 
 > [返回目录](#chapter-one)
 
-
 **首先**，理解题意：
 
 1. 一个饼干对应一个小朋友
@@ -146,28 +143,28 @@ var findContentChildren = function(g, s) {
 
 ```js
 var findContentChildren = function(g, s) {
-  g.sort((a, b) => a - b);
-  s.sort((a, b) => a - b);
+  g.sort((a, b) => a - b)
+  s.sort((a, b) => a - b)
 
-  let result  = 0;
+  let result = 0
 
-  let i = 0;
-  let j = 0;
+  let i = 0
+  let j = 0
 
   while (i < g.length && j < s.length) {
     if (g[i] <= s[j]) {
       // 可以满足胃口，喂食
-      result += 1;
-      i += 1;
-      j += 1;
+      result += 1
+      i += 1
+      j += 1
     } else {
       // 不满足胃口，查看下一块小饼干
-      j += 1;
+      j += 1
     }
   }
 
-  return result;
-};
+  return result
+}
 ```
 
 提交尝试下：

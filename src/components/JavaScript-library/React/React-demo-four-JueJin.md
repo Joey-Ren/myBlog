@@ -1,21 +1,20 @@
-React Demo Four - 掘金
-===
+# React Demo Four - 掘金
 
 > Create by **jsLe** on **2019-5-15 08:25:08**  
 > Recently revised in **2019-05-31 15:34:57**
 
 **Hello 小伙伴们，如果觉得本文还不错，记得给个 **star** ， 小伙伴们的 **star** 是我持续更新的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
 
-* [React 系列文章代码地址](https://github.com/LiangJunrong/React)
+- [React 系列文章代码地址](https://github.com/LiangJunrong/React)
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 正文](#chapter-three) |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
@@ -38,8 +37,8 @@ React Demo Four - 掘金
 
 **最后**，说到这里小伙伴们心里应该有谱了，至于 **jsLe** 的想法或者你对自己的未来有想法了想找个人来个中肯的建议，你可以联系 **jsLe**：
 
-* QQ：1741020489
-* 微信：
+- QQ：1741020489
+- 微信：
 
 ![图](../../public-repertory/img/z-small-wechat.jpeg)
 
@@ -47,13 +46,13 @@ React Demo Four - 掘金
 
 > [返回目录](#chapter-one)
 
-* **实现效果**：
+- **实现效果**：
 
 ![图](../../public-repertory/img/js-react-demo-four-1.png)
 
-* **源码下载**：[React 系列文章代码地址](https://github.com/LiangJunrong/React)
+- **源码下载**：[React 系列文章代码地址](https://github.com/LiangJunrong/React)
 
-* **使用技术**：
+- **使用技术**：
 
 ```js
 "dependencies": {

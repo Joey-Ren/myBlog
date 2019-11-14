@@ -1,5 +1,4 @@
-232 - 用栈实现队列（implement-queue-using-stacks）
-===
+# 232 - 用栈实现队列（implement-queue-using-stacks）
 
 > Create by **jsLe** on **2019-7-16 08:15:25**  
 > Recently revised in **2019-7-16 08:39:59**
@@ -8,23 +7,23 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six)           |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：栈、设计
-* **题目地址**：https://leetcode-cn.com/problems/implement-queue-using-stacks/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：栈、设计
+- **题目地址**：https://leetcode-cn.com/problems/implement-queue-using-stacks/
+- **题目内容**：
 
 ```
 使用栈实现队列的下列操作：
@@ -38,7 +37,7 @@ empty() -- 返回队列是否为空。
 MyQueue queue = new MyQueue();
 
 queue.push(1);
-queue.push(2);  
+queue.push(2);
 queue.peek();  // 返回 1
 queue.pop();   // 返回 1
 queue.empty(); // 返回 false
@@ -55,43 +54,43 @@ queue.empty(); // 返回 false
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var MyQueue = function() {
-  this.stack1 = [];
-  this.stack2 = [];
-};
+  this.stack1 = []
+  this.stack2 = []
+}
 
 MyQueue.prototype.push = function(x) {
   // 检查 stack2 是否为空，如果不为空把 stack2 的内容 pop 出来在压入 stack1 中
   while (this.stack2.length) {
-    this.stack1.push(this.stack2.pop());
+    this.stack1.push(this.stack2.pop())
   }
-  this.stack1.push(x);
-};
+  this.stack1.push(x)
+}
 
 MyQueue.prototype.pop = function() {
   // 每次 pop 都先把 stack1 中的元素压入 stack2 中
   while (this.stack1.length) {
-    this.stack2.push(this.stack1.pop());
+    this.stack2.push(this.stack1.pop())
   }
-  return this.stack2.pop();
-};
+  return this.stack2.pop()
+}
 
 MyQueue.prototype.peek = function() {
   while (this.stack2.length) {
-    this.stack1.push(this.stack2.pop());
+    this.stack1.push(this.stack2.pop())
   }
-  return this.stack1[0];
-};
+  return this.stack1[0]
+}
 
 MyQueue.prototype.empty = function() {
   while (this.stack2.length) {
-    this.stack1.push(this.stack2.pop());
+    this.stack1.push(this.stack2.pop())
   }
-  return !this.stack1.length;
-};
+  return !this.stack1.length
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
@@ -99,13 +98,13 @@ MyQueue.prototype.empty = function() {
 > [返回目录](#chapter-one)
 
 ```js
-let queue = new MyQueue();
+let queue = new MyQueue()
 
-queue.push(1);
-queue.push(2);
-console.log(queue.peek());  // 1
-console.log(queue.pop());   // 1
-console.log(queue.empty()); // false
+queue.push(1)
+queue.push(2)
+console.log(queue.peek()) // 1
+console.log(queue.pop()) // 1
+console.log(queue.empty()) // false
 ```
 
 ## <a name="chapter-five" id="chapter-five">五 LeetCode Submit</a>
@@ -131,13 +130,13 @@ console.log(queue.empty()); // false
 
 **那么**，我们就讲讲这两者：
 
-* 队列：先进先出。简单来说，就是有一个数组，通过 `push()` 推进每个元素，通过 `shift()` 推出第一个元素，这种形式就是队列。
-* 栈：先进后出。简单来说，就是有一个数组，通过 `push()` 推进每个元素，通过 `pop()` 推出最后一个元素，这种形式就是栈。
+- 队列：先进先出。简单来说，就是有一个数组，通过 `push()` 推进每个元素，通过 `shift()` 推出第一个元素，这种形式就是队列。
+- 栈：先进后出。简单来说，就是有一个数组，通过 `push()` 推进每个元素，通过 `pop()` 推出最后一个元素，这种形式就是栈。
 
 如果小伙伴们还是不理解，那么我们讲讲两个例子：
 
-* 队列：饭堂打饭。我们需要排队，先到的排前面，打完饭后可以先走。
-* 栈；俄罗斯套娃，或者叠罗汉。先进的需要最后出，要不然取不出来，或者罗汉直接倒了。
+- 队列：饭堂打饭。我们需要排队，先到的排前面，打完饭后可以先走。
+- 栈；俄罗斯套娃，或者叠罗汉。先进的需要最后出，要不然取不出来，或者罗汉直接倒了。
 
 **最后**，根据这个思路，我们可以轻易求解。
 

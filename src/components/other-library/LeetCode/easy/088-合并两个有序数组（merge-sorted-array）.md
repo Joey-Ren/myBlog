@@ -1,5 +1,4 @@
-088 - 合并两个有序数组（merge-sorted-array）
-===
+# 088 - 合并两个有序数组（merge-sorted-array）
 
 > Create by **jsLe** on **2019-06-12 10:47:55**  
 > Recently revised in **2019-09-18 10:22:26**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - 暴力破解](#chapter-three-one) |
-| &emsp;[3.2 解法 - 双指针](#chapter-three-two) |
+| &emsp;[3.1 解法 - 暴力破解](#chapter-three-one)                                          |
+| &emsp;[3.2 解法 - 双指针](#chapter-three-two)                                            |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数组、双指针
-* **题目地址**：https://leetcode-cn.com/problems/merge-sorted-array/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数组、双指针
+- **题目地址**：https://leetcode-cn.com/problems/merge-sorted-array/
+- **题目内容**：
 
 ```
 给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组。
@@ -51,21 +50,21 @@ nums2 = [2,5,6],       n = 3
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var merge = function(nums1, m, nums2, n) {
   for (let i = 0; i < n; i++) {
-    nums1[i + m] = nums2[i];
+    nums1[i + m] = nums2[i]
   }
-  nums1.sort(sorter);
+  nums1.sort(sorter)
   function sorter(a, b) {
-    return a - b;
+    return a - b
   }
-};
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums1`：`[1,2,3,0,0,0]`
 2. `m`：`3`
@@ -74,10 +73,10 @@ var merge = function(nums1, m, nums2, n) {
 5. `return`：
 
 ```js
-[1, 2, 2, 3, 5, 6]
+;[1, 2, 2, 3, 5, 6]
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -86,11 +85,11 @@ var merge = function(nums1, m, nums2, n) {
   ✔ Your memory usage beats 50.07 % of javascript submissions (34.4 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `sort()`：排序，保持返回数组的数字为顺序排列。[`sort()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/sort.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **首先**，我们遍历一次小于 `n` 的次数，将 `nums2` 逐个替换到 `nums1` 中 `m` 长度后。
 
@@ -98,7 +97,7 @@ var merge = function(nums1, m, nums2, n) {
 
 **最后**，我们不需要 `return`，因为它会默认取 `nums1`。
 
-* **进一步思考**：
+- **进一步思考**：
 
 这种方式还能不能优化呢？
 
@@ -106,9 +105,9 @@ var merge = function(nums1, m, nums2, n) {
 
 ```js
 var merge = function(nums1, m, nums2, n) {
-  nums1.splice(m, n, ...nums2);
-  nums1.sort((a, b) => (a - b));
-};
+  nums1.splice(m, n, ...nums2)
+  nums1.sort((a, b) => a - b)
+}
 ```
 
 仅使用两行代码就可以解决，而且效率还不会太低：
@@ -124,37 +123,37 @@ var merge = function(nums1, m, nums2, n) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
-var merge = function (nums1, m, nums2, n) {
-  let count1 = 0;
-  let count2 = 0;
-  let len = nums1.length;
+var merge = function(nums1, m, nums2, n) {
+  let count1 = 0
+  let count2 = 0
+  let len = nums1.length
   while (count1 < m && count2 < n) {
     if (nums1[count1] > nums2[count2]) {
-      nums1.push(nums2[count2]);
-      count2 += 1;
+      nums1.push(nums2[count2])
+      count2 += 1
     } else {
-      nums1.push(nums1[count1]);
-      count1 += 1;
+      nums1.push(nums1[count1])
+      count1 += 1
     }
   }
 
   if (count1 < m) {
-    nums1.push(...nums1.slice(count1, m));
+    nums1.push(...nums1.slice(count1, m))
   }
 
   if (count2 < n) {
-    nums1.push(...nums2.slice(count2, n));
+    nums1.push(...nums2.slice(count2, n))
   }
 
-  nums1.splice(0, len);
-  return nums1;
-};
+  nums1.splice(0, len)
+  return nums1
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums1`：`[1,2,3,0,0,0]`
 2. `m`：`3`
@@ -163,10 +162,10 @@ var merge = function (nums1, m, nums2, n) {
 5. `return`：
 
 ```js
-[1, 2, 2, 3, 5, 6]
+;[1, 2, 2, 3, 5, 6]
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -175,15 +174,15 @@ var merge = function (nums1, m, nums2, n) {
   ✔ Your memory usage beats 97.87 % of javascript submissions (33.4 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `push()`：`push()` 方法将一个或多个元素添加到数组的末尾，并返回该数组的新长度。[`push()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/push.md)
 2. `slice()`：`slice()` 方法提取一个字符串的一部分，并返回一新的字符串。[`slice()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/String/slice.md)
 3. `splice()`：`splice()` 方法通过删除或替换现有元素或者原地添加新的元素来修改数组,并以数组形式返回被修改的内容。此方法会改变原数组。[`splice()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/splice.md)
 
-* **解题思路**：
+- **解题思路**：
 
-**首先**，怎么个双指针法呢？用 `p1`（指针 1） 指向 `nums1` 的开头，`p2`（指针 2） 指向 `nums2` 的开头。 
+**首先**，怎么个双指针法呢？用 `p1`（指针 1） 指向 `nums1` 的开头，`p2`（指针 2） 指向 `nums2` 的开头。
 
 用 `p1` 对应的值和 `p2` 进行比较，将最小的值放入都输出数组中。
 
@@ -196,9 +195,9 @@ var merge = function (nums1, m, nums2, n) {
 ```js
 while (count1 < m && count2 < n) {
   if (nums1[count1] > nums2[count2]) {
-    nums1.push(nums2[count2++]);
+    nums1.push(nums2[count2++])
   } else {
-    nums1.push(nums1[count1++]);
+    nums1.push(nums1[count1++])
   }
 }
 ```
@@ -209,15 +208,15 @@ while (count1 < m && count2 < n) {
 
 ```js
 if (count1 < m) {
-  nums1.push(...nums1.slice(count1, m));
+  nums1.push(...nums1.slice(count1, m))
 }
 
 if (count2 < n) {
-  nums1.push(...nums2.slice(count2, n));
+  nums1.push(...nums2.slice(count2, n))
 }
 ```
 
-**最后**，我们通过 `nums1.splice(0, len)` 将 `nums1` 原本的内容删掉，就可以获得最终结果了。 
+**最后**，我们通过 `nums1.splice(0, len)` 将 `nums1` 原本的内容删掉，就可以获得最终结果了。
 
 ---
 

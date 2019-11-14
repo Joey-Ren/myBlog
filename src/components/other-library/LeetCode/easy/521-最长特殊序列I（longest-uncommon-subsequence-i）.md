@@ -1,5 +1,4 @@
-521 - 最长特殊序列I（longest-uncommon-subsequence-i）
-===
+# 521 - 最长特殊序列 I（longest-uncommon-subsequence-i）
 
 > Create by **jsLe** on **2019-11-06 08:27:51**  
 > Recently revised in **2019-11-06 09:08:32**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题及测试](#chapter-three) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题及测试](#chapter-three)   |
 | <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 LeetCode Submit](#chapter-four) |
-| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 解题思路](#chapter-five) |
+| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 解题思路](#chapter-five)        |
 
 ## <a name="chapter-two" id="chapter-two"></a>二 前言
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：字符串
-* **题目地址**：https://leetcode-cn.com/problems/longest-uncommon-subsequence-i/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：字符串
+- **题目地址**：https://leetcode-cn.com/problems/longest-uncommon-subsequence-i/
+- **题目内容**：
 
 ```
 给定两个字符串，你需要从这两个字符串中找出最长的特殊序列。
@@ -54,7 +53,7 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **LeetCode 给定函数体**：
+- **LeetCode 给定函数体**：
 
 ```js
 /**
@@ -62,9 +61,7 @@
  * @param {string} b
  * @return {number}
  */
-var findLUSlength = function(a, b) {
-    
-};
+var findLUSlength = function(a, b) {}
 ```
 
 根据上面的已知函数，尝试破解本题吧~
@@ -82,20 +79,20 @@ var findLUSlength = function(a, b) {
  */
 const findLUSlength = (a, b) => {
   if (a.length > b.length) {
-    return a.length;
+    return a.length
   }
   if (b.length > a.length) {
-    return b.length;
+    return b.length
   }
   if (a !== b) {
-    return a.length;
+    return a.length
   }
   if (a === b) {
-    return -1;
+    return -1
   }
-};
+}
 
-console.log(findLUSlength('aba', 'cdc'));
+console.log(findLUSlength('aba', 'cdc'))
 // console.log(findLUSlength('aaa', 'aaa'));
 ```
 
@@ -137,35 +134,35 @@ Accepted
  */
 const findLUSlength = (a, b) => {
   // 1. 定义变量
-  const aList = a.split('');
-  const bList = b.split('');
-  const aResult = [];
-  const bResult = [];
+  const aList = a.split('')
+  const bList = b.split('')
+  const aResult = []
+  const bResult = []
   // 2. 开始对比
   for (let i = 0; i < aList.length; i++) {
     if (bList.findIndex(item => item === aList[i]) === -1) {
-      aResult.push(aList[i]);
+      aResult.push(aList[i])
     }
   }
   for (let i = 0; i < bList.length; i++) {
     if (aList.findIndex(item => item === bList[i]) === -1) {
-      bResult.push(bList[i]);
+      bResult.push(bList[i])
     }
   }
-  console.log(aResult);
-  console.log(bResult);
+  console.log(aResult)
+  console.log(bResult)
   // 3. 返回结果
-  let result = -1;
+  let result = -1
   if (aResult.length >= bResult.length && aResult.length !== 0) {
-    result = aResult.length;
+    result = aResult.length
   }
   if (aResult.length <= bResult.length && bResult.length !== 0) {
-    result = bResult.length;
+    result = bResult.length
   }
-  return result;
-};
+  return result
+}
 
-console.log(findLUSlength('aba', 'cdc'));
+console.log(findLUSlength('aba', 'cdc'))
 // console.log(findLUSlength('aaa', 'aaa'));
 ```
 
@@ -193,18 +190,18 @@ Expected Answer
 ```js
 const findLUSlength = (a, b) => {
   if (a.length > b.length) {
-    return a.length;
+    return a.length
   }
   if (b.length > a.length) {
-    return b.length;
+    return b.length
   }
   if (a !== b) {
-    return a.length;
+    return a.length
   }
   if (a === b) {
-    return -1;
+    return -1
   }
-};
+}
 ```
 
 Submit 试试：
@@ -216,7 +213,7 @@ Accepted
 * Your memory usage beats 42.1 % of javascript submissions (33.6 MB)
 ```
 
-可以想象下到我是如何惊呆了！这……(ｷ｀ﾟДﾟ´)!!
+可以想象下到我是如何惊呆了！这……(ｷ｀ﾟ Д ﾟ ´)!!
 
 无解，先讲解下思路：
 
@@ -229,8 +226,12 @@ Accepted
 
 ```js
 const findLUSlength = (a, b) => {
-  return a.length >= b.length ? (a.length === b.length && a === b ? -1 : a.length) : b.length;
-};
+  return a.length >= b.length
+    ? a.length === b.length && a === b
+      ? -1
+      : a.length
+    : b.length
+}
 ```
 
 Submit 提交：
@@ -242,7 +243,7 @@ Accepted
 * Your memory usage beats 21.05 % of javascript submissions (33.8 MB)
 ```
 
-(ｷ｀ﾟДﾟ´)!!
+(ｷ｀ﾟ Д ﾟ ´)!!
 
 至于剩下的，我就不翻阅【题解】和【评论】了，这题真的不怎么好。
 

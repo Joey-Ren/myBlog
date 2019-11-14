@@ -1,26 +1,26 @@
-方法 - join()
-===
+# 方法 - join()
 
 > Create by **jsLe** on **2019-09-17 09:34:38**  
 > Recently revised in **2019-09-17 09:34:47**
 
-* **原文**：[MDN - join()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join)
+- **原文**：[MDN - join()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join)
 
-* **功能**：`join()` 方法将一个数组（或一个类数组对象）的所有元素连接成一个字符串并返回这个字符串
+- **功能**：`join()` 方法将一个数组（或一个类数组对象）的所有元素连接成一个字符串并返回这个字符串
 
-* **语法**：`arr.join(separator)`
-  * `separator` 是合并的形式。例如 `''` 就是不以任何形式拼接成字符串：`['hello', 'hi'].join('') -> 'hellohi'`；例如 `'-'` 就是以 `-` 形式拼接成字符串：`['hello', 'hi'].join('') -> 'hello-hi'`
+- **语法**：`arr.join(separator)`
 
-* **返回值**：一个所有数组元素连接的字符串。
+  - `separator` 是合并的形式。例如 `''` 就是不以任何形式拼接成字符串：`['hello', 'hi'].join('') -> 'hellohi'`；例如 `'-'` 就是以 `-` 形式拼接成字符串：`['hello', 'hi'].join('') -> 'hello-hi'`
 
-* **代码**：
+- **返回值**：一个所有数组元素连接的字符串。
+
+- **代码**：
 
 ```js
-var a = ['Wind', 'Rain', 'Fire'];
-var myVar1 = a.join();      // myVar1 的值变为 "Wind,Rain,Fire"
-var myVar2 = a.join(', ');  // myVar2的值变为"Wind, Rain, Fire"
-var myVar3 = a.join(' + '); // myVar3的值变为"Wind + Rain + Fire"
-var myVar4 = a.join('');    // myVar4的值变为"WindRainFire"
+var a = ['Wind', 'Rain', 'Fire']
+var myVar1 = a.join() // myVar1 的值变为 "Wind,Rain,Fire"
+var myVar2 = a.join(', ') // myVar2的值变为"Wind, Rain, Fire"
+var myVar3 = a.join(' + ') // myVar3的值变为"Wind + Rain + Fire"
+var myVar4 = a.join('') // myVar4的值变为"WindRainFire"
 ```
 
 ---

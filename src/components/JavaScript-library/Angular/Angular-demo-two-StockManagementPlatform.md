@@ -1,7 +1,6 @@
-Angular Demo Two - 股票管理平台
-===
+# Angular Demo Two - 股票管理平台
 
-> create by **jsLe** on **2018年9月5日17:28:51**   
+> create by **jsLe** on **2018 年 9 月 5 日 17:28:51**  
 > Recently revised in **2019-05-31 16:08:23**
 
 ## 前言
@@ -12,15 +11,15 @@ AngularJS 有着诸多特性，最为核心的是：MVVM、模块化、自动化
 
 由于 AngularJS 有着诸多不便，AngularJS 在 2.0 版本进行了重写，于是有了现在的 Angular。
 
-* 第一章 介绍
-* 第二章 开始 Angular 开发
-* 第三章 路由和导航
-* 第四章 依赖注入
-* 第五章 绑定、响应式编程和管道
-* 第六章 组件间通讯
-* 第七章 表单处理
-* 第八章 与服务器通讯
-* 第九章 构建和部署
+- 第一章 介绍
+- 第二章 开始 Angular 开发
+- 第三章 路由和导航
+- 第四章 依赖注入
+- 第五章 绑定、响应式编程和管道
+- 第六章 组件间通讯
+- 第七章 表单处理
+- 第八章 与服务器通讯
+- 第九章 构建和部署
 
 ## 第一章 - 介绍
 
@@ -28,57 +27,58 @@ Angular 是一个开发平台。它能帮你更轻松的构建 Web 应用。Angu
 
 ### 1.1 Angular 的优点
 
-* 跨平台
+- 跨平台
 
 1. 渐进式应用：充分利用现代 Web 平台的各种能力，提供 App 式体验。高性能、离线使用、免安装。
-2. 原生：借助来自Ionic、NativeScript和React Native中的技术与思想，构建原生移动应用。
-3. 桌面：借助你已经在Web开发中学过的能力，结合访问原生操作系统API的能力，创造能在桌面环境下安装的应用，横跨Mac、Windows和Linux平台。
+2. 原生：借助来自 Ionic、NativeScript 和 React Native 中的技术与思想，构建原生移动应用。
+3. 桌面：借助你已经在 Web 开发中学过的能力，结合访问原生操作系统 API 的能力，创造能在桌面环境下安装的应用，横跨 Mac、Windows 和 Linux 平台。
 
-* 速度与性能
+- 速度与性能
 
-1. 代码生成：Angular会把你的模板转换成代码，针对现代JavaScript虚拟机进行高度优化，轻松获得框架提供的高生产率，同时又能保留所有手写代码的优点。
-2. 统一平台：在服务端渲染应用的首屏，像只有HTML和CSS的页面那样几乎瞬间展现，支持 Node.js®、.NET、PHP，以及其它服务器，为通过SEO来优化站点铺平了道路。
-3. 代码拆分：借助新的组件路由器，Angular可以实现快速加载。自动代码拆分机制可以让用户仅仅加载那些用于渲染所请求页面的代码。
+1. 代码生成：Angular 会把你的模板转换成代码，针对现代 JavaScript 虚拟机进行高度优化，轻松获得框架提供的高生产率，同时又能保留所有手写代码的优点。
+2. 统一平台：在服务端渲染应用的首屏，像只有 HTML 和 CSS 的页面那样几乎瞬间展现，支持 Node.js®、.NET、PHP，以及其它服务器，为通过 SEO 来优化站点铺平了道路。
+3. 代码拆分：借助新的组件路由器，Angular 可以实现快速加载。自动代码拆分机制可以让用户仅仅加载那些用于渲染所请求页面的代码。
 
-* 生产率
+- 生产率
 
-1. 模板：通过简单而强大的模板语法，快速创建UI视图。
+1. 模板：通过简单而强大的模板语法，快速创建 UI 视图。
 2. Angular CLI：命令行工具：快速进入构建环节、添加组件和测试，然后立即部署。
-3. 各种 IDE：在常用IDE和编辑器中获得智能代码补全、实时错误反馈及其它反馈等特性。
+3. 各种 IDE：在常用 IDE 和编辑器中获得智能代码补全、实时错误反馈及其它反馈等特性。
 
-* 完整开发故事
+- 完整开发故事
 
-1. 测试：使用Karma进行单元测试，让你在每次存盘时都能立即知道是否弄坏了什么。Protractor则让你的场景测试运行得又快又稳定。
-2. 动画：通过Angular中直观简便的API创建高性能复杂编排和动画时间线 —— 只要非常少的代码。
-3. 可访问性：通过支持ARIA的组件、开发者指南和内置的一体化测试基础设施，创建具有完备可访问性的应用。
+1. 测试：使用 Karma 进行单元测试，让你在每次存盘时都能立即知道是否弄坏了什么。Protractor 则让你的场景测试运行得又快又稳定。
+2. 动画：通过 Angular 中直观简便的 API 创建高性能复杂编排和动画时间线 —— 只要非常少的代码。
+3. 可访问性：通过支持 ARIA 的组件、开发者指南和内置的一体化测试基础设施，创建具有完备可访问性的应用。
 
 ### 1.2 AngularJS 架构与 Angular 架构
 
-* AngularJS 的架构：
-![图](../../public-repertory/img/js-angular-stock-management-platform-chapter1-1.png)
+- AngularJS 的架构：
+  ![图](../../public-repertory/img/js-angular-stock-management-platform-chapter1-1.png)
 
-* 为何 AngularJS 被抛弃
+- 为何 AngularJS 被抛弃
+
 1. 饱受诟病的性能问题。通过检查进行数据更新，当数据不断增加时，检查的效率就不断降低。页面加载速度也会变慢。
-2. 落后于当前web发展理念(如组件式的开发)
-3. 对手机端的支持不是太友好。由于angularJS是09年诞生的，因此并没有考虑到手机端的适配，首先是性能问题，手机平台的硬件资远远比不上电脑平台。
+2. 落后于当前 web 发展理念(如组件式的开发)
+3. 对手机端的支持不是太友好。由于 angularJS 是 09 年诞生的，因此并没有考虑到手机端的适配，首先是性能问题，手机平台的硬件资远远比不上电脑平台。
 
 于是，就有了 Angular 的开发：
 
 ![图](../../public-repertory/img/js-angular-stock-management-platform-chapter1-2.png)
 
-* 组件( Component )：是 Angular 应用的基本构建块，可以把一个组件理解为一段带有业务逻辑和数据的HTML
-* 服务：用来封装可重用的业务逻辑
-* 指令：允许你向 HTML 元素添加自定义行为
-* 模块：将应用中不同部分组织成一个 Angular 框架可以理解的单页。
+- 组件( Component )：是 Angular 应用的基本构建块，可以把一个组件理解为一段带有业务逻辑和数据的 HTML
+- 服务：用来封装可重用的业务逻辑
+- 指令：允许你向 HTML 元素添加自定义行为
+- 模块：将应用中不同部分组织成一个 Angular 框架可以理解的单页。
 
 ## 第二章 - 开始 Angular 开发
 
 ### 2.1 安装 Angular
 
-* 安装 Angular-cli ：`npm i @angular/cli -g`
-* 新建 Angular 项目：`ng new project`
-* 安装 Node 依赖：`npm i`
-* 运行 Angular 项目：`npm run start`
+- 安装 Angular-cli ：`npm i @angular/cli -g`
+- 新建 Angular 项目：`ng new project`
+- 安装 Node 依赖：`npm i`
+- 运行 Angular 项目：`npm run start`
 
 ![图](../../public-repertory/img/js-angular-stock-management-platform-chapter2-1.png)
 
@@ -176,8 +176,7 @@ Angular 是一个开发平台。它能帮你更轻松的构建 Web 应用。Angu
     "typescript": "~2.7.2"
   }
 }
-
-```   
+```
 
 **然后**，发现这文件告诉 Angular-CLI，执行 `ng serve`，即 `npm run start` === `ng serve`。然后，它定义了主入口为 **main.js**，那么，我们以此寻找，发现有个 **main.ts**，可以想到是 TypeScript 编译成 JavaScript，所以我们首先打开 **main.ts** 进行查看。
 
@@ -260,32 +259,34 @@ export class AppComponent {
 
 OK，从装饰器中我们可以看到，我们这个组件，挂载到 **index.html** 的 app-root 这个节点中，而且其模板文件由 **app.component.html** 与 **app.component.css** 这两个文件形成。
 
-**最后**，我们知道，通过编写 **app.component.html** 和 **app.component.css** ，我们形成了一个 app 的组件(可以看成为一块 HTML 片段，而 index.html 是一个页面)，挂载到 **index.html** 中。这样，我们就能够编写SPA模式的页面了。
+**最后**，我们知道，通过编写 **app.component.html** 和 **app.component.css** ，我们形成了一个 app 的组件(可以看成为一块 HTML 片段，而 index.html 是一个页面)，挂载到 **index.html** 中。这样，我们就能够编写 SPA 模式的页面了。
 
 > 模拟的 index.html
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>股票管理平台</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-  <!-- <app-root></app-root> -->
-  <!-- 替换为 app.component.html 这个文件 -->
-  <div style="text-align:center">
-    <h1>
+  <head>
+    <meta charset="utf-8" />
+    <title>股票管理平台</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <!-- <app-root></app-root> -->
+    <!-- 替换为 app.component.html 这个文件 -->
+    <div style="text-align:center">
+      <h1>
         <!-- 下面使用了 app.component.ts 中控制器返回的值，这里使用插值表达式进行了数据绑定 -->
         欢迎来到{{ title }}!
-    </h1>
-    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536217929828&di=687f6a047fbba49ac0769bc3d61f0687&imgtype=0&src=http%3A%2F%2Fimg1.cache.netease.com%2Fcatchpic%2FB%2FBF%2FBFFD21296D0B362BAA138BB579A4CBE1.jpg">
-  </div>
-  <!-- app.component.css 样式写到 app.component.html 中 -->
-  <!-- style.css 样式写到 index.html 中 -->
-</body>
+      </h1>
+      <img
+        src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536217929828&di=687f6a047fbba49ac0769bc3d61f0687&imgtype=0&src=http%3A%2F%2Fimg1.cache.netease.com%2Fcatchpic%2FB%2FBF%2FBFFD21296D0B362BAA138BB579A4CBE1.jpg"
+      />
+    </div>
+    <!-- app.component.css 样式写到 app.component.html 中 -->
+    <!-- style.css 样式写到 index.html 中 -->
+  </body>
 </html>
 ```
 
@@ -300,25 +301,28 @@ OK，从装饰器中我们可以看到，我们这个组件，挂载到 **index.
 **步骤 1**. 安装引用 jquery 和 bootstrap：
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>股票管理平台</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-  <app-root></app-root>
+  <head>
+    <meta charset="utf-8" />
+    <title>股票管理平台</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <app-root></app-root>
 
-  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdn.bootcss.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-</body>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  </body>
 </html>
 ```
 
-**步骤 2**. 安装 TS 类型描述文件： `npm i @types/jquery @types/bootstrap -D` (由于 TypeScript 中不支持 $ ，所以我们需要先安装类型描述文件，让 TypeScript 认识 jQuery 和 Bootstrap ，以免它报错)
+**步骤 2**. 安装 TS 类型描述文件： `npm i @types/jquery @types/bootstrap -D` (由于 TypeScript 中不支持 \$ ，所以我们需要先安装类型描述文件，让 TypeScript 认识 jQuery 和 Bootstrap ，以免它报错)
 
 ### 3.2 新建组件
 
@@ -329,7 +333,7 @@ OK，从装饰器中我们可以看到，我们这个组件，挂载到 **index.
 5. 新建产品信息组件： `ng g component product`
 6. 新建星级评价组件： `ng g component stars`
 7. 查看是否有生成新的组件：
-![图](../../public-repertory/img/js-angular-stock-management-platform-chapter3-1.png)
+   ![图](../../public-repertory/img/js-angular-stock-management-platform-chapter3-1.png)
 8. 此时，发现 **app.module.ts** 变为：
 
 ```
@@ -397,7 +401,15 @@ export class AppModule { }
 ```html
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">管理平台</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -424,7 +436,7 @@ export class AppModule { }
 
 ```css
 .navbar {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 ```
 
@@ -432,7 +444,7 @@ export class AppModule { }
 
 ```html
 <div class="container">
-  <hr>
+  <hr />
   <footer>
     <div class="row">
       <div class="col-lg-12">
@@ -449,11 +461,21 @@ export class AppModule { }
 <form name="searchForm">
   <div class="form-group">
     <label for="productTitle">商品名称</label>
-    <input type="text" id="productTitle" placeholder="商品名称" class="form-control">
+    <input
+      type="text"
+      id="productTitle"
+      placeholder="商品名称"
+      class="form-control"
+    />
   </div>
   <div class="form-group">
     <label for="productPrice">商品价格</label>
-    <input type="number" id="productPrice" placeholder="商品价格" class="form-control">
+    <input
+      type="number"
+      id="productPrice"
+      placeholder="商品价格"
+      class="form-control"
+    />
   </div>
   <div class="form-group">
     <label for="productCategory">商品类别</label>
@@ -469,22 +491,36 @@ export class AppModule { }
 
 ```html
 <div class="row">
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div
+    id="carouselExampleIndicators"
+    class="carousel slide"
+    data-ride="carousel"
+  >
     <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li
+        data-target="#carouselExampleIndicators"
+        data-slide-to="0"
+        class="active"
+      ></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <svg width="800" height="400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" preserveAspectRatio="none">
+        <svg
+          width="800"
+          height="400"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 800 400"
+          preserveAspectRatio="none"
+        >
           <defs>
             <style type="text/css">
               #holder_165b232526b text {
                 fill: #555;
                 font-weight: normal;
                 font-family: Helvetica, monospace;
-                font-size: 40pt
+                font-size: 40pt;
               }
             </style>
           </defs>
@@ -495,14 +531,20 @@ export class AppModule { }
         </svg>
       </div>
       <div class="carousel-item">
-        <svg width="800" height="400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" preserveAspectRatio="none">
+        <svg
+          width="800"
+          height="400"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 800 400"
+          preserveAspectRatio="none"
+        >
           <defs>
             <style type="text/css">
               #holder_165b2325267 text {
                 fill: #444;
                 font-weight: normal;
                 font-family: Helvetica, monospace;
-                font-size: 40pt
+                font-size: 40pt;
               }
             </style>
           </defs>
@@ -513,14 +555,20 @@ export class AppModule { }
         </svg>
       </div>
       <div class="carousel-item">
-        <svg width="800" height="400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" preserveAspectRatio="none">
+        <svg
+          width="800"
+          height="400"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 800 400"
+          preserveAspectRatio="none"
+        >
           <defs>
             <style type="text/css">
               #holder_165b232526d text {
                 fill: #333;
                 font-weight: normal;
                 font-family: Helvetica, monospace;
-                font-size: 40pt
+                font-size: 40pt;
               }
             </style>
           </defs>
@@ -531,11 +579,21 @@ export class AppModule { }
         </svg>
       </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <a
+      class="carousel-control-prev"
+      href="#carouselExampleIndicators"
+      role="button"
+      data-slide="prev"
+    >
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <a
+      class="carousel-control-next"
+      href="#carouselExampleIndicators"
+      role="button"
+      data-slide="next"
+    >
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
@@ -591,14 +649,20 @@ export class Product {
 <div class="row">
   <div *ngFor="let product of products" class="col-sm-4 col-md-4 col-lg-4">
     <div class="thumbnail">
-      <svg width="200" height="120" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" preserveAspectRatio="none">
+      <svg
+        width="200"
+        height="120"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 800 400"
+        preserveAspectRatio="none"
+      >
         <defs>
           <style type="text/css">
             #holder_165b232526d text {
               fill: #333;
               font-weight: normal;
               font-family: Helvetica, monospace;
-              font-size: 40pt
+              font-size: 40pt;
             }
           </style>
         </defs>
@@ -612,7 +676,7 @@ export class Product {
         <h4 class="pull-right">
           <a href="">{{ product.title }}</a>
         </h4>
-        <p> {{ product.desc }} </p>
+        <p>{{ product.desc }}</p>
       </div>
       <div>
         <app-stars></app-stars>
@@ -626,13 +690,13 @@ export class Product {
 
 ### 4.1 Route
 
-| 名称 | 简介 | 使用 |
+| 名称           | 简介                                                                                                  | 使用                                                                                                                                                                       |
 | -------------- | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Routes         | 路由配置，保存着哪个 URL 对应展示哪个组件，以及在哪个 RouterOutlet 中展示组件                         | `import {HomeComponent} from "./home/home.component"; const routes: Routes = [{ path: 'home', component: HomeComponent }]`                                                 |
 | RouterOutlet   | 在 HTML 中标记路由内容呈现位置的占位符指令                                                            | `<router-putlet></router-putlet>`                                                                                                                                          |
 | Router         | 负责在运行时执行路由的对象，可以通过调用其 navigate() 和 navigateByUrl() 方法来导航到一个指定的路由。 | `<input type="button" value="商品详情" (click)="toProductDetails()"> -> constructor(private router: Router) {} -> toProductDetails() {this.router.navigate(['/product'])}` |
 | RouterLink     | 在 HTML 中声明路由导航用的指令                                                                        | `<a [routerLink]="['/product']"商品详情</a>`>                                                                                                                              |
-| ActivatedRoute | 当前激活的路由对象，保存着当前路由的信息，如路由地址，路由参数等。                                    | *  |
+| ActivatedRoute | 当前激活的路由对象，保存着当前路由的信息，如路由地址，路由参数等。                                    | \*                                                                                                                                                                         |
 
 ### 4.2 解析图
 
@@ -676,9 +740,9 @@ export class Product {
 
 ### 4.5 路由重定向
 
-在用户访问一个特定的地址时，将其重定向到另一个特定的地址   
+在用户访问一个特定的地址时，将其重定向到另一个特定的地址
 
-www.aaa.com => www.aaa.com/home   
+www.aaa.com => www.aaa.com/home
 
 www.aaa.com/x => www.aaa.com/y
 
@@ -730,47 +794,48 @@ www.aaa.com/x => www.aaa.com/y
 
 辅助路由案例整体思路
 
-* 在 app 组件的模板上再定义一个插座来显示聊天面板
-* 单独开发一个聊天室插件，只显示在新定义的插座上。
-* 通过路路由参数控制新电脑是否显示聊天面板。
+- 在 app 组件的模板上再定义一个插座来显示聊天面板
+- 单独开发一个聊天室插件，只显示在新定义的插座上。
+- 通过路路由参数控制新电脑是否显示聊天面板。
 
 ## 第五章 - 绑定、响应式编程和管道
 
 ### 5.1 本节内容
 
-* 数据绑定
-* 响应式编程
-* 管道
+- 数据绑定
+- 响应式编程
+- 管道
 
 ## 第六章 - 组件间通讯
 
 ### 6.1 本节内容
-* 输入输出属性
-* 中间人模式
-* 组件生命周期
+
+- 输入输出属性
+- 中间人模式
+- 组件生命周期
 
 ## 第七章 - 表单处理
 
 ### 7.1 本节内容
 
-* 模板式表单
-* 响应式表单
-* 表单校验
+- 模板式表单
+- 响应式表单
+- 表单校验
 
 ## 第八章 - 表单处理
 
 ### 8.1 本节内容
 
-* 创建 web 服务器
-* 使用 Http 协议与服务器通讯
-* 使用 WebSocket 协议与服务器通讯
+- 创建 web 服务器
+- 使用 Http 协议与服务器通讯
+- 使用 WebSocket 协议与服务器通讯
 
 ## 构建和部署
 
 ### 9.1 本节内容
 
-* 构建和部署
-* 多环境支撑
+- 构建和部署
+- 多环境支撑
 
 ---
 

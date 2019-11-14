@@ -1,5 +1,4 @@
-206 - 反转链表（reverse-linked-list）
-===
+# 206 - 反转链表（reverse-linked-list）
 
 > Create by **jsLe** on **2019-7-13 07:54:49**  
 > Recently revised in **2019-7-13 08:42:07**
@@ -8,24 +7,24 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 进一步思考](#chapter-seven) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six)           |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 进一步思考](#chapter-seven)   |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：链表
-* **题目地址**：https://leetcode-cn.com/problems/reverse-linked-list/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：链表
+- **题目地址**：https://leetcode-cn.com/problems/reverse-linked-list/
+- **题目内容**：
 
 ```
 反转一个单链表。
@@ -45,17 +44,17 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var reverseList = (head, q = null) => {
   if (head) {
     return reverseList(head.next, {
       val: head.val,
-      next: q,
-    });
+      next: q
+    })
   }
-  return q;
+  return q
 }
 ```
 
@@ -63,23 +62,28 @@ var reverseList = (head, q = null) => {
 
 > [返回目录](#chapter-one)
 
-* `head`：
+- `head`：
 
 ```js
 let head = {
-  val: 1, next: {
-    val: 2, next: {
-      val: 3, next: {
-        val: 4, next: {
-          val: 5, next: null,
-        },
-      },
-    },
-  },
-};
+  val: 1,
+  next: {
+    val: 2,
+    next: {
+      val: 3,
+      next: {
+        val: 4,
+        next: {
+          val: 5,
+          next: null
+        }
+      }
+    }
+  }
+}
 ```
 
-* `return`：
+- `return`：
 
 ```js
 {
@@ -117,7 +121,8 @@ let head = {
 **首先**，上面题解不是我写出来的，看的是评论区的题解，原代码是：
 
 ```js
-const reverseList = (head, q = null) => head !== null ? reverseList(head.next, { val: head.val, next: q }) : q;
+const reverseList = (head, q = null) =>
+  head !== null ? reverseList(head.next, { val: head.val, next: q }) : q
 ```
 
 传说中的一行题解。
@@ -126,14 +131,14 @@ const reverseList = (head, q = null) => head !== null ? reverseList(head.next, {
 
 ```js
 var reverseList = (head, q = null) => {
-  console.log(q);
+  console.log(q)
   if (head) {
     return reverseList(head.next, {
       val: head.val,
-      next: q,
-    });
+      next: q
+    })
   }
-  return q;
+  return q
 }
 ```
 
@@ -160,18 +165,18 @@ null
 ```js
 var reverseList = function(head) {
   if (head == null || head.next == null) {
-    return head;
+    return head
   }
-  var current = head;
-  var previous = null;
+  var current = head
+  var previous = null
   while (current != null) {
-    next = current.next;
-    current.next = previous;
-    previous = current;
-    current = next;
+    next = current.next
+    current.next = previous
+    previous = current
+    current = next
   }
-  return previous;
-};
+  return previous
+}
 ```
 
 提交结果是：

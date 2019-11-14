@@ -1,5 +1,4 @@
-235 - 二叉树的最近公共祖先（lowest-common-ancestor-of-a-binary-search-tree）
-===
+# 235 - 二叉树的最近公共祖先（lowest-common-ancestor-of-a-binary-search-tree）
 
 > Create by **jsLe** on **2019-07-17 10:04:00**  
 > Recently revised in **2019-07-17 15:38:30**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - 递归](#chapter-three-one) |
-| &emsp;[3.2 解法 - 迭代](#chapter-three-two) |
+| &emsp;[3.1 解法 - 递归](#chapter-three-one)                                              |
+| &emsp;[3.2 解法 - 迭代](#chapter-three-two)                                              |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：树
-* **题目地址**：https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：树
+- **题目地址**：https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
+- **题目内容**：
 
 给定一个二叉搜索树, 找到该树中两个指定节点的最近公共祖先。
 
@@ -33,11 +32,11 @@
 
 root = [6,2,8,0,4,7,9,null,null,3,5]
 
-![图](../../../public-repertory/img/other-algorithm-235-1.png) 
+![图](../../../public-repertory/img/other-algorithm-235-1.png)
 
 示例 1:
 输入: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8
-输出: 6 
+输出: 6
 解释: 节点 2 和节点 8 的最近公共祖先是 6。
 
 示例 2:
@@ -59,24 +58,24 @@ p、q 为不同节点且均存在于给定的二叉搜索树中。
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var lowestCommonAncestor = function(root, p, q) {
-  const val = root.val;
-  const pVal = p.val;
-  const qVal = q.val;
+  const val = root.val
+  const pVal = p.val
+  const qVal = q.val
   if (pVal > val && qVal > val) {
-    return lowestCommonAncestor(root.right, p, q);
+    return lowestCommonAncestor(root.right, p, q)
   } else if (pVal < val && qVal < val) {
-    return lowestCommonAncestor(root.left, p, q);
+    return lowestCommonAncestor(root.left, p, q)
   } else {
-    return root;
+    return root
   }
-};
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 > `root`：
 
@@ -89,21 +88,21 @@ const root = {
     right: {
       val: 4,
       left: { val: 3, left: null, right: null },
-      right: { val: 5, left: null, right: null },
-    },
+      right: { val: 5, left: null, right: null }
+    }
   },
   right: {
     val: 8,
     left: { val: 7, left: null, right: null },
-    right: { val: 9, left: null, right: null },
-  },
-};
+    right: { val: 9, left: null, right: null }
+  }
+}
 ```
 
 > `p`：
 
 ```js
-const p = { val: 0, left: null, right: null };
+const p = { val: 0, left: null, right: null }
 ```
 
 > `q`：
@@ -123,7 +122,7 @@ const q = { val: 5, left: null, right: null };
      right: { val: 5, left: null, right: null } } }
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -132,7 +131,7 @@ const q = { val: 5, left: null, right: null };
   ✔ Your memory usage beats 92.59 % of javascript submissions (43.4 MB)
 ```
 
-* **解题思路**：
+- **解题思路**：
 
 **首先**，看到这题目，思路是乱糟糟的。
 
@@ -140,7 +139,7 @@ const q = { val: 5, left: null, right: null };
 
 **然后**，看了下官方的 Java 解法，恍然大悟：
 
-* 这是一棵二叉搜索树。
+- 这是一棵二叉搜索树。
 
 什么是二叉搜索树？
 
@@ -148,25 +147,25 @@ const q = { val: 5, left: null, right: null };
 
 怎么通俗解释呢？
 
-![图](../../../public-repertory/img/other-algorithm-235-1.png) 
+![图](../../../public-repertory/img/other-algorithm-235-1.png)
 
 看图，在节点 `val = 4` 中，左边的节点为 3（即小于 4），右边的节点为 5（即大于 4）。同理，在节点 `val = 6` 中，左边的节点都小于 6，右边的节点都大于 6。
 
 这样，想必小伙伴们就有思路了：
 
-* 如果给出的节点是 `0` 和 `4`，那么先判断它在左子树，因为 `0` 和 `4` 都小于 6。再到节点 `2` 的时候，因为 `0 < 2 < 4`，所以，它们的最近祖先节点为 `2`。
-* 如果给出的节点是 `0` 和 `5`，那么先判断它在左子树，因为 `0` 和 `5` 都小于 6。再到节点 `2` 的时候，因为 `0 < 2 < 5`，所以，它们的最近祖先节点为 `2`。
-* ……
+- 如果给出的节点是 `0` 和 `4`，那么先判断它在左子树，因为 `0` 和 `4` 都小于 6。再到节点 `2` 的时候，因为 `0 < 2 < 4`，所以，它们的最近祖先节点为 `2`。
+- 如果给出的节点是 `0` 和 `5`，那么先判断它在左子树，因为 `0` 和 `5` 都小于 6。再到节点 `2` 的时候，因为 `0 < 2 < 5`，所以，它们的最近祖先节点为 `2`。
+- ……
 
 最后，我们就根据这个提示写出了递归题解：
 
 ```js
 if (pVal > val && qVal > val) {
-  return lowestCommonAncestor(root.right, p, q);
+  return lowestCommonAncestor(root.right, p, q)
 } else if (pVal < val && qVal < val) {
-  return lowestCommonAncestor(root.left, p, q);
+  return lowestCommonAncestor(root.left, p, q)
 } else {
-  return root;
+  return root
 }
 ```
 
@@ -174,27 +173,27 @@ if (pVal > val && qVal > val) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var lowestCommonAncestor = function(root, p, q) {
-  const pVal = p.val;
-  const qVal = q.val;
+  const pVal = p.val
+  const qVal = q.val
   while (root) {
-    const parentVal = root.val;
+    const parentVal = root.val
     if (pVal > parentVal && qVal > parentVal) {
-      root = root.right;
+      root = root.right
     } else if (pVal < parentVal && qVal < parentVal) {
-      root = root.left;
+      root = root.left
     } else {
-      return root;
+      return root
     }
   }
-  return null;
-};
+  return null
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 > `root`：
 
@@ -207,21 +206,21 @@ const root = {
     right: {
       val: 4,
       left: { val: 3, left: null, right: null },
-      right: { val: 5, left: null, right: null },
-    },
+      right: { val: 5, left: null, right: null }
+    }
   },
   right: {
     val: 8,
     left: { val: 7, left: null, right: null },
-    right: { val: 9, left: null, right: null },
-  },
-};
+    right: { val: 9, left: null, right: null }
+  }
+}
 ```
 
 > `p`：
 
 ```js
-const p = { val: 0, left: null, right: null };
+const p = { val: 0, left: null, right: null }
 ```
 
 > `q`：
@@ -241,7 +240,7 @@ const q = { val: 5, left: null, right: null };
      right: { val: 5, left: null, right: null } } }
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -250,7 +249,7 @@ const q = { val: 5, left: null, right: null };
   ✔ Your memory usage beats 64.82 % of javascript submissions (43.7 MB)
 ```
 
-* **解题思路**：
+- **解题思路**：
 
 相比于递归，这次使用迭代方式无疑会更加，因为它不仅易解并且效率方面比递归快很多：
 

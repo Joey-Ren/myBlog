@@ -1,34 +1,33 @@
-001 - 两数之和（two-sum）
-===
+# 001 - 两数之和（two-sum）
 
 > Create by **jsLe** on **2019-05-16 22:19:13**  
 > Recently revised in **2019-09-18 09:22:49**
 
 **Hello 小伙伴们，如果觉得本文还不错，记得给个 **star** ， 小伙伴们的 **star** 是我持续更新的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
 
-* [LeetCode 攻略地址](https://github.com/LiangJunrong/document-library/tree/master/other-library/LeetCode)
+- [LeetCode 攻略地址](https://github.com/LiangJunrong/document-library/tree/master/other-library/LeetCode)
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - for()](#chapter-three-one) |
-| &emsp;[3.2 解法 - indexOf()](#chapter-three-two) |
-| &emsp;[3.3 解法 - Map](#chapter-three-three) |
+| &emsp;[3.1 解法 - for()](#chapter-three-one)                                             |
+| &emsp;[3.2 解法 - indexOf()](#chapter-three-two)                                         |
+| &emsp;[3.3 解法 - Map](#chapter-three-three)                                             |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数组、哈希表
-* **题目地址**：https://leetcode-cn.com/problems/two-sum/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数组、哈希表
+- **题目地址**：https://leetcode-cn.com/problems/two-sum/
+- **题目内容**：
 
 ```
 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
@@ -47,7 +46,7 @@
 
 > [返回目录](#chapter-one)
 
-* **官方题解**：https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-by-leetcode-2/
+- **官方题解**：https://leetcode-cn.com/problems/two-sum/solution/liang-shu-zhi-he-by-leetcode-2/
 
 解题千千万，官方独一家，上面是官方使用 Java 进行的题解。
 
@@ -57,31 +56,31 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var twoSum = function(nums, target) {
   for (let i = 0; i < nums.length; i++) {
     for (let j = i + 1; j < nums.length; j++) {
       if (nums[j] === target - nums[i]) {
-        return [i, j];
+        return [i, j]
       }
     }
   }
-};
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums`：`[1, 3, 2, 5, 6]`
 2. `target`: `8`
 3. `return`：
 
 ```js
-[1, 3]
+;[1, 3]
 ```
 
-* **解题思路**：使用双重 `for` 循环破解。
+- **解题思路**：使用双重 `for` 循环破解。
 
 ![图](../../../public-repertory/img/other-algorithm-001-1.png)
 
@@ -93,37 +92,40 @@ var twoSum = function(nums, target) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var twoSum = function(nums, target) {
-  let result = [];
+  let result = []
   nums.map((item, index) => {
-    if (nums.indexOf(target - item) > -1 && nums.indexOf(target - item) != index) {
-      result = [index, nums.indexOf(target - item)].sort((a, b) => a > b);
+    if (
+      nums.indexOf(target - item) > -1 &&
+      nums.indexOf(target - item) != index
+    ) {
+      result = [index, nums.indexOf(target - item)].sort((a, b) => a > b)
     }
-  });
-  return result;
-};
+  })
+  return result
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums`：`[4, 3, 2, 5, 6]`
 2. `target`: `8`
 3. `return`：
 
 ```js
-[2, 4]
+;[2, 4]
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `map()`：遍历数组，`item` 返回遍历项，`index` 返回当前索引。[`map()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/map.md)
 2. `indexOf()`：判断数组中是否存在判断条件中的值。如果存在，则返回第一次出现的索引；如果不存在，则返回 -1。[`indexOf()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/indexOf.md)
 3. `sort()`：排序，保持返回数组的数字为顺序排列。[`sort()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/sort.md)
 
-* **解题思路**：
+- **解题思路**：
 
 ![图](../../../public-repertory/img/other-algorithm-001-2.png)
 
@@ -136,50 +138,47 @@ var twoSum = function(nums, target) {
 **例如**，在上面测试 `twoSum([1, 3, 2, 5, 6], 8)` 的结果就有：
 
 ```js
-[1, 3]
-[2, 4]
-[3, 1]
-[4, 2]
+;[1, 3][(2, 4)][(3, 1)][(4, 2)]
 ```
 
 我们取最后一次的结果并排序返回，即：`[2, 4]`
 
-* **进一步思考**：如果我们将 `map()` 换成 `for()`，你知道该如何操作么？
+- **进一步思考**：如果我们将 `map()` 换成 `for()`，你知道该如何操作么？
 
 ### <a name="chapter-three-three" id="chapter-three-three">3.3 解法 - Map</a>
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var twoSum = function(nums, target) {
-  let map = new Map();
+  let map = new Map()
   for (let i = 0; i < nums.length; i++) {
     if (map.has(nums[i])) {
-      return [map.get(nums[i]), i];
+      return [map.get(nums[i]), i]
     } else {
-      map.set(target - nums[i], i);
+      map.set(target - nums[i], i)
     }
   }
-};
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums`：`[4, 3, 2, 5, 6]`
 2. `target`: `8`
 3. `return`：
 
 ```js
-[1, 3]
+;[1, 3]
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `Map`：保存键值对。任何值(对象或者原始值) 都可以作为一个键或一个值。[`Map` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/内置对象/Map/README.md)
 
-* **解题思路**：
+- **解题思路**：
 
 ![图](../../../public-repertory/img/other-algorithm-001-3.png)
 

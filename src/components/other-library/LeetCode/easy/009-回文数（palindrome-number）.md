@@ -1,5 +1,4 @@
-009 - 回文数（palindrome-number）
-===
+# 009 - 回文数（palindrome-number）
 
 > Create by **jsLe** on **2019-05-22 19:30:42**  
 > Recently revised in **2019-09-18 09:30:54**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解题 - 数组操作](#chapter-three-one) |
-| &emsp;[3.1 解题 - 数学算法](#chapter-three-two) |
+| &emsp;[3.1 解题 - 数组操作](#chapter-three-one)                                          |
+| &emsp;[3.1 解题 - 数学算法](#chapter-three-two)                                          |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数学
-* **题目地址**：https://leetcode-cn.com/problems/palindrome-number/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数学
+- **题目地址**：https://leetcode-cn.com/problems/palindrome-number/
+- **题目内容**：
 
 ```
 判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。
@@ -50,7 +49,7 @@
 
 > [返回目录](#chapter-one)
 
-* **官方题解**：https://leetcode-cn.com/problems/palindrome-number/solution/hui-wen-shu-by-leetcode/
+- **官方题解**：https://leetcode-cn.com/problems/palindrome-number/solution/hui-wen-shu-by-leetcode/
 
 解题千千万，官方独一家，上面是官方使用 C# 进行的题解。
 
@@ -60,21 +59,21 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var isPalindrome = function(x) {
-  const arr = String(x).split('');
+  const arr = String(x).split('')
   for (let i = 0; i < arr.length / 2; i++) {
     if (arr[i] !== arr[arr.length - (i + 1)]) {
-      return false;
+      return false
     }
   }
-  return true;
-};
+  return true
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `x`：`1231`
 2. `return`：
@@ -83,7 +82,7 @@ var isPalindrome = function(x) {
 false
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -92,11 +91,11 @@ false
   ✔ Your memory usage beats 67.78 % of javascript submissions (45.5 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `split()`：`split()` 方法使用指定的分隔符字符串将一个 String 对象分割成字符串数组，以将字符串分隔为子字符串，以确定每个拆分的位置。[`split()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/String/split.md)
 
-* **解题思路**：
+- **解题思路**：
 
 ![图](../../../public-repertory/img/other-algorithm-009-1.png)
 
@@ -114,23 +113,23 @@ false
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var isPalindrome = function(x) {
-  if(x < 0 || (x % 10 == 0 && x != 0)) {
-    return false;
+  if (x < 0 || (x % 10 == 0 && x != 0)) {
+    return false
   }
-  let revertedNumber = 0;
-  while(x > revertedNumber) {
-    revertedNumber = revertedNumber * 10 + x % 10;
-    x = Math.floor(x / 10);
+  let revertedNumber = 0
+  while (x > revertedNumber) {
+    revertedNumber = revertedNumber * 10 + (x % 10)
+    x = Math.floor(x / 10)
   }
-  return x === revertedNumber || x === Math.floor(revertedNumber / 10);
-};
+  return x === revertedNumber || x === Math.floor(revertedNumber / 10)
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `x`：`12321`
 2. `return`：
@@ -139,7 +138,7 @@ var isPalindrome = function(x) {
 true
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -148,11 +147,11 @@ true
   ✔ Your memory usage beats 67.78 % of javascript submissions (45.5 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `Math`：JS 中的内置对象，具有数学常数和函数的属性和方法。[`Math` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Math/README.md)
 
-* **解题思路**：
+- **解题思路**：
 
 ![图](../../../public-repertory/img/other-algorithm-009-2.png)
 

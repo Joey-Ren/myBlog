@@ -1,5 +1,4 @@
-168 - Excel表列名称（excel-sheet-column-title）
-===
+# 168 - Excel 表列名称（excel-sheet-column-title）
 
 > Create by **jsLe** on **2019-07-04 19:30:13**  
 > Recently revised in **2019-09-18 10:43:31**
@@ -8,24 +7,24 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six)             |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven)     |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数学
-* **题目地址**：https://leetcode-cn.com/problems/excel-sheet-column-title/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数学
+- **题目地址**：https://leetcode-cn.com/problems/excel-sheet-column-title/
+- **题目内容**：
 
 ```
 给定一个正整数，返回它在 Excel 表中相对应的列名称。
@@ -38,7 +37,7 @@
   ...
   26 -> Z
   27 -> AA
-  28 -> AB 
+  28 -> AB
   ...
 
 示例 1:
@@ -60,18 +59,18 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var convertToTitle = function(n) {
-  let res = '';
+  let res = ''
   while (n !== 0) {
-    n--;
-    res = String.fromCharCode(n % 26 + 65) + res;
-    n = parseInt(n / 26);
+    n--
+    res = String.fromCharCode((n % 26) + 65) + res
+    n = parseInt(n / 26)
   }
-  return res;
-};
+  return res
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
@@ -106,9 +105,9 @@ var convertToTitle = function(n) {
 
 那么，规律在哪呢？
 
-* `[1-26]`：`[A-Z]`
-* `[27-52]`：`[AA-AZ]`
-* ……
+- `[1-26]`：`[A-Z]`
+- `[27-52]`：`[AA-AZ]`
+- ……
 
 就是说，假设我们求解 `27`，那么它结果是 `AA`。
 
@@ -123,14 +122,14 @@ var convertToTitle = function(n) {
 
 ```js
 var convertToTitle = function(n) {
-  let res = '';
+  let res = ''
   while (n !== 0) {
-    n--;
-    res = String.fromCharCode(n % 26 + 65) + res;
-    n = parseInt(n / 26);
+    n--
+    res = String.fromCharCode((n % 26) + 65) + res
+    n = parseInt(n / 26)
   }
-  return res;
-};
+  return res
+}
 ```
 
 ## <a name="chapter-eight" id="chapter-eight">八 进一步探索</a>
@@ -143,8 +142,34 @@ var convertToTitle = function(n) {
 
 ```js
 var convertToTitle = function(n) {
-  let dict = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
-             'M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+  let dict = [
+    'A',
+    'B',
+    'C',
+    'D',
+    'E',
+    'F',
+    'G',
+    'H',
+    'I',
+    'J',
+    'K',
+    'L',
+    'M',
+    'N',
+    'O',
+    'P',
+    'Q',
+    'R',
+    'S',
+    'T',
+    'U',
+    'V',
+    'W',
+    'X',
+    'Y',
+    'Z'
+  ]
   let res = ''
   while (n !== 0) {
     n--
@@ -153,23 +178,24 @@ var convertToTitle = function(n) {
     n = parseInt(n / 26)
   }
   return res
-};
+}
 ```
 
 > 参考 2
 
 ```js
-var convertToTitle = function (n) {
-  const dic = 'ZABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  let res = '';
-  while (n / 26 > 1) {//如果还有进位
-    let mod = n % 26;// 取得当前余数
-    res = dic[mod] + res;// 将余数放入结果
-    n = (n - (mod === 0 ? 26 : mod)) / 26;// 减去余数部分
+var convertToTitle = function(n) {
+  const dic = 'ZABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  let res = ''
+  while (n / 26 > 1) {
+    //如果还有进位
+    let mod = n % 26 // 取得当前余数
+    res = dic[mod] + res // 将余数放入结果
+    n = (n - (mod === 0 ? 26 : mod)) / 26 // 减去余数部分
   }
   res = dic[n] + res
-  return res;
-};
+  return res
+}
 ```
 
 ---

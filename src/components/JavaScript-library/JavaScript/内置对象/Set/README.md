@@ -1,22 +1,22 @@
-Set
-===
+# Set
 
 > Create by **jsLe** on **2019-09-16 15:39:51**  
 > Recently revised in **2019-09-18 08:52:27**
 
-* **原文**：[MDN - Set](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set)
+- **原文**：[MDN - Set](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set)
 
-* **功能**：`Set` 对象允许你存储任何类型的唯一值，无论是原始值或者是对象引用。
+- **功能**：`Set` 对象允许你存储任何类型的唯一值，无论是原始值或者是对象引用。
 
-* **方法**：
-  * `new Set([iterable]);`：如果传递一个可迭代对象，它的所有元素将不重复地被添加到新的 Set中。
+- **方法**：
 
-* **代码**：
+  - `new Set([iterable]);`：如果传递一个可迭代对象，它的所有元素将不重复地被添加到新的 Set 中。
+
+- **代码**：
 
 ```js
-let a = [...new Set([1, 1, 2, 3])];
+let a = [...new Set([1, 1, 2, 3])]
 
-console.log(a); // [1, 2, 3]
+console.log(a) // [1, 2, 3]
 ```
 
 ---

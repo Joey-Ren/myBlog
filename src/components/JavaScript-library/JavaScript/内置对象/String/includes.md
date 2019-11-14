@@ -1,23 +1,23 @@
-方法 - includes()
-===
+# 方法 - includes()
 
 > Create by **jsLe** on **2019-09-11 10:57:55**  
 > Recently revised in **2019-09-11 11:17:37**
 
-* **原文**：[MDN - includes()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/includes)
+- **原文**：[MDN - includes()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/includes)
 
-* **功能**：`includes()` 方法用于判断一个字符串是否包含在另一个字符串中，根据情况返回 `true` 或 `false`。
+- **功能**：`includes()` 方法用于判断一个字符串是否包含在另一个字符串中，根据情况返回 `true` 或 `false`。
 
-* **语法**：`str.includes(searchString, fromIndex)`
-  * `searchString`：要在此字符串中搜索的字符串。
-  * `fromIndex`：可选。从当前字符串的哪个索引位置开始搜寻子字符串，默认值为 0。
+- **语法**：`str.includes(searchString, fromIndex)`
 
-* **返回值**：如果当前字符串包含被搜寻的字符串，就返回 `true`；否则返回 `false`。
+  - `searchString`：要在此字符串中搜索的字符串。
+  - `fromIndex`：可选。从当前字符串的哪个索引位置开始搜寻子字符串，默认值为 0。
 
-* **代码**：
+- **返回值**：如果当前字符串包含被搜寻的字符串，就返回 `true`；否则返回 `false`。
+
+- **代码**：
 
 ```js
-'jsLe'.includes('l'); // true
+'jsLe'.includes('l') // true
 ```
 
 ---

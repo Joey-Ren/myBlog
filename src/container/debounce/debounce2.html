@@ -13,30 +13,30 @@
     <script>
       // 我的debounce 实现
       function my_debounce(func, wait) {
-        if (typeof func !== "function") {
-          throw new TypeError("need a function");
+        if (typeof func !== 'function') {
+          throw new TypeError('need a function')
         }
-        wait = +wait || 0;
+        wait = +wait || 0
 
-        let timeId = null;
+        let timeId = null
 
         return function() {
-          console.log('滚动了滚动了');  // 测试时可放开
-          const self = this;
-          const args = arguments;
+          console.log('滚动了滚动了') // 测试时可放开
+          const self = this
+          const args = arguments
 
           if (timeId) {
-            clearTimeout(timeId); // 清除定时器，重新设定一个新的定时器
+            clearTimeout(timeId) // 清除定时器，重新设定一个新的定时器
           }
           timeId = setTimeout(() => {
-            func.apply(self, args); // arguments 是传给函数的参数，这里是 event  对象
-          }, wait);
-        };
+            func.apply(self, args) // arguments 是传给函数的参数，这里是 event  对象
+          }, wait)
+        }
       }
       function onScroll_1() {
-        console.log("执行滚动处理函数啦");
+        console.log('执行滚动处理函数啦')
       }
-      window.addEventListener("scroll", my_debounce(onScroll_1, 1000));
+      window.addEventListener('scroll', my_debounce(onScroll_1, 1000))
 
       // 有问题：
       //    如果那种锚点类的。举个例子，每次触发定时器就重新来，每次都重新来，如果某段时间用户一直一直触发，

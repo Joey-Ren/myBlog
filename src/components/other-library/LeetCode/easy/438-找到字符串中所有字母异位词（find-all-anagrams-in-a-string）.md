@@ -1,5 +1,4 @@
-438 - 找到字符串中所有字母异位词（find-all-anagrams-in-a-string）
-===
+# 438 - 找到字符串中所有字母异位词（find-all-anagrams-in-a-string）
 
 > Create by **jsLe** on **2019-07-29 11:41:39**  
 > Recently revised in **2019-09-18 14:07:07**
@@ -8,25 +7,25 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven) |
-| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 进一步思考](#chapter-eight) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six)             |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven)     |
+| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 进一步思考](#chapter-eight)   |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：哈希表
-* **题目地址**：https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：哈希表
+- **题目地址**：https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/
+- **题目内容**：
 
 ```
 给定一个字符串 s 和一个非空字符串 p，找到 s 中所有是 p 的字母异位词的子串，返回这些子串的起始索引。
@@ -70,47 +69,47 @@ s: "abab" p: "ab"
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 const isEqual = (a, b) => {
   for (let k in a) {
     if (a[k] !== b[k]) {
-      return false;
+      return false
     }
   }
-  return true;
+  return true
 }
 const findAnagrams = (s, p) => {
-  const pLength = p.length;
-  const sLength = s.length;
-  let result = [];
-  let mapS = new Array(26);
-  let mapP = new Array(26);
+  const pLength = p.length
+  const sLength = s.length
+  let result = []
+  let mapS = new Array(26)
+  let mapP = new Array(26)
   for (let i = 0; i < pLength; i++) {
-    let sKey = p[i].charCodeAt() - 97;
+    let sKey = p[i].charCodeAt() - 97
     if (mapP[sKey]) {
-      mapP[sKey] += 1;
+      mapP[sKey] += 1
     } else {
-      mapP[sKey] = 1;
+      mapP[sKey] = 1
     }
   }
   for (let i = 0; i < sLength; i++) {
-    let sKey = s[i].charCodeAt() - 97;
+    let sKey = s[i].charCodeAt() - 97
     if (mapS[sKey]) {
-      mapS[sKey] += 1;
+      mapS[sKey] += 1
     } else {
-      mapS[sKey] = 1;
+      mapS[sKey] = 1
     }
     if (i >= pLength) {
-      mapS[s[i - pLength].charCodeAt() - 97] -= 1;
+      mapS[s[i - pLength].charCodeAt() - 97] -= 1
     }
     if (isEqual(mapP, mapS)) {
-      result.push(i - pLength + 1);
+      result.push(i - pLength + 1)
     }
   }
-  return result;
-};
+  return result
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
@@ -122,7 +121,7 @@ const findAnagrams = (s, p) => {
 3. `return`：
 
 ```js
-[ 3, 4, 6 ]
+;[3, 4, 6]
 ```
 
 ## <a name="chapter-five" id="chapter-five">五 LeetCode Submit</a>
@@ -151,26 +150,32 @@ const findAnagrams = (s, p) => {
 
 ```js
 const getPosition = (slice, p) => {
-  slice = slice.split('').sort().join('');
-  p = p.split('').sort().join('');
+  slice = slice
+    .split('')
+    .sort()
+    .join('')
+  p = p
+    .split('')
+    .sort()
+    .join('')
   if (slice === p) {
-    return true;
+    return true
   } else {
-    return false;
+    return false
   }
 }
 
 const findAnagrams = (s, p) => {
-  const sLength = s.length;
-  const pLength = p.length;
-  let result = [];
-  for (let i = 0; i < (sLength - pLength) + 1; i++) {
+  const sLength = s.length
+  const pLength = p.length
+  let result = []
+  for (let i = 0; i < sLength - pLength + 1; i++) {
     if (getPosition(s.slice(i, i + pLength), p)) {
-      result.push(i);
+      result.push(i)
     }
   }
-  return result;
-};
+  return result
+}
 ```
 
 通过遍历数组 `s`，将其每个部分拆出来，一一和 `p` 对比，从而找到对应位置。
@@ -184,8 +189,8 @@ const findAnagrams = (s, p) => {
   "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopq...省略"
   \n
   "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghij...省略"'
-  ✘ answer: 
-  ✘ expected_answer: 
+  ✘ answer:
+  ✘ expected_answer:
   ✘ stdout:
 ```
 
@@ -199,45 +204,45 @@ const findAnagrams = (s, p) => {
 const resetMap = (p, map) => {
   for (let i = 0; i < p.length; i++) {
     if (map.get(p[i]) !== undefined) {
-      map.set(p[i], map.get(p[i]) + 1);
+      map.set(p[i], map.get(p[i]) + 1)
     } else {
-      map.set(p[i], 1);
+      map.set(p[i], 1)
     }
   }
-  return map;
+  return map
 }
 
 const getPosition = (slice, map) => {
   for (let i = 0; i < slice.length; i++) {
     if (map.get(slice[i]) !== undefined) {
-      map.set(slice[i], map.get(slice[i]) - 1);
+      map.set(slice[i], map.get(slice[i]) - 1)
       if (map.get(slice[i]) === 0) {
-        map.delete(slice[i]);
+        map.delete(slice[i])
       }
     }
   }
   if (!map.size) {
-    return true;
+    return true
   } else {
-    return false;
+    return false
   }
 }
 
 const findAnagrams = (s, p) => {
-  const sLength = s.length;
-  const pLength = p.length;
-  let map = new Map();
-  resetMap(p, map);
-  let result = [];
-  for (let i = 0; i < (sLength - pLength) + 1; i++) {
+  const sLength = s.length
+  const pLength = p.length
+  let map = new Map()
+  resetMap(p, map)
+  let result = []
+  for (let i = 0; i < sLength - pLength + 1; i++) {
     if (getPosition(s.slice(i, i + pLength), map)) {
-      result.push(i);
+      result.push(i)
     }
-    map = new Map();
-    resetMap(p, map);
+    map = new Map()
+    resetMap(p, map)
   }
-  return result;
-};
+  return result
+}
 ```
 
 Submit 提交的话，你会发现它比正常方法还更加被限制：
@@ -250,8 +255,8 @@ Submit 提交的话，你会发现它比正常方法还更加被限制：
   \n
   "aaaaaaaaaaaaaaaaaaaaa... 省略 n 个"
   '
-  ✘ answer: 
-  ✘ expected_answer: 
+  ✘ answer:
+  ✘ expected_answer:
   ✘ stdout:
 ```
 
@@ -268,18 +273,18 @@ Submit 提交的话，你会发现它比正常方法还更加被限制：
 > 方法 1：
 
 ```js
-var findAnagrams = function (s, p) {
-  var map = new Map();
-  var res = [];
-  var flag = 0;
-  [...'abcdefghijklmnopqrstuvwxyz'].forEach((char, i) => map.set(char, 2 ** i));
+var findAnagrams = function(s, p) {
+  var map = new Map()
+  var res = []
+  var flag = 0
+  ;[...'abcdefghijklmnopqrstuvwxyz'].forEach((char, i) => map.set(char, 2 ** i))
   for (var i = 0; i < s.length; i++) {
-    flag = flag + map.get(p[0]) - map.get(s[i]);
-    flag === 0 && p.length - 1 <= i && res.push(i + 1 - p.length);
-    p = p.slice(1) + s[i];
+    flag = flag + map.get(p[0]) - map.get(s[i])
+    flag === 0 && p.length - 1 <= i && res.push(i + 1 - p.length)
+    p = p.slice(1) + s[i]
   }
-  return res;
-};
+  return res
+}
 ```
 
 提交后：
@@ -295,36 +300,39 @@ var findAnagrams = function (s, p) {
 
 ```js
 var findAnagrams = function(str, pattern) {
-  const map = {};
+  const map = {}
   for (const char of pattern) {
-    map[char] = ~~(map[char]) + 1;
+    map[char] = ~~map[char] + 1
   }
 
-  const currentMap = Object.keys(map).reduce((pre, key) => Object.assign(pre, {[key]: 0}), {})
+  const currentMap = Object.keys(map).reduce(
+    (pre, key) => Object.assign(pre, { [key]: 0 }),
+    {}
+  )
 
-  const result = [];
+  const result = []
 
   for (const [index, char] of [...str].entries()) {
-    if(index < pattern.length - 1) {
-      map[char] !== undefined && (currentMap[char] += 1);
-      continue;
+    if (index < pattern.length - 1) {
+      map[char] !== undefined && (currentMap[char] += 1)
+      continue
     }
     let lastchar = str[index - pattern.length]
 
-    if(map[lastchar] !== undefined) {
-      currentMap[lastchar] -= 1;
+    if (map[lastchar] !== undefined) {
+      currentMap[lastchar] -= 1
     }
 
-    if(map[char] !== undefined) {
-      currentMap[char] += 1;
+    if (map[char] !== undefined) {
+      currentMap[char] += 1
     }
 
-    if(JSON.stringify(currentMap) === JSON.stringify(map)) {
-      result.push(index - pattern.length + 1);
+    if (JSON.stringify(currentMap) === JSON.stringify(map)) {
+      result.push(index - pattern.length + 1)
     }
   }
-  
-  return result;
+
+  return result
 }
 ```
 

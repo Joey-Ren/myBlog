@@ -1,5 +1,4 @@
-Markdown 打造静态网站
-===
+# Markdown 打造静态网站
 
 > Create by **jsLe** on **2019-5-29 08:08:12**  
 > Recently revised in **2019-05-30 19:15:45**
@@ -22,12 +21,12 @@ Markdown 是一种可以使用普通文本编辑器编写的标记语言，通�
 
 如果小伙伴们感觉还是有点小小的困惑，那么咱列几个例子：
 
-* [腾讯 Web 前端团队](http://alloyteam.github.io/)
-* [GitHub Games](http://likexia.gitee.io/game/)
+- [腾讯 Web 前端团队](http://alloyteam.github.io/)
+- [GitHub Games](http://likexia.gitee.io/game/)
 
 当然，还有 **jsLe** 将自己写的 Markdown 文档库，通过 Gitbook 转换成的静态网站：
 
-* [jsLe 的文档库小册](https://liangjunrong.github.io/)
+- [jsLe 的文档库小册](https://liangjunrong.github.io/)
 
 看到这里，小伙伴内心是不是跃跃欲试了~
 
@@ -35,23 +34,23 @@ Markdown 是一种可以使用普通文本编辑器编写的标记语言，通�
 
 本系列教程涉及知识点：
 
-* Markdown
-* GitHub Pages
-* Git
-* npm
-* VuePress
-* GitBook
+- Markdown
+- GitHub Pages
+- Git
+- npm
+- VuePress
+- GitBook
 
 ## 三 目录
 
 **不折腾的前端，和咸鱼有什么区别！**
 
-| 目录 | 简介 |
-| --- | --- |
-| [Markdown](./Markdown/README.md) | 扎实的 Markdown 基础可以让你更快速地编写笔记。 |
+| 目录                                     | 简介                                               |
+| ---------------------------------------- | -------------------------------------------------- |
+| [Markdown](./Markdown/README.md)         | 扎实的 Markdown 基础可以让你更快速地编写笔记。     |
 | [GitHub Pages](./GitHub-Pages/README.md) | 本系列文章最终目标，将内容部署到 GitHub Pages 上。 |
-| [VuePress](./VuePress/README.md) | 享受 Vue + Webpack + Markdown 的开发体验。 |
-| [GitBook](./GitBook/README.md) | 你只需要专注于编写文档，其他交给我们！ |
+| [VuePress](./VuePress/README.md)         | 享受 Vue + Webpack + Markdown 的开发体验。         |
+| [GitBook](./GitBook/README.md)           | 你只需要专注于编写文档，其他交给我们！             |
 
 看完这四个部分，你应该对于怎么打造一个静态博客/文档库的步骤了然于胸了，**jsLe** 觉得你可以行动起来啦！
 

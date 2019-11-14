@@ -1,22 +1,21 @@
-LeetCode - 中等模式
-===
+# LeetCode - 中等模式
 
 > Create by **jsLe** on **2019-08-05 13:30:25**  
 > Recently revised in **2019-8-21 07:48:36**
 
 LeetCode 中等难度攻略
 
-| 题目 | 解题攻略 |
-| --- | --- |
+| 题目                                                                         | 解题攻略                                                                                     |
+| ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | 003 - 无重复长度的最长子串（longest-substring-without-repeating-characters） | [#003 解题](./003-无重复长度的最长子串（longest-substring-without-repeating-characters）.md) |
-| 005 - 最长回文子串（longest-palindromic-substring） | [#005 解题](./005-最长回文子串（longest-palindromic-substring）.md) |
-| 008 - 字符串转换整数（string-to-integer-atoi） | [#008 解题](./008-字符串转换整数（string-to-integer-atoi）.md) |
-| 015 - 三数之和（3sum） | [#015 解题](./015-三数之和（3sum）.md) |
-| 036 - 有效的数独（valid-sudoku） | [#036 解题](./036-有效的数独（valid-sudoku）.md) |
-| 048 - 旋转图像（rotate-image） | [#048 解题](./048-旋转图像（rotate-image）.md) |
-| 049 - 字母异位词分组（group-anagrams） | [#049 解题](./049-字母异位词分组（group-anagrams）.md) |
-| 073 - 矩阵置零（set-matrix-zeroes） | [#073 解题](./073-矩阵置零（set-matrix-zeroes）.md) |
-| 334 - 递增的三元子序列（increasing-triplet-subsequence） | [#334 解题](./334-递增的三元子序列（increasing-triplet-subsequence）.md) |
+| 005 - 最长回文子串（longest-palindromic-substring）                          | [#005 解题](./005-最长回文子串（longest-palindromic-substring）.md)                          |
+| 008 - 字符串转换整数（string-to-integer-atoi）                               | [#008 解题](./008-字符串转换整数（string-to-integer-atoi）.md)                               |
+| 015 - 三数之和（3sum）                                                       | [#015 解题](./015-三数之和（3sum）.md)                                                       |
+| 036 - 有效的数独（valid-sudoku）                                             | [#036 解题](./036-有效的数独（valid-sudoku）.md)                                             |
+| 048 - 旋转图像（rotate-image）                                               | [#048 解题](./048-旋转图像（rotate-image）.md)                                               |
+| 049 - 字母异位词分组（group-anagrams）                                       | [#049 解题](./049-字母异位词分组（group-anagrams）.md)                                       |
+| 073 - 矩阵置零（set-matrix-zeroes）                                          | [#073 解题](./073-矩阵置零（set-matrix-zeroes）.md)                                          |
+| 334 - 递增的三元子序列（increasing-triplet-subsequence）                     | [#334 解题](./334-递增的三元子序列（increasing-triplet-subsequence）.md)                     |
 
 ---
 

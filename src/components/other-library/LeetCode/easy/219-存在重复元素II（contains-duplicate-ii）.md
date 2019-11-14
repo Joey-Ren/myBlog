@@ -1,5 +1,4 @@
-219 - 存在重复元素II（contains-duplicate-ii）
-===
+# 219 - 存在重复元素 II（contains-duplicate-ii）
 
 > Create by **jsLe** on **2019-07-13 14:53:51**  
 > Recently revised in **2019-09-18 13:37:17**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - Map](#chapter-three-one) |
-| &emsp;[3.2 解法 - 双指针](#chapter-three-two) |
+| &emsp;[3.1 解法 - Map](#chapter-three-one)                                               |
+| &emsp;[3.2 解法 - 双指针](#chapter-three-two)                                            |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数组、哈希表
-* **题目地址**：https://leetcode-cn.com/problems/contains-duplicate-ii/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数组、哈希表
+- **题目地址**：https://leetcode-cn.com/problems/contains-duplicate-ii/
+- **题目内容**：
 
 ```
 给定一个整数数组和一个整数 k，判断数组中是否存在两个不同的索引 i 和 j，使得 nums [i] = nums [j]，并且 i 和 j 的差的绝对值最大为 k。
@@ -51,32 +50,32 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var containsNearbyDuplicate = function(nums, k) {
-  let map = new Map();
+  let map = new Map()
   for (let i = 0; i < nums.length; i++) {
     if (map.get(nums[i]) !== undefined) {
       if (i - map.get(nums[i]) <= k) {
-        return true;
+        return true
       }
-      map.set(nums[i], i);
+      map.set(nums[i], i)
     } else {
-      map.set(nums[i], i);
+      map.set(nums[i], i)
     }
   }
-  return false;
-};
+  return false
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums`：`[1,2,3,1,2,3]`
 2. `k`：`2`
 3. `return`：`false`
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -85,11 +84,11 @@ var containsNearbyDuplicate = function(nums, k) {
   ✔ Your memory usage beats 47.94 % of javascript submissions (39.7 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `Map`：保存键值对。任何值(对象或者原始值) 都可以作为一个键或一个值。[`Map` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Map/README.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **首先**，首推小伙伴们先看看上一题的题解（217 - 存在重复元素），里面讲解了 4 种题解。
 
@@ -104,28 +103,28 @@ var containsNearbyDuplicate = function(nums, k) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var containsNearbyDuplicate = function(nums, k) {
   for (let i = 0; i < nums.length - 1; i++) {
     for (let j = i + 1; j < nums.length; j++) {
-      if (nums[j] === nums[i] && (j - i <= k)) {
-        return true;
+      if (nums[j] === nums[i] && j - i <= k) {
+        return true
       }
     }
   }
-  return false;
-};
+  return false
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums`：`[1,2,3,1,2,3]`
 2. `k`：`2`
 3. `return`：`false`
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -134,19 +133,19 @@ var containsNearbyDuplicate = function(nums, k) {
   ✔ Your memory usage beats 57.03 % of javascript submissions (36.4 MB)
 ```
 
-* **解题思路**：
+- **解题思路**：
 
 **首先**，指针 `i` 指向当前元素，指针 `j` 指向 `i` 之后的元素，即：
 
 > `[1, 2, 3, 1, 2, 3]`
 
-| i | j |
-| --- | --- |
-| 0 | 1 2 3 4 5 |
-| 1 | 2 3 4 5 |
-| 2 | 3 4 5 |
-| 3 | 4 5 |
-| 4 | 5 |
+| i   | j         |
+| --- | --------- |
+| 0   | 1 2 3 4 5 |
+| 1   | 2 3 4 5   |
+| 2   | 3 4 5     |
+| 3   | 4 5       |
+| 4   | 5         |
 
 这样，我们的双指针就会不停挪动，从而遍历整个数组。
 
@@ -154,7 +153,7 @@ var containsNearbyDuplicate = function(nums, k) {
 
 **最后**，如果以上的条件都不成功，则返回 `false`。
 
-* **进一步思考**：
+- **进一步思考**：
 
 这里我们提供了两种解法，那么还有没有其他解法呢？
 

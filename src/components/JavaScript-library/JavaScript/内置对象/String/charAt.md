@@ -1,24 +1,24 @@
-方法 - charAt()
-===
+# 方法 - charAt()
 
 > Create by **jsLe** on **2019-08-12 14:45:17**  
 > Recently revised in **2019-09-10 17:23:58**
 
-* **原文**：[MDN - charAt()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/charAt)
+- **原文**：[MDN - charAt()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/charAt)
 
-* **功能**：`charAt()` 方法从一个字符串中返回指定的字符。
+- **功能**：`charAt()` 方法从一个字符串中返回指定的字符。
 
-* **语法**：`str.charAt(index)`
-  * `index`：一个介于 0 和字符串长度减 1 之间的整数。
+- **语法**：`str.charAt(index)`
 
-* **返回值**：指定的字符
+  - `index`：一个介于 0 和字符串长度减 1 之间的整数。
 
-* **代码**：
+- **返回值**：指定的字符
+
+- **代码**：
 
 ```js
-let str = 'Brave new world';
-str.charAt(0); // B
-str.charAt(str.length - 1); // d
+let str = 'Brave new world'
+str.charAt(0) // B
+str.charAt(str.length - 1) // d
 ```
 
 ---

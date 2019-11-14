@@ -1,5 +1,4 @@
-119 - 杨辉三角II（pascals-triangle-ii）
-===
+# 119 - 杨辉三角 II（pascals-triangle-ii）
 
 > Create by **jsLe** on **2019-6-28 07:39:47**  
 > Recently revised in **2019-09-18 10:25:46**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - 常规解法](#chapter-three-one) |
-| &emsp;[3.2 解法 - 数学解法](#chapter-three-two) |
+| &emsp;[3.1 解法 - 常规解法](#chapter-three-one)                                          |
+| &emsp;[3.2 解法 - 数学解法](#chapter-three-two)                                          |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数组
-* **题目地址**：https://leetcode-cn.com/problems/pascals-triangle-ii/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数组
+- **题目地址**：https://leetcode-cn.com/problems/pascals-triangle-ii/
+- **题目内容**：
 
 ```
 给定一个非负索引 k，其中 k ≤ 33，返回杨辉三角的第 k 行。
@@ -42,13 +41,7 @@
 > 补充：杨辉三角类似于：
 
 ```js
-[
-     [1],
-    [1,1],
-   [1,2,1],
-  [1,3,3,1],
- [1,4,6,4,1]
-]
+;[[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
 ```
 
 ## <a name="chapter-three" id="chapter-three">三 解题</a>
@@ -61,37 +54,37 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var getRow = function(rowIndex) {
   if (!rowIndex) {
-    return [1];
+    return [1]
   }
   if (rowIndex === 1) {
-    return [1, 1];
+    return [1, 1]
   }
-  let recursion = getRow(rowIndex - 1);
-  let result = [];
+  let recursion = getRow(rowIndex - 1)
+  let result = []
   for (let i = 0; i < rowIndex; i++) {
     if (recursion[i] && recursion[i + 1]) {
-      result.push(recursion[i] + recursion[i + 1]);
+      result.push(recursion[i] + recursion[i + 1])
     }
   }
-  return [1, ...result, 1];
-};
+  return [1, ...result, 1]
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `rowIndex`：`5`
 2. `return`：
 
 ```js
-[ 1, 5, 10, 10, 5, 1 ]
+;[1, 5, 10, 10, 5, 1]
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 √ Accepted
@@ -100,11 +93,11 @@ var getRow = function(rowIndex) {
   √ Your memory usage beats 7.19 % of javascript submissions (35.1 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 `push()`：`push()` 方法将一个或多个元素添加到数组的末尾，并返回该数组的新长度。[`push()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/push.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **首先**，今天一大早起来看到这道题，瞪，第一感觉是我昨天是不是做了什么了不得的事儿……
 
@@ -112,12 +105,7 @@ var getRow = function(rowIndex) {
 
 ```js
 if (n === 4) {
-  return [
-    [1],
-    [1, 1],
-    [1, 2, 1],
-    [1, 3, 3, 1],
-  ]
+  return [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1]]
 }
 ```
 
@@ -125,13 +113,13 @@ if (n === 4) {
 
 所以……
 
-我昨天就破解了两道题了啊-_-||
+我昨天就破解了两道题了啊-\_-||
 
 **最后**，还是扯下思路吧：
 
-* 如果 `rowIndex` 为 `0`，返回 `[1]`
-* 如果 `rowIndex` 为 `1`，返回 `[1, 1]`
-* 递归 `getRow(rowIndex - 1)`，然后求出中间的和，并 `return` 出来 `[1, ...result, 1]`
+- 如果 `rowIndex` 为 `0`，返回 `[1]`
+- 如果 `rowIndex` 为 `1`，返回 `[1, 1]`
+- 递归 `getRow(rowIndex - 1)`，然后求出中间的和，并 `return` 出来 `[1, ...result, 1]`
 
 细节小伙伴们可以打印看看是怎么一回事，在此就不多累述了。
 
@@ -139,30 +127,30 @@ if (n === 4) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var getRow = function(rowIndex) {
-  let a = 1;
-  let arr = [];
+  let a = 1
+  let arr = []
   for (let i = 0; i <= rowIndex; i++) {
-    arr.push(a);
-    a = (a * (rowIndex - i)) / (i + 1);
+    arr.push(a)
+    a = (a * (rowIndex - i)) / (i + 1)
   }
-  return arr;
-};
+  return arr
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `5`
 2. `return`：
 
 ```js
-[ 1, 5, 10, 10, 5, 1 ]
+;[1, 5, 10, 10, 5, 1]
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 √ Accepted
@@ -171,11 +159,11 @@ var getRow = function(rowIndex) {
   √ Your memory usage beats 62.09 % of javascript submissions (33.7 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 `push()`：`push()` 方法将一个或多个元素添加到数组的末尾，并返回该数组的新长度。[`push()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/push.md)
 
-* **解题思路**：
+- **解题思路**：
 
 惯例看下 LeetCode 解题库：
 

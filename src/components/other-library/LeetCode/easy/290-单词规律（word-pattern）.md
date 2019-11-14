@@ -1,5 +1,4 @@
-290 - 单词规律（word-pattern）
-===
+# 290 - 单词规律（word-pattern）
 
 > Create by **jsLe** on **2019-07-19 15:23:43**  
 > Recently revised in **2019-09-18 13:52:14**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - Map](#chapter-three-one) |
-| &emsp;[3.2 解法 - Map * 2](#chapter-three-two) |
+| &emsp;[3.1 解法 - Map](#chapter-three-one)                                               |
+| &emsp;[3.2 解法 - Map \* 2](#chapter-three-two)                                          |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：哈希表
-* **题目地址**：https://leetcode-cn.com/problems/word-pattern/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：哈希表
+- **题目地址**：https://leetcode-cn.com/problems/word-pattern/
+- **题目内容**：
 
 ```
 给定一种规律 pattern 和一个字符串 str ，判断 str 是否遵循相同的规律。
@@ -61,32 +60,32 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var wordPattern = function(pattern, str) {
-  pattern  = pattern.split('');
-  str = str.split(' ');
+  pattern = pattern.split('')
+  str = str.split(' ')
   if (pattern.length !== str.length) {
-    return false;
+    return false
   }
-  let map = new Map();
+  let map = new Map()
   for (let i = 0; i < str.length; i++) {
     // 如果存在值，但是对应的值跟哈希表中不一致，则规律不对
     if (map.get(str[i]) && map.get(str[i]) !== pattern[i]) {
-      return false;
+      return false
     }
     // 如果不存在值，但是对应的值的索引不是当前索引，则规律不对
     if (map.get(str[i]) === undefined && pattern.indexOf(pattern[i]) !== i) {
-      return false;
+      return false
     }
-    map.set(str[i], pattern[i]);
+    map.set(str[i], pattern[i])
   }
-  return true;
-};
+  return true
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `pattern`：`abba`
 2. `str`：`dog cat cat fish`
@@ -96,7 +95,7 @@ var wordPattern = function(pattern, str) {
 true
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -105,37 +104,37 @@ true
   ✔ Your memory usage beats 75.9 % of javascript submissions (33.5 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `split()`：`split()` 方法使用指定的分隔符字符串将一个 String 对象分割成字符串数组，以将字符串分隔为子字符串，以确定每个拆分的位置。[`split()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/String/split.md)
 2. `Map`：保存键值对。任何值(对象或者原始值) 都可以作为一个键或一个值。[`Map` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Map/README.md)
 3. `indexOf()`：判断数组中是否存在判断条件中的值。如果存在，则返回第一次出现的索引；如果不存在，则返回 -1。[`indexOf()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/indexOf.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **代码很长，我们细细分割**。
 
 ```js
 var wordPattern = function(pattern, str) {
-  pattern  = pattern.split('');
-  str = str.split(' ');
+  pattern = pattern.split('')
+  str = str.split(' ')
   if (pattern.length !== str.length) {
-    return false;
+    return false
   }
-  let map = new Map();
+  let map = new Map()
   for (let i = 0; i < str.length; i++) {
     // 如果存在值，但是对应的值跟哈希表中不一致，则规律不对
     if (map.get(str[i]) && map.get(str[i]) !== pattern[i]) {
-      return false;
+      return false
     }
     // 如果不存在值，但是对应的值的索引不是当前索引，则规律不对
     if (map.get(str[i]) === undefined && pattern.indexOf(pattern[i]) !== i) {
-      return false;
+      return false
     }
-    map.set(str[i], pattern[i]);
+    map.set(str[i], pattern[i])
   }
-  return true;
-};
+  return true
+}
 ```
 
 **首先**，将 `pattern` 和 `str` 切割成数组。
@@ -158,37 +157,37 @@ var wordPattern = function(pattern, str) {
 
 **最后**，如果这个词没有毛病，那么它就是有规律的词，返回 `true`。
 
-### <a name="chapter-three-two" id="chapter-three-two">3.2 解法 - Map * 2</a>
+### <a name="chapter-three-two" id="chapter-three-two">3.2 解法 - Map \* 2</a>
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
-var wordPattern = function (pattern, str) {
-  var arr = str.split(' ');
+var wordPattern = function(pattern, str) {
+  var arr = str.split(' ')
   if (arr.length !== pattern.length) {
-    return false;
+    return false
   }
-  var map = new Map();
-  var map2 = new Map();
+  var map = new Map()
+  var map2 = new Map()
   for (var i = 0; i < pattern.length; i++) {
-    map.set(pattern[i], arr[i]);
-    map2.set(arr[i], pattern[i]);
+    map.set(pattern[i], arr[i])
+    map2.set(arr[i], pattern[i])
   }
   for (var j = 0; j < pattern.length; j++) {
     if (map.get(pattern[j]) !== arr[j]) {
-      return false;
+      return false
     }
     if (map2.get(arr[j]) !== pattern[j]) {
-      return false;
+      return false
     }
   }
-  return true;
-};
+  return true
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `pattern`：`abba`
 2. `str`：`dog cat cat fish`
@@ -198,7 +197,7 @@ var wordPattern = function (pattern, str) {
 true
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -207,12 +206,12 @@ true
   ✔ Your memory usage beats 19.28 % of javascript submissions (33.7 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `split()`：`split()` 方法使用指定的分隔符字符串将一个 String 对象分割成字符串数组，以将字符串分隔为子字符串，以确定每个拆分的位置。[`split()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/String/split.md)
 2. `Map`：保存键值对。任何值(对象或者原始值) 都可以作为一个键或一个值。[`Map` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Map/README.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **双倍的 Map 是不是双倍的快乐？**
 

@@ -1,24 +1,24 @@
-方法 - match()
-===
+# 方法 - match()
 
 > Create by **jsLe** on **2019-09-11 13:17:12**  
 > Recently revised in **2019-09-11 13:20:30**
 
-* **原文**：[MDN - match()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/match)
+- **原文**：[MDN - match()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/match)
 
-* **功能**：`match()` 方法检索返回一个字符串匹配正则表达式的的结果。
+- **功能**：`match()` 方法检索返回一个字符串匹配正则表达式的的结果。
 
-* **语法**：`str.match(regexp)`
-  * `regexp`：一个正则表达式对象。
+- **语法**：`str.match(regexp)`
 
-* **返回值**：返回匹配的结果
+  - `regexp`：一个正则表达式对象。
 
-* **代码**：
+- **返回值**：返回匹配的结果
+
+- **代码**：
 
 ```js
-var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-var regexp = /[A-E]/gi;
-var matches_array = str.match(regexp);
+var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+var regexp = /[A-E]/gi
+var matches_array = str.match(regexp)
 //  ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']
 ```
 

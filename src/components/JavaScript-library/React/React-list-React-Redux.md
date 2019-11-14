@@ -1,20 +1,19 @@
-React List - React Redux
-===
+# React List - React Redux
 
 > Create by **jsLe** on **2019-3-26 08:51:55**  
 > Recently revised in **2019-05-31 14:59:18**
 
 **Hello 小伙伴们，如果觉得本文还不错，记得给个 **star** ， 小伙伴们的 **star** 是我持续更新的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
 
-* [React 系列文章代码地址](https://github.com/LiangJunrong/React)
+- [React 系列文章代码地址](https://github.com/LiangJunrong/React)
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
+| 目录                                                                               |
+| ---------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                            |
 | <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
@@ -33,10 +32,10 @@ Redux = Reducer + Flux
 
 如上图，即为 Redux 工作机制。
 
-* 蓝色：借书人
-* 黄色：借书动作
-* 橙色：图书管理员
-* 紫色：系统
+- 蓝色：借书人
+- 黄色：借书动作
+- 橙色：图书管理员
+- 紫色：系统
 
 它的流程可以理解为：借书人走到前台（借书动作）跟图书管理员申请借书，图书管理员帮它查找书籍资料，然后拿到电脑返回信息，告诉他去哪借就行了。
 
@@ -56,8 +55,8 @@ Redux = Reducer + Flux
 
 ### UI 组件和容器组件
 
-* UI 组件 —— 傻瓜组件，做页面的渲染
-* 容器组件 —— 聪明组件，做页面的逻辑
+- UI 组件 —— 傻瓜组件，做页面的渲染
+- 容器组件 —— 聪明组件，做页面的逻辑
 
 ---
 

@@ -1,5 +1,4 @@
-387 - 字符串中的第一个唯一字符（first-unique-character-in-a-string）
-===
+# 387 - 字符串中的第一个唯一字符（first-unique-character-in-a-string）
 
 > Create by **jsLe** on **2019-07-23 19:41:13**  
 > Recently revised in **2019-09-18 13:58:52**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - 暴力破解](#chapter-three-one) |
-| &emsp;[3.2 解法 - Map](#chapter-three-two) |
+| &emsp;[3.1 解法 - 暴力破解](#chapter-three-one)                                          |
+| &emsp;[3.2 解法 - Map](#chapter-three-two)                                               |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：哈希表、字符串
-* **题目地址**：https://leetcode-cn.com/problems/first-unique-character-in-a-string/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：哈希表、字符串
+- **题目地址**：https://leetcode-cn.com/problems/first-unique-character-in-a-string/
+- **题目内容**：
 
 ```
 给定一个字符串，找到它的第一个不重复的字符，并返回它的索引。如果不存在，则返回 -1。
@@ -49,20 +48,20 @@ s = "loveleetcode",
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var firstUniqChar = function(s) {
   for (let i = 0; i < s.length; i++) {
     if (s.indexOf(s[i]) === s.lastIndexOf(s[i])) {
-      return i;
+      return i
     }
   }
-  return -1;
-};
+  return -1
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `s`：`loveleetcode`
 2. `return`：
@@ -71,7 +70,7 @@ var firstUniqChar = function(s) {
 2
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -80,11 +79,11 @@ var firstUniqChar = function(s) {
   ✔ Your memory usage beats 59.76 % of javascript submissions (37.7 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `indexOf()`：判断数组中是否存在判断条件中的值。如果存在，则返回第一次出现的索引；如果不存在，则返回 -1。[`indexOf()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/indexOf.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **首先**，如果小伙伴们有印象的话，我们在 [`indexOf()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/indexOf.md) 中有进行讲解，查找字母出现的一个位置用 `indexOf()`，查找字母出现的最后一个位置，使用 `lastIndexOf()`。
 
@@ -99,28 +98,28 @@ var firstUniqChar = function(s) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
-var firstUniqChar = function (s) {
-  let hash = new Map();
+var firstUniqChar = function(s) {
+  let hash = new Map()
   for (let i = 0; i < s.length; i++) {
     if (hash.has(s[i])) {
-      hash.set(s[i], hash.get(s[i]) + 1);
+      hash.set(s[i], hash.get(s[i]) + 1)
     } else {
-      hash.set(s[i], 1);
+      hash.set(s[i], 1)
     }
   }
   for (let i = 0; i < s.length; i++) {
     if (hash.get(s[i]) == 1) {
-      return i;
+      return i
     }
   }
-  return -1;
-};
+  return -1
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `s`：`loveleetcode`
 2. `return`：
@@ -129,7 +128,7 @@ var firstUniqChar = function (s) {
 2
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -138,11 +137,11 @@ var firstUniqChar = function (s) {
   ✔ Your memory usage beats 83.06 % of javascript submissions (37.4 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `Map`：保存键值对。任何值(对象或者原始值) 都可以作为一个键或一个值。[`Map` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Map/README.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **首先**，经过 n 次的 `Map` 洗礼后，小伙伴们应该对 `Map` 不陌生了。
 

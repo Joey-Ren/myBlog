@@ -1,21 +1,20 @@
-方法 - trimStart()
-===
+# 方法 - trimStart()
 
 > Create by **jsLe** on **2019-09-16 14:42:39**  
 > Recently revised in **2019-09-16 14:45:31**
 
-* **原文**：[MDN - trimStart()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart)
+- **原文**：[MDN - trimStart()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart)
 
-* **功能**：`trimStart()` 方法从字符串的开头删除空格。`trimLeft()` 是此方法的别名。
+- **功能**：`trimStart()` 方法从字符串的开头删除空格。`trimLeft()` 是此方法的别名。
 
-* **语法**：`str.trimStart()`
+- **语法**：`str.trimStart()`
 
-* **返回值**：`trimStart()` 一个新字符串，表示从其开头（左端）剥离空格的调用字符串。
+- **返回值**：`trimStart()` 一个新字符串，表示从其开头（左端）剥离空格的调用字符串。
 
-* **代码**：
+- **代码**：
 
 ```js
-'   jsLe   '.trimStart(); // 'jsLe   '
+'   jsLe   '.trimStart() // 'jsLe   '
 ```
 
 ---

@@ -1,18 +1,17 @@
-面试知识点 - JS 原型与原型链
-===
- 
+# 面试知识点 - JS 原型与原型链
+
 > Create by **jsLe** on **2019-2-21 08:42:02**  
 > Recently revised in **2019-05-24 11:08:37**
- 
+
 **Hello 小伙伴们，如果觉得本文还不错，记得给个 **star** ， 你们的 **star** 是我学习的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)**
 
 **本文涉及知识点**：
 
-* `prototype`
-* `__proto__`
-* `new`
-* `call()`/`apply()`/`bind()`
-* `this`
+- `prototype`
+- `__proto__`
+- `new`
+- `call()`/`apply()`/`bind()`
+- `this`
 
 **在本文中，jsLe 会讲解通过自我探索后关于上述知识点的个人理解，如有纰漏、疏忽或者误解，欢迎各位小伙伴留言指出。**
 
@@ -24,21 +23,21 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 题目](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 解题](#chapter-four) |
-| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 知识拓展](#chapter-five) |
+| 目录                                                                                                                   |
+| ---------------------------------------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                                                |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)                                     |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 题目](#chapter-three)                               |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 解题](#chapter-four)                                  |
+| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 知识拓展](#chapter-five)                              |
 | &emsp;<a name="catalog-chapter-five-one" id="catalog-chapter-five-one"></a>[5.1 问题少年：旅途开始](#chapter-five-one) |
-| &emsp;<a name="catalog-chapter-five-two" id="catalog-chapter-five-two"></a>[5.2 原型及原型链](#chapter-five-two) |
-| &emsp;<a name="catalog-chapter-five-three" id="catalog-chapter-five-three"></a>[5.3 new 为何物](#chapter-five-three) |
-| &emsp;<a name="catalog-chapter-five-four" id="catalog-chapter-five-four"></a>[5.4 call() 又是啥](#chapter-five-four) |
-| &emsp;<a name="catalog-chapter-five-five" id="catalog-chapter-five-five"></a>[5.5 this 指向哪](#chapter-five-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六  总结](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 参考文献](#chapter-seven) |
-| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 工具](#chapter-eight) |
+| &emsp;<a name="catalog-chapter-five-two" id="catalog-chapter-five-two"></a>[5.2 原型及原型链](#chapter-five-two)       |
+| &emsp;<a name="catalog-chapter-five-three" id="catalog-chapter-five-three"></a>[5.3 new 为何物](#chapter-five-three)   |
+| &emsp;<a name="catalog-chapter-five-four" id="catalog-chapter-five-four"></a>[5.4 call() 又是啥](#chapter-five-four)   |
+| &emsp;<a name="catalog-chapter-five-five" id="catalog-chapter-five-five"></a>[5.5 this 指向哪](#chapter-five-five)     |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 总结](#chapter-six)                                     |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 参考文献](#chapter-seven)                           |
+| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 工具](#chapter-eight)                               |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
@@ -63,77 +62,77 @@
 
 相信有的小伙伴能自信地做出下面这些题~
 
-* 题目 1
+- 题目 1
 
 ```js
-var A = function() {};
-A.prototype.n = 1;
-var b = new A();
+var A = function() {}
+A.prototype.n = 1
+var b = new A()
 A.prototype = {
   n: 2,
   m: 3
 }
-var c = new A();
+var c = new A()
 
-console.log(b.n);
-console.log(b.m);
+console.log(b.n)
+console.log(b.m)
 
-console.log(c.n);
-console.log(c.m);
+console.log(c.n)
+console.log(c.m)
 ```
 
 请写出上面编程的输出结果是什么？
 
-* 题目 2
+- 题目 2
 
 ```js
-var F = function() {};
+var F = function() {}
 
 Object.prototype.a = function() {
-  console.log('a');
-};
-
-Function.prototype.b = function() {
-  console.log('b');
+  console.log('a')
 }
 
-var f = new F();
+Function.prototype.b = function() {
+  console.log('b')
+}
 
-f.a();
-f.b();
+var f = new F()
 
-F.a();
-F.b();
+f.a()
+f.b()
+
+F.a()
+F.b()
 ```
 
 请写出上面编程的输出结果是什么？
 
-* 题目 3
+- 题目 3
 
 ```js
 function Person(name) {
-    this.name = name
+  this.name = name
 }
-let p = new Person('Tom');
+let p = new Person('Tom')
 ```
 
-问题1：1. p.__proto__等于什么？
+问题 1：1. p.**proto**等于什么？
 
-问题2：Person.__proto__等于什么？
+问题 2：Person.**proto**等于什么？
 
-* 题目 4
+- 题目 4
 
 ```js
 var foo = {},
-    F = function(){};
-Object.prototype.a = 'value a';
-Function.prototype.b = 'value b';
+  F = function() {}
+Object.prototype.a = 'value a'
+Function.prototype.b = 'value b'
 
-console.log(foo.a);
-console.log(foo.b);
+console.log(foo.a)
+console.log(foo.b)
 
-console.log(F.a);
-console.log(F.b);
+console.log(F.a)
+console.log(F.b)
 ```
 
 请写出上面编程的输出结果是什么？
@@ -142,7 +141,7 @@ console.log(F.b);
 
 > [返回目录](#chapter-one)
 
-* 题目 1 答案：
+- 题目 1 答案：
 
 ```js
 b.n -> 1
@@ -152,7 +151,7 @@ c.n -> 2;
 c.m -> 3;
 ```
 
-* 题目 2 答案：
+- 题目 2 答案：
 
 ```js
 f.a() -> a
@@ -162,13 +161,13 @@ F.a() -> a
 F.b() -> b
 ```
 
-* 题目 3 答案
+- 题目 3 答案
 
-答案1：Person.prototype
+答案 1：Person.prototype
 
-答案2：Function.prototype
+答案 2：Function.prototype
 
-* 题目 4 答案
+- 题目 4 答案
 
 ```js
 foo.a => value a
@@ -213,17 +212,17 @@ F.b => value b
 
 ```js
 function Person(name, age) {
-  this.name = name;
-  this.age = age;
+  this.name = name
+  this.age = age
   this.eat = function() {
-    console.log(age + "岁的" + name + "在吃饭。");
+    console.log(age + '岁的' + name + '在吃饭。')
   }
 }
 
-let p1 = new Person("jsLe", 24);
-let p2 = new Person("jsLe", 24);
+let p1 = new Person('jsLe', 24)
+let p2 = new Person('jsLe', 24)
 
-console.log(p1.eat === p2.eat); // false
+console.log(p1.eat === p2.eat) // false
 ```
 
 可以看到，对于同一个函数，我们通过 `new` 生成出来的实例，都会开出新的一块堆区，所以上面代码中 person 1 和 person 2 的吃饭是不同的。
@@ -236,18 +235,18 @@ console.log(p1.eat === p2.eat); // false
 
 ```js
 function Person(name) {
-  this.name = name;
+  this.name = name
 }
 
 // 通过构造函数的 Person 的 prototype 属性找到 Person 的原型对象
 Person.prototype.eat = function() {
-  console.log("吃饭");
+  console.log('吃饭')
 }
 
-let p1 = new Person("jsLe", 24);
-let p2 = new Person("梁峻荣", 24);
+let p1 = new Person('jsLe', 24)
+let p2 = new Person('梁峻荣', 24)
 
-console.log(p1.eat === p2.eat); // true
+console.log(p1.eat === p2.eat) // true
 ```
 
 看！这样我们就通过分享的形式，让这两个实例对象指向相同的位置了（社区）。
@@ -258,11 +257,11 @@ console.log(p1.eat === p2.eat); // true
 
 ![图](../../../public-repertory/img/other-interview-2-prototype.png)
 
-* JS 说，我好寂寞。因为 JS 的本源是空的，即：null。
-* JS 说，要有神。所以它通过万能术 `__proto__` 产生了 No1 这号神，即：`No1.__proto__ == null`。
-* JS 说，神你要有自己的想法啊。所以神自己想了个方法，根据自己的原型 `prototype` 创建了对象 `Object`，即：`Object.prototype == No1; No1.__proto__ == null`。于是我们把 `prototype` 叫做原型，就好比 `Object` 的原型是神，男人的原型是人类一样，同时 `__proto__` 叫做原型链，毕竟有了 `__proto__`，对象、神、JS 之间才有联系。这时候 `Object.prototype.__proto__ == null`。
-* JS 说，神你要有更多的想法啊，我把万能术 `__proto__` 借你用了。所以神根据 `Object`，使用 `__proto__` 做了个机器 No2，即 `No2.__proto__ == No1`，并规定所有的东西，通过 `__proto__` 可以连接机器，再找到自己，包括 `Object` 也是，于是 **Object 成为所有对象的原型**，`Object.__proto__.__proto__ == No1`，然后 `String`、`Number`、`Boolean`、 `Array` 这些物种也是如此。
-* JS 说，神你的机器好厉害喔！你的机器能不能做出更多的机器啊？神咧嘴一笑：你通过万能术创造了我，我通过自己原型创造了对象。如此，那我造个机器 Function，`Function.prototype == No2, Function.__proto__ == No2`，即 `Function.prototype == Function.__proto__` 吧！这样 No2 就成了造机器的机器，它负责管理 Object、Function、String、Number、Boolean、Array 这几个。
+- JS 说，我好寂寞。因为 JS 的本源是空的，即：null。
+- JS 说，要有神。所以它通过万能术 `__proto__` 产生了 No1 这号神，即：`No1.__proto__ == null`。
+- JS 说，神你要有自己的想法啊。所以神自己想了个方法，根据自己的原型 `prototype` 创建了对象 `Object`，即：`Object.prototype == No1; No1.__proto__ == null`。于是我们把 `prototype` 叫做原型，就好比 `Object` 的原型是神，男人的原型是人类一样，同时 `__proto__` 叫做原型链，毕竟有了 `__proto__`，对象、神、JS 之间才有联系。这时候 `Object.prototype.__proto__ == null`。
+- JS 说，神你要有更多的想法啊，我把万能术 `__proto__` 借你用了。所以神根据 `Object`，使用 `__proto__` 做了个机器 No2，即 `No2.__proto__ == No1`，并规定所有的东西，通过 `__proto__` 可以连接机器，再找到自己，包括 `Object` 也是，于是 **Object 成为所有对象的原型**，`Object.__proto__.__proto__ == No1`，然后 `String`、`Number`、`Boolean`、 `Array` 这些物种也是如此。
+- JS 说，神你的机器好厉害喔！你的机器能不能做出更多的机器啊？神咧嘴一笑：你通过万能术创造了我，我通过自己原型创造了对象。如此，那我造个机器 Function，`Function.prototype == No2, Function.__proto__ == No2`，即 `Function.prototype == Function.__proto__` 吧！这样 No2 就成了造机器的机器，它负责管理 Object、Function、String、Number、Boolean、Array 这几个。
 
 **最后**，说到这里，我们应该很了解开局祭祖的那副图，并有点豁然开朗的感觉，能清楚地了解下面几条公式了：
 
@@ -280,18 +279,18 @@ Object.prototype.__proto__ === null;
 
 ```js
 function Person(name) {
-  this.name = name;
+  this.name = name
 }
 
 // 通过构造函数的 Person 的 prototype 属性找到 Person 的原型对象
 Person.prototype.eat = function() {
-  console.log("吃饭");
+  console.log('吃饭')
 }
 
-let p1 = new Person("jsLe", 24);
-let p2 = new Person("梁峻荣", 24);
+let p1 = new Person('jsLe', 24)
+let p2 = new Person('梁峻荣', 24)
 
-console.log(p1.eat === p2.eat); // true
+console.log(p1.eat === p2.eat) // true
 ```
 
 可以看出，这里有个点，我们还不清楚，就是：**new 为何物？**
@@ -307,12 +306,12 @@ console.log(p1.eat === p2.eat); // true
 ```js
 // 定义鸟类
 function Bird(color) {
-  this.color = color;
+  this.color = color
 }
 
 // 定义飞的动作
 function fly(bird) {
-  console.log(bird + " 飞起来了！");
+  console.log(bird + ' 飞起来了！')
 }
 ```
 
@@ -321,18 +320,18 @@ function fly(bird) {
 ```js
 // 定义鸟类
 function Bird(color) {
-  this.color = color;
+  this.color = color
 }
 
 // 创造一只鸟
-let bird1 = new Bird('蓝色');
+let bird1 = new Bird('蓝色')
 
 // 定义飞的动作
 function fly(bird) {
-  console.log(bird.color + "的鸟飞起来了！");
+  console.log(bird.color + '的鸟飞起来了！')
 }
 
-fly(bird1); // 蓝色的鸟飞起来了！
+fly(bird1) // 蓝色的鸟飞起来了！
 ```
 
 说到这里，我们知道如何使用类型创造机器和动作创造机器了。
@@ -344,25 +343,25 @@ fly(bird1); // 蓝色的鸟飞起来了！
 ```js
 // 1. 首先有个类型机器
 function ClassMachine() {
-  console.log("类型创造机器");
+  console.log('类型创造机器')
 }
 // 2. 然后我们定义一个对象物品
-let thingOne = {};
+let thingOne = {}
 // 3. 对象物品通过万能术 __proto__ 指向了类型机器的原型（即 No 2 始机器）
-thingOne.__proto__ = ClassMachine.prototype;
+thingOne.__proto__ = ClassMachine.prototype
 // 4. ？？？
-ClassMachine.call(thingOne);
+ClassMachine.call(thingOne)
 // 5. 定义了类型机器的动作
-ClassMachine.prototype.action = function(){
-  console.log("动作创造机器");
+ClassMachine.prototype.action = function() {
+  console.log('动作创造机器')
 }
 // 6. 这个对象物品执行了动作
-thingOne.action();
+thingOne.action()
 /*
  * Console：
  * 类型创造机器
  * 动作创造机器
-*/
+ */
 ```
 
 OK，`new` 做了啥，**No 1** 神安排地明明白白了。
@@ -370,29 +369,29 @@ OK，`new` 做了啥，**No 1** 神安排地明明白白了。
 那么下面这个例子，我们也就清楚了：
 
 ```js
-function Person(name){
-    this.name = name
+function Person(name) {
+  this.name = name
 }
 
 Person.prototype = {
-  eat:function(){
+  eat: function() {
     console.log('吃饭')
   },
-  sleep:function(){
+  sleep: function() {
     console.log('睡觉')
   }
-};
+}
 
-let p = new Person('梁峻荣',28);
+let p = new Person('梁峻荣', 28)
 
 // 访问原型对象
-console.log(Person.prototype);
-console.log(p.__proto__); // __proto__仅用于测试，不能写在正式代码中
+console.log(Person.prototype)
+console.log(p.__proto__) // __proto__仅用于测试，不能写在正式代码中
 
 /* Console
-  * {eat: ƒ, sleep: ƒ}
-  * {eat: ƒ, sleep: ƒ}
-*/
+ * {eat: ƒ, sleep: ƒ}
+ * {eat: ƒ, sleep: ƒ}
+ */
 ```
 
 所以很多人会给出一条公式：
@@ -417,30 +416,30 @@ console.log(p.__proto__); // __proto__仅用于测试，不能写在正式代码
 
 ```js
 function fn1() {
-  console.log(1);
-  this.num = 111;
+  console.log(1)
+  this.num = 111
   this.sayHey = function() {
-    console.log("say hey.");
+    console.log('say hey.')
   }
 }
 function fn2() {
-  console.log(2);
-  this.num = 222;
+  console.log(2)
+  this.num = 222
   this.sayHello = function() {
-    console.log("say hello.");
+    console.log('say hello.')
   }
 }
-fn1.call(fn2); // 1
+fn1.call(fn2) // 1
 
-fn1(); // 1
-fn1.num; // undefined
-fn1.sayHey(); // fn1.sayHey is not a function
+fn1() // 1
+fn1.num // undefined
+fn1.sayHey() // fn1.sayHey is not a function
 
-fn2(); // 2
-fn2.num; // 111
-fn2.sayHello(); // fn2.sayHello is not a function
+fn2() // 2
+fn2.num // 111
+fn2.sayHello() // fn2.sayHello is not a function
 
-fn2.sayHey(); //say hey.
+fn2.sayHey() //say hey.
 ```
 
 通过 `fn1.call(fn2)`，我们发现 `fn1`、`fn2` 都被改变了，`call()` 就好比一个小三，破坏了 `fn1` 和 `fn2` 和睦的家庭。
@@ -451,29 +450,29 @@ fn2.sayHey(); //say hey.
 
 **然后**，我们应该顺势看下它源码，搞懂它究竟怎么实现的，但是 **jsLe** 太菜，看不懂网上关于它源码流程的文章，所以咱们还是多上几个例子，搞懂 `call()` 能做啥吧~
 
-* 例子 1：
+- 例子 1：
 
 ```js
 function Product(name, price) {
-  this.name = name;
-  this.price = price;
+  this.name = name
+  this.price = price
 }
 
 function Food(name, price) {
-  Product.call(this, name, price);
-  this.category = 'food';
+  Product.call(this, name, price)
+  this.category = 'food'
 }
 
-let food1 = new Food('chees', 5);
+let food1 = new Food('chees', 5)
 
-food1; // Food {name: "chees", price: 5, category: "food"}
+food1 // Food {name: "chees", price: 5, category: "food"}
 ```
 
 可以看出，通过在 `Food` 构造方法里面调用 `call()`，成功使 `Food` 拓展了 `name` 以及 `price` 这两个字段。所以：
 
 **准则一：可以使用 `call()` 方法调用父构造函数。**
 
-* 例子 2：
+- 例子 2：
 
 ```js
 var animals = [
@@ -487,13 +486,13 @@ var animals = [
   }
 ]
 
-for(var i = 0; i < animals.length; i++) {
-  (function(i) {
+for (var i = 0; i < animals.length; i++) {
+  ;(function(i) {
     this.print = function() {
-      console.log('#' + i + ' ' + this.species + ": " + this.name);
+      console.log('#' + i + ' ' + this.species + ': ' + this.name)
     }
-    this.print();
-  }).call(animals[i], i);
+    this.print()
+  }.call(animals[i], i))
 }
 
 // #0 Lion: King
@@ -504,20 +503,22 @@ for(var i = 0; i < animals.length; i++) {
 
 **准则二：使用 `call()` 方法调用匿名函数。**
 
-* 例子 3：
+- 例子 3：
 
 ```js
 function greet() {
-  var reply = [this.animal, 'typically sleep between', this.sleepDuration].join(' ');
-  console.log(reply);
+  var reply = [this.animal, 'typically sleep between', this.sleepDuration].join(
+    ' '
+  )
+  console.log(reply)
 }
 
 var obj = {
   animal: 'cats',
   sleepDuration: '12 and 16 hours'
-};
+}
 
-greet.call(obj);  // cats typically sleep between 12 and 16 hours
+greet.call(obj) // cats typically sleep between 12 and 16 hours
 ```
 
 **准则三：使用 `call()` 方法调用函数并且指定上下文的 `this`。**
@@ -527,22 +528,22 @@ greet.call(obj);  // cats typically sleep between 12 and 16 hours
 说到 `call()`，我们还要讲讲跟它相似的 `apply()`，其实这两者都是相似的，只是 `apply()` 调用的方式不同，例如：
 
 ```js
-function add(a, b){
-  return a + b;  
+function add(a, b) {
+  return a + b
 }
-function sub(a, b){
-  return a - b;  
+function sub(a, b) {
+  return a - b
 }
 
 // apply() 的用法
-var a1 = add.apply(sub, [4, 2]); // sub 调用 add 的方法
-var a2 = sub.apply(add, [4, 2]);
+var a1 = add.apply(sub, [4, 2]) // sub 调用 add 的方法
+var a2 = sub.apply(add, [4, 2])
 
-a1; // 6     
-a2; // 2
+a1 // 6
+a2 // 2
 
 // call() 的用法
-var a1 = add.call(sub, 4, 2);
+var a1 = add.call(sub, 4, 2)
 ```
 
 是的，`apply()` 只能调用两个参数：新 `this` 对象和一个数组 `argArray`。即：`function.call(thisObj, [arg1, arg2]);`
@@ -552,36 +553,39 @@ var a1 = add.call(sub, 4, 2);
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>call()、apply() 以及 bind()</title>
-</head>
-<body>
-  <div id="box">我是一个盒子！</div>
-  
-  <script>
-    window.onload = function() {
-      var fn = {
-        num: 2,
-        fun: function() {
-          document.getElementById("box").onclick = (function() {
-            console.log(this.num);
-          }).bind(this);
-          // }).call(this);
-          // }).apply(this);
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>call()、apply() 以及 bind()</title>
+  </head>
+  <body>
+    <div id="box">我是一个盒子！</div>
+
+    <script>
+      window.onload = function() {
+        var fn = {
+          num: 2,
+          fun: function() {
+            document.getElementById('box').onclick = function() {
+              console.log(this.num)
+            }.bind(this)
+            // }).call(this);
+            // }).apply(this);
+          }
+          /*
+           * 这里的 this 是 fun，所以可以正确地访问 num,
+           * 如果使用 bind()，会在点击之后打印 2；
+           * 如果使用 call() 或者 apply()，那么在刷新网页的时候就会打印 2
+           */
         }
-        /*
-         * 这里的 this 是 fun，所以可以正确地访问 num,
-         * 如果使用 bind()，会在点击之后打印 2；
-         * 如果使用 call() 或者 apply()，那么在刷新网页的时候就会打印 2
-        */
+        fn.fun()
       }
-      fn.fun();
-    }
-  </script>
-</body>
+    </script>
+  </body>
 </html>
 ```
 
@@ -591,56 +595,56 @@ var a1 = add.call(sub, 4, 2);
 
 > [返回目录](#chapter-one)
 
-* **在绝大多数情况下，函数的调用方式决定了 `this` 的值。它在全局执行环境中 `this` 都指向全局对象**
+- **在绝大多数情况下，函数的调用方式决定了 `this` 的值。它在全局执行环境中 `this` 都指向全局对象**
 
 怎么理解呢，我们举个例子：
 
 ```js
 // 在浏览器中， window 对象同时也是全局对象
-conosle.log(this === window); // true
+conosle.log(this === window) // true
 
-a = 'apple';
-conosle.log(window.a); // apple
+a = 'apple'
+conosle.log(window.a) // apple
 
-this.b = "banana";
-console.log(window.b); // banana
-console.log(b); // banana
+this.b = 'banana'
+console.log(window.b) // banana
+console.log(b) // banana
 ```
 
 但是，日常工作中，大多数的 `this`，都是在函数内部被调用的，而：
 
-* **在函数内部，`this` 的值取决于函数被调用的方式。**
+- **在函数内部，`this` 的值取决于函数被调用的方式。**
 
 ```js
 function showAge(age) {
-  this.newAge = age;
-  console.log(newAge);
+  this.newAge = age
+  console.log(newAge)
 }
-showAge("24"); // 24
+showAge('24') // 24
 ```
 
 然而，问题总会有的：
 
-* **一般 `this` 指向问题，会发生在回调函数中。所以我们在写回调函数时，要注意一下 `this` 的指向问题。**
+- **一般 `this` 指向问题，会发生在回调函数中。所以我们在写回调函数时，要注意一下 `this` 的指向问题。**
 
 ```js
 var obj = {
   birth: 1995,
   getAge: function() {
-    var b = this.birth; // 1995;
+    var b = this.birth // 1995;
     var fn = function() {
-      return this.birth; 
+      return this.birth
       // this 指向被改变了！
       // 因为这里重新定义了个 function，
       // 假设它内部有属于自己的 this1，
       // 然后 getAge 的 this 为 this2，
       // 那么，fn 当然奉行就近原则，使用自己的 this，即：this1
-    };
-    return fn();
+    }
+    return fn()
   }
 }
 
-obj.getAge(); // undefined
+obj.getAge() // undefined
 ```
 
 在这里我们可以看到， `fn` 中的 `this` 指向变成 `undefined` 了。
@@ -653,15 +657,15 @@ obj.getAge(); // undefined
 var obj = {
   birth: 1995,
   getAge: function() {
-    var b = this.birth; // 1995
+    var b = this.birth // 1995
     var fn = function() {
-      return this.birth; 
-    };
-    return fn.call(obj); // 通过 call()，将 obj 的 this 指向了 fn 中
+      return this.birth
+    }
+    return fn.call(obj) // 通过 call()，将 obj 的 this 指向了 fn 中
   }
 }
 
-obj.getAge(); // 1995
+obj.getAge() // 1995
 ```
 
 **然后**，我们使用 `that` 来接盘 `this`：
@@ -670,16 +674,16 @@ obj.getAge(); // 1995
 var obj = {
   birth: 1995,
   getAge: function() {
-    var b = this.birth; // 1995
-    var that = this; // 将 this 指向丢给 that
+    var b = this.birth // 1995
+    var that = this // 将 this 指向丢给 that
     var fn = function() {
-      return that.birth; // 通过 that 来寻找到 birth
-    };
-    return fn();
+      return that.birth // 通过 that 来寻找到 birth
+    }
+    return fn()
   }
 }
 
-obj.getAge(); // 1995
+obj.getAge() // 1995
 ```
 
 我们通过了 `var that = this`，成功在 `fn` 中引用到了 `obj` 的 `birth`。
@@ -690,12 +694,12 @@ obj.getAge(); // 1995
 var obj = {
   birth: 1995,
   getAge: function() {
-    var b = this.birth; // 1995
-    var fn = () => this.birth;
-    return fn();
+    var b = this.birth // 1995
+    var fn = () => this.birth
+    return fn()
   }
 }
-obj.getAge(); // 1995
+obj.getAge() // 1995
 ```
 
 讲到这里，我们再回首 `new` 那块我们不懂的代码：
@@ -703,25 +707,25 @@ obj.getAge(); // 1995
 ```js
 // 1. 首先有个类型机器
 function ClassMachine() {
-  console.log("类型创造机器");
+  console.log('类型创造机器')
 }
 // 2. 然后我们定义一个对象物品
-let thingOne = {};
+let thingOne = {}
 // 3. 对象物品通过万能术 __proto__ 指向了类型机器的原型（即 No 2 始机器）
-thingOne.__proto__ = ClassMachine.prototype;
+thingOne.__proto__ = ClassMachine.prototype
 // 4. ？？？
-ClassMachine.call(thingOne);
+ClassMachine.call(thingOne)
 // 5. 定义了类型机器的动作
-ClassMachine.prototype.action = function(){
-  console.log("动作创造机器");
+ClassMachine.prototype.action = function() {
+  console.log('动作创造机器')
 }
 // 6. 这个对象物品执行了动作
-thingOne.action();
+thingOne.action()
 /*
  * Console：
  * 类型创造机器
  * 动作创造机器
-*/
+ */
 ```
 
 很容易理解啊，在第四步中，我们将 `ClassMachine` 的 `this` 变成了 `thingOne` 的 `this` 了！
@@ -750,18 +754,18 @@ thingOne.action();
 
 下面列举本文精选参考文章，其中一些不重要的零零散散 30 来篇文章已被刷选。
 
-* [《JavaScript 世界万物诞生记》](https://zhuanlan.zhihu.com/p/22989691)
-* [《小邵教你玩转JS面向对象》](https://juejin.im/post/5b8a8724f265da435450c591)
-* [《js中的new()到底做了些什么？？》](https://www.cnblogs.com/faith3/p/6209741.html)
-* [《MDN Function.prototype.call()》](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
-* [《JavaScript中的call、apply、bind深入理解》](https://www.jianshu.com/p/00dc4ad9b83f)
-* [《箭头函数 - 廖雪峰》](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001438565969057627e5435793645b7acaee3b6869d1374000)
+- [《JavaScript 世界万物诞生记》](https://zhuanlan.zhihu.com/p/22989691)
+- [《小邵教你玩转 JS 面向对象》](https://juejin.im/post/5b8a8724f265da435450c591)
+- [《js 中的 new()到底做了些什么？？》](https://www.cnblogs.com/faith3/p/6209741.html)
+- [《MDN Function.prototype.call()》](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
+- [《JavaScript 中的 call、apply、bind 深入理解》](https://www.jianshu.com/p/00dc4ad9b83f)
+- [《箭头函数 - 廖雪峰》](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001438565969057627e5435793645b7acaee3b6869d1374000)
 
 ## <a name="chapter-eight" id="chapter-eight">八 工具</a>
 
 > [返回目录](#chapter-one)
 
-* [在线作图 Process On](https://www.processon.com)
+- [在线作图 Process On](https://www.processon.com)
 
 ---
 

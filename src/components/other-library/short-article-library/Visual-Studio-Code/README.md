@@ -1,10 +1,9 @@
-VSCode 常用操作和配置
-===
+# VSCode 常用操作和配置
 
 > create by **jsLe** on **2018-09-04 11:26:11**  
 > Recently revised in **2019-05-30 19:22:28**
 
-## 第一节 VSCode配置
+## 第一节 VSCode 配置
 
 配置方式： 主菜单 -> 文件 -> 首选项 -> 用户设置：
 
@@ -23,7 +22,7 @@ VSCode 常用操作和配置
 
 ### 1.1 下划线选中
 
-设置不仅可以下划线选中，而且可以横杠选中，主要应用于同事写 class 名或者 id 名或者写 js 起名的时候，有可能用 - 或者 _ 。
+设置不仅可以下划线选中，而且可以横杠选中，主要应用于同事写 class 名或者 id 名或者写 js 起名的时候，有可能用 - 或者 \_ 。
 
 ```
 {
@@ -43,7 +42,7 @@ git fetch 命令用于从另一个存储库下载对象和引用，在 vs code �
 
 ### 1.3 配置 Markdown 预览的样式
 
-如果是VS Code默认的配置，Markdown 文件是乌漆嘛黑的，这时候可以给它设置个 GitHub 样式，这样子预览看到的就是 GitHub 中的样式，详情可看：[点击跳往](../markdown/markdown.md)
+如果是 VS Code 默认的配置，Markdown 文件是乌漆嘛黑的，这时候可以给它设置个 GitHub 样式，这样子预览看到的就是 GitHub 中的样式，详情可看：[点击跳往](../markdown/markdown.md)
 
 ```
 {
@@ -70,11 +69,12 @@ git fetch 命令用于从另一个存储库下载对象和引用，在 vs code �
 1. 安装插件 HTML Snippets
 2. 文件-首选项-用户代码片段-HTML
 3. 修改文件内容为：
+
 ```
 {
-  // Place your snippets for html here. Each snippet is defined under a snippet name and has a prefix, body and 
+  // Place your snippets for html here. Each snippet is defined under a snippet name and has a prefix, body and
   // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
   // same ids are connected.
   // Example:
   // "Print to console": {
@@ -107,11 +107,12 @@ git fetch 命令用于从另一个存储库下载对象和引用，在 vs code �
   }
 }
 ```
-4. 在HTML页面输入!!然后回车，即可看到新效果
+
+4. 在 HTML 页面输入!!然后回车，即可看到新效果
 
 ## 第二节 插件推荐
 
-* Prettier - Code formatter：格式化代码
-* Vetur - 管理好你的 Vue 代码
+- Prettier - Code formatter：格式化代码
+- Vetur - 管理好你的 Vue 代码
 
 > <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">jsLe 的文档库</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/LiangJunrong/document-library" property="cc:attributionName" rel="cc:attributionURL">梁峻荣</a> 采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/LiangJunrong/document-library" rel="dct:source">https://github.com/LiangJunrong/document-library</a>上的作品创作。<br />本许可协议授权之外的使用权限可以从 <a xmlns:cc="http://creativecommons.org/ns#" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/" rel="cc:morePermissions">https://creativecommons.org/licenses/by-nc-sa/2.5/cn/</a> 处获得。

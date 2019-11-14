@@ -1,5 +1,4 @@
-Angular
-===
+# Angular
 
 > create by **jsLe** on **2018-9-5 11:33:18**  
 > Recently revised in **2019-05-31 16:09:06**
@@ -14,9 +13,9 @@ AngularJS 有着诸多特性，最为核心的是：MVVM、模块化、自动化
 
 ## 目录
 
-| 目录 |
-| ------ |
-| [Angular Demo One - 打造企业级协作平台](./Angular-demo-one-Taskmgr.md) |
+| 目录                                                                             |
+| -------------------------------------------------------------------------------- |
+| [Angular Demo One - 打造企业级协作平台](./Angular-demo-one-Taskmgr.md)           |
 | [Angular Demo Two - 股票管理平台](./Angular-demo-two-StockManagementPlatform.md) |
 
 ---

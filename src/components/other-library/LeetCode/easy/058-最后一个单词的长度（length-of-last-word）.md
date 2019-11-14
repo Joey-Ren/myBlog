@@ -1,5 +1,4 @@
-058 - 最后一个单词的长度（length-of-last-word）
-===
+# 058 - 最后一个单词的长度（length-of-last-word）
 
 > Create by **jsLe** on **2019-06-10 18:18:16**  
 > Recently revised in **2019-09-18 10:18:22**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解题 - 暴力破解](#chapter-three-one) |
-| &emsp;[3.2 解法 - 正则表达式](#chapter-three-two) |
+| &emsp;[3.1 解题 - 暴力破解](#chapter-three-one)                                          |
+| &emsp;[3.2 解法 - 正则表达式](#chapter-three-two)                                        |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：字符串
-* **题目地址**：https://leetcode-cn.com/problems/length-of-last-word/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：字符串
+- **题目地址**：https://leetcode-cn.com/problems/length-of-last-word/
+- **题目内容**：
 
 ```
 给定一个仅包含大小写字母和空格 ' ' 的字符串，返回其最后一个单词的长度。
@@ -47,21 +46,21 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var lengthOfLastWord = function(s) {
   // 防止 'b   a  cc' 的情况，去掉多余空格（去重）
-  const result = [...new Set(s.split(' '))];
+  const result = [...new Set(s.split(' '))]
   // 防止 'a  ' 的情况
-  if (result.length >=2 && result[result.length - 1] === '') {
+  if (result.length >= 2 && result[result.length - 1] === '') {
     return result[result.length - 2].length
   }
-  return result[result.length - 1].length;
-};
+  return result[result.length - 1].length
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `s`：`Hello World`
 2. `return`：
@@ -70,7 +69,7 @@ var lengthOfLastWord = function(s) {
 5
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -79,12 +78,12 @@ var lengthOfLastWord = function(s) {
   ✔ Your memory usage beats 20.38 % of javascript submissions (33.9 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `split()`：`split()` 方法使用指定的分隔符字符串将一个 String 对象分割成字符串数组，以将字符串分隔为子字符串，以确定每个拆分的位置。[`split()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/String/split.md)
 2. `Set`：`Set` 对象允许你存储任何类型的唯一值，无论是原始值或者是对象引用。[`Set` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Set/README.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **首先**，说个比较复杂的逻辑：
 
@@ -100,17 +99,17 @@ var lengthOfLastWord = function(s) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var lengthOfLastWord = function(s) {
-  s = s.replace(/(\s*$)/g, "");
-  let arr = s.split(' ');
-  return arr[arr.length - 1].length;
-};
+  s = s.replace(/(\s*$)/g, '')
+  let arr = s.split(' ')
+  return arr[arr.length - 1].length
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `s`：`Hello World`
 2. `return`：
@@ -119,7 +118,7 @@ var lengthOfLastWord = function(s) {
 5
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -128,12 +127,12 @@ var lengthOfLastWord = function(s) {
   ✔ Your memory usage beats 35.25 % of javascript submissions (33.7 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `RegExp`：构造函数的原型对象。常用语一些便捷操作。[`RegExp` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/RegExp/README.md)
 2. `split()`：`split()` 方法使用指定的分隔符字符串将一个 String 对象分割成字符串数组，以将字符串分隔为子字符串，以确定每个拆分的位置。[`split()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/String/split.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **首先**，进行正则去空格，`\s` 的意思是匹配任何空白字符，包括空格、制表符、换行符等，而 `*` 表示任意个，`$` 表示结尾，所以 `\s*$` 的意思就是匹配结尾的任意个空格，并将其替换为 `''`（注意，不是空，而是去掉）
 

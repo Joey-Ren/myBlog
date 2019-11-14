@@ -1,5 +1,4 @@
-160 - 相交链表（intersection-of-two-linked-lists）
-===
+# 160 - 相交链表（intersection-of-two-linked-lists）
 
 > Create by **jsLe** on **2019-07-04 10:32:24**  
 > Recently revised in **2019-07-04 16:40:14**
@@ -8,23 +7,23 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six)           |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：链表
-* **题目地址**：https://leetcode-cn.com/problems/intersection-of-two-linked-lists/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：链表
+- **题目地址**：https://leetcode-cn.com/problems/intersection-of-two-linked-lists/
+- **题目内容**：
 
 编写一个程序，找到两个单链表相交的起始节点。
 
@@ -34,7 +33,7 @@
 
 在节点 c1 开始相交。
 
-*示例 1：*
+_示例 1：_
 
 ![图](../../../public-repertory/img/other-algorithm-160-2.png)
 
@@ -50,7 +49,7 @@
   在 A 中，相交节点前有 2 个节点；在 B 中，相交节点前有 3 个节点。
 ```
 
-*示例 2：*
+_示例  2：_
 
 ![图](../../../public-repertory/img/other-algorithm-160-3.png)
 
@@ -66,7 +65,7 @@
   在 A 中，相交节点前有 3 个节点；在 B 中，相交节点前有 1 个节点。
 ```
 
-*示例 3：*
+_示例  3：_
 
 ![图](../../../public-repertory/img/other-algorithm-160-4.png)
 
@@ -81,7 +80,7 @@
   由于这两个链表不相交，所以 intersectVal 必须为 0，而 skipA 和 skipB 可以是任意值。
 解释：这两个链表不相交，因此返回 null。
 ```
- 
+
 注意：
 
 如果两个链表没有交点，返回 null.
@@ -95,26 +94,26 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var getIntersectionNode = function(headA, headB) {
   if (!headA || !headB) {
-    return null;
+    return null
   }
   let a = headA,
-    b = headB;
+    b = headB
 
   // 相交则返回当前节点，否则返回 null
   // 当 a、b 不相交时：
   // 1. 如果 a 为 null，将 headB 赋值给 a；
   // 2. 如果 b 为 null，将 headA 赋值给 b；
   while (a !== b) {
-    a = a ? a.next : headB;
-    b = b ? b.next : headA;
+    a = a ? a.next : headB
+    b = b ? b.next : headA
   }
-  return a;
-};
+  return a
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
@@ -123,25 +122,33 @@ var getIntersectionNode = function(headA, headB) {
 
 ```js
 let base = {
-  val: 8, next: {
-    val: 4, next: {
-      val: 5, next: null,
-    },
-  },
-};
+  val: 8,
+  next: {
+    val: 4,
+    next: {
+      val: 5,
+      next: null
+    }
+  }
+}
 
 let headA = {
-  val: 4, next: {
-    val: 1, next: base,
-  },
-};
+  val: 4,
+  next: {
+    val: 1,
+    next: base
+  }
+}
 
 let headB = {
-  val: 5, next: {
-    val: 0, next: {
-      val: 1, next: base,
-    },
-  },
+  val: 5,
+  next: {
+    val: 0,
+    next: {
+      val: 1,
+      next: base
+    }
+  }
 }
 ```
 
@@ -186,7 +193,7 @@ Expected
 ```js
 var getIntersectionNode = function(headA, headB) {
   // 代码
-};
+}
 ```
 
 闹哪样呢！为什么它有那么多参数，我只有两个！
@@ -198,15 +205,15 @@ var getIntersectionNode = function(headA, headB) {
 小伙伴们都知道，在 JS 中，如果是 Number、String 等的复制，是通过传值来实现的；而 Array、Ojbect 等，是通过传址来实现了，看例子：
 
 ```js
-let a = 1;
-let b = a;
-b = 2;
-console.log(a); // 1
+let a = 1
+let b = a
+b = 2
+console.log(a) // 1
 
-let c = [1, 2, 3];
-let d = c;
-d.push(4);
-console.log(c); // [1, 2, 3, 4]
+let c = [1, 2, 3]
+let d = c
+d.push(4)
+console.log(c) // [1, 2, 3, 4]
 ```
 
 在这里，我们修改 `b` 的时候，`a` 是不会发生对应改变的。
@@ -221,50 +228,58 @@ console.log(c); // [1, 2, 3, 4]
 
 不清楚 C、C++、Java 等编程语言是否可行，但是在 JS 中，这样的数据，即：
 
-* **原始数据**：`[8, 4, 5]`
-* **拷贝数据 A**：`[4, 1, 8, 4, 5]`
-* **拷贝数据 B**：`[5, 0, 1, 8, 4, 5]`
+- **原始数据**：`[8, 4, 5]`
+- **拷贝数据 A**：`[4, 1, 8, 4, 5]`
+- **拷贝数据 B**：`[5, 0, 1, 8, 4, 5]`
 
 那么，它在 JS 中如何表示呢？**jsLe** 在这里尝试了一下：
 
 ```js
 let base = {
-  val: 8, next: {
-    val: 4, next: {
-      val: 5, next: null,
-    },
-  },
-};
+  val: 8,
+  next: {
+    val: 4,
+    next: {
+      val: 5,
+      next: null
+    }
+  }
+}
 
 let headA = {
-  val: 4, next: {
-    val: 1, next: base,
-  },
-};
+  val: 4,
+  next: {
+    val: 1,
+    next: base
+  }
+}
 
 let headB = {
-  val: 5, next: {
-    val: 0, next: {
-      val: 1, next: base,
-    },
-  },
+  val: 5,
+  next: {
+    val: 0,
+    next: {
+      val: 1,
+      next: base
+    }
+  }
 }
 ```
 
 **接着**，我们分析下我们的代码：
 
 ```js
-  let a = headA,
-    b = headB;
+let a = headA,
+  b = headB
 
-  // 相交则返回当前节点，否则返回 null
-  // 当 a、b 不相交时：
-  // 1. 如果 a 为 null，将 headB 赋值给 a；
-  // 2. 如果 b 为 null，将 headA 赋值给 b；
-  while (a !== b) {
-    a = a ? a.next : headB;
-    b = b ? b.next : headA;
-  }
+// 相交则返回当前节点，否则返回 null
+// 当 a、b 不相交时：
+// 1. 如果 a 为 null，将 headB 赋值给 a；
+// 2. 如果 b 为 null，将 headA 赋值给 b；
+while (a !== b) {
+  a = a ? a.next : headB
+  b = b ? b.next : headA
+}
 ```
 
 怎么说呢？我们是不是有两条链表：`a` 和 `b`。

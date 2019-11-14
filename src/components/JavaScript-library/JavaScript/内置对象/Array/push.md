@@ -1,27 +1,27 @@
-方法 - push()
-===
+# 方法 - push()
 
 > Create by **jsLe** on **2019-09-17 09:23:32**  
 > Recently revised in **2019-09-17 09:23:35**
 
-* **原文**：[MDN - push()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+- **原文**：[MDN - push()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
 
-* **功能**：`push()` 方法将一个或多个元素添加到数组的末尾，并返回该数组的新长度。
+- **功能**：`push()` 方法将一个或多个元素添加到数组的末尾，并返回该数组的新长度。
 
-* **语法**：`arr.push(element)`
-  * `element`：需要传入到数组的元素
+- **语法**：`arr.push(element)`
 
-* **返回值**：当调用该方法时，新的 length 属性值将被返回。
+  - `element`：需要传入到数组的元素
 
-* **代码**：
+- **返回值**：当调用该方法时，新的 length 属性值将被返回。
+
+- **代码**：
 
 ```js
-let arr = [];
-arr.push(1);
-arr.push('2');
-arr.push([3, 4, 5]);
-arr.push([...6, 7, 8]);
-console.log(arr);
+let arr = []
+arr.push(1)
+arr.push('2')
+arr.push([3, 4, 5])
+arr.push([...6, 7, 8])
+console.log(arr)
 
 /*
 [1, "2", Array(3), 6, 7, 8]

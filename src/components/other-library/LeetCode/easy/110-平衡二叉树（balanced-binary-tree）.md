@@ -1,5 +1,4 @@
-110 - 平衡二叉树（balanced-binary-tree）
-===
+# 110 - 平衡二叉树（balanced-binary-tree）
 
 > Create by **jsLe** on **2019-6-24 07:48:53**  
 > Recently revised in **2019-09-18 10:23:56**
@@ -8,24 +7,24 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
-| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 知识点](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six) |
+| 目录                                                                                           |
+| ---------------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                        |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)             |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)       |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)      |
+| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 知识点](#chapter-five)        |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six)         |
 | <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 进一步思考](#chapter-seven) |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：树、深度优先搜索
-* **题目地址**：https://leetcode-cn.com/problems/balanced-binary-tree/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：树、深度优先搜索
+- **题目地址**：https://leetcode-cn.com/problems/balanced-binary-tree/
+- **题目内容**：
 
 ```
 给定一个二叉树，判断它是否是高度平衡的二叉树。
@@ -63,33 +62,33 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var isBalanced = function(root) {
   let ergodic = function(root) {
     if (!root) {
-      return 0;
+      return 0
     }
-    let left = ergodic(root.left);
+    let left = ergodic(root.left)
     if (left === -1) {
-      return -1;
+      return -1
     }
-    let right = ergodic(root.right);
+    let right = ergodic(root.right)
     if (right === -1) {
-      return -1;
+      return -1
     }
-    return Math.abs(left - right) < 2 ? Math.max(left, right) + 1 : -1;
+    return Math.abs(left - right) < 2 ? Math.max(left, right) + 1 : -1
   }
-  return ergodic(root) !== -1;
-};
+  return ergodic(root) !== -1
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
 
 > [返回目录](#chapter-one)
 
-* `root`：
+- `root`：
 
 ```js
 //   3
@@ -103,18 +102,18 @@ let root = {
   right: {
     val: 20,
     left: { val: 15, left: null, right: null },
-    right: { val: 7, left: null, right: null },
-  },
+    right: { val: 7, left: null, right: null }
+  }
 }
 ```
 
-* `return`：
+- `return`：
 
 ```js
 true
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 √ Accepted
@@ -173,33 +172,33 @@ let root = {
     right: {
       val: 7,
       left: null,
-      right: { val: 2, left: null, right: null },
-    },
-  },
+      right: { val: 2, left: null, right: null }
+    }
+  }
 }
 
 var isBalanced = function(root) {
   let ergodic = function(root) {
     if (!root) {
-      return 0;
+      return 0
     }
-    let left = ergodic(root.left);
+    let left = ergodic(root.left)
     if (left === -1) {
-      return -1;
+      return -1
     }
-    let right = ergodic(root.right);
+    let right = ergodic(root.right)
     if (right === -1) {
-      return -1;
+      return -1
     }
-    console.log('------');
-    console.log(left, right);
-    console.log(root);
-    return Math.abs(left - right) < 2 ? Math.max(left, right) + 1 : -1;
+    console.log('------')
+    console.log(left, right)
+    console.log(root)
+    return Math.abs(left - right) < 2 ? Math.max(left, right) + 1 : -1
   }
-  return ergodic(root) != -1;
-};
+  return ergodic(root) != -1
+}
 
-console.log(isBalanced(root));
+console.log(isBalanced(root))
 ```
 
 小伙伴们可以猜测下打印结果：
@@ -260,7 +259,7 @@ const obj = {
     next: {
       val: 3,
       next: {
-        val: null,
+        val: null
       }
     }
   }
@@ -273,10 +272,10 @@ const obj = {
 
 ```js
 let regodic = function(obj) {
-  if (!obj.next) return '!#';
-  return '!' + obj.val + regodic(obj.next);
+  if (!obj.next) return '!#'
+  return '!' + obj.val + regodic(obj.next)
 }
-console.log(regodic(obj));
+console.log(regodic(obj))
 ```
 
 那么它会输出什么呢？

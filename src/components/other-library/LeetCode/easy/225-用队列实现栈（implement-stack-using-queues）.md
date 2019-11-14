@@ -1,5 +1,4 @@
-225 - 用队列实现栈（implement-stack-using-queues）
-===
+# 225 - 用队列实现栈（implement-stack-using-queues）
 
 > Create by **jsLe** on **2019-07-13 19:18:35**  
 > Recently revised in **2019-07-13 19:30:51**
@@ -8,23 +7,23 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six)           |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：栈、设计
-* **题目地址**：https://leetcode-cn.com/problems/implement-stack-using-queues/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：栈、设计
+- **题目地址**：https://leetcode-cn.com/problems/implement-stack-using-queues/
+- **题目内容**：
 
 ```
 使用队列实现栈的下列操作：
@@ -49,39 +48,39 @@ empty() -- 返回栈是否为空
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var MyStack = function() {
-  this.stask = [];
-};
+  this.stask = []
+}
 
 MyStack.prototype.push = function(x) {
-  this.stask[this.stask.length] = x;
-};
+  this.stask[this.stask.length] = x
+}
 
 MyStack.prototype.pop = function() {
-  let arr = this.stask;
-  let last = this.stask.length - 1;
-  let temp = arr[last];
-  this.stask.length = this.stask.length - 1;
-  return temp;
-};
+  let arr = this.stask
+  let last = this.stask.length - 1
+  let temp = arr[last]
+  this.stask.length = this.stask.length - 1
+  return temp
+}
 
 MyStack.prototype.top = function() {
-  let arr = this.stask;
-  let last = this.stask.length - 1;
-  return arr[last];
-};
+  let arr = this.stask
+  let last = this.stask.length - 1
+  return arr[last]
+}
 
 MyStack.prototype.empty = function() {
-  let arr = this.stask;
+  let arr = this.stask
   if (!arr.length) {
-    return true;
+    return true
   } else {
-    return false;
+    return false
   }
-};
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
@@ -89,12 +88,12 @@ MyStack.prototype.empty = function() {
 > [返回目录](#chapter-one)
 
 ```js
-let stack = new MyStack();
-stack.push(1);
-stack.push(2);
-console.log(stack.top());
-console.log(stack.pop());
-console.log(stack.empty());
+let stack = new MyStack()
+stack.push(1)
+stack.push(2)
+console.log(stack.top())
+console.log(stack.pop())
+console.log(stack.empty())
 
 // 2
 // 2
@@ -120,13 +119,13 @@ console.log(stack.empty());
 
 **那么**，我们就讲讲这两者：
 
-* 队列：先进先出。简单来说，就是有一个数组，通过 `push()` 推进每个元素，通过 `shift()` 推出第一个元素，这种形式就是队列。
-* 栈：先进后出。简单来说，就是有一个数组，通过 `push()` 推进每个元素，通过 `pop()` 推出最后一个元素，这种形式就是栈。
+- 队列：先进先出。简单来说，就是有一个数组，通过 `push()` 推进每个元素，通过 `shift()` 推出第一个元素，这种形式就是队列。
+- 栈：先进后出。简单来说，就是有一个数组，通过 `push()` 推进每个元素，通过 `pop()` 推出最后一个元素，这种形式就是栈。
 
 如果小伙伴们还是不理解，那么我们讲讲两个例子：
 
-* 队列：饭堂打饭。我们需要排队，先到的排前面，打完饭后可以先走。
-* 栈；俄罗斯套娃，或者叠罗汉。先进的需要最后出，要不然取不出来，或者罗汉直接倒了。
+- 队列：饭堂打饭。我们需要排队，先到的排前面，打完饭后可以先走。
+- 栈；俄罗斯套娃，或者叠罗汉。先进的需要最后出，要不然取不出来，或者罗汉直接倒了。
 
 **最后**，根据这个思路，我们可以轻易求解。
 

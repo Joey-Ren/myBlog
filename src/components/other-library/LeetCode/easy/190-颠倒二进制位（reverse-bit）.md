@@ -1,5 +1,4 @@
-190 - 颠倒二进制位（reverse-bit）
-===
+# 190 - 颠倒二进制位（reverse-bit）
 
 > Create by **jsLe** on **2019-07-08 14:04:54**  
 > Recently revised in **2019-09-18 11:41:34**
@@ -8,25 +7,25 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven) |
-| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 进一步拓展](#chapter-eight) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 知识点](#chapter-six)             |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 解题思路](#chapter-seven)     |
+| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 进一步拓展](#chapter-eight)   |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：位运算
-* **题目地址**：https://leetcode-cn.com/problems/reverse-bits/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：位运算
+- **题目地址**：https://leetcode-cn.com/problems/reverse-bits/
+- **题目内容**：
 
 ```
 颠倒给定的 32 位无符号整数的二进制位。
@@ -61,12 +60,20 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
-var reverseBits = function (n) {
-  return parseInt((n).toString(2).padStart(32, '0').split('').reverse().join(''), 2);
-};
+var reverseBits = function(n) {
+  return parseInt(
+    n
+      .toString(2)
+      .padStart(32, '0')
+      .split('')
+      .reverse()
+      .join(''),
+    2
+  )
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
@@ -108,9 +115,14 @@ var reverseBits = function (n) {
 
 ```js
 var reverseBits = function(n) {
-  n = parseInt(parseInt(n, 2).toString().split('').reverse()).toString(2);
-  return n;
-};
+  n = parseInt(
+    parseInt(n, 2)
+      .toString()
+      .split('')
+      .reverse()
+  ).toString(2)
+  return n
+}
 ```
 
 比如输入：`10111100`，然后输出：`1000`，但是测试用例却是：
@@ -131,15 +143,30 @@ var reverseBits = function(n) {
 **然后**，从【评论】【题解】中翻找能解题的思路，找到其中这份，咱将其分解：
 
 ```js
-parseInt((n).toString(2).padStart(32, '0').split('').reverse().join(''), 2);
+parseInt(
+  n
+    .toString(2)
+    .padStart(32, '0')
+    .split('')
+    .reverse()
+    .join(''),
+  2
+)
 ```
 
 分解：
 
 ```js
-console.log(n.toString(2));
-console.log(n.toString(2).padStart(32, '0'));
-console.log(n.toString(2).padStart(32, '0').split('').reverse().join(''));
+console.log(n.toString(2))
+console.log(n.toString(2).padStart(32, '0'))
+console.log(
+  n
+    .toString(2)
+    .padStart(32, '0')
+    .split('')
+    .reverse()
+    .join('')
+)
 ```
 
 其中，`toString(2)` 将内容转换成 `2` 进制，然后 `padStart()` 将其填充到 32 个长度，如果不到 32 个长度，则以 `0` 填充
@@ -155,20 +182,20 @@ console.log(n.toString(2).padStart(32, '0').split('').reverse().join(''));
 最后的最后，发现一份正经的题解，小伙伴们可以瞅瞅，我就不多逼逼啦~
 
 ```js
-var reverseBits = function (n) {
+var reverseBits = function(n) {
   var newN = 0,
-    count = 0;
+    count = 0
   while (count <= 31) {
     if (count <= 30) {
-      newN += ((n & 1) << (30 - count)) * 2;
+      newN += ((n & 1) << (30 - count)) * 2
     } else {
-      newN += (n & 1);
+      newN += n & 1
     }
-    n >>= 1;
-    count++;
+    n >>= 1
+    count++
   }
-  return newN;
-};
+  return newN
+}
 ```
 
 ```js

@@ -1,23 +1,23 @@
-方法 - substring()
-===
+# 方法 - substring()
 
 > Create by **jsLe** on **2019-09-11 11:29:08**  
 > Recently revised in **2019-09-11 11:33:49**
 
-* **原文**：[MDN - substring()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring)
+- **原文**：[MDN - substring()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring)
 
-* **功能**：`substring()` 方法返回一个字符串在开始索引到结束索引之间的一个子集, 或从开始索引直到字符串的末尾的一个子集。
+- **功能**：`substring()` 方法返回一个字符串在开始索引到结束索引之间的一个子集, 或从开始索引直到字符串的末尾的一个子集。
 
-* **语法**：`str.substring(indexStart, indexEnd)`
-  * `indexStart`：需要截取的第一个字符的索引，该字符作为返回的字符串的首字母。
-  * `indexEnd`：可选。一个 0 到字符串长度之间的整数，以该数字为索引的字符不包含在截取的字符串内。
+- **语法**：`str.substring(indexStart, indexEnd)`
 
-* **返回值**：包含给定字符串的指定部分的新字符串。
+  - `indexStart`：需要截取的第一个字符的索引，该字符作为返回的字符串的首字母。
+  - `indexEnd`：可选。一个 0 到字符串长度之间的整数，以该数字为索引的字符不包含在截取的字符串内。
 
-* **代码**：
+- **返回值**：包含给定字符串的指定部分的新字符串。
+
+- **代码**：
 
 ```js
-'jsLe'.substring(0, 2); // 'js'
+'jsLe'.substring(0, 2) // 'js'
 ```
 
 ---

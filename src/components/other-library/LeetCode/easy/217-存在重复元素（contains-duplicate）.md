@@ -1,5 +1,4 @@
-217 - 存在重复元素（contains-duplicate）
-===
+# 217 - 存在重复元素（contains-duplicate）
 
 > Create by **jsLe** on **2019-07-13 13:47:41**  
 > Recently revised in **2019-09-18 13:36:51**
@@ -8,24 +7,24 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - indexOf()](#chapter-three-one) |
-| &emsp;[3.2 解法 - 双指针](#chapter-three-two) |
-| &emsp;[3.3 解法 - Map](#chapter-three-three) |
-| &emsp;[3.4 解法 - Set](#chapter-three-four) |
+| &emsp;[3.1 解法 - indexOf()](#chapter-three-one)                                         |
+| &emsp;[3.2 解法 - 双指针](#chapter-three-two)                                            |
+| &emsp;[3.3 解法 - Map](#chapter-three-three)                                             |
+| &emsp;[3.4 解法 - Set](#chapter-three-four)                                              |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数组、哈希表
-* **题目地址**：https://leetcode-cn.com/problems/contains-duplicate/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数组、哈希表
+- **题目地址**：https://leetcode-cn.com/problems/contains-duplicate/
+- **题目内容**：
 
 ```
 给定一个整数数组，判断是否存在重复元素。
@@ -55,25 +54,25 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var containsDuplicate = function(nums) {
-  for(let i = 0; i < nums.length; i++) {
+  for (let i = 0; i < nums.length; i++) {
     if (nums.indexOf(nums[i]) < i) {
-      return true;
+      return true
     }
   }
-  return false;
-};
+  return false
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums`：`[1,1,1,3,3,4,3,2,4,2]`
 2. `return`：`true`
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -82,11 +81,11 @@ var containsDuplicate = function(nums) {
   ✔ Your memory usage beats 80.95 % of javascript submissions (37 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `indexOf()`：判断数组中是否存在判断条件中的值。如果存在，则返回第一次出现的索引；如果不存在，则返回 -1。[`indexOf()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/indexOf.md)
 
-* **解题思路**：
+- **解题思路**：
 
 解题思路非常清晰：判断这个元素的 `indexOf()` 的位置是多少，如果不是当前的索引位置，则它不是第一次出现，即存在重复元素。
 
@@ -94,26 +93,26 @@ var containsDuplicate = function(nums) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var containsDuplicate = function(nums) {
-  nums.sort();
+  nums.sort()
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] === nums[i + 1]) {
-      return true;
+      return true
     }
   }
-  return false;
-};
+  return false
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums`：`[1,1,1,3,3,4,3,2,4,2]`
 2. `return`：`true`
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -122,11 +121,11 @@ var containsDuplicate = function(nums) {
   ✔ Your memory usage beats 66.53 % of javascript submissions (38.3 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `sort()`：排序，保持返回数组的数字为顺序排列。[`sort()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/sort.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **首先**，将数组排序，因为是整数数组，所以可以直接用 `sort()`。
 
@@ -138,28 +137,28 @@ var containsDuplicate = function(nums) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var containsDuplicate = function(nums) {
-  let map = new Map();
+  let map = new Map()
   for (let i = 0; i < nums.length; i++) {
     if (map.get(nums[i]) !== undefined) {
-      return true;
+      return true
     } else {
       map.set(nums[i], i)
     }
   }
-  return false;
-};
+  return false
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums`：`[1,1,1,3,3,4,3,2,4,2]`
 2. `return`：`true`
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -168,11 +167,11 @@ var containsDuplicate = function(nums) {
   ✔ Your memory usage beats 39.58 % of javascript submissions (41.5 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `Map`：保存键值对。任何值(对象或者原始值) 都可以作为一个键或一个值。[`Map` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Map/README.md)
 
-* **解题思路**：
+- **解题思路**：
 
 `Map` 作为一个好用的 JS 对象，作用于哈希表特别 nice。
 
@@ -182,28 +181,28 @@ var containsDuplicate = function(nums) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var containsDuplicate = function(nums) {
-  const tempSet = new Set();
+  const tempSet = new Set()
   for (const item of nums) {
     if (tempSet.has(item)) {
-      return true;
+      return true
     } else {
-      tempSet.add(item);
+      tempSet.add(item)
     }
   }
-  return false;
+  return false
 }
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums`：`[1,1,1,3,3,4,3,2,4,2]`
 2. `return`：`true`
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -212,11 +211,11 @@ var containsDuplicate = function(nums) {
   ✔ Your memory usage beats 42.71 % of javascript submissions (40.3 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `Set`：`Set` 对象允许你存储任何类型的唯一值，无论是原始值或者是对象引用。由于唯一性，一般用于去重。[`Set` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Set/README.md)
 
-* **解题思路**：
+- **解题思路**：
 
 想比于 `Map` 来说，`Set` 作为 ES6 的新工具，无疑也是非常好用的。
 
@@ -224,8 +223,8 @@ var containsDuplicate = function(nums) {
 
 ```js
 var containsDuplicate = function(nums) {
-  return nums.length === new Set([...nums]).size ? false : true;
-};
+  return nums.length === new Set([...nums]).size ? false : true
+}
 ```
 
 提交：

@@ -1,5 +1,4 @@
-面试知识点 - JS 防抖与节流
-===
+# 面试知识点 - JS 防抖与节流
 
 > Create by **jsLe** on **2019-2-23 20:55:34**  
 > Recently revised in **2019-05-24 11:08:58**
@@ -8,12 +7,12 @@
 
 **本文涉及知识点**：
 
-* **防抖与节流**
-* **重绘与回流**
-* **浏览器解析 URL**
-* **DNS 域名解析**
-* **TCP 三次握手与四次挥手**
-* **浏览器渲染页面**
+- **防抖与节流**
+- **重绘与回流**
+- **浏览器解析 URL**
+- **DNS 域名解析**
+- **TCP 三次握手与四次挥手**
+- **浏览器渲染页面**
 
 **在本文中，jsLe 会讲解通过自我探索后关于上述知识点的个人理解，如有纰漏、疏忽或者误解，欢迎各位小伙伴留言指出。**
 
@@ -25,20 +24,20 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 防抖与节流](#chapter-three) |
-| &emsp;[3.1 防抖](#chapter-three-one) |
-| &emsp;[3.2 节流](#chapter-three-two) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 重绘与回流](#chapter-four) |
-| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 浏览器解析 URL](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六  DNS 域名解析](#chapter-six) |
+| 目录                                                                                                       |
+| ---------------------------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                                    |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)                         |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 防抖与节流](#chapter-three)             |
+| &emsp;[3.1 防抖](#chapter-three-one)                                                                       |
+| &emsp;[3.2 节流](#chapter-three-two)                                                                       |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 重绘与回流](#chapter-four)                |
+| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 浏览器解析 URL](#chapter-five)            |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 DNS 域名解析](#chapter-six)                 |
 | <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 TCP 三次握手与四次挥手](#chapter-seven) |
-| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 浏览器渲染页面](#chapter-eight) |
-| <a name="catalog-chapter-night" id="catalog-chapter-night"></a>[九 总结](#chapter-night) |
-| <a name="catalog-chapter-ten" id="catalog-chapter-ten"></a>[十 参考文献](#chapter-ten) |
+| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 浏览器渲染页面](#chapter-eight)         |
+| <a name="catalog-chapter-night" id="catalog-chapter-night"></a>[九 总结](#chapter-night)                   |
+| <a name="catalog-chapter-ten" id="catalog-chapter-ten"></a>[十 参考文献](#chapter-ten)                     |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
@@ -46,8 +45,8 @@
 
 在工作中，我们可能碰到这样的问题：
 
-* 用户在搜索的时候，在不停敲字，如果每敲一个字我们就要调一次接口，接口调用太频繁，给卡住了。
-* 用户在阅读文章的时候，我们需要监听用户滚动到了哪个标题，但是每滚动一下就监听，那样会太过频繁从而占内存，如果再加上其他的业务代码，就卡住了。
+- 用户在搜索的时候，在不停敲字，如果每敲一个字我们就要调一次接口，接口调用太频繁，给卡住了。
+- 用户在阅读文章的时候，我们需要监听用户滚动到了哪个标题，但是每滚动一下就监听，那样会太过频繁从而占内存，如果再加上其他的业务代码，就卡住了。
 
 所以，这时候，我们就要用到 **防抖与节流** 了。
 
@@ -74,46 +73,48 @@
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>防抖</title>
-</head>
-<body>
-  <button id="debounce">点我防抖！</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>防抖</title>
+  </head>
+  <body>
+    <button id="debounce">点我防抖！</button>
 
-  <script>
-    window.onload = function() {
-      // 1、获取这个按钮，并绑定事件
-      var myDebounce = document.getElementById("debounce");
-      myDebounce.addEventListener("click", debounce(sayDebounce));
-    }
+    <script>
+      window.onload = function() {
+        // 1、获取这个按钮，并绑定事件
+        var myDebounce = document.getElementById('debounce')
+        myDebounce.addEventListener('click', debounce(sayDebounce))
+      }
 
-    // 2、防抖功能函数，接受传参
-    function debounce(fn) {
-      // 4、创建一个标记用来存放定时器的返回值
-      let timeout = null;
-      return function() {
-        // 5、每次当用户点击/输入的时候，把前一个定时器清除
-        clearTimeout(timeout);
-        // 6、然后创建一个新的 setTimeout，
-        // 这样就能保证点击按钮后的 interval 间隔内
-        // 如果用户还点击了的话，就不会执行 fn 函数
-        timeout = setTimeout(() => {
-          fn.call(this, arguments);
-        }, 1000);
-      };
-    }
+      // 2、防抖功能函数，接受传参
+      function debounce(fn) {
+        // 4、创建一个标记用来存放定时器的返回值
+        let timeout = null
+        return function() {
+          // 5、每次当用户点击/输入的时候，把前一个定时器清除
+          clearTimeout(timeout)
+          // 6、然后创建一个新的 setTimeout，
+          // 这样就能保证点击按钮后的 interval 间隔内
+          // 如果用户还点击了的话，就不会执行 fn 函数
+          timeout = setTimeout(() => {
+            fn.call(this, arguments)
+          }, 1000)
+        }
+      }
 
-    // 3、需要进行防抖的事件处理
-    function sayDebounce() {
-      // ... 有些需要防抖的工作，在这里执行
-      console.log("防抖成功！");
-    }
-
-  </script>
-</body>
+      // 3、需要进行防抖的事件处理
+      function sayDebounce() {
+        // ... 有些需要防抖的工作，在这里执行
+        console.log('防抖成功！')
+      }
+    </script>
+  </body>
 </html>
 ```
 
@@ -123,13 +124,13 @@
 
 这时候，我们可以抛出防抖的概念了：
 
-* **防抖**：**任务频繁触发的情况下，只有任务触发的间隔超过指定间隔的时候，任务才会执行。**
+- **防抖**：**任务频繁触发的情况下，只有任务触发的间隔超过指定间隔的时候，任务才会执行。**
 
 结合上面的代码，我们可以了解到，在触发点击事件后，如果用户再次点击了，我们会清空之前的定时器，重新生成一个定时器。意思就是：这件事儿需要等待，如果你反复催促，我就重新计时！
 
 空讲无益，show you 场景：
 
-* 有个输入框，输入之后会调用接口，获取联想词。但是，因为频繁调用接口不太好，所以我们在代码中使用防抖功能，只有在用户输入完毕的一段时间后，才会调用接口，出现联想词。
+- 有个输入框，输入之后会调用接口，获取联想词。但是，因为频繁调用接口不太好，所以我们在代码中使用防抖功能，只有在用户输入完毕的一段时间后，才会调用接口，出现联想词。
 
 小伙伴们可以尝试看着上面的案例，先自己实现一遍这个场景的解决，如果感觉不行，那就看：[《防抖和节流的应用场景和实现》](https://www.codercto.com/a/35263.html)
 
@@ -137,7 +138,7 @@
 > **首先**，后端转前端的同学，可以将 `arguments` 理解为能实现重载函数功能的工具。  
 > **然后**，我们举个例子：在 `function test()` 这个方法中，由于我们不确定变量有多少，比如 `test("jsLe", 24)`，又或者 `test("LiangJunrong", "jsLe", "24")`，这时候只需要在函数 `test` 中用 `arguments` 接收就行了。  
 > **最后**，在 `function test() { let arr1 = argument[0] }` 中，`arr1` 就可以获取到传进来的第一个变量。  
-> **所以**，`fn.call(this, arguments)` 其实是将不确定变量替换到函数中了。  
+> **所以**，`fn.call(this, arguments)` 其实是将不确定变量替换到函数中了。
 
 > 参考资料 1：[《闲聊 JS 中的 apply 和 call》](https://www.cnblogs.com/alai88/p/5518441.html)  
 > 参考资料 2：[《js 中 arguments 的用法》](https://www.cnblogs.com/LMJBlogs/p/6024148.html)
@@ -151,50 +152,51 @@
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>节流</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>节流</title>
+  </head>
+  <body>
+    <button id="throttle">点我节流！</button>
 
-  <button id="throttle">点我节流！</button>
+    <script>
+      window.onload = function() {
+        // 1、获取按钮，绑定点击事件
+        var myThrottle = document.getElementById('throttle')
+        myThrottle.addEventListener('click', throttle(sayThrottle))
+      }
 
-  <script>
-    window.onload = function() {
-      // 1、获取按钮，绑定点击事件
-      var myThrottle = document.getElementById("throttle");
-      myThrottle.addEventListener("click", throttle(sayThrottle));
-    }
-
-    // 2、节流函数体
-    function throttle(fn) {
-      // 4、通过闭包保存一个标记
-      let canRun = true;
-      return function() {
-        // 5、在函数开头判断标志是否为 true，不为 true 则中断函数
-        if(!canRun) {
-          return;
+      // 2、节流函数体
+      function throttle(fn) {
+        // 4、通过闭包保存一个标记
+        let canRun = true
+        return function() {
+          // 5、在函数开头判断标志是否为 true，不为 true 则中断函数
+          if (!canRun) {
+            return
+          }
+          // 6、将 canRun 设置为 false，防止执行之前再被执行
+          canRun = false
+          // 7、定时器
+          setTimeout(() => {
+            fn.call(this, arguments)
+            // 8、执行完事件（比如调用完接口）之后，重新将这个标志设置为 true
+            canRun = true
+          }, 1000)
         }
-        // 6、将 canRun 设置为 false，防止执行之前再被执行
-        canRun = false;
-        // 7、定时器
-        setTimeout( () => {
-          fn.call(this, arguments);
-          // 8、执行完事件（比如调用完接口）之后，重新将这个标志设置为 true
-          canRun = true;
-        }, 1000);
-      };
-    }
+      }
 
-    // 3、需要节流的事件
-    function sayThrottle() {
-      console.log("节流成功！");
-    }
-
-  </script>
-</body>
+      // 3、需要节流的事件
+      function sayThrottle() {
+        console.log('节流成功！')
+      }
+    </script>
+  </body>
 </html>
 ```
 
@@ -204,7 +206,7 @@
 
 看完代码和 GIF 实现，我们可以明白，节流即是：
 
-* **节流**：**指定时间间隔内只会执行一次任务。**
+- **节流**：**指定时间间隔内只会执行一次任务。**
 
 那么，节流在工作中的应用？
 
@@ -223,7 +225,7 @@ OK，这就涉及到浏览器渲染页面的机制了……
 
 在说浏览器渲染页面之前，我们需要先了解两个点，一个叫 **浏览器解析 URL**，另一个就是本章节将涉及的 **重绘与回流**：
 
-* **重绘(repaint)**：当元素样式的改变不影响布局时，浏览器将使用重绘对元素进行更新，此时由于只需要 UI 层面的重新像素绘制，因此**损耗较少**。
+- **重绘(repaint)**：当元素样式的改变不影响布局时，浏览器将使用重绘对元素进行更新，此时由于只需要 UI 层面的重新像素绘制，因此**损耗较少**。
 
 常见的**重绘**操作有：
 
@@ -231,8 +233,8 @@ OK，这就涉及到浏览器渲染页面的机制了……
 2. 改变元素背景色
 3. more ……
 
-* **回流(reflow)**：又叫重排（layout）。当元素的尺寸、结构或者触发某些属性时，浏览器会重新渲染页面，称为回流。此时，浏览器需要重新经过计算，计算后还需要重新页面布局，因此是较重的操作。
-  
+- **回流(reflow)**：又叫重排（layout）。当元素的尺寸、结构或者触发某些属性时，浏览器会重新渲染页面，称为回流。此时，浏览器需要重新经过计算，计算后还需要重新页面布局，因此是较重的操作。
+
 常见的**回流**操作有：
 
 1. 页面初次渲染
@@ -243,13 +245,13 @@ OK，这就涉及到浏览器渲染页面的机制了……
 6. 激活 CSS 伪类（:hover……）
 7. more ……
 
-* **重点**：**回流必定会触发重绘，重绘不一定会触发回流。重绘的开销较小，回流的代价较高。**
+- **重点**：**回流必定会触发重绘，重绘不一定会触发回流。重绘的开销较小，回流的代价较高。**
 
 看到这里，小伙伴们可能有点懵逼，你刚刚还跟我讲着 **防抖与节流** ，怎么一下子跳到 **重绘与回流** 了？
 
 OK，卖个关子，先看下面场景：
 
-* 界面上有个 div 框，用户可以在 input 框中输入 div 框的一些信息，例如宽、高等，输入完毕立即改变属性。但是，因为改变之后还要随时存储到数据库中，所以需要调用接口。如果不加限制……
+- 界面上有个 div 框，用户可以在 input 框中输入 div 框的一些信息，例如宽、高等，输入完毕立即改变属性。但是，因为改变之后还要随时存储到数据库中，所以需要调用接口。如果不加限制……
 
 看到这里，小伙伴们可以将一些字眼结合起来了：为什么需要 **节流**，因为有些事情会造成浏览器的 **回流**，而 **回流** 会使浏览器开销增大，所以我们通过 **节流** 来防止这种增大浏览器开销的事情。
 
@@ -275,12 +277,12 @@ OK，至此我们就讲完两个部分了，那么问题又来了：“浏览器
 
 为了能让我们的知识层面看起来更有深度，我们应该考虑下面两个问题了：
 
-* 从浏览器输入 URL 到渲染成功的过程中，究竟发生了什么？
-* 浏览器渲染过程中，发生了什么，是不是也有重绘与回流？
+- 从浏览器输入 URL 到渲染成功的过程中，究竟发生了什么？
+- 浏览器渲染过程中，发生了什么，是不是也有重绘与回流？
 
 OK，兴致来了，我们就先从 **浏览器解析 URL** 看起，先来看看当用户输入 URL，到浏览器呈现给用户页面，经历了以下过程：
 
-* **版本 A**：
+- **版本 A**：
 
 1. 用户输入 URL 地址。
 2. 对 URL 地址进行 DNS 域名解析。
@@ -303,12 +305,14 @@ enm...老师会不会被打我不知道，但是 **jsLe** 这样写会被怼我�
 很好，**jsLe** 感觉自己的画图技术又进了一步~
 
 > ①：虽然很感激网上有那么多的文章可以参考，但是在我查了二十来篇文章后，**jsLe** 觉得这部分十有八九有问题撒，问了些小伙伴，它们有的说对，有的说错。不过，不妨碍小伙伴们继续往下看哈。  
-> ②：为了避免出篓子，下面贴出另外一个版本，小伙伴们可以在评论区说出你支持哪个版本哈：  
-> * **版本 B**
-> 1. 用户输入 URL 地址。  
+> ②：为了避免出篓子，下面贴出另外一个版本，小伙伴们可以在评论区说出你支持哪个版本哈：
+>
+> - **版本 B**
+>
+> 1. 用户输入 URL 地址。
 > 2. 对 URL 地址进行 DNS 域名解析。
-> 3. 进行 TCP 连接。  
-> 4. 进行 HTTP 报文的请求与响应。  
+> 3. 进行 TCP 连接。
+> 4. 进行 HTTP 报文的请求与响应。
 > 5. 浏览器解析文档资源并渲染页面。
 
 在这里我们可以清晰的了解到从 **用户输入 URL，到浏览器呈现给用户页面，经历了哪些过程**。
@@ -321,7 +325,7 @@ enm...老师会不会被打我不知道，但是 **jsLe** 这样写会被怼我�
 
 Let's go~ 逐步完成下面三个知识点！
 
-> 参考文献 1：[《网页解析的全过程(输入url到展示页面)》](https://www.cnblogs.com/wpshan/p/6282061.html)  
+> 参考文献 1：[《网页解析的全过程(输入 url 到展示页面)》](https://www.cnblogs.com/wpshan/p/6282061.html)  
 > 参考文献 2：[《浏览器渲染页面过程剖析》](https://www.jianshu.com/p/32ca5f1c0768)
 
 ## <a name="chapter-six" id="chapter-six">六 DNS 域名解析</a>
@@ -330,7 +334,7 @@ Let's go~ 逐步完成下面三个知识点！
 
 **首先**，我们解决第一个问题：
 
-* 什么是 DNS 解析，它是怎么个流程？
+- 什么是 DNS 解析，它是怎么个流程？
 
 DNS（Domain Name System）是 **域名系统** 的英文缩写，提供的服务是用于将主机名和域名转换为 IP 地址的工作：
 
@@ -360,7 +364,7 @@ DNS（Domain Name System）是 **域名系统** 的英文缩写，提供的服�
 
 **然后**，我们解决第二个问题：
 
-* 什么是 TCP 三次握手，什么是 TCP 四次挥手，它们的流程是怎样的？
+- 什么是 TCP 三次握手，什么是 TCP 四次挥手，它们的流程是怎样的？
 
 什么是 TCP 呢？TCP（Transmission Control Protocol 传输控制协议）是一种面向连接的、可靠的、基于字节流的传输层通信协议。
 
@@ -368,23 +372,22 @@ DNS（Domain Name System）是 **域名系统** 的英文缩写，提供的服�
 
 至于具体的工作原理，这里暂时涉及不到，我们目前只想知道两个点：**三次握手与四次挥手**。
 
-* **三次握手**：
+- **三次握手**：
 
 1. **第一次握手**：起初两端都处于 CLOSED 关闭状态，Client 将标志位 SYN 置为 1，随机产生一个值 `seq = x`，并将该数据包发送给 Server，Client 进入 SYN-SENT 状态，等待 Server 确认。
-2. **第二次握手**：Server 收到数据包后由标志位 `SYN = 1` 得知 Client 请求建立连接，Server 将标志位 SYN 和 ACK 都置为 1，`ack = x + 1`，随机产生一个值 `seq = y`，并将该数据包发送给Client以确认连接请求，Server 进入 `SYN-RCVD` 状态，此时操作系统为该 TCP 连接分配 TCP 缓存和变量。
+2. **第二次握手**：Server 收到数据包后由标志位 `SYN = 1` 得知 Client 请求建立连接，Server 将标志位 SYN 和 ACK 都置为 1，`ack = x + 1`，随机产生一个值 `seq = y`，并将该数据包发送给 Client 以确认连接请求，Server 进入 `SYN-RCVD` 状态，此时操作系统为该 TCP 连接分配 TCP 缓存和变量。
 3. **第三次握手**：Client 收到确认后，检查 seq 是否为 `x + 1`，ACK 是否为 1，如果正确则将标志位 ACK 置为 1，`ack = y + 1`，并且此时操作系统为该 TCP 连接分配 TCP 缓存和变量，并将该数据包发送给 Server，Server 检查 ack 是否为 `y + 1`，ACK 是否为 1，如果正确则连接建立成功，Client 和 Server 进入 established 状态，完成三次握手，随后 Client 和 Server 就可以开始传输数据。
 
 文字太乱，show you picture：
 
 ![图](../../../public-repertory/img/other-interview-debounce&throttle-6.png)
 
-* **四次挥手**：
+- **四次挥手**：
 
-1. **第一次挥手**：Client 的应用进程先向其 TCP 发出连接释放报文段（`FIN = 1`，序号 `seq = u`），并停止再发送数据，主动关闭 TCP 连接，进入 FIN-WAIT-1（终止等待1）状态，等待 Server 的确认。
+1. **第一次挥手**：Client 的应用进程先向其 TCP 发出连接释放报文段（`FIN = 1`，序号 `seq = u`），并停止再发送数据，主动关闭 TCP 连接，进入 FIN-WAIT-1（终止等待 1）状态，等待 Server 的确认。
 2. **第二次挥手**：Server 收到连接释放报文段后即发出确认报文段，（`ACK = 1`，确认号 `ack = u + 1`，序号 `seq = v`），Server 进入 CLOSE-WAIT（关闭等待）状态，此时的 TCP 处于半关闭状态，Client 到 Server 的连接释放。
 
-
-> 注：Client 收到 Server 的确认后，进入 FIN-WAIT-2（终止等待2）状态，等待 Server 发出的连接释放报文段。
+> 注：Client 收到 Server 的确认后，进入 FIN-WAIT-2（终止等待 2）状态，等待 Server 发出的连接释放报文段。
 
 3. **第三次挥手**：Server 已经没有要向 Client 发出的数据了，Server 发出连接释放报文段（`FIN = 1`，`ACK = 1`，序号 `seq = w`，确认号 `ack = u + 1`），Server 进入 LAST-ACK（最后确认）状态，等待 Client 的确认。
 4. **第四次挥手**：Client 收到 Server 的连接释放报文段后，对此发出确认报文段（`ACK = 1`，`seq = u + 1`，`ack = w + 1`），Client 进入 TIME-WAIT（时间等待）状态。此时 TCP 未释放掉，需要经过时间等待计时器设置的时间 2MSL 后，Client 才进入 CLOSED 状态。
@@ -395,7 +398,7 @@ DNS（Domain Name System）是 **域名系统** 的英文缩写，提供的服�
 
 OK，至此我们就理解了 **TCP 及其三次握手和四次挥手过程**，为了方便小伙伴们形象记忆，**jsLe** 搞了个小故事，希望小伙伴们能加深印象：
 
-* **三次握手 + 四次挥手形象记忆**：
+- **三次握手 + 四次挥手形象记忆**：
 
 1. **jsLe**：（对妹子发起微信好友申请）“你好，我可以加你好友吗？” —— **第一次握手**
 2. **妹子**：（通过审核）“你好，很高兴认识你~” —— **第二次握手**
@@ -416,8 +419,8 @@ OK，成功出糗，相信小伙伴们有了个很好的了解了。
 
 那么，我们继续前行探索。
 
-> 参考文献 1：[《TCP三次握手和四次挥手过程》](https://www.cnblogs.com/Andya/p/7272462.html)  
-> 参考文献 2：[《TCP的三次握手与四次挥手（详解+动图）》](https://blog.csdn.net/qzcsu/article/details/72861891)  
+> 参考文献 1：[《TCP 三次握手和四次挥手过程》](https://www.cnblogs.com/Andya/p/7272462.html)  
+> 参考文献 2：[《TCP 的三次握手与四次挥手（详解+动图）》](https://blog.csdn.net/qzcsu/article/details/72861891)
 
 ## <a name="chapter-eight" id="chapter-eight">八 浏览器渲染页面</a>
 
@@ -425,7 +428,7 @@ OK，成功出糗，相信小伙伴们有了个很好的了解了。
 
 **最后**，我们解决第三个问题：
 
-* 浏览器解析文档资源并渲染页面是个怎样的流程？
+- 浏览器解析文档资源并渲染页面是个怎样的流程？
 
 话不多说，一起来看：
 
@@ -469,11 +472,11 @@ OK，成功出糗，相信小伙伴们有了个很好的了解了。
 
 1. [《函数防抖和节流》](https://www.jianshu.com/p/c8b86b09daf0)
 2. [《节流 & 防抖》](https://qishaoxuan.github.io/blog/js/throttleDebounce.html?tdsourcetag=s_pctim_aiomsg)
-3. [《JS奇淫巧技：防抖函数与节流函数》](https://www.cnblogs.com/chenqf/p/7986725.html)
+3. [《JS 奇淫巧技：防抖函数与节流函数》](https://www.cnblogs.com/chenqf/p/7986725.html)
 4. [《闲聊 JS 中的 apply 和 call》](https://www.cnblogs.com/alai88/p/5518441.html)
 5. [《js 中 arguments 的用法》](https://www.cnblogs.com/LMJBlogs/p/6024148.html)
 6. [《防抖和节流的应用场景和实现》](https://www.codercto.com/a/35263.html)
-7. [《网页解析的全过程(输入url到展示页面)》](https://www.cnblogs.com/wpshan/p/6282061.html)
+7. [《网页解析的全过程(输入 url 到展示页面)》](https://www.cnblogs.com/wpshan/p/6282061.html)
 8. [《浏览器渲染页面过程剖析》](https://www.jianshu.com/p/32ca5f1c0768)
 9. [《一篇文章搞定前端面试》](https://juejin.im/post/5bbaa549e51d450e827b6b13)
 

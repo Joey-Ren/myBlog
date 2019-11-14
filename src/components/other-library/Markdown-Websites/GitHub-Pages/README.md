@@ -1,5 +1,4 @@
-GitHub Pages
-===
+# GitHub Pages
 
 > create by **jsLe** on **2019-5-30 08:32:41**  
 > Recently revised in **2019-05-30 16:17:17**
@@ -10,11 +9,11 @@ GitHub Pages 是一个通过 GitHub 项目/仓库 进行部署的，以 `用户�
 
 通过 GitHub Pages，用户只需要把自己的内容在本地编辑好，然后推送到 GitHub 仓库即可。
 
-* [jsLe 的 GitHub Pages 仓库](https://github.com/LiangJunrong/LiangJunrong.github.io)
-* [jsLe 的 GitHub Pages 页面](https://liangjunrong.github.io/)
+- [jsLe 的 GitHub Pages 仓库](https://github.com/LiangJunrong/LiangJunrong.github.io)
+- [jsLe 的 GitHub Pages 页面](https://liangjunrong.github.io/)
 
-| 目录 |
-| --- |
+| 目录                                         |
+| -------------------------------------------- |
 | [GitHub Pages 学习](./GitHub-Pages-study.md) |
 
 ---

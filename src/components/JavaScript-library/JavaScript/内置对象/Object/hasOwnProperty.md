@@ -1,19 +1,19 @@
-方法 - hasOwnProperty
-===
+# 方法 - hasOwnProperty
 
 > Create by **jsLe** on **2019-10-14 16:00:23**  
 > Recently revised in **2019-10-14 16:25:45**
 
-* **原文**：[MDN - hasOwnProperty](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math)
+- **原文**：[MDN - hasOwnProperty](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math)
 
-* **功能**：`hasOwnProperty()` 方法会返回一个布尔值，指示对象自身属性中是否具有指定的属性（也就是，是否有指定的键）。
+- **功能**：`hasOwnProperty()` 方法会返回一个布尔值，指示对象自身属性中是否具有指定的属性（也就是，是否有指定的键）。
 
-* **方法**：`obj.hasOwnProperty(prop)`
-  * `prop`：要检测的属性的 `String` 字符串形式表示的名称，或者 `Symbol`。
+- **方法**：`obj.hasOwnProperty(prop)`
 
-* **返回值**：用来判断某个对象是否具有指定属性的布尔值 `Boolean`。
+  - `prop`：要检测的属性的 `String` 字符串形式表示的名称，或者 `Symbol`。
 
-* **说明**：
+- **返回值**：用来判断某个对象是否具有指定属性的布尔值 `Boolean`。
+
+- **说明**：
 
 所有继承了 `Object` 的对象都会继承到 `hasOwnProperty` 方法。
 
@@ -23,68 +23,68 @@
 
 > 即使属性的值是 `null` 或者 `undefined`，只要属性存在，`hasOwnProperty` 依旧会返回 `true`。
 
-* **建议**：如果整篇文章还不足以解答你的疑惑，可以顺带了解下 [for...in](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E8%AF%AD%E5%8F%A5%E5%92%8C%E5%A3%B0%E6%98%8E/%E8%BF%AD%E4%BB%A3%E5%99%A8/for...in.md) 和 [for...of](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E8%AF%AD%E5%8F%A5%E5%92%8C%E5%A3%B0%E6%98%8E/%E8%BF%AD%E4%BB%A3%E5%99%A8/for...of.md) 以及 [for...in 与 for...of 的区别](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E8%AF%AD%E5%8F%A5%E5%92%8C%E5%A3%B0%E6%98%8E/%E8%BF%AD%E4%BB%A3%E5%99%A8/for...in%26for...of.md)
+- **建议**：如果整篇文章还不足以解答你的疑惑，可以顺带了解下 [for...in](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E8%AF%AD%E5%8F%A5%E5%92%8C%E5%A3%B0%E6%98%8E/%E8%BF%AD%E4%BB%A3%E5%99%A8/for...in.md) 和 [for...of](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E8%AF%AD%E5%8F%A5%E5%92%8C%E5%A3%B0%E6%98%8E/%E8%BF%AD%E4%BB%A3%E5%99%A8/for...of.md) 以及 [for...in 与 for...of 的区别](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E8%AF%AD%E5%8F%A5%E5%92%8C%E5%A3%B0%E6%98%8E/%E8%BF%AD%E4%BB%A3%E5%99%A8/for...in%26for...of.md)
 
 ```js
 /**
  * @name hasOwnProperty
  * @description null 和 undefined 同样会被判断
  */
-const obj = new Object();
-obj.propOne = null;
-console.log(obj.hasOwnProperty('propOne')); // true
-obj.propTwo = undefined;
-console.log(obj.hasOwnProperty('propTwo')); // true
+const obj = new Object()
+obj.propOne = null
+console.log(obj.hasOwnProperty('propOne')) // true
+obj.propTwo = undefined
+console.log(obj.hasOwnProperty('propTwo')) // true
 ```
 
-* **代码**：
+- **代码**：
 
 ```js
 /**
  * @name 示例1
  * @description hasOwnProperty 示例
  */
-const obj1 = new Object();
-obj1.prop = 'exists';
-console.log(obj1.hasOwnProperty('prop')); // true
-delete obj1.prop;
-console.log(obj1.hasOwnProperty('prop')); // false
+const obj1 = new Object()
+obj1.prop = 'exists'
+console.log(obj1.hasOwnProperty('prop')) // true
+delete obj1.prop
+console.log(obj1.hasOwnProperty('prop')) // false
 
 /**
  * @name 示例2
  * @description 区分 hasOwnProperty 判断自身属性和继承属性
  */
-const obj2 = new Object();
-obj2.name = 'jsLe';
-console.log(obj2.toString()); // [object Object]
-console.log(obj2.hasOwnProperty('name')); // true
-console.log(obj2.hasOwnProperty('toString')); // false
+const obj2 = new Object()
+obj2.name = 'jsLe'
+console.log(obj2.toString()) // [object Object]
+console.log(obj2.hasOwnProperty('name')) // true
+console.log(obj2.hasOwnProperty('toString')) // false
 
 /**
  * @name 示例3
  * @description 遍历一个对象的所有自身属性
  */
-const jsLe = new Object();
+const jsLe = new Object()
 Object.prototype.showSkill = () => {
-  console.log('渣渣一个！');
-};
-jsLe.name = 'jsLe';
-jsLe.age = '25';
+  console.log('渣渣一个！')
+}
+jsLe.name = 'jsLe'
+jsLe.age = '25'
 jsLe.canPlay = () => {
-  console.log('play');
-};
-console.log(jsLe);
+  console.log('play')
+}
+console.log(jsLe)
 // { name: 'jsLe', age: '25', canPlay: [Function] }
-console.log(jsLe.__proto__);
+console.log(jsLe.__proto__)
 // { showSkill: () => { console.log('渣渣一个！'); }, constructor: ...省略 }
 for (const prop in jsLe) {
   if (jsLe.hasOwnProperty(prop)) {
-    console.log(prop);
+    console.log(prop)
     // name
     // age
     // play
   } else {
-    console.log(prop);
+    console.log(prop)
     // showSkill
   }
 }

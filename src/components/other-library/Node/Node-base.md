@@ -1,5 +1,4 @@
-Node 基础
-===
+# Node 基础
 
 > Create by **jsLe** on **2018-11-8 13:42:42**  
 > Recently revised in **2019-05-24 15:08:02**
@@ -8,21 +7,21 @@ Node 基础
 
 **本文重点内容**：
 
-* Node 基础 - 通过对 Node 基础的了解学习，打下 Node 基础
-* Node API - 开启服务提供 API 给前端调用
-* Node 连接 MySQL - 通过 npm 安装 mysql，从而实现数据库的链接
-* Node 实战 - 企业官网从 0 开始，打造能注册、登录以及留言的企业官网
-* Node 部署 - 如何通过部署云服务器，让小伙伴们可以查看到你的网站
+- Node 基础 - 通过对 Node 基础的了解学习，打下 Node 基础
+- Node API - 开启服务提供 API 给前端调用
+- Node 连接 MySQL - 通过 npm 安装 mysql，从而实现数据库的链接
+- Node 实战 - 企业官网从 0 开始，打造能注册、登录以及留言的企业官网
+- Node 部署 - 如何通过部署云服务器，让小伙伴们可以查看到你的网站
 
 **本文延伸链接**：
 
-* Node 部署项目、云服务器以及域名的使用：[链接](https://github.com/LiangJunrong/document-library/blob/master/other-library/Node/build-web-station.md)
-* 本文 Node 基础代码下载地址：[链接](https://github.com/LiangJunrong/Node/tree/FrontEndCodeBase)
-* 本文 Node 成品代码下载地址：[链接](https://github.com/LiangJunrong/Node)  
+- Node 部署项目、云服务器以及域名的使用：[链接](https://github.com/LiangJunrong/document-library/blob/master/other-library/Node/build-web-station.md)
+- 本文 Node 基础代码下载地址：[链接](https://github.com/LiangJunrong/Node/tree/FrontEndCodeBase)
+- 本文 Node 成品代码下载地址：[链接](https://github.com/LiangJunrong/Node)
 
 **本文成品演示**：
 
-* Node 项目演示：[jsLe 前端有限公司](http://company.jsLe.top/)
+- Node 项目演示：[jsLe 前端有限公司](http://company.jsLe.top/)
 
 ![图](../../public-repertory/img/other-node-NodeBase-0.png)
 
@@ -30,34 +29,34 @@ Node 基础
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |                                                                             
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 基础学习](#chapter-three) |
-| &emsp;<a name="catalog-chapter-three-one" id="catalog-chapter-three-one"></a>[3.1 HTTP - 开始 Node 之旅](#chapter-three-one) |
-| &emsp;<a name="catalog-chapter-three-two" id="catalog-chapter-three-two"></a>[3.2 URL 模块](#chapter-three-two) |
-| &emsp;<a name="catalog-chapter-three-three" id="catalog-chapter-three-three"></a>[3.3 CommonJS](#chapter-three-three) |
-| &emsp;<a name="catalog-chapter-three-four" id="catalog-chapter-three-four"></a>[3.4 包与 npm](#chapter-three-four) |
-| &emsp;<a name="catalog-chapter-three-five" id="catalog-chapter-three-five"></a>[3.5 fs 文件管理](#chapter-three-five) |
-| &emsp;<a name="catalog-chapter-three-six" id="catalog-chapter-three-six"></a>[3.6 fs 案例](#chapter-three-six) |
-| &emsp;<a name="catalog-chapter-three-seven" id="catalog-chapter-three-seven"></a>[3.7 fs 流](#chapter-three-seven) |
-| &emsp;<a name="catalog-chapter-three-eight" id="catalog-chapter-three-eight"></a>[3.8 创建 Web 服务器](#chapter-three-eight) |
+| 目录                                                                                                                             |
+| -------------------------------------------------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)                                               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 基础学习](#chapter-three)                                     |
+| &emsp;<a name="catalog-chapter-three-one" id="catalog-chapter-three-one"></a>[3.1 HTTP - 开始 Node 之旅](#chapter-three-one)     |
+| &emsp;<a name="catalog-chapter-three-two" id="catalog-chapter-three-two"></a>[3.2 URL 模块](#chapter-three-two)                  |
+| &emsp;<a name="catalog-chapter-three-three" id="catalog-chapter-three-three"></a>[3.3 CommonJS](#chapter-three-three)            |
+| &emsp;<a name="catalog-chapter-three-four" id="catalog-chapter-three-four"></a>[3.4 包与 npm](#chapter-three-four)               |
+| &emsp;<a name="catalog-chapter-three-five" id="catalog-chapter-three-five"></a>[3.5 fs 文件管理](#chapter-three-five)            |
+| &emsp;<a name="catalog-chapter-three-six" id="catalog-chapter-three-six"></a>[3.6 fs 案例](#chapter-three-six)                   |
+| &emsp;<a name="catalog-chapter-three-seven" id="catalog-chapter-three-seven"></a>[3.7 fs 流](#chapter-three-seven)               |
+| &emsp;<a name="catalog-chapter-three-eight" id="catalog-chapter-three-eight"></a>[3.8 创建 Web 服务器](#chapter-three-eight)     |
 | &emsp;<a name="catalog-chapter-three-night" id="catalog-chapter-three-night"></a>[3.9 非阻塞 I/O 事件驱动](#chapter-three-night) |
-| &emsp;<a name="catalog-chapter-three-ten" id="catalog-chapter-three-ten"></a>[3.10 get 与 post](#chapter-three-ten) |
+| &emsp;<a name="catalog-chapter-three-ten" id="catalog-chapter-three-ten"></a>[3.10 get 与 post](#chapter-three-ten)              |
 | &emsp;<a name="catalog-chapter-three-eleven" id="catalog-chapter-three-eleven"></a>[3.11 Node 连接 MySQL](#chapter-three-eleven) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 Web 实战 —— 企业官网](#chapter-four) |
-| &emsp;<a name="catalog-chapter-four-one" id="catalog-chapter-four-one"></a>[4.1 编程环境](#chapter-four-one) |
-| &emsp;<a name="catalog-chapter-four-two" id="catalog-chapter-four-two"></a>[4.2 后端接口](#chapter-four-two) |
-| &emsp;<a name="catalog-chapter-four-three" id="catalog-chapter-four-three"></a>[4.3 注册功能](#chapter-four-three) |
-| &emsp;<a name="catalog-chapter-four-four" id="catalog-chapter-four-four"></a>[4.4 登录功能](#chapter-four-four) |
-| &emsp;<a name="catalog-chapter-four-five" id="catalog-chapter-four-five"></a>[4.5 留言功能](#chapter-four-five) |
-| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 工具整合](#chapter-five) |
-| &emsp;<a name="catalog-chapter-five-one" id="catalog-chapter-five-one"></a>[5.1 supervisor - 监听 Node 改动](#chapter-five-one) |
-| &emsp;<a name="catalog-chapter-five-two" id="catalog-chapter-five-two"></a>[5.2 PM2 - Node 进程管理](#chapter-five-two) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 参考资料](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 线上部署](#chapter-seven) |
-| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 归纳总结](#chapter-eight) |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 Web 实战 —— 企业官网](#chapter-four)                            |
+| &emsp;<a name="catalog-chapter-four-one" id="catalog-chapter-four-one"></a>[4.1 编程环境](#chapter-four-one)                     |
+| &emsp;<a name="catalog-chapter-four-two" id="catalog-chapter-four-two"></a>[4.2 后端接口](#chapter-four-two)                     |
+| &emsp;<a name="catalog-chapter-four-three" id="catalog-chapter-four-three"></a>[4.3 注册功能](#chapter-four-three)               |
+| &emsp;<a name="catalog-chapter-four-four" id="catalog-chapter-four-four"></a>[4.4 登录功能](#chapter-four-four)                  |
+| &emsp;<a name="catalog-chapter-four-five" id="catalog-chapter-four-five"></a>[4.5 留言功能](#chapter-four-five)                  |
+| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 工具整合](#chapter-five)                                        |
+| &emsp;<a name="catalog-chapter-five-one" id="catalog-chapter-five-one"></a>[5.1 supervisor - 监听 Node 改动](#chapter-five-one)  |
+| &emsp;<a name="catalog-chapter-five-two" id="catalog-chapter-five-two"></a>[5.2 PM2 - Node 进程管理](#chapter-five-two)          |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 参考资料](#chapter-six)                                           |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 线上部署](#chapter-seven)                                     |
+| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 归纳总结](#chapter-eight)                                     |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
@@ -65,7 +64,7 @@ Node 基础
 
 本文主要目的：
 
-1. 整合 Node 基础，加深 **jsLe** 对 Node 的学习了解，并且方便日后复习。  
+1. 整合 Node 基础，加深 **jsLe** 对 Node 的学习了解，并且方便日后复习。
 2. 整合 Node 工具，方便查找在 Node 开发中，有哪些工具比较有利于开发。
 3. 给初学 Node 的小伙伴做一个参考，如有疑问还请在 QQ 群：`798961601` 中咨询。
 
@@ -73,7 +72,7 @@ Node 基础
 
 > [返回目录](#catalog-chapter-three)
 
-**万丈高楼平地起，地基还得自己起。**  
+**万丈高楼平地起，地基还得自己起。**
 
 ### <a name="chapter-three-one" id="chapter-three-one">3.1 HTTP - 开始 Node 之旅</a>
 
@@ -85,35 +84,36 @@ Node 基础
 
 ```js
 // 1. 引入 http 模块
-var http = require("http");
+var http = require('http')
 
 // 2. 用 http 模块创建服务
 /**
  * req 获取 url 信息 (request)
  * res 浏览器返回响应信息 (response)
  */
-http.createServer(function (req, res) {
-  // 设置 HTTP 头部，状态码是 200，文件类型是 html，字符集是 utf8
-  res.writeHead(200, {
-    "Content-Type": "text/html;charset=UTF-8"
-  });
+http
+  .createServer(function(req, res) {
+    // 设置 HTTP 头部，状态码是 200，文件类型是 html，字符集是 utf8
+    res.writeHead(200, {
+      'Content-Type': 'text/html;charset=UTF-8'
+    })
 
-  // 往页面打印值
-  res.write('<h1 style="text-align:center">Hello NodeJS</h1>');
+    // 往页面打印值
+    res.write('<h1 style="text-align:center">Hello NodeJS</h1>')
 
-  // 结束响应
-  res.end();
-
-}).listen(3000); // 监听的端口
+    // 结束响应
+    res.end()
+  })
+  .listen(3000) // 监听的端口
 ```
 
 那么，上面代码，我们要怎么用呢？
 
-**首先**，将上面的代码复制粘贴到 `01_http.js` 中。  
+**首先**，将上面的代码复制粘贴到 `01_http.js` 中。
 
-**然后**，启动 VS Code 终端：`Ctrl + ~`。  
+**然后**，启动 VS Code 终端：`Ctrl + ~`。
 
-**接着**，输入 `node 01_http.js` 并回车。  
+**接着**，输入 `node 01_http.js` 并回车。
 
 **最后**，打开 `localhost:3000`：
 
@@ -124,7 +124,7 @@ OK，搞定完事，现在我们一一讲解上面代码：
 **首先**，我们需要先开启仙人模式。哦，不是，是 HTTP 模式。我们都知道，像 PHP 这类老牌子的后端语言，需要 Apache 或者 Nginx 开启 HTTP 服务。然而我们的 Node 不需要：
 
 ```js
-var http = require("http");
+var http = require('http')
 ```
 
 **然后**，开启 HTTP 服务，并设置开启的端口：
@@ -134,9 +134,11 @@ var http = require("http");
  * req 获取 url 信息 (request)
  * res 浏览器返回响应信息 (response)
  */
-http.createServer(function (req, res) {
-  // ... 步骤 3 代码
-}).listen(3000); // 监听的端口
+http
+  .createServer(function(req, res) {
+    // ... 步骤 3 代码
+  })
+  .listen(3000) // 监听的端口
 ```
 
 **接着**，我们设置 HTTP 头部，并往页面打印值，最后结束响应：
@@ -144,14 +146,14 @@ http.createServer(function (req, res) {
 ```js
 // 设置 HTTP 头部，状态码是 200，文件类型是 html，字符集是 utf8
 res.writeHead(200, {
-  "Content-Type": "text/html;charset=UTF-8"
-});
+  'Content-Type': 'text/html;charset=UTF-8'
+})
 
 // 往页面打印值
-res.write('<h1 style="text-align:center">Hello NodeJS</h1>');
+res.write('<h1 style="text-align:center">Hello NodeJS</h1>')
 
-// 结束响应 
-res.end();
+// 结束响应
+res.end()
 ```
 
 **最后**，我们往浏览器输入 `http://localhost:3000/`，将访问到我们开启的 Node 服务，从而往页面渲染页面。
@@ -162,13 +164,13 @@ res.end();
 
 > [返回目录](#catalog-chapter-three-two)
 
-URL 模块是什么呢？  
+URL 模块是什么呢？
 
 我们在控制台（终端）开启 Node 模式，并打印出 `url` 来看一下：
 
 ![图](../../public-repertory/img/other-node-NodeBase-2.png)
 
-好家伙，它有 `Url`、`parse`、`resolve`、`resolveObject`、`format`、`URL`、`URLSearchParams`、`domainToASCII`、`domainToUnicode` 这么多模块。  
+好家伙，它有 `Url`、`parse`、`resolve`、`resolveObject`、`format`、`URL`、`URLSearchParams`、`domainToASCII`、`domainToUnicode` 这么多模块。
 
 那么，这些模块都有什么用呢？
 
@@ -178,69 +180,69 @@ URL 模块是什么呢？
 
 ```js
 // 1. 引入 url 模块
-var url = require("url");
+var url = require('url')
 
 // 2. 引入 http 模块
-var http = require("http");
+var http = require('http')
 
 // 3. 用 http 模块创建服务
 /**
  * req 获取 url 信息 (request)
  * res 浏览器返回响应信息 (response)
  */
-http.createServer(function (req, res) {
-
-  // 4. 获取服务器请求
-  /**
-   * 访问地址是：http://localhost:3000/?userName=jsLe&userAge=23
-   * 如果你执行 console.log(req.url)，它将执行两次，分别返回下面的信息：
-   * /  ?userName=jsLe&userAge=23
-   * /  /favicon.ico
-   * 这里为了防止重复执行，所以排除 req.url == /favicon.ico 的情况
-   */
-  if(req.url != "/favicon.ico") {
-    
-    // 5. 使用 url 的 parse 方法
+http
+  .createServer(function(req, res) {
+    // 4. 获取服务器请求
     /**
-     * parse 方法需要两个参数：
-     * 第一个参数是地址
-     * 第二个参数是 true 的话表示把 get 传值转换成对象
-     */ 
-    var result = url.parse(req.url, true);
-    console.log(result);
-    /**
-     * Url {
-     *   protocol: null,
-     *   slashes: null,
-     *   auth: null,
-     *   host: null,
-     *   port: null,
-     *   hostname: null,
-     *   hash: null,
-     *   search: '?userName=jsLe&userAge=23',
-     *   query: { userName: 'jsLe', userAge: '23' },
-     *   pathname: '/',
-     *   path: '/?userName=jsLe&userAge=23',
-     *   href: '/?userName=jsLe&userAge=23' }
+     * 访问地址是：http://localhost:3000/?userName=jsLe&userAge=23
+     * 如果你执行 console.log(req.url)，它将执行两次，分别返回下面的信息：
+     * /  ?userName=jsLe&userAge=23
+     * /  /favicon.ico
+     * 这里为了防止重复执行，所以排除 req.url == /favicon.ico 的情况
      */
+    if (req.url != '/favicon.ico') {
+      // 5. 使用 url 的 parse 方法
+      /**
+       * parse 方法需要两个参数：
+       * 第一个参数是地址
+       * 第二个参数是 true 的话表示把 get 传值转换成对象
+       */
 
-    console.log(result.query.userName); // jsLe
+      var result = url.parse(req.url, true)
+      console.log(result)
+      /**
+       * Url {
+       *   protocol: null,
+       *   slashes: null,
+       *   auth: null,
+       *   host: null,
+       *   port: null,
+       *   hostname: null,
+       *   hash: null,
+       *   search: '?userName=jsLe&userAge=23',
+       *   query: { userName: 'jsLe', userAge: '23' },
+       *   pathname: '/',
+       *   path: '/?userName=jsLe&userAge=23',
+       *   href: '/?userName=jsLe&userAge=23' }
+       */
 
-    console.log(result.query.userAge); // 23
-  }
+      console.log(result.query.userName) // jsLe
 
-  // 设置 HTTP 头部，状态码是 200，文件类型是 html，字符集是 utf8
-  res.writeHead(200, {
-    "Content-Type": "text/html;charset=UTF-8"
-  });
+      console.log(result.query.userAge) // 23
+    }
 
-  // 往页面打印值
-  res.write('<h1 style="text-align:center">Hello NodeJS</h1>');
+    // 设置 HTTP 头部，状态码是 200，文件类型是 html，字符集是 utf8
+    res.writeHead(200, {
+      'Content-Type': 'text/html;charset=UTF-8'
+    })
 
-  // 结束响应
-  res.end();
+    // 往页面打印值
+    res.write('<h1 style="text-align:center">Hello NodeJS</h1>')
 
-}).listen(3000);
+    // 结束响应
+    res.end()
+  })
+  .listen(3000)
 ```
 
 在上面的代码中：
@@ -249,14 +251,14 @@ http.createServer(function (req, res) {
 
 ```js
 // 1. 引入 url 模块
-var url = require("url");
+var url = require('url')
 ```
 
 **然后**，我们引入 `http` 模块：
 
 ```js
 // 2. 引入 http 模块
-var http = require("http");
+var http = require('http')
 ```
 
 **接着**，我们创建 `http` 模块，因为 `url` 的监听，需要 `http` 模块的开启：
@@ -267,20 +269,22 @@ var http = require("http");
  * req 获取 url 信息 (request)
  * res 浏览器返回响应信息 (response)
  */
-http.createServer(function (req, res) {
-  // ... 第 4 步、第 5 步代码
+http
+  .createServer(function(req, res) {
+    // ... 第 4 步、第 5 步代码
 
-  // 设置 HTTP 头部，状态码是 200，文件类型是 html，字符集是 utf8
-  res.writeHead(200, {
-    "Content-Type": "text/html;charset=UTF-8"
-  });
+    // 设置 HTTP 头部，状态码是 200，文件类型是 html，字符集是 utf8
+    res.writeHead(200, {
+      'Content-Type': 'text/html;charset=UTF-8'
+    })
 
-  // 往页面打印值
-  res.write('<h1 style="text-align:center">Hello NodeJS</h1>');
+    // 往页面打印值
+    res.write('<h1 style="text-align:center">Hello NodeJS</h1>')
 
-  // 结束响应
-  res.end();
-}).listen(3000);
+    // 结束响应
+    res.end()
+  })
+  .listen(3000)
 ```
 
 **最后**，我们访问我们给出的地址：`http://localhost:3000/?userName=jsLe&userAge=23`，并通过它查看 `url` 的 `parse` 模块怎么用，输出啥：
@@ -288,41 +292,41 @@ http.createServer(function (req, res) {
 ```js
 // 4. 获取服务器请求
 /**
-  * 访问地址是：http://localhost:3000/?userName=jsLe&userAge=23
-  * 如果你执行 console.log(req.url)，它将执行两次，分别返回下面的信息：
-  * /  ?userName=jsLe&userAge=23
-  * /  /favicon.ico
-  * 这里为了防止重复执行，所以排除 req.url == /favicon.ico 的情况
-  */
-if(req.url != "/favicon.ico") {
-  
+ * 访问地址是：http://localhost:3000/?userName=jsLe&userAge=23
+ * 如果你执行 console.log(req.url)，它将执行两次，分别返回下面的信息：
+ * /  ?userName=jsLe&userAge=23
+ * /  /favicon.ico
+ * 这里为了防止重复执行，所以排除 req.url == /favicon.ico 的情况
+ */
+if (req.url != '/favicon.ico') {
   // 5. 使用 url 的 parse 方法
   /**
-    * parse 方法需要两个参数：
-    * 第一个参数是地址
-    * 第二个参数是 true 的话表示把 get 传值转换成对象
-    */ 
-  var result = url.parse(req.url, true);
-  console.log(result);
+   * parse 方法需要两个参数：
+   * 第一个参数是地址
+   * 第二个参数是 true 的话表示把 get 传值转换成对象
+   */
+
+  var result = url.parse(req.url, true)
+  console.log(result)
   /**
-    * Url {
-    *   protocol: null,
-    *   slashes: null,
-    *   auth: null,
-    *   host: null,
-    *   port: null,
-    *   hostname: null,
-    *   hash: null,
-    *   search: '?userName=jsLe&userAge=23',
-    *   query: { userName: 'jsLe', userAge: '23' },
-    *   pathname: '/',
-    *   path: '/?userName=jsLe&userAge=23',
-    *   href: '/?userName=jsLe&userAge=23' }
-    */
+   * Url {
+   *   protocol: null,
+   *   slashes: null,
+   *   auth: null,
+   *   host: null,
+   *   port: null,
+   *   hostname: null,
+   *   hash: null,
+   *   search: '?userName=jsLe&userAge=23',
+   *   query: { userName: 'jsLe', userAge: '23' },
+   *   pathname: '/',
+   *   path: '/?userName=jsLe&userAge=23',
+   *   href: '/?userName=jsLe&userAge=23' }
+   */
 
-  console.log(result.query.userName); // jsLe
+  console.log(result.query.userName) // jsLe
 
-  console.log(result.query.userAge); // 23
+  console.log(result.query.userAge) // 23
 }
 ```
 
@@ -330,10 +334,10 @@ if(req.url != "/favicon.ico") {
 
 当然，上面只讲解了 `parse` 的用法，我们可以将上面代码中 `if` 语句里面的代码全部清空。然后，输入下面的内容，去学习 `url` 模块更多的内容：
 
-* **内容 1：url 模块所有内容**
+- **内容 1：url 模块所有内容**
 
 ```js
-console.log(url);
+console.log(url)
 
 /**
  * Console：
@@ -351,10 +355,10 @@ console.log(url);
  */
 ```
 
-* **内容 2：parse 如何使用**
+- **内容 2：parse 如何使用**
 
 ```js
-console.log(url.parse("http://www.baidu.com"));
+console.log(url.parse('http://www.baidu.com'))
 /**
  * Console：
   Url {
@@ -374,10 +378,10 @@ console.log(url.parse("http://www.baidu.com"));
  */
 ```
 
-* **内容 3：parse 带参数**
+- **内容 3：parse 带参数**
 
 ```js
-console.log(url.parse("http://www.baidu.com/new?name=zhangsan"));
+console.log(url.parse('http://www.baidu.com/new?name=zhangsan'))
 
 /**
  * Console：
@@ -398,32 +402,34 @@ console.log(url.parse("http://www.baidu.com/new?name=zhangsan"));
  */
 ```
 
-* **内容 4：`format` 的使用**
+- **内容 4：`format` 的使用**
 
 ```js
-console.log(url.format({
-  protocol: 'http:',
-  slashes: true,
-  auth: null,
-  host: 'www.baidu.com',
-  port: null,
-  hostname: 'www.baidu.com',
-  hash: null,
-  search: '?name=zhangsan',
-  query: 'name=zhangsan',
-  pathname: '/new',
-  path: '/new?name=zhangsan',
-  href: 'http://www.baidu.com/new?name=zhangsan' 
-}))
+console.log(
+  url.format({
+    protocol: 'http:',
+    slashes: true,
+    auth: null,
+    host: 'www.baidu.com',
+    port: null,
+    hostname: 'www.baidu.com',
+    hash: null,
+    search: '?name=zhangsan',
+    query: 'name=zhangsan',
+    pathname: '/new',
+    path: '/new?name=zhangsan',
+    href: 'http://www.baidu.com/new?name=zhangsan'
+  })
+)
 
 // Console：
 // http://www.baidu.com/new?name=zhangsan
 ```
 
-* **内容5：`resolve` 的使用**
+- **内容 5：`resolve` 的使用**
 
 ```js
-console.log(url.resolve("http://www.baidu.com/jsLe", "梁峻荣"));
+console.log(url.resolve('http://www.baidu.com/jsLe', '梁峻荣'))
 
 // Console：
 // http://www.baidu.com/梁峻荣
@@ -435,21 +441,21 @@ console.log(url.resolve("http://www.baidu.com/jsLe", "梁峻荣"));
 
 > [返回目录](#catalog-chapter-three-three)
 
-* 什么是 CommonJS？
+- 什么是 CommonJS？
 
 CommonJS 就是为 JS 的表现来制定规范，因为 JS 没有模块系统、标准库较少、缺乏包管理工具，所以 CommonJS 应运而生，它希望 JS 可以在任何地方运行，而不只是在浏览器中，从而达到 Java、C#、PHP 这些后端语言具备开发大型应用的能力。
 
-* CommonJS 的应用？
+- CommonJS 的应用？
 
 1. 服务器端 JavaScript 应用程序。（Node.js）
 2. 命令行工具
 3. 桌面图形界面应用程序。
 
-* CommonJS 与 Node.js 的关系？
+- CommonJS 与 Node.js 的关系？
 
 CommonJS 就是模块化的标准，Node.js 就是 CommonJS（模块化）的实现。
 
-* Node.js 中的模块化？
+- Node.js 中的模块化？
 
 1. 在 Node 中，模块分为两类：一是 Node 提供的模块，称为核心模块；二是用户编写的模块，成为文件模块。核心模块在 Node 源代码的编译过程中，编译进了二进制执行文件，所以它的加载速度是最快的，例如：HTTP 模块、URL 模块、FS 模块；文件模块是在运行时动态加载的，需要完整的路劲分析、文件定位、编译执行过程等……所以它的速度相对核心模块来说会更慢一些。
 2. 我们可以将公共的功能抽离出一个单独的 JS 文件存放，然后在需要的情况下，通过 exports 或者 module.exports 将模块导出，并通过 require 引入这些模块。
@@ -460,9 +466,9 @@ CommonJS 就是模块化的标准，Node.js 就是 CommonJS（模块化）的实
 
 ![图](../../public-repertory/img/other-node-NodeBase-3.png)
 
-* **方法一**：
+- **方法一**：
 
-首先，我们新建 `03_CommonJS.js`、`03_tool-add.js`、`node_modules/03_tool-multiply.js`、`node_modules/jsLe-module/tools.js` 这 4 个文件/文件夹。  
+首先，我们新建 `03_CommonJS.js`、`03_tool-add.js`、`node_modules/03_tool-multiply.js`、`node_modules/jsLe-module/tools.js` 这 4 个文件/文件夹。
 
 其中 `package.json` 我们暂且不理会，稍后会讲解它如何自动生成。
 
@@ -474,11 +480,11 @@ CommonJS 就是模块化的标准，Node.js 就是 CommonJS（模块化）的实
 // 1. 假设我们文件其中有个工具模块
 var tools = {
   add: (...numbers) => {
-    let sum = 0;
+    let sum = 0
     for (let number in numbers) {
-      sum += numbers[number];
+      sum += numbers[number]
     }
-    return sum;
+    return sum
   }
 }
 
@@ -498,50 +504,50 @@ var tools = {
 // exports.str = str; // { str: 'jsLe is very good!' }
 
 // module.exports 使用方法
-module.exports = tools;
+module.exports = tools
 ```
 
-那么，上面的代码有啥含义呢？  
+那么，上面的代码有啥含义呢？
 
-第一步，我们定义了个工具库 `tools`。  
+第一步，我们定义了个工具库 `tools`。
 
-第二步，我们通过 `modules.exports` 将 `tools` 进行了导出。  
+第二步，我们通过 `modules.exports` 将 `tools` 进行了导出。
 
 所以，我们在 `03_CommonJS.js` 可以通过 `require` 导入使用：
 
 ```js
-var http = require("http");
+var http = require('http')
 
-var tools1 = require('./03_tool-add');
+var tools1 = require('./03_tool-add')
 
-http.createServer(function (req, res) {
+http
+  .createServer(function(req, res) {
+    res.writeHead(200, {
+      'Content-Type': 'text/html;charset=UTF-8'
+    })
 
-  res.writeHead(200, {
-    "Content-Type": "text/html;charset=UTF-8"
-  });
+    res.write('<h1 style="text-align:center">Hello NodeJS</h1>')
 
-  res.write('<h1 style="text-align:center">Hello NodeJS</h1>');
-  
-  console.log(tools1.add(1, 2, 3));
-  /**
-   * Console：
-   * 6
-   * 6
-   * 这里要记得 Node 运行过程中，它请求了两次，
-   * http://localhost:3000/ 为一次，
-   * http://localhost:3000/favicon.ico 为第二次
-   */
-  
-  res.end();
+    console.log(tools1.add(1, 2, 3))
+    /**
+     * Console：
+     * 6
+     * 6
+     * 这里要记得 Node 运行过程中，它请求了两次，
+     * http://localhost:3000/ 为一次，
+     * http://localhost:3000/favicon.ico 为第二次
+     */
 
-}).listen(3000);
+    res.end()
+  })
+  .listen(3000)
 ```
 
 这样，我们就完成了 `exports` 与 `require` 的初次使用。
 
-* **方法二**：
+- **方法二**：
 
-当我们模块文件过多的时候，应该需要有个存放这些模块的目录，Node 就很靠谱，它规范我们可以将这些文件都放在 `node_modules` 目录中（大家都放在这个目录上，就不会有其他乱七八糟的命名了）。  
+当我们模块文件过多的时候，应该需要有个存放这些模块的目录，Node 就很靠谱，它规范我们可以将这些文件都放在 `node_modules` 目录中（大家都放在这个目录上，就不会有其他乱七八糟的命名了）。
 
 所以，我们在 `node_modules` 中新建一个 `03_tool-multiply.js` 文件，其内容如下：
 
@@ -550,29 +556,29 @@ http.createServer(function (req, res) {
 ```js
 var tools = {
   multiply: (...numbers) => {
-    let sum = numbers[0];
+    let sum = numbers[0]
     for (let number in numbers) {
-      sum = sum * numbers[number];
+      sum = sum * numbers[number]
     }
-    return sum;
+    return sum
   }
 }
 
-module.exports = tools;
+module.exports = tools
 ```
 
 在引用方面，我们只需要通过：
 
 ```js
 // 如果 Node 在当前目录没找到 tool.js 文件，则会去 node_modules 里面去查找
-var tools2 = require('03_tool-multiply');
+var tools2 = require('03_tool-multiply')
 
-console.log(tools2.multiply(1, 2, 3, 4));
+console.log(tools2.multiply(1, 2, 3, 4))
 ```
 
 这样，就可以成功导入 `03_tool-multiply.js` 文件了。
 
-* **方法三**：
+- **方法三**：
 
 如果全部单个文件丢在 `node_modules` 上，它会显得杂乱无章，所以我们应该定义个自己的模块：`jsLe-module`，然后将我们的 `tools.js` 存放在该目录中：
 
@@ -581,43 +587,43 @@ console.log(tools2.multiply(1, 2, 3, 4));
 ```js
 var tools = {
   add: (...numbers) => {
-    let sum = 0;
+    let sum = 0
     for (let number in numbers) {
-      sum += numbers[number];
+      sum += numbers[number]
     }
-    return sum;
+    return sum
   },
   multiply: (...numbers) => {
-    let sum = numbers[0];
+    let sum = numbers[0]
     for (let number in numbers) {
-      sum = sum * numbers[number];
+      sum = sum * numbers[number]
     }
-    return sum;
+    return sum
   }
 }
 
-module.exports = tools;
+module.exports = tools
 ```
 
-这样，我们就定义好了自己的工具库。  
+这样，我们就定义好了自己的工具库。
 
 但是，如果我们通过 `var tools3 = require('jsLe-module');` 去导入，会发现它报 `error` 了，所以，我们应该在 `jsLe-module` 目录下，通过下面命令行生成一个 `package.json`
 
 > PS E:\MyWeb\node_modules\jsLe-module> npm init --yes
 
-这样，在 `jsLe-module` 中就有了 `package.json`。  
+这样，在 `jsLe-module` 中就有了 `package.json`。
 
 而我们在 `03_CommonJS.js` 就可以引用它了：
 
 > 03_CommonJS.js
 
 ```js
-var http = require("http");
+var http = require('http')
 
-var tools1 = require('./03_tool-add');
+var tools1 = require('./03_tool-add')
 
 // 如果 Node 在当前目录没找到 tool.js 文件，则会去 node_modules 里面去查找
-var tools2 = require('03_tool-multiply');
+var tools2 = require('03_tool-multiply')
 
 /**
  * 通过 package.json 来引用文件
@@ -626,50 +632,50 @@ var tools2 = require('03_tool-multiply');
  * 3. Node 通过 require 查找 jsLe-module，发现它有个 package.json
  * 4. Node 执行 tools.js 文件
  */
-var tools3 = require('jsLe-module');
+var tools3 = require('jsLe-module')
 
-http.createServer(function (req, res) {
+http
+  .createServer(function(req, res) {
+    res.writeHead(200, {
+      'Content-Type': 'text/html;charset=UTF-8'
+    })
 
-  res.writeHead(200, {
-    "Content-Type": "text/html;charset=UTF-8"
-  });
+    res.write('<h1 style="text-align:center">Hello NodeJS</h1>')
 
-  res.write('<h1 style="text-align:center">Hello NodeJS</h1>');
-  
-  console.log(tools1.add(1, 2, 3));
-  console.log(tools2.multiply(1, 2, 3, 4));
-  console.log(tools3.add(4, 5, 6));
-  /**
-   * Console：
-   * 6
-   * 24
-   * 15
-   * 6
-   * 24
-   * 15
-   * 这里要记得 Node 运行过程中，它请求了两次，
-   * http://localhost:3000/ 为一次，
-   * http://localhost:3000/favicon.ico 为第二次
-   */
-  
-  res.end();
+    console.log(tools1.add(1, 2, 3))
+    console.log(tools2.multiply(1, 2, 3, 4))
+    console.log(tools3.add(4, 5, 6))
+    /**
+     * Console：
+     * 6
+     * 24
+     * 15
+     * 6
+     * 24
+     * 15
+     * 这里要记得 Node 运行过程中，它请求了两次，
+     * http://localhost:3000/ 为一次，
+     * http://localhost:3000/favicon.ico 为第二次
+     */
 
-}).listen(3000);
+    res.end()
+  })
+  .listen(3000)
 ```
 
 到此，我们就通过三种方法，了解了各种 `exports` 和 `require` 的姿势以及 Node 模块化的概念啦~
 
-* **参考文献**：
+- **参考文献**：
 
 1. [CommonJS 规范 | 博客园 - Little Bird](https://www.cnblogs.com/littlebirdlbw/p/5670633.html)
-2. [js模块化编程之彻底弄懂CommonJS和AMD/CMD！ | 博客园 - 方便以后复习](http://www.cnblogs.com/chenguangliang/p/5856701.html)
-3. [[js高手之路] es6系列教程 - 不定参数与展开运算符(...) | 博客园 - ghostwu](https://www.cnblogs.com/ghostwu/p/7298462.html)
+2. [js 模块化编程之彻底弄懂 CommonJS 和 AMD/CMD！ | 博客园 - 方便以后复习](http://www.cnblogs.com/chenguangliang/p/5856701.html)
+3. [[js 高手之路] es6 系列教程 - 不定参数与展开运算符(...) | 博客园 - ghostwu](https://www.cnblogs.com/ghostwu/p/7298462.html)
 
 ### <a name="chapter-three-four" id="chapter-three-four">3.4 包与 npm</a>
 
 > [返回目录](#catalog-chapter-three-four)
 
-Node 中除了它自己提供的核心模块之外，还可以自定义模块，以及使用 **第三方模块**。  
+Node 中除了它自己提供的核心模块之外，还可以自定义模块，以及使用 **第三方模块**。
 
 Node 中第三方模块由包组成，可以通过包来对一组具有相互依赖关系的模块进行统一管理。
 
@@ -680,42 +686,42 @@ Node 中第三方模块由包组成，可以通过包来对一组具有相互依
 1. [百度](https://www.baidu.com)。百度查找你需要安装的第三方模块的对应内容。
 2. [npm 官网](https://www.npmjs.com/)。如果你已经知道包的名字或者包的作用。那么，直接在 npm 官网上搜索，想必会更快找到想要安装的包。
 
-那么，npm 是啥？  
+那么，npm 是啥？
 
-npm 是世界上最大的开放源代码的生态系统。我们可以通过 npm 下载各种各样的包。  
+npm 是世界上最大的开放源代码的生态系统。我们可以通过 npm 下载各种各样的包。
 
 在我们安装 Node 的时候，它默认会顺带给你安装 npm。
 
-* `npm -v`：查看 npm 版本。
-* `npm list`：查看当前目录下都安装了哪些 npm 包。
-* `npm info 模块`：查看该模块的版本及内容。
-* `npm i 模块@版本号`：安装该模块的指定版本。
+- `npm -v`：查看 npm 版本。
+- `npm list`：查看当前目录下都安装了哪些 npm 包。
+- `npm info 模块`：查看该模块的版本及内容。
+- `npm i 模块@版本号`：安装该模块的指定版本。
 
 在平时使用 npm 安装包的过程中，你可能需要知道一些 npm 基本知识：
 
-* `i`/`install`：安装。使用 `install` 或者它的简写 `i`，都表明你想要下载这个包。
-* `uninstall`：卸载。如果你发现这个模块你已经不使用了，那么可以通过 `uninstall` 卸载它。
-* `g`：全局安装。表明这个包将安装到你的计算机中，你可以在计算机任何一个位置使用它。
-* `--save`/`-S`：通过该种方式安装的包的名称及版本号会出现在 `package.json` 中的 `dependencies` 中。`dependencies` 是需要发布在生成环境的。例如：`ElementUI` 是部署后还需要的，所以通过 `-S` 形式来安装。
-* `--save-dev`/`-D`：通过该种方式安装的包的名称及版本号会出现在 `package.json` 中的 `devDependencies` 中。`devDependencies` 只在开发环境使用。例如：`gulp` 只是用来压缩代码、打包的工具，程序运行时并不需要，所以通过 `-D` 形式来安装。
+- `i`/`install`：安装。使用 `install` 或者它的简写 `i`，都表明你想要下载这个包。
+- `uninstall`：卸载。如果你发现这个模块你已经不使用了，那么可以通过 `uninstall` 卸载它。
+- `g`：全局安装。表明这个包将安装到你的计算机中，你可以在计算机任何一个位置使用它。
+- `--save`/`-S`：通过该种方式安装的包的名称及版本号会出现在 `package.json` 中的 `dependencies` 中。`dependencies` 是需要发布在生成环境的。例如：`ElementUI` 是部署后还需要的，所以通过 `-S` 形式来安装。
+- `--save-dev`/`-D`：通过该种方式安装的包的名称及版本号会出现在 `package.json` 中的 `devDependencies` 中。`devDependencies` 只在开发环境使用。例如：`gulp` 只是用来压缩代码、打包的工具，程序运行时并不需要，所以通过 `-D` 形式来安装。
 
 例子：
 
-* `cnpm i webpack-cli -D`
-* `npm install element-ui -S`
+- `cnpm i webpack-cli -D`
+- `npm install element-ui -S`
 
-那么，这么多的 npm 包，我们通过什么管理呢？  
+那么，这么多的 npm 包，我们通过什么管理呢？
 
-答案是 `package.json`。  
+答案是 `package.json`。
 
 如果我们需要创建 `package.json`，那么我们只需要在指定的包管理目录（例如 `node_modules`）中通过以下命名进行生成：
 
-* `npm init`：按步骤创建 `package.json`。
-* `npm init --yes`：快速创建 `package.json`
+- `npm init`：按步骤创建 `package.json`。
+- `npm init --yes`：快速创建 `package.json`
 
 当然，因为国内网络环境的原因，有些时候通过 npm 下载包，可能会很慢或者直接卡断，这时候就要安装淘宝的 npm 镜像：cnpm
 
-* `npm install -g cnpm --registry=https://registry.npm.taobao.org`
+- `npm install -g cnpm --registry=https://registry.npm.taobao.org`
 
 ### <a name="chapter-three-five" id="chapter-three-five">3.5 fs 文件管理</a>
 
@@ -745,13 +751,13 @@ npm 是世界上最大的开放源代码的生态系统。我们可以通过 npm
 
 ```js
 //  1. fs.stat
-let fs = require('fs');
+let fs = require('fs')
 fs.stat('index.js', (error, stats) => {
-  if(error) {
-    console.log(error);
-    return false;
+  if (error) {
+    console.log(error)
+    return false
   } else {
-    console.log(stats);
+    console.log(stats)
     /**
      * Console：
      * Stats {
@@ -775,13 +781,13 @@ fs.stat('index.js', (error, stats) => {
      *  birthtime: 2018-11-22T00:39:17.494Z }
      */
 
-    console.log(`文件：${stats.isFile()}`); 
+    console.log(`文件：${stats.isFile()}`)
     // Console：文件：true
-    
-    console.log(`目录：${stats.isDirectory()}`); 
+
+    console.log(`目录：${stats.isDirectory()}`)
     // Console：目录：false
 
-    return false;
+    return false
   }
 })
 ```
@@ -794,7 +800,7 @@ fs.stat('index.js', (error, stats) => {
 
 ```js
 //  2. fs.mkdir
-let fs = require('fs');
+let fs = require('fs')
 
 /**
  * 接收参数
@@ -802,12 +808,12 @@ let fs = require('fs');
  * mode - 目录权限（读写权限），默认 0777
  * callback - 回调，传递异常参数 err
  */
-fs.mkdir('css', (err) => {
-  if(err) {
-    console.log(err);
-    return false;
+fs.mkdir('css', err => {
+  if (err) {
+    console.log(err)
+    return false
   } else {
-    console.log("创建目录成功！");
+    console.log('创建目录成功！')
     // Console：创建目录成功！
   }
 })
@@ -821,7 +827,7 @@ fs.mkdir('css', (err) => {
 
 ```js
 //  8. fs.rmdir
-let fs = require('fs');
+let fs = require('fs')
 
 /**
  * 接收参数
@@ -829,12 +835,12 @@ let fs = require('fs');
  * mode - 目录权限（读写权限），默认 0777
  * callback - 回调，传递异常参数 err
  */
-fs.rmdir('css', (err) => {
-  if(err) {
-    console.log(err);
-    return false;
+fs.rmdir('css', err => {
+  if (err) {
+    console.log(err)
+    return false
   } else {
-    console.log("创建目录成功！");
+    console.log('创建目录成功！')
     // Console：创建目录成功！
   }
 })
@@ -848,7 +854,7 @@ fs.rmdir('css', (err) => {
 
 ```js
 //  3. fs.writeFile
-let fs = require('fs');
+let fs = require('fs')
 
 /**
  * filename (String) 文件名称
@@ -858,17 +864,17 @@ let fs = require('fs');
  * · flag (String) 默认值 'w'。
  * callback { Function } 回调，传递一个异常参数 err。
  */
-fs.writeFile('index.js', 'Hello jsLe', (err) => {
-  if(err) {
-    console.log(err);
-    return false;
+fs.writeFile('index.js', 'Hello jsLe', err => {
+  if (err) {
+    console.log(err)
+    return false
   } else {
-    console.log('写入成功！');
+    console.log('写入成功！')
   }
 })
 ```
 
-值得注意的是，这样的写入，是清空原文件中的所有数据，然后添加 `Hello jsLe` 这句话。即：存在即覆盖，不存在即创建。  
+值得注意的是，这样的写入，是清空原文件中的所有数据，然后添加 `Hello jsLe` 这句话。即：存在即覆盖，不存在即创建。
 
 有创建就有删除，感兴趣的可以使用 `fs.unlink` 进行文件的删除，再次不做过多讲解。
 
@@ -878,14 +884,14 @@ fs.writeFile('index.js', 'Hello jsLe', (err) => {
 
 ```js
 //  4. fs.appendFile
-let fs = require('fs');
+let fs = require('fs')
 
-fs.appendFile('index.js', '这段文本是要追加的内容', (err) => {
-  if(err) {
-    console.log(err);
-    return false;
+fs.appendFile('index.js', '这段文本是要追加的内容', err => {
+  if (err) {
+    console.log(err)
+    return false
   } else {
-    console.log("追加成功");
+    console.log('追加成功')
   }
 })
 ```
@@ -898,24 +904,24 @@ fs.appendFile('index.js', '这段文本是要追加的内容', (err) => {
 Hello jsLe这段文本是要追加的内容
 ```
 
-**在上面**，我们已经做了：新增、修改、删除操作。那么小伙伴一定很熟悉下一步骤是做什么了：  
+**在上面**，我们已经做了：新增、修改、删除操作。那么小伙伴一定很熟悉下一步骤是做什么了：
 
-* `fs.readFile` 读取文件
-* `fs.readdir` 读取目录
+- `fs.readFile` 读取文件
+- `fs.readdir` 读取目录
 
 > 05_fs.js
 
 ```js
-let fs = require('fs');
+let fs = require('fs')
 
 // 5. fs.readFile
 fs.readFile('index.js', (err, data) => {
-  if(err) {
-    console.log(err);
-    return false;
+  if (err) {
+    console.log(err)
+    return false
   } else {
-    console.log("读取文件成功！");
-    console.log(data);
+    console.log('读取文件成功！')
+    console.log(data)
     // Console：
     // 读取文件成功！
     // <Buffer 48 65 6c 6c 6f 20 6a 73 6c 69 61 6e 67 e8 bf 99 e6 ae b5 e6 96 87 e6 9c ac e6 98 af e8 a6 81 e8 bf bd e5 8a a0 e7 9a 84 e5 86 85 e5 ae b9>
@@ -924,12 +930,12 @@ fs.readFile('index.js', (err, data) => {
 
 // 6. fs.readdir 读取目录
 fs.readdir('node_modules', (err, data) => {
-  if(err) {
-    console.log(err);
-    return false;
+  if (err) {
+    console.log(err)
+    return false
   } else {
-    console.log("读取目录成功！");
-    console.log(data);
+    console.log('读取目录成功！')
+    console.log(data)
     // Console：
     // 读取目录成功！
     // [ '03_tool-multiply.js', 'jsLe-module' ]
@@ -941,32 +947,32 @@ fs.readdir('node_modules', (err, data) => {
 
 **最后**，我们再回顾一开始的目标：
 
-~~* `fs.stat` 检测是文件还是目录~~  
-~~* `fs.mkdir` 创建目录~~  
-~~* `fs.writeFile` 创建写入文件~~  
-~~* `fs.appendFile` 追加文件~~  
-~~* `fs.readFile` 读取文件~~  
-~~* `fs.readdir` 读取目录~~
+~~\* `fs.stat` 检测是文件还是目录~~  
+~~\* `fs.mkdir` 创建目录~~  
+~~\* `fs.writeFile` 创建写入文件~~  
+~~\* `fs.appendFile` 追加文件~~  
+~~\* `fs.readFile` 读取文件~~  
+~~\* `fs.readdir` 读取目录~~
 
-* `fs.rename` 重命名
+- `fs.rename` 重命名
 
-~~* `fs.rmdir` 删除目录~~  
-~~* `fs.unlink` 删除文件~~
+~~\* `fs.rmdir` 删除目录~~  
+~~\* `fs.unlink` 删除文件~~
 
 很好，我们就剩下重命名了：
 
 > 05_fs.js
 
 ```js
-let fs = require('fs');
+let fs = require('fs')
 
 // 7. fs.rename 重命名
-fs.rename('index.js', 'jsLe.js', (err) => {
-  if(err) {
-    console.log(err);
-    return false;
+fs.rename('index.js', 'jsLe.js', err => {
+  if (err) {
+    console.log(err)
+    return false
   } else {
-    console.log("重命名成功！");
+    console.log('重命名成功！')
   }
 })
 ```
@@ -976,15 +982,15 @@ fs.rename('index.js', 'jsLe.js', (err) => {
 > 05_fs.js
 
 ```js
-let fs = require('fs');
+let fs = require('fs')
 
 // 7. fs.rename 重命名
-fs.rename('jsLe.js', 'node_modules/jsLe.js', (err) => {
-  if(err) {
-    console.log(err);
-    return false;
+fs.rename('jsLe.js', 'node_modules/jsLe.js', err => {
+  if (err) {
+    console.log(err)
+    return false
   } else {
-    console.log("剪切成功！");
+    console.log('剪切成功！')
   }
 })
 ```
@@ -997,7 +1003,7 @@ OK，通通搞定，现在目录变成了：
 
 > [返回目录](#catalog-chapter-three-six)
 
-在上一章节中，我们了解了 `fs` 的文件管理。  
+在上一章节中，我们了解了 `fs` 的文件管理。
 
 那么，在这里，我们尝试使用 `fs` 做点小事情：
 
@@ -1019,59 +1025,56 @@ OK，通通搞定，现在目录变成了：
 // 1. 判断服务器上面有没有 upload 目录，没有就创建这个目录
 // 2. 找出 html 目录下面的所有的目录，然后打印出来
 
-let fs = require('fs');
+let fs = require('fs')
 
 // 图片上传
 fs.stat('upload', (err, stats) => {
   // 判断有没有 upload 目录
-  if(err) {
+  if (err) {
     // 如果没有
-    fs.mkdir('upload', (error) => {
-      if(error) {
-        console.log(error);
-        return false;
+    fs.mkdir('upload', error => {
+      if (error) {
+        console.log(error)
+        return false
       } else {
-        console.log("创建 upload 目录成功！");
+        console.log('创建 upload 目录成功！')
       }
     })
   } else {
     // 如果有
-    console.log(stats.isDirectory());
-    console.log("有 upload 目录，你可以做更多操作！");
+    console.log(stats.isDirectory())
+    console.log('有 upload 目录，你可以做更多操作！')
   }
 })
 
 // 读取目录全部文件
 fs.readdir('node_modules', (err, files) => {
-  if(err) {
-    console.log(err);
-    return false;
+  if (err) {
+    console.log(err)
+    return false
   } else {
     // 判断是目录还是文件夹
-    console.log(files);
+    console.log(files)
 
-    let filesArr = [];
+    let filesArr = []
 
-    (function getFile(i) {
-      
+    ;(function getFile(i) {
       // 循环结束
-      if(i == files.length) {
+      if (i == files.length) {
         // 打印出所有目录
-        console.log("目录：");
-        console.log(filesArr);
-        return false;
+        console.log('目录：')
+        console.log(filesArr)
+        return false
       }
 
       // 判断目录是文件还是文件夹
       fs.stat('node_modules/' + files[i], (error, stats) => {
-
-        if(stats.isDirectory()) {
-          filesArr.push(files[i]);
+        if (stats.isDirectory()) {
+          filesArr.push(files[i])
         }
 
         // 递归调用
-        getFile(i+1);
-        
+        getFile(i + 1)
       })
     })(0)
   }
@@ -1086,32 +1089,32 @@ fs.readdir('node_modules', (err, files) => {
 
 ```js
 // 新建 fs
-const fs = require('fs');
+const fs = require('fs')
 // 流的方式读取文件
-let fileReadStream = fs.createReadStream('index.js');
+let fileReadStream = fs.createReadStream('index.js')
 // 读取次数
-let count = 0;
+let count = 0
 // 保存数据
-let str = '';
+let str = ''
 // 开始读取
-fileReadStream.on('data', (chunk) => {
-  console.log(`${++count} 接收到：${chunk.length}`);
+fileReadStream.on('data', chunk => {
+  console.log(`${++count} 接收到：${chunk.length}`)
   // Console：1 接收到：30
-  str += chunk;
+  str += chunk
 })
 // 读取完成
 fileReadStream.on('end', () => {
-  console.log("——结束——");
-  console.log(count);
-  console.log(str);
+  console.log('——结束——')
+  console.log(count)
+  console.log(str)
 
   // Console：——结束——
   // 1
   // console.log("Hello World！");
 })
 // 读取失败
-fileReadStream.on('error', (error) => {
-  console.log(error);
+fileReadStream.on('error', error => {
+  console.log(error)
 })
 ```
 
@@ -1131,19 +1134,19 @@ console.log("尽信书，不如无书；尽看代码，不如删掉这些文件�
 然后，我们试下流的存入：
 
 ```js
-let fs = require('fs');
-let data = 'console.log("Hello World! 我要存入数据！")';
+let fs = require('fs')
+let data = 'console.log("Hello World! 我要存入数据！")'
 
 // 创建一个可以写入的流，写入到文件 index.js 中
-let writeStream = fs.createWriteStream('index.js');
+let writeStream = fs.createWriteStream('index.js')
 // 开始写入
-writeStream.write(data, 'utf8');
+writeStream.write(data, 'utf8')
 // 写入完成
-writeStream.end();
+writeStream.end()
 writeStream.on('finish', () => {
-  console.log('写入完成！');
+  console.log('写入完成！')
   // Console：写入完成
-});
+})
 ```
 
 我们打开 `index.js`，会发现里面的内容变成了 `console.log("Hello World! 我要存入数据！")`，依次，我们通过流的形式进行了读取和写入的操作。
@@ -1154,7 +1157,7 @@ writeStream.on('finish', () => {
 
 在这里，我们利用 http 模块、url 模块、path 模块、fs 模块创建一个 Web 服务器。
 
-什么是 Web 服务器？  
+什么是 Web 服务器？
 
 Web 服务器一般指网站服务器，是指驻留于因特网上某种类型计算机的程序，可以像浏览器等 Web 客户端提供文档，也可以放置网站文件，让全世界浏览；可以放置数据文件，让全世界下载。目前最主流的三个 Web 服务器是 Apache、Nginx、IIS。
 
@@ -1166,67 +1169,70 @@ Web 服务器一般指网站服务器，是指驻留于因特网上某种类型�
 
 ```js
 // 引入 http 模块
-let http = require("http");
+let http = require('http')
 
 // 引入 fs 模块
-let fs = require("fs");
+let fs = require('fs')
 
-http.createServer((req, res) => {
-  // 获取响应路径
-  let pathName = req.url;
+http
+  .createServer((req, res) => {
+    // 获取响应路径
+    let pathName = req.url
 
-  // 默认加载路径
-  if (pathName == "/") {
-    // 默认加载的首页
-    pathName = "index.html";
-  }
+    // 默认加载路径
+    if (pathName == '/') {
+      // 默认加载的首页
+      pathName = 'index.html'
+    }
 
-  // 过滤 /favicon.ico 的请求
-  if (pathName != "/favicon.ico") {
-    // 获取 08_WebService 下的 index.html
-    fs.readFile("./08_WebService/" + pathName, (err, data) => {
-      if (err) {
-        
-        // 如果不存在这个文件
-        
-        console.log("404 Not Found!");
-        fs.readFile('./08_WebService/404.html', (errorNotFound, dataNotFound) => {
-          if(errorNotFound) {
-            console.log(errorNotFound);
-          } else {
-            res.writeHead(200, {
-              "Content-Type": "text/html; charset='utf-8'"
-            });
-            // 读取写入文件
-            res.write(dataNotFound);
-            // 结束响应
-            res.end();
-          }
-        })
-        return;
-      } else {
+    // 过滤 /favicon.ico 的请求
+    if (pathName != '/favicon.ico') {
+      // 获取 08_WebService 下的 index.html
+      fs.readFile('./08_WebService/' + pathName, (err, data) => {
+        if (err) {
+          // 如果不存在这个文件
 
-        // 返回这个文件
-        
-        // 设置请求头
-        res.writeHead(200, {
-          "Content-Type": "text/html; charset='utf-8'"
-        });
-        // 读取写入文件
-        res.write(data);
-        // 结束响应
-        res.end();
-      }
-    });
-  }
-}).listen(8080);
+          console.log('404 Not Found!')
+          fs.readFile(
+            './08_WebService/404.html',
+            (errorNotFound, dataNotFound) => {
+              if (errorNotFound) {
+                console.log(errorNotFound)
+              } else {
+                res.writeHead(200, {
+                  'Content-Type': "text/html; charset='utf-8'"
+                })
+                // 读取写入文件
+                res.write(dataNotFound)
+                // 结束响应
+                res.end()
+              }
+            }
+          )
+          return
+        } else {
+          // 返回这个文件
+
+          // 设置请求头
+          res.writeHead(200, {
+            'Content-Type': "text/html; charset='utf-8'"
+          })
+          // 读取写入文件
+          res.write(data)
+          // 结束响应
+          res.end()
+        }
+      })
+    }
+  })
+  .listen(8080)
 ```
 
 这样，我们在浏览器输入 `localhost:8080` 即可以看到：
 
 ![图](../../public-repertory/img/other-node-NodeBase-8.png)
 
-好家伙，感情它就加载了整个 `index.html` 文件，连 CSS 这些没引入么？  
+好家伙，感情它就加载了整个 `index.html` 文件，连 CSS 这些没引入么？
 
 所以，下一步，我们要动态加载 `html`、`css` 以及 `js`：
 
@@ -1234,81 +1240,86 @@ http.createServer((req, res) => {
 
 ```js
 // 引入 http 模块
-let http = require("http");
+let http = require('http')
 
 // 引入 fs 模块
-let fs = require("fs");
+let fs = require('fs')
 
 // 引入 url 模块
-let url = require("url");
+let url = require('url')
 
 // 引入 path 模块
-let path = require("path");
+let path = require('path')
 
-http.createServer((req, res) => {
-  
-  // 获取响应路径
-  let pathName = url.parse(req.url).pathname;
+http
+  .createServer((req, res) => {
+    // 获取响应路径
+    let pathName = url.parse(req.url).pathname
 
-  // 默认加载路径
-  if (pathName == "/") {
-    // 默认加载的首页
-    pathName = "index.html";
-  }
+    // 默认加载路径
+    if (pathName == '/') {
+      // 默认加载的首页
+      pathName = 'index.html'
+    }
 
-  // 获取文件的后缀名
-  let extName = path.extname(pathName);
+    // 获取文件的后缀名
+    let extName = path.extname(pathName)
 
-  // 过滤 /favicon.ico 的请求
-  if (pathName != "/favicon.ico") {
-    // 获取 08_WebService 下的 index.html
-    fs.readFile("./08_WebService/" + pathName, (err, data) => {
-      // 如果不存在这个文件
-      if (err) {
-        console.log("404 Not Found!");
-        fs.readFile(
-          "./08_WebService/404.html",
-          (errorNotFound, dataNotFound) => {
-            if (errorNotFound) {
-              console.log(errorNotFound);
-            } else {
-              res.writeHead(200, {
-                "Content-Type": "text/html; charset='utf-8'"
-              });
-              // 读取写入文件
-              res.write(dataNotFound);
-              // 结束响应
-              res.end();
+    // 过滤 /favicon.ico 的请求
+    if (pathName != '/favicon.ico') {
+      // 获取 08_WebService 下的 index.html
+      fs.readFile('./08_WebService/' + pathName, (err, data) => {
+        // 如果不存在这个文件
+        if (err) {
+          console.log('404 Not Found!')
+          fs.readFile(
+            './08_WebService/404.html',
+            (errorNotFound, dataNotFound) => {
+              if (errorNotFound) {
+                console.log(errorNotFound)
+              } else {
+                res.writeHead(200, {
+                  'Content-Type': "text/html; charset='utf-8'"
+                })
+                // 读取写入文件
+                res.write(dataNotFound)
+                // 结束响应
+                res.end()
+              }
             }
-          }
-        );
-        return;
-      }
-      // 返回这个文件
-      else {
-        // 获取文件类型
-        let ext = getExt(extName);
+          )
+          return
+        }
+        // 返回这个文件
+        else {
+          // 获取文件类型
+          let ext = getExt(extName)
 
-        // 设置请求头
-        res.writeHead(200, {
-          "Content-Type": ext + "; charset='utf-8'"
-        });
-        // 读取写入文件
-        res.write(data);
-        // 结束响应
-        res.end();
-      }
-    });
-  }
-}).listen(8080);
+          // 设置请求头
+          res.writeHead(200, {
+            'Content-Type': ext + "; charset='utf-8'"
+          })
+          // 读取写入文件
+          res.write(data)
+          // 结束响应
+          res.end()
+        }
+      })
+    }
+  })
+  .listen(8080)
 
 // 获取后缀名
-getExt = (extName) => {
-  switch(extName) {
-    case '.html': return 'text/html';
-    case '.css': return 'text/css';
-    case '.js': return 'text/js';
-    default: return 'text/html';
+getExt = extName => {
+  switch (extName) {
+    case '.html':
+      return 'text/html'
+    case '.css':
+      return 'text/css'
+    case '.js':
+      return 'text/js'
+    default:
+      return 'text/html'
   }
 }
 ```
@@ -1319,7 +1330,7 @@ getExt = (extName) => {
 
 当然，在上面，我们仅仅模拟了 `html`、`css`、`js` 这三种文件类型而已，我们需要模拟更多的文件类型：
 
->[ 08_ext.json](https://github.com/LiangJunrong/Node/blob/master/NodeBase/08_ext.json)
+> [ 08_ext.json](https://github.com/LiangJunrong/Node/blob/master/NodeBase/08_ext.json)
 
 ```
  代码详情请点击上面的链接
@@ -1335,81 +1346,82 @@ getExt = (extName) => {
 
 ```js
 // 引入 http 模块
-let http = require("http");
+let http = require('http')
 
 // 引入 fs 模块
-let fs = require("fs");
+let fs = require('fs')
 
 // 引入 url 模块
-let url = require("url");
+let url = require('url')
 
 // 引入 path 模块
-let path = require("path");
+let path = require('path')
 
-http.createServer((req, res) => {
-  
-  // 获取响应路径
-  let pathName = url.parse(req.url).pathname;
+http
+  .createServer((req, res) => {
+    // 获取响应路径
+    let pathName = url.parse(req.url).pathname
 
-  // 默认加载路径
-  if (pathName == "/") {
-    // 默认加载的首页
-    pathName = "index.html";
-  }
+    // 默认加载路径
+    if (pathName == '/') {
+      // 默认加载的首页
+      pathName = 'index.html'
+    }
 
-  // 获取文件的后缀名
-  let extName = path.extname(pathName);
+    // 获取文件的后缀名
+    let extName = path.extname(pathName)
 
-  // 过滤 /favicon.ico 的请求
-  if (pathName != "/favicon.ico") {
-    // 获取 08_WebService 下的 index.html
-    fs.readFile("./08_WebService/" + pathName, (err, data) => {
-      // 如果不存在这个文件
-      if (err) {
-        console.log("404 Not Found!");
-        fs.readFile(
-          "./08_WebService/404.html",
-          (errorNotFound, dataNotFound) => {
-            if (errorNotFound) {
-              console.log(errorNotFound);
-            } else {
-              res.writeHead(200, {
-                "Content-Type": "text/html; charset='utf-8'"
-              });
-              // 读取写入文件
-              res.write(dataNotFound);
-              // 结束响应
-              res.end();
+    // 过滤 /favicon.ico 的请求
+    if (pathName != '/favicon.ico') {
+      // 获取 08_WebService 下的 index.html
+      fs.readFile('./08_WebService/' + pathName, (err, data) => {
+        // 如果不存在这个文件
+        if (err) {
+          console.log('404 Not Found!')
+          fs.readFile(
+            './08_WebService/404.html',
+            (errorNotFound, dataNotFound) => {
+              if (errorNotFound) {
+                console.log(errorNotFound)
+              } else {
+                res.writeHead(200, {
+                  'Content-Type': "text/html; charset='utf-8'"
+                })
+                // 读取写入文件
+                res.write(dataNotFound)
+                // 结束响应
+                res.end()
+              }
             }
-          }
-        );
-        return;
-      }
-      // 返回这个文件
-      else {
-        // 获取文件类型
-        let ext = getExt(extName);
-        console.log(ext);
+          )
+          return
+        }
+        // 返回这个文件
+        else {
+          // 获取文件类型
+          let ext = getExt(extName)
+          console.log(ext)
 
-        // 设置请求头
-        res.writeHead(200, {
-          "Content-Type": ext + "; charset='utf-8'"
-        });
-        // 读取写入文件
-        res.write(data);
-        // 结束响应
-        res.end();
-      }
-    });
-  }
-}).listen(8080);
+          // 设置请求头
+          res.writeHead(200, {
+            'Content-Type': ext + "; charset='utf-8'"
+          })
+          // 读取写入文件
+          res.write(data)
+          // 结束响应
+          res.end()
+        }
+      })
+    }
+  })
+  .listen(8080)
 
 // 获取后缀名
-getExt = (extName) => {
+getExt = extName => {
   // readFile 是异步操作，所以需要使用 readFileSync
-  let data = fs.readFileSync('./08_ext.json');
-  let ext = JSON.parse(data.toString());
-  return ext[extName];
+  let data = fs.readFileSync('./08_ext.json')
+  let ext = JSON.parse(data.toString())
+  return ext[extName]
 }
 ```
 
@@ -1419,14 +1431,13 @@ getExt = (extName) => {
 
 > [返回目录](#catalog-chapter-three-night)
 
-Java、PHP 或者 .NET 等服务端语言，会为每一个客户端的连接创建一个新的线程。  
+Java、PHP 或者 .NET 等服务端语言，会为每一个客户端的连接创建一个新的线程。
 
-Node 不会为每一个客户连接创建一个新的线程，而仅仅使用一个线程。  
+Node 不会为每一个客户连接创建一个新的线程，而仅仅使用一个线程。
 
-当有用户连接了，就会触发一个内部事件，通过非租塞 I/O、事件驱动机制，让 Node 程序宏观上也是并行的。  
+当有用户连接了，就会触发一个内部事件，通过非租塞 I/O、事件驱动机制，让 Node 程序宏观上也是并行的。
 
 使用 Node，一个 8GB 内存的服务器，可以同时处理超过 4 万用户的连接。
-
 
 在这一章节中，主要解决：
 
@@ -1438,11 +1449,11 @@ Node 不会为每一个客户连接创建一个新的线程，而仅仅使用一
 > 09_io.js
 
 ```js
-console.log("1");
+console.log('1')
 
-console.log("2");
+console.log('2')
 
-console.log("3");
+console.log('3')
 
 /**
  * Console：
@@ -1452,25 +1463,25 @@ console.log("3");
  */
 ```
 
-但是，事与愿违。  
+但是，事与愿违。
 
 我们有时候，会执行一些异步方法（函数）：
 
 > 09_io.js
 
 ```js
-console.log("1");
+console.log('1')
 
 // console.log("2");
-let fs = require('fs');
+let fs = require('fs')
 getExt = () => {
   fs.readFile('08_ext.json', (err, data) => {
-    console.log("2");
+    console.log('2')
   })
 }
-getExt();
+getExt()
 
-console.log("3");
+console.log('3')
 
 /**
  * Console：
@@ -1480,13 +1491,13 @@ console.log("3");
  */
 ```
 
-在上面代码中，由于 `fs.readFile` 是 Node 的异步函数。所以，程序先执行了 1 和 3，最后才执行 `fs.readFile` 的 2 部分。  
+在上面代码中，由于 `fs.readFile` 是 Node 的异步函数。所以，程序先执行了 1 和 3，最后才执行 `fs.readFile` 的 2 部分。
 
 > 在这里，可以看出 Node 不会因为一段代码的逻辑错误，从而导致其他代码无法运行。
 
-这样子，就导致了一个问题：步骤 3 可能拿不到步骤 2 的执行结果了！这就是 Node 的非租塞性 I/O 驱动。  
+这样子，就导致了一个问题：步骤 3 可能拿不到步骤 2 的执行结果了！这就是 Node 的非租塞性 I/O 驱动。
 
-那么，我们有没有办法解决这个问题呢？  
+那么，我们有没有办法解决这个问题呢？
 
 有的！
 
@@ -1498,16 +1509,16 @@ console.log("3");
 > 09_io.js
 
 ```js
-let fs = require("fs");
+let fs = require('fs')
 
-getExt = (callback) => {
+getExt = callback => {
   fs.readFile('08_ext.json', (err, data) => {
-    callback(data);
-  })  
+    callback(data)
+  })
 }
 
-getExt( (result) => {
-  console.log(result.toString());
+getExt(result => {
+  console.log(result.toString())
 })
 ```
 
@@ -1517,7 +1528,7 @@ getExt( (result) => {
 
 ```js
 // 引入 fs 模块
-let fs = require("fs");
+let fs = require('fs')
 
 /**
  * Node 事件循环：
@@ -1527,26 +1538,26 @@ let fs = require("fs");
  */
 
 // 引入 events 模块
-let events = require("events");
+let events = require('events')
 // 实例化事件对象
-let EventEmitter = new events.EventEmitter();
+let EventEmitter = new events.EventEmitter()
 
 getExt = () => {
   fs.readFile('08_ext.json', (err, data) => {
     // 将 data 广播出去
-    EventEmitter.emit('data', data.toString());
-  })  
-};
+    EventEmitter.emit('data', data.toString())
+  })
+}
 
-getExt();
+getExt()
 
 // 监听 data
-EventEmitter.on('data', (ext) => {
-  console.log(ext);
-});
+EventEmitter.on('data', ext => {
+  console.log(ext)
+})
 ```
 
-在这里，`EventEmitter.on` 通过监听 `data` 的形式，获取了 `getExt` 内部的执行结果。  
+在这里，`EventEmitter.on` 通过监听 `data` 的形式，获取了 `getExt` 内部的执行结果。
 
 如此，我们就了解了 Node 的 I/O 事件及 `events` 模块
 
@@ -1562,66 +1573,66 @@ EventEmitter.on('data', (ext) => {
 
 ```js
 // 加载 http 模块
-var http = require('http');
+var http = require('http')
 
 // 虚拟 SQL 读取出来的数据
-var items = [];
+var items = []
 
 // 创建 http 服务
-http.createServer(function (req, res) {
-  
-  // 设置跨域的域名，* 代表允许任意域名跨域
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  // 设置 header 类型
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-  // 跨域允许的请求方式
-  res.setHeader('Content-Type', 'application/json');
+http
+  .createServer(function(req, res) {
+    // 设置跨域的域名，* 代表允许任意域名跨域
+    res.setHeader('Access-Control-Allow-Origin', '*')
+    // 设置 header 类型
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
+    // 跨域允许的请求方式
+    res.setHeader('Content-Type', 'application/json')
 
-  // 判断请求
-  switch (req.method) {
-    
-    // post 请求时，浏览器会先发一次 options 请求，如果请求通过，则继续发送正式的 post 请求
-    case 'OPTIONS':
-      res.statusCode = 200;
-      res.end();
-      break;
-    
+    // 判断请求
+    switch (req.method) {
+      // post 请求时，浏览器会先发一次 options 请求，如果请求通过，则继续发送正式的 post 请求
+      case 'OPTIONS':
+        res.statusCode = 200
+        res.end()
+        break
+
       // 如果是 get 请求，则直接返回 items 数组
-    case 'GET':
-      let data = JSON.stringify(items);
-      res.write(data);
-      res.end();
-      break;
-      
-    // 如果是 post 请求
-    case 'POST':
-      let item = '';
-      // 读取每次发送的数据
-      req.on('data', function (chunk) {
-        item += chunk;
-      });
-      // 数据发送完成
-      req.on('end', function () {
-        // 存入
-        item = JSON.parse(item);
-        items.push(item.item);
-        // 将数据返回到客户端
-        let data = JSON.stringify(items);
-        res.write(data);
-        res.end();
-      });
-      break;
-  }
-}).listen(3000)
+      case 'GET':
+        let data = JSON.stringify(items)
+        res.write(data)
+        res.end()
+        break
 
-console.log('http server is start...');
+      // 如果是 post 请求
+      case 'POST':
+        let item = ''
+        // 读取每次发送的数据
+        req.on('data', function(chunk) {
+          item += chunk
+        })
+        // 数据发送完成
+        req.on('end', function() {
+          // 存入
+          item = JSON.parse(item)
+          items.push(item.item)
+          // 将数据返回到客户端
+          let data = JSON.stringify(items)
+          res.write(data)
+          res.end()
+        })
+        break
+    }
+  })
+  .listen(3000)
+
+console.log('http server is start...')
 ```
 
-**首先**，我们加载了 `http` 模块，并创建了服务。  
+**首先**，我们加载了 `http` 模块，并创建了服务。
 
-**然后**，我们设置了跨域的处理方式，允许进行跨域。  
+**然后**，我们设置了跨域的处理方式，允许进行跨域。
 
-**接着**，我们进行了请求的判断处理，由于只做简单演练，故只判断是 `get` 请求还是 `post` 请求。  
+**接着**，我们进行了请求的判断处理，由于只做简单演练，故只判断是 `get` 请求还是 `post` 请求。
 
 **最后**，我们将请求的结果返回给客户端。
 
@@ -1632,67 +1643,72 @@ console.log('http server is start...');
 ```html
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Node Web</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Node Web</title>
+  <body>
+    <div id="app">
+      <h1>Todo List</h1>
+      <ul>
+        <li v-for="(item, index) in items" :key="index">{{ item }}</li>
+      </ul>
+      <input type="text" v-model="item" />
+      <button @click="postApi">添加</button>
+    </div>
 
-</head>
+    <!-- cdn 引用：Vue 和 Node -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-<body>
-
-  <div id="app">
-    <h1>Todo List</h1>
-    <ul>
-      <li v-for="(item, index) in items" :key="index">{{ item }}</li>
-    </ul>
-    <input type="text" v-model="item">
-    <button @click="postApi">添加</button>
-  </div>
-
-  <!-- cdn 引用：Vue 和 Node -->
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  
-  <script>
-    new Vue({
-      el: document.getElementById('app'),
-      data: function () {
-        return {
-          items: [],
-          item: '',
+    <script>
+      new Vue({
+        el: document.getElementById('app'),
+        data: function() {
+          return {
+            items: [],
+            item: ''
+          }
+        },
+        created() {
+          // 进入页面请求数据
+          axios
+            .get('http://localhost:3000/')
+            .then(res => {
+              console.log('\n【API - get 数据】')
+              console.log(res)
+              this.items = res.data
+            })
+            .catch(function(err) {
+              console.log(err)
+            })
+        },
+        methods: {
+          // 点击按钮提交数据
+          postApi() {
+            axios
+              .post('http://localhost:3000/', {
+                item: this.item
+              })
+              .then(res => {
+                console.log('\n【API - post 数据】')
+                console.log(res)
+                this.items = res.data
+              })
+              .catch(function(err) {
+                console.log(err)
+              })
+          }
         }
-      },
-      created() {
-        // 进入页面请求数据
-        axios.get('http://localhost:3000/').then(res => {
-          console.log("\n【API - get 数据】");
-          console.log(res);
-          this.items = res.data;
-        }).catch(function (err) {
-          console.log(err)
-        })
-      },
-      methods: {
-        // 点击按钮提交数据
-        postApi() {
-          axios.post('http://localhost:3000/', {
-            item: this.item
-          }).then(res => {
-            console.log("\n【API - post 数据】")
-            console.log(res);
-            this.items = res.data;
-          }).catch(function (err) {
-            console.log(err)
-          })
-        }
-      }
-    })
-  </script>
-</body>
-
+      })
+    </script>
+  </body>
 </html>
 ```
 
@@ -1730,22 +1746,22 @@ npm i mysql -D
 > index.js
 
 ```js
-var mysql = require('mysql');
+var mysql = require('mysql')
 var connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '123456',
   database: 'node'
-});
+})
 
-connection.connect();
+connection.connect()
 
-connection.query('SELECT * FROM user', function (error, results, fields) {
-  if (error) throw error;
-  console.log(results);
-});
+connection.query('SELECT * FROM user', function(error, results, fields) {
+  if (error) throw error
+  console.log(results)
+})
 
-connection.end();
+connection.end()
 ```
 
 **最后**，我们通过 `node index.js`，打开该服务：
@@ -1765,144 +1781,144 @@ connection.end();
 
 ![图](../../public-repertory/img/other-node-NodeBase-12.png)
 
-* **新增表字段**
+- **新增表字段**
 
 > add.js
 
 ```js
-var mysql = require('mysql');
+var mysql = require('mysql')
 var connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '123456',
   database: 'node'
-});
+})
 
-connection.connect();
+connection.connect()
 
-let addSql = "INSERT INTO user(id,name,age) VALUES(0,?,?)";
-let addSqlParams = ["jsLe", "23"];
+let addSql = 'INSERT INTO user(id,name,age) VALUES(0,?,?)'
+let addSqlParams = ['jsLe', '23']
 
-connection.query(addSql, addSqlParams, function (err, res) {
+connection.query(addSql, addSqlParams, function(err, res) {
   if (err) {
-    console.log("新增错误：");
-    console.log(err);
-    return;
+    console.log('新增错误：')
+    console.log(err)
+    return
   } else {
-    console.log("新增成功：");
-    console.log(res);
+    console.log('新增成功：')
+    console.log(res)
   }
-});
+})
 
-connection.end();
+connection.end()
 ```
 
 我们只需要直接 `node add.js`，就能往数据库中新增数据了。
 
-* **删除表字段**
+- **删除表字段**
 
 > delete.js
 
 ```js
 // 连接 MySQL
-var mysql = require('mysql');
+var mysql = require('mysql')
 // MySQL 的连接信息
 var connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '123456',
   database: 'node'
-});
+})
 
 // 开始连接
-connection.connect();
+connection.connect()
 
 // 新增的 SQL 语句及新增的字段信息
-var delSql = 'DELETE FROM user where id = 2';
+var delSql = 'DELETE FROM user where id = 2'
 
 // 连接 SQL 并实施语句
-connection.query(delSql, function (err, res) {
+connection.query(delSql, function(err, res) {
   if (err) {
-    console.log("删除错误：");
-    console.log(err);
-    return;
+    console.log('删除错误：')
+    console.log(err)
+    return
   } else {
-    console.log("删除成功：");
-    console.log(res);
+    console.log('删除成功：')
+    console.log(res)
   }
-});
+})
 
 // 终止连接
-connection.end();
+connection.end()
 ```
 
-* **修改表字段**
+- **修改表字段**
 
 > update.js
 
 ```js
 // 连接 MySQL
-var mysql = require('mysql');
+var mysql = require('mysql')
 // MySQL 的连接信息
 var connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '123456',
   database: 'node'
-});
+})
 
 // 开始连接
-connection.connect();
+connection.connect()
 
 // 新增的 SQL 语句及新增的字段信息
-let updateSql = "UPDATE user SET name = ?,age = ? WHERE Id = ?";
-let updateSqlParams = ["LiangJunrong", "23", 1];
+let updateSql = 'UPDATE user SET name = ?,age = ? WHERE Id = ?'
+let updateSqlParams = ['LiangJunrong', '23', 1]
 
 // 连接 SQL 并实施语句
-connection.query(updateSql, updateSqlParams, function (err, res) {
+connection.query(updateSql, updateSqlParams, function(err, res) {
   if (err) {
-    console.log("修改错误：");
-    console.log(err);
-    return;
+    console.log('修改错误：')
+    console.log(err)
+    return
   } else {
-    console.log("修改成功：");
-    console.log(res);
+    console.log('修改成功：')
+    console.log(res)
   }
-});
+})
 
 // 终止连接
-connection.end();
+connection.end()
 ```
 
-* **查询表字段**
+- **查询表字段**
 
 > read.js
 
 ```js
 // 连接 MySQL
-var mysql = require('mysql');
+var mysql = require('mysql')
 // MySQL 的连接信息
 var connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '123456',
   database: 'node'
-});
+})
 
 // 开始连接
-connection.connect();
+connection.connect()
 
 // 新增的 SQL 语句及新增的字段信息
-let readSql = "SELECT * FROM user";
+let readSql = 'SELECT * FROM user'
 
 // 连接 SQL 并实施语句
-connection.query(readSql, function (err, res) {
-  if (err) throw err;
-  console.log(res);
-});
+connection.query(readSql, function(err, res) {
+  if (err) throw err
+  console.log(res)
+})
 
 // 终止连接
-connection.end();
+connection.end()
 ```
 
 以上，我们打通了 Node 与 MySQL 的壁垒，实现了数据的增删改查。
@@ -1911,17 +1927,17 @@ connection.end();
 
 > [返回目录](#catalog-chapter-four)
 
-在进行代码实战的时候，我们很多时候会遇到一些小事儿，例如：logo 制作、ico 制作、icon 挑选等……  
+在进行代码实战的时候，我们很多时候会遇到一些小事儿，例如：logo 制作、ico 制作、icon 挑选等……
 
 下面这些都是 **jsLe** 平时碰到的，小伙伴有需要的可以 mark 啦~
 
-* [logo 制作](http://www.uugai.com/logoa/wenzi.php)
-* [ico 制作](http://www.bitbug.net/)
-* [icon 挑选](https://www.iconfont.cn/home/index)
+- [logo 制作](http://www.uugai.com/logoa/wenzi.php)
+- [ico 制作](http://www.bitbug.net/)
+- [icon 挑选](https://www.iconfont.cn/home/index)
 
 另外，由于 HTML 与 CSS 没什么好讲的，所以本章节的前提静态页面 **jsLe** 已经写好了，小伙伴们在学习前可以预先下载：
 
-* [本文静态页面代码地址](https://github.com/LiangJunrong/Node/tree/FrontEndCodeBase)
+- [本文静态页面代码地址](https://github.com/LiangJunrong/Node/tree/FrontEndCodeBase)
 
 ### <a name="chapter-four-one" id="chapter-four-one">4.1 编程环境</a>
 
@@ -1941,20 +1957,20 @@ connection.end();
 
 在 **留言板页面** 中，存在两个接口：
 
-* **获取留言内容**：调取 `getMessage` 接口，返回全部留言信息，由于预计信息不多，故这里不做分页功能，有需要的小伙伴在实现完这个功能后，可以进行分页接口的设计。
-* **提交留言内容**：调取 `sendMessage` 接口，将用户名、用户 id、留言内容发送给后端。
+- **获取留言内容**：调取 `getMessage` 接口，返回全部留言信息，由于预计信息不多，故这里不做分页功能，有需要的小伙伴在实现完这个功能后，可以进行分页接口的设计。
+- **提交留言内容**：调取 `sendMessage` 接口，将用户名、用户 id、留言内容发送给后端。
 
 ![图](../../public-repertory/img/other-node-NodeBase-14.png)
 
 内容 2：在 **登录页面** 中，存在一个接口：
 
-* **登录**：调取 `login` 接口，提交用户填写的姓名和密码。
+- **登录**：调取 `login` 接口，提交用户填写的姓名和密码。
 
 ![图](../../public-repertory/img/other-node-NodeBase-15.png)
 
 内容 3：在 **注册页面** 中，存在一个接口：
 
-* **注册**：调取 `register` 接口，提交用户填写的姓名和密码。
+- **注册**：调取 `register` 接口，提交用户填写的姓名和密码。
 
 ![图](../../public-repertory/img/other-node-NodeBase-16.png)
 
@@ -1962,12 +1978,12 @@ connection.end();
 
 > 接口文档
 
-| 接口          | 类型 | 参数                                                       | 返回信息                                                                             |
-| ------------- | ---- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| 接口                        | 类型 | 参数                                                       | 返回信息                                                                             |
+| --------------------------- | ---- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | `getMessage`：获取留言信息  | get  | 无参                                                       | n 条记录：id(用户 id)、user_name(用户名)、user_message(用户留言内容)、time(留言时间) |
 | `sendMessage`：提交留言信息 | post | id(用户 id)、user_name(用户名)、user_message(用户留言内容) | status 状态                                                                          |
-| `login`：登录       | post | id(用户 id)、user_name(用户名)、user_password(用户密码)    | status 状态                                                                          |
-| `register`：注册    | post | id(用户 id)、user_name(用户名)、user_password(用户密码)    | status 状态                                                                          |
+| `login`：登录               | post | id(用户 id)、user_name(用户名)、user_password(用户密码)    | status 状态                                                                          |
+| `register`：注册            | post | id(用户 id)、user_name(用户名)、user_password(用户密码)    | status 状态                                                                          |
 
 **最后**，我们进行 MySQL 数据库的表设计：
 
@@ -2008,133 +2024,146 @@ connection.end();
 
 ```js
 // 连接 MySQL：先安装 npm i mysql -D
-var mysql = require('mysql');
+var mysql = require('mysql')
 // MySQL 的连接信息
 var connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '123456',
   database: 'nodebase'
-});
+})
 // 开始连接
-connection.connect();
+connection.connect()
 
 // 引入 http 模块：http 是提供 Web 服务的基础
-const http = require("http");
+const http = require('http')
 
 // 引入 url 模块：url 是对用户提交的路径进行解析
-const url = require("url");
+const url = require('url')
 
 // 引入 qs 模块：qs 是对路径进行 json 化或者将 json 转换为 string 路径
-const qs = require("querystring");
+const qs = require('querystring')
 
 // 用 http 模块创建服务
 /**
  * req 获取 url 信息 (request)
  * res 浏览器返回响应信息 (response)
  */
-http.createServer(function (req, res) {
+http
+  .createServer(function(req, res) {
+    // 设置 cors 跨域
+    res.setHeader('Access-Control-Allow-Origin', '*')
+    // 设置 header 类型
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
+    // 跨域允许的请求方式
+    res.setHeader('Content-Type', 'application/json')
 
-  // 设置 cors 跨域
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  // 设置 header 类型
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-  // 跨域允许的请求方式
-  res.setHeader('Content-Type', 'application/json');
+    if (req.method == 'POST') {
+      // 接口 POST 形式
 
-  if (req.method == "POST") { // 接口 POST 形式
+      console.log('\n【POST 形式】')
 
-    console.log("\n【POST 形式】");
+      // 获取前端发来的路由地址
+      let pathName = req.url
 
-    // 获取前端发来的路由地址
-    let pathName = req.url;
+      console.log('\n接口为：' + pathName)
 
-    console.log("\n接口为：" + pathName);
+      // 接收发送过来的参数
+      let tempResult = ''
 
-    // 接收发送过来的参数
-    let tempResult = "";
+      // 数据接入中
+      req.addListener('data', function(chunk) {
+        tempResult += chunk
+      })
 
-    // 数据接入中
-    req.addListener("data", function (chunk) {
-      tempResult += chunk;
-    });
+      // 数据接收完成
+      req.addListener('end', function() {
+        var result = JSON.stringify(qs.parse(tempResult))
+        console.log('\n参数为：')
+        console.log(result)
 
-    // 数据接收完成
-    req.addListener("end", function () {
+        if (pathName == '/sendMessage') {
+          // 提交留言信息
 
-      var result = JSON.stringify(qs.parse(tempResult));
-      console.log("\n参数为：");
-      console.log(result);
+          console.log('\n【API - 提交留言信息】')
+        } else if (pathName == '/login') {
+          // 登录
 
-      if (pathName == "/sendMessage") { // 提交留言信息
+          console.log('\n【API - 登录】')
+        } else if (pathName == '/register') {
+          // 注册
 
-        console.log("\n【API - 提交留言信息】");
+          console.log('\n【API - 注册】')
+        }
+        // 接口信息处理完毕
+      })
+      // 数据接收完毕
+    } else if (req.method == 'GET') {
+      // 接口 GET 形式
 
-      } else if (pathName == "/login") { // 登录
+      console.log('\n【GET 形式】')
 
-        console.log("\n【API - 登录】");
+      // 解析 url 接口
+      let pathName = url.parse(req.url).pathname
 
-      } else if (pathName == "/register") { // 注册
+      console.log('\n接口为：' + pathName)
 
-        console.log("\n【API - 注册】");
+      if (pathName == '/getMessage') {
+        // 获取留言信息
 
+        console.log('\n【API - 获取留言信息】')
+      } else if (pathName == '/') {
+        // 首页
+        res.writeHead(200, {
+          'Content-Type': 'text/html;charset=UTF-8'
+        })
+
+        res.write(
+          '<h1 style="text-align:center">jsLe 前端有限公司服务已开启！</h1><h2 style="text-align:center">详情可见：<a href="https://github.com/LiangJunrong/document-library/blob/master/other-library/Node/Node-base.md" target="_blank">Node 基础</a></h2>'
+        )
+
+        res.end()
       }
-      // 接口信息处理完毕
-    })
-    // 数据接收完毕
-
-  } else if (req.method == "GET") { // 接口 GET 形式
-
-    console.log("\n【GET 形式】");
-
-    // 解析 url 接口
-    let pathName = url.parse(req.url).pathname;
-
-    console.log("\n接口为：" + pathName);
-
-    if (pathName == "/getMessage") { // 获取留言信息
-
-      console.log("\n【API - 获取留言信息】");
-
-    } else if(pathName == "/") { // 首页
-      res.writeHead(200, {
-        "Content-Type": "text/html;charset=UTF-8"
-      });
-
-      res.write('<h1 style="text-align:center">jsLe 前端有限公司服务已开启！</h1><h2 style="text-align:center">详情可见：<a href="https://github.com/LiangJunrong/document-library/blob/master/other-library/Node/Node-base.md" target="_blank">Node 基础</a></h2>');
-
-      res.end();
     }
-
-  }
-
-}).listen(8888); // 监听的端口
+  })
+  .listen(8888) // 监听的端口
 
 // 获取当前时间
 function getNowFormatDate() {
-  var date = new Date();
-  var year = date.getFullYear(); // 年
-  var month = date.getMonth() + 1; // 月
-  var strDate = date.getDate(); // 日
-  var hour = date.getHours(); // 时
-  var minute = date.getMinutes(); // 分
-  var second = date.getMinutes(); // 秒
+  var date = new Date()
+  var year = date.getFullYear() // 年
+  var month = date.getMonth() + 1 // 月
+  var strDate = date.getDate() // 日
+  var hour = date.getHours() // 时
+  var minute = date.getMinutes() // 分
+  var second = date.getMinutes() // 秒
   if (month >= 1 && month <= 9) {
-    month = "0" + month;
+    month = '0' + month
   }
   if (strDate >= 0 && strDate <= 9) {
-    strDate = "0" + strDate;
+    strDate = '0' + strDate
   }
   // 返回 yyyy-mm-dd hh:mm:ss 形式
-  var currentdate = year + "-" + month + "-" + strDate + " " + hour + ":" + minute + ":" + second;
-  return currentdate;
+  var currentdate =
+    year +
+    '-' +
+    month +
+    '-' +
+    strDate +
+    ' ' +
+    hour +
+    ':' +
+    minute +
+    ':' +
+    second
+  return currentdate
 }
 ```
 
-通过判断 `req.method` 属于 `GET` 还是 `POST` 形式，从而确定加载的接口：  
+通过判断 `req.method` 属于 `GET` 还是 `POST` 形式，从而确定加载的接口：
 
-* 在 `POST` 中，判断是属于 **提交留言信息**、**登录** 还是 **注册**；
-* 在 `GET` 中，判断是不是 **获取留言信息**。  
+- 在 `POST` 中，判断是属于 **提交留言信息**、**登录** 还是 **注册**；
+- 在 `GET` 中，判断是不是 **获取留言信息**。
 
 **同时**，我们在其中定义了 MySQL 的连接以及一个 `getNowFormatDate` 用来获取当前时间，格式为：`2018-12-21 10:03:59`
 
@@ -2145,64 +2174,64 @@ function getNowFormatDate() {
 ```html
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>演示代码</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>演示代码</title>
-</head>
+  <body>
+    <div><label for="user">用户名</label><input type="text" id="user" /></div>
+    <div>
+      <label for="password">密&nbsp;&nbsp;&nbsp;码</label
+      ><input type="password" id="password" />
+    </div>
+    <div>
+      <button id="register">注册</button>
+    </div>
 
-<body>
-  <div>
-    <label for="user">用户名</label><input type="text" id="user">
-  </div>
-  <div>
-    <label for="password">密&nbsp;&nbsp;&nbsp;码</label><input type="password" id="password">
-  </div>
-  <div>
-    <button id="register">注册</button>
-  </div>
-
-  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
-  <script>
-    $(function () {
-      // 测试 get 接口
-      $.ajax({
-        url: "http://localhost:8888/getMessage",
-        type: "POST",
-        data: {
-          username: "jsLe"
-        },
-        success: function (res) {
-          console.log(res);
-        },
-        error: function (err) {
-          console.log(err);
-        }
-      })
-
-      $("#register").click(function () {
-        // 测试 post 接口
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script>
+      $(function() {
+        // 测试 get 接口
         $.ajax({
-          url: "http://localhost:8888/login",
-          type: "POST",
+          url: 'http://localhost:8888/getMessage',
+          type: 'POST',
           data: {
-            username: $("#user").val(),
-            password: $("#password").val()
+            username: 'jsLe'
           },
-          success: function (res) {
-            console.log(res);
+          success: function(res) {
+            console.log(res)
           },
-          error: function (err) {
-            console.log(err);
+          error: function(err) {
+            console.log(err)
           }
         })
-      })
-    });
-  </script>
-</body>
 
+        $('#register').click(function() {
+          // 测试 post 接口
+          $.ajax({
+            url: 'http://localhost:8888/login',
+            type: 'POST',
+            data: {
+              username: $('#user').val(),
+              password: $('#password').val()
+            },
+            success: function(res) {
+              console.log(res)
+            },
+            error: function(err) {
+              console.log(err)
+            }
+          })
+        })
+      })
+    </script>
+  </body>
 </html>
 ```
 
@@ -2218,7 +2247,7 @@ function getNowFormatDate() {
 
 > [返回目录](#catalog-chapter-four-three)
 
-很好，我们回到仿企业网站的页面上，准备编写接口以及丰富 Node 的接口。  
+很好，我们回到仿企业网站的页面上，准备编写接口以及丰富 Node 的接口。
 
 **首先**，我们开启前端和 Node 服务：
 
@@ -2226,15 +2255,15 @@ function getNowFormatDate() {
 
 步骤 2：开启前端
 
-* `cd FrontEndCode`
-* `live-server`
+- `cd FrontEndCode`
+- `live-server`
 
 > 安装 `live-server`：`npm i live-server -g`
 
 步骤 3：开启后端
 
-* `cd NodeWeb`
-* `supervisor index.js`
+- `cd NodeWeb`
+- `supervisor index.js`
 
 > 安装 `supervisor`：`npm i supervisor -g`
 
@@ -2245,86 +2274,81 @@ function getNowFormatDate() {
 ```html
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="keywords" content="前端,jsLe,bootstrap,企业建站" />
+    <meta http-equiv="description" content="jsLe 为你打造最好的企业服务" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>注册-jsLe 前端有限公司</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="keywords" content="前端,jsLe,bootstrap,企业建站">
-  <meta http-equiv="description" content="jsLe 为你打造最好的企业服务">
-  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>注册-jsLe 前端有限公司</title>
-  <link rel="stylesheet" href="./css/index.css">
-  <link rel="stylesheet" href="./css/bootstrap.min.css">
-</head>
+  <body>
+    <!-- 省略 body 中代码，有需要的请前往第四章开头下载查看全部代码 -->
 
-<body>
-  <!-- 省略 body 中代码，有需要的请前往第四章开头下载查看全部代码 -->
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/islogin.js"></script>
+    <script>
+      $(function() {
+        $('#register-submit').click(function() {
+          let userName = $('#userName').val()
+          let userPassword = $('#userPassword').val()
 
-  <script src="./js/jquery-3.3.1.min.js"></script>
-  <script src="./js/bootstrap.min.js"></script>
-  <script src="./js/islogin.js"></script>
-  <script>
-    $(function () {
-      $("#register-submit").click(function () {
-
-        let userName = $("#userName").val();
-        let userPassword = $("#userPassword").val();
-
-        if (!userName) {
-          alert("请输入用户名");
-          $("#userName").focus();
-        } else if (!userPassword) {
-          alert("请输入密码");
-          $("#userPassword").focus();
-        } else if (userName.length > 10) {
-          alert("请输入少于 10 位的用户名");
-          $("#userName").focus();
-        } else if (userPassword.length > 20) {
-          alert("请输入少于 20 位的密码");
-          $("#userPassword").focus();
-        } else {
-
-          // 如果用户输入的没毛病，那就加载接口
-          $.ajax({
-            url: "http://localhost:8888/register",
-            type: 'post',
-            dataType: 'json',
-            data: {
-              username: userName,
-              password: userPassword
-            },
-            success: function (res) {
-              console.log(res);
-              if (res.code == "0") {
-                alert("注册成功，前往登录！");
-                window.location.href = "./login.html";
+          if (!userName) {
+            alert('请输入用户名')
+            $('#userName').focus()
+          } else if (!userPassword) {
+            alert('请输入密码')
+            $('#userPassword').focus()
+          } else if (userName.length > 10) {
+            alert('请输入少于 10 位的用户名')
+            $('#userName').focus()
+          } else if (userPassword.length > 20) {
+            alert('请输入少于 20 位的密码')
+            $('#userPassword').focus()
+          } else {
+            // 如果用户输入的没毛病，那就加载接口
+            $.ajax({
+              url: 'http://localhost:8888/register',
+              type: 'post',
+              dataType: 'json',
+              data: {
+                username: userName,
+                password: userPassword
+              },
+              success: function(res) {
+                console.log(res)
+                if (res.code == '0') {
+                  alert('注册成功，前往登录！')
+                  window.location.href = './login.html'
+                }
+              },
+              error: function(err) {
+                console.log(err.responseText)
+                if (err.responseText == '注册失败，姓名重复！') {
+                  alert('用户名已被注册！')
+                } else if (err.responseText == '注册失败，名额已满！') {
+                  alert('注册失败，名额已满！')
+                } else if (err.responseText == '注册失败，密码为空！') {
+                  alert('注册失败，密码为空！')
+                } else if (err.responseText == '注册失败，姓名过长！') {
+                  alert('注册失败，姓名过长！')
+                } else if (err.responseText == '注册失败，密码过长！') {
+                  alert('注册失败，密码过长！')
+                } else {
+                  alert('未知错误！')
+                }
               }
-            },
-            error: function (err) {
-              console.log(err.responseText);
-              if (err.responseText == "注册失败，姓名重复！") {
-                alert("用户名已被注册！");
-              } else if (err.responseText == "注册失败，名额已满！") {
-                alert("注册失败，名额已满！");
-              } else if (err.responseText == "注册失败，密码为空！") {
-                alert("注册失败，密码为空！");
-              } else if (err.responseText == "注册失败，姓名过长！") {
-                alert("注册失败，姓名过长！");
-              } else if (err.responseText == "注册失败，密码过长！") {
-                alert("注册失败，密码过长！");
-              } else {
-                alert("未知错误！");
-              }
-            }
-          })
-        }
-
+            })
+          }
+        })
       })
-    })
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>
 ```
 
@@ -2337,111 +2361,115 @@ function getNowFormatDate() {
 ```js
 // ... 其他代码省略，请自行前往章节 4.2 后端接口 获取其他代码
 
-if (pathName == "/sendMessage") { // 提交留言信息
+if (pathName == '/sendMessage') {
+  // 提交留言信息
 
-  console.log("\n【API - 提交留言信息】");
+  console.log('\n【API - 提交留言信息】')
+} else if (pathName == '/login') {
+  // 登录
 
-} else if (pathName == "/login") { // 登录
+  console.log('\n【API - 登录】')
+} else if (pathName == '/register') {
+  // 注册
 
-  console.log("\n【API - 登录】");
+  console.log('\n【API - 注册】')
 
-} else if (pathName == "/register") { // 注册
+  result = JSON.parse(result)
 
-  console.log("\n【API - 注册】");
+  let username = result.username // 用户名
+  let password = result.password // 密码
+  let time = getNowFormatDate() // 时间
 
-  result = JSON.parse(result);
-
-  let username = result.username; // 用户名
-  let password = result.password; // 密码
-  let time = getNowFormatDate(); // 时间
-
-  if (!username) { // 用户名为空
-    res.end("注册失败，用户名为空。");
-    return;
-  } else if (!password) { // 密码为空
-    res.end("注册失败，密码为空！");
-    return;
-  } else if(username.length > 10) { // 姓名过长
-    res.end("注册失败，姓名过长！");
-    return;
-  } else if(password.length > 20) { // 密码过长
-    res.end("注册失败，密码过长！");
-    return;
+  if (!username) {
+    // 用户名为空
+    res.end('注册失败，用户名为空。')
+    return
+  } else if (!password) {
+    // 密码为空
+    res.end('注册失败，密码为空！')
+    return
+  } else if (username.length > 10) {
+    // 姓名过长
+    res.end('注册失败，姓名过长！')
+    return
+  } else if (password.length > 20) {
+    // 密码过长
+    res.end('注册失败，密码过长！')
+    return
   } else {
-    
     // 查询 user 表
     // 使用 Promise 的原因是因为中间调用了两次数据库，而数据库查询是异步的，所以需要用 Promise。
-    new Promise( (resolve, reject) => {
-
+    new Promise((resolve, reject) => {
       // 新增的 SQL 语句及新增的字段信息
-      let readSql = "SELECT * FROM user";
-      
+      let readSql = 'SELECT * FROM user'
+
       // 连接 SQL 并实施语句
-      connection.query(readSql, function (error1, response1) {
-        
-        if (error1) { // 如果 SQL 语句错误
-          throw error1;
+      connection.query(readSql, function(error1, response1) {
+        if (error1) {
+          // 如果 SQL 语句错误
+          throw error1
         } else {
-          
-          console.log("\nSQL 查询结果：");
+          console.log('\nSQL 查询结果：')
 
           // 将结果先去掉 RowDataPacket，再转换为 json 对象
-          let newRes = JSON.parse(JSON.stringify(response1));
-          console.log(newRes);
+          let newRes = JSON.parse(JSON.stringify(response1))
+          console.log(newRes)
 
           // 判断姓名重复与否
-          let userNameRepeat = false;
-          for(let item in newRes) {
-            if(newRes[item].user_name == username) {
-              userNameRepeat = true;
+          let userNameRepeat = false
+          for (let item in newRes) {
+            if (newRes[item].user_name == username) {
+              userNameRepeat = true
             }
           }
 
           // 如果姓名重复
-          if(userNameRepeat) {
-            res.end("注册失败，姓名重复！");
-            return;
-          } else if(newRes.length > 300) { // 如果注册名额已满
-            res.end("注册失败，名额已满！");
-            return;
-          } else { // 可以注册
-            resolve();
+          if (userNameRepeat) {
+            res.end('注册失败，姓名重复！')
+            return
+          } else if (newRes.length > 300) {
+            // 如果注册名额已满
+            res.end('注册失败，名额已满！')
+            return
+          } else {
+            // 可以注册
+            resolve()
           }
-          
         }
-      });
+      })
+    }).then(() => {
+      console.log('\n第二步：')
 
-    }).then( () => {
-      
-      console.log("\n第二步：");
-      
       // 新增的 SQL 语句及新增的字段信息
-      let addSql = "INSERT INTO user(user_name,user_password, time) VALUES(?,?,?)";
-      let addSqlParams = [result.username, result.password, time];
+      let addSql =
+        'INSERT INTO user(user_name,user_password, time) VALUES(?,?,?)'
+      let addSqlParams = [result.username, result.password, time]
 
       // 连接 SQL 并实施语句
-      connection.query(addSql, addSqlParams, function (error2, response2) {
-        if (error2) { // 如果 SQL 语句错误
-          console.log("新增错误：");
-          console.log(error2);
-          return;
+      connection.query(addSql, addSqlParams, function(error2, response2) {
+        if (error2) {
+          // 如果 SQL 语句错误
+          console.log('新增错误：')
+          console.log(error2)
+          return
         } else {
-          console.log("\nSQL 查询结果：");
-          console.log(response2);
+          console.log('\nSQL 查询结果：')
+          console.log(response2)
 
-          console.log("\n注册成功！");
+          console.log('\n注册成功！')
 
           // 返回数据
-          res.write(JSON.stringify({
-            code: "0",
-            message: "注册成功！"
-          }));
+          res.write(
+            JSON.stringify({
+              code: '0',
+              message: '注册成功！'
+            })
+          )
 
           // 结束响应
-          res.end();
+          res.end()
         }
-      });
-
+      })
     })
     // Promise 结束
   }
@@ -2464,91 +2492,84 @@ if (pathName == "/sendMessage") { // 提交留言信息
 ```html
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="keywords" content="前端,jsLe,bootstrap,企业建站" />
+    <meta http-equiv="description" content="jsLe 为你打造最好的企业服务" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>登录-jsLe 前端有限公司</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="keywords" content="前端,jsLe,bootstrap,企业建站">
-  <meta http-equiv="description" content="jsLe 为你打造最好的企业服务">
-  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>登录-jsLe 前端有限公司</title>
-  <link rel="stylesheet" href="./css/index.css">
-  <link rel="stylesheet" href="./css/bootstrap.min.css">
-</head>
+  <body>
+    <!-- 代码省略，有需要的小伙伴请在第四章前言部分下载代码 -->
 
-<body>
-  
-  <!-- 代码省略，有需要的小伙伴请在第四章前言部分下载代码 -->
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/islogin.js"></script>
+    <script>
+      $(function() {
+        $('#login-submit').click(function() {
+          let userName = $('#userName').val() // 用户名
+          let userPassword = $('#userPassword').val() // 密码
 
-  <script src="./js/jquery-3.3.1.min.js"></script>
-  <script src="./js/bootstrap.min.js"></script>
-  <script src="./js/islogin.js"></script>
-  <script>
-    $(function () {
-      $("#login-submit").click(function () {
-
-        let userName = $("#userName").val(); // 用户名
-        let userPassword = $("#userPassword").val(); // 密码
-
-        if (!userName) {
-          alert("请输入用户名");
-          $("#userName").focus();
-        } else if (!userPassword) {
-          alert("请输入密码");
-          $("#userPassword").focus();
-        } else if (userName.length > 10) {
-          alert("请输入少于 10 位的用户名");
-          $("#userName").focus();
-        } else if (userPassword.length > 20) {
-          alert("请输入少于 20 位的密码");
-          $("#userPassword").focus();
-        } else {
-
-          $.ajax({
-            url: "http://localhost:8888/login",
-            type: 'post',
-            dataType: 'json',
-            data: {
-              username: userName,
-              password: userPassword
-            },
-            success: function (res) {
-              console.log(res);
-              if (res.code == "0") {
-                sessionStorage.setItem("id", res.data.id);
-                sessionStorage.setItem("userName", res.data.userName);
-                alert("登录成功！");
-                window.location.href = "./messageBoard.html";
-              } else if (res.code == "1") {
-                alert("登录失败，密码错误！");
+          if (!userName) {
+            alert('请输入用户名')
+            $('#userName').focus()
+          } else if (!userPassword) {
+            alert('请输入密码')
+            $('#userPassword').focus()
+          } else if (userName.length > 10) {
+            alert('请输入少于 10 位的用户名')
+            $('#userName').focus()
+          } else if (userPassword.length > 20) {
+            alert('请输入少于 20 位的密码')
+            $('#userPassword').focus()
+          } else {
+            $.ajax({
+              url: 'http://localhost:8888/login',
+              type: 'post',
+              dataType: 'json',
+              data: {
+                username: userName,
+                password: userPassword
+              },
+              success: function(res) {
+                console.log(res)
+                if (res.code == '0') {
+                  sessionStorage.setItem('id', res.data.id)
+                  sessionStorage.setItem('userName', res.data.userName)
+                  alert('登录成功！')
+                  window.location.href = './messageBoard.html'
+                } else if (res.code == '1') {
+                  alert('登录失败，密码错误！')
+                }
+              },
+              error: function(err) {
+                console.log(err.responseText)
+                if (err.responseText == '不存在该用户！') {
+                  alert('不存在该用户！')
+                } else if (err.responseText == '登录失败，用户名为空！') {
+                  alert('登录失败，用户名为空！')
+                } else if (err.responseText == '登录失败，密码为空！') {
+                  alert('登录失败，密码为空！')
+                } else if (err.responseText == '登录失败，姓名过长！') {
+                  alert('登录失败，姓名过长！')
+                } else if (err.responseText == '登录失败，密码过长！') {
+                  alert('登录失败，密码过长！')
+                } else {
+                  alert('未知错误！')
+                }
               }
-            },
-            error: function (err) {
-              console.log(err.responseText);
-              if (err.responseText == "不存在该用户！") {
-                alert("不存在该用户！");
-              } else if (err.responseText == "登录失败，用户名为空！") {
-                alert("登录失败，用户名为空！");
-              } else if (err.responseText == "登录失败，密码为空！") {
-                alert("登录失败，密码为空！");
-              } else if (err.responseText == "登录失败，姓名过长！") {
-                alert("登录失败，姓名过长！");
-              } else if (err.responseText == "登录失败，密码过长！") {
-                alert("登录失败，密码过长！");
-              } else {
-                alert("未知错误！");
-              }
-            }
-          })
-
-        }
-
+            })
+          }
+        })
       })
-    })
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>
 ```
 
@@ -2559,82 +2580,92 @@ if (pathName == "/sendMessage") { // 提交留言信息
 ```js
 // ... 其他代码省略，请自行前往章节 4.2 后端接口 获取其他代码
 
-if (pathName == "/sendMessage") { // 提交留言信息
+if (pathName == '/sendMessage') {
+  // 提交留言信息
 
-  console.log("\n【API - 提交留言信息】");
+  console.log('\n【API - 提交留言信息】')
+} else if (pathName == '/login') {
+  // 登录
 
-} else if (pathName == "/login") { // 登录
+  console.log('\n【API - 登录】')
 
-  console.log("\n【API - 登录】");
+  result = JSON.parse(result)
 
-  result = JSON.parse(result);
+  let username = result.username // 用户名
+  let password = result.password // 密码
 
-  let username = result.username; // 用户名
-  let password = result.password; // 密码
-
-  if (!username) { // 用户名为空
-    res.end("登录失败，用户名为空！");
-    return;
-  } else if (!password) { // 密码为空
-    res.end("登录失败，密码为空！");
-    return;
-  } else if(username.length > 10) {
-    res.end("登录失败，姓名过长！");
-    return;
-  } else if(password.length > 20) {
-    res.end("登录失败，密码过长！");
-    return;
-  } else { 
-    
+  if (!username) {
+    // 用户名为空
+    res.end('登录失败，用户名为空！')
+    return
+  } else if (!password) {
+    // 密码为空
+    res.end('登录失败，密码为空！')
+    return
+  } else if (username.length > 10) {
+    res.end('登录失败，姓名过长！')
+    return
+  } else if (password.length > 20) {
+    res.end('登录失败，密码过长！')
+    return
+  } else {
     // 新增的 SQL 语句及新增的字段信息
-    let readSql = "SELECT * FROM user WHERE user_name  = '" + username + "'";
+    let readSql = "SELECT * FROM user WHERE user_name  = '" + username + "'"
 
     // 连接 SQL 并实施语句
-    connection.query(readSql, function (error1, response1) {
+    connection.query(readSql, function(error1, response1) {
       if (error1) {
-        throw error1;
+        throw error1
       } else {
-        if(response1 == undefined || response1.length == 0) { // 不存在用户
-          res.end("\n不存在该用户！");
-          return;
-        } else { // 存在用户
-          console.log("\n存在该用户！");
+        if (response1 == undefined || response1.length == 0) {
+          // 不存在用户
+          res.end('\n不存在该用户！')
+          return
+        } else {
+          // 存在用户
+          console.log('\n存在该用户！')
 
-          let newRes = JSON.parse(JSON.stringify(response1));
-          console.log(newRes);
+          let newRes = JSON.parse(JSON.stringify(response1))
+          console.log(newRes)
 
-          if(newRes[0].user_password == password) { // 密码正确
+          if (newRes[0].user_password == password) {
+            // 密码正确
             // 返回数据
-            res.write(JSON.stringify({
-              code: "0",
-              message: "登录成功！",
-              data: {
-                id: newRes[0].id,
-                userName: newRes[0].user_name
-              }
-            }));
+            res.write(
+              JSON.stringify({
+                code: '0',
+                message: '登录成功！',
+                data: {
+                  id: newRes[0].id,
+                  userName: newRes[0].user_name
+                }
+              })
+            )
 
-            res.end();
-          } else { // 密码错误
+            res.end()
+          } else {
+            // 密码错误
             // 返回数据
-            res.write(JSON.stringify({
-              code: "1",
-              message: "登录失败，密码错误！"
-            }));
+            res.write(
+              JSON.stringify({
+                code: '1',
+                message: '登录失败，密码错误！'
+              })
+            )
 
-            res.end();
+            res.end()
           }
           // 判断密码正确与否完毕
         }
         // 存在用户处理结束
       }
-    });
+    })
   }
   // 登录步骤结束
-} else if (pathName == "/register") { // 注册
+} else if (pathName == '/register') {
+  // 注册
 
-  console.log("\n【API - 注册】");
-
+  console.log('\n【API - 注册】')
 }
 ```
 
@@ -2654,43 +2685,43 @@ if (pathName == "/sendMessage") { // 提交留言信息
 <!-- 留言板 -->
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="keywords" content="前端,jsLe,bootstrap,企业建站" />
+    <meta http-equiv="description" content="jsLe 为你打造最好的企业服务" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>留言板-jsLe 前端有限公司</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="keywords" content="前端,jsLe,bootstrap,企业建站">
-  <meta http-equiv="description" content="jsLe 为你打造最好的企业服务">
-  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>留言板-jsLe 前端有限公司</title>
-  <link rel="stylesheet" href="./css/index.css">
-  <link rel="stylesheet" href="./css/bootstrap.min.css">
-</head>
+  <body>
+    <!-- 代码省略，基础代码请前往本章节前言下载 -->
 
-<body>
-  
-  <!-- 代码省略，基础代码请前往本章节前言下载 -->
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/islogin.js"></script>
+    <script>
+      $(function() {
+        let userName = sessionStorage.getItem('userName')
+        let userId = sessionStorage.getItem('id')
 
-  <script src="./js/jquery-3.3.1.min.js"></script>
-  <script src="./js/bootstrap.min.js"></script>
-  <script src="./js/islogin.js"></script>
-  <script>
-    $(function() {
-      
-      let userName = sessionStorage.getItem("userName");
-      let userId = sessionStorage.getItem("id");
-      
-      // 查询留言板
-      if(userName && userId) { // 如果有存储
-        $.ajax({
-          url: "http://localhost:8888/getMessage",
-          type: 'get',
-          dataType: 'json',
-          success: function (res) {
-            console.log(res);
-            let li = ``;
-            for(let item in res.data) {
-              li = li + `
+        // 查询留言板
+        if (userName && userId) {
+          // 如果有存储
+          $.ajax({
+            url: 'http://localhost:8888/getMessage',
+            type: 'get',
+            dataType: 'json',
+            success: function(res) {
+              console.log(res)
+              let li = ``
+              for (let item in res.data) {
+                li =
+                  li +
+                  `
                 <li>
                   <span class="text-warning font-bold">☆ </span>
                   <span class="user-message">${res.data[item].user_message}</span>
@@ -2698,61 +2729,60 @@ if (pathName == "/sendMessage") { // 提交留言信息
                   <span class="user-name">${res.data[item].user_name} [${res.data[item].user_id}]</span>
                   <span class="message-time">${res.data[item].time}</span>
                 </li>
-              `;
-            }
-            $("#message-board-ul").append(li);
-          },
-          error: function (err) {
-            console.log(err);
-          }
-        })
-      } else { // 如果没有存储
-        window.location.href = "../login.html";
-      }
-
-      // 提交留言
-      $("#message-submit").click(function() {
-        let messageText = $("#message").val()
-        if(!messageText) {
-          alert("留言内容不能为空");
-        } else if(messageText.length > 140) {
-          alert("留言长度不能超过 140 位！");
-        } else {
-          $.ajax({
-            url: "http://localhost:8888/sendMessage",
-            type: 'post',
-            dataType: 'json',
-            data: {
-              userid: userId,
-              username: userName,
-              message: messageText
-            },
-            success: function (res) {
-              console.log(res);
-              if(res.code == "0") {
-                alert("新增成功！");
-                window.location.reload();
+              `
               }
+              $('#message-board-ul').append(li)
             },
-            error: function (err) {
-              console.log(err);
-              console.log(err.responseText);
-              if (err.responseText == "登录失败，留言内容为空！") {
-                alert("登录失败，留言内容为空！");
-              } else if (err.responseText == "登录失败，字数超过限制！") {
-                alert("登录失败，字数超过限制！");
-              } else {
-                alert("未知错误！");
-              }
+            error: function(err) {
+              console.log(err)
             }
           })
+        } else {
+          // 如果没有存储
+          window.location.href = '../login.html'
         }
+
+        // 提交留言
+        $('#message-submit').click(function() {
+          let messageText = $('#message').val()
+          if (!messageText) {
+            alert('留言内容不能为空')
+          } else if (messageText.length > 140) {
+            alert('留言长度不能超过 140 位！')
+          } else {
+            $.ajax({
+              url: 'http://localhost:8888/sendMessage',
+              type: 'post',
+              dataType: 'json',
+              data: {
+                userid: userId,
+                username: userName,
+                message: messageText
+              },
+              success: function(res) {
+                console.log(res)
+                if (res.code == '0') {
+                  alert('新增成功！')
+                  window.location.reload()
+                }
+              },
+              error: function(err) {
+                console.log(err)
+                console.log(err.responseText)
+                if (err.responseText == '登录失败，留言内容为空！') {
+                  alert('登录失败，留言内容为空！')
+                } else if (err.responseText == '登录失败，字数超过限制！') {
+                  alert('登录失败，字数超过限制！')
+                } else {
+                  alert('未知错误！')
+                }
+              }
+            })
+          }
+        })
       })
-
-    })
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>
 ```
 
@@ -2763,106 +2793,110 @@ if (pathName == "/sendMessage") { // 提交留言信息
 ```js
 // ... 其他代码省略，请自行前往章节 4.2 后端接口 获取其他代码
 
-if (pathName == "/sendMessage") { // 提交留言信息
+if (pathName == '/sendMessage') {
+  // 提交留言信息
 
-  console.log("\n【API - 提交留言信息】");
+  console.log('\n【API - 提交留言信息】')
 
-  result = JSON.parse(result);
+  result = JSON.parse(result)
 
-  let id = result.userid; // id
-  let userName = result.username; // 用户名
-  let messageText = result.message; // 留言内容
-  let time = getNowFormatDate(); // 时间
+  let id = result.userid // id
+  let userName = result.username // 用户名
+  let messageText = result.message // 留言内容
+  let time = getNowFormatDate() // 时间
 
-  if(!messageText) {
-    res.end("登录失败，留言内容为空！");
-    return;
-  } else if(messageText.length > 140) {
-    res.end("登录失败，字数超过限制！");
-    return;
+  if (!messageText) {
+    res.end('登录失败，留言内容为空！')
+    return
+  } else if (messageText.length > 140) {
+    res.end('登录失败，字数超过限制！')
+    return
   } else {
-    
     // 新增的 SQL 语句及新增的字段信息
-    let addSql = "INSERT INTO message(user_message, user_id, user_name, time) VALUES(?, ?, ?, ?)";
-    let addSqlParams = [messageText, id, userName, time];
+    let addSql =
+      'INSERT INTO message(user_message, user_id, user_name, time) VALUES(?, ?, ?, ?)'
+    let addSqlParams = [messageText, id, userName, time]
 
     // 连接 SQL 并实施语句
-    connection.query(addSql, addSqlParams, function (error1, response1) {
-      if (error1) { // 如果 SQL 语句错误
-        throw error1;
+    connection.query(addSql, addSqlParams, function(error1, response1) {
+      if (error1) {
+        // 如果 SQL 语句错误
+        throw error1
       } else {
-        console.log("\n新增成功！");
+        console.log('\n新增成功！')
 
         // 返回数据
-        res.write(JSON.stringify({
-          code: "0",
-          message: "新增成功！"
-        }));
+        res.write(
+          JSON.stringify({
+            code: '0',
+            message: '新增成功！'
+          })
+        )
 
         // 结束响应
-        res.end();
+        res.end()
       }
     })
   }
+} else if (pathName == '/login') {
+  // 登录
 
-} else if (pathName == "/login") { // 登录
+  console.log('\n【API - 登录】')
+} else if (pathName == '/register') {
+  // 注册
 
-  console.log("\n【API - 登录】");
-
-} else if (pathName == "/register") { // 注册
-
-  console.log("\n【API - 注册】");
-
+  console.log('\n【API - 注册】')
 }
-
-
 
 // ... 其他代码省略，请自行前往章节 4.2 后端接口 获取其他代码
 
+if (pathName == '/getMessage') {
+  // 获取留言信息
 
-
-if (pathName == "/getMessage") { // 获取留言信息
-
-  console.log("\n【API - 获取留言信息】");
+  console.log('\n【API - 获取留言信息】')
 
   // 解析 url 参数部分
-  let params = url.parse(req.url, true).query;
+  let params = url.parse(req.url, true).query
 
-  console.log("\n参数为：");
-  console.log(params);
+  console.log('\n参数为：')
+  console.log(params)
 
   // 新增的 SQL 语句及新增的字段信息
-  let readSql = "SELECT * FROM message";
+  let readSql = 'SELECT * FROM message'
 
   // 连接 SQL 并实施语句
-  connection.query(readSql, function (error1, response1) {
+  connection.query(readSql, function(error1, response1) {
     if (error1) {
-      throw error1; 
+      throw error1
     } else {
-      
-      let newRes = JSON.parse(JSON.stringify(response1));
-      console.log(newRes);
+      let newRes = JSON.parse(JSON.stringify(response1))
+      console.log(newRes)
 
       // 返回数据
-      res.write(JSON.stringify({
-        code: "1",
-        message: "查询成功！",
-        data: newRes
-      }));
+      res.write(
+        JSON.stringify({
+          code: '1',
+          message: '查询成功！',
+          data: newRes
+        })
+      )
 
       // 结束响应
-      res.end();
+      res.end()
     }
-  });
+  })
   // 查询完毕
-} else if(pathName == "/") { // 首页
+} else if (pathName == '/') {
+  // 首页
   res.writeHead(200, {
-    "Content-Type": "text/html;charset=UTF-8"
-  });
+    'Content-Type': 'text/html;charset=UTF-8'
+  })
 
-  res.write('<h1 style="text-align:center">jsLe 前端有限公司服务已开启！</h1><h2 style="text-align:center">详情可见：<a href="https://github.com/LiangJunrong/document-library/blob/master/other-library/Node/Node-base.md" target="_blank">Node 基础</a></h2>');
+  res.write(
+    '<h1 style="text-align:center">jsLe 前端有限公司服务已开启！</h1><h2 style="text-align:center">详情可见：<a href="https://github.com/LiangJunrong/document-library/blob/master/other-library/Node/Node-base.md" target="_blank">Node 基础</a></h2>'
+  )
 
-  res.end();
+  res.end()
 }
 ```
 
@@ -2871,12 +2905,12 @@ if (pathName == "/getMessage") { // 获取留言信息
 ![图](../../public-repertory/img/other-node-NodeBase-20.gif)
 
 综上，我们完成了所有的功能模块：注册、登录以及留言。
- 
+
 ## <a name="chapter-five" id="chapter-five">五 工具整合</a>
 
 > [返回目录](#catalog-chapter-five)
 
-**工欲善其事，必先利其器。**  
+**工欲善其事，必先利其器。**
 
 掌控好了工具，可以方便你更快地进行开发。
 
@@ -2884,7 +2918,7 @@ if (pathName == "/getMessage") { // 获取留言信息
 
 > [返回目录](#catalog-chapter-five-one)
 
-* [supervisor 官网](http://www.supervisord.org/)
+- [supervisor 官网](http://www.supervisord.org/)
 
 正如其官网所说，它是一个进行控制系统：
 
@@ -2892,19 +2926,19 @@ if (pathName == "/getMessage") { // 获取留言信息
 2. 运行文件：`supervisor app.js`
 3. 查看运行：`localhost:3000`
 
-平时，我们 `node app.js` 后，当我们修改了 `app.js` 的内容，就需要关闭 node 命令行再执行 `node app.js`。  
+平时，我们 `node app.js` 后，当我们修改了 `app.js` 的内容，就需要关闭 node 命令行再执行 `node app.js`。
 
-而我们使用 `supervisor` 后，我们修改了 `app.js` 中的内容，只要点击保存，即可生效保存后的代码，实现实时监听 node 代码的变动。  
+而我们使用 `supervisor` 后，我们修改了 `app.js` 中的内容，只要点击保存，即可生效保存后的代码，实现实时监听 node 代码的变动。
 
 关于这个工具，网上更详细的攻略有：
 
-* [详细版：用Supervisor守护你的Node.js进程 | 简书 - Mike的读书季](https://www.jianshu.com/p/6d84e5efe99d)
+- [详细版：用 Supervisor 守护你的 Node.js 进程 | 简书 - Mike 的读书季](https://www.jianshu.com/p/6d84e5efe99d)
 
 ### <a name="chapter-five-two" id="chapter-five-two">5.2 PM2 - Node 进程管理</a>
 
 > [返回目录](#catalog-chapter-five-two)
 
-* [PM2 - npm](https://www.npmjs.com/package/pm2)
+- [PM2 - npm](https://www.npmjs.com/package/pm2)
 
 PM2 是 Node 进程管理工具，可以利用它来简化很多 Node 应用管理的繁琐任务，如性能监控、自动重启、负载均衡等，而且使用非常简单。
 
@@ -2932,9 +2966,9 @@ PM2 是 Node 进程管理工具，可以利用它来简化很多 Node 应用管�
 
 更多攻略：
 
-* [PM2 官网](https://pm2.io/doc/en/runtime/quick-start/?utm_source=pm2&utm_medium=website&utm_campaign=rebranding)
-* [PM2 用法简介 | 简书 - LeavesLife](https://www.jianshu.com/p/f640450bd120)
-* [PM2实用入门指南 | 博客园 - 程序猿小卡](http://www.cnblogs.com/chyingp/p/pm2-documentation.html)
+- [PM2 官网](https://pm2.io/doc/en/runtime/quick-start/?utm_source=pm2&utm_medium=website&utm_campaign=rebranding)
+- [PM2 用法简介 | 简书 - LeavesLife](https://www.jianshu.com/p/f640450bd120)
+- [PM2 实用入门指南 | 博客园 - 程序猿小卡](http://www.cnblogs.com/chyingp/p/pm2-documentation.html)
 
 ## <a name="chapter-six" id="chapter-six">六 参考资料</a>
 
@@ -2942,7 +2976,7 @@ PM2 是 Node 进程管理工具，可以利用它来简化很多 Node 应用管�
 
 在编写这篇文章的过程中，有一些参考资料是值得保留阅读的：
 
-* **经典：该类值得我们研读**
+- **经典：该类值得我们研读**
 
 > 经典，就是随着时间流逝，它还是那么有参考价值。
 
@@ -2950,15 +2984,15 @@ PM2 是 Node 进程管理工具，可以利用它来简化很多 Node 应用管�
 2. [Node.js 教程 | 菜鸟教程](http://www.runoob.com/nodejs/nodejs-tutorial.html)
 3. [Express 文档 | Express 中文网](http://www.expressjs.com.cn/)
 
-* **尝试：该类值得我们参考借鉴**
+- **尝试：该类值得我们参考借鉴**
 
 > Node 基础模块
 
-1. [nodejs之querystring模块 | 博客园 - whiteMu](https://www.cnblogs.com/whiteMu/p/5986297.html)
+1. [nodejs 之 querystring 模块 | 博客园 - whiteMu](https://www.cnblogs.com/whiteMu/p/5986297.html)
 
 > Node 编写接口
 
-1. [用Node编写RESTful API接口 | php 中文网 - 不言](http://www.php.cn/js-tutorial-406242.html)
+1. [用 Node 编写 RESTful API 接口 | php 中文网 - 不言](http://www.php.cn/js-tutorial-406242.html)
 
 > MySQL 学习
 
@@ -2966,18 +3000,18 @@ PM2 是 Node 进程管理工具，可以利用它来简化很多 Node 应用管�
 
 > Node 连接数据库
 
-1. [node.js前后台交互示例 -- 使用node.js实现用户注册功能 | 博客园 - 返回主页 党兴明](https://www.cnblogs.com/by-dxm/p/6723039.html)
-2. [node.js实现简单的登录注册页面 - 博客园 - 返回主页 bestjarvan](https://www.cnblogs.com/bestjarvan/archive/2017/04/08/6680857.html)
+1. [node.js 前后台交互示例 -- 使用 node.js 实现用户注册功能 | 博客园 - 返回主页 党兴明](https://www.cnblogs.com/by-dxm/p/6723039.html)
+2. [node.js 实现简单的登录注册页面 - 博客园 - 返回主页 bestjarvan](https://www.cnblogs.com/bestjarvan/archive/2017/04/08/6680857.html)
 
 > Node 仿 Express
 
-1. [nodejs模块：简单http请求路由，仿express | CSDN - TTUZ](https://blog.csdn.net/tiantangyouzui/article/details/70184959)
-2. [初学nodejs一：别被Express的API搞晕了 | 前端乱炖 - 飞天小黑神猪](http://www.html-js.com/article/1603)
+1. [nodejs 模块：简单 http 请求路由，仿 express | CSDN - TTUZ](https://blog.csdn.net/tiantangyouzui/article/details/70184959)
+2. [初学 nodejs 一：别被 Express 的 API 搞晕了 | 前端乱炖 - 飞天小黑神猪](http://www.html-js.com/article/1603)
 3. [NodeJs 实战——原生 NodeJS 轻仿 Express 框架从需求到实现（一） | 倔强的石头 - 掘金](https://juejin.im/post/5bf227a751882516be2ec124)
 4. [NodeJs 实战——原生 NodeJS 轻仿 Express 框架从需求到实现（二） | 倔强的石头 - 掘金](https://juejin.im/post/5bf4e46a6fb9a049f153d2ae)
 5. [仿 Express | Github - wallaceyuan](https://github.com/wallaceyuan/yuan-express)
 6. [Node.js 封装仿照 express 的路由 | CSDN - c.](https://blog.csdn.net/cckevincyh/article/details/78695177)
-7. [学习node中express框架中间件的相关知识及实践 | Github - BadWaka](https://github.com/BadWaka/node-express-middleware-study)
+7. [学习 node 中 express 框架中间件的相关知识及实践 | Github - BadWaka](https://github.com/BadWaka/node-express-middleware-study)
 
 ## <a name="chapter-seven" id="chapter-seven">七 线上部署</a>
 
@@ -2985,7 +3019,7 @@ PM2 是 Node 进程管理工具，可以利用它来简化很多 Node 应用管�
 
 关于线上部署及域名、服务器相关的配置，**jsLe** 在另外一篇文章有所交代：[云服务器建站](https://github.com/LiangJunrong/document-library/blob/master/other-library/Node/build-web-station.md)。
 
-如果小伙伴需要订购云服务器来存放像 jsLe 个人网站类的静态或者有 Node 后端的网页，但却不知道怎么选择，可以加 **jsLe** QQ：`1741020489` 咨询，下面是一些优惠推广：  
+如果小伙伴需要订购云服务器来存放像 jsLe 个人网站类的静态或者有 Node 后端的网页，但却不知道怎么选择，可以加 **jsLe** QQ：`1741020489` 咨询，下面是一些优惠推广：
 
 > **jsLe** 广告推送：  
 > 也许小伙伴想了解下云服务器  
@@ -2995,22 +3029,22 @@ PM2 是 Node 进程管理工具，可以利用它来简化很多 Node 应用管�
 
 [![图](../../public-repertory/img/z-small-seek-ali-3.jpg)](https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=w7hismrh)
 [![图](../../public-repertory/img/z-small-seek-tencent-2.jpg)](https://cloud.tencent.com/redirect.php?redirect=1014&cps_key=49f647c99fce1a9f0b4e1eeb1be484c9&from=console)
- 
+
 ## <a name="chapter-eight" id="chapter-eight">八 归纳总结</a>
 
 > [返回目录](#catalog-chapter-eight)
 
-综上，搞定一切！  
+综上，搞定一切！
 
-兴许在前面代码的摧残下，能看到这里的小伙伴已经寥寥无几了，但我坚信我该交代的基本都交代了，不该交代的也交代了~  
+兴许在前面代码的摧残下，能看到这里的小伙伴已经寥寥无几了，但我坚信我该交代的基本都交代了，不该交代的也交代了~
 
-所以，如果小伙伴看完真觉得不错，那就点个赞或者给个 star 吧！你们的赞和 star 是我编写更多更精彩文章的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)  
+所以，如果小伙伴看完真觉得不错，那就点个赞或者给个 star 吧！你们的赞和 star 是我编写更多更精彩文章的动力！[GitHub 地址](https://github.com/LiangJunrong/document-library)
 
 如果小伙伴看完这里要评论的话，可以加个暗语：`Node 基础，***`，这样 **jsLe** 看到必回，哈哈~
 
-* Node 基础，我完成了！
-* Node 基础，我想说 jsLe 肯定还偷懒了，没写成最完美的，我不管我打赏了你赶紧给我完善下！
-* ……
+- Node 基础，我完成了！
+- Node 基础，我想说 jsLe 肯定还偷懒了，没写成最完美的，我不管我打赏了你赶紧给我完善下！
+- ……
 
 **so, that's all, thanks~**
 

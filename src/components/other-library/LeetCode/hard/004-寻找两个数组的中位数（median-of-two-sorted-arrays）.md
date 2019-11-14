@@ -1,5 +1,4 @@
-004 - 寻找两个数组的中位数（median-of-two-sorted-arrays）
-===
+# 004 - 寻找两个数组的中位数（median-of-two-sorted-arrays）
 
 > Create by **jsLe** on **2019-08-06 11:07:31**  
 > Recently revised in **2019-09-18 14:12:44**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - 暴力破解](#chapter-three-one) |
-| &emsp;[3.2 解法 - 二分查找](#chapter-three-two) |
+| &emsp;[3.1 解法 - 暴力破解](#chapter-three-one)                                          |
+| &emsp;[3.2 解法 - 二分查找](#chapter-three-two)                                          |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：困难
-* **涉及知识**：数组、二分查找、分治算法
-* **题目地址**：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/
-* **题目内容**：
+- **难度**：困难
+- **涉及知识**：数组、二分查找、分治算法
+- **题目地址**：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/
+- **题目内容**：
 
 ```
 给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。
@@ -57,20 +56,20 @@ nums2 = [3, 4]
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var findMedianSortedArrays = function(nums1, nums2) {
-  const all = nums1.concat(nums2).sort((a, b) => a - b);
+  const all = nums1.concat(nums2).sort((a, b) => a - b)
   if (all.length % 2 === 0) {
-    return (all[all.length / 2] + all[all.length / 2 - 1]) / 2;
+    return (all[all.length / 2] + all[all.length / 2 - 1]) / 2
   } else {
-    return all[(all.length - 1) / 2];
+    return all[(all.length - 1) / 2]
   }
-};
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums1`：`[1, 3]`
 2. `nums2`：`[2, 4]`
@@ -80,7 +79,7 @@ var findMedianSortedArrays = function(nums1, nums2) {
 2.5
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -89,24 +88,24 @@ var findMedianSortedArrays = function(nums1, nums2) {
   ✔ Your memory usage beats 81.59 % of javascript submissions (39.1 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `concat()`：`concat()` 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组。[`concat()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/String/concat.md)
 2. `sort()`：排序，保持返回数组的数字为顺序排列。[`sort()` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Array/sort.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **首先**，人生第一道困难难度的题目，怎么看起来好像有点简单啊，立马上手：
 
 ```js
 var findMedianSortedArrays = function(nums1, nums2) {
-  const all = nums1.concat(nums2).sort();
+  const all = nums1.concat(nums2).sort()
   if (all.length % 2 === 0) {
-    return (all[all.length / 2] + all[all.length / 2 - 1]) / 2;
+    return (all[all.length / 2] + all[all.length / 2 - 1]) / 2
   } else {
-    return all[(all.length - 1) / 2];
+    return all[(all.length - 1) / 2]
   }
-};
+}
 ```
 
 Submit 提交看看：
@@ -131,13 +130,13 @@ Submit 提交看看：
 
 ```js
 var findMedianSortedArrays = function(nums1, nums2) {
-  const all = nums1.concat(nums2).sort((a, b) => a - b);
+  const all = nums1.concat(nums2).sort((a, b) => a - b)
   if (all.length % 2 === 0) {
-    return (all[all.length / 2] + all[all.length / 2 - 1]) / 2;
+    return (all[all.length / 2] + all[all.length / 2 - 1]) / 2
   } else {
-    return all[(all.length - 1) / 2];
+    return all[(all.length - 1) / 2]
   }
-};
+}
 ```
 
 **最后**，提交：
@@ -157,54 +156,54 @@ var findMedianSortedArrays = function(nums1, nums2) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
-var findMedianSortedArrays = function (nums1, nums2) {
+var findMedianSortedArrays = function(nums1, nums2) {
   if (nums1.length > nums2.length) {
-    [nums1, nums2] = [nums2, nums1];
+    ;[nums1, nums2] = [nums2, nums1]
   }
   const nums1Length = nums1.length,
-    nums2Length = nums2.length;
+    nums2Length = nums2.length
   let iMin = 0,
-    iMax = nums1Length;
-  const halfLen = Math.floor((nums1Length + nums2Length + 1) / 2); // +1 这种情况单数时取 maxleft
+    iMax = nums1Length
+  const halfLen = Math.floor((nums1Length + nums2Length + 1) / 2) // +1 这种情况单数时取 maxleft
   while (iMin <= iMax) {
-    let i = Math.floor((iMin + iMax) / 2); //   二分查找
-    let j = halfLen - i;
+    let i = Math.floor((iMin + iMax) / 2) //   二分查找
+    let j = halfLen - i
     if (i < iMax && nums2[j - 1] > nums1[i]) {
-      iMin = i + 1;
+      iMin = i + 1
     } else if (i > iMin && nums1[i - 1] > nums2[j]) {
-      iMax = i - 1;
+      iMax = i - 1
     } else {
-      let maxLeft = 0;
+      let maxLeft = 0
       if (i === 0) {
         maxLeft = nums2[j - 1]
       } else if (j === 0) {
         maxLeft = nums1[i - 1]
       } else {
-        maxLeft = Math.max(nums1[i - 1], nums2[j - 1]);
+        maxLeft = Math.max(nums1[i - 1], nums2[j - 1])
       }
       if ((nums1Length + nums2Length) % 2 === 1) {
-        return maxLeft;
+        return maxLeft
       }
 
-      let minRight = 0;
+      let minRight = 0
       if (i === nums1Length) {
-        minRight = nums2[j];
+        minRight = nums2[j]
       } else if (j === nums2Length) {
-        minRight = nums1[i];
+        minRight = nums1[i]
       } else {
-        minRight = Math.min(nums2[j], nums1[i]);
+        minRight = Math.min(nums2[j], nums1[i])
       }
       return (maxLeft + minRight) / 2
     }
   }
-  return 0;
-};
+  return 0
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `nums1`：`[1, 3]`
 2. `nums2`：`[2, 4]`
@@ -214,7 +213,7 @@ var findMedianSortedArrays = function (nums1, nums2) {
 2.5
 ```
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -223,11 +222,11 @@ var findMedianSortedArrays = function (nums1, nums2) {
   ✔ Your memory usage beats 81.18 % of javascript submissions (39.1 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `Math`：JS 中的内置对象，具有数学常数和函数的属性和方法。[`Math` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Math/README.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **首先**，**jsLe** 肯定写不出这种解析来的啦：
 

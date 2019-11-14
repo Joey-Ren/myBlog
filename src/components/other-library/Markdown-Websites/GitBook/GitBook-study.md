@@ -1,5 +1,4 @@
-GitBook 搭建
-===
+# GitBook 搭建
 
 > Create by **jsLe** on **2019-05-20 14:43:41**  
 > Recently revised in **2019-5-29 08:47:31**
@@ -10,7 +9,7 @@ GitBook 搭建
 
 下面是最终效果，欢迎评论留言~
 
-* [LiangJunrong.github.io](https://liangjunrong.github.io/)
+- [LiangJunrong.github.io](https://liangjunrong.github.io/)
 
 ![图](../../../public-repertory/img/other-GitBook-0.png)
 
@@ -18,14 +17,14 @@ GitBook 搭建
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                                 |
+| ---------------------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                              |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)                   |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 GitBook 常用指令](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 GitBook 插件配置](#chapter-four) |
-| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 GitBook 打包部署](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 总结](#chapter-six) |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 GitBook 插件配置](#chapter-four)    |
+| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 GitBook 打包部署](#chapter-five)    |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 总结](#chapter-six)                   |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
@@ -41,13 +40,13 @@ GitBook 搭建
 
 > [返回目录](#chapter-one)
 
-* **安装 GitBook**：`npm i gitbook-cli -g`
-* **初始化 GitBook 项目**：`gitbook init`
-* **安装 GitBook 依赖**：`gitbook install`
-* **开启 GitBook 服务**：`gitbook serve`
-* **打包 GitBook 项目**：`gitbook build`
-* **GitBook 命令行查看**：`gitbook -help`  
-* **GitBook 版本查看**：`gitbook -V`
+- **安装 GitBook**：`npm i gitbook-cli -g`
+- **初始化 GitBook 项目**：`gitbook init`
+- **安装 GitBook 依赖**：`gitbook install`
+- **开启 GitBook 服务**：`gitbook serve`
+- **打包 GitBook 项目**：`gitbook build`
+- **GitBook 命令行查看**：`gitbook -help`
+- **GitBook 版本查看**：`gitbook -V`
 
 ---
 
@@ -68,8 +67,6 @@ GitBook 搭建
 
 ```markdown
 # Introduction
-
-
 ```
 
 > SUMMARY.md  
@@ -78,9 +75,7 @@ GitBook 搭建
 ```markdown
 # Summary
 
-* [Introduction](README.md)
-
-
+- [Introduction](README.md)
 ```
 
 **最后**，我们在 **终端** 输入 `gitbook serve` 即可开启一个 `localhost:4000` 的服务，请在浏览器中输入 `http://localhost:4000` 即可访问服务。
@@ -139,15 +134,15 @@ GitBook 搭建
       "buttons": [
         {
           "user": "LiangJunrong",
-          "repo": "document-library", 
+          "repo": "document-library",
           "type": "star",
           "count": true,
           "size": "small"
-        }, 
+        },
         {
           "user": "LiangJunrong",
-          "width": "160", 
-          "type": "follow", 
+          "width": "160",
+          "type": "follow",
           "count": true,
           "size": "small"
         }
@@ -161,15 +156,13 @@ GitBook 搭建
       "wechat": "https://github.com/LiangJunrong/document-library/blob/master/public-repertory/img/seek-reward.png?raw=true"
     },
     "prism": {
-      "css": [
-        "prismjs/themes/prism-solarizedlight.css"
-      ],
+      "css": ["prismjs/themes/prism-solarizedlight.css"],
       "lang": {
         "shell": "bash"
       }
     },
     "tbfed-pagefooter": {
-      "copyright":"Copyright &copy jsLe.top 2019",
+      "copyright": "Copyright &copy jsLe.top 2019",
       "modify_label": "该文件修订时间：",
       "modify_format": "YYYY-MM-DD HH:mm:ss"
     },
@@ -195,13 +188,13 @@ GitBook 搭建
 
 现在，我们讲解下 `book.json` 的意思：
 
-* `title`：网站标题
-* `author`：网站作者
-* `description`：网站功能描述
-* `language`：网站使用语言
-* `styles`：网站额外配置的样式表
-* `plugins`：网站使用的插件
-* `pluginsConfig`：网站使用的插件的额外配置
+- `title`：网站标题
+- `author`：网站作者
+- `description`：网站功能描述
+- `language`：网站使用语言
+- `styles`：网站额外配置的样式表
+- `plugins`：网站使用的插件
+- `pluginsConfig`：网站使用的插件的额外配置
 
 下面主要讲解下 `styles` 和 `plugins`。
 
@@ -368,15 +361,15 @@ GitBook 搭建
   "buttons": [
     {
       "user": "LiangJunrong",
-      "repo": "document-library", 
+      "repo": "document-library",
       "type": "star",
       "count": true,
       "size": "small"
-    }, 
+    },
     {
       "user": "LiangJunrong",
-      "width": "160", 
-      "type": "follow", 
+      "width": "160",
+      "type": "follow",
       "count": true,
       "size": "small"
     }
@@ -484,20 +477,23 @@ GitBook 搭建
 **然后**，我们在 `MessageBoard.md`（即我们需要添加评论区的页面）中添加对应的代码：
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"
+/>
 <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 <div id="gitalk-container"></div>
 <script>
   var gitalk = new Gitalk({
-    "clientID": "需要补充的 clientID",
-    "clientSecret": "需要补充的 clientSecret",
-    "repo": "document-library",
-    "owner": "LiangJunrong",
-    "admin": ["LiangJunrong"],
-    "id": location.pathname,      
-    "distractionFreeMode": false  
-  });
-  gitalk.render("gitalk-container");
+    clientID: '需要补充的 clientID',
+    clientSecret: '需要补充的 clientSecret',
+    repo: 'document-library',
+    owner: 'LiangJunrong',
+    admin: ['LiangJunrong'],
+    id: location.pathname,
+    distractionFreeMode: false
+  })
+  gitalk.render('gitalk-container')
 </script>
 ```
 
@@ -527,7 +523,7 @@ GitBook 搭建
 
 这样，我们就完成了单个页面添加 Gitalk，如果需要添加多个页面，那么可以参考下 **雪之梦技术驿站** 的攻略（这里就不哆嗦了，**jsLe** 亲测有效）：
 
-* [gitbook 入门教程之实用插件(新增3个插件) - segmentfault - 雪之梦技术驿站](https://segmentfault.com/a/1190000018777424#articleHeader8)
+- [gitbook 入门教程之实用插件(新增 3 个插件) - segmentfault - 雪之梦技术驿站](https://segmentfault.com/a/1190000018777424#articleHeader8)
 
 #### 插件 14 - 参考文献
 
@@ -536,8 +532,8 @@ GitBook 搭建
 3. [Gitbook 的使用和常用插件 - 赵达](https://zhaoda.net/2015/11/09/gitbook-plugins/)
 4. [【Gitbook】实用配置及插件介绍 - zhangjk](https://www.cnblogs.com/zhangjk1993/p/5066771.html)
 5. [如何优雅地使用 Gitbook - 泫](http://blog.cugxuan.cn/2018/12/03/Markdown/How-to-use-gitbook-elegantly/)
-6. [gitbook 入门教程之实用插件(新增3个插件) - segmentfault - 雪之梦技术驿站](https://segmentfault.com/a/1190000018777424)
-7. [Gitbook模板 - GitHub - crifan](https://github.com/crifan/gitbook_template)
+6. [gitbook 入门教程之实用插件(新增 3 个插件) - segmentfault - 雪之梦技术驿站](https://segmentfault.com/a/1190000018777424)
+7. [Gitbook 模板 - GitHub - crifan](https://github.com/crifan/gitbook_template)
 
 ## <a name="chapter-five" id="chapter-five">五 GitBook 打包部署</a>
 
@@ -549,8 +545,8 @@ GitBook 搭建
 
 **然后**，部署到 GitHub Pages 或者个人云服务器。
 
-* [GitHub Pages 教程](../GitHub-Pages/GitHub-Pages-study.md)
-* [Nginx 配置](../../Node/build-web-station.md)
+- [GitHub Pages 教程](../GitHub-Pages/GitHub-Pages-study.md)
+- [Nginx 配置](../../Node/build-web-station.md)
 
 **最后**，我们查看下我们的部署页面：
 
@@ -574,8 +570,8 @@ OK，我们的 GitBook 教学到此结束啦。
 
 **最后的最后**，小伙伴们觉得不错的话，记得给 **jsLe** 点个 **赞** 或者 **star** 哦~
 
-* [GitHub - jsLe 的文档库](https://github.com/LiangJunrong/document-library)
-* [掘金 - jsLe 的个人页面](https://juejin.im/user/584613ba128fe10058b3cf68)
+- [GitHub - jsLe 的文档库](https://github.com/LiangJunrong/document-library)
+- [掘金 - jsLe 的个人页面](https://juejin.im/user/584613ba128fe10058b3cf68)
 
 **PS**：如果需要购买云服务器来存放自己通过 GitBook 打包的页面，可以点击下面链接或者咨询 **jsLe** 噢~
 

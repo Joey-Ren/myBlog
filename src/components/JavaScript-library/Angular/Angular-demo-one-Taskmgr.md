@@ -1,5 +1,4 @@
-Angular Demo One - 打造企业级协作平台
-===
+# Angular Demo One - 打造企业级协作平台
 
 > create by **jsLe** on **2018-9-5 11:56:07**  
 > Recently revised in **2019-05-31 16:06:16**
@@ -8,7 +7,7 @@ Angular Demo One - 打造企业级协作平台
 
 ## 第一章 环境搭建
 
-**1. 安装 Angular：**  
+**1. 安装 Angular：**
 
 `npm i @angular/cli -g`
 
@@ -38,11 +37,11 @@ rxjs                         6.3.2
 typescript                   2.9.2
 ```
 
-**2. 安装 VS Code 插件：**  
+**2. 安装 VS Code 插件：**
 
 `Debugger for Chrome`、`Angular 6 Snippets`
 
-**3. 安装开发插件：**  
+**3. 安装开发插件：**
 
 安装 Chrome 关于 Angular 的开发插件：[点击前往](../../other-library/crx/readMe.md)
 
@@ -58,14 +57,14 @@ ng server —— 启动开发服务器
 
 **5. Mock Rest API：**
 
-* json-server: 用户快速搭建 REST API 的利器。
-* 安装：`npm i json-server -g`，版本为 `0.14.0` 。 
-* 启动：`json-server /json 文件位于的目录/*.json`。
-* 支持 GET， POST， PUT， PATCH， DELETE 等 REST 命令。
+- json-server: 用户快速搭建 REST API 的利器。
+- 安装：`npm i json-server -g`，版本为 `0.14.0` 。
+- 启动：`json-server /json 文件位于的目录/*.json`。
+- 支持 GET， POST， PUT， PATCH， DELETE 等 REST 命令。
 
-**6. 测试 REST API：**  
+**6. 测试 REST API：**
 
-* 几种常用的 API 测试工具：
+- 几种常用的 API 测试工具：
 
 1. 使用 Postman 测试常用的 API：[地址](https://www.getpostman.com/)
 2. 使用 VS Code 的 REST Client 插件
@@ -81,13 +80,13 @@ ng server —— 启动开发服务器
 
 ### 2.1 文件组织约定
 
-* 目录结构按相对独立的功能划分
-* src/app 下第一层子目录中除了模块，还有领域对象、动画和工具文件夹
-* 资源存放在 src/assets 目录下
+- 目录结构按相对独立的功能划分
+- src/app 下第一层子目录中除了模块，还有领域对象、动画和工具文件夹
+- 资源存放在 src/assets 目录下
 
 ### 2.2 命名约定
 
-* 模块和组件的类文件都使用 index.ts 的命名约定
+- 模块和组件的类文件都使用 index.ts 的命名约定
 
 ### 2.3 新建项目
 
@@ -102,7 +101,6 @@ ng g m shared —— 创建分享模块
 ![图](../../public-repertory/img/js-angular-taskmgr-chapter2-2.png)
 
 ![图](../../public-repertory/img/js-angular-taskmgr-chapter2-3.png)
-
 
 ### 2.4 添加代码
 
@@ -133,7 +131,7 @@ import { CommonModule } from '@angular/common';
   ],
   declarations: []
 })
-export class CoreModule { 
+export class CoreModule {
   constructor(parent: CoreModule) {
     if(parent) {
       throw new Error("模块已经存在，不能再次加载！");
@@ -222,10 +220,12 @@ import { AppComponent } from './app.component';
 export class AppModule { }
 ```
 
-## 第三章 UI整体布局
+## 第三章 UI 整体布局
+
 ![图](../../public-repertory/img/js-angular-taskmgr-chapter2-1.png)
 
 ### 3.1 修改代码
+
 1. `ng g c core/header --spec=false`
 2. `ng g c core/footer --spec=false`
 3. `ng g c core/sidebar --spec=false`

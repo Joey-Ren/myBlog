@@ -1,33 +1,33 @@
-判断数据类型 - typeof
-===
+# 判断数据类型 - typeof
 
 > Create by **jsLe** on **2019-10-15 16:33:27**  
 > Recently revised in **2019-10-15 19:50:09**
 
-* **原文**：[MDN - typeof](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof)
+- **原文**：[MDN - typeof](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof)
 
-* **功能**：`typeof` 操作符返回一个字符串，表示未经计算的操作数的类型。
+- **功能**：`typeof` 操作符返回一个字符串，表示未经计算的操作数的类型。
 
-* **方法**：`typeof operand` 或者 `typeof(operand)`
-  * `operand`：一个表示对象或原始值的表达式，其类型将被返回。
+- **方法**：`typeof operand` 或者 `typeof(operand)`
 
-* **说明**：
+  - `operand`：一个表示对象或原始值的表达式，其类型将被返回。
+
+- **说明**：
 
 下面列举下 `typeof` 可能的返回值：
 
-| 类型 | 结果 |
-| --- | --- |
-| Undefined | 'undefined' |
-| Null | 'object' |
-| Boolean | 'boolead' |
-| Number | 'number' |
-| BigInt | 'bigint' |
-| String | 'string' |
-| Symbol | 'symbol' |
-| Function | 'function' |
-| 其他任何对象 | 'object' |
+| 类型         | 结果        |
+| ------------ | ----------- |
+| Undefined    | 'undefined' |
+| Null         | 'object'    |
+| Boolean      | 'boolead'   |
+| Number       | 'number'    |
+| BigInt       | 'bigint'    |
+| String       | 'string'    |
+| Symbol       | 'symbol'    |
+| Function     | 'function'  |
+| 其他任何对象 | 'object'    |
 
-* **代码**：
+- **代码**：
 
 ```js
 /**
@@ -43,26 +43,26 @@ const test = {
   testString: '123',
   testSymbol: Symbol(),
   testFunction: function() {
-    console.log('function');
+    console.log('function')
   },
   testObject: {
-    obj: 'yes',
+    obj: 'yes'
   },
   testObjectString: new String('String'),
-  testObjectNumber: new Number(123),
+  testObjectNumber: new Number(123)
 }
 
-console.log(typeof(test.testUndefined)); // undefined
-console.log(typeof(test.testNull));      // object
-console.log(typeof(test.testBoolean));   // boolean
-console.log(typeof(test.testNumber));    // number
-console.log(typeof(test.testBigInt));    // bigint
-console.log(typeof(test.testString));    // string
-console.log(typeof(test.testSymbol));    // symbol
-console.log(typeof(test.testFunction));  // function
-console.log(typeof(test.testObject));    // object
-console.log(typeof(test.testObjectString));    // object
-console.log(typeof(test.testObjectNumber));    // object
+console.log(typeof test.testUndefined) // undefined
+console.log(typeof test.testNull) // object
+console.log(typeof test.testBoolean) // boolean
+console.log(typeof test.testNumber) // number
+console.log(typeof test.testBigInt) // bigint
+console.log(typeof test.testString) // string
+console.log(typeof test.testSymbol) // symbol
+console.log(typeof test.testFunction) // function
+console.log(typeof test.testObject) // object
+console.log(typeof test.testObjectString) // object
+console.log(typeof test.testObjectNumber) // object
 ```
 
 ---

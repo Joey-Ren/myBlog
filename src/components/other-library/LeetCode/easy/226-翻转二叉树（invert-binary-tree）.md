@@ -1,5 +1,4 @@
-226 - 翻转二叉树（invert-binary-tree）
-===
+# 226 - 翻转二叉树（invert-binary-tree）
 
 > Create by **jsLe** on **2019-07-15 10:49:55**  
 > Recently revised in **2019-07-15 11:43:24**
@@ -8,24 +7,24 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three)         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 进一步思考](#chapter-seven) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six)           |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 进一步思考](#chapter-seven)   |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：树
-* **题目地址**：https://leetcode-cn.com/problems/invert-binary-tree/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：树
+- **题目地址**：https://leetcode-cn.com/problems/invert-binary-tree/
+- **题目内容**：
 
 ```
 翻转一棵二叉树。
@@ -60,44 +59,44 @@
 
 小伙伴可以先自己在本地尝试解题，再回来看看 **jsLe** 的解题思路。
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var invertTree = function(root) {
   if (!root) {
-    return null;
+    return null
   }
   return {
     val: root.val,
     left: invertTree(root.right) || null,
-    right: invertTree(root.left) || null,
+    right: invertTree(root.left) || null
   }
-};
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
 
 > [返回目录](#chapter-one)
 
-* `root`：
+- `root`：
 
 ```js
 const root = {
   val: 4,
-  left: 
-  { val: 2,
+  left: {
+    val: 2,
     left: { val: 1, left: null, right: null },
-    right: { val: 3, left: null, right: null },
+    right: { val: 3, left: null, right: null }
   },
-  right: 
-  { val: 7,
+  right: {
+    val: 7,
     left: { val: 6, left: null, right: null },
-    right: { val: 9, left: null, right: null },
-  },
-};
+    right: { val: 9, left: null, right: null }
+  }
+}
 ```
 
-* `return`：
+- `return`：
 
 ```js
 { val: 4,
@@ -128,14 +127,14 @@ const root = {
 
 **首先**，很久没破解树的题了，那么咱从远古时代开始说起吧：
 
-* **树的万能公式**：
+- **树的万能公式**：
 
 ```js
 let ergodic = function(root) {
   // root 需要做什么？在这做。
   // 其他的不用 root 操心，抛给框架
-  ergodic(root.left);
-  ergodic(root.right);
+  ergodic(root.left)
+  ergodic(root.right)
 }
 ```
 
@@ -151,26 +150,26 @@ const root = {
   left: {
     val: 2,
     left: { val: 1, left: null, right: null },
-    right: { val: 3, left: null, right: null },
+    right: { val: 3, left: null, right: null }
   },
   right: {
     val: 7,
     left: { val: 6, left: null, right: null },
-    right: { val: 9, left: null, right: null },
-  },
-};
+    right: { val: 9, left: null, right: null }
+  }
+}
 
 var invertTree = function(root) {
   let ergodic = function(root) {
     if (!root) {
-      return '!#';
+      return '!#'
     }
-    return '!' + root.val + ergodic(root.left) + ergodic(root.right);
-  };
-  return ergodic(root);
-};
+    return '!' + root.val + ergodic(root.left) + ergodic(root.right)
+  }
+  return ergodic(root)
+}
 
-console.log(invertTree(root));
+console.log(invertTree(root))
 ```
 
 小伙伴们可以先想想它会返回什么：
@@ -184,7 +183,7 @@ console.log(invertTree(root));
 那么，本题需要翻转二叉树，我们调整下顺序即可：
 
 ```js
-return '!' + root.val + ergodic(root.right) + ergodic(root.left);
+return '!' + root.val + ergodic(root.right) + ergodic(root.left)
 ```
 
 它就返回：
@@ -199,16 +198,16 @@ OK，我们成功翻转遍历了，那么我们是否可以尝试下，修改它
 var invertTree = function(root) {
   let ergodic = function(root) {
     if (!root) {
-      return null;
+      return null
     }
     return {
       val: root.val,
       left: ergodic(root.right) || null,
-      right: ergodic(root.left) || null,
+      right: ergodic(root.left) || null
     }
-  };
-  return ergodic(root);
-};
+  }
+  return ergodic(root)
+}
 ```
 
 现在查看下结果是否是我们需要的：
@@ -230,14 +229,14 @@ perfect！我们成功完成了树的翻转，但是我们还有个问题：**�
 ```js
 var invertTree = function(root) {
   if (!root) {
-    return null;
+    return null
   }
   return {
     val: root.val,
     left: invertTree(root.right) || null,
-    right: invertTree(root.left) || null,
+    right: invertTree(root.left) || null
   }
-};
+}
 ```
 
 是的，经过多次的思考变动，我们得出最后的结果。

@@ -1,22 +1,21 @@
-方法 - toString()
-===
+# 方法 - toString()
 
 > Create by **jsLe** on **2019-09-17 09:37:56**  
 > Recently revised in **2019-09-17 09:38:09**
 
-* **原文**：[MDN - toString()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toString)
+- **原文**：[MDN - toString()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toString)
 
-* **功能**：`toString()` 返回一个字符串，表示指定的数组及其元素。
+- **功能**：`toString()` 返回一个字符串，表示指定的数组及其元素。
 
-* **语法**：`arr.toString()`
+- **语法**：`arr.toString()`
 
-* **返回值**：一个表示指定的数组及其元素的字符串。
+- **返回值**：一个表示指定的数组及其元素的字符串。
 
-* **代码**：
+- **代码**：
 
 ```js
-let num = 123;
-num.toString(); // '123'
+let num = 123
+num.toString() // '123'
 ```
 
 ---

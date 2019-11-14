@@ -1,5 +1,4 @@
-083 - 删除排序链表中的重复元素（remove-duplicates-from-sorted-list）
-===
+# 083 - 删除排序链表中的重复元素（remove-duplicates-from-sorted-list）
 
 > Create by **jsLe** on **2019-6-12 08:50:11**  
 > Recently revised in **2019-6-12 09:26:06**
@@ -8,24 +7,24 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题代码](#chapter-three) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four) |
+| 目录                                                                                             |
+| ------------------------------------------------------------------------------------------------ |
+| [一 目录](#chapter-one)                                                                          |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)               |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题代码](#chapter-three)     |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 执行测试](#chapter-four)        |
 | <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 LeetCode Submit](#chapter-five) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 总结](#chapter-seven) |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 解题思路](#chapter-six)           |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 总结](#chapter-seven)         |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：链表
-* **题目地址**：https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：链表
+- **题目地址**：https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/
+- **题目内容**：
 
 ```
 给定一个排序链表，删除所有重复的元素，使得每个元素只出现一次。
@@ -48,35 +47,37 @@
 
 ```js
 var deleteDuplicates = function(head) {
-  if (!head) { // 预防 [] 情况
-    return head;
+  if (!head) {
+    // 预防 [] 情况
+    return head
   }
   let removal = {
-    val: -99, // 预防 [-1, 1, 1, 1, 3] 情况 
-    next: null,
-  };
-  let follower = removal;
+    val: -99, // 预防 [-1, 1, 1, 1, 3] 情况
+    next: null
+  }
+  let follower = removal
   while (head) {
     if (head.val != follower.val) {
-      follower.next = head;
-      head = head.next;
-      follower = follower.next;
+      follower.next = head
+      head = head.next
+      follower = follower.next
     } else {
-      if (head.next === null) { // 预防 [1, 1, 2, 3, 3] 情况
-        follower.next = null;
+      if (head.next === null) {
+        // 预防 [1, 1, 2, 3, 3] 情况
+        follower.next = null
       }
-      head = head.next;
+      head = head.next
     }
   }
-  return removal.next;
-};
+  return removal.next
+}
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 执行测试</a>
 
 > [返回目录](#chapter-one)
 
-* 参数：`head`：
+- 参数：`head`：
 
 ```js
 let head = {
@@ -91,13 +92,13 @@ let head = {
           val: 3,
           next: null
         }
-      },
+      }
     }
   }
 }
 ```
 
-* 返回值： `return`：
+- 返回值： `return`：
 
 ```js
 { val: 1, next: { val: 2, next: { val: 3, next: null } } }
@@ -122,38 +123,41 @@ let head = {
 
 **然后**，在这道题中，我们的解题思路就可以迎刃而解了：
 
-* **步骤 1**：在代码中添加 `console.log()`，查看代码执行机制。
+- **步骤 1**：在代码中添加 `console.log()`，查看代码执行机制。
 
 ```js
 var deleteDuplicates = function(head) {
-  if (!head) { // 预防 [] 情况
-    return head;
+  if (!head) {
+    // 预防 [] 情况
+    return head
   }
   let removal = {
-    val: -99, // 预防 [-1, 1, 1, 1, 3] 情况 
-    next: null,
-  };
-  let follower = removal;
+    val: -99, // 预防 [-1, 1, 1, 1, 3] 情况
+    next: null
+  }
+  let follower = removal
   while (head) {
-    console.log('------');
-    console.log(head);
-    console.log(removal);
-    console.log(follower);
+    console.log('------')
+    console.log(head)
+    console.log(removal)
+    console.log(follower)
     if (head.val != follower.val) {
-      follower.next = head;
-      head = head.next;
-      follower = follower.next;
+      follower.next = head
+      head = head.next
+      follower = follower.next
     } else {
-      if (head.next === null) { // 预防 [1, 1, 2, 3, 3] 情况
-        follower.next = null;
+      if (head.next === null) {
+        // 预防 [1, 1, 2, 3, 3] 情况
+        follower.next = null
       }
-      head = head.next;
+      head = head.next
     }
   }
-  return removal.next;
-};
+  return removal.next
+}
 
-let head = { // 即 [1, 1, 2, 3, 3]
+let head = {
+  // 即 [1, 1, 2, 3, 3]
   val: 1,
   next: {
     val: 1,
@@ -165,15 +169,15 @@ let head = { // 即 [1, 1, 2, 3, 3]
           val: 3,
           next: null
         }
-      },
+      }
     }
   }
 }
 
-deleteDuplicates(head);
+deleteDuplicates(head)
 ```
 
-* **步骤 2**：执行代码，得到打印信息，顺序 `head` -> `removal` -> `follower`。
+- **步骤 2**：执行代码，得到打印信息，顺序 `head` -> `removal` -> `follower`。
 
 ```js
 jsLe 注释：

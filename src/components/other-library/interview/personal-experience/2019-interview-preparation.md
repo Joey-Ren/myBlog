@@ -1,5 +1,4 @@
-jsLe 的 2019 面试准备
-===
+# jsLe 的 2019 面试准备
 
 > Create by **jsLe** on **2019-2-11 15:30:34**  
 > Recently revised in **2019-05-24 11:06:18**
@@ -8,93 +7,93 @@ jsLe 的 2019 面试准备
 
 并不是只有特定的季节才能跑路，只因为人跑得多了，这条路就定下来了。
 
-金三银四跳槽季，**jsLe** 于 **2019年2月11日** 写下了这篇文章，开始准备自己的面试之旅。
+金三银四跳槽季，**jsLe** 于 **2019 年 2 月 11 日** 写下了这篇文章，开始准备自己的面试之旅。
 
-至 **2019年3月17日** 为止，**jsLe** 搭建出个人的面试知识体系，海量地翻阅了一些前辈留下的资料，结合个人需求进行了几场面试，从而进一步完善该文章并进行了发表，希望对准备跳槽或者正在跳槽中的小伙伴有所帮助。
+至 **2019 年 3 月 17 日** 为止，**jsLe** 搭建出个人的面试知识体系，海量地翻阅了一些前辈留下的资料，结合个人需求进行了几场面试，从而进一步完善该文章并进行了发表，希望对准备跳槽或者正在跳槽中的小伙伴有所帮助。
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| &emsp;[2.1 自我介绍](#chapter-two-one) |
-| &emsp;[2.2 跳槽原委](#chapter-two-two) |
-| &emsp;[2.3 进击目标](#chapter-two-three) |
-| &emsp;[2.4 开篇点题](#chapter-two-four) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 HTML](#chapter-three) |
-| &emsp;[3.1 HTML 学习推荐](#chapter-three-one) |
-| &emsp;[3.2 HTML 语义化](#chapter-three-two) |
-| &emsp;[3.3 HTML5 新标签](#chapter-three-three) |
-| &emsp;[3.4 常见浏览器及其内核](#chapter-three-four) |
-| &emsp;[3.5 cookies、session、sessionStorage、localStorage](#chapter-three-five) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 CSS](#chapter-four) |
-| &emsp;[4.1 CSS 学习推荐](#chapter-four-one) |
-| &emsp;[4.2 CSS reset](#chapter-four-two) |
-| &emsp;[4.3 CSS 盒模型](#chapter-four-three) |
-| &emsp;[4.4 CSS 单位](#chapter-four-four) |
-| &emsp;[4.5 CSS 选择器](#chapter-four-five) |
-| &emsp;[4.6 CSS 常见布局](#chapter-four-six) |
-| &emsp;[4.7 CSS3 新特性](#chapter-four-seven) |
-| &emsp;[4.8 BFC](#chapter-four-eight) |
-| &emsp;[4.9 行内元素和块级元素](#chapter-four-night) |
-| &emsp;[4.10 行内样式、内嵌式、链接式以及导入式](#chapter-four-ten) |
-| &emsp;[4.11 水平垂直居中](#chapter-four-eleven) |
-| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 JavaScript](#chapter-five) |
-| &emsp;[5.1 JS 学习推荐](#chapter-five-one) |
-| &emsp;[5.2 JS 引用方式](#chapter-five-two) |
-| &emsp;[5.3 原型与原型链](#chapter-five-three) |
-| &emsp;[5.4 作用域与闭包](#chapter-five-four) |
-| &emsp;[5.5 浅拷贝与深拷贝](#chapter-five-five) |
-| &emsp;[5.6 模块化与组件化](#chapter-five-six) |
-| &emsp;[5.7 面向对象与面向过程](#chapter-five-seven) |
-| &emsp;[5.8 防抖与节流](#chapter-five-eight) |
-| &emsp;[5.9 ES6](#chapter-five-night) |
-| &emsp;[5.10 数组操作](#chapter-five-ten) |
-| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六  Vue](#chapter-six) |
-| &emsp;[6.1 MVVM](#chapter-six-one) |
-| &emsp;[6.2 生命周期](#chapter-six-two) |
-| &emsp;[6.3 双向数据绑定](#chapter-six-three) |
-| &emsp;[6.4 Virtual DOM](#chapter-six-four) |
-| &emsp;[6.5 template 编译](#chapter-six-five) |
-| &emsp;[6.6 key](#chapter-six-six) |
-| &emsp;[6.7 nextTick](#chapter-six-seven) |
-| &emsp;[6.8 父子组件通讯](#chapter-six-eight) |
-| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 微信小程序](#chapter-seven) |
-| &emsp;[7.1 文件主要目录及文件作用](#chapter-seven-one) |
-| &emsp;[7.2 微信小程序生命周期](#chapter-seven-two) |
-| &emsp;[7.3 如何封装数据请求](#chapter-seven-three) |
-| &emsp;[7.4 页面数据传递](#chapter-seven-four) |
-| &emsp;[7.5 加载性能优化的方法](#chapter-seven-five) |
-| &emsp;[7.6 微信小程序与原生 APP、Vue、H5 差异](#chapter-seven-six) |
-| &emsp;[7.7 微信小程序原理](#chapter-seven-seven) |
-| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 浏览器](#chapter-eight) |
-| &emsp;[8.1 浏览器解析 URL](#chapter-eight-one) |
-| &emsp;[8.2 重绘与回流](#chapter-eight-two) |
-| &emsp;[8.3 数据存储](#chapter-eight-three) |
-| &emsp;[8.4 内存管理与垃圾回收](#chapter-eight-four) |
-| &emsp;[8.5 内存泄漏](#chapter-eight-five) |
-| <a name="catalog-chapter-night" id="catalog-chapter-night"></a>[九 网络协议](#chapter-night) |
-| &emsp;[9.1 网络分层](#chapter-night-one) |
-| &emsp;[9.2 HTTP/HTTPS](#chapter-night-two) |
-| &emsp;[9.3 HTTP 状态码](#chapter-night-three) |
-| &emsp;[9.4 TCP 三次握手与四次挥手](#chapter-night-four) |
-| <a name="catalog-chapter-ten" id="catalog-chapter-ten"></a>[十 性能优化](#chapter-ten) |
-| &emsp;[10.1 HTML 优化](#chapter-ten-one) |
-| &emsp;[10.2 CSS 优化](#chapter-ten-two) |
-| &emsp;[10.3 JavaScript 优化](#chapter-ten-three) |
-| <a name="catalog-chapter-eleven" id="catalog-chapter-eleven"></a>[十一 算法](#chapter-eleven) |
-| <a name="catalog-chapter-twelve" id="catalog-chapter-twelve"></a>[十二 其他](#chapter-twelve) |
-| <a name="catalog-chapter-thirteen" id="catalog-chapter-thirteen"></a>[十三 总结](#chapter-thirteen) |
+| 目录                                                                                                    |
+| ------------------------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                                 |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)                      |
+| &emsp;[2.1 自我介绍](#chapter-two-one)                                                                  |
+| &emsp;[2.2 跳槽原委](#chapter-two-two)                                                                  |
+| &emsp;[2.3 进击目标](#chapter-two-three)                                                                |
+| &emsp;[2.4 开篇点题](#chapter-two-four)                                                                 |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 HTML](#chapter-three)                |
+| &emsp;[3.1 HTML 学习推荐](#chapter-three-one)                                                           |
+| &emsp;[3.2 HTML 语义化](#chapter-three-two)                                                             |
+| &emsp;[3.3 HTML5 新标签](#chapter-three-three)                                                          |
+| &emsp;[3.4 常见浏览器及其内核](#chapter-three-four)                                                     |
+| &emsp;[3.5 cookies、session、sessionStorage、localStorage](#chapter-three-five)                         |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 CSS](#chapter-four)                    |
+| &emsp;[4.1 CSS 学习推荐](#chapter-four-one)                                                             |
+| &emsp;[4.2 CSS reset](#chapter-four-two)                                                                |
+| &emsp;[4.3 CSS 盒模型](#chapter-four-three)                                                             |
+| &emsp;[4.4 CSS 单位](#chapter-four-four)                                                                |
+| &emsp;[4.5 CSS 选择器](#chapter-four-five)                                                              |
+| &emsp;[4.6 CSS 常见布局](#chapter-four-six)                                                             |
+| &emsp;[4.7 CSS3 新特性](#chapter-four-seven)                                                            |
+| &emsp;[4.8 BFC](#chapter-four-eight)                                                                    |
+| &emsp;[4.9 行内元素和块级元素](#chapter-four-night)                                                     |
+| &emsp;[4.10 行内样式、内嵌式、链接式以及导入式](#chapter-four-ten)                                      |
+| &emsp;[4.11 水平垂直居中](#chapter-four-eleven)                                                         |
+| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 JavaScript](#chapter-five)             |
+| &emsp;[5.1 JS 学习推荐](#chapter-five-one)                                                              |
+| &emsp;[5.2 JS 引用方式](#chapter-five-two)                                                              |
+| &emsp;[5.3 原型与原型链](#chapter-five-three)                                                           |
+| &emsp;[5.4 作用域与闭包](#chapter-five-four)                                                            |
+| &emsp;[5.5 浅拷贝与深拷贝](#chapter-five-five)                                                          |
+| &emsp;[5.6 模块化与组件化](#chapter-five-six)                                                           |
+| &emsp;[5.7 面向对象与面向过程](#chapter-five-seven)                                                     |
+| &emsp;[5.8 防抖与节流](#chapter-five-eight)                                                             |
+| &emsp;[5.9 ES6](#chapter-five-night)                                                                    |
+| &emsp;[5.10 数组操作](#chapter-five-ten)                                                                |
+| <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 Vue](#chapter-six)                       |
+| &emsp;[6.1 MVVM](#chapter-six-one)                                                                      |
+| &emsp;[6.2 生命周期](#chapter-six-two)                                                                  |
+| &emsp;[6.3 双向数据绑定](#chapter-six-three)                                                            |
+| &emsp;[6.4 Virtual DOM](#chapter-six-four)                                                              |
+| &emsp;[6.5 template 编译](#chapter-six-five)                                                            |
+| &emsp;[6.6 key](#chapter-six-six)                                                                       |
+| &emsp;[6.7 nextTick](#chapter-six-seven)                                                                |
+| &emsp;[6.8 父子组件通讯](#chapter-six-eight)                                                            |
+| <a name="catalog-chapter-seven" id="catalog-chapter-seven"></a>[七 微信小程序](#chapter-seven)          |
+| &emsp;[7.1 文件主要目录及文件作用](#chapter-seven-one)                                                  |
+| &emsp;[7.2 微信小程序生命周期](#chapter-seven-two)                                                      |
+| &emsp;[7.3 如何封装数据请求](#chapter-seven-three)                                                      |
+| &emsp;[7.4 页面数据传递](#chapter-seven-four)                                                           |
+| &emsp;[7.5 加载性能优化的方法](#chapter-seven-five)                                                     |
+| &emsp;[7.6 微信小程序与原生 APP、Vue、H5 差异](#chapter-seven-six)                                      |
+| &emsp;[7.7 微信小程序原理](#chapter-seven-seven)                                                        |
+| <a name="catalog-chapter-eight" id="catalog-chapter-eight"></a>[八 浏览器](#chapter-eight)              |
+| &emsp;[8.1 浏览器解析 URL](#chapter-eight-one)                                                          |
+| &emsp;[8.2 重绘与回流](#chapter-eight-two)                                                              |
+| &emsp;[8.3 数据存储](#chapter-eight-three)                                                              |
+| &emsp;[8.4 内存管理与垃圾回收](#chapter-eight-four)                                                     |
+| &emsp;[8.5 内存泄漏](#chapter-eight-five)                                                               |
+| <a name="catalog-chapter-night" id="catalog-chapter-night"></a>[九 网络协议](#chapter-night)            |
+| &emsp;[9.1 网络分层](#chapter-night-one)                                                                |
+| &emsp;[9.2 HTTP/HTTPS](#chapter-night-two)                                                              |
+| &emsp;[9.3 HTTP 状态码](#chapter-night-three)                                                           |
+| &emsp;[9.4 TCP 三次握手与四次挥手](#chapter-night-four)                                                 |
+| <a name="catalog-chapter-ten" id="catalog-chapter-ten"></a>[十 性能优化](#chapter-ten)                  |
+| &emsp;[10.1 HTML 优化](#chapter-ten-one)                                                                |
+| &emsp;[10.2 CSS 优化](#chapter-ten-two)                                                                 |
+| &emsp;[10.3 JavaScript 优化](#chapter-ten-three)                                                        |
+| <a name="catalog-chapter-eleven" id="catalog-chapter-eleven"></a>[十一 算法](#chapter-eleven)           |
+| <a name="catalog-chapter-twelve" id="catalog-chapter-twelve"></a>[十二 其他](#chapter-twelve)           |
+| <a name="catalog-chapter-thirteen" id="catalog-chapter-thirteen"></a>[十三 总结](#chapter-thirteen)     |
 | <a name="catalog-chapter-fourteen" id="catalog-chapter-fourteen"></a>[十四 参考文献](#chapter-fourteen) |
-| &emsp;[14.1 关于面试](#chapter-fourteen-one) |
-| &emsp;[14.2 关于 HTML](#chapter-fourteen-two) |
-| &emsp;[14.3 关于 CSS](#chapter-fourteen-three) |
-| &emsp;[14.4 关于 JS](#chapter-fourteen-four) |
-| &emsp;[14.5 关于其他](#chapter-fourteen-five) |
-| <a name="catalog-chapter-fifteen" id="catalog-chapter-fifteen"></a>[十五 网友反馈](#chapter-fifteen) |
+| &emsp;[14.1 关于面试](#chapter-fourteen-one)                                                            |
+| &emsp;[14.2 关于 HTML](#chapter-fourteen-two)                                                           |
+| &emsp;[14.3 关于 CSS](#chapter-fourteen-three)                                                          |
+| &emsp;[14.4 关于 JS](#chapter-fourteen-four)                                                            |
+| &emsp;[14.5 关于其他](#chapter-fourteen-five)                                                           |
+| <a name="catalog-chapter-fifteen" id="catalog-chapter-fifteen"></a>[十五 网友反馈](#chapter-fifteen)    |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
@@ -106,13 +105,13 @@ jsLe 的 2019 面试准备
 
 > [返回目录](#catalog-chapter-two)
 
-Hello 小伙伴们好，我叫梁峻荣，网名叫 **jsLe**，由于崇拜前端大佬 **[技术胖](https://jspang.com/)**（*jspang*）的原因，又因为自己学的是前端（JavaScript），所以给自己取了个 **jsLe**（*JavaScriptLiang*） 的网名，希望自己能通过建立自己的前端知识体系，从而在前端路上走得更远。并将自己的经验分享给小伙伴，携手小伙伴们一起前行。
+Hello 小伙伴们好，我叫梁峻荣，网名叫 **jsLe**，由于崇拜前端大佬 **[技术胖](https://jspang.com/)**（_jspang_）的原因，又因为自己学的是前端（JavaScript），所以给自己取了个 **jsLe**（_JavaScriptLiang_） 的网名，希望自己能通过建立自己的前端知识体系，从而在前端路上走得更远。并将自己的经验分享给小伙伴，携手小伙伴们一起前行。
 
 下面是讲讲个人故事：
 
 **首先**，**jsLe** 高考后的暑期就听大学师兄的建议，开始学习编程，那时候学习了 C 语言，觉得世界上最神奇的事情不过如此，敲两下键盘，按下回车，电脑就会一闪一闪地响应我们！于是在大学的时候，陆陆续续学过 C、C#、.Net 等……。
 
-> **-_-|| 由于学得都是基础，又都还给老师了，在这里就不多累述了。**
+> **-\_-|| 由于学得都是基础，又都还给老师了，在这里就不多累述了。**
 
 **然后**，在大二就开始接触 HTML，那时候选修了个《网页设计基础》，跟着老师做了个只有几个页面的静态网站。在大三的时候，参加了学校的特训班，分角色按流程从头到尾做了个包含角色管理、购物等功能的网站。同时，由于在特训班的时候，看到后端使用 ThinkPHP（简称 TP），觉得蛮不错的，于是自己捣鼓，使用 TP 3.2.3 + Bootstrap 3 + MySQL 打造了自己的博客（已下线）。
 
@@ -177,9 +176,9 @@ enm...所以心也委屈了。
 
 > [返回目录](#catalog-chapter-two)
 
-* 目标城市：广州
-* 目标薪资：10K - 15K
-* 目标技术：
+- 目标城市：广州
+- 目标薪资：10K - 15K
+- 目标技术：
 
 ```
 1. 熟悉 HTML/HTML5、CSS/CSS3、ES5/ES6。
@@ -191,7 +190,7 @@ enm...所以心也委屈了。
 7. 一年及以上工作经验。
 ```
 
-* 广州前端分析：
+- 广州前端分析：
 
 1. 广州 13K 薪资要求：
    1. 2/3 年工作经验。
@@ -216,21 +215,21 @@ enm...所以心也委屈了。
 
 关于面试，在这记下慕课网视频看到的，个人非常认同的三个问答：
 
-* 问：拿到一个面试题，第一时间看到什么？ 答：考点
-* 问：如何看待网上搜出来的永远看不完的题海？ 答：不变应万变
-* 问：如何对待面试题？ 答：题目到知识再到题目
+- 问：拿到一个面试题，第一时间看到什么？ 答：考点
+- 问：如何看待网上搜出来的永远看不完的题海？ 答：不变应万变
+- 问：如何对待面试题？ 答：题目到知识再到题目
 
 然后在复习面试题的过程中，个人有些小看法：
 
-* 个人感言一：为什么我总是比不上别人优秀？  
+- 个人感言一：为什么我总是比不上别人优秀？
 
 当编写业务代码中，碰到某个业务 bug 时，我会习惯性地百度这个业务 bug，看看网友是怎么解决的。但是，学霸级的程序猿，会多走一步，他们会思考产生这个业务 bug 的底层原因是什么，下次碰到类似的是如何应用该技术解决。所以，日积月累，我的确比不上人家了。
 
-* 个人感言二：辞职并不是件便捷的事。  
+- 个人感言二：辞职并不是件便捷的事。
 
-way 1：面试成功，跟自己公司递辞呈，走流程，同时跟对面 hr 申请一个月后入职。  
+way 1：面试成功，跟自己公司递辞呈，走流程，同时跟对面 hr 申请一个月后入职。
 
-way 2：面试成功，跟自己公司递辞呈，询问能不能快速离职，收到回复跟对面 hr 确认时间。【推荐】  
+way 2：面试成功，跟自己公司递辞呈，询问能不能快速离职，收到回复跟对面 hr 确认时间。【推荐】
 
 way 3：先递辞呈，同时面试，面试成功的，一律申请走完原公司一个月的流程之后的日子入职。
 
@@ -252,8 +251,8 @@ JavaScript 属于行为层，负责内容应如何对事件做出反应。
 
 > [返回目录](#catalog-chapter-three)
 
-* [《前端工程师手册》](https://leohxj.gitbooks.io/front-end-database/content/html-and-css-basic/index.html?tdsourcetag=s_pctim_aiomsg)
-* [《HTML 教程- (HTML5 标准) - 菜鸟教程》](http://www.runoob.com/html/html-tutorial.html)
+- [《前端工程师手册》](https://leohxj.gitbooks.io/front-end-database/content/html-and-css-basic/index.html?tdsourcetag=s_pctim_aiomsg)
+- [《HTML 教程- (HTML5 标准) - 菜鸟教程》](http://www.runoob.com/html/html-tutorial.html)
 
 ### <a name="chapter-three-two" id="chapter-three-two">3.2 HTML 语义化</a>
 
@@ -277,19 +276,19 @@ HTML5 中新增标签大致有：`<header>`、`<footer>`、`<aside>`、`<nav>`�
 
 > [返回目录](#catalog-chapter-three)
 
-| | Chrome | Firefox | Safari | IE | Opera |
-| --- | --- | --- | --- | --- | --- |
-| 排版引擎 | Blink | Gecko | Webkit | Trident | Blink |
-| JS 引擎 | V8 | SpiderMonkey | Nitro | Chakra | V8 |
+|          | Chrome | Firefox      | Safari | IE      | Opera |
+| -------- | ------ | ------------ | ------ | ------- | ----- |
+| 排版引擎 | Blink  | Gecko        | Webkit | Trident | Blink |
+| JS 引擎  | V8     | SpiderMonkey | Nitro  | Chakra  | V8    |
 
 > 国内一些浏览器使用较多的是 Webkit 内核。
 
-* 针对不同浏览器内核，HTML 辨别：
+- 针对不同浏览器内核，HTML 辨别：
 
 1. IE 内核浏览器识别：`<!--[if IE]><![endif]-->`
 2. 非 IE 内核浏览器识别：`<!--[if !IE]><![endif]-->`
 
-* 针对不同浏览器内核，CSS 辨别：
+- 针对不同浏览器内核，CSS 辨别：
 
 ```css
 /* 设置文字不可选取 */
@@ -307,11 +306,11 @@ HTML5 中新增标签大致有：`<header>`、`<footer>`、`<aside>`、`<nav>`�
 
 > [返回目录](#catalog-chapter-three)
 
-* **cookies**：存储于浏览器端的数据。可以设置 cookies 的到期时间，如果不设置时间，则在浏览器关闭窗口的时候会消失。
+- **cookies**：存储于浏览器端的数据。可以设置 cookies 的到期时间，如果不设置时间，则在浏览器关闭窗口的时候会消失。
 
-* **session**：存储于服务器端的数据。session 存储特定用户会话所需的属性和配置信息。
+- **session**：存储于服务器端的数据。session 存储特定用户会话所需的属性和配置信息。
 
-* **cookies** 和 **session** 的区别在于：
+- **cookies** 和 **session** 的区别在于：
 
 1. cookies 数据存放在客户的浏览器上，session 数据存放在服务器上。
 2. 前端都是裸君子，没有安全可言，cookies 可能会被黑客利用作数据欺骗。所以重要信息记得存 session。
@@ -320,22 +319,22 @@ HTML5 中新增标签大致有：`<header>`、`<footer>`、`<aside>`、`<nav>`�
 
 ---
 
-* **sessionStorage**：生命周期存在于标签页或窗口，用于本地存储一个会话（session）中的数据，这些数据会随着窗口或者标签页的关闭而被清空。
+- **sessionStorage**：生命周期存在于标签页或窗口，用于本地存储一个会话（session）中的数据，这些数据会随着窗口或者标签页的关闭而被清空。
 
-* **localStorage**：生命周期是永久的，除非用户主动清除浏览器上存储的 localStorage 信息，否则它将会永久存在。
+- **localStorage**：生命周期是永久的，除非用户主动清除浏览器上存储的 localStorage 信息，否则它将会永久存在。
 
-* **sessionStorage** 和 **localStorage** 操作方法：`setItem`、`getItem` 以及 `removeItem`。
+- **sessionStorage** 和 **localStorage** 操作方法：`setItem`、`getItem` 以及 `removeItem`。
 
 > 以 localStorage 为例：
 
 ```js
-localStorage.getItem('name'); // 获取 name 的值
-localStorage.setItem('name', 'jsLe'); // 设置 name 的值为 jsLe
-localStorage.removeItem('name'); // 删除 name 的值
+localStorage.getItem('name') // 获取 name 的值
+localStorage.setItem('name', 'jsLe') // 设置 name 的值为 jsLe
+localStorage.removeItem('name') // 删除 name 的值
 ```
 
-> 参考 1：[《前端分享之cookie的使用及单点登录》](https://segmentfault.com/a/1190000011295587)  
-> 参考 2：[《Cookie、session和localStorage、以及sessionStorage之间的区别》](https://www.cnblogs.com/zr123/p/8086525.html)
+> 参考 1：[《前端分享之 cookie 的使用及单点登录》](https://segmentfault.com/a/1190000011295587)  
+> 参考 2：[《Cookie、session 和 localStorage、以及 sessionStorage 之间的区别》](https://www.cnblogs.com/zr123/p/8086525.html)
 
 ## <a name="chapter-four" id="chapter-four">四 CSS</a>
 
@@ -351,10 +350,10 @@ JavaScript 属于行为层，负责内容应如何对事件做出反应。
 
 > [返回目录](#catalog-chapter-four)
 
-* [《前端工程师手册》](https://leohxj.gitbooks.io/front-end-database/content/html-and-css-basic/index.html?tdsourcetag=s_pctim_aiomsg)
-* [《CSS 权威指南》](https://baike.baidu.com/item/CSS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/6229475?fr=aladdin)
-* [《CSS 揭秘》](https://baike.baidu.com/item/CSS%E6%8F%AD%E7%A7%98)
-* [《CSS 世界》](https://baike.baidu.com/item/CSS%E4%B8%96%E7%95%8C)
+- [《前端工程师手册》](https://leohxj.gitbooks.io/front-end-database/content/html-and-css-basic/index.html?tdsourcetag=s_pctim_aiomsg)
+- [《CSS 权威指南》](https://baike.baidu.com/item/CSS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/6229475?fr=aladdin)
+- [《CSS 揭秘》](https://baike.baidu.com/item/CSS%E6%8F%AD%E7%A7%98)
+- [《CSS 世界》](https://baike.baidu.com/item/CSS%E4%B8%96%E7%95%8C)
 
 ### <a name="chapter-four-two" id="chapter-four-two">4.2 CSS reset</a>
 
@@ -366,7 +365,7 @@ JavaScript 属于行为层，负责内容应如何对事件做出反应。
 
 下面是 **jsLe** 在使用的样式重置，当然如果小伙伴有不同的想法，可以去 **百度/必应/google** 搜索并使用其他版本的样式重置：
 
-* [jsLe 的 CSS 样式重置](https://github.com/LiangJunrong/document-library/blob/master/CSS-library/CSSBase/CSSReset.md)
+- [jsLe 的 CSS 样式重置](https://github.com/LiangJunrong/document-library/blob/master/CSS-library/CSSBase/CSSReset.md)
 
 ### <a name="chapter-four-three" id="chapter-four-three">4.3 CSS 盒模型</a>
 
@@ -381,12 +380,13 @@ box-sizing: border-box
 box-sizing: content-box
 ```
 
-1. `border-box` 中，整个 `div` 的宽、高，包括 `margin`、`padding`、`border`。  
-2. `content-box` 中，整个 `div` 的宽、高，则不包括上面元素。 
+1. `border-box` 中，整个 `div` 的宽、高，包括 `margin`、`padding`、`border`。
+2. `content-box` 中，整个 `div` 的宽、高，则不包括上面元素。
 
 ![图](../../../public-repertory/img/other-WechatApplet-bug-8.jpg)
 
 如上图，如果一个 `div` ，你的代码如下：
+
 ```
 div {
   box-sizing: border-box;
@@ -397,7 +397,7 @@ div {
 }
 ```
 
-那么，你的整个宽高还是 `100px`。  
+那么，你的整个宽高还是 `100px`。
 
 但是，如果你的代码如下：
 
@@ -421,13 +421,13 @@ div {
 
 在 CSS 中，除了我们常用的 `px`，还有其他单位小伙伴们可以了解一下：
 
-| 单位 | 描述 |
-| --- | --- |
-| % | 百分比 |
-| px | 像素。计算机屏幕上的一个点为 `1px`。 |
-| em | 相对单位。相对于父元素计算，假如某个 p 元素为 `font-size: 12px`，在它内部有个 span 标签，设置 `font-size: 2em`，那么，这时候的 span 字体大小为：`12 * 2 = 24px` |
-| rem | 相对单位。相对于根元素 html 的 `font-size`，假如 html 为 `font-size: 12px`，那么，在其当中的 div 设置为 `font-size: 2rem`，就是当中的 div 为 `24px`。 |
-| rpx | 微信小程序相对单位。1rpx = 屏幕宽度 / 750 px。在 750px 的设计稿上，1rpx = 1px。 |
+| 单位 | 描述                                                                                                                                                            |
+| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| %    | 百分比                                                                                                                                                          |
+| px   | 像素。计算机屏幕上的一个点为 `1px`。                                                                                                                            |
+| em   | 相对单位。相对于父元素计算，假如某个 p 元素为 `font-size: 12px`，在它内部有个 span 标签，设置 `font-size: 2em`，那么，这时候的 span 字体大小为：`12 * 2 = 24px` |
+| rem  | 相对单位。相对于根元素 html 的 `font-size`，假如 html 为 `font-size: 12px`，那么，在其当中的 div 设置为 `font-size: 2rem`，就是当中的 div 为 `24px`。           |
+| rpx  | 微信小程序相对单位。1rpx = 屏幕宽度 / 750 px。在 750px 的设计稿上，1rpx = 1px。                                                                                 |
 
 > 除此之外还有 pt、ex 等单位，但由于不太好换算，故在此不提。
 
@@ -437,7 +437,7 @@ div {
 
 选择器是匹配元素的一种模式。
 
-* 关于 CSS 解析器：
+- 关于 CSS 解析器：
 
 HTML 经过解析生成 DOM Tree；而在 CSS 解析完毕后，需要将解析的结果与 DOM Tree 的内容一起进行分析建立一棵 Render Tree，最终用来进行绘图。
 
@@ -445,11 +445,11 @@ Render Tree 中的元素与 DOM 元素相对应，但非一一对应：一个 DO
 
 在建立 Render Tree 时，浏览器就要为每个 DOM Tree 中的元素根据 CSS 的解析结果来确定生成怎样的 renderer。对于每个 DOM 元素，必须在所有 Style Rules 中找到符合的 selector 并将对应的规则进行合并。选择器的「解析」实际是在这里执行的，在遍历 DOM Tree 时，从 Style Rules 中去寻找对应的 selector。
 
-* CSS 解析顺序
+- CSS 解析顺序
 
 在 CSS 的选择器中，它会按照优先级 **从右向左解析**，因为这样匹配元素的时候，能尽量少地查找，所以选择器最好写地简洁一点。
 
-* CSS 常用选择器
+- CSS 常用选择器
 
 1. 通配符：`*`
 2. ID 选择器：`#ID`
@@ -460,9 +460,9 @@ Render Tree 中的元素与 DOM 元素相对应，但非一一对应：一个 DO
 7. 属性选择器：`input[type="text"]` 等……
 8. 子元素选择器：`li:firth-child`、`p:nth-child(1)` 等……
 
-* CSS 选择器权重
+- CSS 选择器权重
 
-!important -> 行内样式 -> #id -> .class -> 元素和伪元素 -> * -> 继承 -> 默认
+!important -> 行内样式 -> #id -> .class -> 元素和伪元素 -> \* -> 继承 -> 默认
 
 ### <a name="chapter-four-six" id="chapter-four-six">4.6 CSS 常见布局</a>
 
@@ -474,39 +474,42 @@ Render Tree 中的元素与 DOM 元素相对应，但非一一对应：一个 DO
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Two Column Layout</title>
-  <style>
-    .container {
-      display: flex;
-    }
-    .child-one {
-      width: 300px;
-      height: 300px;
-      background: red;
-    }
-    .child-two {
-      width: 100%;
-      height: 300px;
-      background: deepskyblue;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="child-one"></div>
-    <div class="child-two"></div>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Two Column Layout</title>
+    <style>
+      .container {
+        display: flex;
+      }
+      .child-one {
+        width: 300px;
+        height: 300px;
+        background: red;
+      }
+      .child-two {
+        width: 100%;
+        height: 300px;
+        background: deepskyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="child-one"></div>
+      <div class="child-two"></div>
+    </div>
+  </body>
 </html>
 ```
 
 3. 三列布局。类似于两列布局，新增多一个固定宽的 `<div>` 块而已。当然，小伙伴们可能会说：**jsLe** 你要考虑 `flex` 的兼容性啊！enm...**支持所有最新版本的浏览器！请更新你的浏览器哦亲~**
 
-> 避免被寄刀片，附上 `float` 布局：[《css常见布局》](https://blog.csdn.net/liwei26/article/details/78976444)
+> 避免被寄刀片，附上 `float` 布局：[《css 常见布局》](https://blog.csdn.net/liwei26/article/details/78976444)
 
 ### <a name="chapter-four-seven" id="chapter-four-seven">4.7 CSS3 新特性</a>
 
@@ -516,45 +519,49 @@ Render Tree 中的元素与 DOM 元素相对应，但非一一对应：一个 DO
 
 那么，CSS3 新特性都有哪些呢？
 
-* transition：过渡
-* transform：旋转、缩放、移动或者倾斜
-* animation：动画
-* gradient：渐变
-* shadow：阴影
-* border-radius：圆角
+- transition：过渡
+- transform：旋转、缩放、移动或者倾斜
+- animation：动画
+- gradient：渐变
+- shadow：阴影
+- border-radius：圆角
 
 为了方便记忆，咱将它们扔到同一个 HTML 文件上，小伙伴拷贝到本地上打开，可以看到一个拥有渐变的小球，做着横向运动，如果你鼠标移动到它上面，它的宽度会放大，并且进行倾斜。
 
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8"> 
-<title>CSS3 新特性</title>
-<style> 
-  div {
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    background: linear-gradient(red, orange);
-    box-shadow: 10px 10px 5px #888888;
-    position: relative;
-    transition: width 2s;
-    animation: mymove 5s infinite;
-  }
-  div:hover {
-    width:300px;
-    transform: rotate(7deg);
-  }
-  @keyframes mymove {
-    from { left: 0px; }
-    to { left: 200px; }
-  }
-</style>
-</head>
-<body>
-  <div></div>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>CSS3 新特性</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        background: linear-gradient(red, orange);
+        box-shadow: 10px 10px 5px #888888;
+        position: relative;
+        transition: width 2s;
+        animation: mymove 5s infinite;
+      }
+      div:hover {
+        width: 300px;
+        transform: rotate(7deg);
+      }
+      @keyframes mymove {
+        from {
+          left: 0px;
+        }
+        to {
+          left: 200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
 </html>
 ```
 
@@ -564,34 +571,34 @@ Render Tree 中的元素与 DOM 元素相对应，但非一一对应：一个 DO
 > 参考 4：[《CSS3 transform 属性》](http://www.runoob.com/cssref/css3-pr-transform.html)  
 > 参考 5：[《CSS3 animation（动画） 属性》](http://www.runoob.com/cssref/css3-pr-animation.html)  
 > 参考 6：[《CSS3 box-shadow 属性》](http://www.w3school.com.cn/cssref/pr_box-shadow.asp)  
-> 参考 7：[《个人总结（css3新特性）》](https://segmentfault.com/a/1190000010780991)  
+> 参考 7：[《个人总结（css3 新特性）》](https://segmentfault.com/a/1190000010780991)
 
 ### <a name="chapter-four-eight" id="chapter-four-eight">4.8 BFC</a>
 
 > [返回目录](#catalog-chapter-four)
 
-* 什么是 BFC？
+- 什么是 BFC？
 
 BFC 就是 块级格式上下文，它是一个独立的渲染区域，让处于 BFC 内部的元素和外部的元素相互隔离，使内外元素的定位不会相互影响。
 
 一定的 CSS 声明可以生成 BFC，浏览器对生成的 BFC 有一系列的渲染规则，利用这些渲染规则可以达到一定的布局效果。
 
-* 为什么需要 BFC 呢？
+- 为什么需要 BFC 呢？
 
 1. 它可以防止 margin 元素重叠（div 中包含 ul，而 div 与 ul 之间的垂直距离，取决于 div、ul、li 三者之间的最大外边距，这时候给 ul 一个 display:inline-block 即可解决这个问题）
 2. 清除内部浮动（div 中包含 ul，而 ul 采用 float:left，那么 div 将变成一长条，这时候给 div 加上规则使其变成 BFC 即可）
 
-* 如何产生 BFC？
+- 如何产生 BFC？
 
 1. display: inline-block
 2. position: absolute/fixed
 
-* 工作中一般可能不会顾及这个：
+- 工作中一般可能不会顾及这个：
 
 1. float 很少使用了，尽可能使用 flex
 2. css reset 一般会清除掉一些问题，减少 BFC 的使用。
 
-> 参考文献：[《我对BFC的理解》](https://www.cnblogs.com/dojo-lzz/p/3999013.html)
+> 参考文献：[《我对 BFC 的理解》](https://www.cnblogs.com/dojo-lzz/p/3999013.html)
 
 > [返回目录](#catalog-chapter-four)
 
@@ -611,7 +618,7 @@ BFC 就是 块级格式上下文，它是一个独立的渲染区域，让处于
 
 在引用 CSS 上，分为四种形式：**行内样式**、**内嵌式**、**链接式**以及**导入式**，下面介绍这四种模式。
 
-* **行内样式**
+- **行内样式**
 
 直接对 HTML 的标记使用 style 属性，然后将 CSS 代码直接写进去：
 
@@ -619,7 +626,7 @@ BFC 就是 块级格式上下文，它是一个独立的渲染区域，让处于
 <p style="color: #fff; backgournd: deepskyblue;"></p>
 ```
 
-* **内嵌式**
+- **内嵌式**
 
 将 CSS 写 `<head>` 与 `</head>` 之间，并且用 `<style>` 和 `</style>` 标记进行声明：
 
@@ -634,17 +641,17 @@ BFC 就是 块级格式上下文，它是一个独立的渲染区域，让处于
 </head>
 ```
 
-* **链接式**
+- **链接式**
 
 通过将 `<style>` 上的 CSS 提起到指定的 CSS 文件上，然后通过 `<link>` 的方式在 HTML 上链接起来。
 
 ```html
 <head>
-  <link href="reset.css" type="text/css" rel="stylesheet">
+  <link href="reset.css" type="text/css" rel="stylesheet" />
 </head>
 ```
 
-* **导入样式**
+- **导入样式**
 
 ```html
 <head>
@@ -654,7 +661,7 @@ BFC 就是 块级格式上下文，它是一个独立的渲染区域，让处于
 </head>
 ```
 
-* **各种方式的优先级**
+- **各种方式的优先级**
 
 在优先级上，**行内样式** > **链接式** > **内嵌式** > **@import 导入式**。
 
@@ -662,12 +669,11 @@ BFC 就是 块级格式上下文，它是一个独立的渲染区域，让处于
 
 > [返回目录](#catalog-chapter-four)
 
-
-* 什么是 Flex 布局？
+- 什么是 Flex 布局？
 
 Flex 是 Flexible Box 的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性。
 
-* Flex 布局有哪些便利
+- Flex 布局有哪些便利
 
 ```
 /* 设置 Flex 模式 */
@@ -692,7 +698,7 @@ align-items: center;
 align-content: space-between;
 ```
 
-* 如何通过 Flex 实现元素水平垂直居中？
+- 如何通过 Flex 实现元素水平垂直居中？
 
 > HTML
 
@@ -723,7 +729,7 @@ align-content: space-between;
 }
 ```
 
-* 除了 Flex，还能使用其他形式进行水平垂直居中吗？
+- 除了 Flex，还能使用其他形式进行水平垂直居中吗？
 
 > HTML
 
@@ -757,7 +763,7 @@ align-content: space-between;
 }
 ```
 
-* 除此之外再谈谈 CSS 水平居中或者垂直居中？
+- 除此之外再谈谈 CSS 水平居中或者垂直居中？
 
 水平居中：
 
@@ -771,7 +777,7 @@ align-content: space-between;
 2. Flex：`display: flex; align-items: center;`
 
 > 参考文献：  
-> ① [《CSS实现垂直居中的常用方法》](https://www.cnblogs.com/yugege/p/5246652.html)  
+> ① [《CSS 实现垂直居中的常用方法》](https://www.cnblogs.com/yugege/p/5246652.html)  
 > ② [《CSS 用 position: absolute 与 transform 来居中块级元素的问题》](https://segmentfault.com/q/1010000005151903)
 
 ## <a name="chapter-five" id="chapter-five">五 JavaScript</a>
@@ -788,37 +794,37 @@ JavaScript 属于行为层，负责内容应如何对事件做出反应。
 
 > [返回目录](#catalog-chapter-five)
 
-* 《JavaScript 高级程序（第三版）》
-* 《你不知道的 JavaScript》
-* 《JavaScript 忍者秘籍》
-* 《ES6 标准入门》—— 阮一峰
-* 《JavaScript 设计模式》—— 张容铭
-* 《JavaScript 设计模式与开发实践》—— 曾探
+- 《JavaScript 高级程序（第三版）》
+- 《你不知道的 JavaScript》
+- 《JavaScript 忍者秘籍》
+- 《ES6 标准入门》—— 阮一峰
+- 《JavaScript 设计模式》—— 张容铭
+- 《JavaScript 设计模式与开发实践》—— 曾探
 
 ### <a name="chapter-five-two" id="chapter-five-two">5.2 JS 引用方式</a>
 
 > [返回目录](#catalog-chapter-five)
 
-* **行内引入**：
+- **行内引入**：
 
 ```html
 <body>
-  <input type="button" onclick="alert('行内引入')" value="按钮"/>
+  <input type="button" onclick="alert('行内引入')" value="按钮" />
   <button onclick="alert(123)">点击我</button>
 </body>
 ```
 
-* **内部引入**：
+- **内部引入**：
 
 ```html
 <script>
   window.onload = function() {
-    alert("js 内部引入！");
+    alert('js 内部引入！')
   }
 </script>
 ```
 
-* **外部引入**：
+- **外部引入**：
 
 ```html
 <body>
@@ -839,7 +845,7 @@ JavaScript 属于行为层，负责内容应如何对事件做出反应。
 
 关于 `prototype`、`__proto__`、`new`、`call()`、`apply()`、`bind()`、`this` 这些的知识点，由于篇幅太长，**jsLe** 已经抽离了出来，并做了简洁详细讲解，详见：
 
-* [面试知识点 - JS 原型与原型链](https://github.com/LiangJunrong/document-library/blob/master/other-library/Interview/PersonalExperience/JS-%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE.md)
+- [面试知识点 - JS 原型与原型链](https://github.com/LiangJunrong/document-library/blob/master/other-library/Interview/PersonalExperience/JS-%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE.md)
 
 下面放出相关知识点：
 
@@ -847,10 +853,10 @@ JavaScript 属于行为层，负责内容应如何对事件做出反应。
 
 ![图](../../../public-repertory/img/other-interview-2-prototype.png)
 
-* 实例的 `__proto__` 属性（原型）等于其构造函数的 `prototype` 属性。
-* Object.__proto__ === Function.prototype
-* Function.prototype.__proto__ === Object.prototype
-* Object.prototype.__proto__ === null
+- 实例的 `__proto__` 属性（原型）等于其构造函数的 `prototype` 属性。
+- Object.**proto** === Function.prototype
+- Function.prototype.**proto** === Object.prototype
+- Object.prototype.**proto** === null
 
 ### <a name="chapter-five-four" id="chapter-five-four">5.4 作用域与闭包</a>
 
@@ -861,31 +867,31 @@ JavaScript 属于行为层，负责内容应如何对事件做出反应。
 在传统的后端语言（例如 C 语言）中，一对花括号 `{}` 就是一个块级作用域，作用域内变量不会相互影响，但是在 JS 中，像 if 条件语句的 `{}` 就不算一个独立的作用域：
 
 ```js
-var x = 1;
-console.log(x); // 1
-if(true) {
-  var x = 2;
-  console.log(x); // 2
+var x = 1
+console.log(x) // 1
+if (true) {
+  var x = 2
+  console.log(x) // 2
 }
-console.log(x); // 2
+console.log(x) // 2
 ```
 
 所以有时候我们就需要变通，通过自执行函数创建临时作用域：
 
 ```js
 function foo() {
-  var x = 1;
-  console.log(x); // 1
-  if(x) {
-    (function(x) {
-      console.log(x); // 1
-      var x = 2;
-      console.log(x); // 2
+  var x = 1
+  console.log(x) // 1
+  if (x) {
+    ;(function(x) {
+      console.log(x) // 1
+      var x = 2
+      console.log(x) // 2
     })(x)
   }
-  console.log(x); // 1
+  console.log(x) // 1
 }
-foo();
+foo()
 ```
 
 说到创建临时作用域，我们就不得不谈一下闭包。
@@ -898,38 +904,38 @@ foo();
 
 ```js
 function A() {
-  var a = 1;
+  var a = 1
   function B() {
-    console.log(a);
+    console.log(a)
   }
-  return B();
+  return B()
 }
 ```
 
-* 闭包经典问题：现在我们有一段代码：
+- 闭包经典问题：现在我们有一段代码：
 
 ```js
-for(var i = 0; i < 3; i++) {
+for (var i = 0; i < 3; i++) {
   setTimeout(function() {
-    console.log(i);
-  }, 1000);
+    console.log(i)
+  }, 1000)
 }
 ```
 
-请问这段代码输出什么？ 
+请问这段代码输出什么？
 
 > 答案：3 个 3。  
 > 解析：首先，`for` 循环是同步代码，先执行三遍 `for`，i 变成了 3；然后，再执行异步代码 `setTimeout`，这时候输出的 i，只能是 3 个 3 了。
 
-* 那么，我们有什么办法依次输出 0 1 2 么？
+- 那么，我们有什么办法依次输出 0 1 2 么？
 
 1. 使用 let：
 
 ```js
-for(let i = 0; i < 3; i++) {
+for (let i = 0; i < 3; i++) {
   setTimeout(function() {
-    console.log(i);
-  }, 1000);
+    console.log(i)
+  }, 1000)
 }
 ```
 
@@ -938,11 +944,11 @@ for(let i = 0; i < 3; i++) {
 如果这样讲不明白，我们可以执行下下面这段代码：
 
 ```js
-for(let i = 0; i < 3; i++) {
-  console.log("定时器外部：" + i);
+for (let i = 0; i < 3; i++) {
+  console.log('定时器外部：' + i)
   setTimeout(function() {
-    console.log(i);
-  }, 1000);
+    console.log(i)
+  }, 1000)
 }
 ```
 
@@ -962,11 +968,11 @@ for(let i = 0; i < 3; i++) {
 2. 使用立即执行函数解决闭包问题
 
 ```js
-for(let i = 0; i < 3; i++) {
-  (function(i){
+for (let i = 0; i < 3; i++) {
+  ;(function(i) {
     setTimeout(function() {
-      console.log(i);
-    }, 1000);
+      console.log(i)
+    }, 1000)
   })(i)
 }
 ```
@@ -981,44 +987,44 @@ for(let i = 0; i < 3; i++) {
 
 > [返回目录](#catalog-chapter-five)
 
-* 什么是深拷贝？什么是浅拷贝？
+- 什么是深拷贝？什么是浅拷贝？
 
 简单来说，有两个对象 A 和 B，B = A，当你修改 A 时，B 的值也跟着发生了变化，这时候就叫浅拷贝。如果不发生变化，就叫深拷贝。
 
-* 为什么会出现深拷贝与浅拷贝？
+- 为什么会出现深拷贝与浅拷贝？
 
 1. 首先我们需要知道**基本数据类型（number、string、boolean、null、undefined）**与**引用数据类型（无序对象，数据以及函数）**。
 2. 然后在基本数据类型中，例如：`let a = 1; let b = a; a = 2; console.log(b)`。当我们尝试这样子写时，b 在栈内存中开辟了一个新内存，所以 b 的值不会改变，仍是 1.
 3. 接着在引用数据类型中，例如 `let a = [1, 2, 3], b = a; a[0] = 3; console.log(b)`。当我们尝试这样子写时，b 会偷懒，引用跟 a 同一块的内存地址，从而 a 的修改会影响 b，使得 b 变成 [3, 1, 3]。
 4. 最后，我们可以知道在引用数据类型中，会产生浅拷贝的问题。
 
-* 如何实现深拷贝？
+- 如何实现深拷贝？
 
 1. 首先我们尝试使用递归去解决深拷贝：
 
 ```js
 function deepClone(obj) {
-  let objClone = Array.isArray(obj) ? [] : {};
-  if(obj && typeof obj === "object") {
-    for(key in obj) {
-      if(obj.hasOwnProperty(key)) {
+  let objClone = Array.isArray(obj) ? [] : {}
+  if (obj && typeof obj === 'object') {
+    for (key in obj) {
+      if (obj.hasOwnProperty(key)) {
         // 判断 obj 子元素是否为对象，如果是，递归复制
-        if(obj[key] && typeof obj[key] === "object") {
-          objClone[key] = deepClone(obj[key]);
+        if (obj[key] && typeof obj[key] === 'object') {
+          objClone[key] = deepClone(obj[key])
         } else {
           // 如果不是，简单复制
-          objClone[key] = obj[key];
+          objClone[key] = obj[key]
         }
       }
     }
   }
-  return objClone;
+  return objClone
 }
 
-let a = [1, 2, 3, 4];
-let b = deepClone(a);
-a[0] = 2;
-console.log(a, b);
+let a = [1, 2, 3, 4]
+let b = deepClone(a)
+a[0] = 2
+console.log(a, b)
 
 // Console
 // a = [2, 2, 3, 4];
@@ -1031,15 +1037,15 @@ console.log(a, b);
 
 ```js
 function deepClone(obj) {
- let _obj = JSON.stringify(obj);
- let objClone = JSON.parse(_obj);
- return objClone
+  let _obj = JSON.stringify(obj)
+  let objClone = JSON.parse(_obj)
+  return objClone
 }
-let a = [0, 1, [2, 3], 4];
-let b = deepClone(a);
-a[0] = 1;
-a[2][0] = 1;
-console.log(a, b);
+let a = [0, 1, [2, 3], 4]
+let b = deepClone(a)
+a[0] = 1
+a[2][0] = 1
+console.log(a, b)
 
 // Console
 // a = [1, 1, [1, 3], 4];
@@ -1079,8 +1085,8 @@ console.log(a, b);
 > ② [《【前端工程化系列】简谈前端模块化开发与开发规范》](https://www.cnblogs.com/code-klaus/p/9011911.html)  
 > ③ [《个人关于模块化的理解》](https://www.cnblogs.com/doublenet/p/4918306.html)  
 > ④ [《组件化开发和模块化开发概念辨析》](https://blog.csdn.net/blog_jihq/article/details/79191008)  
-> ⑤ [《JavaScript模块化 --- Commonjs、AMD、CMD、es6 modules》](https://www.cnblogs.com/zhuzhenwei918/p/7426904.html)  
-> ⑥ [《浅谈什么是前端工程化》](https://www.cnblogs.com/fsyz/p/8274727.html)  
+> ⑤ [《JavaScript 模块化 --- Commonjs、AMD、CMD、es6 modules》](https://www.cnblogs.com/zhuzhenwei918/p/7426904.html)  
+> ⑥ [《浅谈什么是前端工程化》](https://www.cnblogs.com/fsyz/p/8274727.html)
 
 ### <a name="chapter-five-seven" id="chapter-five-seven">5.7 面向对象与面向过程</a>
 
@@ -1088,14 +1094,14 @@ console.log(a, b);
 
 1. 什么是面向过程与面向对象？
 
-* 面向过程就是做围墙的时候，由你本身操作，叠第一层的时候：放砖头，糊水泥，放砖头，糊水泥；然后第二层的时候，继续放砖头，糊水泥，放砖头，糊水泥……
-* 面向对象就是做围墙的时候，由他人帮你完成，将做第一层的做法抽取出来，就是放砖头是第一个动作，糊水泥是第二个动作，然后给这两个动作加上步数，最后告诉机器人有 n 层，交给机器人帮你工作就行了。
+- 面向过程就是做围墙的时候，由你本身操作，叠第一层的时候：放砖头，糊水泥，放砖头，糊水泥；然后第二层的时候，继续放砖头，糊水泥，放砖头，糊水泥……
+- 面向对象就是做围墙的时候，由他人帮你完成，将做第一层的做法抽取出来，就是放砖头是第一个动作，糊水泥是第二个动作，然后给这两个动作加上步数，最后告诉机器人有 n 层，交给机器人帮你工作就行了。
 
 2. 为什么需要面向对象写法？
 
-* 更方便
-* 可以复用，减少代码冗余度
-* 高内聚低耦合
+- 更方便
+- 可以复用，减少代码冗余度
+- 高内聚低耦合
 
 简单来说，就是增加代码的可复用性，减少咱们的工作，使代码更加流畅。
 
@@ -1127,12 +1133,12 @@ p1.eat(); // jsLe 吃饭
 
 关于 **防抖与节流**，**jsLe** 特意将资料结合起来：
 
-* **防抖与节流**
-* **重绘与回流**
-* **浏览器解析 URL**
-* **DNS 域名解析**
-* **TCP 三次握手与四次挥手**
-* **浏览器渲染页面**
+- **防抖与节流**
+- **重绘与回流**
+- **浏览器解析 URL**
+- **DNS 域名解析**
+- **TCP 三次握手与四次挥手**
+- **浏览器渲染页面**
 
 小伙伴们可以前往 [《面试知识点 - JS 防抖与节流》](https://github.com/LiangJunrong/document-library/blob/master/other-library/Interview/PersonalExperience/JS-%E9%98%B2%E6%8A%96%E4%B8%8E%E8%8A%82%E6%B5%81.md) 查看。
 
@@ -1142,12 +1148,12 @@ p1.eat(); // jsLe 吃饭
 
 ES6 是个大知识点，如果你面试的公司不是 “饱经沧桑” 的那种，那么一定会出点 ES6 问题，例如：
 
-* 说说 let、var、const 区别
-* 讲讲 Promise 及其使用
+- 说说 let、var、const 区别
+- 讲讲 Promise 及其使用
 
 因为 **jsLe** 感觉自己连 ES6 的门还没进，所以在这里就不 **自作聪明**，推荐下阮一峰大佬的教程：
 
-* [《ECMAScript 6 入门 - 阮一峰》](http://es6.ruanyifeng.com/)
+- [《ECMAScript 6 入门 - 阮一峰》](http://es6.ruanyifeng.com/)
 
 希望小伙伴们看完能有所收获，并在工作中大量使用。
 
@@ -1157,20 +1163,20 @@ ES6 是个大知识点，如果你面试的公司不是 “饱经沧桑” 的�
 
 在 JavaScript 中，用得较多的之一无疑是数组操作，这里过一遍数组的一些用法：
 
-* `map`: 遍历数组，返回回调返回值组成的新数组
-* `forEach`: 无法break，可以用try/catch中throw new Error来停止
-* `filter`: 过滤
-* `some`: 有一项返回true，则整体为true
-* `every`: 有一项返回false，则整体为false
-* `join`: 通过指定连接符生成字符串
-* `push / pop`: 末尾推入和弹出，改变原数组， 返回推入/弹出项【有误】
-* `unshift / shift`: 头部推入和弹出，改变原数组，返回操作项【有误】
-* `sort(fn) / reverse`: 排序与反转，改变原数组
-* `concat`: 连接数组，不影响原数组， 浅拷贝
-* `slice(start, end)`: 返回截断后的新数组，不改变原数组
-* `splice(start, number, value...)`: 返回删除元素组成的数组，value 为插入项，改变原数组
-* `indexOf / lastIndexOf(value, fromIndex)`: 查找数组项，返回对应的下标
-* `reduce / reduceRight(fn(prev, cur)， defaultPrev)`: 两两执行，prev 为上次化简函数的return值，cur 为当前值(从第二项开始)
+- `map`: 遍历数组，返回回调返回值组成的新数组
+- `forEach`: 无法 break，可以用 try/catch 中 throw new Error 来停止
+- `filter`: 过滤
+- `some`: 有一项返回 true，则整体为 true
+- `every`: 有一项返回 false，则整体为 false
+- `join`: 通过指定连接符生成字符串
+- `push / pop`: 末尾推入和弹出，改变原数组， 返回推入/弹出项【有误】
+- `unshift / shift`: 头部推入和弹出，改变原数组，返回操作项【有误】
+- `sort(fn) / reverse`: 排序与反转，改变原数组
+- `concat`: 连接数组，不影响原数组， 浅拷贝
+- `slice(start, end)`: 返回截断后的新数组，不改变原数组
+- `splice(start, number, value...)`: 返回删除元素组成的数组，value 为插入项，改变原数组
+- `indexOf / lastIndexOf(value, fromIndex)`: 查找数组项，返回对应的下标
+- `reduce / reduceRight(fn(prev, cur)， defaultPrev)`: 两两执行，prev 为上次化简函数的 return 值，cur 为当前值(从第二项开始)
 
 相信小伙伴在工作中耍的已经是一套一套的了，或者像 **jsLe** 一样只会简单的使用 `push`、`map` 这几个，感兴趣的小伙伴可以 百度/bing/google 找找一些 **奇技淫巧**，说不定对工作效率有很大提升~
 
@@ -1199,28 +1205,28 @@ ViewModel 通过双向数据绑定把 View 层和 Model 层连接了起来，而
 
 > [返回目录](#catalog-chapter-six)
 
-* 请大致讲下 Vue 的生命周期？
+- 请大致讲下 Vue 的生命周期？
 
 1. 创建前/后：在 **beforeCreated** 阶段，Vue 实例的挂载元素 `$el` 和数据对象 data 以及事件还未初始化。在 **created** 阶段，Vue 实例的数据对象 data 以及方法的运算有了，`$el` 还没有。
-2. 载入前/后：在 **beforeMount** 阶段，`render` 函数首次被调用，Vue 实例的 $el 和 data 都初始化了，但还是挂载在虚拟的 DOM 节点上。在 **mounted** 阶段，Vue 实例挂载到实际的 DOM 操作完成，一般在该过程进行 Ajax 交互。
+2. 载入前/后：在 **beforeMount** 阶段，`render` 函数首次被调用，Vue 实例的 \$el 和 data 都初始化了，但还是挂载在虚拟的 DOM 节点上。在 **mounted** 阶段，Vue 实例挂载到实际的 DOM 操作完成，一般在该过程进行 Ajax 交互。
 3. 更新前/后：在数据更新之前调用，即发生在虚拟 DOM 重新渲染和打补丁之前，调用 **beforeUpdate**。在虚拟 DOM 重新渲染和打补丁之后，会触发 **updated** 方法。
 4. 销毁前/后：在执行实例销毁之前调用 **beforeDestory**，此时实例仍然可以调用。在执行 **destroy** 方法后，对 data 的改变不会再触发周期函数，说明此时 Vue 实例已经解除了事件监听以及和 DOM 的绑定，但是 DOM 结构依然存在。
 
-* 什么是 Vue 生命周期？  
+- 什么是 Vue 生命周期？
 
 Vue 实例从创建到销毁的过程，就是生命周期。从开始创建、初始化数据、编译模板、挂载 DOM -> 渲染、更新 -> 渲染、销毁等一系列过程，称之为 Vue 的生命周期。
 
-* Vue 有几个生命周期，它们的作用主要是什么？  
+- Vue 有几个生命周期，它们的作用主要是什么？
 
 8 个，创建前/创建后、挂载前/挂载后、更新前/更新后、销毁前/销毁后。Vue 生命周期的作用是方便我们通过它的生命周期，在业务代码中更好地操作数据，实现相关功能。
 
-* 第一次页面加载会触发 Vue 哪几个钩子？  
+- 第一次页面加载会触发 Vue 哪几个钩子？
 
 会触发 4 个生命钩子：创建前/创建后、挂载前/挂载后
 
-* DOM 渲染在哪个周期就已经完成？  
+- DOM 渲染在哪个周期就已经完成？
 
-在 `beforeMounted` 时它执行了 `render` 函数，对 $el 和 data 进行了初始化，但此时还是挂载到虚拟的 DOM 节点，然后它在 `mounted` 时就完成了 DOM 渲染，这时候我们一般还进行 Ajax 交互。
+在 `beforeMounted` 时它执行了 `render` 函数，对 \$el 和 data 进行了初始化，但此时还是挂载到虚拟的 DOM 节点，然后它在 `mounted` 时就完成了 DOM 渲染，这时候我们一般还进行 Ajax 交互。
 
 ### <a name="chapter-six-three" id="chapter-six-three">6.3 双向数据绑定</a>
 
@@ -1244,7 +1250,7 @@ Vue 采用 **数据劫持** 结合 **发布者-订阅者** 模式的方式，通
     <input type="text" id="txt">
     <p id="show"></p>
   </div>
-  
+
   <script>
     window.onload = function() {
       let obj = {};
@@ -1268,13 +1274,13 @@ Vue 采用 **数据劫持** 结合 **发布者-订阅者** 模式的方式，通
 > Object.defineProperty 接收三个参数：对象，属性名，配置对象  
 > 这里使用的是 Object.defineProperty，这是 Vue 2.0 进行双向数据绑定的写法。在 Vue 3.0 中，它使用 Proxy 进行数据劫持。
 
-* 为什么 Vue 3.0 中使用 Proxy 了？
+- 为什么 Vue 3.0 中使用 Proxy 了？
 
 1. Vue 中使用 Object.defineProperty 进行双向数据绑定时，告知使用者是可以监听数组的，但是只是监听了数组的 push()、pop()、shift()、unshift()、splice()、sort()、reverse() 这八种方法，其他数组的属性检测不到。
 2. Object.defineProperty 只能劫持对象的属性，因此对每个对象的属性进行遍历时，如果属性值也是对象需要深度遍历，那么就比较麻烦了，所以在比较 Proxy 能完整劫持对象的对比下，选择 Proxy。
 3. 为什么 Proxy 在 Vue 2.0 编写的时候出来了，尤大却没有用上去？因为当时 es6 环境不够成熟，兼容性不好，尤其是这个属性无法用 polyfill 来兼容。（polyfill 是一个 js 库，专门用来处理 js 的兼容性问题-js 修补器）
 
-> 参考自[《实现双向绑定Proxy比defineproperty优劣如何》](https://www.jianshu.com/p/2df6dcddb0d7)
+> 参考自[《实现双向绑定 Proxy 比 defineproperty 优劣如何》](https://www.jianshu.com/p/2df6dcddb0d7)
 
 ### <a name="chapter-six-four" id="chapter-six-four">6.4 Virtual DOM</a>
 
@@ -1288,8 +1294,8 @@ Vue 在 `render` 中 `createElement` 的时候，并不是产生真实的 DOM �
 
 但是，总会有些面试场合会提到的，所以这里找了几篇资料，小伙伴们可以进一步学习：
 
-* [《Vue原理解析之Virtual Dom》](https://segmentfault.com/a/1190000008291645?utm_source=tag-newest)
-* [《virtual-dom(Vue实现)简析》](https://segmentfault.com/a/1190000010090659)
+- [《Vue 原理解析之 Virtual Dom》](https://segmentfault.com/a/1190000008291645?utm_source=tag-newest)
+- [《virtual-dom(Vue 实现)简析》](https://segmentfault.com/a/1190000010090659)
 
 其他的就需要小伙伴自己寻找了，如果觉得有不错的解析 Virtual DOM 的文档/视频，小伙伴也可以推荐过来哈~
 
@@ -1297,7 +1303,7 @@ Vue 在 `render` 中 `createElement` 的时候，并不是产生真实的 DOM �
 
 > [返回目录](#catalog-chapter-six)
 
-* Vue template 编译的理解
+- Vue template 编译的理解
 
 Vue 中 template 就是先转化成 AST 树，再得到 render 函数返回 VNode（Vue 的虚拟 DOM 节点）。
 
@@ -1316,33 +1322,34 @@ key 的作用就是在更新组件时判断两个节点是否相同。相同就�
 
 > [返回目录](#catalog-chapter-six)
 
-* 用法：`Vue.nextTick( [callback, context] )`
+- 用法：`Vue.nextTick( [callback, context] )`
 
-* 参数：
-  * `{Function} [callback]`
-  * `{Object} [context]`
+- 参数：
 
-* 说明：在下次 DOM 更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM。
+  - `{Function} [callback]`
+  - `{Object} [context]`
 
-* 案例：
+- 说明：在下次 DOM 更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM。
+
+- 案例：
 
 ```js
 // 修改数据
 vm.msg = 'Hello'
 // DOM 还没有更新
-Vue.nextTick(function () {
+Vue.nextTick(function() {
   // DOM 更新了
 })
 
 // 作为一个 Promise 使用 (2.1.0 起新增，详见接下来的提示)
-Vue.nextTick().then(function () {
+Vue.nextTick().then(function() {
   // DOM 更新了
 })
 ```
 
 关于 nextTick 的更多理解，**jsLe** 就不献丑了，需要学习的小伙伴可以查看：
 
-* [《Vue.nextTick 的原理和用途》](https://segmentfault.com/a/1190000012861862)
+- [《Vue.nextTick 的原理和用途》](https://segmentfault.com/a/1190000012861862)
 
 或者自行查找更优秀的资源。
 
@@ -1354,7 +1361,7 @@ Vue.nextTick().then(function () {
 
 没怎么使用 Vue 的小伙伴可以看下下面的文章，并尝试自己写一写：
 
-* [《Vue 中关于 $emit 的用法》](https://blog.csdn.net/sllailcp/article/details/78595077)
+- [《Vue 中关于 \$emit 的用法》](https://blog.csdn.net/sllailcp/article/details/78595077)
 
 下面咱讲下使用 bus.js 实现非父子组件通讯：
 
@@ -1377,12 +1384,12 @@ Vue.nextTick().then(function () {
 > bus.js
 
 ```js
-import Vue from 'vue';
+import Vue from 'vue'
 
 // 使用 Event Bus
-const bus = new Vue();
+const bus = new Vue()
 
-export default bus;
+export default bus
 ```
 
 > B.vue
@@ -1402,8 +1409,8 @@ export default bus;
   export default {
     methods: {
       goToPage(route) {
-        this.$router.push(route.path);
-        bus.$emit('meta', route.meta);
+        this.$router.push(route.path)
+        bus.$emit('meta', route.meta)
       }
     }
   }
@@ -1428,8 +1435,8 @@ export default bus;
       }
     },
     created() {
-      bus.$on('meta', msg=> {
-        this.title = msg;
+      bus.$on('meta', msg => {
+        this.title = msg
       })
     }
   }
@@ -1473,11 +1480,11 @@ export default bus;
 
 > [返回目录](#catalog-chapter-seven)
 
-* `onLoad()`：页面加载时触发。
-* `onShow()`：页面显示/切入前台时触发。
-* `onReady()`：页面初次渲染完成时触发。
-* `onHide()`：页面隐藏/切入后台时触发。
-* `onUnload()`：页面卸载时触发。
+- `onLoad()`：页面加载时触发。
+- `onShow()`：页面显示/切入前台时触发。
+- `onReady()`：页面初次渲染完成时触发。
+- `onHide()`：页面隐藏/切入后台时触发。
+- `onUnload()`：页面卸载时触发。
 
 ![图](../../../public-repertory/img/other-interview-2019-InterviewPreparation-1.png)
 
@@ -1485,19 +1492,17 @@ export default bus;
 
 > [返回目录](#catalog-chapter-seven)
 
-
 1. 封装接口：
 
 > 项目/utils/api.js
 
 ```js
 // 将请求进行 Promise 封装
-const fetch = ({url, data}) => {
-
+const fetch = ({ url, data }) => {
   // 打印接口请求的信息
-  console.log(`【step 1】API 接口：${url}`);
-  console.log("【step 2】data 传参：");
-  console.log(data);
+  console.log(`【step 1】API 接口：${url}`)
+  console.log('【step 2】data 传参：')
+  console.log(data)
 
   // 返回 Promise
   return new Promise((resolve, reject) => {
@@ -1505,29 +1510,26 @@ const fetch = ({url, data}) => {
       url: getApp().globalData.api + url,
       data: data,
       success: res => {
-        
-        // 成功时的处理 
+        // 成功时的处理
         if (res.data.code == 0) {
-          console.log("【step 3】请求成功：");
-          console.log(res.data);
-          return resolve(res.data);
+          console.log('【step 3】请求成功：')
+          console.log(res.data)
+          return resolve(res.data)
         } else {
           wx.showModal({
             title: '请求失败',
             content: res.data.message,
             showCancel: false
-          });
+          })
         }
-
       },
       fail: err => {
         // 失败时的处理
-        console.log(err);
-        return reject(err);
+        console.log(err)
+        return reject(err)
       }
     })
   })
-
 }
 
 /**
@@ -1538,7 +1540,7 @@ const fetch = ({url, data}) => {
  */
 export const wxLogin = data => {
   return fetch({
-    url: "tbcUser/getWechatOpenId",
+    url: 'tbcUser/getWechatOpenId',
     data: data
   })
 }
@@ -1549,9 +1551,7 @@ export const wxLogin = data => {
 > 项目/pages/login/login.js
 
 ```js
-import {
-  wxLogin,
-} from '../../utils/api.js'
+import { wxLogin } from '../../utils/api.js'
 ```
 
 3. 使用接口：
@@ -1563,12 +1563,12 @@ wxLogin({
   jsCode: this.data.code
 }).then(
   res => {
-    console.log("【step 4】返回成功处理：");
-    console.log(res.data);
+    console.log('【step 4】返回成功处理：')
+    console.log(res.data)
   },
   err => {
-    console.log("【step 4】返回失败处理：");
-    console.log(err);
+    console.log('【step 4】返回失败处理：')
+    console.log(err)
   }
 )
 ```
@@ -1586,16 +1586,14 @@ wxLogin({
 
 <!-- 这两段是分别在 HTML 和 JS 中的代码 -->
 
-onLoad: function(options) {
-  console.log(options.userId);
-}
+onLoad: function(options) { console.log(options.userId); }
 ```
 
 2. 通过 Storage 来传递参数：
 
 ```js
-wx.setStorageSync('userId', 'jsLe');
-wx.getStorageSync('userId');
+wx.setStorageSync('userId', 'jsLe')
+wx.getStorageSync('userId')
 ```
 
 3. WXML 传递数据到 JS
@@ -1624,7 +1622,7 @@ Component({
     // 这里定义了innerText属性，属性值可以在组件使用时指定
     innerText: {
       type: String,
-      value: 'default value',
+      value: 'default value'
     }
   }
 })
@@ -1664,7 +1662,7 @@ Component({
 
 > [返回目录](#catalog-chapter-seven)
 
-* 微信小程序优劣势：
+- 微信小程序优劣势：
 
 **优势**：
 
@@ -1678,16 +1676,16 @@ Component({
 2. 样式单一。小程序内部组件已经成宿，样式不可以修改。
 3. 推广面窄。跑不出微信，还不能跑入朋友圈。
 
-* 微信小程序 VS 原生 APP
+- 微信小程序 VS 原生 APP
 
 微信小程序有着低开发成本、低获客成本、无需下载的优势。
 
-* 微信小程序 VS H5
+- 微信小程序 VS H5
 
 1. 依赖环境不同。一个能在多种手机浏览器运行。一个只能在微信中的非完整的浏览器。
 2. 开发成本不同。一个可能在各种浏览器出问题。一个只能在微信中运行。
 
-* 微信小程序 VS Vue
+- 微信小程序 VS Vue
 
 微信小程序看似就是阉割版的 Vue。
 
@@ -1709,12 +1707,12 @@ Component({
 
 关于 **浏览器解析 URL**，**jsLe** 特意将资料结合起来：
 
-* **防抖与节流**
-* **重绘与回流**
-* **浏览器解析 URL**
-* **DNS 域名解析**
-* **TCP 三次握手与四次挥手**
-* **浏览器渲染页面**
+- **防抖与节流**
+- **重绘与回流**
+- **浏览器解析 URL**
+- **DNS 域名解析**
+- **TCP 三次握手与四次挥手**
+- **浏览器渲染页面**
 
 小伙伴们可以前往 [《面试知识点 - JS 防抖与节流》](https://github.com/LiangJunrong/document-library/blob/master/other-library/Interview/PersonalExperience/JS-%E9%98%B2%E6%8A%96%E4%B8%8E%E8%8A%82%E6%B5%81.md) 查看。
 
@@ -1724,12 +1722,12 @@ Component({
 
 关于 **重绘与回流**，**jsLe** 特意将资料结合起来：
 
-* **防抖与节流**
-* **重绘与回流**
-* **浏览器解析 URL**
-* **DNS 域名解析**
-* **TCP 三次握手与四次挥手**
-* **浏览器渲染页面**
+- **防抖与节流**
+- **重绘与回流**
+- **浏览器解析 URL**
+- **DNS 域名解析**
+- **TCP 三次握手与四次挥手**
+- **浏览器渲染页面**
 
 小伙伴们可以前往 [《面试知识点 - JS 防抖与节流》](https://github.com/LiangJunrong/document-library/blob/master/other-library/Interview/PersonalExperience/JS-%E9%98%B2%E6%8A%96%E4%B8%8E%E8%8A%82%E6%B5%81.md) 查看。
 
@@ -1747,8 +1745,8 @@ Component({
 
 V8 将内存分为两类：新生代内存空间和老生代内存空间。
 
-* 新生代内存空间：主要用来存放存活时间较短的对象。
-* 老生代内存空间：主要用来存放存活时间较长的对象。
+- 新生代内存空间：主要用来存放存活时间较短的对象。
+- 老生代内存空间：主要用来存放存活时间较长的对象。
 
 这两者通过不同的算法，对内存进行管理操作。
 
@@ -1756,13 +1754,13 @@ V8 将内存分为两类：新生代内存空间和老生代内存空间。
 
 > [返回目录](#catalog-chapter-eight)
 
-* 意外的全局变量：无法被回收。
-* 定时器：未被正确关闭，导致所引用的外部变量无法被释放。
-* 事件监听：没有正确销毁（低版本浏览器可能出现）。
-* 闭包：会导致父级中的变量无法被释放。
-* DOM 引用：DOM 被删除时，内存中的引用未被正确清空。
+- 意外的全局变量：无法被回收。
+- 定时器：未被正确关闭，导致所引用的外部变量无法被释放。
+- 事件监听：没有正确销毁（低版本浏览器可能出现）。
+- 闭包：会导致父级中的变量无法被释放。
+- DOM 引用：DOM 被删除时，内存中的引用未被正确清空。
 
-* 如何查看内存变化情况？
+- 如何查看内存变化情况？
 
 使用 Chrome 的 Timeline（新版本 Performance）进行内存标记，可视化查看内存的变化情况，找出异常点。
 
@@ -1776,7 +1774,7 @@ V8 将内存分为两类：新生代内存空间和老生代内存空间。
 
 目前网络分层可分为两种：OSI 模型和 TCP/IP 模型。
 
-* OSI 模型
+- OSI 模型
 
 1. 应用层（Application）
 2. 表示层（Presentation）
@@ -1786,7 +1784,7 @@ V8 将内存分为两类：新生代内存空间和老生代内存空间。
 6. 数据链路层（Data Link）
 7. 物理层（Physical）
 
-* TCP/IP 模型
+- TCP/IP 模型
 
 1. 应用层（Application）
 2. 传输层（Host-to-Host Transport）
@@ -1795,14 +1793,14 @@ V8 将内存分为两类：新生代内存空间和老生代内存空间。
 
 更多详情可以查看下面这篇文章，里面讲得非常详细：
 
-* [《网络分层TCP/IP 与HTTP》](https://juejin.im/post/5a98e1f7f265da237410694e)
+- [《网络分层 TCP/IP 与 HTTP》](https://juejin.im/post/5a98e1f7f265da237410694e)
 
 ### <a name="chapter-night-two" id="chapter-night-two">9.2 HTTP/HTTPS</a>
 
 > [返回目录](#catalog-chapter-night)
 
-* **HTTP**：超文本传输协议（HTTP）是用于分布式，协作式和超媒体信息系统的应用协议。它是Web上数据交换的基础，是一种 client-server 协议，也就是说请求通常是由像浏览器这样的接受方发起的。
-* **HTTPS**：HTTPS（全称：Hypertext Transfer Protocol over Secure Socket Layer），是以安全为目标的 HTTP 通道，简单讲是 HTTP 的安全版。即 HTTP 下加入 SSL 层，HTTPS 的安全基础是 SSL，因此加密的详细内容就需要 SSL。 它是一个 URI scheme（抽象标识符体系），句法类同 http: 体系。用于安全的HTTP数据传输。https:URL 表明它使用了 HTTP，但 HTTPS 存在不同于 HTTP 的默认端口及一个加密/身份验证层（在 HTTP 与 TCP 之间）。这个系统的最初研发由网景公司进行，提供了身份验证与加密通讯方法，现在它被广泛用于万维网上安全敏感的通讯，例如交易支付方面。
+- **HTTP**：超文本传输协议（HTTP）是用于分布式，协作式和超媒体信息系统的应用协议。它是 Web 上数据交换的基础，是一种 client-server 协议，也就是说请求通常是由像浏览器这样的接受方发起的。
+- **HTTPS**：HTTPS（全称：Hypertext Transfer Protocol over Secure Socket Layer），是以安全为目标的 HTTP 通道，简单讲是 HTTP 的安全版。即 HTTP 下加入 SSL 层，HTTPS 的安全基础是 SSL，因此加密的详细内容就需要 SSL。 它是一个 URI scheme（抽象标识符体系），句法类同 http: 体系。用于安全的 HTTP 数据传输。https:URL 表明它使用了 HTTP，但 HTTPS 存在不同于 HTTP 的默认端口及一个加密/身份验证层（在 HTTP 与 TCP 之间）。这个系统的最初研发由网景公司进行，提供了身份验证与加密通讯方法，现在它被广泛用于万维网上安全敏感的通讯，例如交易支付方面。
 
 ### <a name="chapter-night-three" id="chapter-night-three">9.3 HTTP 状态码</a>
 
@@ -1810,11 +1808,11 @@ V8 将内存分为两类：新生代内存空间和老生代内存空间。
 
 首先，我们大致区分下状态码：
 
-1. 1**开头 - 信息提示
-2. 2**开头 - 请求成功
-3. 3**开头 - 请求被重定向
-4. 4**开头 - 请求错误
-5. 5**开头 - 服务器错误
+1. 1\*\*开头 - 信息提示
+2. 2\*\*开头 - 请求成功
+3. 3\*\*开头 - 请求被重定向
+4. 4\*\*开头 - 请求错误
+5. 5\*\*开头 - 服务器错误
 
 然后，常见的状态码：
 
@@ -1832,12 +1830,12 @@ V8 将内存分为两类：新生代内存空间和老生代内存空间。
 
 关于 **TCP 三次握手与四次挥手**，**jsLe** 特意将资料结合起来：
 
-* **防抖与节流**
-* **重绘与回流**
-* **浏览器解析 URL**
-* **DNS 域名解析**
-* **TCP 三次握手与四次挥手**
-* **浏览器渲染页面**
+- **防抖与节流**
+- **重绘与回流**
+- **浏览器解析 URL**
+- **DNS 域名解析**
+- **TCP 三次握手与四次挥手**
+- **浏览器渲染页面**
 
 小伙伴们可以前往 [《面试知识点 - JS 防抖与节流》](https://github.com/LiangJunrong/document-library/blob/master/other-library/Interview/PersonalExperience/JS-%E9%98%B2%E6%8A%96%E4%B8%8E%E8%8A%82%E6%B5%81.md) 查看。
 
@@ -1888,7 +1886,7 @@ V8 将内存分为两类：新生代内存空间和老生代内存空间。
 
 在算法这块，**jsLe** 觉得自己还是比较薄弱的，如果小伙伴们跟 **jsLe** 一样，也想丰富下这方面知识，欢迎一起刷 LeetCode 共同进步：
 
-* [LeetCode](https://leetcode-cn.com/)
+- [LeetCode](https://leetcode-cn.com/)
 
 ## <a name="chapter-twelve" id="chapter-twelve">十二 其他</a>
 
@@ -1913,12 +1911,12 @@ V8 将内存分为两类：新生代内存空间和老生代内存空间。
 
 系列套餐你值得拥有！
 
-* [2019 面试实战 - Round One](https://github.com/LiangJunrong/document-library/blob/master/other-library/Interview/PersonalExperience/2019-PracticalRoundOne.md)
-* [2019 面试实战 - Round Two](https://github.com/LiangJunrong/document-library/blob/master/other-library/Interview/PersonalExperience/2019-PracticalRoundTwo.md)
-* [2019 面试实战 - Round Three](https://github.com/LiangJunrong/document-library/blob/master/other-library/Interview/PersonalExperience/2019-PracticalRoundThree.md)
-* [面试知识点 - JS 原型与原型链](https://github.com/LiangJunrong/document-library/blob/master/other-library/Interview/PersonalExperience/JS-%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE.md)
-* [面试知识点 - JS 防抖与节流](https://github.com/LiangJunrong/document-library/blob/master/other-library/Interview/PersonalExperience/JS-%E9%98%B2%E6%8A%96%E4%B8%8E%E8%8A%82%E6%B5%81.md)
-* [面试知识点 - 图片](https://github.com/LiangJunrong/document-library/blob/master/other-library/Interview/PersonalExperience/Other-%E5%9B%BE%E7%89%87.md)
+- [2019 面试实战 - Round One](https://github.com/LiangJunrong/document-library/blob/master/other-library/Interview/PersonalExperience/2019-PracticalRoundOne.md)
+- [2019 面试实战 - Round Two](https://github.com/LiangJunrong/document-library/blob/master/other-library/Interview/PersonalExperience/2019-PracticalRoundTwo.md)
+- [2019 面试实战 - Round Three](https://github.com/LiangJunrong/document-library/blob/master/other-library/Interview/PersonalExperience/2019-PracticalRoundThree.md)
+- [面试知识点 - JS 原型与原型链](https://github.com/LiangJunrong/document-library/blob/master/other-library/Interview/PersonalExperience/JS-%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE.md)
+- [面试知识点 - JS 防抖与节流](https://github.com/LiangJunrong/document-library/blob/master/other-library/Interview/PersonalExperience/JS-%E9%98%B2%E6%8A%96%E4%B8%8E%E8%8A%82%E6%B5%81.md)
+- [面试知识点 - 图片](https://github.com/LiangJunrong/document-library/blob/master/other-library/Interview/PersonalExperience/Other-%E5%9B%BE%E7%89%87.md)
 
 2. **你这杂七杂八的都写了什么呀？看完我晕乎了！**
 
@@ -1971,8 +1969,8 @@ V8 将内存分为两类：新生代内存空间和老生代内存空间。
 
 1. [《前端工程师手册》](https://leohxj.gitbooks.io/front-end-database/content/html-and-css-basic/index.html?tdsourcetag=s_pctim_aiomsg)
 2. [《HTML 教程- (HTML5 标准) - 菜鸟教程》](http://www.runoob.com/html/html-tutorial.html)
-3. [《前端分享之cookie的使用及单点登录》](https://segmentfault.com/a/1190000011295587)
-4. [《Cookie、session和localStorage、以及sessionStorage之间的区别》](https://www.cnblogs.com/zr123/p/8086525.html)
+3. [《前端分享之 cookie 的使用及单点登录》](https://segmentfault.com/a/1190000011295587)
+4. [《Cookie、session 和 localStorage、以及 sessionStorage 之间的区别》](https://www.cnblogs.com/zr123/p/8086525.html)
 
 ### <a name="chapter-fourteen-three" id="chapter-fourteen-three">14.3 关于 CSS</a>
 
@@ -1982,35 +1980,35 @@ V8 将内存分为两类：新生代内存空间和老生代内存空间。
 2. [《CSS 权威指南》](https://baike.baidu.com/item/CSS%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/6229475?fr=aladdin)
 3. [《CSS 揭秘》](https://baike.baidu.com/item/CSS%E6%8F%AD%E7%A7%98)
 4. [《CSS 世界》](https://baike.baidu.com/item/CSS%E4%B8%96%E7%95%8C)
-5. [《我对BFC的理解》](https://www.cnblogs.com/dojo-lzz/p/3999013.html)
-6. [《CSS实现垂直居中的常用方法》](https://www.cnblogs.com/yugege/p/5246652.html)
+5. [《我对 BFC 的理解》](https://www.cnblogs.com/dojo-lzz/p/3999013.html)
+6. [《CSS 实现垂直居中的常用方法》](https://www.cnblogs.com/yugege/p/5246652.html)
 7. [《CSS 用 position: absolute 与 transform 来居中块级元素的问题》](https://segmentfault.com/q/1010000005151903)
-8. [《css常见布局》](https://blog.csdn.net/liwei26/article/details/78976444)
-9. [《CSS3 圆角》](http://www.runoob.com/css3/css3-border-radius.html)  
+8. [《css 常见布局》](https://blog.csdn.net/liwei26/article/details/78976444)
+9. [《CSS3 圆角》](http://www.runoob.com/css3/css3-border-radius.html)
 10. [《CSS3 渐变（Gradients）》](http://www.runoob.com/css3/css3-gradients.html)
 11. [《CSS3 transition 属性》](http://www.runoob.com/cssref/css3-pr-transition.html)
-12. [《CSS3 transform 属性》](http://www.runoob.com/cssref/css3-pr-transform.html) 
+12. [《CSS3 transform 属性》](http://www.runoob.com/cssref/css3-pr-transform.html)
 13. [《CSS3 animation（动画） 属性》](http://www.runoob.com/cssref/css3-pr-animation.html)
-14. [《CSS3 box-shadow 属性》](http://www.w3school.com.cn/cssref/pr_box-shadow.asp) 
-15. [《个人总结（css3新特性）》](https://segmentfault.com/a/1190000010780991)
+14. [《CSS3 box-shadow 属性》](http://www.w3school.com.cn/cssref/pr_box-shadow.asp)
+15. [《个人总结（css3 新特性）》](https://segmentfault.com/a/1190000010780991)
 
 ### <a name="chapter-fourteen-four" id="chapter-fourteen-four">14.4 关于 JS</a>
 
 > [返回目录](#catalog-chapter-fourteen)
 
 1. [【推荐】《JavaScript - MDN》](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
-2. [《小邵教你玩转ES6》](https://juejin.im/post/5b7b95206fb9a019bd2463d8)
-3. [《小邵教你玩转JS面向对象》](https://juejin.im/post/5b8a8724f265da435450c591)
-4. [《实现双向绑定Proxy比defineproperty优劣如何》](https://www.jianshu.com/p/2df6dcddb0d7)
-5. [《Vue 中关于 $emit 的用法》](https://blog.csdn.net/sllailcp/article/details/78595077)
+2. [《小邵教你玩转 ES6》](https://juejin.im/post/5b7b95206fb9a019bd2463d8)
+3. [《小邵教你玩转 JS 面向对象》](https://juejin.im/post/5b8a8724f265da435450c591)
+4. [《实现双向绑定 Proxy 比 defineproperty 优劣如何》](https://www.jianshu.com/p/2df6dcddb0d7)
+5. [《Vue 中关于 \$emit 的用法》](https://blog.csdn.net/sllailcp/article/details/78595077)
 6. [《JavaScript 世界万物诞生记》](https://zhuanlan.zhihu.com/p/22989691)
-7. [《js中的new()到底做了些什么？？》](https://www.cnblogs.com/faith3/p/6209741.html)
+7. [《js 中的 new()到底做了些什么？？》](https://www.cnblogs.com/faith3/p/6209741.html)
 8. [《MDN Function.prototype.call()》](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
-9.  [《JavaScript中的call、apply、bind深入理解》](https://www.jianshu.com/p/00dc4ad9b83f)
+9. [《JavaScript 中的 call、apply、bind 深入理解》](https://www.jianshu.com/p/00dc4ad9b83f)
 10. [《箭头函数 - 廖雪峰》](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001438565969057627e5435793645b7acaee3b6869d1374000)
 11. [《ECMAScript 6 入门 - 阮一峰》](http://es6.ruanyifeng.com/)
-12. [《Vue原理解析之Virtual Dom》](https://segmentfault.com/a/1190000008291645?utm_source=tag-newest)
-13. [《virtual-dom(Vue实现)简析》](https://segmentfault.com/a/1190000010090659)
+12. [《Vue 原理解析之 Virtual Dom》](https://segmentfault.com/a/1190000008291645?utm_source=tag-newest)
+13. [《virtual-dom(Vue 实现)简析》](https://segmentfault.com/a/1190000010090659)
 14. [《Vue.nextTick 的原理和用途》](https://segmentfault.com/a/1190000012861862)
 
 ### <a name="chapter-fourteen-five" id="chapter-fourteen-five">14.5 关于其他</a>
@@ -2018,83 +2016,83 @@ V8 将内存分为两类：新生代内存空间和老生代内存空间。
 > [返回目录](#catalog-chapter-fourteen)
 
 1. [《前端性能优化最佳实践》](https://csspod.com/frontend-performance-best-practices/)
-2. [《到底什么是前端工程化、模块化、组件化》](https://www.cnblogs.com/allenlei/p/6195235.html)  
-3. [《【前端工程化系列】简谈前端模块化开发与开发规范》](https://www.cnblogs.com/code-klaus/p/9011911.html)  
-4. [《个人关于模块化的理解》](https://www.cnblogs.com/doublenet/p/4918306.html)  
-5. [《组件化开发和模块化开发概念辨析》](https://blog.csdn.net/blog_jihq/article/details/79191008)  
-6. [《JavaScript模块化 --- Commonjs、AMD、CMD、es6 modules》](https://www.cnblogs.com/zhuzhenwei918/p/7426904.html)  
-7.  [《浅谈什么是前端工程化》](https://www.cnblogs.com/fsyz/p/8274727.html)
-8.  [《前端分享之cookie的使用及单点登录》](https://segmentfault.com/a/1190000011295587) 
-9.  [《Cookie、session和localStorage、以及sessionStorage之间的区别》](https://www.cnblogs.com/zr123/p/8086525.html)
-10. [《网络分层TCP/IP 与HTTP》](https://juejin.im/post/5a98e1f7f265da237410694e)
+2. [《到底什么是前端工程化、模块化、组件化》](https://www.cnblogs.com/allenlei/p/6195235.html)
+3. [《【前端工程化系列】简谈前端模块化开发与开发规范》](https://www.cnblogs.com/code-klaus/p/9011911.html)
+4. [《个人关于模块化的理解》](https://www.cnblogs.com/doublenet/p/4918306.html)
+5. [《组件化开发和模块化开发概念辨析》](https://blog.csdn.net/blog_jihq/article/details/79191008)
+6. [《JavaScript 模块化 --- Commonjs、AMD、CMD、es6 modules》](https://www.cnblogs.com/zhuzhenwei918/p/7426904.html)
+7. [《浅谈什么是前端工程化》](https://www.cnblogs.com/fsyz/p/8274727.html)
+8. [《前端分享之 cookie 的使用及单点登录》](https://segmentfault.com/a/1190000011295587)
+9. [《Cookie、session 和 localStorage、以及 sessionStorage 之间的区别》](https://www.cnblogs.com/zr123/p/8086525.html)
+10. [《网络分层 TCP/IP 与 HTTP》](https://juejin.im/post/5a98e1f7f265da237410694e)
 
 ## <a name="chapter-fifteen" id="chapter-fifteen">十五 网友反馈</a>
 
 > [返回目录](#catalog-chapter-fifteen)
 
-查看了下掘金评论区，感谢各位大大的反馈，由于本人将于 **2019年4月1日** 入职，故将一些个人觉得不错的自己没有察觉的知识点记录下来，区分于原文，更为了猴年马月后的下一次跳槽进一步完善。
+查看了下掘金评论区，感谢各位大大的反馈，由于本人将于 **2019 年 4 月 1 日** 入职，故将一些个人觉得不错的自己没有察觉的知识点记录下来，区分于原文，更为了猴年马月后的下一次跳槽进一步完善。
 
 > 意思就是，**jsLe** 这货懒得改原文了，小伙伴们看着这里进行知识点补充
 
-* **闭包定义**：
+- **闭包定义**：
 
 函数 A 里面包含了 函数 B，而 函数 B 里面使用了 函数 A 的变量，函数 B 被 return 了出去，那么 函数 B 被称为闭包。
 
-* **`box-sizing` 属性**：
+- **`box-sizing` 属性**：
 
 当值为 `border-box` 时，宽度 `width = content + padding + border`，包含内边距与边框。
 
 当值为 `content-box` 时，宽度 `width = content`，不包含内边距与边框。
 
-* **em**：
+- **em**：
 
 `em` 是一个相对的大小，这里的相对于元素父元素的 `font-size`。
 
-* **Side Project**：
+- **Side Project**：
 
 Side Project 对应的中文就是副业、业余项目或者小项目。
 
 感兴趣的小伙伴可以去了解一下。
 
-* **`push` 与 `shift` 系列**：
+- **`push` 与 `shift` 系列**：
 
 这里原文已备注是有误的，只是一时没空，没有修改。
 
-* **CSS 选择器加载顺序**：
+- **CSS 选择器加载顺序**：
 
-原文：!important -> 行内样式 -> #id -> .class -> 元素和伪元素 -> * -> 继承 -> 默认
+原文：!important -> 行内样式 -> #id -> .class -> 元素和伪元素 -> \* -> 继承 -> 默认
 
 网友：“应该是最后的优先级最高。”
 
 这里最后的优先级最高应该是指同等级优先级覆盖。浏览器通过 CSSParser 将 CSS 解析成 CSS Rule Tree 的时候，没错的话应该是按照原文中的排序先加载，然后同等级的时候，后面的属性覆盖前面的属性。
 
-* **ARIA**：
+- **ARIA**：
 
 对于 HTML5 的语义化，ARIA 的意思是 Accessible Rich Internet Application，`aria-*` 的作用就是描述这个 Tag 在可视化的情境中的具体信息。例如：
 
 1. `aria-label`：为组件指定内置的文本标签，用来替代开发者没有使用 `<label>` 标签
 2. `aria-labelledby`：会读取与此具有相同的 `id` 名的值
 
-> 详情可参考张鑫旭的 [《WAI-ARIA无障碍网页应用属性完全展示》](https://www.zhangxinxu.com/wordpress/2012/03/wai-aria-%E6%97%A0%E9%9A%9C%E7%A2%8D%E9%98%85%E8%AF%BB/)
+> 详情可参考张鑫旭的 [《WAI-ARIA 无障碍网页应用属性完全展示》](https://www.zhangxinxu.com/wordpress/2012/03/wai-aria-%E6%97%A0%E9%9A%9C%E7%A2%8D%E9%98%85%E8%AF%BB/)
 
-* **sessionStorage 和 localStorage**：
+- **sessionStorage 和 localStorage**：
 
 文章描述不够详细。
 
-* **两列布局/三列布局**：
+- **两列布局/三列布局**：
 
 1. `child-tow` 中设置 `width: 100%` 的时候 `child-one` 的宽度会随机而变，设置 `flex: 1` 就不会。所以看个人需求进行设置。
 2. 文章中没有讲到应对兼容性怎么设置，可以考虑使用 `float` 进行相关的布局。
 
-* **浅拷贝与深拷贝**：
+- **浅拷贝与深拷贝**：
 
 可参考文章：[《深拷贝的终极探索（90%的人不知道）》](https://zhuanlan.zhihu.com/p/46789186)
 
-* **`Promise` 与 `async`/`await`**：
+- **`Promise` 与 `async`/`await`**：
 
 文章描述不够详细。
 
-* **跨域**：
+- **跨域**：
 
 本来打算写的，后面没时间，给我删了这块，评论区有篇文献参考：
 

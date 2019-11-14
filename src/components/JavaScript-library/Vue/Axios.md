@@ -1,5 +1,4 @@
-Axios
-===
+# Axios
 
 > Create by **jsLe** on **2018-11-8 13:41:10**  
 > Recently revised in **2019-05-31 13:50:06**
@@ -8,22 +7,22 @@ Axios
 
 Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。
 
-* 从浏览器中创建 XMLHttpRequests
-* 从 node.js 创建 http 请求
-* 支持 Promise API
-* 拦截请求和响应
-* 转换请求数据和响应数据
-* 取消请求
-* 自动转换 JSON 数据
-* 客户端支持防御 XSRF
+- 从浏览器中创建 XMLHttpRequests
+- 从 node.js 创建 http 请求
+- 支持 Promise API
+- 拦截请求和响应
+- 转换请求数据和响应数据
+- 取消请求
+- 自动转换 JSON 数据
+- 客户端支持防御 XSRF
 
 ## <a name="chapter-one" id="chapter-one">一 目录</a>
 
-| 目录 |
-| --- |
-| <a name="catalog-chapter-one" id="catalog-chapter-one"></a>[一 目录](#chapter-one) |
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 正文](#chapter-two) |
-| &emsp;<a name="catalog-chapter-two-one" id="catalog-chapter-two-one"></a>[2.1 get](#chapter-two-one) |
+| 目录                                                                                                  |
+| ----------------------------------------------------------------------------------------------------- |
+| <a name="catalog-chapter-one" id="catalog-chapter-one"></a>[一 目录](#chapter-one)                    |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 正文](#chapter-two)                    |
+| &emsp;<a name="catalog-chapter-two-one" id="catalog-chapter-two-one"></a>[2.1 get](#chapter-two-one)  |
 | &emsp;<a name="catalog-chapter-two-two" id="catalog-chapter-two-two"></a>[2.1 post](#chapter-two-two) |
 
 ## <a name="chapter-two" id="chapter-two">二 正文</a>
@@ -43,56 +42,58 @@ axios 实战经验
 ```html
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Vue学习</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Vue学习</title>
-</head>
+  <body>
+    <div id="app"></div>
 
-<body>
-  <div id="app"></div>
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+    <script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.js"></script>
+    <!-- 1. 引用 axios -->
+    <script src="https://cdn.bootcss.com/axios/0.18.0/axios.js"></script>
 
-  <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
-  <script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.js"></script>
-  <!-- 1. 引用 axios -->
-  <script src="https://cdn.bootcss.com/axios/0.18.0/axios.js"></script>
-  
-  <script>
-
-    new Vue({
-      el: document.getElementById('app'),
-      template: `
+    <script>
+      new Vue({
+        el: document.getElementById('app'),
+        template: `
         <div>
           <button @click="sendAjax">发送请求</button>
           <span>数据为：</span>
           {{ getData }}
         </div>
       `,
-      data() {
-        return {
-          getData: ''
+        data() {
+          return {
+            getData: ''
+          }
+        },
+        methods: {
+          sendAjax() {
+            // 直接使用 axios
+            // get 为请求方式
+            axios
+              .get(
+                'https://www.easy-mock.com/mock/5be3885e033152564881d354/getInfo'
+              )
+              // then 为 promise 获取数据
+              .then(res => {
+                this.getData = res.data
+              })
+              // catch 为 promise 捕获异常
+              .catch()
+          }
         }
-      },
-      methods: {
-        sendAjax() {
-          // 直接使用 axios
-          // get 为请求方式
-          axios.get('https://www.easy-mock.com/mock/5be3885e033152564881d354/getInfo')
-          // then 为 promise 获取数据
-          .then((res) => {
-            this.getData = res.data;
-          })
-          // catch 为 promise 捕获异常
-          .catch();
-        }
-      }
-    })
-
-  </script>
-</body>
-
+      })
+    </script>
+  </body>
 </html>
 ```
 
@@ -116,7 +117,7 @@ post 请求讲解
 
 ## 3.1 跨域代理
 
-* [http-proxy-middleware | 代理了解推荐文章](https://npm.taobao.org/package/http-proxy-middleware)
+- [http-proxy-middleware | 代理了解推荐文章](https://npm.taobao.org/package/http-proxy-middleware)
 
 **步骤 1**. 设置 `index.js`：
 
@@ -186,9 +187,9 @@ methods: {
 
 **步骤 2**. 理解：
 
-**首先**，在 `create()` 中调用方法体。  
+**首先**，在 `create()` 中调用方法体。
 
-**然后**，在 `methods()` 中编写方法体，方法体调用 `axios`。  
+**然后**，在 `methods()` 中编写方法体，方法体调用 `axios`。
 
 **最后**，在方法体中通过 `axios` 获取到数据之后，将数据传入到方法中进行处理。
 
@@ -211,7 +212,7 @@ methods: {
  */
 
 // 设置 axios
-import axios from 'axios';
+import axios from 'axios'
 
 // 请求配置
 const request = axios.create({
@@ -219,9 +220,9 @@ const request = axios.create({
   // baseURL: 'http://172.****.****.5:8080',
   timeout: 5000,
   headers: {
-    timestamp: "20181026094424",
-    deviceid: "10102",
-    signature: "F9CB03DD3ED50EDA5DB214C42D4DC0D6",
+    timestamp: '20181026094424',
+    deviceid: '10102',
+    signature: 'F9CB03DD3ED50EDA5DB214C42D4DC0D6'
   }
 })
 
@@ -229,11 +230,12 @@ const request = axios.create({
  * 获取用户名
  * userId
  */
-export const getUserName = data => request({
-  method: 'get',
-  url: '/api/getUserName',
-  params: data
-})
+export const getUserName = data =>
+  request({
+    method: 'get',
+    url: '/api/getUserName',
+    params: data
+  })
 ```
 
 **步骤 2**. 在 `Pages` 中调用：
@@ -242,17 +244,16 @@ export const getUserName = data => request({
 
 ```js
 // 引用接口
-import { getUserName } from "@/api/api"
+import { getUserName } from '@/api/api'
 
 export default {
   methods: {
     _getUserName() {
-
       // 获取用户名
       getUserName({
-        userId: this.userId,
-      }).then( (res) => {
-        console.log("\n【API - 获取用户名】：");
+        userId: this.userId
+      }).then(res => {
+        console.log('\n【API - 获取用户名】：')
       })
     }
   }

@@ -1,5 +1,4 @@
-apply()、bind() 以及 call() 的区别
-===
+# apply()、bind() 以及 call() 的区别
 
 > Create by **jsLe** on **2019-10-15 22:30:19**  
 > Recently revised in **2019-10-15 22:30:47**

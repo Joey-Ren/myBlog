@@ -1,7 +1,6 @@
-React 基础
-===
+# React 基础
 
-> create by **jsLe** on **2019-3-26 09:25:41**   
+> create by **jsLe** on **2019-3-26 09:25:41**  
 > Recently revised in **2019-05-31 14:45:14**
 
 记录 React 基础知识，并尝试构建个人知识体系。
@@ -12,22 +11,22 @@ React 基础
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
-| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 JSX](#chapter-three) |
-| &emsp;[3.1 什么是 JSX](#chapter-three-one) |
-| &emsp;[3.2 JSX（一）](#chapter-three-two) |
-| &emsp;[3.3 JSX（二）](#chapter-three-three) |
-| &emsp;[3.3 JSX（三）](#chapter-three-four) |
-| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 元素渲染](#chapter-four) |
-| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 组件 & Props](#chapter-five) |
+| 目录                                                                                           |
+| ---------------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                        |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)             |
+| <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 JSX](#chapter-three)        |
+| &emsp;[3.1 什么是 JSX](#chapter-three-one)                                                     |
+| &emsp;[3.2 JSX（一）](#chapter-three-two)                                                      |
+| &emsp;[3.3 JSX（二）](#chapter-three-three)                                                    |
+| &emsp;[3.3 JSX（三）](#chapter-three-four)                                                     |
+| <a name="catalog-chapter-four" id="catalog-chapter-four"></a>[四 元素渲染](#chapter-four)      |
+| <a name="catalog-chapter-five" id="catalog-chapter-five"></a>[五 组件 & Props](#chapter-five)  |
 | <a name="catalog-chapter-six" id="catalog-chapter-six"></a>[六 state & 生命周期](#chapter-six) |
-| &emsp;[6.1 Mounting](#chapter-six-one) |
-| &emsp;[6.2 Updation](#chapter-six-two) |
-| &emsp;[6.3 Unmounting](#chapter-six-three) |
-| &emsp;[6.4 汇总](#chapter-six-four) |
+| &emsp;[6.1 Mounting](#chapter-six-one)                                                         |
+| &emsp;[6.2 Updation](#chapter-six-two)                                                         |
+| &emsp;[6.3 Unmounting](#chapter-six-three)                                                     |
+| &emsp;[6.4 汇总](#chapter-six-four)                                                            |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
@@ -48,7 +47,7 @@ React 基础
 > [返回目录](#chapter-one)
 
 ```js
-const element = <h1>Hello, world!</h1>;
+const element = <h1>Hello, world!</h1>
 ```
 
 在 React 中，我们管这样的内容，叫 JSX。
@@ -61,24 +60,17 @@ JSX 类似于 HTML 标签，但是它确切来说是 React 内部生成的，它
 
 ```js
 function formatName(user) {
-  return user.firstName + ' ' + user.lastName;
+  return user.firstName + ' ' + user.lastName
 }
 
 const user = {
   firstName: 'Harper',
   lastName: 'Perez'
-};
+}
 
-const element = (
-  <h1>
-    Hello, {formatName(user)}!
-  </h1>
-);
+const element = <h1>Hello, {formatName(user)}!</h1>
 
-ReactDOM.render(
-  element,
-  document.getElementById('root')
-);
+ReactDOM.render(element, document.getElementById('root'))
 ```
 
 ### <a name="chapter-three-three" id="chapter-three-three">3.3 JSX（二）</a>
@@ -90,9 +82,9 @@ ReactDOM.render(
 ```js
 function getGreeting(user) {
   if (user) {
-    return <h1>Hello, {formatName(user)}!</h1>;
+    return <h1>Hello, {formatName(user)}!</h1>
   }
-  return <h1>Hello, Stranger.</h1>;
+  return <h1>Hello, Stranger.</h1>
 }
 ```
 
@@ -103,18 +95,14 @@ function getGreeting(user) {
 Babel 转译器会把 JSX 转换成一个名为 React.createElement() 的方法调用。
 
 ```js
-const element = (
-  <h1 className="greeting">
-    Hello, world!
-  </h1>
-);
+const element = <h1 className="greeting">Hello, world!</h1>
 
 // 等价于上面代码
 const element = React.createElement(
   'h1',
-  {className: 'greeting'},
+  { className: 'greeting' },
   'Hello, world!'
-);
+)
 ```
 
 ## <a name="chapter-four" id="chapter-four">四 元素渲染</a>
@@ -126,7 +114,7 @@ const element = React.createElement(
 元素用来描述你在屏幕上看到的内容：
 
 ```js
-const element = <h1>Hello, world</h1>;
+const element = <h1>Hello, world</h1>
 ```
 
 与浏览器的 DOM 元素不同，React 当中的元素事实上是普通的对象，React DOM 可以确保 浏览器 DOM 的数据内容与 React 元素保持一致。
@@ -157,29 +145,25 @@ const element = <h1>Hello, world</h1>;
 > index.js
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'))
 ```
 
 > App.js
 
 ```js
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class App extends Component {
   render() {
-    return (
-      <div className="App">
-        Hello React!
-      </div>
-    );
+    return <div className="App">Hello React!</div>
   }
 }
 
-export default App;
+export default App
 ```
 
 在这三个文件中我们可以很简单地看出猫腻：
@@ -204,14 +188,11 @@ export default App;
 
 ```js
 function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>;
+  return <h1>Hello, {props.name}</h1>
 }
 
-const element = <Welcome name="Sara" />;
-ReactDOM.render(
-  element,
-  document.getElementById('root')
-);
+const element = <Welcome name="Sara" />
+ReactDOM.render(element, document.getElementById('root'))
 ```
 
 在这个例子中，我们做了 4 件事：
@@ -237,20 +218,20 @@ ReactDOM.render(
 
 > [返回目录](#chapter-one)
 
-* `componentWillMount()`：在组件即将被挂载到页面的时刻自动执行。
-* `render()`：渲染 JSX。
-* `componentDidMount()`：在组件被挂载到页面之后，自动被执行。
+- `componentWillMount()`：在组件即将被挂载到页面的时刻自动执行。
+- `render()`：渲染 JSX。
+- `componentDidMount()`：在组件被挂载到页面之后，自动被执行。
 
 ### <a name="chapter-six-two" id="chapter-six-two">6.2 Updation</a>
 
 > [返回目录](#chapter-one)
 
-* `shouldComponentUpdate()`：在组件被更新之前，它会自动被执行。如果该生命周期存在于子组件，然后该子组件不需要根据父组件更新而更新，我们只需要 `return false` 即可①。
-* `componentWillUpdate()`：在组件被更新之前，它会自动被执行，但是它在 `shouldComponentUpdate()` 之后被执行。如果 `shouldComponentUpdate()` 返回 `true`，这个函数会被执行；如果返回 `false`，该函数不会被执行。
-* `render()`：渲染 JSX。
-* `componentDidUpdate()`：组件更新完成之后，它会被执行。
+- `shouldComponentUpdate()`：在组件被更新之前，它会自动被执行。如果该生命周期存在于子组件，然后该子组件不需要根据父组件更新而更新，我们只需要 `return false` 即可 ①。
+- `componentWillUpdate()`：在组件被更新之前，它会自动被执行，但是它在 `shouldComponentUpdate()` 之后被执行。如果 `shouldComponentUpdate()` 返回 `true`，这个函数会被执行；如果返回 `false`，该函数不会被执行。
+- `render()`：渲染 JSX。
+- `componentDidUpdate()`：组件更新完成之后，它会被执行。
 
-> ①：  
+> ①：
 
 ```js
 shouldComponentUpdate(nextProps, nextState) {
@@ -268,7 +249,7 @@ shouldComponentUpdate(nextProps, nextState) {
 
 > [返回目录](#chapter-one)
 
-* `componentWillUnmount()`：当这个组件即将被从页面中剔除的时候，会被执行。
+- `componentWillUnmount()`：当这个组件即将被从页面中剔除的时候，会被执行。
 
 ### <a name="chapter-six-four" id="chapter-six-four">6.4 汇总</a>
 
@@ -278,8 +259,8 @@ shouldComponentUpdate(nextProps, nextState) {
 
 ## n 调试工具
 
-* [React Development Tools 介绍](http://www.cnplugins.com/zhuanti/how-to-use-react-tools.html)
-* [React Development Tools 下载地址](https://pan.baidu.com/s/1ND_HsvDMnWDPo332UDLZPQ)
+- [React Development Tools 介绍](http://www.cnplugins.com/zhuanti/how-to-use-react-tools.html)
+- [React Development Tools 下载地址](https://pan.baidu.com/s/1ND_HsvDMnWDPo332UDLZPQ)
 
 ## n 子组件接受数据校验及默认设置
 
@@ -304,7 +285,7 @@ TodoItem.defaultProps = {
   test: 'Hello World!'
 }
 
-export default TodoItem;
+export default TodoItem
 ```
 
 ## n `poops`、`state` 以及 `render` 函数的关系
@@ -349,24 +330,26 @@ export default TodoItem;
 1. `state` 数据
 2. `JSX` 模板
 3. 数据 + 模板生成虚拟 DOM（虚拟 DOM 就是一个 JS 对象，用来描述真实 DOM）（损耗了性能）
+
 ```js
-['div', {id: 'abc'}, [
-  'span', {}, 'Hello World!'
-]]
+;['div', { id: 'abc' }, ['span', {}, 'Hello World!']]
 ```
+
 4. 用虚拟 DOM 的解构生成真实的 DOM，来显示
+
 ```html
-<div id='abc'>
+<div id="abc">
   <span>Hello World!</span>
 </div>
 ```
+
 5. `state` 发生变化
 6. 数据 + 模板生成新的虚拟 DOM（极大提升了性能）
+
 ```js
-['div', {id: 'abc'}, [
-  'span', {}, 'Hello jsLe!'
-]]
+;['div', { id: 'abc' }, ['span', {}, 'Hello jsLe!']]
 ```
+
 7. 比较原始虚拟 DOM 和新的虚拟 DOM 的区别，找到区别是 `span` 中内容（极大提升了性能）
 8. 直接操作 DOM，改变 `span` 中的内容
 
@@ -414,14 +397,14 @@ export default TodoItem;
 
 这时候，我们对应的 `key` 值就变了，我们就需要重新渲染整个 DOM 节点了。
 
-* **ref**：
+- **ref**：
 
 `ref` 帮助我们在 React 中直接获取 DOM 元素
 
 > TodoList.js
 
 ```js
-<input 
+<input
   ref={(input) => {this.input = input}}
   onChange={this.handleInputChange.bind(this)}
 />
@@ -454,10 +437,10 @@ this.setState( (prevState) => {
 
 ## n 调用接口 - axios
 
-* 安装：`npm i axios -S`
-* 引用：`import axios from 'axios'`
-* 使用：`axios.get('地址').then( (res) => {}).catch( (error) => {}))`
-* mock：使用 Charles 模拟接口。
+- 安装：`npm i axios -S`
+- 引用：`import axios from 'axios'`
+- 使用：`axios.get('地址').then( (res) => {}).catch( (error) => {}))`
+- mock：使用 Charles 模拟接口。
 
 ## n React 中的动画
 
@@ -466,7 +449,7 @@ this.setState( (prevState) => {
 
 > 地址：[react-transition-group](https://github.com/reactjs/react-transition-group)
 
-* 安装：`npm i react-transition-group --save`
+- 安装：`npm i react-transition-group --save`
 
 ---
 

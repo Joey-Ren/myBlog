@@ -1,5 +1,4 @@
-167 - 两数之和II（two-sum-ii-input-array-is-sorted）
-===
+# 167 - 两数之和 II（two-sum-ii-input-array-is-sorted）
 
 > Create by **jsLe** on **2019-07-04 17:17:39**  
 > Recently revised in **2019-09-18 10:41:20**
@@ -8,22 +7,22 @@
 
 **不折腾的前端，和咸鱼有什么区别**
 
-| 目录 |
-| --- | 
-| [一 目录](#chapter-one) | 
-| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two) |
+| 目录                                                                                     |
+| ---------------------------------------------------------------------------------------- |
+| [一 目录](#chapter-one)                                                                  |
+| <a name="catalog-chapter-two" id="catalog-chapter-two"></a>[二 前言](#chapter-two)       |
 | <a name="catalog-chapter-three" id="catalog-chapter-three"></a>[三 解题](#chapter-three) |
-| &emsp;[3.1 解法 - 双指针](#chapter-three-one) |
-| &emsp;[3.2 解法 - Map()](#chapter-three-two) |
+| &emsp;[3.1 解法 - 双指针](#chapter-three-one)                                            |
+| &emsp;[3.2 解法 - Map()](#chapter-three-two)                                             |
 
 ## <a name="chapter-two" id="chapter-two">二 前言</a>
 
 > [返回目录](#chapter-one)
 
-* **难度**：简单
-* **涉及知识**：数组、双指针、二分查找
-* **题目地址**：https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/
-* **题目内容**：
+- **难度**：简单
+- **涉及知识**：数组、双指针、二分查找
+- **题目地址**：https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/
+- **题目内容**：
 
 ```
 给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。
@@ -50,28 +49,28 @@
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var twoSum = function(numbers, target) {
   for (let i = 0; i < numbers.length - 1; i++) {
     for (let j = i + 1; j < numbers.length; j++) {
       if (numbers[i] + numbers[j] === target) {
-        return [i + 1, j + 1];
+        return [i + 1, j + 1]
       }
     }
   }
-  return [];
-};
+  return []
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `numbers`：`[2, 7, 11, 15]`
 2. `target`：`9`
 3. `return`：`[1, 2]`
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -80,7 +79,7 @@ var twoSum = function(numbers, target) {
   ✔ Your memory usage beats 94.19 % of javascript submissions (34.6 MB)
 ```
 
-* **解题思路**：
+- **解题思路**：
 
 拿到题，看下题目，想 1 分钟思路，敲 1 分钟代码，提交，完事……
 
@@ -99,7 +98,7 @@ var twoSum = function(numbers, target) {
 
 ```js
 if (numbers[i] + numbers[j] === target) {
-  return [i + 1, j + 1];
+  return [i + 1, j + 1]
 }
 ```
 
@@ -111,29 +110,29 @@ if (numbers[i] + numbers[j] === target) {
 
 > [返回目录](#chapter-one)
 
-* **解题代码**：
+- **解题代码**：
 
 ```js
 var twoSum = function(numbers, target) {
-  let map = new Map();
+  let map = new Map()
   for (let i = 0; i < numbers.length; i++) {
     if (map.get(numbers[i]) !== undefined) {
-      return [map.get(numbers[i]), i + 1];
+      return [map.get(numbers[i]), i + 1]
     } else {
-      map.set(target - numbers[i], i + 1);
+      map.set(target - numbers[i], i + 1)
     }
   }
-  return [];
-};
+  return []
+}
 ```
 
-* **执行测试**：
+- **执行测试**：
 
 1. `numbers`：`[2, 7, 11, 15]`
 2. `target`：`9`
 3. `return`：`[1, 2]`
 
-* **LeetCode Submit**：
+- **LeetCode Submit**：
 
 ```js
 ✔ Accepted
@@ -142,11 +141,11 @@ var twoSum = function(numbers, target) {
   ✔ Your memory usage beats 6.77 % of javascript submissions (35.5 MB)
 ```
 
-* **知识点**：
+- **知识点**：
 
 1. `Map`：保存键值对。任何值(对象或者原始值) 都可以作为一个键或一个值。[`Map` 详细介绍](https://github.com/LiangJunrong/document-library/blob/master/JavaScript-library/JavaScript/%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/Map/README.md)
 
-* **解题思路**：
+- **解题思路**：
 
 **回头想了一下，杀它个回马枪**
 
