@@ -35,6 +35,10 @@ export default {
       submitDisabled: false // 默然查询按钮可点击
     }
   },
+  computed: {},
+  watch: {},
+  mounted() {},
+  created() {},
   methods: {
     // 正常提交按钮功能演示
     // submit () {
@@ -62,11 +66,7 @@ export default {
         this.submitDisabled = false
       }, 3000)
     }
-  },
-  computed: {},
-  watch: {},
-  created() {},
-  mounted() {}
+  }
 }
 </script>
 
