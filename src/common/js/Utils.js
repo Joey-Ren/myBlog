@@ -191,12 +191,12 @@ function simpleDebounce(func, time, options) {
     leading = Boolean(options.leading) // 指定当前函数是否立即执行
   }
   let timeout = null
-  return function() {
+  return function(...arg) {
     timeout && clearTimeout(timeout)
-    leading && !timeout && func.apply(this, arguments)
+    leading && !timeout && func.apply(this, arg)
     timeout = setTimeout(() => {
       leading && (timeout = null)
-      !leading && func.apply(this, arguments)
+      !leading && func.apply(this, arg)
     }, time)
   }
 }
