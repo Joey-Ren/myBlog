@@ -26,6 +26,7 @@
 
 <script>
 import utils from '@/common/js/Utils.js'
+import { mapState } from 'vuex'
 export default {
   name: 'debounce',
   data() {
@@ -35,7 +36,11 @@ export default {
       submitDisabled: false // 默然查询按钮可点击
     }
   },
-  computed: {},
+  computed: {
+    ...mapState({
+      count: state => state.count
+    })
+  },
   watch: {},
   mounted() {},
   created() {},

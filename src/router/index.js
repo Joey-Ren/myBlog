@@ -4,6 +4,8 @@ import indexPage from '@/container/pages/indexPage'
 import debounce from '@/container/debounce/index'
 import markdown from '@/container/pages/markdown'
 import home from '@/container/pages/home'
+import postMessage from '@/container/postMessage/index'
+import Mypromise from '@/container/promise/index'
 
 Vue.use(Router)
 
@@ -28,6 +30,16 @@ export default new Router({
       path: '/home',
       name: 'home',
       component: home
+    },
+    {
+      path: '/postMessage',
+      name: 'postMessage',
+      component: postMessage
+    },
+    {
+      path: '/Mypromise',
+      name: 'Mypromise',
+      component: Mypromise
     }
   ]
 })
